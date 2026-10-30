@@ -1,0 +1,353 @@
+{
+  "artifact_sha256": "aba1b98f848a01c3729cfee3e8818ab8e0d947276bc42c9a55c1475c9f8438db",
+  "rea_evidence_id": "ev_f6ce2d5861b3386fdc40af3c9483be2cacb7905e5960b109744dc25d3bf1e9f3",
+  "files": {
+    "left.txt": "8ed48778fdd9c838c8b0025c4f0275b5d54f88e996134a94108ac43c155e9360",
+    "report.html": "3c8bc4242f3fbe49ecd6bc2fe6b442c4b3a181e717844765bd5632555e64e5c0",
+    "report.xml": "a0937b2f0c61211c089fbe5066053dde3337a1c6b9209762477414a7e82c624c",
+    "right.txt": "e4aaba2535e725ca88ea00994dc4f9dda7aede63a297209a17fe04a79697bf7d"
+  },
+  "rows": [
+    {
+      "status": "same",
+      "left": "case:",
+      "right": "case:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "case:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "case:"
+        }
+      ]
+    },
+    {
+      "status": "similar",
+      "left": "A pedra do sigilo",
+      "right": "A Pedra do Sigilo",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "A "
+        },
+        {
+          "kind": "Unimportant",
+          "text": "p"
+        },
+        {
+          "kind": "Same",
+          "text": "edra do "
+        },
+        {
+          "kind": "Unimportant",
+          "text": "s"
+        },
+        {
+          "kind": "Same",
+          "text": "igilo"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "A "
+        },
+        {
+          "kind": "Unimportant",
+          "text": "P"
+        },
+        {
+          "kind": "Same",
+          "text": "edra do "
+        },
+        {
+          "kind": "Unimportant",
+          "text": "S"
+        },
+        {
+          "kind": "Same",
+          "text": "igilo"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "white:",
+      "right": "white:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "white:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "white:"
+        }
+      ]
+    },
+    {
+      "status": "similar",
+      "left": "uma forja antiga",
+      "right": "uma  forja antiga ",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "uma forja antiga"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "uma "
+        },
+        {
+          "kind": "Unimportant",
+          "text": " "
+        },
+        {
+          "kind": "Same",
+          "text": "forja antiga"
+        },
+        {
+          "kind": "Unimportant",
+          "text": " "
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "mixed:",
+      "right": "mixed:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "mixed:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "mixed:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "A maga azul",
+      "right": "a maga vermelha",
+      "left_inline": [
+        {
+          "kind": "Unimportant",
+          "text": "A"
+        },
+        {
+          "kind": "Same",
+          "text": " maga a"
+        },
+        {
+          "kind": "Diff",
+          "text": "zul"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Unimportant",
+          "text": "a"
+        },
+        {
+          "kind": "Same",
+          "text": " maga "
+        },
+        {
+          "kind": "Diff",
+          "text": "vermelh"
+        },
+        {
+          "kind": "Same",
+          "text": "a"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "words:",
+      "right": "words:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "words:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "words:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "Fonte da Magia",
+      "right": "Fonte de Magia",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "Fonte d"
+        },
+        {
+          "kind": "Diff",
+          "text": "a"
+        },
+        {
+          "kind": "Same",
+          "text": " Magia"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "Fonte d"
+        },
+        {
+          "kind": "Diff",
+          "text": "e"
+        },
+        {
+          "kind": "Same",
+          "text": " Magia"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "important:",
+      "right": "important:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "important:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "important:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "Cadinho",
+      "right": "Crisol",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "C"
+        },
+        {
+          "kind": "Diff",
+          "text": "adinh"
+        },
+        {
+          "kind": "Same",
+          "text": "o"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "C"
+        },
+        {
+          "kind": "Diff",
+          "text": "ris"
+        },
+        {
+          "kind": "Same",
+          "text": "o"
+        },
+        {
+          "kind": "Diff",
+          "text": "l"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "punctuation:",
+      "right": "punctuation:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "punctuation:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "punctuation:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "Texto - antigo",
+      "right": "Texto — antigo",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "Texto "
+        },
+        {
+          "kind": "Diff",
+          "text": "-"
+        },
+        {
+          "kind": "Same",
+          "text": " antigo"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "Texto "
+        },
+        {
+          "kind": "Diff",
+          "text": "—"
+        },
+        {
+          "kind": "Same",
+          "text": " antigo"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "end:",
+      "right": "end:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "end:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "end:"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Output from factory/default portable settings; not every user session or grammar.",
+    "Frida trace was bounded to 500 messages; it does not establish complete conversion-call coverage."
+  ]
+}

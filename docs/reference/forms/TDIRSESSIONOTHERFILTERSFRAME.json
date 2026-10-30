@@ -1,0 +1,111 @@
+{
+  "resource_index": 523,
+  "name": "TDIRSESSIONOTHERFILTERSFRAME",
+  "sha256": "1f829dd962d3e34489932497f24f9914079355695e810fa57e8d9bc9877ec3bb",
+  "bytes": 1239,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "TDirSessionOtherFiltersFrame",
+    "name": "DirSessionOtherFiltersFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "SessionDirOtherFilters",
+      "Caption": "Other Filters"
+    },
+    "children": [
+      {
+        "class": "TUiListBox",
+        "name": "OtherFiltersListBox",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 409,
+          "Height": 288,
+          "DragMode": "dmAutomatic",
+          "TabOrder": 0,
+          "OnClick": "OtherFiltersListBoxClick",
+          "OnDblClick": "OtherFiltersEditClick",
+          "OnDragDrop": "OtherFiltersListBoxDragDrop",
+          "OnDragOver": "OtherFiltersListBoxDragOver",
+          "OnKeyDown": "OtherFiltersListBoxKeyDown"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "OtherFiltersNewBtn",
+        "props": {
+          "Left": 8,
+          "Top": 304,
+          "Width": 24,
+          "Hint": "New",
+          "ImageIndex": "imgListAdd",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 1,
+          "OnClick": "OtherFiltersNewClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "OtherFiltersDeleteBtn",
+        "props": {
+          "Left": 32,
+          "Top": 304,
+          "Width": 24,
+          "Hint": "Delete",
+          "ImageIndex": "imgListDelete",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 2,
+          "OnClick": "OtherFiltersDeleteClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "OtherFiltersEditBtn",
+        "props": {
+          "Left": 56,
+          "Top": 304,
+          "Width": 24,
+          "Hint": "Edit",
+          "ImageIndex": "imgListEdit",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 3,
+          "OnClick": "OtherFiltersEditClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "OtherFiltersCloneBtn",
+        "props": {
+          "Left": 80,
+          "Top": 304,
+          "Width": 24,
+          "Hint": "Clone",
+          "ImageIndex": "imgListClone",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 4,
+          "OnClick": "OtherFiltersCloneClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "ExcludeHiddenSystemEdit",
+        "props": {
+          "Left": 8,
+          "Top": 335,
+          "Height": 17,
+          "Caption": "Exclude protected operating s&ystem files (Recommended)",
+          "TabOrder": 5,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

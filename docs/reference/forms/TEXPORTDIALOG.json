@@ -1,0 +1,463 @@
+{
+  "resource_index": 532,
+  "name": "TEXPORTDIALOG",
+  "sha256": "9294d42f5dcf8e35dd14b7bf16822f4d085a2ed68d64bbeb80f8de3070ab3154",
+  "bytes": 3982,
+  "parse_status": "complete",
+  "components": 28,
+  "hierarchy": {
+    "class": "TExportDialog",
+    "name": "ExportDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgExport",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "BorderStyle": "bsSizeable",
+      "Caption": "Export Settings",
+      "ClientHeight": 278,
+      "ClientWidth": 345,
+      "Constraints.MinHeight": 190,
+      "Constraints.MinWidth": 266,
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "BottomLineBevel",
+        "props": {
+          "Left": 0,
+          "Top": 237,
+          "Width": 345,
+          "Height": 2,
+          "Align": "alBottom",
+          "Shape": "bsBottomLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "PanelView",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 345,
+          "Height": 237,
+          "Align": "alClient",
+          "TabOrder": 0,
+          "UsesAnchors": true
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "AffectPanel",
+            "props": {
+              "Width": 345,
+              "Height": 237,
+              "DesignSize": [
+                345,
+                237
+              ]
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "AffectLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "What settings do you want to export?",
+                  "FontStyle": [
+                    "fsBold"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckListBox",
+                "name": "AffectListBox",
+                "props": {
+                  "Left": 8,
+                  "Top": 29,
+                  "Width": 329,
+                  "Height": 169,
+                  "OnClickCheck": "SomethingChangedClick",
+                  "Anchors": [
+                    "akLeft",
+                    "akTop",
+                    "akRight",
+                    "akBottom"
+                  ],
+                  "TabOrder": 0
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "AffectAllBtn",
+                "props": {
+                  "Left": 8,
+                  "Top": 206,
+                  "Width": 24,
+                  "Hint": "Mark All",
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "ImageIndex": "imgCheckAll",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 1,
+                  "OnClick": "CheckedChangeClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "AffectNoneBtn",
+                "props": {
+                  "Left": 32,
+                  "Top": 206,
+                  "Width": 24,
+                  "Hint": "Unmark All",
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "ImageIndex": "imgUncheckAll",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 2,
+                  "OnClick": "CheckedChangeClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "SessionsPanel",
+            "props": {
+              "Width": 345,
+              "Height": 237,
+              "DesignSize": [
+                345,
+                237
+              ]
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "SessionsLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "Pick sessions to export:",
+                  "FontStyle": [
+                    "fsBold"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckListBox",
+                "name": "SessionsListBox",
+                "props": {
+                  "Left": 8,
+                  "Top": 29,
+                  "Width": 329,
+                  "Height": 169,
+                  "OnClickCheck": "SomethingChangedClick",
+                  "Anchors": [
+                    "akLeft",
+                    "akTop",
+                    "akRight",
+                    "akBottom"
+                  ],
+                  "TabOrder": 0,
+                  "Images": "BcImages.MainImages",
+                  "OnGetImageIndex": "SessionsListBoxGetImageIndex",
+                  "OnGetNotLast": "SessionsListBoxGetNotLast",
+                  "OnGetOverlayIndex": "SessionsListBoxGetOverlayIndex"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "SessionsAllBtn",
+                "props": {
+                  "Left": 8,
+                  "Top": 206,
+                  "Width": 24,
+                  "Hint": "Mark All",
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "ImageIndex": "imgCheckAll",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 1,
+                  "OnClick": "CheckedChangeClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "SessionsNoneBtn",
+                "props": {
+                  "Left": 32,
+                  "Top": 206,
+                  "Width": 24,
+                  "Hint": "Unmark All",
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "ImageIndex": "imgUncheckAll",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 2,
+                  "OnClick": "CheckedChangeClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "FileFormatsPanel",
+            "props": {
+              "Width": 345,
+              "Height": 237,
+              "DesignSize": [
+                345,
+                237
+              ]
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "FileFormatsLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "Pick file formats to export:",
+                  "FontStyle": [
+                    "fsBold"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckListBox",
+                "name": "FileFormatsListBox",
+                "props": {
+                  "Left": 8,
+                  "Top": 29,
+                  "Width": 329,
+                  "Height": 169,
+                  "OnClickCheck": "SomethingChangedClick",
+                  "Anchors": [
+                    "akLeft",
+                    "akTop",
+                    "akRight",
+                    "akBottom"
+                  ],
+                  "TabOrder": 0,
+                  "Images": "BcImages.MainImages",
+                  "OnGetImageIndex": "FileFormatsListBoxGetImageIndex"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "FileFormatsAllBtn",
+                "props": {
+                  "Left": 8,
+                  "Top": 206,
+                  "Width": 24,
+                  "Hint": "Mark All",
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "ImageIndex": "imgCheckAll",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 1,
+                  "OnClick": "CheckedChangeClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "FileFormatsNoneBtn",
+                "props": {
+                  "Left": 32,
+                  "Top": 206,
+                  "Width": 24,
+                  "Hint": "Unmark All",
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "ImageIndex": "imgUncheckAll",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 2,
+                  "OnClick": "CheckedChangeClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "ProfilesPanel",
+            "props": {
+              "Width": 345,
+              "Height": 237,
+              "DesignSize": [
+                345,
+                237
+              ]
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "ProfilesLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "Pick profiles to export:",
+                  "FontStyle": [
+                    "fsBold"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckListBox",
+                "name": "ProfilesListBox",
+                "props": {
+                  "Left": 8,
+                  "Top": 29,
+                  "Width": 329,
+                  "Height": 144,
+                  "OnClickCheck": "SomethingChangedClick",
+                  "Anchors": [
+                    "akLeft",
+                    "akTop",
+                    "akRight",
+                    "akBottom"
+                  ],
+                  "TabOrder": 0,
+                  "Images": "BcImages.MainImages",
+                  "OnGetImageIndex": "ProfilesListBoxGetImageIndex",
+                  "OnGetNotLast": "ProfilesListBoxGetNotLast"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "ProfilesAllBtn",
+                "props": {
+                  "Left": 8,
+                  "Top": 181,
+                  "Width": 24,
+                  "Hint": "Mark All",
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "ImageIndex": "imgCheckAll",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 1,
+                  "OnClick": "CheckedChangeClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "ProfilesNoneBtn",
+                "props": {
+                  "Left": 32,
+                  "Top": 181,
+                  "Width": 24,
+                  "Hint": "Unmark All",
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "ImageIndex": "imgUncheckAll",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 2,
+                  "OnClick": "CheckedChangeClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "ProfilesPasswordsEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 212,
+                  "Height": 17,
+                  "Anchors": [
+                    "akLeft",
+                    "akBottom"
+                  ],
+                  "Caption": "Include &passwords",
+                  "TabOrder": 3,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 239,
+          "Width": 345,
+          "TabOrder": 1,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiBackBtn",
+            "name": "BackBtn",
+            "props": {
+              "OnClick": "BackClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiNextBtn",
+            "name": "NextBtn",
+            "props": {
+              "OnClick": "NextClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

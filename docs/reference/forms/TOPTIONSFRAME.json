@@ -1,0 +1,20 @@
+{
+  "resource_index": 589,
+  "name": "TOPTIONSFRAME",
+  "sha256": "f2a0b9e5863ed67d6316b1424862bfc8f3eb692d32d8b3b71dd4c7fce25f36a7",
+  "bytes": 76,
+  "parse_status": "complete",
+  "components": 1,
+  "hierarchy": {
+    "class": "TOptionsFrame",
+    "name": "OptionsFrame",
+    "props": {
+      "Left": 0,
+      "Top": 0,
+      "Width": 424,
+      "Height": 424,
+      "TabOrder": 0
+    },
+    "children": []
+  }
+}

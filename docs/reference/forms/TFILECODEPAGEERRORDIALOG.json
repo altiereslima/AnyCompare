@@ -1,0 +1,87 @@
+{
+  "resource_index": 535,
+  "name": "TFILECODEPAGEERRORDIALOG",
+  "sha256": "44bb145d8ee1d9fb949fd9c9c3431d3aedcc9918e1ac1a8ffa52ff5deeb2ee85",
+  "bytes": 604,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "TFileCodePageErrorDialog",
+    "name": "FileCodePageErrorDialog",
+    "props": {
+      "Caption": "Encoding Error",
+      "ClientHeight": 119,
+      "ClientWidth": 401,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "Lbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 385,
+          "Height": 26,
+          "AutoSize": false,
+          "Caption": "This file contains Unicode characters that will be lost if it is saved using the current encoding.",
+          "WordWrap": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CodePageLbl",
+        "props": {
+          "Left": 8,
+          "Top": 42,
+          "Height": 13,
+          "Caption": "&Encoding:",
+          "FocusControl": "CodePageEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCodePageEdit",
+        "name": "CodePageEdit",
+        "props": {
+          "Left": 8,
+          "Top": 59,
+          "Width": 385,
+          "Height": 21,
+          "TabOrder": 0,
+          "AllowDetect": false
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 80,
+          "Width": 401,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "Caption": "&Save"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

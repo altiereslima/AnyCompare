@@ -1,0 +1,135 @@
+{
+  "resource_index": 546,
+  "name": "TFILEVIEWFRAME",
+  "sha256": "7d62e5793f3f437563cde76b4553607460434b1c43f2971f1522b591f2b1da40",
+  "bytes": 821,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TFileViewFrame",
+    "name": "FileViewFrame",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "JobProgressPanel",
+        "props": {
+          "Left": 0,
+          "Top": 642,
+          "Width": 750,
+          "Height": 21,
+          "Align": "alBottom",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiSpeedButton",
+            "name": "JobCancelBtn",
+            "props": {
+              "Left": 4,
+              "Top": 2,
+              "Width": 17,
+              "Height": 17,
+              "Hint": "Stop Loading|Terminates comparison.",
+              "ImageIndex": "imgStopRed",
+              "Images": "BcImages.MainImages",
+              "OnClick": "JobCancelClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiProgressBar",
+            "name": "JobProgressBar",
+            "props": {
+              "Left": 28,
+              "Top": 4,
+              "Width": 657,
+              "Height": 13,
+              "State": "pbsMarquee",
+              "TabOrder": 0
+            },
+            "children": []
+          }
+        ],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobErrorPanel",
+        "props": {
+          "Left": 0,
+          "Top": 663,
+          "Width": 750,
+          "Height": 21,
+          "Align": "alBottom",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiImage",
+            "name": "JobErrorImage",
+            "props": {
+              "Left": 4,
+              "Top": 2,
+              "Width": 16,
+              "Height": 16,
+              "ImageIndex": "imgError",
+              "Images": "BcImages.MainImages"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "JobErrorLbl",
+            "props": {
+              "Left": 24,
+              "Top": 4,
+              "Height": 13,
+              "Caption": "%"
+            },
+            "children": []
+          }
+        ],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MessagePanel",
+        "props": {
+          "TabOrder": 2
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiStatusBar",
+        "name": "StatusBar",
+        "props": {
+          "Panels": [
+            {
+              "Style": "psOwnerDraw",
+              "Width": 225,
+              "Images": "BcImages.ContentImages"
+            },
+            {
+              "Width": 225
+            }
+          ]
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "SpecInfoPopup",
+        "props": {
+          "Left": 32
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

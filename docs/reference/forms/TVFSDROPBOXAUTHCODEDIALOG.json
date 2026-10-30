@@ -1,0 +1,72 @@
+{
+  "resource_index": 653,
+  "name": "TVFSDROPBOXAUTHCODEDIALOG",
+  "sha256": "12e7596f83b7e26c908a061aad59ea2d7542c4480f6d231327bdcd37acbe72e1",
+  "bytes": 503,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TVfsDropboxAuthCodeDialog",
+    "name": "VfsDropboxAuthCodeDialog",
+    "props": {
+      "Caption": "Dropbox Authorization",
+      "ClientHeight": 85,
+      "ClientWidth": 387,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "AuthCodeLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Enter authorization code here after authenticating with Dropbox:",
+          "FocusControl": "AuthCodeEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "AuthCodeEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 371,
+          "Height": 21,
+          "TabOrder": 0,
+          "OnChange": "AuthCodeEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 46,
+          "Width": 387,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

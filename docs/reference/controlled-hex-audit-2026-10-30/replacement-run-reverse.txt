@@ -1,0 +1,7 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\replacement-run-reverse-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\replacement-run-reverse-right.bin
+8 same byte(s)
+8 difference byte(s)

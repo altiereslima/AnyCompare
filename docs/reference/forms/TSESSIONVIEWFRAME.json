@@ -1,0 +1,24 @@
+{
+  "resource_index": 622,
+  "name": "TSESSIONVIEWFRAME",
+  "sha256": "2d1dd77ffbb7fee71eb0a11e24c2c5ed3c2cc1066d1d380e374c458b7fda52aa",
+  "bytes": 96,
+  "parse_status": "complete",
+  "components": 2,
+  "hierarchy": {
+    "class": "TSessionViewFrame",
+    "name": "SessionViewFrame",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiPopupMenu",
+        "name": "ToolbarPopup",
+        "props": {
+          "OnPopup": "ToolbarListClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

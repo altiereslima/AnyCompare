@@ -1,0 +1,7 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\two-inserts-reverse-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\two-inserts-reverse-right.bin
+64 same byte(s)
+3 left orphan byte(s)

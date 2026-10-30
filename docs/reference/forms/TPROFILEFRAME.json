@@ -1,0 +1,18 @@
+{
+  "resource_index": 602,
+  "name": "TPROFILEFRAME",
+  "sha256": "fa9783c8422c15a7e8b1f23e19f1d4b4f43457093e9d20050965e148e9c9a88f",
+  "bytes": 53,
+  "parse_status": "complete",
+  "components": 1,
+  "hierarchy": {
+    "class": "TProfileFrame",
+    "name": "ProfileFrame",
+    "props": {
+      "Width": 255,
+      "Height": 309
+    },
+    "children": [],
+    "flags": 1
+  }
+}

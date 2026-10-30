@@ -1,0 +1,21 @@
+{
+  "window": {
+    "app": "process:C:\\Projetos\\BC4\\anycompare\\.codex\\reference-sessions-runtime\\BC4Reference.exe",
+    "id": 1114846,
+    "title": "example.txt - Comparar Textos - Beyond Compare"
+  },
+  "accessibility": {
+    "focused_element": "870 editar (settable, string) ID: 1001",
+    "tree": "Window: \"Novo Comparar Pastas (F) - Comparar Pastas (F) - Beyond Compare\", App: BC4Reference.exe.\n\t0 janela Novo Comparar Pastas (F) - Comparar Pastas (F) - Beyond Compare Secondary Actions: Raise\n\t\t813 painel ID: 133900\n\t\t\t814 painel ID: 133882\n\t\t\t\t815 barra de ferramentas MainBar ID: 133880\n\t\t\t\t\t816 caixa de combinação (settable, string) Value: *.* ID: 68434\n\t\t\t\t\t\t817 editar (settable, string) Value: *.* ID: 1001\n\t\t\t\t\t\t818 botão Abrir ID: DropDown\n\t\t\t\t\t819 painel ID: 133926\n\t\t\t\t\t820 botão Página Inicial\n\t\t\t\t\t821 separador (disabled)\n\t\t\t\t\t822 botão Todos\n\t\t\t\t\t823 item de menu Diferenças\n\t\t\t\t\t824 botão Iguais\n\t\t\t\t\t825 separador (disabled)\n\t\t\t\t\t826 item de menu Estrutura\n\t\t\t\t\t827 separador (disabled)\n\t\t\t\t\t828 botão Menor\n\t\t\t\t\t829 separador (disabled)\n\t\t\t\t\t830 botão Regras\n\t\t\t\t\t831 separador (disabled)\n\t\t\t\t\t832 botão (disabled) Copiar\n\t\t\t\t\t833 separador (disabled)\n\t\t\t\t\t834 botão Expandir\n\t\t\t\t\t835 botão Recolher\n\t\t\t\t\t836 botão Selecionar\n\t\t\t\t\t837 botão Arquivos\n\t\t\t\t\t838 botão Atualizar\n\t\t\t\t\t839 separador (disabled)\n\t\t\t\t\t840 botão Inverter\n\t\t\t\t\t841 botão (disabled) Parar\n\t\t\t\t\t842 separador (disabled)\n\t\t\t\t\t843 custom (disabled)\n\t\t\t\t\t844 botão Filtros\n\t\t\t\t\t845 botão Esconder\n\t\t\t846 Barra de status ID: 133916\n\t\t\t\t847 text\n\t\t\t\t848 text\n\t\t\t\t849 text Editar desativado\n\t\t\t\t850 text\n\t\t\t\t851 text\n\t\t\t\t852 text\n\t\t\t\t853 text Editar desativado\n\t\t\t\t854 text\n\t\t\t855 painel ID: 133898\n\t\t\t\t856 painel ID: 133896\n\t\t\t\t\t857 barra de rolagem (settable, float) Value: 0 ID: 68432\n\t\t\t\t\t\t858 botão Uma linha acima ID: UpButton\n\t\t\t\t\t\t859 elevador Posição ID: ScrollbarThumb\n\t\t\t\t\t\t860 botão Uma página abaixo ID: DownPageButton\n\t\t\t\t\t\t861 botão Uma linha abaixo ID: DownButton\n\t\t\t\t\t862 painel ID: 133894\n\t\t\t\t863 painel ID: 68430\n\t\t\t864 painel ID: 199444\n\t\t\t\t865 barra de ferramentas ID: 68386\n\t\t\t\t\t866 caixa de combinação (settable, string) ID: 68412\n\t\t\t\t\t\t867 editar (settable, string) ID: 1001\n\t\t\t\t\t\t868 botão Abrir ID: DropDown\n\t\t\t\t\t869 caixa de combinação (settable, string) ID: 133930\n\t\t\t\t\t\t870 editar (settable, string) ID: 1001\n\t\t\t\t\t\t871 botão Abrir ID: DropDown\n\t\t\t\t\t872 botão (disabled)\n\t\t\t\t\t873 botão\n\t\t\t\t\t874 botão\n\t\t\t\t\t875 custom (disabled)\n\t\t\t\t\t876 botão\n\t\t\t\t\t877 custom (disabled)\n\t\t\t\t\t878 botão (disabled)\n\t\t\t\t\t879 botão\n\t\t\t\t\t880 botão\n\t\t\t\t\t881 item de menu (disabled)\n\t\t\t\t\t882 item de menu (disabled)\n\t\t\t\t883 painel ID: 68374\n\t\t\t\t\t884 painel ID: 68376\n\t\t\t\t\t\t885 barra de rolagem (settable, float) Value: 0 ID: 133928\n\t\t\t\t\t\t\t886 botão Uma linha acima ID: UpButton\n\t\t\t\t\t\t\t887 elevador Posição ID: ScrollbarThumb\n\t\t\t\t\t\t\t888 botão Uma página abaixo ID: DownPageButton\n\t\t\t\t\t\t\t889 botão Uma linha abaixo ID: DownButton\n\t\t\t\t\t\t890 painel ID: 68378\n\t\t891 painel ID: 330114\n\t\t\t892 barra de menus ID: 395580\n\t\t\t\t893 item de menu Sessão\n\t\t\t\t894 item de menu Ações\n\t\t\t\t895 item de menu Editar\n\t\t\t\t896 item de menu Pesquisar\n\t\t\t\t897 item de menu Visualizar\n\t\t\t\t898 item de menu Ferramentas\n\t\t\t\t899 item de menu Ajuda (H)\n\t\t\t\t900 custom (disabled)\n\t\t90 barra de título (settable, string) Value: Novo Comparar Pastas (F) - Comparar Pastas (F) - Beyond Compare\n\t\t\t91 barra de menus Sistema ID: MenuBar\n\t\t\t\t92 item de menu Sistema\n\t\t\t93 botão Minimizar\n\t\t\t94 botão Maximizar\n\t\t\t95 botão Fechar\n\nThe focused UI element is 870 editar (settable, string) ID: 1001."
+  },
+  "screenshots": [
+    {
+      "height": 870,
+      "id": "screenshot-0",
+      "originX": 241,
+      "originY": 155,
+      "width": 1618,
+      "zIndex": 0
+    }
+  ]
+}

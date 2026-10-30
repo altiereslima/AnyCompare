@@ -1,0 +1,146 @@
+{
+  "resource_index": 551,
+  "name": "THEXLAYOUTDIALOG",
+  "sha256": "91d4c88fc3d75f95e4769c0388f9dd9918007f4ee675094840cf02ce0e161266",
+  "bytes": 1085,
+  "parse_status": "complete",
+  "components": 11,
+  "hierarchy": {
+    "class": "THexLayoutDialog",
+    "name": "HexLayoutDialog",
+    "props": {
+      "Caption": "Layout",
+      "ClientHeight": 202,
+      "ClientWidth": 265,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "GroupByteCountLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Bytes per group:",
+          "FocusControl": "GroupByteCountEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "GroupCountLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "Groups per item:",
+          "FocusControl": "GroupCountEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ContextCountLbl",
+        "props": {
+          "Left": 8,
+          "Top": 125,
+          "Height": 13,
+          "Caption": "Context count:",
+          "FocusControl": "ContextCountEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "GroupByteCountEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 49,
+          "Height": 21,
+          "Max": 999,
+          "MaxLength": 3,
+          "Min": 1,
+          "Position": 8,
+          "TabOrder": 0,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "GroupCountEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 49,
+          "Height": 21,
+          "Max": 999,
+          "MaxLength": 3,
+          "Min": 1,
+          "Position": 1,
+          "TabOrder": 1,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "GroupCountDetectEdit",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Height": 17,
+          "Caption": "Fit to window",
+          "TabOrder": 2,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "ContextCountEdit",
+        "props": {
+          "Left": 8,
+          "Top": 142,
+          "Width": 49,
+          "Height": 21,
+          "Max": 999,
+          "MaxLength": 3,
+          "Position": 16,
+          "TabOrder": 3,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 163,
+          "Width": 265,
+          "TabOrder": 4
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

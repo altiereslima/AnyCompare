@@ -1,0 +1,115 @@
+{
+  "resource_index": 662,
+  "name": "TVFSFTPPROFILESERVERFRAME",
+  "sha256": "013c6d4b17110e62359b3cd3f7c30d2267f6ef23b9a7521b8f6620312ae65af8",
+  "bytes": 910,
+  "parse_status": "complete",
+  "components": 8,
+  "hierarchy": {
+    "class": "TVfsFtpProfileServerFrame",
+    "name": "VfsFtpProfileServerFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileFtpServer",
+      "Caption": "Server"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "CodePageLbl",
+        "props": {
+          "Left": 8,
+          "Top": 58,
+          "Height": 13,
+          "Caption": "&Encoding:",
+          "FocusControl": "CodePageEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiLabel",
+        "name": "TimeZoneLbl",
+        "props": {
+          "Left": 8,
+          "Top": 104,
+          "Height": 13,
+          "Caption": "Time &zone:",
+          "FocusControl": "TimeZoneEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CustomInitCommandsLbl",
+        "props": {
+          "Left": 8,
+          "Top": 150,
+          "Height": 13,
+          "Caption": "Custom &login commands:",
+          "FocusControl": "CustomInitCommandsEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 2
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "CaseSensitiveEdit",
+        "props": {
+          "Left": 8,
+          "Top": 33,
+          "Height": 17,
+          "Caption": "Filenames are &case sensitive",
+          "TabOrder": 1,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCodePageEdit",
+        "name": "CodePageEdit",
+        "props": {
+          "Left": 8,
+          "Top": 75,
+          "Width": 239,
+          "Height": 21,
+          "TabOrder": 2,
+          "OnChange": "SomethingChangedClick",
+          "AllowUtf16": false
+        },
+        "children": []
+      },
+      {
+        "class": "TUiTimeZoneEdit",
+        "name": "TimeZoneEdit",
+        "props": {
+          "Left": 8,
+          "Top": 121,
+          "Width": 239,
+          "Height": 21,
+          "TabOrder": 3,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "CustomInitCommandsEdit",
+        "props": {
+          "Left": 8,
+          "Top": 167,
+          "Width": 239,
+          "Height": 134,
+          "TabOrder": 4,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

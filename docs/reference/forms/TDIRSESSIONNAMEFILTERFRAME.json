@@ -1,0 +1,209 @@
+{
+  "resource_index": 522,
+  "name": "TDIRSESSIONNAMEFILTERFRAME",
+  "sha256": "daa0ede7037edee7566c9a943846b6332e7f1b92cb3017fef76e1547ff4b2219",
+  "bytes": 1883,
+  "parse_status": "complete",
+  "components": 15,
+  "hierarchy": {
+    "class": "TDirSessionNameFilterFrame",
+    "name": "DirSessionNameFilterFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "SessionDirNameFilter",
+      "Caption": "Name Filters"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "IncludeFilesLbl",
+        "props": {
+          "Left": 28,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Include &files:",
+          "FocusControl": "IncludeFilesEdit",
+          "Transparent": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ExcludeFilesLbl",
+        "props": {
+          "Left": 236,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Exclude fi&les:",
+          "FocusControl": "ExcludeFilesEdit",
+          "Transparent": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "IncludeFilesImage",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 16,
+          "Height": 16,
+          "ImageIndex": "imgNameFilterIncludeFiles",
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "ExcludeFilesImage",
+        "props": {
+          "Left": 216,
+          "Top": 8,
+          "Width": 16,
+          "Height": 16,
+          "ImageIndex": "imgNameFilterExcludeFiles",
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IncludeFoldersLbl",
+        "props": {
+          "Left": 28,
+          "Top": 192,
+          "Height": 13,
+          "Caption": "Include f&olders:",
+          "FocusControl": "IncludeFoldersEdit",
+          "Transparent": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ExcludeFoldersLbl",
+        "props": {
+          "Left": 236,
+          "Top": 192,
+          "Height": 13,
+          "Caption": "Exclude fold&ers:",
+          "FocusControl": "ExcludeFoldersEdit",
+          "Transparent": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "IncludeFoldersImage",
+        "props": {
+          "Left": 8,
+          "Top": 192,
+          "Width": 16,
+          "Height": 16,
+          "ImageIndex": "imgNameFilterIncludeDirs",
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "ExcludeFoldersImage",
+        "props": {
+          "Left": 216,
+          "Top": 192,
+          "Width": 16,
+          "Height": 16,
+          "ImageIndex": "imgNameFilterExcludeDirs",
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "IncludeFilesEdit",
+        "props": {
+          "Left": 8,
+          "Top": 28,
+          "Width": 200,
+          "Height": 156,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 0,
+          "WordWrap": false,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "ExcludeFilesEdit",
+        "props": {
+          "Left": 216,
+          "Top": 28,
+          "Width": 201,
+          "Height": 156,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 1,
+          "WordWrap": false,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "IncludeFoldersEdit",
+        "props": {
+          "Left": 8,
+          "Top": 212,
+          "Width": 200,
+          "Height": 109,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 2,
+          "WordWrap": false,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "ExcludeFoldersEdit",
+        "props": {
+          "Left": 216,
+          "Top": 212,
+          "Width": 201,
+          "Height": 109,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 3,
+          "WordWrap": false,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "DefaultBtn",
+        "props": {
+          "Left": 8,
+          "Top": 329,
+          "Caption": "&Clear",
+          "TabOrder": 4,
+          "OnClick": "DefaultClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "PresetsNewBtn",
+        "props": {
+          "Left": 88,
+          "Top": 329,
+          "Caption": "Add To &Presets...",
+          "TabOrder": 5,
+          "OnClick": "PresetsNewClick",
+          "AutoSize": "asLeft"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

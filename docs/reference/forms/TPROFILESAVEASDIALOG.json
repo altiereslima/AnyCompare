@@ -1,0 +1,181 @@
+{
+  "resource_index": 604,
+  "name": "TPROFILESAVEASDIALOG",
+  "sha256": "2bdee858da8291e2c8c29acbb3f099d90e83582f4b199c5ec59bd62285d55b42",
+  "bytes": 1510,
+  "parse_status": "complete",
+  "components": 13,
+  "hierarchy": {
+    "class": "TProfileSaveAsDialog",
+    "name": "ProfileSaveAsDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "Save Profile As",
+      "ClientHeight": 186,
+      "ClientWidth": 313,
+      "Constraints.MinHeight": 166,
+      "Constraints.MinWidth": 303,
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "EditLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Save current settings as:",
+          "FocusControl": "Edit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "TreeViewLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "&Create in:",
+          "FocusControl": "TreeView"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "Edit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 297,
+          "Height": 21,
+          "AutoComplete": false,
+          "Anchors": [
+            "akLeft",
+            "akTop",
+            "akRight"
+          ],
+          "TabOrder": 0,
+          "OnChange": "EditChange",
+          "OnClick": "EditClick",
+          "OnKeyDown": "EditKeyDown",
+          "OnKeyPress": "EditKeyPress"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiTreeView",
+        "name": "TreeView",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 297,
+          "Height": 76,
+          "Anchors": [
+            "akLeft",
+            "akTop",
+            "akRight",
+            "akBottom"
+          ],
+          "Images": "BcImages.MainImages",
+          "PopupMenu": "TreePopup",
+          "TabOrder": 1,
+          "OnCancelEdit": "TreeViewCancelEdit",
+          "OnChange": "TreeViewChange",
+          "OnEdited": "TreeViewEdited",
+          "OnEditing": "TreeViewEditing"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 147,
+          "Width": 313,
+          "TabOrder": 2,
+          "SizeGripper": true,
+          "ItemTabOrder0": false
+        },
+        "children": [
+          {
+            "class": "TUiBitBtn",
+            "name": "NewSubfolderBtn",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Caption": "&New Subfolder",
+              "ImageIndex": "imgNewSessionFolder",
+              "Images": "BcImages.MainImages",
+              "TabOrder": 0,
+              "OnClick": "NewSubfolderClick",
+              "AutoSize": "asLeft"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "OnClick": "OkClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "TreePopup",
+        "props": {
+          "Left": 8,
+          "Top": 8
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "NewSubfolderItem",
+            "props": {
+              "Caption": "New Subfolder",
+              "ShortCut": 45,
+              "OnClick": "NewSubfolderClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "DeleteItem",
+            "props": {
+              "Caption": "Delete",
+              "ShortCut": 46,
+              "OnClick": "DeleteClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "RenameItem",
+            "props": {
+              "Caption": "Rename",
+              "ShortCut": 113,
+              "OnClick": "RenameClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

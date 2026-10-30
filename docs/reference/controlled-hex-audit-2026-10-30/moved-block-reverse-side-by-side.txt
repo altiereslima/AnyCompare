@@ -1,0 +1,12 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\moved-block-reverse-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\moved-block-reverse-right.bin
+                                           <> 00000000 31 32 33 34 35 36 37 38  12345678
+----------------------------------------------------------------------------------------
+00000000 41 42 43 44 45 46 47 48  ABCDEFGH =  00000008 41 42 43 44 45 46 47 48  ABCDEFGH
+----------------------------------------------------------------------------------------
+00000008 31 32 33 34 35 36 37 38  12345678 <>
+----------------------------------------------------------------------------------------

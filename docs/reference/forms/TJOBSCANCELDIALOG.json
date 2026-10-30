@@ -1,0 +1,78 @@
+{
+  "resource_index": 559,
+  "name": "TJOBSCANCELDIALOG",
+  "sha256": "77d03dcdec2a48dd42fa469cc36626dbe4b5171031b2d148ee110e786747077b",
+  "bytes": 453,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TJobsCancelDialog",
+    "name": "JobsCancelDialog",
+    "props": {
+      "Caption": "%",
+      "ClientHeight": 85,
+      "ClientWidth": 209,
+      "OnCloseQuery": "FormCloseQuery",
+      "OnCreate": "FormCreate",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "DescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiProgressBar",
+        "name": "ProgressBar",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 193,
+          "Height": 17,
+          "State": "pbsMarquee",
+          "TabOrder": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 46,
+          "Width": 209,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TTimer",
+        "name": "Timer",
+        "props": {
+          "Enabled": false,
+          "Interval": 500,
+          "OnTimer": "TimerTimer",
+          "Left": 8,
+          "Top": 8
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

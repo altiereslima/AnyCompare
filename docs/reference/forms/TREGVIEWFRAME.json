@@ -1,0 +1,267 @@
+{
+  "resource_index": 613,
+  "name": "TREGVIEWFRAME",
+  "sha256": "c72da369d7eed1b412191bf105c23214a93a315970ebc4d94b5ecacea9cdb159",
+  "bytes": 3219,
+  "parse_status": "complete",
+  "components": 14,
+  "hierarchy": {
+    "class": "TRegViewFrame",
+    "name": "RegViewFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ViewReg",
+      "OnResize": "FrameResize"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "MainPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 750,
+          "Height": 586,
+          "Align": "alClient",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0,
+          "OnResize": "MainPanelResize"
+        },
+        "children": [
+          {
+            "class": "TUiSplitter",
+            "name": "Splitter",
+            "props": {
+              "Left": 373,
+              "Top": 0,
+              "Height": 586,
+              "AutoSnap": false,
+              "OnMoved": "SplitterMoved"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiPanel",
+            "name": "LeftPanel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 373,
+              "Height": 586,
+              "Align": "alLeft",
+              "BevelOuter": "bvNone",
+              "TabOrder": 0
+            },
+            "children": [
+              {
+                "class": "TUiMultiTreeView",
+                "name": "LeftEditor",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 373,
+                  "Height": 586,
+                  "Align": "alClient",
+                  "BorderKind": "bkLowered",
+                  "Images": "BcImages.MainImages",
+                  "SelAllowed": false,
+                  "ShowExpandedBtn": true,
+                  "ShowItemSpot": false,
+                  "ShowLeafImage": true,
+                  "ShowLines": true,
+                  "TabOrder": 0,
+                  "TabStop": false,
+                  "OnColsChanged": "EditorColsChanged",
+                  "OnCurChanged": "EditorCurChanged",
+                  "OnDblClick": "EditorDblClick",
+                  "OnDrawColPrep": "EditorDrawColPrep",
+                  "OnDrawItemImage": "EditorDrawItemImage",
+                  "OnExtraChanged": "EditorExtraChanged",
+                  "OnGetColSegs": "EditorGetColSegs",
+                  "OnGetColShowWS": "EditorGetColShowWS",
+                  "OnGetColText": "EditorGetColText",
+                  "OnGetItemImageIndex": "EditorGetItemImageIndex",
+                  "OnGetSearchSides": "EditorGetSearchSides",
+                  "OnHdrTrackEnd": "EditorHdrTrackEnd",
+                  "OnMouseWheel": "EditorMouseWheel",
+                  "OnRenameApply": "EditorRenameApply",
+                  "OnRenameInit": "EditorRenameInit",
+                  "OnSearchStrChanged": "EditorSearchStrChanged",
+                  "OnSelChanged": "EditorSelChanged",
+                  "OnTopItemChanged": "EditorTopItemChanged"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiPanel",
+            "name": "RightPanel",
+            "props": {
+              "Left": 376,
+              "Top": 0,
+              "Width": 374,
+              "Height": 586,
+              "Align": "alClient",
+              "BevelOuter": "bvNone",
+              "TabOrder": 1
+            },
+            "children": [
+              {
+                "class": "TUiMultiTreeView",
+                "name": "RightEditor",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 374,
+                  "Height": 586,
+                  "Align": "alClient",
+                  "BorderKind": "bkLowered",
+                  "Images": "BcImages.MainImages",
+                  "SelAllowed": false,
+                  "ShowExpandedBtn": true,
+                  "ShowItemSpot": false,
+                  "ShowLeafImage": true,
+                  "ShowLines": true,
+                  "TabOrder": 0,
+                  "TabStop": false,
+                  "OnColsChanged": "EditorColsChanged",
+                  "OnCurChanged": "EditorCurChanged",
+                  "OnDblClick": "EditorDblClick",
+                  "OnDrawColPrep": "EditorDrawColPrep",
+                  "OnDrawItemImage": "EditorDrawItemImage",
+                  "OnExtraChanged": "EditorExtraChanged",
+                  "OnGetColSegs": "EditorGetColSegs",
+                  "OnGetColShowWS": "EditorGetColShowWS",
+                  "OnGetColText": "EditorGetColText",
+                  "OnGetItemImageIndex": "EditorGetItemImageIndex",
+                  "OnGetSearchSides": "EditorGetSearchSides",
+                  "OnHdrTrackEnd": "EditorHdrTrackEnd",
+                  "OnMouseWheel": "EditorMouseWheel",
+                  "OnRenameApply": "EditorRenameApply",
+                  "OnRenameInit": "EditorRenameInit",
+                  "OnSearchStrChanged": "EditorSearchStrChanged",
+                  "OnSelChanged": "EditorSelChanged",
+                  "OnTopItemChanged": "EditorTopItemChanged"
+                },
+                "children": []
+              }
+            ]
+          }
+        ],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiPanel",
+        "name": "DetailsPanel",
+        "props": {
+          "Left": 0,
+          "Top": 586,
+          "Width": 750,
+          "Height": 56,
+          "Align": "alBottom",
+          "BevelOuter": "bvLowered",
+          "Color": "clBtnShadow",
+          "ParentBackground": false,
+          "TabOrder": 1,
+          "OnResize": "DetailsPanelResize"
+        },
+        "children": [
+          {
+            "class": "TUiVirtualListBox",
+            "name": "LeftDetailsEditor",
+            "props": {
+              "Left": 1,
+              "Top": 1,
+              "Width": 788,
+              "Height": 18,
+              "SelAllowed": false,
+              "ShowUnfocused": false,
+              "TabOrder": 0,
+              "TabStop": false,
+              "OnColCountChanged": "DetailsEditorColCountChanged",
+              "OnDrawItem": "DetailsEditorDrawItem",
+              "OnGetSegs": "DetailsEditorGetSegs",
+              "OnGetShowWS": "DetailsEditorGetShowWS",
+              "OnTopColChanged": "DetailsEditorTopColChanged"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiVirtualListBox",
+            "name": "RightDetailsEditor",
+            "props": {
+              "Left": 1,
+              "Top": 20,
+              "Width": 788,
+              "Height": 35,
+              "ScrollBars": "ssBoth",
+              "SelAllowed": false,
+              "ShowUnfocused": false,
+              "TabOrder": 1,
+              "TabStop": false,
+              "OnColCountChanged": "DetailsEditorColCountChanged",
+              "OnDrawItem": "DetailsEditorDrawItem",
+              "OnGetSegs": "DetailsEditorGetSegs",
+              "OnGetShowWS": "DetailsEditorGetShowWS",
+              "OnTopColChanged": "DetailsEditorTopColChanged"
+            },
+            "children": []
+          }
+        ],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobProgressPanel",
+        "props": {
+          "TabOrder": 2
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobErrorPanel",
+        "props": {
+          "TabOrder": 3
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MessagePanel",
+        "props": {
+          "TabOrder": 4
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiStatusBar",
+        "name": "StatusBar",
+        "props": {
+          "Panels": [
+            {
+              "Style": "psOwnerDraw",
+              "Width": 225,
+              "Images": "BcImages.ContentImages"
+            },
+            {
+              "Width": 300
+            },
+            {
+              "Width": 225
+            }
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

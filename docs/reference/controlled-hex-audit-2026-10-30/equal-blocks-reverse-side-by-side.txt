@@ -1,0 +1,10 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\equal-blocks-reverse-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\equal-blocks-reverse-right.bin
+00000000 61 62 63 64              abcd     <> 00000000 61 62 63 64 31 32 33 34  abcd1234
+00000004             35 36 37 38      5678    00000008 61 62 63 64 35 36 37 38  abcd5678
+00000008 61 62 63 64 31 32 33 34  abcd1234
+----------------------------------------------------------------------------------------

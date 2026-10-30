@@ -1,0 +1,350 @@
+{
+  "resource_index": 592,
+  "name": "TPIXACTIONS",
+  "sha256": "3bc1eda458bfa94f390354c219720f1e842895664520facfe6fbc1ba10935d42",
+  "bytes": 4993,
+  "parse_status": "complete",
+  "components": 21,
+  "hierarchy": {
+    "class": "TPixActions",
+    "name": "PixActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "FileFormatAction",
+            "props": {
+              "ImageIndex": "imgPixFormatEdit"
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffToleranceAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "To&lerance Mode",
+              "GroupIndex": 10,
+              "Hint": "Tolerance Mode|Detects pixel differences greater than configurable tolerance.",
+              "ImageIndex": "imgPixDiffTolerance",
+              "MacShortCutStr": "Meta+1",
+              "ShortCaption": "Tol"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffRangeAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Mismatch Ran&ge Mode",
+              "GroupIndex": 10,
+              "Hint": "Mismatch Range Mode|Measures degree of pixel difference.",
+              "ImageIndex": "imgPixDiffRange",
+              "MacShortCutStr": "Meta+2",
+              "ShortCaption": "Range"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffBlendAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "&Blend Mode",
+              "GroupIndex": 10,
+              "Hint": "Blend Mode|Blends pictures based on configurable percentage.",
+              "ImageIndex": "imgPixDiffBlend",
+              "MacShortCutStr": "Meta+3",
+              "ShortCaption": "Blend"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "AutoScaleAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Auto S&cale",
+              "Hint": "Auto Scale|Makes smaller picture as large as other picture.",
+              "ImageIndex": "imgPixAutoScale",
+              "ShortCaption": "Bigger",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RotateRightAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Rotate Cloc&kwise",
+              "Hint": "Rotate Clockwise|Spins current picture to right by 90 degrees.",
+              "ImageIndex": "imgPixRotateRight",
+              "ShortCaption": "CW",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RotateLeftAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Rotate Cou&nterclockwise",
+              "Hint": "Rotate Counterclockwise|Spins current picture to left by 90 degrees.",
+              "ImageIndex": "imgPixRotateLeft",
+              "ShortCaption": "CCW",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FlipHorzAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Flip &Horizontally",
+              "Hint": "Flip Horizontally|Swaps pixels of current picture relative to its horizontal center.",
+              "ImageIndex": "imgPixFlipHorz",
+              "ShortCaption": "Horz",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FlipVertAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Flip &Vertically",
+              "Hint": "Flip Vertically|Swaps pixels of current picture relative to its vertical center.",
+              "ImageIndex": "imgPixFlipVert",
+              "ShortCaption": "Vert",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "OffsetResetAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Reset Difference Offset",
+              "Hint": "Reset Difference Offset|Realigns top left corner of both pictures."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CompareTagsAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Compare &Metadata",
+              "Hint": "Compare Metadata|Compares and shows metadata.",
+              "ImageIndex": "imgPixCompareTags",
+              "ShortCaption": "Meta"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BlendToggleAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Blend T&oggle",
+              "Hint": "Blend Toggle|Switches between left and right pictures.",
+              "ImageIndex": "imgPixBlendToggle",
+              "ShortCutStr": "F8"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FullScreenAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Full Scr&een",
+              "Hint": "Full Screen|Makes current picture show as large as possible.",
+              "ImageIndex": "imgFullScreen",
+              "ShortCaption": "Full",
+              "ShortCutStr": "F11",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ZoomListAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Zoom",
+              "Hint": "Zoom|Makes picture appear to change size in picked way."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ZoomInAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Zoom &In",
+              "Hint": "Zoom In|Makes pictures appear to be larger.",
+              "ImageIndex": "imgZoomIn"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ZoomOutAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Zoom &Out",
+              "Hint": "Zoom Out|Makes pictures appear to be smaller.",
+              "ImageIndex": "imgZoomOut"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ZoomActualAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Actual Size",
+              "Hint": "Actual Size|Makes pictures appear in their actual size.",
+              "ImageIndex": "imgPixZoomActual"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ZoomFitAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "&Fit to Window",
+              "Hint": "Fit to Window|Makes pictures appear to fill panes.",
+              "ImageIndex": "imgPixZoomFit"
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "View: Menu",
+            [
+              "DiffTolerance: MenuItem",
+              "DiffRange: MenuItem",
+              "DiffBlend: MenuItem",
+              "DisplayFilters: SeparatorItem",
+              "SameModIgnored: MenuItem",
+              "AutoScale: MenuItem",
+              "RotateRight: MenuItem",
+              "RotateLeft: MenuItem",
+              "FlipHorz: MenuItem",
+              "FlipVert: MenuItem",
+              "OffsetReset: MenuItem",
+              "Display: SeparatorItem",
+              "CompareTags: MenuItem",
+              "Layout: SeparatorItem",
+              "BlendToggle: MenuItem",
+              "ShowSpecInfo: MenuItem",
+              "FullScreen: MenuItem",
+              "ZoomList: SubmenuItem",
+              [
+                "ZoomIn: MenuItem",
+                "ZoomOut: MenuItem",
+                "ZoomActual: MenuItem",
+                "ZoomFit: MenuItem"
+              ]
+            ],
+            "Main: Toolbar",
+            [
+              "SessionLocked: ToolButton",
+              "DiffMode: SeparatorButton",
+              "DiffTolerance: ToolButton",
+              "DiffRange: ToolButton",
+              "DiffBlend: ToolButton",
+              "InsigIgnored: ToolButton",
+              "AutoScale: ToolButton",
+              "RotateRight: ToolButton",
+              "RotateLeft: ToolButton",
+              "FlipHorz: ToolButton",
+              "FlipVert: ToolButton",
+              "View: SeparatorButton",
+              "CompareTags: ToolButton",
+              "ShowSpecInfo: ToolButton",
+              "FullScreen: ToolButton"
+            ],
+            "ScrollBox: PopupMenu",
+            [
+              "Copy: MenuItem",
+              "N1: SeparatorItem",
+              "AutoScale: MenuItem",
+              "RotateRight: MenuItem",
+              "RotateLeft: MenuItem",
+              "FlipHorz: MenuItem",
+              "FlipVert: MenuItem",
+              "N2: SeparatorItem",
+              "FullScreen: MenuItem",
+              "N3: SeparatorItem",
+              "Open: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenClipboard: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem"
+              ],
+              "ExplorerList: SubmenuItem",
+              []
+            ],
+            "CenterScrollBox: PopupMenu",
+            [
+              "Copy: MenuItem",
+              "N1: SeparatorItem",
+              "OffsetReset: MenuItem",
+              "N2: SeparatorItem",
+              "FullScreen: MenuItem"
+            ],
+            "Edit: PopupMenu",
+            [
+              "Copy: MenuItem",
+              "N1: SeparatorItem",
+              "Open: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem"
+              ],
+              "ExplorerList: SubmenuItem",
+              []
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

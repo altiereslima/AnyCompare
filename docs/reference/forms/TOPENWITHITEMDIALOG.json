@@ -1,0 +1,261 @@
+{
+  "resource_index": 579,
+  "name": "TOPENWITHITEMDIALOG",
+  "sha256": "a4f1ea5a4ca73814ecaa6cfa22e2bc33cf1f28ed5750a3b41bcf4ca057f0f395",
+  "bytes": 2230,
+  "parse_status": "complete",
+  "components": 20,
+  "hierarchy": {
+    "class": "TOpenWithItemDialog",
+    "name": "OpenWithItemDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgOpenWithItem",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "\"Open With\" Application",
+      "ClientHeight": 262,
+      "ClientWidth": 408,
+      "OnCreate": "FormCreate",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "DescriptionLbl",
+        "props": {
+          "Left": 8,
+          "Top": 17,
+          "Height": 13,
+          "Caption": "D&escription:",
+          "FocusControl": "DescriptionEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ShortCutLbl",
+        "props": {
+          "Left": 176,
+          "Top": 17,
+          "Height": 13,
+          "Caption": "&Shortcut:",
+          "FocusControl": "ShortCutEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CmdLineLbl",
+        "props": {
+          "Left": 8,
+          "Top": 59,
+          "Height": 13,
+          "Caption": "C&ommand line:",
+          "FocusControl": "CmdLineEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "WorkingDirLbl",
+        "props": {
+          "Left": 8,
+          "Top": 101,
+          "Height": 13,
+          "Caption": "Wor&king folder:",
+          "FocusControl": "WorkingDirEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PathDelimLbl",
+        "props": {
+          "Left": 296,
+          "Top": 101,
+          "Height": 13,
+          "Caption": "&Path delimiter:",
+          "FocusControl": "PathDelimEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "DescriptionEdit",
+        "props": {
+          "Left": 8,
+          "Top": 34,
+          "Width": 158,
+          "Height": 21,
+          "TabOrder": 0,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiShortCutEdit",
+        "name": "ShortCutEdit",
+        "props": {
+          "Left": 174,
+          "Top": 34,
+          "Width": 145,
+          "Height": 21,
+          "TabOrder": 1,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "ShortCutRemoveBtn",
+        "props": {
+          "Left": 327,
+          "Top": 34,
+          "Caption": "&Remove",
+          "TabOrder": 2,
+          "OnClick": "ShortCutRemoveClick",
+          "AutoSize": "asRight"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpecBar",
+        "name": "CmdLineEdit",
+        "props": {
+          "Left": 8,
+          "Top": 76,
+          "Width": 392,
+          "TabOrder": 3,
+          "OnBrowse": "CmdLineEditBrowse",
+          "OnChange": "SomethingChangedClick",
+          "OnGetArgs": "CmdLineEditGetArgs"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpecComboBar",
+        "name": "WorkingDirEdit",
+        "props": {
+          "Left": 8,
+          "Top": 118,
+          "Width": 280,
+          "AutoCompleteEx": "acDirs",
+          "IsMRU": false,
+          "TabOrder": 4,
+          "OnBrowse": "WorkingDirEditBrowse",
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "PathDelimEdit",
+        "props": {
+          "Left": 296,
+          "Top": 118,
+          "Width": 24,
+          "Height": 21,
+          "MaxLength": 2,
+          "TabOrder": 5,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "HandleFilesEdit",
+        "props": {
+          "Left": 8,
+          "Top": 143,
+          "Height": 17,
+          "Caption": "Accepts &files",
+          "TabOrder": 6,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "HandleFoldersEdit",
+        "props": {
+          "Left": 208,
+          "Top": 143,
+          "Height": 17,
+          "Caption": "Accepts fo&lders",
+          "TabOrder": 7,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "RefreshWhenDoneEdit",
+        "props": {
+          "Left": 8,
+          "Top": 164,
+          "Height": 17,
+          "Caption": "Refres&h when finished",
+          "TabOrder": 8,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "MultiInstanceEdit",
+        "props": {
+          "Left": 8,
+          "Top": 185,
+          "Height": 17,
+          "Caption": "&Multiple instances",
+          "TabOrder": 9,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "WaitForEdit",
+        "props": {
+          "Left": 24,
+          "Top": 206,
+          "Height": 17,
+          "Caption": "&Wait for previous instance to finish",
+          "TabOrder": 10,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 223,
+          "Width": 408,
+          "TabOrder": 11
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

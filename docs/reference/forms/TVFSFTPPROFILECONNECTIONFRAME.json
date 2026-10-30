@@ -1,0 +1,268 @@
+{
+  "resource_index": 656,
+  "name": "TVFSFTPPROFILECONNECTIONFRAME",
+  "sha256": "f34c4f9dd090b502354447155f16debc2a2efd79bd9b296c17c547147fb347d8",
+  "bytes": 2327,
+  "parse_status": "complete",
+  "components": 19,
+  "hierarchy": {
+    "class": "TVfsFtpProfileConnectionFrame",
+    "name": "VfsFtpProfileConnectionFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileFtpConnection",
+      "Caption": "Connection"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "MaxConnectionsLbl",
+        "props": {
+          "Left": 8,
+          "Top": 33,
+          "Height": 13,
+          "Caption": "&Simultaneous connections:",
+          "FocusControl": "MaxConnectionsEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ReadTimeoutLbl",
+        "props": {
+          "Left": 8,
+          "Top": 79,
+          "Height": 13,
+          "Caption": "&Read timeout (seconds):",
+          "FocusControl": "ReadTimeoutEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DataPortMinLbl",
+        "props": {
+          "Left": 24,
+          "Top": 171,
+          "Height": 13,
+          "Caption": "&Min:",
+          "FocusControl": "DataPortMinEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 2
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DataPortMaxLbl",
+        "props": {
+          "Left": 127,
+          "Top": 171,
+          "Height": 13,
+          "Caption": "Ma&x:",
+          "FocusControl": "DataPortMaxEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 3
+      },
+      {
+        "class": "TUiLabel",
+        "name": "TLSVersionMinLbl",
+        "props": {
+          "Left": 24,
+          "Top": 284,
+          "Height": 13,
+          "Caption": "M&in:",
+          "FocusControl": "TLSVersionMinEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 4
+      },
+      {
+        "class": "TUiLabel",
+        "name": "TLSVersionMaxLbl",
+        "props": {
+          "Left": 127,
+          "Top": 284,
+          "Height": 13,
+          "Caption": "Max:",
+          "FocusControl": "TLSVersionMaxEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 5
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "MaxConnectionsEdit",
+        "props": {
+          "Left": 8,
+          "Top": 50,
+          "Width": 50,
+          "Height": 21,
+          "Max": 10,
+          "MaxLength": 2,
+          "Min": 1,
+          "Position": 1,
+          "TabOrder": 1,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "ReadTimeoutEdit",
+        "props": {
+          "Left": 8,
+          "Top": 96,
+          "Width": 50,
+          "Height": 21,
+          "TabOrder": 2,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "PassiveEdit",
+        "props": {
+          "Left": 8,
+          "Top": 125,
+          "Height": 17,
+          "Caption": "&Passive transfers (PASV)",
+          "TabOrder": 3,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "DataPortLimitedEdit",
+        "props": {
+          "Left": 8,
+          "Top": 146,
+          "Height": 17,
+          "Caption": "&Limit ports used for active transfers (PORT):",
+          "TabOrder": 4,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiNumEdit",
+        "name": "DataPortMinEdit",
+        "props": {
+          "Left": 48,
+          "Top": 167,
+          "Width": 63,
+          "Height": 21,
+          "MaxLength": 5,
+          "TabOrder": 5,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiNumEdit",
+        "name": "DataPortMaxEdit",
+        "props": {
+          "Left": 155,
+          "Top": 167,
+          "Width": 63,
+          "Height": 21,
+          "MaxLength": 5,
+          "TabOrder": 6,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "UseHOSTEdit",
+        "props": {
+          "Left": 8,
+          "Top": 196,
+          "Height": 17,
+          "Caption": "Use &HOST before login",
+          "TabOrder": 7,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "ClearControlChannelEdit",
+        "props": {
+          "Left": 8,
+          "Top": 217,
+          "Height": 17,
+          "Caption": "Clear &control channel (SSL only)",
+          "TabOrder": 8,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "ClearDataChannelEdit",
+        "props": {
+          "Left": 8,
+          "Top": 238,
+          "Height": 17,
+          "Caption": "Clear da&ta channel (SSL only)",
+          "TabOrder": 9,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "TLSVersionLimitedEdit",
+        "props": {
+          "Left": 8,
+          "Top": 259,
+          "Height": 17,
+          "Caption": "Limit TLS/SSL &versions:",
+          "TabOrder": 10,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "TLSVersionMinEdit",
+        "props": {
+          "Left": 48,
+          "Top": 280,
+          "Width": 63,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 11,
+          "OnChange": "TLSVersionMinChanged"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "TLSVersionMaxEdit",
+        "props": {
+          "Left": 155,
+          "Top": 280,
+          "Width": 63,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 12,
+          "OnChange": "TLSVersionMaxChanged"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

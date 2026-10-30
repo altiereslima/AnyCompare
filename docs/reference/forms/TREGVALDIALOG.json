@@ -1,0 +1,261 @@
+{
+  "resource_index": 612,
+  "name": "TREGVALDIALOG",
+  "sha256": "12209b072723fa4bf4f663e3d4b5c721bbb6d3e8d770edca0b4245ebdd438ea8",
+  "bytes": 1803,
+  "parse_status": "complete",
+  "components": 22,
+  "hierarchy": {
+    "class": "TRegValDialog",
+    "name": "RegValDialog",
+    "props": {
+      "Caption": "Edit Value",
+      "ClientHeight": 255,
+      "ClientWidth": 370,
+      "OnCreate": "FormCreate",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "NameLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Name:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "KindLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "&Kind:",
+          "FocusControl": "KindEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "BytesLbl",
+        "props": {
+          "Left": 8,
+          "Top": 103,
+          "Height": 13,
+          "Caption": "&Data:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "NameEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 353,
+          "Height": 21,
+          "TabStop": false,
+          "BorderStyle": "bsNone",
+          "ParentColor": true,
+          "ReadOnly": true,
+          "TabOrder": 0,
+          "WantReturns": false
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "KindEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 353,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 1,
+          "OnChange": "KindChangedClick",
+          "Images": "BcImages.MainImages",
+          "OnGetImageIndex": "KindEditGetImageIndex"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "BytesPanelView",
+        "props": {
+          "Left": 8,
+          "Top": 120,
+          "Width": 353,
+          "Height": 71,
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "BytesStrPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiEdit",
+                "name": "BytesStrEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 353,
+                  "Height": 21,
+                  "TabOrder": 0,
+                  "OnChange": "BytesEditChange"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "BytesBinPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiSimpleHexEditor",
+                "name": "BytesBinEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 353,
+                  "Height": 62,
+                  "ScrollBars": "ssVertical",
+                  "ShowItemNum": true,
+                  "TabOrder": 0,
+                  "OnChanged": "BytesEditChange"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "BytesUIntPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "BytesUIntBaseLbl",
+                "props": {
+                  "Left": 0,
+                  "Top": 29,
+                  "Height": 13,
+                  "Caption": "Base:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiNumEdit",
+                "name": "BytesUIntEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 353,
+                  "Height": 21,
+                  "Kind": "numUIntHex",
+                  "TabOrder": 0,
+                  "OnChange": "BytesEditChange"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiRadioButton",
+                "name": "BytesUIntHexEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 46,
+                  "Height": 17,
+                  "Caption": "&Hexadecimal",
+                  "TabOrder": 1,
+                  "OnClick": "BytesUIntBaseClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiRadioButton",
+                "name": "BytesUIntDecEdit",
+                "props": {
+                  "Left": 176,
+                  "Top": 46,
+                  "Height": 17,
+                  "Caption": "D&ecimal",
+                  "TabOrder": 2,
+                  "OnClick": "BytesUIntBaseClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "BytesMultStrPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiMemo",
+                "name": "BytesMultiStrEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 353,
+                  "Height": 62,
+                  "TabOrder": 0,
+                  "OnChange": "BytesEditChange"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "UseBinEdit",
+        "props": {
+          "Left": 8,
+          "Top": 199,
+          "Height": 17,
+          "Caption": "Edit in bi&nary",
+          "TabOrder": 3,
+          "OnClick": "KindChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 216,
+          "Width": 370,
+          "TabOrder": 4
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

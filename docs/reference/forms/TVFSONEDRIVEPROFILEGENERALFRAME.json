@@ -1,0 +1,94 @@
+{
+  "resource_index": 667,
+  "name": "TVFSONEDRIVEPROFILEGENERALFRAME",
+  "sha256": "d71e6fe97bb4111fb34fb24da879610d8174beb7b6571d54ee880254ea7da2d2",
+  "bytes": 634,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "TVfsOneDriveProfileGeneralFrame",
+    "name": "VfsOneDriveProfileGeneralFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileOneDrive",
+      "Caption": "General"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "DisplayNameLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Name:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DisplayNameEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 239,
+          "Height": 13,
+          "AutoSize": false,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "EmailLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "Email:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "EmailEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 239,
+          "Height": 13,
+          "AutoSize": false,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DescriptionLbl",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Height": 13,
+          "Caption": "D&escription:",
+          "FocusControl": "DescriptionEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "DescriptionEdit",
+        "props": {
+          "Left": 8,
+          "Top": 117,
+          "Width": 239,
+          "Height": 184,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 0,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

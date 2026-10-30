@@ -1,0 +1,83 @@
+{
+  "resource_index": 544,
+  "name": "TFILESESSIONFORMATSFRAME",
+  "sha256": "f11e1b5bbb50fba9774867924bdec47fc6c50cd290280d92d211eb7fc28e11dc",
+  "bytes": 609,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TFileSessionFormatsFrame",
+    "name": "FileSessionFormatsFrame",
+    "props": {
+      "Caption": "Format"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "LeftLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "%",
+          "FocusControl": "LeftEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "RightLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "&Right file format:",
+          "FocusControl": "RightEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "LeftEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 409,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 0,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "RightEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 409,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 1,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "SameAsLeftEdit",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Height": 17,
+          "Caption": "Sa&me as left file format",
+          "TabOrder": 2,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

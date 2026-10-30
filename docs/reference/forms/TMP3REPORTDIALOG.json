@@ -1,0 +1,19 @@
+{
+  "resource_index": 567,
+  "name": "TMP3REPORTDIALOG",
+  "sha256": "dd70505d5ee2cea868b4d8d91e1b35e211e06d5e8155a58cb77f106139d62cb2",
+  "bytes": 97,
+  "parse_status": "complete",
+  "components": 1,
+  "hierarchy": {
+    "class": "TMP3ReportDialog",
+    "name": "MP3ReportDialog",
+    "props": {
+      "Caption": "MP3 Compare Report",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [],
+    "flags": 1
+  }
+}

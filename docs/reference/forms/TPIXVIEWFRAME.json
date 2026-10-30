@@ -1,0 +1,728 @@
+{
+  "resource_index": 597,
+  "name": "TPIXVIEWFRAME",
+  "sha256": "3107aac9f29606cb935b975568a7c081397c8545f0a8b47d60d786acc7224260",
+  "bytes": 6672,
+  "parse_status": "complete",
+  "components": 48,
+  "hierarchy": {
+    "class": "TPixViewFrame",
+    "name": "PixViewFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ViewPix",
+      "OnResize": "FrameResize"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "MainPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 750,
+          "Height": 642,
+          "Align": "alClient",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiSplitter",
+            "name": "TagSplitter",
+            "props": {
+              "Left": 700,
+              "Top": 0,
+              "Width": 5,
+              "Height": 642,
+              "Align": "alRight",
+              "AutoSnap": false,
+              "OnCanResize": "TagSplitterCanResize",
+              "OnMoved": "TagSplitterMoved"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiPanel",
+            "name": "NonTagPanel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 700,
+              "Height": 642,
+              "Align": "alClient",
+              "BevelOuter": "bvNone",
+              "Color": 2305582,
+              "ParentBackground": false,
+              "TabOrder": 0,
+              "OnResize": "NonTagPanelResize"
+            },
+            "children": [
+              {
+                "class": "TUiSplitter",
+                "name": "Splitter",
+                "props": {
+                  "Left": 375,
+                  "Top": 0,
+                  "Width": 5,
+                  "Height": 316,
+                  "AutoSnap": false,
+                  "OnMoved": "SplitterMoved",
+                  "OnPaint": "SplitterPaint"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSplitter",
+                "name": "CenterSplitter",
+                "props": {
+                  "Left": 0,
+                  "Top": 316,
+                  "Width": 700,
+                  "Height": 5,
+                  "Cursor": "crVSplit",
+                  "Align": "alBottom",
+                  "AutoSnap": false,
+                  "MinSize": 124,
+                  "OnMoved": "CenterSplitterMoved",
+                  "OnPaint": "SplitterPaint"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "LeftPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 375,
+                  "Height": 316,
+                  "Align": "alLeft",
+                  "BevelOuter": "bvNone",
+                  "ParentBackground": false,
+                  "ParentColor": true,
+                  "TabOrder": 0
+                },
+                "children": [
+                  {
+                    "class": "TUiPanel",
+                    "name": "LeftImagePanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Width": 375,
+                      "Height": 316,
+                      "Align": "alClient",
+                      "BevelOuter": "bvNone",
+                      "ParentColor": true,
+                      "TabOrder": 0,
+                      "OnMouseMove": "ScrollBoxMouseMove",
+                      "OnMouseWheel": "ScrollBoxMouseWheel",
+                      "OnPaint": "ImagePanelPaint"
+                    },
+                    "children": [
+                      {
+                        "class": "TUiScrollBox",
+                        "name": "LeftScrollBox",
+                        "props": {
+                          "Left": 161,
+                          "Top": 134,
+                          "Width": 52,
+                          "Height": 52,
+                          "HorzScrollBar.Tracking": true,
+                          "VertScrollBar.Tracking": true,
+                          "BorderStyle": "bsNone",
+                          "DoubleBuffered": true,
+                          "ParentDoubleBuffered": false,
+                          "TabOrder": 0,
+                          "OnMouseDown": "ScrollBoxMouseDown",
+                          "OnMouseMove": "ScrollBoxMouseMove",
+                          "OnMouseUp": "ScrollBoxMouseUp",
+                          "OnMouseWheel": "ScrollBoxMouseWheel",
+                          "OnKeyDown": "ScrollBoxKeyDown",
+                          "OnScroll": "ScrollBoxScroll"
+                        },
+                        "children": [
+                          {
+                            "class": "TUiImage",
+                            "name": "LeftImage",
+                            "props": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Width": 48,
+                              "Height": 48,
+                              "OnMouseDown": "ScrollBoxMouseDown",
+                              "OnMouseMove": "ScrollBoxMouseMove",
+                              "OnMouseUp": "ScrollBoxMouseUp"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "RightPanel",
+                "props": {
+                  "Left": 380,
+                  "Top": 0,
+                  "Width": 320,
+                  "Height": 316,
+                  "Align": "alClient",
+                  "BevelOuter": "bvNone",
+                  "ParentBackground": false,
+                  "ParentColor": true,
+                  "TabOrder": 1
+                },
+                "children": [
+                  {
+                    "class": "TUiPanel",
+                    "name": "RightImagePanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Width": 320,
+                      "Height": 316,
+                      "Align": "alClient",
+                      "BevelOuter": "bvNone",
+                      "ParentColor": true,
+                      "TabOrder": 0,
+                      "OnMouseMove": "ScrollBoxMouseMove",
+                      "OnMouseWheel": "ScrollBoxMouseWheel",
+                      "OnPaint": "ImagePanelPaint"
+                    },
+                    "children": [
+                      {
+                        "class": "TUiScrollBox",
+                        "name": "RightScrollBox",
+                        "props": {
+                          "Left": 161,
+                          "Top": 134,
+                          "Width": 52,
+                          "Height": 52,
+                          "HorzScrollBar.Tracking": true,
+                          "VertScrollBar.Tracking": true,
+                          "BorderStyle": "bsNone",
+                          "DoubleBuffered": true,
+                          "ParentDoubleBuffered": false,
+                          "TabOrder": 0,
+                          "OnMouseDown": "ScrollBoxMouseDown",
+                          "OnMouseMove": "ScrollBoxMouseMove",
+                          "OnMouseUp": "ScrollBoxMouseUp",
+                          "OnMouseWheel": "ScrollBoxMouseWheel",
+                          "OnKeyDown": "ScrollBoxKeyDown",
+                          "OnScroll": "ScrollBoxScroll"
+                        },
+                        "children": [
+                          {
+                            "class": "TUiImage",
+                            "name": "RightImage",
+                            "props": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Width": 48,
+                              "Height": 48,
+                              "OnMouseDown": "ScrollBoxMouseDown",
+                              "OnMouseMove": "ScrollBoxMouseMove",
+                              "OnMouseUp": "ScrollBoxMouseUp"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "CenterPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 321,
+                  "Width": 700,
+                  "Height": 321,
+                  "Align": "alBottom",
+                  "BevelOuter": "bvNone",
+                  "ParentBackground": false,
+                  "ParentColor": true,
+                  "TabOrder": 2
+                },
+                "children": [
+                  {
+                    "class": "TUiPanel",
+                    "name": "ViewPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Width": 200,
+                      "Height": 321,
+                      "Align": "alLeft",
+                      "BevelOuter": "bvNone",
+                      "ParentColor": true,
+                      "TabOrder": 0,
+                      "OnMouseMove": "ScrollBoxMouseMove"
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "OffsetLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 13,
+                          "Caption": "Offset:",
+                          "OnClick": "OffsetResetClick",
+                          "FontColor": 16382457
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "OffsetEditLbl",
+                        "props": {
+                          "Left": 43,
+                          "Top": 8,
+                          "Height": 13,
+                          "Caption": "%",
+                          "OnClick": "OffsetResetClick",
+                          "FontColor": 16382457
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "ZoomLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 29,
+                          "Height": 13,
+                          "Caption": "Zoom:",
+                          "FontColor": 16382457
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "ZoomEditLbl",
+                        "props": {
+                          "Left": 38,
+                          "Top": 29,
+                          "Height": 13,
+                          "Caption": "%",
+                          "FontColor": 16382457
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpeedButton",
+                        "name": "ZoomActualBtn",
+                        "props": {
+                          "Left": 146,
+                          "Top": 46,
+                          "Flat": false,
+                          "ImageIndex": "imgPixZoomActual",
+                          "Images": "BcImages.MainImages"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpeedButton",
+                        "name": "ZoomFitBtn",
+                        "props": {
+                          "Left": 169,
+                          "Top": 46,
+                          "Flat": false,
+                          "ImageIndex": "imgPixZoomFit",
+                          "Images": "BcImages.MainImages"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "DetailsLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 124,
+                          "Height": 13,
+                          "Caption": "Pixel details:",
+                          "FontColor": 16382457
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "LeftDetailsInfoLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 234,
+                          "Height": 13,
+                          "Caption": "%",
+                          "FontColor": 16382457
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "RightDetailsInfoLbl",
+                        "props": {
+                          "Left": 103,
+                          "Top": 234,
+                          "Height": 13,
+                          "Caption": "%",
+                          "FontColor": 16382457
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiTrackBar",
+                        "name": "ZoomEdit",
+                        "props": {
+                          "Left": 0,
+                          "Top": 46,
+                          "Width": 146,
+                          "Height": 25,
+                          "Max": 2000,
+                          "Min": 1,
+                          "Position": 1,
+                          "ShowSelRange": false,
+                          "TabOrder": 0,
+                          "TickStyle": "tsNone",
+                          "OnChange": "ZoomEditChange",
+                          "OnMouseWheel": "ZoomEditMouseWheel"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiActivePanelView",
+                        "name": "DiffModePanelView",
+                        "props": {
+                          "Left": 0,
+                          "Top": 66,
+                          "Width": 200,
+                          "Height": 58,
+                          "ParentColor": true,
+                          "TabOrder": 1
+                        },
+                        "children": [
+                          {
+                            "class": "TUiActivePanel",
+                            "name": "TolerancePanel",
+                            "props": {
+                              "ParentColor": true
+                            },
+                            "children": [
+                              {
+                                "class": "TUiLabel",
+                                "name": "ToleranceLbl",
+                                "props": {
+                                  "Left": 8,
+                                  "Top": 8,
+                                  "Height": 13,
+                                  "Caption": "Tolerance:",
+                                  "FontColor": 16382457
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "TUiLabel",
+                                "name": "ToleranceEditLbl",
+                                "props": {
+                                  "Left": 59,
+                                  "Top": 8,
+                                  "Height": 13,
+                                  "Caption": "%",
+                                  "FontColor": 16382457
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "TUiSpeedButton",
+                                "name": "ToleranceGhostBtn",
+                                "props": {
+                                  "Left": 169,
+                                  "Top": 25,
+                                  "Hint": "Ghost Mode|Shows or hides ghost of pictures.",
+                                  "AutoCheck": true,
+                                  "Flat": false,
+                                  "ImageIndex": "imgPixToleranceGhost",
+                                  "Images": "BcImages.MainImages",
+                                  "OnClick": "ToleranceGhostClick"
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "TUiTrackBar",
+                                "name": "ToleranceEdit",
+                                "props": {
+                                  "Left": 0,
+                                  "Top": 25,
+                                  "Width": 169,
+                                  "Height": 25,
+                                  "Max": 255,
+                                  "ShowSelRange": false,
+                                  "TabOrder": 0,
+                                  "TickStyle": "tsNone",
+                                  "OnChange": "ToleranceEditChange"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "class": "TUiActivePanel",
+                            "name": "BlendPanel",
+                            "props": {
+                              "ParentColor": true
+                            },
+                            "children": [
+                              {
+                                "class": "TUiLabel",
+                                "name": "BlendLbl",
+                                "props": {
+                                  "Left": 8,
+                                  "Top": 8,
+                                  "Height": 13,
+                                  "Caption": "Blend:",
+                                  "FontColor": 16382457
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "TUiLabel",
+                                "name": "BlendEditLbl",
+                                "props": {
+                                  "Left": 38,
+                                  "Top": 8,
+                                  "Height": 13,
+                                  "Caption": "%",
+                                  "FontColor": 16382457
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "TUiSpeedButton",
+                                "name": "BlendToggleBtn",
+                                "props": {
+                                  "Left": 169,
+                                  "Top": 25,
+                                  "Flat": false,
+                                  "ImageIndex": "imgPixBlendToggle",
+                                  "Images": "BcImages.MainImages"
+                                },
+                                "children": []
+                              },
+                              {
+                                "class": "TUiTrackBar",
+                                "name": "BlendEdit",
+                                "props": {
+                                  "Left": 0,
+                                  "Top": 25,
+                                  "Width": 169,
+                                  "Height": 25,
+                                  "Max": 100,
+                                  "ShowSelRange": false,
+                                  "TabOrder": 0,
+                                  "TickStyle": "tsNone",
+                                  "OnChange": "BlendEditChange"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "class": "TUiPanel",
+                        "name": "LeftDetailsColorsPanel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 141,
+                          "Width": 89,
+                          "Height": 89,
+                          "BevelOuter": "bvNone",
+                          "ParentBackground": false,
+                          "ParentColor": true,
+                          "TabOrder": 2,
+                          "OnPaint": "DetailsColorsPanelPaint"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiPanel",
+                        "name": "RightDetailsColorsPanel",
+                        "props": {
+                          "Left": 103,
+                          "Top": 141,
+                          "Width": 89,
+                          "Height": 89,
+                          "BevelOuter": "bvNone",
+                          "ParentBackground": false,
+                          "ParentColor": true,
+                          "TabOrder": 3,
+                          "OnPaint": "DetailsColorsPanelPaint"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "CenterImagePanel",
+                    "props": {
+                      "Left": 200,
+                      "Top": 0,
+                      "Width": 500,
+                      "Height": 321,
+                      "Align": "alClient",
+                      "BevelOuter": "bvNone",
+                      "ParentColor": true,
+                      "TabOrder": 1,
+                      "OnMouseMove": "ScrollBoxMouseMove",
+                      "OnMouseWheel": "ScrollBoxMouseWheel",
+                      "OnPaint": "ImagePanelPaint"
+                    },
+                    "children": [
+                      {
+                        "class": "TUiScrollBox",
+                        "name": "CenterScrollBox",
+                        "props": {
+                          "Left": 149,
+                          "Top": 134,
+                          "Width": 52,
+                          "Height": 52,
+                          "HorzScrollBar.Tracking": true,
+                          "VertScrollBar.Tracking": true,
+                          "BorderStyle": "bsNone",
+                          "DoubleBuffered": true,
+                          "ParentDoubleBuffered": false,
+                          "TabOrder": 0,
+                          "OnMouseDown": "ScrollBoxMouseDown",
+                          "OnMouseMove": "ScrollBoxMouseMove",
+                          "OnMouseUp": "ScrollBoxMouseUp",
+                          "OnMouseWheel": "ScrollBoxMouseWheel",
+                          "OnKeyDown": "ScrollBoxKeyDown",
+                          "OnScroll": "ScrollBoxScroll"
+                        },
+                        "children": [
+                          {
+                            "class": "TUiImage",
+                            "name": "CenterImage",
+                            "props": {
+                              "Left": 0,
+                              "Top": 0,
+                              "Width": 48,
+                              "Height": 48,
+                              "OnMouseDown": "ScrollBoxMouseDown",
+                              "OnMouseMove": "ScrollBoxMouseMove",
+                              "OnMouseUp": "ScrollBoxMouseUp"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "TUiMultiTreeView",
+            "name": "TagEditor",
+            "props": {
+              "Left": 705,
+              "Top": 0,
+              "Width": 45,
+              "Height": 642,
+              "Align": "alRight",
+              "BorderKind": "bkLowered",
+              "ShowExpandedBtn": true,
+              "ShowItemSpot": false,
+              "ShowLines": true,
+              "TabOrder": 1,
+              "TabStop": false,
+              "OnColClick": "TagEditorColClick",
+              "OnCurChanged": "TagEditorCurChanged",
+              "OnDrawColPrep": "TagEditorDrawColPrep",
+              "OnGetColSegs": "TagEditorGetColSegs",
+              "OnGetColText": "TagEditorGetColText",
+              "OnGetSearchSides": "TagEditorGetSearchSides",
+              "OnHdrTrackEnd": "TagEditorHdrTrackEnd",
+              "OnMouseWheel": "TagEditorMouseWheel",
+              "OnSearchStrChanged": "TagEditorSearchStrChanged",
+              "OnSelChanged": "TagEditorSelChanged",
+              "OnTopItemChanged": "TagEditorTopItemChanged"
+            },
+            "children": []
+          }
+        ],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobProgressPanel",
+        "props": {
+          "TabOrder": 1
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobErrorPanel",
+        "props": {
+          "TabOrder": 2
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MessagePanel",
+        "props": {
+          "TabOrder": 3
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiStatusBar",
+        "name": "StatusBar",
+        "props": {
+          "Panels": [
+            {
+              "Style": "psOwnerDraw",
+              "Width": 225,
+              "Images": "BcImages.ContentImages"
+            },
+            {
+              "Width": 300
+            },
+            {
+              "Width": 225
+            }
+          ]
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TTimer",
+        "name": "DragTimer",
+        "props": {
+          "Enabled": false,
+          "Interval": 50,
+          "OnTimer": "DragTimerTimer",
+          "Left": 64
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "resource_index": 543,
+  "name": "TFILEREPORTDIALOG",
+  "sha256": "a77adeb216098141668a0811557e042a90a345fbef2c564e90621c0d81f1ec45",
+  "bytes": 71,
+  "parse_status": "complete",
+  "components": 1,
+  "hierarchy": {
+    "class": "TFileReportDialog",
+    "name": "FileReportDialog",
+    "props": {
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [],
+    "flags": 1
+  }
+}

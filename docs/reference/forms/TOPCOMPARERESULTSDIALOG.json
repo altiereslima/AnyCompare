@@ -1,0 +1,60 @@
+{
+  "resource_index": 572,
+  "name": "TOPCOMPARERESULTSDIALOG",
+  "sha256": "1ce337fccc3691cb5bbebacbe6f8c36f43de05ae9e89ab0f477e43033307f328",
+  "bytes": 610,
+  "parse_status": "complete",
+  "components": 3,
+  "hierarchy": {
+    "class": "TOpCompareResultsDialog",
+    "name": "OpCompareResultsDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "%",
+      "ClientHeight": 343,
+      "ClientWidth": 377,
+      "Constraints.MinHeight": 75,
+      "Constraints.MinWidth": 105,
+      "OnClose": "FormClose",
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnKeyPress": "FormKeyPress",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiSimpleTreeView",
+        "name": "TreeView",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 377,
+          "Height": 324,
+          "Align": "alClient",
+          "Images": "BcImages.ContentImages",
+          "ShowLeafImage": true,
+          "TabOrder": 0,
+          "OnDblClick": "TreeViewDblClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiStatusBar",
+        "name": "StatusBar",
+        "props": {
+          "Left": 0,
+          "Top": 324,
+          "Width": 377,
+          "Height": 19,
+          "Panels": [],
+          "SimplePanel": true,
+          "SimpleText": "Double-click a file to open it in the associated view."
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

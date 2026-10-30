@@ -1,0 +1,83 @@
+{
+  "resource_index": 555,
+  "name": "THOMEACTIONS",
+  "sha256": "491ad9bc5a6fef9d940479ea6610b747c44721193b9d3d3da2df0a6a53fea995",
+  "bytes": 709,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "THomeActions",
+    "name": "HomeActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "FindAction",
+            "props": {
+              "Category": "Search",
+              "Hint": "Find|Finds search string.",
+              "ShortCutStr": "Ctrl+F"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowManageAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Show Session &Management",
+              "Hint": "Show Session Management|Shows or hides management panel."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MaximizeManageAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Ma&ximize Session Management",
+              "Hint": "Maximize Session Management|Maximizes or restores management panel."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowWebAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Show &Web Resources",
+              "Hint": "Show Web Resources|Shows or hides web panel."
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "MergeFile: Menu",
+            [],
+            "View: Menu",
+            [
+              "ShowManage: MenuItem",
+              "MaximizeManage: MenuItem",
+              "ShowWeb: MenuItem"
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

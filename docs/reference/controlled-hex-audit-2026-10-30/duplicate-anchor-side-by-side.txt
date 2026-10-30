@@ -1,0 +1,8 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\duplicate-anchor-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\duplicate-anchor-right.bin
+00000000 41 42                    AB       <> 00000000 42 42                    BB
+----------------------------------------------------------------------------------------

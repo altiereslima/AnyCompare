@@ -1,0 +1,122 @@
+{
+  "resource_index": 630,
+  "name": "TTEXTFILESESSIONFORMATSFRAME",
+  "sha256": "20c89fdfec1ecac4eb95e2b36925c8236136a286dfb67eade232e6514dc62544",
+  "bytes": 1040,
+  "parse_status": "complete",
+  "components": 9,
+  "hierarchy": {
+    "class": "TTextFileSessionFormatsFrame",
+    "name": "TextFileSessionFormatsFrame",
+    "props": {
+      "HelpType": "htKeyword"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "CodePageOverridePanel",
+        "props": {
+          "Left": 0,
+          "Top": 125,
+          "Width": 425,
+          "Height": 146,
+          "BevelOuter": "bvNone",
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "CodePageOverrideBevel",
+            "props": {
+              "Left": 8,
+              "Top": 0,
+              "Width": 409,
+              "Height": 1,
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "LeftCodePageOverrideLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "L&eft encoding override:",
+              "FocusControl": "LeftCodePageOverrideEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "RightCodePageOverrideLbl",
+            "props": {
+              "Left": 8,
+              "Top": 54,
+              "Height": 13,
+              "Caption": "Ri&ght encoding override:",
+              "FocusControl": "RightCodePageOverrideEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "CenterCodePageOverrideLbl",
+            "props": {
+              "Left": 8,
+              "Top": 100,
+              "Height": 13,
+              "Caption": "&Center encoding override:",
+              "FocusControl": "CenterCodePageOverrideEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCodePageEdit",
+            "name": "LeftCodePageOverrideEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Width": 409,
+              "Height": 21,
+              "TabOrder": 0,
+              "OnChange": "SomethingChangedClick",
+              "UseNone": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCodePageEdit",
+            "name": "RightCodePageOverrideEdit",
+            "props": {
+              "Left": 8,
+              "Top": 71,
+              "Width": 409,
+              "Height": 21,
+              "TabOrder": 1,
+              "OnChange": "SomethingChangedClick",
+              "UseNone": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCodePageEdit",
+            "name": "CenterCodePageOverrideEdit",
+            "props": {
+              "Left": 8,
+              "Top": 117,
+              "Width": 409,
+              "Height": 21,
+              "TabOrder": 2,
+              "OnChange": "SomethingChangedClick",
+              "UseNone": true
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

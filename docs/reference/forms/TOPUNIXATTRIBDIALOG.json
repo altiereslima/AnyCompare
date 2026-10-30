@@ -1,0 +1,292 @@
+{
+  "resource_index": 591,
+  "name": "TOPUNIXATTRIBDIALOG",
+  "sha256": "fc2a7c34b44aed1889e5b55e2b9402e37a4708ab83f56775ada63304223d078a",
+  "bytes": 2210,
+  "parse_status": "complete",
+  "components": 23,
+  "hierarchy": {
+    "class": "TOpUnixAttribDialog",
+    "name": "OpUnixAttribDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "OpAttrib",
+      "Caption": "Attributes",
+      "ClientHeight": 467,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "ActionPanel",
+        "props": {
+          "Height": 201
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "ActionDescLbl",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Width": 361,
+              "Height": 26,
+              "AutoSize": false,
+              "Caption": "Check a box to set attribute on selected files.  Uncheck a box to clear attribute.",
+              "WordWrap": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "OwnerLbl",
+            "props": {
+              "Left": 8,
+              "Top": 63,
+              "Height": 13,
+              "Caption": "&Owner:",
+              "FocusControl": "OwnerEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "GroupLbl",
+            "props": {
+              "Left": 136,
+              "Top": 63,
+              "Height": 13,
+              "Caption": "&Group:",
+              "FocusControl": "GroupEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "PermissionsLbl",
+            "props": {
+              "Left": 264,
+              "Top": 63,
+              "Height": 13,
+              "Caption": "&Permissions:",
+              "FocusControl": "PermissionsEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "OwnerReadLbl",
+            "props": {
+              "Left": 8,
+              "Top": 109,
+              "Height": 13,
+              "Caption": "O&wner:",
+              "FocusControl": "OwnerReadEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "GroupReadLbl",
+            "props": {
+              "Left": 136,
+              "Top": 109,
+              "Height": 13,
+              "Caption": "Gro&up:",
+              "FocusControl": "GroupReadEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "OtherReadLbl",
+            "props": {
+              "Left": 264,
+              "Top": 109,
+              "Height": 13,
+              "Caption": "O&ther:",
+              "FocusControl": "OtherReadEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "OwnerEdit",
+            "props": {
+              "Left": 8,
+              "Top": 80,
+              "Width": 120,
+              "Height": 21,
+              "TabOrder": 0
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "GroupEdit",
+            "props": {
+              "Left": 136,
+              "Top": 80,
+              "Width": 120,
+              "Height": 21,
+              "TabOrder": 1
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "PermissionsEdit",
+            "props": {
+              "Left": 264,
+              "Top": 80,
+              "Width": 120,
+              "Height": 21,
+              "MaxLength": 3,
+              "TabOrder": 2,
+              "OnChange": "PermissionsEditChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "OwnerReadEdit",
+            "props": {
+              "Left": 8,
+              "Top": 126,
+              "Height": 17,
+              "Caption": "Read",
+              "TabOrder": 3,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "OwnerWriteEdit",
+            "props": {
+              "Left": 8,
+              "Top": 147,
+              "Height": 17,
+              "Caption": "Write",
+              "TabOrder": 4,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "OwnerExecuteEdit",
+            "props": {
+              "Left": 8,
+              "Top": 168,
+              "Height": 17,
+              "Caption": "Execute",
+              "TabOrder": 5,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "GroupReadEdit",
+            "props": {
+              "Left": 136,
+              "Top": 126,
+              "Height": 17,
+              "Caption": "Read",
+              "TabOrder": 6,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "GroupWriteEdit",
+            "props": {
+              "Left": 136,
+              "Top": 147,
+              "Height": 17,
+              "Caption": "Write",
+              "TabOrder": 7,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "GroupExecuteEdit",
+            "props": {
+              "Left": 136,
+              "Top": 168,
+              "Height": 17,
+              "Caption": "Execute",
+              "TabOrder": 8,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "OtherReadEdit",
+            "props": {
+              "Left": 264,
+              "Top": 126,
+              "Height": 17,
+              "Caption": "Read",
+              "TabOrder": 9,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "OtherWriteEdit",
+            "props": {
+              "Left": 264,
+              "Top": 147,
+              "Height": 17,
+              "Caption": "Write",
+              "TabOrder": 10,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "OtherExecuteEdit",
+            "props": {
+              "Left": 264,
+              "Top": 168,
+              "Height": 17,
+              "Caption": "Execute",
+              "TabOrder": 11,
+              "OnClick": "PermissionsChangedClick"
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "FilteredWarnPanel",
+        "props": {
+          "Top": 348
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Top": 428
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

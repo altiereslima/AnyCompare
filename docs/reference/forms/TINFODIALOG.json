@@ -1,0 +1,44 @@
+{
+  "resource_index": 558,
+  "name": "TINFODIALOG",
+  "sha256": "0de9a3a3fa5237d138d314469e5b044badbd61a4ecbe76dac5ad79dffe39b788",
+  "bytes": 265,
+  "parse_status": "complete",
+  "components": 3,
+  "hierarchy": {
+    "class": "TInfoDialog",
+    "name": "InfoDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "%",
+      "ClientHeight": 333,
+      "ClientWidth": 423,
+      "Constraints.MinHeight": 104,
+      "Constraints.MinWidth": 105,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 294,
+          "Width": 423,
+          "TabOrder": 0,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiCloseBtn",
+            "name": "CloseBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,690 @@
+{
+  "resource_index": 484,
+  "name": "TBASEACTIONS",
+  "sha256": "77e1ca144fba38271d1b25b195ddf4f2adbcf1e632125a50e3e13051d8b24188",
+  "bytes": 10497,
+  "parse_status": "complete",
+  "components": 43,
+  "hierarchy": {
+    "class": "TBaseActions",
+    "name": "BaseActions",
+    "props": {
+      "OldCreateOrder": true,
+      "OnCreate": "DataModuleCreate",
+      "OnDestroy": "DataModuleDestroy",
+      "Height": 291,
+      "Width": 217
+    },
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {
+          "Images": "BcImages.MainImages"
+        },
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "MacCommandLineToolsAction",
+            "props": {
+              "Category": "Mac",
+              "Caption": "Install Command Line Tools...",
+              "Hint": "Install Command Line Tools|Places bcomp and bcompare in /usr/local/bin/ folder to make BCompare available from the terminal prompt.",
+              "OnExecute": "MacCommandLineToolsExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SessionNewListAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&New Session",
+              "Hint": "New Session|Opens empty session of picked type in new view.",
+              "OnExecute": "SessionNewListExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TabNewAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "New &Tab",
+              "Hint": "New Tab|Opens Home view in new tab.",
+              "OnExecute": "TabNewExecute",
+              "MacShortCutStr": "Meta+T",
+              "Scope": "Bc",
+              "ShortCutStr": "Ctrl+T"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "WindowNewAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "New &Window",
+              "Hint": "New Window|Opens Home view in new window.",
+              "OnExecute": "WindowNewExecute",
+              "MacShortCutStr": "Meta+N",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SessionOpenAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Open Session",
+              "Hint": "Open Session|Opens Home in new view.",
+              "OnExecute": "SessionOpenExecute",
+              "MacShortCutStr": "Ctrl+Meta+O",
+              "Scope": "Bc",
+              "ShortCutStr": "Shift+Ctrl+O"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "WorkspaceLoadListAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Load Wor&kspace",
+              "Hint": "Load Workspace|Restores picked saved view configuration.",
+              "OnExecute": "WorkspaceLoadListExecute",
+              "DynVisible": true,
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "WorkspaceManagerAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Manage Workspaces...",
+              "Hint": "Manage Workspaces|Manages the saved view configurations that can be restored.",
+              "OnExecute": "WorkspaceManagerExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "WorkspaceSaveAsAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Sa&ve Workspace As...",
+              "Hint": "Save Workspace As|Stores current view configuration.",
+              "OnExecute": "WorkspaceSaveAsExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CloseTabAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Close Tab",
+              "Hint": "Close Tab|Closes active tab.",
+              "OnExecute": "CloseTabExecute",
+              "MacShortCutStr": "Meta+W",
+              "Scope": "Bc",
+              "SecondaryShortCutStr": "Ctrl+F4",
+              "ShortCutStr": "Ctrl+W"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExitAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "E&xit",
+              "Hint": "Exit|Quits the application, prompts to save edits.",
+              "OnExecute": "ExitExecute",
+              "Scope": "Bc",
+              "ShortCutStr": "Ctrl+Q"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ProgramOptionsAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "&Options...",
+              "Hint": "Options|Sets global preferences.",
+              "ImageIndex": "imgOptions",
+              "OnExecute": "ProgramOptionsExecute",
+              "MacShortCutStr": "Meta+,",
+              "Scope": "Bc",
+              "ShortCaption": "Options",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FileFormatManagerAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "File &Formats...",
+              "Hint": "File Formats|Manages file formats.",
+              "ImageIndex": "imgFileFormatManager",
+              "OnExecute": "FileFormatManagerExecute",
+              "Scope": "Bc",
+              "ShortCaption": "File Formats",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ProfileManagerAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "&Profiles...",
+              "Hint": "Profiles|Manages profiles.",
+              "OnExecute": "ProfileManagerExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SourceControlManagerAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "Source Co&ntrol Integration...",
+              "Hint": "Source Control Integration|Manages integration with version control systems.",
+              "OnExecute": "SourceControlManagerExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExportAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "&Export Settings...",
+              "Hint": "Export Settings|Saves user settings as a file.",
+              "OnExecute": "ExportExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ImportAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "&Import Settings...",
+              "Hint": "Import Settings|Loads user settings from a file.",
+              "OnExecute": "ImportExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RestoreAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "&Restore Factory Defaults...",
+              "Hint": "Restore Factory Defaults|Loads factory default settings.",
+              "OnExecute": "RestoreExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SaveSnapshotAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "Save Snaps&hot...",
+              "Hint": "Save Snapshot|Saves details of specified folder for future comparison.",
+              "ImageIndex": "imgSaveSnapshot",
+              "OnExecute": "SaveSnapshotExecute",
+              "Scope": "Bc",
+              "ShortCaption": "Snapshot",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "EditTextFileAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "E&dit Text File",
+              "Hint": "Edit Text File|Opens new Text Edit view.",
+              "ImageIndex": "imgTextEditSession",
+              "OnExecute": "EditTextFileExecute",
+              "Scope": "Bc",
+              "ShortCaption": "Text Edit",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ViewPatchAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "View P&atch...",
+              "Hint": "View Patch|Opens picked patch file in new Text Patch view.",
+              "ImageIndex": "imgTextPatchSession",
+              "OnExecute": "ViewPatchExecute",
+              "Scope": "Bc",
+              "ShortCaption": "Patch",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RaiseExceptionAction",
+            "props": {
+              "Category": "Tools",
+              "Caption": "Raise E&xception",
+              "Hint": "Raise Exception",
+              "OnExecute": "RaiseExceptionExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowMinimizeAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Minimize",
+              "Hint": "Minimize|Minimizes active window.",
+              "OnExecute": "MacWindowMinimizeExecute",
+              "MacDynGroup": true,
+              "MacShortCutStr": "Meta+M",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowMinimizeAllAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Minimize All",
+              "Hint": "Minimize All|Minimizes all application windows.",
+              "OnExecute": "MacWindowMinimizeAllExecute",
+              "MacDynGroup": true,
+              "MacShortCutStr": "Alt+Meta+M",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowZoomAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Zoom",
+              "Hint": "Zoom|Maximizes or restores active window.",
+              "OnExecute": "MacWindowZoomExecute",
+              "MacDynGroup": true,
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowZoomAllAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Zoom All",
+              "Hint": "Zoom All|Maximizes all visible document windows.",
+              "OnExecute": "MacWindowZoomAllExecute",
+              "MacDynGroup": true,
+              "MacDynShiftState": [
+                "ssAlt"
+              ],
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowNextAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Cycle Through Windows",
+              "Hint": "Cycle Through Windows|Selects window after active one.",
+              "OnExecute": "MacWindowNextExecute",
+              "MacShortCutStr": "Meta+`",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowPrevAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Cycle Back Through Windows",
+              "Hint": "Cycle Back Through Windows|Selects window before active one.",
+              "OnExecute": "MacWindowPrevExecute",
+              "MacShortCutStr": "Shift+Meta+`",
+              "MenuAllowed": false,
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TabNextAction",
+            "props": {
+              "Category": "MacWindow",
+              "Hint": "Select Next Tab|Selects tab after active one.",
+              "OnExecute": "TabNextExecute",
+              "MacShortCutStr": "Shift+Meta+]",
+              "Scope": "Bc",
+              "ShortCutStr": "Ctrl+Tab"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TabPrevAction",
+            "props": {
+              "Category": "MacWindow",
+              "Hint": "Select Previous Tab|Selects tab before active one.",
+              "OnExecute": "TabPrevExecute",
+              "MacShortCutStr": "Shift+Meta+[",
+              "Scope": "Bc",
+              "ShortCutStr": "Shift+Ctrl+Tab"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacTabToWindowAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Move Tab to New Window",
+              "Hint": "Move Tab to New Window|Removes active tab and makes it into new window.",
+              "OnExecute": "MacTabToWindowExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowMergeAllAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Merge All Windows",
+              "Hint": "Merge All Windows|Moves all tabs onto active window.",
+              "OnExecute": "MacWindowMergeAllExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowActivateAllAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Bring All to Front",
+              "Hint": "Bring All to Front|Brings all windows to the foreground.",
+              "OnExecute": "MacWindowActivateAllExecute",
+              "MacDynGroup": true,
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacWindowArrangeAllAction",
+            "props": {
+              "Category": "MacWindow",
+              "Caption": "Arrange in Front",
+              "Hint": "Arrange in Front|Arranges all visible windows.",
+              "OnExecute": "MacWindowArrangeAllExecute",
+              "MacDynGroup": true,
+              "MacDynShiftState": [
+                "ssAlt"
+              ],
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "HelpContentsAction",
+            "props": {
+              "Category": "Help",
+              "Caption": "&Contents",
+              "Hint": "Contents|Shows help file.",
+              "ImageIndex": "imgHelpContents",
+              "OnExecute": "HelpContentsExecute",
+              "Scope": "Bc",
+              "ShortCaption": "Help",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ContextHelpAction",
+            "props": {
+              "Category": "Help",
+              "Caption": "Context Sensitive &Help",
+              "Hint": "Context Sensitive Help|Shows context sensitive help for the active window.",
+              "OnExecute": "ContextHelpExecute",
+              "Scope": "Bc",
+              "ShortCutStr": "F1"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "VisitSiteAction",
+            "props": {
+              "Category": "Help",
+              "Caption": "Scooter Software on the &Web",
+              "Hint": "Scooter Software on the Web|Opens the Scooter Software website in your browser.",
+              "OnExecute": "VisitSiteExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CheckForUpdatesAction",
+            "props": {
+              "Category": "Help",
+              "Caption": "Check for &Updates",
+              "Hint": "Check for Updates|Checks our website to see if a newer version is available.",
+              "OnExecute": "CheckForUpdatesExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SupportAction",
+            "props": {
+              "Category": "Help",
+              "Caption": "&Support",
+              "Hint": "Support|Displays Scooter Software contact information.",
+              "OnExecute": "SupportExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "EnterKeyAction",
+            "props": {
+              "Category": "Help",
+              "Caption": "&Enter Key...",
+              "Hint": "Enter Key|Enter registration key.",
+              "OnExecute": "EnterKeyExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "AboutAction",
+            "props": {
+              "Category": "Help",
+              "Caption": "&About %s",
+              "Hint": "About %s|Displays program information, version number and copyright.",
+              "OnExecute": "AboutExecute",
+              "Scope": "Bc"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Left": 32,
+          "Nodes": [
+            "Mac: Menu",
+            [
+              "About: MenuItem",
+              "N1: SeparatorItem",
+              "ProgramOptions: MenuItem",
+              "FileFormatManager: MenuItem",
+              "ProfileManager: MenuItem",
+              "SourceControlManager: MenuItem",
+              "N2: SeparatorItem",
+              "VisitSite: MenuItem",
+              "CheckForUpdates: MenuItem",
+              "Support: MenuItem",
+              "EnterKey: MenuItem",
+              "MacCommandLineTools: MenuItem",
+              "N3: SeparatorItem"
+            ],
+            "Session: Menu",
+            [
+              "SessionNewList: SubmenuItem",
+              [
+                "DirCompareNew: MenuItem",
+                "DirMergeNew: MenuItem",
+                "DirSyncNew: MenuItem",
+                "TextCompareNew: MenuItem",
+                "TextMergeNew: MenuItem",
+                "DataCompareNew: MenuItem",
+                "HexCompareNew: MenuItem",
+                "MP3CompareNew: MenuItem",
+                "PixCompareNew: MenuItem",
+                "RegCompareNew: MenuItem",
+                "TableCompareNew: MenuItem",
+                "VerCompareNew: MenuItem",
+                "XMLCompareNew: MenuItem"
+              ],
+              "TabNew: MenuItem",
+              "WindowNew: MenuItem",
+              "SessionOpen: MenuItem",
+              "Workspace: SeparatorItem",
+              "WorkspaceLoadList: SubmenuItem",
+              [
+                "N1: SeparatorItem",
+                "WorkspaceManager: MenuItem"
+              ],
+              "WorkspaceSaveAs: MenuItem",
+              "Settings: SeparatorItem",
+              "CloseTab: MenuItem",
+              "Last: SeparatorItem",
+              "Exit: MenuItem"
+            ],
+            "MergeFile: Menu",
+            [
+              "Exit: MenuItem"
+            ],
+            "Tools: Menu",
+            [
+              "ProgramOptions: MenuItem",
+              "FileFormatManager: MenuItem",
+              "ProfileManager: MenuItem",
+              "SourceControlManager: MenuItem",
+              "N1: SeparatorItem",
+              "Export: MenuItem",
+              "Import: MenuItem",
+              "Restore: MenuItem",
+              "N2: SeparatorItem",
+              "SaveSnapshot: MenuItem",
+              "EditTextFile: MenuItem",
+              "ViewPatch: MenuItem",
+              "RaiseException: MenuItem"
+            ],
+            "MacTools: Menu",
+            [
+              "Export: MenuItem",
+              "Import: MenuItem",
+              "Restore: MenuItem",
+              "N1: SeparatorItem",
+              "SaveSnapshot: MenuItem",
+              "EditTextFile: MenuItem",
+              "ViewPatch: MenuItem",
+              "RaiseException: MenuItem"
+            ],
+            "MacWindow: Menu",
+            [
+              "MacWindowMinimize: MenuItem",
+              "MacWindowMinimizeAll: MenuItem",
+              "MacWindowZoom: MenuItem",
+              "MacWindowZoomAll: MenuItem",
+              "MacWindowNext: MenuItem",
+              "MacWindowPrev: MenuItem",
+              "N1: SeparatorItem",
+              "TabNext: MenuItem",
+              "TabPrev: MenuItem",
+              "MacTabToWindow: MenuItem",
+              "MacWindowMergeAll: MenuItem",
+              "N2: SeparatorItem",
+              "MacWindowActivateAll: MenuItem",
+              "MacWindowArrangeAll: MenuItem",
+              "N3: SeparatorItem"
+            ],
+            "Help: Menu",
+            [
+              "HelpContents: MenuItem",
+              "ContextHelp: MenuItem",
+              "N1: SeparatorItem",
+              "VisitSite: MenuItem",
+              "CheckForUpdates: MenuItem",
+              "Support: MenuItem",
+              "EnterKey: MenuItem",
+              "N2: SeparatorItem",
+              "About: MenuItem"
+            ],
+            "Main: Toolbar",
+            [
+              "Tools: SeparatorButton",
+              "ProgramOptions: ToolButton",
+              "FileFormatManager: ToolButton",
+              "SaveSnapshot: ToolButton",
+              "EditTextFile: ToolButton",
+              "ViewPatch: ToolButton",
+              "Help: SeparatorButton",
+              "HelpContents: ToolButton"
+            ]
+          ]
+        },
+        "children": []
+      }
+    ]
+  }
+}

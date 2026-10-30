@@ -1,0 +1,271 @@
+{
+  "resource_index": 549,
+  "name": "THEXFINDFRAME",
+  "sha256": "203860d2c7c986d85c3d14ed4fbe2e0195ef8d0d4bf17107646729e589b66ba3",
+  "bytes": 2244,
+  "parse_status": "complete",
+  "components": 20,
+  "hierarchy": {
+    "class": "THexFindFrame",
+    "name": "HexFindFrame",
+    "props": {
+      "Left": 0,
+      "Top": 0,
+      "Width": 750,
+      "Height": 82,
+      "Color": 15589334,
+      "ParentBackground": false,
+      "ParentColor": false,
+      "TabOrder": 0
+    },
+    "children": [
+      {
+        "class": "TUiImage",
+        "name": "FindImage",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 16,
+          "Height": 16,
+          "ImageIndex": "imgSearch",
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "FindBytesLbl",
+        "props": {
+          "Left": 18,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Find what:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpeedButton",
+        "name": "FindMRUBtn",
+        "props": {
+          "Left": 551,
+          "Top": 4,
+          "Hint": "History",
+          "DropDown": true,
+          "Flat": false,
+          "PopupMenu": "FindMRUPopup"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ReplaceBytesLbl",
+        "props": {
+          "Left": 4,
+          "Top": 34,
+          "Height": 13,
+          "Caption": "Replace with:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpeedButton",
+        "name": "ReplaceMRUBtn",
+        "props": {
+          "Left": 551,
+          "Top": 30,
+          "Hint": "History",
+          "DropDown": true,
+          "Flat": false,
+          "PopupMenu": "ReplaceMRUPopup"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SidesLbl",
+        "props": {
+          "Left": 40,
+          "Top": 60,
+          "Height": 13,
+          "Caption": "Sides:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpeedButton",
+        "name": "CaseSensitiveBtn",
+        "props": {
+          "Left": 582,
+          "Top": 4,
+          "Hint": "Match Character Case",
+          "AutoCheck": true,
+          "Flat": false,
+          "ImageIndex": "imgFindCaseSensitive",
+          "Images": "BcImages.MainImages",
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpeedButton",
+        "name": "WrapBtn",
+        "props": {
+          "Left": 605,
+          "Top": 4,
+          "Hint": "Wrap Search",
+          "AutoCheck": true,
+          "Flat": false,
+          "ImageIndex": "imgFindWrap",
+          "Images": "BcImages.MainImages",
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiShowMoreButton",
+        "name": "AdvancedBtn",
+        "props": {
+          "Left": 723,
+          "Top": 4,
+          "OnClick": "AdvancedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSimpleHexEditor",
+        "name": "FindBytesEdit",
+        "props": {
+          "Left": 73,
+          "Top": 5,
+          "Width": 474,
+          "Height": 21,
+          "GroupByteCount": 1,
+          "GroupCountDetect": true,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 0,
+          "OnChanged": "FindBytesEditChanged"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSimpleHexEditor",
+        "name": "ReplaceBytesEdit",
+        "props": {
+          "Left": 73,
+          "Top": 31,
+          "Width": 474,
+          "Height": 21,
+          "GroupByteCount": 1,
+          "GroupCountDetect": true,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 1,
+          "OnChanged": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "SidesEdit",
+        "props": {
+          "Left": 73,
+          "Top": 57,
+          "Width": 106,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 2,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "FindPrevBtn",
+        "props": {
+          "Left": 636,
+          "Top": 4,
+          "Caption": "Prev",
+          "TabOrder": 3,
+          "OnClick": "FindPrevClick",
+          "AutoSize": "asLeft",
+          "AutoSizeMinWidth": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "FindNextBtn",
+        "props": {
+          "Left": 675,
+          "Top": 4,
+          "Caption": "Next",
+          "TabOrder": 4,
+          "OnClick": "FindNextClick",
+          "AutoSize": "asLeft",
+          "AutoSizeMinWidth": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "ReplaceBtn",
+        "props": {
+          "Left": 591,
+          "Top": 30,
+          "Caption": "Replace",
+          "TabOrder": 5,
+          "OnClick": "ReplaceClick",
+          "AutoSize": "asLeft",
+          "AutoSizeMinWidth": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "ReplaceAllBtn",
+        "props": {
+          "Left": 646,
+          "Top": 30,
+          "Caption": "Replace &All",
+          "TabOrder": 6,
+          "OnClick": "ReplaceAllClick",
+          "AutoSize": "asLeft",
+          "AutoSizeMinWidth": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "AutoCloseEdit",
+        "props": {
+          "Left": 582,
+          "Top": 59,
+          "Height": 17,
+          "Caption": "Close automaticall&y",
+          "TabOrder": 7,
+          "OnClick": "FindBytesEditChanged"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "FindMRUPopup",
+        "props": {
+          "OnPopup": "FindMRUPopupPopup",
+          "Left": 8,
+          "Top": 8
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "ReplaceMRUPopup",
+        "props": {
+          "OnPopup": "ReplaceMRUPopupPopup",
+          "Left": 40,
+          "Top": 8
+        },
+        "children": []
+      }
+    ]
+  }
+}

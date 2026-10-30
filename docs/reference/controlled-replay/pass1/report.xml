@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bcreport created="14/10/2026 22:51:45">
+	<ltpath/>
+	<rtpath/>
+	<filecomparison created="14/10/2026 22:51:45">
+		<filename1>C:\Projetos\BC4\anycompare\docs\reference\controlled-replay\left.txt</filename1>
+		<filename2>C:\Projetos\BC4\anycompare\docs\reference\controlled-replay\right.txt</filename2>
+		<linecomp status="same">
+			<text ltid="1" rtid="1">case:</text>
+		</linecomp>
+		<linecomp status="similar">
+			<text ltid="2">A pedra do sigilo</text>
+			<text rtid="2">A Pedra do Sigilo</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="3" rtid="3">white:</text>
+		</linecomp>
+		<linecomp status="similar">
+			<text ltid="4">uma forja antiga</text>
+			<text rtid="4">uma  forja antiga </text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="5" rtid="5">mixed:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="6">A maga azul</text>
+			<text rtid="6">a maga vermelha</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="7" rtid="7">words:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="8">Fonte da Magia</text>
+			<text rtid="8">Fonte de Magia</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="9" rtid="9">important:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="10">Cadinho</text>
+			<text rtid="10">Crisol</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="11" rtid="11">punctuation:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="12">Texto - antigo</text>
+			<text rtid="12">Texto — antigo</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="13" rtid="13">end:</text>
+		</linecomp>
+	</filecomparison>
+</bcreport>

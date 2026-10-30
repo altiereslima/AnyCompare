@@ -1,0 +1,300 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_069c160c61d6ea3221a70368ad5a1d6adb796d5079b6478af40aef61e3746e24\",\"subject\":null,\"provider\":{\"id\":\"frida\",\"name\":\"Frida\",\"version\":null},\"analysis_profile\":null,\"predicate_type\":\"rea.frida.instrumentation-observation\",\"operation\":\"instrument_with_frida\",\"parameters\":{\"session_id\":\"fc41d14d-4523-4116-ac06-14cc04aaba17\",\"device_id\":\"local\",\"mode\":\"attach\",\"pid\":27292},\"raw_result\":null,\"normalized_result\":{\"session_id\":\"fc41d14d-4523-4116-ac06-14cc04aaba17\",\"device_id\":\"local\",\"state\":\"running\",\"target\":\"BC4Reference.exe (pid 27292)\",\"pid\":27292,\"mode\":\"attach\",\"scripts\":[{\"script_id\":\"bd99b0a2-17f6-482e-bbdc-294b0c6902d3\",\"name\":\"rea-bd99b0a2-17f6-482e-bbdc-294b0c6902d3\"}],\"messages\":[{\"script_id\":\"bd99b0a2-17f6-482e-bbdc-294b0c6902d3\",\"type\":\"send\",\"payload\":{\"kind\":\"sessions-control\",\"pid\":27292,\"path\":\"C:\\\\Projetos\\\\BC4\\\\anycompare\\\\.codex\\\\reference-sessions-runtime\\\\BC4Reference.exe\",\"base\":\"0x400000\",\"examined_bytes\":17723392,\"skipped_bytes\":0,\"controls\":[{\"object\":\"0x71c1760\",\"dropDownCount\":30,\"button\":{\"width\":66,\"height\":37},\"tree\":{\"width\":196,\"height\":218}},{\"object\":\"0x71c4260\",\"dropDownCount\":30,\"button\":{\"width\":67,\"height\":37},\"tree\":{\"width\":196,\"height\":20}}]}},{\"script_id\":\"bd99b0a2-17f6-482e-bbdc-294b0c6902d3\",\"type\":\"send\",\"payload\":{\"kind\":\"visible-tree\",\"class\":\"TUiTreeButton\",\"width\":67,\"height\":37,\"selection_gap_column\":[[177,210,237],[198,217,235],[198,217,234],[197,216,234],[197,216,233],[196,215,233],[195,215,233],[195,214,233],[194,214,233],[194,213,232],[193,213,232],[193,212,231],[192,212,231],[191,212,231],[191,212,230],[190,211,230],[190,211,229],[189,210,229]]}},{\"script_id\":\"bd99b0a2-17f6-482e-bbdc-294b0c6902d3\",\"type\":\"send\",\"payload\":{\"kind\":\"visible-tree\",\"class\":\"TDirTreeView\",\"width\":1194,\"height\":445,\"selection_gap_column\":[[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255],[255,255,255]]}}],\"messages_truncated\":false,\"source_kind\":\"file\",\"source_path\":\"C:\\\\Projetos\\\\BC4\\\\anycompare\\\\tools\\\\observe_reference_sessions.frida.js\",\"source_sha256\":\"17da1b231dde4ec8e45e0de8963d81ddf01065070895b0fbfc0cdb41ac104708\",\"cleanup_error\":null},\"confidence\":\"observed\",\"authority\":\"external-service\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"The target operating system and architecture were not reported by this observation.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_069c160c61d6ea3221a70368ad5a1d6adb796d5079b6478af40aef61e3746e24",
+    "subject": null,
+    "provider": {
+      "id": "frida",
+      "name": "Frida",
+      "version": null
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.frida.instrumentation-observation",
+    "operation": "instrument_with_frida",
+    "parameters": {
+      "session_id": "fc41d14d-4523-4116-ac06-14cc04aaba17",
+      "device_id": "local",
+      "mode": "attach",
+      "pid": 27292
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "session_id": "fc41d14d-4523-4116-ac06-14cc04aaba17",
+      "device_id": "local",
+      "state": "running",
+      "target": "BC4Reference.exe (pid 27292)",
+      "pid": 27292,
+      "mode": "attach",
+      "scripts": [
+        {
+          "script_id": "bd99b0a2-17f6-482e-bbdc-294b0c6902d3",
+          "name": "rea-bd99b0a2-17f6-482e-bbdc-294b0c6902d3"
+        }
+      ],
+      "messages": [
+        {
+          "script_id": "bd99b0a2-17f6-482e-bbdc-294b0c6902d3",
+          "type": "send",
+          "payload": {
+            "kind": "sessions-control",
+            "pid": 27292,
+            "path": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-sessions-runtime\\BC4Reference.exe",
+            "base": "0x400000",
+            "examined_bytes": 17723392,
+            "skipped_bytes": 0,
+            "controls": [
+              {
+                "object": "0x71c1760",
+                "dropDownCount": 30,
+                "button": {
+                  "width": 66,
+                  "height": 37
+                },
+                "tree": {
+                  "width": 196,
+                  "height": 218
+                }
+              },
+              {
+                "object": "0x71c4260",
+                "dropDownCount": 30,
+                "button": {
+                  "width": 67,
+                  "height": 37
+                },
+                "tree": {
+                  "width": 196,
+                  "height": 20
+                }
+              }
+            ]
+          }
+        },
+        {
+          "script_id": "bd99b0a2-17f6-482e-bbdc-294b0c6902d3",
+          "type": "send",
+          "payload": {
+            "kind": "visible-tree",
+            "class": "TUiTreeButton",
+            "width": 67,
+            "height": 37,
+            "selection_gap_column": [
+              [
+                177,
+                210,
+                237
+              ],
+              [
+                198,
+                217,
+                235
+              ],
+              [
+                198,
+                217,
+                234
+              ],
+              [
+                197,
+                216,
+                234
+              ],
+              [
+                197,
+                216,
+                233
+              ],
+              [
+                196,
+                215,
+                233
+              ],
+              [
+                195,
+                215,
+                233
+              ],
+              [
+                195,
+                214,
+                233
+              ],
+              [
+                194,
+                214,
+                233
+              ],
+              [
+                194,
+                213,
+                232
+              ],
+              [
+                193,
+                213,
+                232
+              ],
+              [
+                193,
+                212,
+                231
+              ],
+              [
+                192,
+                212,
+                231
+              ],
+              [
+                191,
+                212,
+                231
+              ],
+              [
+                191,
+                212,
+                230
+              ],
+              [
+                190,
+                211,
+                230
+              ],
+              [
+                190,
+                211,
+                229
+              ],
+              [
+                189,
+                210,
+                229
+              ]
+            ]
+          }
+        },
+        {
+          "script_id": "bd99b0a2-17f6-482e-bbdc-294b0c6902d3",
+          "type": "send",
+          "payload": {
+            "kind": "visible-tree",
+            "class": "TDirTreeView",
+            "width": 1194,
+            "height": 445,
+            "selection_gap_column": [
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ],
+              [
+                255,
+                255,
+                255
+              ]
+            ]
+          }
+        }
+      ],
+      "messages_truncated": false,
+      "source_kind": "file",
+      "source_path": "C:\\Projetos\\BC4\\anycompare\\tools\\observe_reference_sessions.frida.js",
+      "source_sha256": "17da1b231dde4ec8e45e0de8963d81ddf01065070895b0fbfc0cdb41ac104708",
+      "cleanup_error": null
+    },
+    "confidence": "observed",
+    "authority": "external-service",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "The target operating system and architecture were not reported by this observation."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

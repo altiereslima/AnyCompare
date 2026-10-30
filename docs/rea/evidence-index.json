@@ -1,0 +1,992 @@
+[
+  {
+    "path": "docs/reference/active-control-fonts-runtime.json",
+    "sha256": "3ca92b86ba5da2fb5b68afc07dfd38c9ad176bf70ca20ce14645b612671e1ba6",
+    "evidence_id": "ev_5750415e0ca42b9a9d3e71e986e9c9125baa9ca1ebce196e92f3bfd85a36b65b",
+    "operation": "instrument_with_frida",
+    "provider": {
+      "id": "frida",
+      "name": "Frida",
+      "version": null
+    }
+  },
+  {
+    "path": "docs/reference/fonts-alignment-runtime.json",
+    "sha256": "3a912dcac1a86e0a35e552235a0314f89b3bfaf8fde16834cf1025f7135e519c",
+    "evidence_id": "ev_9965aa99f2d13f5f3ff8089bfce9a6ba79a9fff5511acf58a47dac3a1ca201ee",
+    "operation": "instrument_with_frida",
+    "provider": {
+      "id": "frida",
+      "name": "Frida",
+      "version": null
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/align-alternative-vmt-bytes.json",
+    "sha256": "fedbc23b914c51de00edbf1a506330aeab57629a904728235762489072ff6c42",
+    "evidence_id": "ev_acf560d3123d56868e43b6cf184568970b5b51d4666fe3a21fc25b68d8708287",
+    "operation": "read_bytes",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/align-standard-vmt-bytes.json",
+    "sha256": "d6d3271aef3a0fc050f57c63471ab50feda2cb9ea0f05925bc6124021e9d9aba",
+    "evidence_id": "ev_a0b149e7015e9a4f27fda8937ffcb8b965d85b23718171bdfd27769f0ae2528e",
+    "operation": "read_bytes",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/align-third-vmt-bytes.json",
+    "sha256": "2d3c96aa66e3aac83b72747ad13490dbf47b9fe83f39dcfcefc271cb86a0826d",
+    "evidence_id": "ev_94744bbc8ba7344d8f6f32d314c904bf5455a5c20973c4ac37c49023b141f29b",
+    "operation": "read_bytes",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/bc-alignment-source-strings.json",
+    "sha256": "b9c77e813e34a52350265648a65d3e036520f7916334322be19ff6daa12e0c28",
+    "evidence_id": "ev_9bae47eec6bc09169ec144e77c0a99e12be9046be8a579b04aad0673d0e5a2b8",
+    "operation": "search_strings",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-core1-callers.json",
+    "sha256": "612b00e5eb6d1b237f4fef28ad6c2f2fcd9833b1bb4a513fb944411441b99f3a",
+    "evidence_id": "ev_3924f0b155fde17726efa112336cbed156fb26438cd98fb3b2d94abe6f0c53e0",
+    "operation": "procedure_callers",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-core1.json",
+    "sha256": "d566492393e4b855bea96ebb324ba67e6511e2735244da3726cd5f66fbe030ed",
+    "evidence_id": "ev_81d888d646a41286f8220165eec917f084d333a209ee485cda5bd0baddf47800",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-core2.json",
+    "sha256": "0bfbafa1463ade4dfc0c24065d05fba013e030599d5c8aa248c2eeb8a6250bf4",
+    "evidence_id": "ev_63040e43eb9b81b8e63ba3a4606a79adf4b0f5cfc7bc0c911d17fd17b2a741bf",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-core3.json",
+    "sha256": "8b46200dcc72f9a7f96fd7c23c2cc8287be9ca8ff49144ee2a6c569cbc08ac0e",
+    "evidence_id": "ev_2ae067d0a06aef9a172dcdd8c6eca6a10cc3e7bef8f1ae7062cc373669d943dd",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-inline-mapping-wrapper.json",
+    "sha256": "8d388edcd6935f41fa0608b81d75e1691f24b97dbfa416f3f512f6b6f081f01e",
+    "evidence_id": "ev_2deaef597a346b922817f75d13fcf4fd2e6dc7c9b35b0588e04e008f6dc64b89",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-owner.json",
+    "sha256": "a745c91526a1d2070b98295ea65210e70a8e2ac10e45d93ab5acb4464c37250b",
+    "evidence_id": "ev_36032dc70adfe8b31421a928fd2c8c6ab3f88f78ad76e36727f76be300616a45",
+    "operation": "resolve_containing_procedure",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-owner2.json",
+    "sha256": "3578f27a9d8d43f5be9e97f4b95fd9a01dff464dc11354384ed688ae6f825bff",
+    "evidence_id": "ev_6c11f96685c55a8a595d4f66b7d594846e197bdef92595d2041630d4427bd283",
+    "operation": "resolve_containing_procedure",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-owner3.json",
+    "sha256": "18720cb9e2a4d1e05b3fe0d14b3388a0a45fcce29266746000d716f2952f8588",
+    "evidence_id": "ev_2d58f6d64d7ad9aaacd61d695d18af29a15e25a3ca961d0b6c7f727eb329ed55",
+    "operation": "resolve_containing_procedure",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-source-xref.json",
+    "sha256": "92b90bfd1fa5904b6ffe83b4a7791a99ff91628f8aa4080b97d671fc31cc59aa",
+    "evidence_id": "ev_88171663b3a332bcdf8b7c432b24b3f5b9f6b4248b0d3b225e7fe8f4b0069e7e",
+    "operation": "xrefs",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-source-xref2.json",
+    "sha256": "994b767096598fcd96094a9049b65d8a6c403e1862344d7e981ea0ce0dc31c32",
+    "evidence_id": "ev_a8530f3a5363b6941721cdc4d782f65f40b38e2ee56b86b2505b01ffc1156b19",
+    "operation": "xrefs",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcAlign-source-xref3.json",
+    "sha256": "41335f73dcd331f914cc2692b6e8f4eb371bebc30155b2d1a3137f587d79ac01",
+    "evidence_id": "ev_2839f62b7c4e38baaefb5f90fe58cb7f0a634bd82fed4abd80388ff5f9980a77",
+    "operation": "xrefs",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-closeness-score.json",
+    "sha256": "9f26dde792f71b60511fcbbe21cd96aa4696dd39adf8f4fd7ffd5e43db9cb36c",
+    "evidence_id": "ev_0fe729335e4cf47ba081ae9cc9a65a338afa2ac0d14baf363c10d382b66d3841",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-common-length.json",
+    "sha256": "646fa4b5a206f7c6607cd393af59760a37475a85309e682abb386ef3aa85a595",
+    "evidence_id": "ev_74e3a0ae35df9f398893ba33dc30f66cf1b4050f7c1d06cf8e9d482f67f920dd",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-core.json",
+    "sha256": "9c85e1d1ce34c248b06363d6b86500a9edd10d1363ce89e4416ad13e28894944",
+    "evidence_id": "ev_2ef981a1e9949f63c6d17e8877cd6a881fe803730ad8c482ae7eae6129b3f395",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-dp-backtrack.json",
+    "sha256": "9e3646bc87c37ad5d55ac17a231d7ba6514d8f10cd6a148d4fe8ab18faea4efb",
+    "evidence_id": "ev_127efaded779605b7e1edd051aafe8f4c9f1ecc66085a26d5bb028d4c46f57aa",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-dp-cell.json",
+    "sha256": "489f8567cb09072d9d5f2829fed6f27c85abb5cb77200c20ee76c0c04ab1571c",
+    "evidence_id": "ev_63a7ffefac22ffc46b91de460cc71709a66a18ad4bb4438b7f7a8baba20b78e3",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-line-key.json",
+    "sha256": "d43632087d8c8bab05206b5c8fdfaabea9bff9256ea83c8915ff20cba71e82ba",
+    "evidence_id": "ev_74174e39c9ffc280c02a57e9011eaa1e7711a881566e046d0bdab48a65cc8a82",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-line-weight.json",
+    "sha256": "be8dea0909eaf4e1ccb07ff56f3d0b841d2fddbc8b8c2137f397b9f4d9d00c88",
+    "evidence_id": "ev_94e5e0c74776b53eb20ea273d9c25d139c745c4be1e7dd8d9a8220d2add4cb8a",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-match-block.json",
+    "sha256": "a0831e36742ea70abcc8ada4ac3518834c32ce953e78982c16683d09d675f0e6",
+    "evidence_id": "ev_e701072939c3d1dadf589c9e3effecebd9991958e2f36845b1d97f2deb680927",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-normalize-line.json",
+    "sha256": "b1727db0cb207530ed5c7eeb8326e035579dcfd542b707de39a530cd959e9285",
+    "evidence_id": "ev_e880608a214448c2efc1b387f3e10a70390c02a9a4bfa4e3e4e1fea4a6f90935",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-Run.json",
+    "sha256": "6d33af934acf6614c5ad99cae2e18502d579b04ff7b66b0649f25b0933bc8b70",
+    "evidence_id": "ev_e569cdaf45e0210e7796e42eaec3d5db91404d02ccb81728ffad115f93c52de9",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-unmatched-range.json",
+    "sha256": "83aefb43b4758bba0e6960dafef2c66f377e850473a99689600bfb2ddca4ae20",
+    "evidence_id": "ev_79d6f00485f966a73eee22422caa14f11969d124eb4979071fca180ce159802e",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/BcStandardAlign-virtual.json",
+    "sha256": "b5b3f68b315bf2dca61735d569f28787cad6c3078a9559ac68f49bae5acfbca4",
+    "evidence_id": "ev_99691ef3d7b8bb4c98cff011ecab1204ddadb442eb6a1e5c8ad415c9afbf7fff",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/EditorGetGapSize.json",
+    "sha256": "e9fd13ce31b12509848ed09e3af6938afd5551f4d113e0420986ef98fdec319f",
+    "evidence_id": "ev_89dc62e7e817bdedad6b46064899941ff242040a03d35b867e5b565c454304a3",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/filtered-gap-count.json",
+    "sha256": "dc4af1b740ace3141048e798ae7c2f25459651d72df959092304d402b261aaea",
+    "evidence_id": "ev_973b7ee9a4b21b575920e0a050a853c2ad89d645398901868ea9705edc52c248",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/filtered-gap-state.json",
+    "sha256": "c635c2eb7ed774a9886bdf33f0df9ea6bd4c6f77f79669bfb8a4153883b28f06",
+    "evidence_id": "ev_d483a0e64f75476b82298971582f8469d578cceb22729e0da413076f5031275b",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/filtered-gap-toggle.json",
+    "sha256": "d98517b58fc6db5cf27974badbf7edda3ac21302c91e499cb222358830b3711b",
+    "evidence_id": "ev_ab2c2e507ebda4d462d3b28e88dd6f84a97881f2f41b625063823316758de36c",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/filtered-model-gap-count.json",
+    "sha256": "2f1739af4ee4fee8f31ea67c367786e124747590ecceccf315e2598873794625",
+    "evidence_id": "ev_e72894ee97852b0e4ae861fe3187527ad463c4f7406ff2f1b6fb82b1686b735d",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/filtered-model-toggle.json",
+    "sha256": "68c4848f549811c66df0a04a489094d94c5a8e568ecb39ed44d27a6bf4020458",
+    "evidence_id": "ev_358dcf7cfcb407adc29221ebac10b2243282d43bbaa128c1e81aa1490e2a9ea3",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/GapExpandedClick.json",
+    "sha256": "5668b55dde430498541861482322e3f6d10cc1d25a64282b6257257aae07c6d6",
+    "evidence_id": "ev_9daa8fa707f96c75a412ae04055ca1bb6758076625abb1fc9b5f5651119ae0ae",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/GapShowBarsClick.json",
+    "sha256": "9785216b0cf189312b9e18d3666c427975b5cbf15bbea9b1b7fa8d39a4b45e88",
+    "evidence_id": "ev_55cb171187be89cb6f9312f5e6b10c50c26d79c5b74008ca505c9d7b9a402dca",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/InThumbnailGetColors.json",
+    "sha256": "83744e853168e56742331ed7fff68fa371674a6847e5ac8a94658dcfcfba9492",
+    "evidence_id": "ev_631539c81bbcf8d076c171dd91f98d7f023c769be5d5125166dd500bc4940017",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-align-library-entry1.json",
+    "sha256": "2aa8d58cb744198b2aa49c11ba8e8d4343c9c6f262cc35c110e723e5f4699d1e",
+    "evidence_id": "ev_e3723f7590ace9799e6fd7e3f4821e6554f195d9d12c02d812cbb40766281dc9",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-align-library-entry2.json",
+    "sha256": "e96fc30f596957c3f91696c017974a7812ee01404de72ea5461189d331f20efa",
+    "evidence_id": "ev_5e27de6097c7195dc2ae7bd6463068ed0bff2959e5c4ab48ba7818817bc6a879",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-byte-align-cleanup1.json",
+    "sha256": "8c9e0cb73634a99af9fe19273fd230f3ae123eeb7354a7a8aafa6a1e27d1d60f",
+    "evidence_id": "ev_da719fb0a3145281437b37b4ee962c831f3472f405ea8349f42a1ff775f7ff40",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-byte-align-cleanup2.json",
+    "sha256": "ab1c195db14ccea63cccc41c59669ec39bf8f56638e147519bf3f8ff841e5e0b",
+    "evidence_id": "ev_3f180fa1a37757b62b52e01410e6f8796ce16837ce1d1f5af7434cbec32d547b",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-myers32-coalesce.json",
+    "sha256": "6d50f8737a2f80d71a543fd918c457e30924e0950483617958a94e2da767ecff",
+    "evidence_id": "ev_d4e76577595059ac72f5643f3dcec56c25bb9c1f03f5755fc884e6b67b5a0243",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-myers32-middle-snake.json",
+    "sha256": "814e8b028698680e2543214dc5e79a087899f178a715579548e649ee59c7207b",
+    "evidence_id": "ev_aa6043cdbac733e80a70eb4e9e0dfdd07c5e48b17c309e021d302f5ef2d65e45",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-myers8-coalesce.json",
+    "sha256": "0a0504798172605d6df55eb3913e30607e005e8671d70d92b01d2900ee4e9503",
+    "evidence_id": "ev_2aeaee3f0dd9421c82449bad00f70ad6fed0783ec60ea7a091b75953564ab5ff",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-word-align-cleanup1.json",
+    "sha256": "e2950ec024feb875f21fb0bb51e357317b3273b2abdc66544d1b63726dfbeb56",
+    "evidence_id": "ev_20842839cd3176c46c5364406c9aca3b6940a04b18895d8eef170e635b588d7e",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/native-word-align-cleanup2.json",
+    "sha256": "0ee87b20576d7a91d9f9f3dbdd8462154c946da559e4add1c01ac27b7b44dee5",
+    "evidence_id": "ev_47fef2aa7db9b3f9295e66fabc53aca60cd4e7c96cdf4850b1fa0bdf56aff581",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/significant-span-string.json",
+    "sha256": "e043d2faef782180a8a5cc08ebc43605981998279b7ec0592ae0eee986a0a1e6",
+    "evidence_id": "ev_f130dd7fad6970a5229b6b85aba3252a63744a6833e9f2c0fcf57db7f6dba0e9",
+    "operation": "search_strings",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/text-comparison-dispatch-callers.json",
+    "sha256": "8239103f4fb88af85d0de56c30b55d12e08db16091d58200fc008731c111921e",
+    "evidence_id": "ev_637f641a45caeb2faae3d489de6246012fc3b0822fea6a30b184d5b344c03e13",
+    "operation": "procedure_callers",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/text-comparison-dispatch.json",
+    "sha256": "fc4cff1cc33254031659ccc176bc5109d11176573728ed1f4c682f4d3f121d2f",
+    "evidence_id": "ev_b372b3801ed9cc11f2e1b69b676ff3d2fa2aa0018478b226a34c5adda0f4a6e4",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/text-model-functions.json",
+    "sha256": "55d837982ca1e26ead4cb93707d4439a2231e17b0d5879d0e70ae1c512a7eda8",
+    "evidence_id": "ev_d64f32f4ec04d41050c85c67ebfc0c210478108b20b49cde3f8e3cf1cd2f519f",
+    "operation": "search_procedures",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/text-units-and-gap-strings.json",
+    "sha256": "3261e688feed7457441c53a0271d8d929b0e91b652a8b284d248d70a17e0ff37",
+    "evidence_id": "ev_f11904b8df678c5b6630543f66fae73406c3fd482327bdc7617157f6bb91f3da",
+    "operation": "search_strings",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-build.json",
+    "sha256": "bd80b1f169863d505bcd89867e50fcda7710faf1abbd6ea4dbf9330e9f3a09a2",
+    "evidence_id": "ev_1067b32052d00d3aa7dd01e1cf4161b07aa987b8c6585a24921399f004bf4df4",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-char-compare.json",
+    "sha256": "34f7ccf75e5ecc353c9d7bfc27cc721bc3a9b61cf5b11db7e0b009520ef5a996",
+    "evidence_id": "ev_333bc2dccb7e3aed2b55a3cad14292e287f0d32d5099395dd097a6662b77d3a0",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-char-equal.json",
+    "sha256": "c639129d9484b22aa76a0bc74f8b3956f9707e2a33d3519aef3a97f8aaf0799f",
+    "evidence_id": "ev_780d7eef099c0ec50a7be08aeb345cd07eede5eed01300e168de256cd9f4454c",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-char-record-construction.json",
+    "sha256": "d62bde1fda91aa38465de8c94b29fcd451c16d364039d7654da7752526b02019",
+    "evidence_id": "ev_bef80e06c148d893d5c4b77529f97a305b6b54b5b33765a245664124bee28b32",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-compare-tokenizer.json",
+    "sha256": "4b401f52b8816e5ba42bfe540fc2ec28d7563476d09c3803b7a24cc6498c7eb2",
+    "evidence_id": "ev_6cc6273d890d84f2372be54ecb506fce887398ff18d7322aea97585a30e32944",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-init-line-chars.json",
+    "sha256": "9c976472a2a1b399a2259273d6cd4eb4c6d14026f95a8e5e903afd55df0872b2",
+    "evidence_id": "ev_b1a0f296d5ce80f63576a03487879a03f3c08ccbb0ba4ec245452ce5ceadc849",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-initial-char-map.json",
+    "sha256": "da2a6c5f79c4743a618d4ce3ce9391c76e2ab2dce7fd43bca0c19be185bd9950",
+    "evidence_id": "ev_55400958eab7370394de9702dbd239d5af1966381f5526583cdf175f4d65aea3",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-inline-build.json",
+    "sha256": "271973a9077dad6cb3969d1eb8e0a2531d553932f7834c9f0b3771695362993d",
+    "evidence_id": "ev_9e9e71c31dce303f0d3f13e2eb18bacffcbf405cf5822dd25b6948b66cb39f1f",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-inline-map-next.json",
+    "sha256": "026e5dcb8551bd0bdf9ac583e4a57f8c68d3475f7faf0f6b95799bda5c53e39c",
+    "evidence_id": "ev_d24d8a2dbfac80500eefe1b1a6504785934fce6bb7f6f1e0688aa577e4a6c50e",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-inline-owner.json",
+    "sha256": "482c342c24c02e2c127c4176402df8976e340674262012eb4743c704d2d78a18",
+    "evidence_id": "ev_e19b2eb2d51fab570dde91e8988c1d9062534c8136f3b566433a6edb0a9028b1",
+    "operation": "resolve_containing_procedure",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-inline-pipeline.json",
+    "sha256": "438886b4788a3ea3b42831cdb6761a2dc2d333d8e266d8739939c3a224f112f7",
+    "evidence_id": "ev_ef0a794162c3a391a3597eddbf4c2a0749fcea1de19679b15e3adfbeecc287f5",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-isolated-char-cleanup.json",
+    "sha256": "402e1625abe6b0c99027de8fb2c54933a9a7a948e84288bc2ad8b987459a252d",
+    "evidence_id": "ev_56600e97ed7717d28c2bb779bb3b4ce608784269bc21420e5976167c8c5fcd8d",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/TextContent-line-key.json",
+    "sha256": "8f3eba646132455e0694d3f86dbfe181b3c24a5eaa662d3541f2081f2064ca81",
+    "evidence_id": "ev_0211503c8a19fbaaab55f1c3f8174ba6bad2f3db53523e15e3caa3283b607d8b",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-map-anchor.json",
+    "sha256": "ae5af2bffebbe162825df212d2ac0ef112d722c81397b70b9b7c168e097e50de",
+    "evidence_id": "ev_93588ed3a3e9f5b3ad7b18c31cc53407a8c374c40f48414d88cf62b6e7620318",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-map-shift.json",
+    "sha256": "efa8afa53f8eb9ada9bf5108261f404c058c84a8ed3f7c85ef96a510273e25c7",
+    "evidence_id": "ev_859b48165893ebe58a47acbef97c1b09728c6251691661016b5fe6ff949e91b8",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-skip-minor-char.json",
+    "sha256": "aa3e7513f52624da485b0b68bd6792a2d19136b27e1900aafc1cb208eac95309",
+    "evidence_id": "ev_cfe4fc1cb96a580ec7881d83a0f81da755c722b05a877fa78e84c2809e4eae3c",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-source-owner.json",
+    "sha256": "1c08d7bb89e2e23b3f59f0f9b5aef62b962b411b89886650b0ed3c9fc91c56e4",
+    "evidence_id": "ev_0a706b9c6d51e639a0b6ac81e2bcabb9d8d47ecffb18bc5ec463b8e8cef439d7",
+    "operation": "resolve_containing_procedure",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-source-xref.json",
+    "sha256": "0203c2907530a84e91fc235d6fc13c785d1a29d9adfe3e03834629133563a1af",
+    "evidence_id": "ev_6d70861075445bfe448648f067b3395ac8cb620a69d039b99d7cded9de5c824f",
+    "operation": "xrefs",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textcontent-unmatched-char-kind.json",
+    "sha256": "aa04cf2bcd455b24ac4a51181feb39643d6f5570ce2b4828b6c7905d91677dfe",
+    "evidence_id": "ev_d3a616f2a5dec2858e95dd64de68e04efccbac20d5efc50f7699980f49f823e6",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/TextLineAlign-add-diff.json",
+    "sha256": "3bb8083473c5e9d75aa3a011d8271173e52edaa07e731c73f85ffd59f961de69",
+    "evidence_id": "ev_026ff2bc15303aa6b5a13790c18c442081f32d79c89aa39e5f02661ce6f700fb",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/TextLineAlign-compare.json",
+    "sha256": "5ebc4da63c44490f6ffdd48b94cbde5e8699c69e15fc71457bd9891271d0cc83",
+    "evidence_id": "ev_9bded682e9a3aad5c22ec594e4fa0ce889c3687e0e987b98dcbc2a929237bf1e",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/TextLineAlign-vmt.json",
+    "sha256": "925192a61f55e2fe49bc527cfde40b56b561b1a4c5399faed5c9ce4b81ce5101",
+    "evidence_id": "ev_55b218b6c11a177de01cb5ff3f52c5a9b6e57ae6806eb318f6d743b161fb4f69",
+    "operation": "read_bytes",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-add-callers.json",
+    "sha256": "bbadc7e6e225c22929d9f1881fbfd9c2ae55844450e33c4bf20b5edad7e909cb",
+    "evidence_id": "ev_1462411aaf56b84d716b189be06c412a57122a8ca2bf1d180c77e071093e7468",
+    "operation": "procedure_callers",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-add-dispatch.json",
+    "sha256": "0fc016095e1c227f7177b3746b03b4b6cee3ff56d9024f2ada9e0cae4169f669",
+    "evidence_id": "ev_5e7e6e62f006cd3c5e71c4c20ef01856bf9900fa1ff3aed2282a13744b32b077",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-align-lines.json",
+    "sha256": "2310df034d36d1048db2f19ac64655ab5bee3f262acf822f8ae9119ca35aaa23",
+    "evidence_id": "ev_84c6788bc4810c5defb105d2bdc97d308f07a21a3cac2fdc2fa095cf1269f6b7",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-aligner-constructor.json",
+    "sha256": "329d4a0fba67ed687bde60d86a9d777b7111e2dd603b72353c737154a8f20012",
+    "evidence_id": "ev_0311da2eb30d8ead60fb1bd8f63e8c0ef71255d668346621ab408a61064d9dbc",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-build-row.json",
+    "sha256": "5b016ef7f76d120652cd1c9c187a12961f99fef6a03bb68aa641854bc0f208b4",
+    "evidence_id": "ev_a34661db3cfcd45892d84e48c6d5f1a7e660a10e9b461bf4487010207dea1591",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-source-check.json",
+    "sha256": "c11854975bef3f4e107b5c602bcfe3b92ecd81c7598459742d76e003376580e6",
+    "evidence_id": "ev_df44aad257e887b89c7b7fb3a48b166a52dd36039e3ee065039b0616b03d17e1",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-source-d224-owner.json",
+    "sha256": "d9323fa06d09db5523b982902b0aaf49e0377dd7ea39ce22784e8d13addb1338",
+    "evidence_id": "ev_5c4b0263592da4ead1a7c7bc7afe7e33c210cf5b4bb0549e30854791768b8f90",
+    "operation": "resolve_containing_procedure",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-source-owner.json",
+    "sha256": "d1d442eba1f746d1e2df64c46bff2e21a2a7ec51a7caf0af7e6683c606bbe6aa",
+    "evidence_id": "ev_5b4ebf88d720210ee3da929fac5ea9b0703d6481d584defff70d05356dffb828",
+    "operation": "resolve_containing_procedure",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-source-xref-d224.json",
+    "sha256": "8e55cdf545819b22de6c74c1f75869b56038b2c6d4938821d307017f38f64b1b",
+    "evidence_id": "ev_a783cddfd771314b1f3ae7d25426b4fdda2faf3521e4a078185a154e2ddeb192",
+    "operation": "xrefs",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-source-xref.json",
+    "sha256": "105619c0448818f4d746bb674bb28b9e4e3b68d8535781e1190142cbb77564d4",
+    "evidence_id": "ev_49835909733fe68ad4fe33af8574976dc172b8dcbdf9f0d564541e4931ffe16a",
+    "operation": "xrefs",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/textmap-update-comparison.json",
+    "sha256": "85922c5b8297f2aa675f3154cb4d03404115fd2118c533035ffe0ba561297315",
+    "evidence_id": "ev_7445f82f1e07a42433b47d7e05e34c87ab5f59b2ff14d5244be0bc708add1235",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/ghidra-session/thumbnail-palette.json",
+    "sha256": "56c5576caad2ed14c4edc7589688a055da7e88262f58c970f80f87c192f0a6e9",
+    "evidence_id": "ev_8df16b1d1ccb9ec32914fcef3a67902d66e7d460bed5163d906f8b7379fecac2",
+    "operation": "procedure_pseudo_code",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  {
+    "path": "docs/reference/inline-records-runtime.json",
+    "sha256": "d4884f27342d09a2b797dde7d0f680393019ded8666cad7c44fa3c5f418de2b2",
+    "evidence_id": "ev_68c4e114010bb9e208847fe0689810f2dd60d04dfce1ce21b681f4ad00d813cf",
+    "operation": "instrument_with_frida",
+    "provider": {
+      "id": "frida",
+      "name": "Frida",
+      "version": null
+    }
+  },
+  {
+    "path": "docs/reference/operation-rea-pe.json",
+    "sha256": "19f5d39514aef86e9dd39ad6abf3b97ef44d21e8f52ca8d84929e3ffd306173c",
+    "evidence_id": "ev_b51566b63e23caf947294d5f63a7f42387d9e1c29ae6a8276c89bd2d3ecbb0f9",
+    "operation": "inspect_pe_resources",
+    "provider": {
+      "id": "rea-pe-resources",
+      "name": "REA PE resource parser",
+      "version": "1"
+    }
+  },
+  {
+    "path": "docs/reference/rea-english-installer.json",
+    "sha256": "f300f8e6d873f9e4222bd0ff136fb6b3a223b203818eac37b29f9c6d5e78aed0",
+    "evidence_id": "ev_b3cc8a3149340a889c182bbf45b10b64cd1c158b7e855f306e8e70449e832bec",
+    "operation": "inspect_pe_resources",
+    "provider": {
+      "id": "rea-pe-resources",
+      "name": "REA PE resource parser",
+      "version": "1"
+    }
+  },
+  {
+    "path": "docs/reference/rea-pe-resources.json",
+    "sha256": "19f5d39514aef86e9dd39ad6abf3b97ef44d21e8f52ca8d84929e3ffd306173c",
+    "evidence_id": "ev_b51566b63e23caf947294d5f63a7f42387d9e1c29ae6a8276c89bd2d3ecbb0f9",
+    "operation": "inspect_pe_resources",
+    "provider": {
+      "id": "rea-pe-resources",
+      "name": "REA PE resource parser",
+      "version": "1"
+    }
+  }
+]

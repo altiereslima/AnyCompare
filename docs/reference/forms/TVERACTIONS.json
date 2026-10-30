@@ -1,0 +1,91 @@
+{
+  "resource_index": 647,
+  "name": "TVERACTIONS",
+  "sha256": "be893542ec319453f1ef905dc54fa704898fed3c04105c42bd50a3c4c92cb779",
+  "bytes": 865,
+  "parse_status": "complete",
+  "components": 5,
+  "hierarchy": {
+    "class": "TVerActions",
+    "name": "VerActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "IsSigAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Hint": "Item Is Important|Marks selected item as important or unimportant."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowDetailsAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Text &Details",
+              "Hint": "Text Details|Shows or hides text details panel.",
+              "ImageIndex": "imgShowTextDetails",
+              "ShortCaption": "Details",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "View: Menu",
+            [
+              "SameModIgnored: MenuItem",
+              "IsSig: SeparatorItem",
+              "IsSig: MenuItem",
+              "OverUnder: MenuItem",
+              "ShowDetails: MenuItem"
+            ],
+            "Main: Toolbar",
+            [
+              "OverUnder: ToolButton",
+              "ShowDetails: ToolButton"
+            ],
+            "Edit: PopupMenu",
+            [
+              "Copy: MenuItem",
+              "N1: SeparatorItem",
+              "IsSig: MenuItem",
+              "N2: SeparatorItem",
+              "Open: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem"
+              ],
+              "ExplorerList: SubmenuItem",
+              []
+            ],
+            "DetailsEdit: PopupMenu",
+            [
+              "Copy: MenuItem"
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

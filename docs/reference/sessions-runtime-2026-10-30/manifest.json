@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-30",
+  "original_sha256": "aba1b98f848a01c3729cfee3e8818ab8e0d947276bc42c9a55c1475c9f8438db",
+  "runtime_sha256": "aba1b98f848a01c3729cfee3e8818ab8e0d947276bc42c9a55c1475c9f8438db",
+  "runtime_path": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-sessions-runtime\\BC4Reference.exe",
+  "pid": 27292,
+  "scope": "Fresh portable profile; repository fixtures opened read-only; no original profile interactions in this run. Screenshots are JPEG from Computer Use: not exact RGB evidence.",
+  "observed": {
+    "collapsed_size": [
+      196,
+      20
+    ],
+    "expanded_size": [
+      196,
+      218
+    ],
+    "row_height": 18,
+    "new_group_single_label_click": "does not expand or close",
+    "new_group_chevron_click": "expands without closing",
+    "folder_leaf_single_click": "opens Folder Compare and closes popup",
+    "drop_down_count": 30
+  },
+  "limitations": [
+    "Keyboard movement could not be confirmed independently of Computer Use focus changes.",
+    "Popup shadow, native themed focus colors and ClearType RGB are not pixel-equivalent in the reconstruction.",
+    "Frida observation has null artifact subject; the runtime file digest and strict mainModule.path check are recorded separately."
+  ],
+  "artifacts": {
+    "first-down-focus-0.jpg": "979d9293969dc22f5bd3bc73d2b198ee0823069742d8359cfc530afa4fb75d4f",
+    "first-down-focus-1.jpg": "2f6652644637b45477d41a3b9cdec7060dfd74fad81e9c206d4027b9c314e1c8",
+    "first-down-focus-2.jpg": "ae0b50398c83435604df50a2ce95c77c1b740114b1948a6398937dc7f934010e",
+    "first-down-focus.json": "8c6e577ac1493b24a5360c997e9b73e2da313ecdea0e5188d29d80cad138c112",
+    "group-label-single-click-0.jpg": "7573b546b63e92f7d9e7e6045e9b8a1e57fe81b008906fdacdbd5f7f9b55ab38",
+    "group-label-single-click-1.jpg": "da5aef4b673ddaa86c79e06ccdd52c0ce19daa4bd87d84f39a49e94d564fb180",
+    "group-label-single-click-2.jpg": "116a6af6ee523640dbbf85e4c933aea37f4cf41b226fb9f2ee2e63dc0eda957f",
+    "group-label-single-click.json": "fe9f38af1d63e8a1af499cfa303f92ea248b4e5f441f5a4b3361300e28ee8c00",
+    "initial-collapsed-0.jpg": "18949cb7af5de59f90fe887462fd10cde3d995e45dcd65795594246453bac5a2",
+    "initial-collapsed-1.jpg": "9dcc829f6f816204ee603da8bd69cfdfbc0eef56122a4234c2d2e13fbfaf895d",
+    "initial-collapsed-2.jpg": "23d66b58973e754f356bf5396ef40c4d0139412fd9640b64e088e68bb91bf3d6",
+    "initial-collapsed.json": "67a04bc029d69722c1ddd4942ad51386910112d6a09b0f9440e9cc73ce54e696",
+    "new-expanded-0.jpg": "2cdf31a15ee254f1f993cb2078163823c510e46b86f8801d8faecb331feba1fb",
+    "new-expanded-1.jpg": "ea855a4d5445e30b451ba36b30e021125cc6c1e69c9b59969afa0b8c4e4ea0e0",
+    "new-expanded-2.jpg": "fb58fb5175721e5d6418f14a072a6992c288f50864a5824e3abaf2783f9d3b20",
+    "new-expanded.json": "f75675c41c3a5b63167a297e4f55b39dabff6a6b436eae5d9daecef9917d7331",
+    "rea-native-control.json": "168f235513e055767917ebc981de388e7b97f18306142fe945dad1dc4c3df02e",
+    "second-down-observation-0.jpg": "2ee3224e39f3d6e0328f6899fd3e9be8bed061b286964b5281ab054f6912e532",
+    "second-down-observation-1.jpg": "2f6652644637b45477d41a3b9cdec7060dfd74fad81e9c206d4027b9c314e1c8",
+    "second-down-observation-2.jpg": "ae0b50398c83435604df50a2ce95c77c1b740114b1948a6398937dc7f934010e",
+    "second-down-observation.json": "9755ae7178b0c70ad376747fddc98bea9a92964209a0a3f72dde52d3da86d5c2",
+    "single-click-opens-folder-0.jpg": "7eb2a52b297e1e1a254576d71c98ae1d94c4e7c8f19ee257521b2436f4776c98",
+    "single-click-opens-folder.json": "41098cff233a3441bd84e9d5b76e597106fb493e58cc0fbf44217d75c1c0bb93"
+  }
+}

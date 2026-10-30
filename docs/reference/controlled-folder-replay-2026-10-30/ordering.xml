@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bcreport created="30/10/2026 17:07:11">
+	<foldercomp>
+		<ltpath>C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering\left</ltpath>
+		<rtpath>C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering\right</rtpath>
+		<filecomp status="same">
+			<lt>
+				<name>Árvore.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>Árvore.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+		<filecomp status="same">
+			<lt>
+				<name>índice.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>índice.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+		<filecomp status="same">
+			<lt>
+				<name>item1.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>item1.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+		<filecomp status="same">
+			<lt>
+				<name>item2.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>item2.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+		<filecomp status="same">
+			<lt>
+				<name>item10.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>item10.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+		<filecomp status="same">
+			<lt>
+				<name>novo.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>novo.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+		<filecomp status="same">
+			<lt>
+				<name>zeta.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>zeta.txt</name>
+				<size>5</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+	</foldercomp>
+</bcreport>

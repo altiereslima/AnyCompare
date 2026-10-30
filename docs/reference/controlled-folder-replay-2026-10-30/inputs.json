@@ -1,0 +1,236 @@
+{
+  "cases": [
+    {
+      "name": "basic",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic-differences.xml"
+      }
+    },
+    {
+      "name": "basic-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic-reverse-differences.xml"
+      }
+    },
+    {
+      "name": "nested",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested-differences.xml"
+      }
+    },
+    {
+      "name": "nested-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested-reverse-differences.xml"
+      }
+    },
+    {
+      "name": "case-parent",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent-differences.xml"
+      }
+    },
+    {
+      "name": "case-parent-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent-reverse-differences.xml"
+      }
+    },
+    {
+      "name": "unicode",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode-differences.xml"
+      }
+    },
+    {
+      "name": "unicode-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode-reverse-differences.xml"
+      }
+    },
+    {
+      "name": "file-directory",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory-differences.xml"
+      }
+    },
+    {
+      "name": "file-directory-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory-reverse-differences.xml"
+      }
+    },
+    {
+      "name": "empty",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty-differences.xml"
+      }
+    },
+    {
+      "name": "empty-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty-reverse-differences.xml"
+      }
+    },
+    {
+      "name": "extensionless",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless-differences.xml"
+      }
+    },
+    {
+      "name": "extensionless-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless-reverse-differences.xml"
+      }
+    },
+    {
+      "name": "ordering",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering-differences.xml"
+      }
+    },
+    {
+      "name": "ordering-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering-reverse-differences.xml"
+      }
+    },
+    {
+      "name": "large-binary",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary\\left",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary\\right",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary-differences.xml"
+      }
+    },
+    {
+      "name": "large-binary-reverse",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary\\right",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary\\left",
+      "report": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary-reverse.xml",
+      "filtered": {
+        "matches": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary-reverse-matches.xml",
+        "differences": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary-reverse-differences.xml"
+      }
+    }
+  ],
+  "sha256": {
+    "basic\\left\\changed.txt": "360f84035942243c6a36537ae2f8673485e6c04455a0a85a0db19690f2541480",
+    "basic\\left\\left.txt": "360f84035942243c6a36537ae2f8673485e6c04455a0a85a0db19690f2541480",
+    "basic\\left\\same.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "basic\\right\\changed.txt": "df087996d45b03e7eb8c133c0298fd98d35113fca26aaba58612fef3cc212cad",
+    "basic\\right\\right.txt": "27042f4e6eca7d0b2a7ee4026df2ecfa51d3339e6d122aa099118ecd8563bad9",
+    "basic\\right\\same.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "nested\\left\\parent\\equal.txt": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "nested\\left\\parent\\left.txt": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0",
+    "nested\\left\\parent\\deep\\diff.txt": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "nested\\right\\parent\\equal.txt": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "nested\\right\\parent\\right.txt": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1",
+    "nested\\right\\parent\\deep\\diff.txt": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d",
+    "case-parent\\left\\Data\\equal.txt": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "case-parent\\right\\data\\EQUAL.TXT": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "case-parent\\right\\data\\new.txt": "11507a0e2f5e69d5dfa40a62a1bd7b6ee57e6bcd85c67c9b8431b36fff21c437",
+    "unicode\\left\\\u00c1RVORE.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "unicode\\right\\\u00e1rvore.txt": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+    "unicode\\left\\A\u00e7\u00e3o\\\u00edndice.txt": "9b186e077c7c6d044f5789d76e6d8070a5b0aaa902ebc608bc34170722dba903",
+    "unicode\\right\\a\u00e7\u00e3o\\novo.txt": "11507a0e2f5e69d5dfa40a62a1bd7b6ee57e6bcd85c67c9b8431b36fff21c437",
+    "unicode\\right\\a\u00e7\u00e3o\\\u00cdNDICE.TXT": "9b186e077c7c6d044f5789d76e6d8070a5b0aaa902ebc608bc34170722dba903",
+    "file-directory\\left\\conflict": "3b9c358f36f0a31b6ad3e14f309c7cf198ac9246e8316f9ce543d5b19ac02b80",
+    "file-directory\\right\\other": "3b9c358f36f0a31b6ad3e14f309c7cf198ac9246e8316f9ce543d5b19ac02b80",
+    "file-directory\\left\\other\\child.txt": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "file-directory\\right\\conflict\\child.txt": "ddc9e669194254cef019a29d3619a2c16592e5d52e1a81e98b01bd52319149a3",
+    "extensionless\\left\\.hidden": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d",
+    "extensionless\\left\\A-file.txt": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+    "extensionless\\left\\README": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "extensionless\\right\\.hidden": "2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6",
+    "extensionless\\right\\A-file.txt": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+    "extensionless\\right\\README": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+    "extensionless\\left\\z-dir\\first.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "extensionless\\right\\z-dir\\first.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "ordering\\left\\item1.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\left\\item10.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\left\\item2.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\left\\novo.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\left\\zeta.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\left\\\u00c1rvore.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\left\\\u00edndice.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\right\\item1.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\right\\item10.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\right\\item2.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\right\\novo.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\right\\zeta.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\right\\\u00c1rvore.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "ordering\\right\\\u00edndice.txt": "f9d6cd1ed5cf1ead7b54873537748e0daa8f1390cd61555b68089fca063444f3",
+    "large-binary\\left\\chunk.bin": "15f8ef4246a55f03dba23b7bf7e72ff048196db96288306e7d6060b057a10227",
+    "large-binary\\left\\empty.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "large-binary\\right\\chunk.bin": "c17d29ff8108bd40df012acc3ee1a0a8c0f3f79a3378e27fde28902771a96f89",
+    "large-binary\\right\\empty.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

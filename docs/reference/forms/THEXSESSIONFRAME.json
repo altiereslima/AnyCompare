@@ -1,0 +1,109 @@
+{
+  "resource_index": 553,
+  "name": "THEXSESSIONFRAME",
+  "sha256": "d4bf9024fbf03d40f8553230f2bdfada52d3863919184edf366ab6be1adf4f09",
+  "bytes": 882,
+  "parse_status": "complete",
+  "components": 8,
+  "hierarchy": {
+    "class": "THexSessionFrame",
+    "name": "HexSessionFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "SessionHexComparison",
+      "Caption": "Comparison"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "AlignKindLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Alignment:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "InMemoryLimitLbl",
+        "props": {
+          "Left": 8,
+          "Top": 92,
+          "Height": 13,
+          "Caption": "Fi&les up to this size are loaded without file locks:",
+          "FocusControl": "InMemoryLimitEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "InMemoryLimitMBLbl",
+        "props": {
+          "Left": 64,
+          "Top": 113,
+          "Height": 13,
+          "Caption": "MB",
+          "FocusControl": "InMemoryLimitEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "AlignNoneEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Height": 17,
+          "Caption": "&None",
+          "TabOrder": 0,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "AlignFastEdit",
+        "props": {
+          "Left": 8,
+          "Top": 46,
+          "Height": 17,
+          "Caption": "&Fast",
+          "TabOrder": 1,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "AlignCompleteEdit",
+        "props": {
+          "Left": 8,
+          "Top": 67,
+          "Height": 17,
+          "Caption": "&Complete",
+          "TabOrder": 2,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "InMemoryLimitEdit",
+        "props": {
+          "Left": 8,
+          "Top": 109,
+          "Width": 50,
+          "Height": 21,
+          "Max": 32,
+          "MaxLength": 2,
+          "TabOrder": 3,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

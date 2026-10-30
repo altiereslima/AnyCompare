@@ -1,0 +1,176 @@
+{
+  "resource_index": 673,
+  "name": "TVFSSVNPROFILEGENERALFRAME",
+  "sha256": "59c4a8291110077e584feb9bbf95e4dd608d86be816b5ab1b8d9b3126c5d7378",
+  "bytes": 1205,
+  "parse_status": "complete",
+  "components": 14,
+  "hierarchy": {
+    "class": "TVfsSVNProfileGeneralFrame",
+    "name": "VfsSVNProfileGeneralFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileSVN",
+      "Caption": "General"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "SpecPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 255,
+          "Height": 92,
+          "Align": "alTop",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "URLLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "&URL of repository:",
+              "FocusControl": "URLEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "RevisionLbl",
+            "props": {
+              "Left": 8,
+              "Top": 54,
+              "Height": 13,
+              "Caption": "&Revision:",
+              "FocusControl": "RevisionEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "URLEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Width": 239,
+              "Height": 21,
+              "TabOrder": 0,
+              "OnChange": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "RevisionEdit",
+            "props": {
+              "Left": 8,
+              "Top": 71,
+              "Width": 239,
+              "Height": 21,
+              "TabOrder": 1,
+              "OnChange": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "PanelView",
+        "props": {
+          "Left": 0,
+          "Top": 92,
+          "Width": 255,
+          "Height": 217,
+          "Align": "alClient",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "DescriptionPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "DescriptionLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "D&escription:",
+                  "FocusControl": "DescriptionEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiMemo",
+                "name": "DescriptionEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Width": 239,
+                  "Height": 184,
+                  "ScrollBars": "ssVertical",
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "BrowsePanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TProfileBrowseRemoteFrame",
+                "name": "BrowseFrame",
+                "props": {
+                  "Left": 8,
+                  "Top": 39,
+                  "Width": 239,
+                  "Height": 170,
+                  "TabOrder": 0
+                },
+                "children": [
+                  {
+                    "class": "TUiTreeView",
+                    "name": "TreeView",
+                    "props": {
+                      "Width": 239,
+                      "Height": 170
+                    },
+                    "children": [],
+                    "flags": 1
+                  }
+                ],
+                "flags": 4
+              },
+              {
+                "class": "TUiButton",
+                "name": "BrowseBtn",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Caption": "Connect && &Browse",
+                  "TabOrder": 1,
+                  "OnClick": "BrowseClick",
+                  "AutoSize": "asLeft"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,12 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\repeat-insert-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\repeat-insert-right.bin
+00000000 41 41 41 41 41 41 41 41  AAAAAAAA =  00000000 41 41 41 41 41 41 41 41  AAAAAAAA
+00000008 41 41 41 41 41 41 41 41  AAAAAAAA    00000008 41 41 41 41 41 41 41 41  AAAAAAAA
+00000010 41 41 41 41 41 41 41 41  AAAAAAAA    00000010 41 41 41 41 41 41 41 41  AAAAAAAA
+----------------------------------------------------------------------------------------
+                                           <> 00000018 41                       A
+----------------------------------------------------------------------------------------

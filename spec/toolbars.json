@@ -1,0 +1,2825 @@
+{
+ "generated_by": "tools/build_toolbar_spec.py",
+ "inputs": {
+  "menus-composed.json": "3db38604b44774af9f022232c2d9b7dc22c1b24b37c1b3d2c4ddcbb210812c41",
+  "BCompare.tr": "a30e5af701662652cadce8a19df5ff87a727e7dc0af1e460f63ab6cfcc8ee339"
+ },
+ "geometry": {
+  "classification": "CONFIRMADO EM EXECUÇÃO (folder-empty.png, folder-sync.png, text-loaded.png a 100%)",
+  "first_button_left": 2,
+  "button_height": 36,
+  "button_width": "max(45, GDI advance of the caption in Segoe UI 9pt + 12)",
+  "dropdown_part": 14,
+  "tree_dropdown_part": 15,
+  "separator_width": 6,
+  "separator_line_offset": 2
+ },
+ "views": {
+  "TEXT_COMPARE": {
+   "actions_class": "TTextCompareActions",
+   "display_filter_mode": "Favorites",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavCompareAll",
+     "action": "FavCompareAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavDiff",
+     "action": "FavDiffAction",
+     "kind": "Button",
+     "image": "imgFavDiff",
+     "caption_en": "Diffs",
+     "caption_pt": "Diferenças",
+     "short_pt": "Diferenças",
+     "short_en": "Diffs",
+     "hint_en": "Show Differences",
+     "hint_pt": "Exibir Diferenças",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavSame",
+     "action": "FavSameAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Same",
+     "hint_pt": "Exibir Iguais",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "ShowContext",
+     "action": "ShowContextAction",
+     "kind": "Button",
+     "image": "imgShowContext",
+     "caption_en": "Context",
+     "caption_pt": "Contexto",
+     "short_pt": "Contexto",
+     "short_en": "Context",
+     "hint_en": "Show Context",
+     "hint_pt": "Exibir Contexto",
+     "category": "View"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "name": "FileFormat",
+     "action": "FileFormatAction",
+     "kind": "Dropdown",
+     "image": "imgTextFormatEdit",
+     "caption_en": "Format",
+     "caption_pt": "Formato",
+     "short_pt": "Formato",
+     "short_en": "Format",
+     "hint_en": "Format",
+     "hint_pt": "Formato",
+     "category": "Session",
+     "children": []
+    },
+    {
+     "kind": "Separator",
+     "name": "Edit"
+    },
+    {
+     "name": "CopySide",
+     "action": "CopySideAction",
+     "kind": "Side",
+     "image": "imgCopyRight",
+     "caption_en": "Copy",
+     "caption_pt": "Copiar",
+     "short_pt": "Copiar",
+     "short_en": "Copy",
+     "hint_en": "Copy to Other Side",
+     "hint_pt": "Copiar para o Outro Lado",
+     "category": "Edit"
+    },
+    {
+     "name": "FullEdit",
+     "action": "FullEditAction",
+     "kind": "Button",
+     "image": "imgFullEdit",
+     "caption_en": "Edit",
+     "caption_pt": "Editar",
+     "short_pt": "Editar",
+     "short_en": "Edit",
+     "hint_en": "Full Edit",
+     "hint_pt": "Editar Completo",
+     "category": "Edit"
+    },
+    {
+     "kind": "Separator",
+     "name": "Search"
+    },
+    {
+     "name": "DiffSectionNext",
+     "action": "DiffSectionNextAction",
+     "kind": "Button",
+     "image": "imgDown",
+     "caption_en": "Next Section",
+     "caption_pt": "Próxima Seção",
+     "short_pt": "Próxima Seção",
+     "short_en": "Next Section",
+     "hint_en": "Next Difference Section",
+     "hint_pt": "Próxima Seção Diferente",
+     "category": "Search"
+    },
+    {
+     "name": "DiffSectionPrev",
+     "action": "DiffSectionPrevAction",
+     "kind": "Button",
+     "image": "imgUp",
+     "caption_en": "Prev Section",
+     "caption_pt": "Seção Anterior",
+     "short_pt": "Seção Anterior",
+     "short_en": "Prev Section",
+     "hint_en": "Previous Difference Section",
+     "hint_pt": "Seção Diferente Anterior",
+     "category": "Search"
+    },
+    {
+     "kind": "Separator",
+     "name": "Specs"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Reload",
+     "action": "ReloadAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Reload",
+     "caption_pt": "Recarregar",
+     "short_pt": "Recarregar",
+     "short_en": "Reload",
+     "hint_en": "Reload Files",
+     "hint_pt": "Recarregar Arquivos",
+     "category": "Session"
+    }
+   ]
+  },
+  "FOLDER_COMPARE": {
+   "actions_class": "TDirCompareActions",
+   "display_filter_mode": "DropDown",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavCompareAll",
+     "action": "FavCompareAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "DisplayFilters",
+     "action": null,
+     "kind": "Group",
+     "image": "",
+     "caption_en": "",
+     "caption_pt": "",
+     "short_pt": "",
+     "short_en": "",
+     "hint_en": "",
+     "hint_pt": "",
+     "category": "",
+     "children": [
+      {
+       "name": "FavDiff",
+       "action": "FavDiffAction",
+       "kind": "Item",
+       "image": "imgFavDiff",
+       "caption_en": "Show Differences",
+       "caption_pt": "Exibir Diferenças",
+       "short_pt": "Diferenças",
+       "short_en": "Diffs",
+       "hint_en": "Show Differences",
+       "hint_pt": "Exibir Diferenças",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavNoOrphan",
+       "action": "FavNoOrphanAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show No Orphans",
+       "caption_pt": "Não Exibir Órfãos",
+       "short_pt": "Nenhum Órfão",
+       "short_en": "No Orphans",
+       "hint_en": "Show No Orphans",
+       "hint_pt": "Não Exibir Órfãos",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavDiffNoOrphan",
+       "action": "FavDiffNoOrphanAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Differences but No Orphans",
+       "caption_pt": "Exibir Diferentes mas Nenhum Órfão",
+       "short_pt": "Diferentes e Nenhum Órfão",
+       "short_en": "Diffs No Orphans",
+       "hint_en": "Show Differences but No Orphans",
+       "hint_pt": "Exibir Diferentes mas Nenhum Órfão",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavOrphan",
+       "action": "FavOrphanAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Orphans",
+       "caption_pt": "Exibir Órfãos",
+       "short_pt": "Órfãos",
+       "short_en": "Orphans",
+       "hint_en": "Show Orphans",
+       "hint_pt": "Exibir Órfãos",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavLeftNewer",
+       "action": "FavLeftNewerAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Left Newer",
+       "caption_pt": "Exibir Mais Novo na Esquerda",
+       "short_pt": "Mais Novo na Esquerda",
+       "short_en": "Left Newer",
+       "hint_en": "Show Left Newer",
+       "hint_pt": "Exibir Mais Novo na Esquerda",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavRightNewer",
+       "action": "FavRightNewerAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Right Newer",
+       "caption_pt": "Exibir Mais Novo na Direita",
+       "short_pt": "Mais Novo da Direita",
+       "short_en": "Right Newer",
+       "hint_en": "Show Right Newer",
+       "hint_pt": "Exibir Mais Novo na Direita",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavLeftNewerOrphan",
+       "action": "FavLeftNewerOrphanAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Left Newer and Left Orphans",
+       "caption_pt": "Exibir Mais Novos e Órfãos da Esquerda",
+       "short_pt": "Mais Novos da Esquerda, Órfãos",
+       "short_en": "Left Newer, Orphans",
+       "hint_en": "Show Left Newer and Left Orphans",
+       "hint_pt": "Exibir Mais Novos e Órfãos da Esquerda",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavRightNewerOrphan",
+       "action": "FavRightNewerOrphanAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Right Newer and Right Orphans",
+       "caption_pt": "Exibir Mais Novos e Órfãos da Direita",
+       "short_pt": "Mais Novos da Direita, Órfãos",
+       "short_en": "Right Newer, Orphans",
+       "hint_en": "Show Right Newer and Right Orphans",
+       "hint_pt": "Exibir Mais Novos e Órfãos da Direita",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavLeftOrphan",
+       "action": "FavLeftOrphanAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Left Orphans",
+       "caption_pt": "Exibir Órfãos da Esquerda",
+       "short_pt": "Órfãos na Esquerda",
+       "short_en": "Left Orphans",
+       "hint_en": "Show Left Orphans",
+       "hint_pt": "Exibir Órfãos da Esquerda",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavRightOrphan",
+       "action": "FavRightOrphanAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Right Orphans",
+       "caption_pt": "Exibir Órfãos na Direita",
+       "short_pt": "Órfãos na Direita",
+       "short_en": "Right Orphans",
+       "hint_en": "Show Right Orphans",
+       "hint_pt": "Exibir Órfãos na Direita",
+       "category": "DropDown"
+      }
+     ]
+    },
+    {
+     "name": "FavSame",
+     "action": "FavSameAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Same",
+     "hint_pt": "Exibir Iguais",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "DirHandling"
+    },
+    {
+     "name": "DirHandling",
+     "action": null,
+     "kind": "Group",
+     "image": "",
+     "caption_en": "",
+     "caption_pt": "",
+     "short_pt": "",
+     "short_en": "",
+     "hint_en": "",
+     "hint_pt": "",
+     "category": "",
+     "children": [
+      {
+       "name": "DirShowAll",
+       "action": "DirShowAllAction",
+       "kind": "Item",
+       "image": "imgDirShowAll",
+       "caption_en": "Always Show Folders",
+       "caption_pt": "Sempre Exibir Pastas",
+       "short_pt": "Todos",
+       "short_en": "All",
+       "hint_en": "Always Show Folders",
+       "hint_pt": "Sempre Exibir Pastas",
+       "category": "View"
+      },
+      {
+       "name": "DirCompareStructure",
+       "action": "DirCompareStructureAction",
+       "kind": "Item",
+       "image": "imgDirCompareStructure",
+       "caption_en": "Compare Files and Folder Structure",
+       "caption_pt": "Comparar Estrutura de Arquivos e Pastas",
+       "short_pt": "Estrutura",
+       "short_en": "Structure",
+       "hint_en": "Compare Files and Folder Structure",
+       "hint_pt": "Comparar Estrutura de Arquivos e Pastas",
+       "category": "View"
+      },
+      {
+       "name": "DirCompareFilesOnly",
+       "action": "DirCompareFilesOnlyAction",
+       "kind": "Item",
+       "image": "imgDirCompareFilesOnly",
+       "caption_en": "Only Compare Files",
+       "caption_pt": "Somente Comparar Arquivos (F)",
+       "short_pt": "Arquivos",
+       "short_en": "Files",
+       "hint_en": "Only Compare Files",
+       "hint_pt": "Somente Comparar Arquivos",
+       "category": "View"
+      },
+      {
+       "name": "DirFlatten",
+       "action": "DirFlattenAction",
+       "kind": "Item",
+       "image": "imgDirFlatten",
+       "caption_en": "Ignore Folder Structure",
+       "caption_pt": "Ignorar Estrutura da Pasta",
+       "short_pt": "Plano",
+       "short_en": "Flatten",
+       "hint_en": "Ignore Folder Structure (Flatten)",
+       "hint_pt": "Ignorar Estrutura de Pasta (Plano)",
+       "category": "View"
+      }
+     ]
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "Actions"
+    },
+    {
+     "name": "CopySide",
+     "action": "CopySideAction",
+     "kind": "Side",
+     "image": "imgCopyRight",
+     "caption_en": "Copy",
+     "caption_pt": "Copiar",
+     "short_pt": "Copiar",
+     "short_en": "Copy",
+     "hint_en": "Copy to Other Side",
+     "hint_pt": "Copiar para o Outro Lado",
+     "category": "Actions"
+    },
+    {
+     "kind": "Separator",
+     "name": "Sync"
+    },
+    {
+     "name": "ExpandAll",
+     "action": "ExpandAllAction",
+     "kind": "Button",
+     "image": "imgExpandAll",
+     "caption_en": "Expand",
+     "caption_pt": "Expandir",
+     "short_pt": "Expandir",
+     "short_en": "Expand",
+     "hint_en": "Expand All",
+     "hint_pt": "Expandir Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "CollapseAll",
+     "action": "CollapseAllAction",
+     "kind": "Button",
+     "image": "imgCollapseAll",
+     "caption_en": "Collapse",
+     "caption_pt": "Recolher",
+     "short_pt": "Recolher",
+     "short_en": "Collapse",
+     "hint_en": "Collapse All",
+     "hint_pt": "Recolher Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "SelectAll",
+     "action": "SelectAllAction",
+     "kind": "Button",
+     "image": "imgSelectAll",
+     "caption_en": "Select",
+     "caption_pt": "Selecionar",
+     "short_pt": "Selecionar",
+     "short_en": "Select",
+     "hint_en": "Select All",
+     "hint_pt": "Selecionar Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "SelectAllFiles",
+     "action": "SelectAllFilesAction",
+     "kind": "Button",
+     "image": "imgSelectAllFiles",
+     "caption_en": "Files",
+     "caption_pt": "Arquivos",
+     "short_pt": "Arquivos",
+     "short_en": "Files",
+     "hint_en": "Select All Files",
+     "hint_pt": "Selecionar Todos os Arquivos",
+     "category": "Edit"
+    },
+    {
+     "name": "Refresh",
+     "action": "RefreshAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Refresh",
+     "caption_pt": "Atualizar",
+     "short_pt": "Atualizar",
+     "short_en": "Refresh",
+     "hint_en": "Refresh",
+     "hint_pt": "Atualizar",
+     "category": "Edit"
+    },
+    {
+     "kind": "Separator",
+     "name": "Search"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Stop",
+     "action": "StopAction",
+     "kind": "Button",
+     "image": "imgStopRed",
+     "caption_en": "Stop",
+     "caption_pt": "Parar",
+     "short_pt": "Parar",
+     "short_en": "Stop",
+     "hint_en": "Stop Loading",
+     "hint_pt": "Parar Carregamento",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "View"
+    },
+    {
+     "name": "NameFilterEdit",
+     "action": "NameFilterEditAction",
+     "kind": "Combo",
+     "image": "",
+     "caption_en": "Filters:",
+     "caption_pt": "Filtros:",
+     "short_pt": "Filtros:",
+     "short_en": "Filters:",
+     "hint_en": "Name Filters Edit",
+     "hint_pt": "Editar Nome de Filtros",
+     "category": "Session"
+    },
+    {
+     "name": "NameFilter",
+     "action": "NameFilterAction",
+     "kind": "Button",
+     "image": "imgFilters",
+     "caption_en": "Filters",
+     "caption_pt": "Filtros",
+     "short_pt": "Filtros",
+     "short_en": "Filters",
+     "hint_en": "Name Filters",
+     "hint_pt": "Nomear Filtros",
+     "category": "Session"
+    },
+    {
+     "name": "SuppressFilters",
+     "action": "SuppressFiltersAction",
+     "kind": "Button",
+     "image": "imgSuppressFilters",
+     "caption_en": "Peek",
+     "caption_pt": "Esconder",
+     "short_pt": "Esconder",
+     "short_en": "Peek",
+     "hint_en": "Suppress Filters",
+     "hint_pt": "Suprimir Filtros",
+     "category": "View"
+    }
+   ]
+  },
+  "FOLDER_MERGE": {
+   "actions_class": "TDirMergeActions",
+   "display_filter_mode": "DropDown",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavMergeAll",
+     "action": "FavMergeAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "DisplayFilters",
+     "action": null,
+     "kind": "Group",
+     "image": "",
+     "caption_en": "",
+     "caption_pt": "",
+     "short_pt": "",
+     "short_en": "",
+     "hint_en": "",
+     "hint_pt": "",
+     "category": "",
+     "children": [
+      {
+       "name": "FavChanged",
+       "action": "FavChangedAction",
+       "kind": "Item",
+       "image": "imgFavDiff",
+       "caption_en": "Show Changes",
+       "caption_pt": "Exibir Alterações",
+       "short_pt": "Diferenças",
+       "short_en": "Diffs",
+       "hint_en": "Show Changes",
+       "hint_pt": "Exibir Alterações",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavConflict",
+       "action": "FavConflictAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Conflicts",
+       "caption_pt": "Exibir Conflitos",
+       "short_pt": "Conflitos",
+       "short_en": "Conflicts",
+       "hint_en": "Show Conflicts",
+       "hint_pt": "Exibir Conflitos",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavLeft",
+       "action": "FavLeftAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Left Changes",
+       "caption_pt": "Exibir Alterações da Esquerda",
+       "short_pt": "Esquerda",
+       "short_en": "Left",
+       "hint_en": "Show Left Changes",
+       "hint_pt": "Exibir Alterações da Esquerda",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavRight",
+       "action": "FavRightAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Right Changes",
+       "caption_pt": "Exibir Alterações da Direita",
+       "short_pt": "Direita",
+       "short_en": "Right",
+       "hint_en": "Show Right Changes",
+       "hint_pt": "Exibir Alterações da Direita",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavMergeable",
+       "action": "FavMergeableAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Mergeable",
+       "caption_pt": "Exibir Mesclável",
+       "short_pt": "OK",
+       "short_en": "Okay",
+       "hint_en": "Show Mergeable",
+       "hint_pt": "Exibir Mesclável",
+       "category": "DropDown"
+      }
+     ]
+    },
+    {
+     "name": "FavUnchanged",
+     "action": "FavUnchangedAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Unchanged",
+     "hint_pt": "Exibir Não Alterados",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "DirHandling"
+    },
+    {
+     "name": "DirHandling",
+     "action": null,
+     "kind": "Group",
+     "image": "",
+     "caption_en": "",
+     "caption_pt": "",
+     "short_pt": "",
+     "short_en": "",
+     "hint_en": "",
+     "hint_pt": "",
+     "category": "",
+     "children": [
+      {
+       "name": "DirShowAll",
+       "action": "DirShowAllAction",
+       "kind": "Item",
+       "image": "imgDirShowAll",
+       "caption_en": "Always Show Folders",
+       "caption_pt": "Sempre Exibir Pastas",
+       "short_pt": "Todos",
+       "short_en": "All",
+       "hint_en": "Always Show Folders",
+       "hint_pt": "Sempre Exibir Pastas",
+       "category": "View"
+      },
+      {
+       "name": "DirCompareStructure",
+       "action": "DirCompareStructureAction",
+       "kind": "Item",
+       "image": "imgDirCompareStructure",
+       "caption_en": "Compare Files and Folder Structure",
+       "caption_pt": "Comparar Estrutura de Arquivos e Pastas",
+       "short_pt": "Estrutura",
+       "short_en": "Structure",
+       "hint_en": "Compare Files and Folder Structure",
+       "hint_pt": "Comparar Estrutura de Arquivos e Pastas",
+       "category": "View"
+      },
+      {
+       "name": "DirCompareFilesOnly",
+       "action": "DirCompareFilesOnlyAction",
+       "kind": "Item",
+       "image": "imgDirCompareFilesOnly",
+       "caption_en": "Only Compare Files",
+       "caption_pt": "Somente Comparar Arquivos (F)",
+       "short_pt": "Arquivos",
+       "short_en": "Files",
+       "hint_en": "Only Compare Files",
+       "hint_pt": "Somente Comparar Arquivos",
+       "category": "View"
+      },
+      {
+       "name": "DirFlatten",
+       "action": "DirFlattenAction",
+       "kind": "Item",
+       "image": "imgDirFlatten",
+       "caption_en": "Ignore Folder Structure",
+       "caption_pt": "Ignorar Estrutura da Pasta",
+       "short_pt": "Plano",
+       "short_en": "Flatten",
+       "hint_en": "Ignore Folder Structure (Flatten)",
+       "hint_pt": "Ignorar Estrutura de Pasta (Plano)",
+       "category": "View"
+      }
+     ]
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "Actions"
+    },
+    {
+     "name": "Merge",
+     "action": "MergeAction",
+     "kind": "Button",
+     "image": "",
+     "caption_en": "Merge",
+     "caption_pt": "Mesclar",
+     "short_pt": "Mesclar",
+     "short_en": "Merge",
+     "hint_en": "Merge",
+     "hint_pt": "Combinar",
+     "category": "Actions"
+    },
+    {
+     "name": "CopySide",
+     "action": "CopySideAction",
+     "kind": "Side",
+     "image": "imgCopyRight",
+     "caption_en": "Copy",
+     "caption_pt": "Copiar",
+     "short_pt": "Copiar",
+     "short_en": "Copy",
+     "hint_en": "Copy to Other Side",
+     "hint_pt": "Copiar para o Outro Lado",
+     "category": "Actions"
+    },
+    {
+     "name": "CopyToOutput",
+     "action": "CopyToOutputAction",
+     "kind": "Button",
+     "image": "imgCopyToOutput",
+     "caption_en": "To Output",
+     "caption_pt": "Para Saída",
+     "short_pt": "Para Saída",
+     "short_en": "To Output",
+     "hint_en": "Copy to Output",
+     "hint_pt": "Copiar para Saída",
+     "category": "Actions"
+    },
+    {
+     "kind": "Separator",
+     "name": "Sync"
+    },
+    {
+     "name": "ExpandAll",
+     "action": "ExpandAllAction",
+     "kind": "Button",
+     "image": "imgExpandAll",
+     "caption_en": "Expand",
+     "caption_pt": "Expandir",
+     "short_pt": "Expandir",
+     "short_en": "Expand",
+     "hint_en": "Expand All",
+     "hint_pt": "Expandir Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "CollapseAll",
+     "action": "CollapseAllAction",
+     "kind": "Button",
+     "image": "imgCollapseAll",
+     "caption_en": "Collapse",
+     "caption_pt": "Recolher",
+     "short_pt": "Recolher",
+     "short_en": "Collapse",
+     "hint_en": "Collapse All",
+     "hint_pt": "Recolher Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "SelectAll",
+     "action": "SelectAllAction",
+     "kind": "Button",
+     "image": "imgSelectAll",
+     "caption_en": "Select",
+     "caption_pt": "Selecionar",
+     "short_pt": "Selecionar",
+     "short_en": "Select",
+     "hint_en": "Select All",
+     "hint_pt": "Selecionar Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "SelectAllFiles",
+     "action": "SelectAllFilesAction",
+     "kind": "Button",
+     "image": "imgSelectAllFiles",
+     "caption_en": "Files",
+     "caption_pt": "Arquivos",
+     "short_pt": "Arquivos",
+     "short_en": "Files",
+     "hint_en": "Select All Files",
+     "hint_pt": "Selecionar Todos os Arquivos",
+     "category": "Edit"
+    },
+    {
+     "name": "Refresh",
+     "action": "RefreshAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Refresh",
+     "caption_pt": "Atualizar",
+     "short_pt": "Atualizar",
+     "short_en": "Refresh",
+     "hint_en": "Refresh",
+     "hint_pt": "Atualizar",
+     "category": "Edit"
+    },
+    {
+     "kind": "Separator",
+     "name": "Search"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Stop",
+     "action": "StopAction",
+     "kind": "Button",
+     "image": "imgStopRed",
+     "caption_en": "Stop",
+     "caption_pt": "Parar",
+     "short_pt": "Parar",
+     "short_en": "Stop",
+     "hint_en": "Stop Loading",
+     "hint_pt": "Parar Carregamento",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "View"
+    },
+    {
+     "name": "NameFilterEdit",
+     "action": "NameFilterEditAction",
+     "kind": "Combo",
+     "image": "",
+     "caption_en": "Filters:",
+     "caption_pt": "Filtros:",
+     "short_pt": "Filtros:",
+     "short_en": "Filters:",
+     "hint_en": "Name Filters Edit",
+     "hint_pt": "Editar Nome de Filtros",
+     "category": "Session"
+    },
+    {
+     "name": "NameFilter",
+     "action": "NameFilterAction",
+     "kind": "Button",
+     "image": "imgFilters",
+     "caption_en": "Filters",
+     "caption_pt": "Filtros",
+     "short_pt": "Filtros",
+     "short_en": "Filters",
+     "hint_en": "Name Filters",
+     "hint_pt": "Nomear Filtros",
+     "category": "Session"
+    },
+    {
+     "name": "SuppressFilters",
+     "action": "SuppressFiltersAction",
+     "kind": "Button",
+     "image": "imgSuppressFilters",
+     "caption_en": "Peek",
+     "caption_pt": "Esconder",
+     "short_pt": "Esconder",
+     "short_en": "Peek",
+     "hint_en": "Suppress Filters",
+     "hint_pt": "Suprimir Filtros",
+     "category": "View"
+    }
+   ]
+  },
+  "FOLDER_SYNC": {
+   "actions_class": "TDirSyncActions",
+   "display_filter_mode": "DropDown",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "ExpandAll",
+     "action": "ExpandAllAction",
+     "kind": "Button",
+     "image": "imgExpandAll",
+     "caption_en": "Expand",
+     "caption_pt": "Expandir",
+     "short_pt": "Expandir",
+     "short_en": "Expand",
+     "hint_en": "Expand All",
+     "hint_pt": "Expandir Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "CollapseAll",
+     "action": "CollapseAllAction",
+     "kind": "Button",
+     "image": "imgCollapseAll",
+     "caption_en": "Collapse",
+     "caption_pt": "Recolher",
+     "short_pt": "Recolher",
+     "short_en": "Collapse",
+     "hint_en": "Collapse All",
+     "hint_pt": "Recolher Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "SelectAll",
+     "action": "SelectAllAction",
+     "kind": "Button",
+     "image": "imgSelectAll",
+     "caption_en": "Select",
+     "caption_pt": "Selecionar",
+     "short_pt": "Selecionar",
+     "short_en": "Select",
+     "hint_en": "Select All",
+     "hint_pt": "Selecionar Todos",
+     "category": "Edit"
+    },
+    {
+     "name": "Refresh",
+     "action": "RefreshAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Refresh",
+     "caption_pt": "Atualizar",
+     "short_pt": "Atualizar",
+     "short_en": "Refresh",
+     "hint_en": "Refresh",
+     "hint_pt": "Atualizar",
+     "category": "Edit"
+    },
+    {
+     "kind": "Separator",
+     "name": "Search"
+    },
+    {
+     "name": "Stop",
+     "action": "StopAction",
+     "kind": "Button",
+     "image": "imgStopRed",
+     "caption_en": "Stop",
+     "caption_pt": "Parar",
+     "short_pt": "Parar",
+     "short_en": "Stop",
+     "hint_en": "Stop Loading",
+     "hint_pt": "Parar Carregamento",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "FileFilters"
+    },
+    {
+     "name": "SuppressFilters",
+     "action": "SuppressFiltersAction",
+     "kind": "Button",
+     "image": "imgSuppressFilters",
+     "caption_en": "Peek",
+     "caption_pt": "Esconder",
+     "short_pt": "Esconder",
+     "short_en": "Peek",
+     "hint_en": "Suppress Filters",
+     "hint_pt": "Suprimir Filtros",
+     "category": "View"
+    }
+   ]
+  },
+  "TEXT_MERGE": {
+   "actions_class": "TTextMergeActions",
+   "display_filter_mode": "DropDown",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavMergeAll",
+     "action": "FavMergeAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "DisplayFilters",
+     "action": null,
+     "kind": "Group",
+     "image": "",
+     "caption_en": "",
+     "caption_pt": "",
+     "short_pt": "",
+     "short_en": "",
+     "hint_en": "",
+     "hint_pt": "",
+     "category": "",
+     "children": [
+      {
+       "name": "FavChanged",
+       "action": "FavChangedAction",
+       "kind": "Item",
+       "image": "imgFavDiff",
+       "caption_en": "Show Changes",
+       "caption_pt": "Exibir Alterações",
+       "short_pt": "Diferenças",
+       "short_en": "Diffs",
+       "hint_en": "Show Changes",
+       "hint_pt": "Exibir Alterações",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavConflict",
+       "action": "FavConflictAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Conflicts",
+       "caption_pt": "Exibir Conflitos",
+       "short_pt": "Conflitos",
+       "short_en": "Conflicts",
+       "hint_en": "Show Conflicts",
+       "hint_pt": "Exibir Conflitos",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavLeft",
+       "action": "FavLeftAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Left Changes",
+       "caption_pt": "Exibir Alterações da Esquerda",
+       "short_pt": "Esquerda",
+       "short_en": "Left",
+       "hint_en": "Show Left Changes",
+       "hint_pt": "Exibir Alterações da Esquerda",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavRight",
+       "action": "FavRightAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Right Changes",
+       "caption_pt": "Exibir Alterações da Direita",
+       "short_pt": "Direita",
+       "short_en": "Right",
+       "hint_en": "Show Right Changes",
+       "hint_pt": "Exibir Alterações da Direita",
+       "category": "DropDown"
+      },
+      {
+       "name": "FavMergeable",
+       "action": "FavMergeableAction",
+       "kind": "Item",
+       "image": "",
+       "caption_en": "Show Mergeable",
+       "caption_pt": "Exibir Mesclável",
+       "short_pt": "OK",
+       "short_en": "Okay",
+       "hint_en": "Show Mergeable",
+       "hint_pt": "Exibir Mesclável",
+       "category": "DropDown"
+      }
+     ]
+    },
+    {
+     "name": "FavUnchanged",
+     "action": "FavUnchangedAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Unchanged",
+     "hint_pt": "Exibir Não Alterados",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "ShowContext",
+     "action": "ShowContextAction",
+     "kind": "Button",
+     "image": "imgShowContext",
+     "caption_en": "Context",
+     "caption_pt": "Contexto",
+     "short_pt": "Contexto",
+     "short_en": "Context",
+     "hint_en": "Show Context",
+     "hint_pt": "Exibir Contexto",
+     "category": "View"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "name": "FileFormat",
+     "action": "FileFormatAction",
+     "kind": "Dropdown",
+     "image": "imgTextFormatEdit",
+     "caption_en": "Format",
+     "caption_pt": "Formato",
+     "short_pt": "Formato",
+     "short_en": "Format",
+     "hint_en": "Format",
+     "hint_pt": "Formato",
+     "category": "Session",
+     "children": []
+    },
+    {
+     "kind": "Separator",
+     "name": "Edit"
+    },
+    {
+     "name": "Conflict",
+     "action": "ConflictAction",
+     "kind": "Button",
+     "image": "imgConflict",
+     "caption_en": "Conflict",
+     "caption_pt": "Conflito",
+     "short_pt": "Conflito",
+     "short_en": "Conflict",
+     "hint_en": "Conflict",
+     "hint_pt": "Conflito",
+     "category": "Edit"
+    },
+    {
+     "name": "TakeLeft",
+     "action": "TakeLeftAction",
+     "kind": "Button",
+     "image": "",
+     "caption_en": "Left",
+     "caption_pt": "Esquerda",
+     "short_pt": "Esquerda",
+     "short_en": "Left",
+     "hint_en": "Take Left",
+     "hint_pt": "Obter Esquerdo",
+     "category": "Edit"
+    },
+    {
+     "name": "TakeCenter",
+     "action": "TakeCenterAction",
+     "kind": "Button",
+     "image": "",
+     "caption_en": "Center",
+     "caption_pt": "Centro",
+     "short_pt": "Centro",
+     "short_en": "Center",
+     "hint_en": "Take Center",
+     "hint_pt": "Obter Centro",
+     "category": "Edit"
+    },
+    {
+     "name": "TakeRight",
+     "action": "TakeRightAction",
+     "kind": "Button",
+     "image": "",
+     "caption_en": "Right",
+     "caption_pt": "Direita",
+     "short_pt": "Direita",
+     "short_en": "Right",
+     "hint_en": "Take Right",
+     "hint_pt": "Obter Direito",
+     "category": "Edit"
+    },
+    {
+     "name": "FullEdit",
+     "action": "FullEditAction",
+     "kind": "Button",
+     "image": "imgFullEdit",
+     "caption_en": "Edit",
+     "caption_pt": "Editar",
+     "short_pt": "Editar",
+     "short_en": "Edit",
+     "hint_en": "Full Edit",
+     "hint_pt": "Editar Completo",
+     "category": "Edit"
+    },
+    {
+     "kind": "Separator",
+     "name": "Search"
+    },
+    {
+     "name": "ConflictSectionNext",
+     "action": "ConflictSectionNextAction",
+     "kind": "Button",
+     "image": "imgConflictSectionNext",
+     "caption_en": "Next Conflict",
+     "caption_pt": "Próximo Conflito",
+     "short_pt": "Próximo Conflito",
+     "short_en": "Next Conflict",
+     "hint_en": "Next Conflict Section",
+     "hint_pt": "Próxima Seção com Conflito",
+     "category": "Search"
+    },
+    {
+     "name": "ConflictSectionPrev",
+     "action": "ConflictSectionPrevAction",
+     "kind": "Button",
+     "image": "imgConflictSectionPrev",
+     "caption_en": "Prev Conflict",
+     "caption_pt": "Conflito Anterior",
+     "short_pt": "Conflito Anterior",
+     "short_en": "Prev Conflict",
+     "hint_en": "Previous Conflict Section",
+     "hint_pt": "Seção com Conflito Anterior",
+     "category": "Search"
+    },
+    {
+     "name": "DiffSectionNext",
+     "action": "DiffSectionNextAction",
+     "kind": "Button",
+     "image": "imgDown",
+     "caption_en": "Next Section",
+     "caption_pt": "Próxima Seção",
+     "short_pt": "Próxima Seção",
+     "short_en": "Next Section",
+     "hint_en": "Next Difference Section",
+     "hint_pt": "Próxima Seção Diferente",
+     "category": "Search"
+    },
+    {
+     "name": "DiffSectionPrev",
+     "action": "DiffSectionPrevAction",
+     "kind": "Button",
+     "image": "imgUp",
+     "caption_en": "Prev Section",
+     "caption_pt": "Seção Anterior",
+     "short_pt": "Seção Anterior",
+     "short_en": "Prev Section",
+     "hint_en": "Previous Difference Section",
+     "hint_pt": "Seção Diferente Anterior",
+     "category": "Search"
+    },
+    {
+     "kind": "Separator",
+     "name": "Specs"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Reload",
+     "action": "ReloadAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Reload",
+     "caption_pt": "Recarregar",
+     "short_pt": "Recarregar",
+     "short_en": "Reload",
+     "hint_en": "Reload Files",
+     "hint_pt": "Recarregar Arquivos",
+     "category": "Session"
+    }
+   ]
+  },
+  "TEXT_EDIT": {
+   "actions_class": "TTextEditActions",
+   "display_filter_mode": "DropDown",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    }
+   ]
+  },
+  "TEXT_PATCH": {
+   "actions_class": "TTextPatchActions",
+   "display_filter_mode": "DropDown",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "DiffSectionNext",
+     "action": "DiffSectionNextAction",
+     "kind": "Button",
+     "image": "imgDown",
+     "caption_en": "Next Section",
+     "caption_pt": "Próxima Seção",
+     "short_pt": "Próxima Seção",
+     "short_en": "Next Section",
+     "hint_en": "Next Difference Section",
+     "hint_pt": "Próxima Seção Diferente",
+     "category": "Search"
+    },
+    {
+     "name": "DiffSectionPrev",
+     "action": "DiffSectionPrevAction",
+     "kind": "Button",
+     "image": "imgUp",
+     "caption_en": "Prev Section",
+     "caption_pt": "Seção Anterior",
+     "short_pt": "Seção Anterior",
+     "short_en": "Prev Section",
+     "hint_en": "Previous Difference Section",
+     "hint_pt": "Seção Diferente Anterior",
+     "category": "Search"
+    }
+   ]
+  },
+  "TABLE_COMPARE": {
+   "actions_class": "TDataCompareActions",
+   "display_filter_mode": "Favorites",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavCompareAll",
+     "action": "FavCompareAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavDiff",
+     "action": "FavDiffAction",
+     "kind": "Button",
+     "image": "imgFavDiff",
+     "caption_en": "Diffs",
+     "caption_pt": "Diferenças",
+     "short_pt": "Diferenças",
+     "short_en": "Diffs",
+     "hint_en": "Show Differences",
+     "hint_pt": "Exibir Diferenças",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavSame",
+     "action": "FavSameAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Same",
+     "hint_pt": "Exibir Iguais",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "name": "FileFormat",
+     "action": "FileFormatAction",
+     "kind": "Dropdown",
+     "image": "imgDataFormatEdit",
+     "caption_en": "Format",
+     "caption_pt": "Formato",
+     "short_pt": "Formato",
+     "short_en": "Format",
+     "hint_en": "Format",
+     "hint_pt": "Formato",
+     "category": "Session",
+     "children": []
+    },
+    {
+     "kind": "Separator",
+     "name": "Edit"
+    },
+    {
+     "name": "CopySide",
+     "action": "CopySideAction",
+     "kind": "Side",
+     "image": "imgCopyRight",
+     "caption_en": "Copy",
+     "caption_pt": "Copiar",
+     "short_pt": "Copiar",
+     "short_en": "Copy",
+     "hint_en": "Copy to Other Side",
+     "hint_pt": "Copiar para o Outro Lado",
+     "category": "Edit"
+    },
+    {
+     "kind": "Separator",
+     "name": "Search"
+    },
+    {
+     "name": "DiffItemNext",
+     "action": "DiffItemNextAction",
+     "kind": "Button",
+     "image": "imgDown",
+     "caption_en": "Next Diff",
+     "caption_pt": "Próxima Diferença",
+     "short_pt": "Próxima Diferença",
+     "short_en": "Next Diff",
+     "hint_en": "Next Difference Row",
+     "hint_pt": "Próxima Linha Diferente",
+     "category": "Search"
+    },
+    {
+     "name": "DiffItemPrev",
+     "action": "DiffItemPrevAction",
+     "kind": "Button",
+     "image": "imgUp",
+     "caption_en": "Prev Diff",
+     "caption_pt": "Diferença Anterior",
+     "short_pt": "Diferença Anterior",
+     "short_en": "Prev Diff",
+     "hint_en": "Previous Difference Row",
+     "hint_pt": "Linha Diferente Anterior",
+     "category": "Search"
+    },
+    {
+     "kind": "Separator",
+     "name": "Specs"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Reload",
+     "action": "ReloadAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Reload",
+     "caption_pt": "Recarregar",
+     "short_pt": "Recarregar",
+     "short_en": "Reload",
+     "hint_en": "Reload Files",
+     "hint_pt": "Recarregar Arquivos",
+     "category": "Session"
+    }
+   ]
+  },
+  "HEX_COMPARE": {
+   "actions_class": "THexCompareActions",
+   "display_filter_mode": "Favorites",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavCompareAll",
+     "action": "FavCompareAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavDiff",
+     "action": "FavDiffAction",
+     "kind": "Button",
+     "image": "imgFavDiff",
+     "caption_en": "Diffs",
+     "caption_pt": "Diferenças",
+     "short_pt": "Diferenças",
+     "short_en": "Diffs",
+     "hint_en": "Show Differences",
+     "hint_pt": "Exibir Diferenças",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavSame",
+     "action": "FavSameAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Same",
+     "hint_pt": "Exibir Iguais",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "name": "FileFormat",
+     "action": "FileFormatAction",
+     "kind": "Dropdown",
+     "image": "imgHexFormatEdit",
+     "caption_en": "Format",
+     "caption_pt": "Formato",
+     "short_pt": "Formato",
+     "short_en": "Format",
+     "hint_en": "Format",
+     "hint_pt": "Formato",
+     "category": "Session",
+     "children": []
+    },
+    {
+     "kind": "Separator",
+     "name": "Edit"
+    },
+    {
+     "name": "CopySide",
+     "action": "CopySideAction",
+     "kind": "Side",
+     "image": "imgCopyRight",
+     "caption_en": "Copy",
+     "caption_pt": "Copiar",
+     "short_pt": "Copiar",
+     "short_en": "Copy",
+     "hint_en": "Copy to Other Side",
+     "hint_pt": "Copiar para o Outro Lado",
+     "category": "Edit"
+    },
+    {
+     "kind": "Separator",
+     "name": "Search"
+    },
+    {
+     "name": "DiffItemNext",
+     "action": "DiffItemNextAction",
+     "kind": "Button",
+     "image": "imgDown",
+     "caption_en": "Next Diff",
+     "caption_pt": "Próxima Diferença",
+     "short_pt": "Próxima Diferença",
+     "short_en": "Next Diff",
+     "hint_en": "Next Difference Bytes",
+     "hint_pt": "Próximos Bytes Diferentes",
+     "category": "Search"
+    },
+    {
+     "name": "DiffItemPrev",
+     "action": "DiffItemPrevAction",
+     "kind": "Button",
+     "image": "imgUp",
+     "caption_en": "Prev Diff",
+     "caption_pt": "Diferença Anterior",
+     "short_pt": "Diferença Anterior",
+     "short_en": "Prev Diff",
+     "hint_en": "Previous Difference Bytes",
+     "hint_pt": "Bytes Diferentes Anteriores",
+     "category": "Search"
+    },
+    {
+     "kind": "Separator",
+     "name": "Specs"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Reload",
+     "action": "ReloadAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Reload",
+     "caption_pt": "Recarregar",
+     "short_pt": "Recarregar",
+     "short_en": "Reload",
+     "hint_en": "Reload Files",
+     "hint_pt": "Recarregar Arquivos",
+     "category": "Session"
+    }
+   ]
+  },
+  "MP3_COMPARE": {
+   "actions_class": "TMP3CompareActions",
+   "display_filter_mode": "Favorites",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavCompareAll",
+     "action": "FavCompareAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavDiff",
+     "action": "FavDiffAction",
+     "kind": "Button",
+     "image": "imgFavDiff",
+     "caption_en": "Diffs",
+     "caption_pt": "Diferenças",
+     "short_pt": "Diferenças",
+     "short_en": "Diffs",
+     "hint_en": "Show Differences",
+     "hint_pt": "Exibir Diferenças",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavSame",
+     "action": "FavSameAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Same",
+     "hint_pt": "Exibir Iguais",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "Edit"
+    },
+    {
+     "name": "DiffItemNext",
+     "action": "DiffItemNextAction",
+     "kind": "Button",
+     "image": "imgDown",
+     "caption_en": "Next Diff",
+     "caption_pt": "Próxima Diferença",
+     "short_pt": "Próxima Diferença",
+     "short_en": "Next Diff",
+     "hint_en": "Next Difference Item",
+     "hint_pt": "Próximo Item Diferente",
+     "category": "Search"
+    },
+    {
+     "name": "DiffItemPrev",
+     "action": "DiffItemPrevAction",
+     "kind": "Button",
+     "image": "imgUp",
+     "caption_en": "Prev Diff",
+     "caption_pt": "Diferença Anterior",
+     "short_pt": "Diferença Anterior",
+     "short_en": "Prev Diff",
+     "hint_en": "Previous Difference Item",
+     "hint_pt": "Item Diferente Anterior",
+     "category": "Search"
+    },
+    {
+     "kind": "Separator",
+     "name": "Specs"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Reload",
+     "action": "ReloadAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Reload",
+     "caption_pt": "Recarregar",
+     "short_pt": "Recarregar",
+     "short_en": "Reload",
+     "hint_en": "Reload Files",
+     "hint_pt": "Recarregar Arquivos",
+     "category": "Session"
+    },
+    {
+     "name": "Play2",
+     "action": "Play2Action",
+     "kind": "Button",
+     "image": "imgMP3Play2",
+     "caption_en": "Play2",
+     "caption_pt": "Reproduzir2",
+     "short_pt": "Reproduzir2",
+     "short_en": "Play2",
+     "hint_en": "Play Both",
+     "hint_pt": "Reproduzir Ambos",
+     "category": "Session"
+    }
+   ]
+  },
+  "PICTURE_COMPARE": {
+   "actions_class": "TPixCompareActions",
+   "display_filter_mode": "DropDown",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DiffMode"
+    },
+    {
+     "name": "DiffTolerance",
+     "action": "DiffToleranceAction",
+     "kind": "Button",
+     "image": "imgPixDiffTolerance",
+     "caption_en": "Tol",
+     "caption_pt": "Tolerância",
+     "short_pt": "Tolerância",
+     "short_en": "Tol",
+     "hint_en": "Tolerance Mode",
+     "hint_pt": "Modo de Tolerância",
+     "category": "View"
+    },
+    {
+     "name": "DiffRange",
+     "action": "DiffRangeAction",
+     "kind": "Button",
+     "image": "imgPixDiffRange",
+     "caption_en": "Range",
+     "caption_pt": "Gama",
+     "short_pt": "Gama",
+     "short_en": "Range",
+     "hint_en": "Mismatch Range Mode",
+     "hint_pt": "Modo de Variação de Discordância",
+     "category": "View"
+    },
+    {
+     "name": "DiffBlend",
+     "action": "DiffBlendAction",
+     "kind": "Button",
+     "image": "imgPixDiffBlend",
+     "caption_en": "Blend",
+     "caption_pt": "Misturar",
+     "short_pt": "Misturar",
+     "short_en": "Blend",
+     "hint_en": "Blend Mode",
+     "hint_pt": "Modo de Mistura",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "name": "FileFormat",
+     "action": "FileFormatAction",
+     "kind": "Dropdown",
+     "image": "imgPixFormatEdit",
+     "caption_en": "Format",
+     "caption_pt": "Formato",
+     "short_pt": "Formato",
+     "short_en": "Format",
+     "hint_en": "Format",
+     "hint_pt": "Formato",
+     "category": "Session",
+     "children": []
+    },
+    {
+     "kind": "Separator",
+     "name": "Edit"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Reload",
+     "action": "ReloadAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Reload",
+     "caption_pt": "Recarregar",
+     "short_pt": "Recarregar",
+     "short_en": "Reload",
+     "hint_en": "Reload Files",
+     "hint_pt": "Recarregar Arquivos",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "View"
+    },
+    {
+     "name": "CompareTags",
+     "action": "CompareTagsAction",
+     "kind": "Button",
+     "image": "imgPixCompareTags",
+     "caption_en": "Meta",
+     "caption_pt": "Meta",
+     "short_pt": "Meta",
+     "short_en": "Meta",
+     "hint_en": "Compare Metadata",
+     "hint_pt": "Comparar Metadados",
+     "category": "View"
+    }
+   ]
+  },
+  "REGISTRY_COMPARE": {
+   "actions_class": "TRegCompareActions",
+   "display_filter_mode": "Favorites",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavCompareAll",
+     "action": "FavCompareAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavDiff",
+     "action": "FavDiffAction",
+     "kind": "Button",
+     "image": "imgFavDiff",
+     "caption_en": "Diffs",
+     "caption_pt": "Diferenças",
+     "short_pt": "Diferenças",
+     "short_en": "Diffs",
+     "hint_en": "Show Differences",
+     "hint_pt": "Exibir Diferenças",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavSame",
+     "action": "FavSameAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Same",
+     "hint_pt": "Exibir Iguais",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "CopySide",
+     "action": "CopySideAction",
+     "kind": "Side",
+     "image": "imgCopyRight",
+     "caption_en": "Copy",
+     "caption_pt": "Copiar",
+     "short_pt": "Copiar",
+     "short_en": "Copy",
+     "hint_en": "Copy to Other Side",
+     "hint_pt": "Copiar para o Outro Lado",
+     "category": "Edit"
+    },
+    {
+     "kind": "Separator",
+     "name": "Search"
+    },
+    {
+     "name": "DiffItemNext",
+     "action": "DiffItemNextAction",
+     "kind": "Button",
+     "image": "imgDown",
+     "caption_en": "Next Diff",
+     "caption_pt": "Próxima Diferença",
+     "short_pt": "Próxima Diferença",
+     "short_en": "Next Diff",
+     "hint_en": "Next Difference Item",
+     "hint_pt": "Próximo Item Diferente",
+     "category": "Search"
+    },
+    {
+     "name": "DiffItemPrev",
+     "action": "DiffItemPrevAction",
+     "kind": "Button",
+     "image": "imgUp",
+     "caption_en": "Prev Diff",
+     "caption_pt": "Diferença Anterior",
+     "short_pt": "Diferença Anterior",
+     "short_en": "Prev Diff",
+     "hint_en": "Previous Difference Item",
+     "hint_pt": "Item Diferente Anterior",
+     "category": "Search"
+    },
+    {
+     "kind": "Separator",
+     "name": "Specs"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Reload",
+     "action": "ReloadAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Reload",
+     "caption_pt": "Recarregar",
+     "short_pt": "Recarregar",
+     "short_en": "Reload",
+     "hint_en": "Reload",
+     "hint_pt": "Recarregar",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "View"
+    },
+    {
+     "name": "ExpandAll",
+     "action": "ExpandAllAction",
+     "kind": "Button",
+     "image": "imgExpandAll",
+     "caption_en": "Expand",
+     "caption_pt": "Expandir",
+     "short_pt": "Expandir",
+     "short_en": "Expand",
+     "hint_en": "Expand All",
+     "hint_pt": "Expandir Todos",
+     "category": "View"
+    },
+    {
+     "name": "CollapseAll",
+     "action": "CollapseAllAction",
+     "kind": "Button",
+     "image": "imgCollapseAll",
+     "caption_en": "Collapse",
+     "caption_pt": "Recolher",
+     "short_pt": "Recolher",
+     "short_en": "Collapse",
+     "hint_en": "Collapse All",
+     "hint_pt": "Recolher Todos",
+     "category": "View"
+    }
+   ]
+  },
+  "VERSION_COMPARE": {
+   "actions_class": "TVerCompareActions",
+   "display_filter_mode": "Favorites",
+   "items": [
+    {
+     "name": "SessionHome",
+     "action": "SessionHomeAction",
+     "kind": "Button",
+     "image": "imgSessionHome",
+     "caption_en": "Home",
+     "caption_pt": "Página Inicial",
+     "short_pt": "Página Inicial",
+     "short_en": "Home",
+     "hint_en": "Home",
+     "hint_pt": "Página Inicial",
+     "category": "Session"
+    },
+    {
+     "name": "SessionsCombo",
+     "action": "SessionsComboAction",
+     "kind": "Tree",
+     "image": "imgSessionsCombo",
+     "caption_en": "Sessions",
+     "caption_pt": "Sessões",
+     "short_pt": "Sessões",
+     "short_en": "Sessions",
+     "hint_en": "Sessions Button",
+     "hint_pt": "Botão de Sessões",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "DisplayFilters"
+    },
+    {
+     "name": "FavCompareAll",
+     "action": "FavCompareAllAction",
+     "kind": "Button",
+     "image": "imgFavAll",
+     "caption_en": "All",
+     "caption_pt": "Todos",
+     "short_pt": "Todos",
+     "short_en": "All",
+     "hint_en": "Show All",
+     "hint_pt": "Exibir Todos",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavDiff",
+     "action": "FavDiffAction",
+     "kind": "Button",
+     "image": "imgFavDiff",
+     "caption_en": "Diffs",
+     "caption_pt": "Diferenças",
+     "short_pt": "Diferenças",
+     "short_en": "Diffs",
+     "hint_en": "Show Differences",
+     "hint_pt": "Exibir Diferenças",
+     "category": "Favorites"
+    },
+    {
+     "name": "FavSame",
+     "action": "FavSameAction",
+     "kind": "Button",
+     "image": "imgFavSame",
+     "caption_en": "Same",
+     "caption_pt": "Iguais",
+     "short_pt": "Iguais",
+     "short_en": "Same",
+     "hint_en": "Show Same",
+     "hint_pt": "Exibir Iguais",
+     "category": "Favorites"
+    },
+    {
+     "kind": "Separator",
+     "name": "InsigIgnored"
+    },
+    {
+     "name": "InsigIgnored",
+     "action": "InsigIgnoredAction",
+     "kind": "Button",
+     "image": "imgInsigIgnored",
+     "caption_en": "Minor",
+     "caption_pt": "Menor",
+     "short_pt": "Menor",
+     "short_en": "Minor",
+     "hint_en": "Ignore Unimportant Differences",
+     "hint_pt": "Ignorar Diferenças Não-importantes",
+     "category": "View"
+    },
+    {
+     "kind": "Separator",
+     "name": "Rules"
+    },
+    {
+     "name": "Rules",
+     "action": "RulesAction",
+     "kind": "Button",
+     "image": "imgRules",
+     "caption_en": "Rules",
+     "caption_pt": "Regras",
+     "short_pt": "Regras",
+     "short_en": "Rules",
+     "hint_en": "Rules",
+     "hint_pt": "Regras",
+     "category": "Session"
+    },
+    {
+     "kind": "Separator",
+     "name": "Edit"
+    },
+    {
+     "name": "DiffItemNext",
+     "action": "DiffItemNextAction",
+     "kind": "Button",
+     "image": "imgDown",
+     "caption_en": "Next Diff",
+     "caption_pt": "Próxima Diferença",
+     "short_pt": "Próxima Diferença",
+     "short_en": "Next Diff",
+     "hint_en": "Next Difference Item",
+     "hint_pt": "Próximo Item Diferente",
+     "category": "Search"
+    },
+    {
+     "name": "DiffItemPrev",
+     "action": "DiffItemPrevAction",
+     "kind": "Button",
+     "image": "imgUp",
+     "caption_en": "Prev Diff",
+     "caption_pt": "Diferença Anterior",
+     "short_pt": "Diferença Anterior",
+     "short_en": "Prev Diff",
+     "hint_en": "Previous Difference Item",
+     "hint_pt": "Item Diferente Anterior",
+     "category": "Search"
+    },
+    {
+     "kind": "Separator",
+     "name": "Specs"
+    },
+    {
+     "name": "Swap",
+     "action": "SwapAction",
+     "kind": "Button",
+     "image": "imgSwap",
+     "caption_en": "Swap",
+     "caption_pt": "Inverter",
+     "short_pt": "Inverter",
+     "short_en": "Swap",
+     "hint_en": "Swap Sides",
+     "hint_pt": "Inverter Lados",
+     "category": "Session"
+    },
+    {
+     "name": "Reload",
+     "action": "ReloadAction",
+     "kind": "Button",
+     "image": "imgRefresh",
+     "caption_en": "Reload",
+     "caption_pt": "Recarregar",
+     "short_pt": "Recarregar",
+     "short_en": "Reload",
+     "hint_en": "Reload Files",
+     "hint_pt": "Recarregar Arquivos",
+     "category": "Session"
+    }
+   ]
+  }
+ }
+}

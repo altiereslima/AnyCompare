@@ -1,0 +1,79 @@
+{
+  "evidence_id": "ev_0e0e0af42d32bcf5732c5bec0684e984eefd5ef27fcd4d06d98f05e53716a1c8",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "instrument_with_frida",
+  "parameters": {
+    "session_id": "d5ea8e90-777f-4a24-8e30-e936adbeb6e3",
+    "device_id": "local",
+    "mode": "spawn",
+    "program": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-reverse-runtime\\BCompare.exe",
+    "argv": [
+      "@C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-reverse-replay\\report-script.txt",
+      "/silent"
+    ]
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "d5ea8e90-777f-4a24-8e30-e936adbeb6e3",
+    "device_id": "local",
+    "state": "running",
+    "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-reverse-runtime\\BCompare.exe",
+    "pid": 31056,
+    "mode": "spawn",
+    "scripts": [
+      {
+        "script_id": "7efcfef8-f412-4ae9-a9bf-0fdbf2fa29f4",
+        "name": "rea-7efcfef8-f412-4ae9-a9bf-0fdbf2fa29f4"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "7efcfef8-f412-4ae9-a9bf-0fdbf2fa29f4",
+        "type": "send",
+        "payload": {
+          "kind": "target",
+          "path": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-reverse-runtime\\BCompare.exe",
+          "base": "0x400000",
+          "pid": 31056
+        }
+      },
+      {
+        "script_id": "7efcfef8-f412-4ae9-a9bf-0fdbf2fa29f4",
+        "type": "send",
+        "payload": {
+          "kind": "result-labels",
+          "values": [
+            null,
+            "Binary same",
+            "Binary differences",
+            "Same",
+            "Unimportant differences",
+            "Important differences"
+          ]
+        }
+      }
+    ],
+    "messages_truncated": false,
+    "source_kind": "file",
+    "source_path": "C:\\Projetos\\BC4\\anycompare\\tools\\observe_reference_section_count.frida.js",
+    "source_sha256": "83cb97eb6f914946a95dacf74ba9425bfe706ff9a1517847ac1a196c1ffd5348",
+    "cleanup_error": null
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

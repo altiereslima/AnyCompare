@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-14",
+  "version": "0.1.3",
+  "binary": "C:\\Projetos\\BC4\\anycompare\\dist\\AnyCompare-0.1.3.exe",
+  "sha256": "E0E75D0C57BEACF92C1EB2A1793C60296175AF4C32793591A06D696F82F4F83D",
+  "bytes": 7167488,
+  "screens": [
+    {
+      "screen": "home",
+      "exited": true,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "capture": "docs/validation/home.png",
+      "working_directory": "C:\\Users\\Altieres\\Documents\\ChatGPT\\anycompare"
+    },
+    {
+      "screen": "text",
+      "exited": true,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "capture": "docs/validation/text.png",
+      "working_directory": "C:\\Projetos\\BC4\\anycompare"
+    },
+    {
+      "screen": "text-modified",
+      "exited": true,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "capture": "docs/validation/text-modified.png",
+      "working_directory": "C:\\Projetos\\BC4\\anycompare"
+    },
+    {
+      "screen": "folder",
+      "exited": true,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "capture": "docs/validation/folder.png",
+      "working_directory": "C:\\Projetos\\BC4\\anycompare"
+    },
+    {
+      "screen": "hex",
+      "exited": true,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "capture": "docs/validation/hex.png",
+      "working_directory": "C:\\Projetos\\BC4\\anycompare"
+    },
+    {
+      "screen": "text-editing",
+      "exited": true,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "capture": "docs/validation/text-editing.png",
+      "working_directory": "C:\\Projetos\\BC4\\anycompare"
+    },
+    {
+      "screen": "text-read-only",
+      "exited": true,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "capture": "docs/validation/text-read-only.png",
+      "working_directory": "C:\\Projetos\\BC4\\anycompare"
+    },
+    {
+      "screen": "text-differences",
+      "exited": true,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "capture": "docs/validation/text-differences.png",
+      "working_directory": "C:\\Projetos\\BC4\\anycompare"
+    }
+  ],
+  "input_integrity": [
+    {
+      "path": "C:\\Users\\Altieres\\Desktop\\resumo.txt",
+      "sha256_before": "A87B932DD2CB3AFBBF1C1FBB388BFCBFFA2ED62281962ABD52A77B138C8A54CC",
+      "sha256_after": "A87B932DD2CB3AFBBF1C1FBB388BFCBFFA2ED62281962ABD52A77B138C8A54CC",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Altieres\\Desktop\\resumo 1.txt",
+      "sha256_before": "06B4A221CC5AAE070E86356B05A2BD166590350D061839A5031181AE6B18EA22",
+      "sha256_after": "06B4A221CC5AAE070E86356B05A2BD166590350D061839A5031181AE6B18EA22",
+      "unchanged": true
+    }
+  ]
+}

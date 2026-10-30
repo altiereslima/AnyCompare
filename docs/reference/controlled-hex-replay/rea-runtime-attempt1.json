@@ -1,0 +1,61 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_ea3ccba5af7910d97fe01631650f7ad28c6cb05d515401e8949c9bf232a3c94d\",\"subject\":null,\"provider\":{\"id\":\"frida\",\"name\":\"Frida\",\"version\":null},\"analysis_profile\":null,\"predicate_type\":\"rea.frida.instrumentation-observation\",\"operation\":\"instrument_with_frida\",\"parameters\":{\"session_id\":\"a96ced54-abed-42bc-b0c2-574cc7f6940d\",\"device_id\":\"local\",\"mode\":\"spawn\",\"program\":\"C:\\\\Projetos\\\\BC4\\\\anycompare\\\\.codex\\\\reference-hex-runtime\\\\BCompare.exe\",\"argv\":[\"@C:\\\\Projetos\\\\BC4\\\\anycompare\\\\docs\\\\reference\\\\controlled-hex-replay\\\\report-script.txt\",\"/silent\"]},\"raw_result\":null,\"normalized_result\":{\"session_id\":\"a96ced54-abed-42bc-b0c2-574cc7f6940d\",\"device_id\":\"local\",\"state\":\"detached\",\"target\":\"C:\\\\Projetos\\\\BC4\\\\anycompare\\\\.codex\\\\reference-hex-runtime\\\\BCompare.exe\",\"pid\":17020,\"mode\":\"spawn\",\"scripts\":[{\"script_id\":\"7f932265-aa37-4b8e-9fe3-2b7940b88db3\",\"name\":\"rea-7f932265-aa37-4b8e-9fe3-2b7940b88db3\"}],\"messages\":[],\"messages_truncated\":false,\"source_kind\":\"inline\",\"source_path\":null,\"source_sha256\":\"991bbd0cfc4bffdc95e89da94df34007f890fba8929b9f11c2a523532e7473a3\",\"cleanup_error\":null},\"confidence\":\"observed\",\"authority\":\"external-service\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"The target operating system and architecture were not reported by this observation.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_ea3ccba5af7910d97fe01631650f7ad28c6cb05d515401e8949c9bf232a3c94d",
+    "subject": null,
+    "provider": {
+      "id": "frida",
+      "name": "Frida",
+      "version": null
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.frida.instrumentation-observation",
+    "operation": "instrument_with_frida",
+    "parameters": {
+      "session_id": "a96ced54-abed-42bc-b0c2-574cc7f6940d",
+      "device_id": "local",
+      "mode": "spawn",
+      "program": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-hex-runtime\\BCompare.exe",
+      "argv": [
+        "@C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-hex-replay\\report-script.txt",
+        "/silent"
+      ]
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "session_id": "a96ced54-abed-42bc-b0c2-574cc7f6940d",
+      "device_id": "local",
+      "state": "detached",
+      "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-hex-runtime\\BCompare.exe",
+      "pid": 17020,
+      "mode": "spawn",
+      "scripts": [
+        {
+          "script_id": "7f932265-aa37-4b8e-9fe3-2b7940b88db3",
+          "name": "rea-7f932265-aa37-4b8e-9fe3-2b7940b88db3"
+        }
+      ],
+      "messages": [],
+      "messages_truncated": false,
+      "source_kind": "inline",
+      "source_path": null,
+      "source_sha256": "991bbd0cfc4bffdc95e89da94df34007f890fba8929b9f11c2a523532e7473a3",
+      "cleanup_error": null
+    },
+    "confidence": "observed",
+    "authority": "external-service",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "The target operating system and architecture were not reported by this observation."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

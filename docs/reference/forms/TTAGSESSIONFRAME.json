@@ -1,0 +1,75 @@
+{
+  "resource_index": 628,
+  "name": "TTAGSESSIONFRAME",
+  "sha256": "652b860602d8185cb5da5a2c7ff29d7cc69603a48e707984656a6289eff6d7c9",
+  "bytes": 643,
+  "parse_status": "complete",
+  "components": 5,
+  "hierarchy": {
+    "class": "TTagSessionFrame",
+    "name": "TagSessionFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "Caption": "Importance"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "SigsLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Mark &items that are important to the comparison:",
+          "FocusControl": "SigsListBox"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckListBox",
+        "name": "SigsListBox",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 409,
+          "Height": 296,
+          "OnClickCheck": "SomethingChangedClick",
+          "TabOrder": 0,
+          "OnGetNotLast": "SigsListBoxGetNotLast"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "SigAllBtn",
+        "props": {
+          "Left": 8,
+          "Top": 329,
+          "Width": 24,
+          "Hint": "Mark All",
+          "ImageIndex": "imgCheckAll",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 1,
+          "OnClick": "SigAllClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "SigNoneBtn",
+        "props": {
+          "Left": 32,
+          "Top": 329,
+          "Width": 24,
+          "Hint": "Unmark All",
+          "ImageIndex": "imgUncheckAll",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 2,
+          "OnClick": "SigNoneClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

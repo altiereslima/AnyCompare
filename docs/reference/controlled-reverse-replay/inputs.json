@@ -1,0 +1,12 @@
+[
+  {
+    "source": "C:\\Users\\Altieres\\Desktop\\resumo 1.txt",
+    "copy": "left.txt",
+    "sha256": "06b4a221cc5aae070e86356b05a2bd166590350d061839a5031181ae6b18ea22"
+  },
+  {
+    "source": "C:\\Users\\Altieres\\Desktop\\resumo.txt",
+    "copy": "right.txt",
+    "sha256": "a87b932dd2cb3afbbf1c1fbb388bfcbffa2ed62281962abd52a77b138c8a54cc"
+  }
+]

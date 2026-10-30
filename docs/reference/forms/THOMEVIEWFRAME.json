@@ -1,0 +1,1199 @@
+{
+  "resource_index": 556,
+  "name": "THOMEVIEWFRAME",
+  "sha256": "9377ac2fa5082fcb3f78b6a2341c73936b7656deaf92405f9834afd029f7dace",
+  "bytes": 138577,
+  "parse_status": "complete",
+  "components": 89,
+  "hierarchy": {
+    "class": "THomeViewFrame",
+    "name": "HomeViewFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ViewHome",
+      "ParentColor": false,
+      "Caption": "Home"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "MainPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 750,
+          "Height": 580,
+          "Align": "alClient",
+          "BevelOuter": "bvNone",
+          "Color": 16382457,
+          "ParentBackground": false,
+          "TabOrder": 0,
+          "OnResize": "MainPanelResize"
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "TopLineBevel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 750,
+              "Height": 2,
+              "Align": "alTop",
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSplitter",
+            "name": "SessionsSplitter",
+            "props": {
+              "Left": 150,
+              "Top": 2,
+              "Width": 5,
+              "Height": 578,
+              "AutoSnap": false,
+              "MinSize": 112,
+              "OnMoved": "SessionsSplitterMoved"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiPanel",
+            "name": "SessionsPanel",
+            "props": {
+              "Left": 0,
+              "Top": 2,
+              "Width": 150,
+              "Height": 578,
+              "Align": "alLeft",
+              "BevelOuter": "bvNone",
+              "FullRepaint": true,
+              "ParentBackground": false,
+              "TabOrder": 0,
+              "OnResize": "SessionsPanelResize",
+              "OnPaint": "SessionsPanelPaint"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "SessionsLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 2,
+                  "Height": 14,
+                  "Caption": "Sessions",
+                  "FocusControl": "SessionsTreeView",
+                  "FontSize": 1
+                },
+                "children": []
+              },
+              {
+                "class": "TUiTreeView",
+                "name": "SessionsTreeView",
+                "props": {
+                  "Left": 0,
+                  "Top": 24,
+                  "Width": 149,
+                  "Height": 523,
+                  "BorderStyle": "bsNone",
+                  "Color": 15591395,
+                  "DragMode": "dmAutomatic",
+                  "Images": "BcImages.MainImages",
+                  "MultiSelect": true,
+                  "MultiSelectStyle": [
+                    "msControlSelect",
+                    "msShiftSelect",
+                    "msVisibleOnly"
+                  ],
+                  "PopupMenu": "SessionsPopup",
+                  "TabOrder": 0,
+                  "OnCancelEdit": "SessionsTreeViewCancelEdit",
+                  "OnChange": "SessionsTreeViewChange",
+                  "OnCollapsed": "SessionsTreeViewCollapsed",
+                  "OnDblClick": "SessionsTreeViewDblClick",
+                  "OnDragDrop": "SessionsTreeViewDragDrop",
+                  "OnDragOver": "SessionsTreeViewDragOver",
+                  "OnEdited": "SessionsTreeViewEdited",
+                  "OnEditing": "SessionsTreeViewEditing",
+                  "OnExpanded": "SessionsTreeViewExpanded",
+                  "OnKeyDown": "SessionsTreeViewKeyDown",
+                  "OnKeyPress": "SessionsTreeViewKeyPress",
+                  "AllowUnselected": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "SessionsNewBtn",
+                "props": {
+                  "Left": 4,
+                  "Top": 551,
+                  "Width": 24,
+                  "Hint": "New",
+                  "ImageIndex": "imgListAdd",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 1,
+                  "OnClick": "SessionsNewClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "SessionsDeleteBtn",
+                "props": {
+                  "Left": 28,
+                  "Top": 551,
+                  "Width": 24,
+                  "Hint": "Delete",
+                  "ImageIndex": "imgListDelete",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 2,
+                  "OnClick": "SessionsDeleteClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSearchEdit",
+                "name": "SessionsSearchEdit",
+                "props": {
+                  "Left": 56,
+                  "Top": 552,
+                  "Width": 90,
+                  "Height": 21,
+                  "TabOrder": 3,
+                  "OnChange": "SessionsSearchEditChange"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiPanel",
+            "name": "RightPanel",
+            "props": {
+              "Left": 155,
+              "Top": 2,
+              "Width": 595,
+              "Height": 578,
+              "Align": "alClient",
+              "BevelOuter": "bvNone",
+              "FullRepaint": true,
+              "ParentColor": true,
+              "TabOrder": 1,
+              "OnResize": "RightPanelResize"
+            },
+            "children": [
+              {
+                "class": "TUiImage",
+                "name": "StickerImage",
+                "props": {
+                  "Left": 489,
+                  "Top": 478,
+                  "Width": 98,
+                  "Height": 98,
+                  "Picture.Data": {
+                    "binary": {
+                      "offset": 2071,
+                      "bytes": 15631,
+                      "sha256": "5afb37c097af588f19023ab294e0c8dde95055cf1bbd2b116afaf4f5218e8a72"
+                    }
+                  },
+                  "Transparent": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiImage",
+                "name": "WebShowImage",
+                "props": {
+                  "Left": 579,
+                  "Top": 562,
+                  "Width": 16,
+                  "Height": 16,
+                  "Hint": "Show Web Resources Panel",
+                  "OnClick": "WebShowClick",
+                  "ImageIndex": "imgTriangleUp",
+                  "Images": "BcImages.MainImages"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "SpecPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 595,
+                  "Height": 119,
+                  "BevelOuter": "bvNone",
+                  "ParentColor": true,
+                  "TabOrder": 0,
+                  "OnResize": "SpecPanelResize"
+                },
+                "children": [
+                  {
+                    "class": "TUiImage",
+                    "name": "SpecImage",
+                    "props": {
+                      "Left": 4,
+                      "Top": 4,
+                      "Width": 16,
+                      "Height": 16,
+                      "Images": "BcImages.MainImages"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "SpecLbl",
+                    "props": {
+                      "Left": 24,
+                      "Top": 4,
+                      "Height": 16,
+                      "Caption": "%",
+                      "FontSize": 2
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TFormattedSpecFrame",
+                    "name": "SpecLeftFrame",
+                    "props": {
+                      "Left": 4,
+                      "Top": 24,
+                      "Width": 587,
+                      "Height": 16,
+                      "TabOrder": 0
+                    },
+                    "children": [],
+                    "flags": 4
+                  },
+                  {
+                    "class": "TFormattedSpecFrame",
+                    "name": "SpecRightFrame",
+                    "props": {
+                      "Left": 4,
+                      "Top": 44,
+                      "Width": 587,
+                      "Height": 16,
+                      "TabOrder": 1
+                    },
+                    "children": [],
+                    "flags": 4
+                  },
+                  {
+                    "class": "TFormattedSpecFrame",
+                    "name": "SpecCenterFrame",
+                    "props": {
+                      "Left": 4,
+                      "Top": 64,
+                      "Width": 587,
+                      "Height": 16,
+                      "TabOrder": 2
+                    },
+                    "children": [],
+                    "flags": 4
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "SpecEditDefaultBtn",
+                    "props": {
+                      "Left": 4,
+                      "Top": 88,
+                      "Caption": "Edit Defaults",
+                      "TabOrder": 3,
+                      "OnClick": "SessionsEditClick",
+                      "AutoSize": "asLeft"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "SpecOpenBtn",
+                    "props": {
+                      "Left": 4,
+                      "Top": 88,
+                      "Caption": "Open",
+                      "TabOrder": 4,
+                      "OnClick": "ManageOpenClick",
+                      "AutoSize": "asLeft"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "SpecEditBtn",
+                    "props": {
+                      "Left": 84,
+                      "Top": 88,
+                      "Caption": "Edit",
+                      "TabOrder": 5,
+                      "OnClick": "SessionsEditClick",
+                      "AutoSize": "asLeft"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "Task1Panel",
+                "props": {
+                  "Left": 0,
+                  "Top": 282,
+                  "Width": 595,
+                  "Height": 80,
+                  "BevelOuter": "bvNone",
+                  "FullRepaint": true,
+                  "ParentColor": true,
+                  "TabOrder": 2
+                },
+                "children": [
+                  {
+                    "class": "TUiLabel",
+                    "name": "Task1TipLbl",
+                    "props": {
+                      "Left": 231,
+                      "Top": 8,
+                      "Height": 14,
+                      "Caption": "Drag folders or files here",
+                      "FontSize": 1
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "Task1TipDescLbl",
+                    "props": {
+                      "Left": 224,
+                      "Top": 26,
+                      "Height": 13,
+                      "Caption": "or click a session icon to begin:"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiImage",
+                    "name": "Task1OtherImage",
+                    "props": {
+                      "Left": 523,
+                      "Top": 8,
+                      "Width": 64,
+                      "Height": 64,
+                      "Hint": "More Session Icons",
+                      "OnClick": "TaskOtherImageClick",
+                      "OnDragDrop": "TaskOtherImageDragDrop",
+                      "OnDragOver": "TaskOtherImageDragOver",
+                      "ImageIndex": "imgHomeNext",
+                      "Images": "BcImages.HomeImages"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "Task2Panel",
+                "props": {
+                  "Left": 0,
+                  "Top": 362,
+                  "Width": 595,
+                  "Height": 80,
+                  "BevelOuter": "bvNone",
+                  "FullRepaint": true,
+                  "ParentColor": true,
+                  "TabOrder": 3
+                },
+                "children": [
+                  {
+                    "class": "TUiLabel",
+                    "name": "Task2TipLbl",
+                    "props": {
+                      "Left": 231,
+                      "Top": 8,
+                      "Height": 14,
+                      "Caption": "Drag folders or files here",
+                      "FontSize": 1
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "Task2TipDescLbl",
+                    "props": {
+                      "Left": 224,
+                      "Top": 26,
+                      "Height": 13,
+                      "Caption": "or click a session icon to begin:"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiImage",
+                    "name": "Task2OtherImage",
+                    "props": {
+                      "Left": 8,
+                      "Top": 8,
+                      "Width": 64,
+                      "Height": 64,
+                      "Hint": "More Session Icons",
+                      "OnClick": "TaskOtherImageClick",
+                      "OnDragDrop": "TaskOtherImageDragDrop",
+                      "OnDragOver": "TaskOtherImageDragOver",
+                      "ImageIndex": "imgHomePrev",
+                      "Images": "BcImages.HomeImages"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "Task2TipOtherLbl",
+                    "props": {
+                      "Left": 117,
+                      "Top": 47,
+                      "Height": 14,
+                      "Caption": "Drag a session icon onto the arrow to move it to the other page.",
+                      "FontSize": 1
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "ManagePanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 119,
+                  "Width": 432,
+                  "Height": 163,
+                  "BevelOuter": "bvNone",
+                  "BorderWidth": 1,
+                  "Caption": "Select a session to manage its settings",
+                  "ParentBackground": false,
+                  "TabOrder": 1,
+                  "OnResize": "ManagePanelResize",
+                  "OnPaint": "ManagePanelPaint"
+                },
+                "children": [
+                  {
+                    "class": "TUiImage",
+                    "name": "ManageImage",
+                    "props": {
+                      "Left": 4,
+                      "Top": 4,
+                      "Width": 16,
+                      "Height": 16,
+                      "Images": "BcImages.MainImages"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "ManageLbl",
+                    "props": {
+                      "Left": 24,
+                      "Top": 4,
+                      "Height": 16,
+                      "Caption": "%",
+                      "FontSize": 2
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiImage",
+                    "name": "ManagePinImage",
+                    "props": {
+                      "Left": 376,
+                      "Top": 4,
+                      "Width": 16,
+                      "Height": 16,
+                      "OnClick": "ManagePinClick",
+                      "ImageIndex": "imgPin",
+                      "Images": "BcImages.MainImages"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiImage",
+                    "name": "ManageMaximizeImage",
+                    "props": {
+                      "Left": 396,
+                      "Top": 4,
+                      "Width": 16,
+                      "Height": 16,
+                      "OnClick": "ManageMaximizeClick",
+                      "Images": "BcImages.MainImages"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiImage",
+                    "name": "ManageHideImage",
+                    "props": {
+                      "Left": 416,
+                      "Top": 4,
+                      "Width": 16,
+                      "Height": 16,
+                      "Hint": "Hide Session Management Panel",
+                      "OnClick": "ManageHideClick",
+                      "ImageIndex": "imgXGray",
+                      "Images": "BcImages.MainImages"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiPageControl",
+                    "name": "ManagePageControl",
+                    "props": {
+                      "Left": 4,
+                      "Top": 24,
+                      "Width": 420,
+                      "Height": 100,
+                      "TabOrder": 0
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "ManageOpenBtn",
+                    "props": {
+                      "Left": 4,
+                      "Top": 132,
+                      "Caption": "Open",
+                      "TabOrder": 1,
+                      "OnClick": "ManageOpenClick",
+                      "AutoSize": "asLeft"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "ManageDefaultBtn",
+                    "props": {
+                      "Left": 84,
+                      "Top": 132,
+                      "Caption": "Factory &Defaults",
+                      "TabOrder": 2,
+                      "OnClick": "ManageDefaultClick",
+                      "AutoSize": "asLeft"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "ManageLockBtn",
+                    "props": {
+                      "Left": 84,
+                      "Top": 132,
+                      "Caption": "%",
+                      "TabOrder": 3,
+                      "OnClick": "ManageLockClick",
+                      "AutoSize": "asLeft"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "ManageSaveBtn",
+                    "props": {
+                      "Left": 191,
+                      "Top": 132,
+                      "Caption": "&Save",
+                      "TabOrder": 4,
+                      "OnClick": "ManageSaveClick",
+                      "AutoSize": "asRight"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "ManageSaveAsBtn",
+                    "props": {
+                      "Left": 271,
+                      "Top": 132,
+                      "Caption": "Save &As...",
+                      "TabOrder": 5,
+                      "OnClick": "ManageSaveAsClick",
+                      "AutoSize": "asRight"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiButton",
+                    "name": "ManageCancelBtn",
+                    "props": {
+                      "Left": 351,
+                      "Top": 132,
+                      "Caption": "Cancel",
+                      "TabOrder": 6,
+                      "OnClick": "ManageCancelClick",
+                      "AutoSize": "asRight"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiPanel",
+        "name": "WebShowPanel",
+        "props": {
+          "Left": 0,
+          "Top": 580,
+          "Width": 750,
+          "Height": 4,
+          "Align": "alBottom",
+          "TabOrder": 1
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "WebPanel",
+        "props": {
+          "Left": 0,
+          "Top": 584,
+          "Width": 750,
+          "Height": 100,
+          "Align": "alBottom",
+          "BevelOuter": "bvNone",
+          "Color": 592285,
+          "ParentBackground": false,
+          "TabOrder": 2,
+          "OnResize": "WebPanelResize",
+          "OnPaint": "WebPanelPaint"
+        },
+        "children": [
+          {
+            "class": "TUiImage",
+            "name": "WebTreadImage",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 130,
+              "Height": 100,
+              "Picture.Data": {
+                "binary": {
+                  "offset": 21786,
+                  "bytes": 112561,
+                  "sha256": "ae8c843a40f99c7002ee5f4103800ad15ab697b12aa99e11c5b934751ad9406e"
+                }
+              },
+              "Stretch": true,
+              "Transparent": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "KnowledgeBaseLbl",
+            "props": {
+              "Left": 16,
+              "Top": 16,
+              "Height": 17,
+              "Caption": "KNOWLEDGE BASE",
+              "FontColor": 11328489,
+              "FontSize": 1,
+              "UseTitleFont": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiImage",
+            "name": "KnowledgeBaseSearchImage",
+            "props": {
+              "Left": 168,
+              "Top": 40,
+              "Width": 16,
+              "Height": 16,
+              "OnClick": "KnowledgeBaseSearchClick",
+              "ImageIndex": "imgSearch",
+              "Images": "BcImages.MainImages"
+            },
+            "children": []
+          },
+          {
+            "class": "TPaintBox",
+            "name": "KnowledgeBaseBox",
+            "props": {
+              "Left": 201,
+              "Top": 0,
+              "Width": 2,
+              "Height": 108,
+              "OnPaint": "WebBevelPaint"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "ForumsLbl",
+            "props": {
+              "Left": 217,
+              "Top": 16,
+              "Height": 17,
+              "Caption": "SUPPORT FORUMS",
+              "FontColor": 11328489,
+              "FontSize": 1,
+              "UseTitleFont": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLinkLabel",
+            "name": "ForumsLinkLbl",
+            "props": {
+              "Left": 217,
+              "Top": 34,
+              "Width": 161,
+              "Height": 26,
+              "Caption": "Visit our <a href=\"%s\">online forums</a> for technical support.",
+              "FontColor": "clCream",
+              "LinkFontColor": "clWhite",
+              "LinkFontStyle": [
+                "fsBold",
+                "fsUnderline"
+              ],
+              "WordWrap": true
+            },
+            "children": []
+          },
+          {
+            "class": "TPaintBox",
+            "name": "ForumsBox",
+            "props": {
+              "Left": 394,
+              "Top": 0,
+              "Width": 2,
+              "Height": 108,
+              "OnPaint": "WebBevelPaint"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "BetaWarnLbl",
+            "props": {
+              "Left": 410,
+              "Top": 16,
+              "Height": 17,
+              "Caption": "%",
+              "FontColor": 11328489,
+              "FontSize": 1,
+              "UseTitleFont": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLinkLabel",
+            "name": "BetaWarnLinkLbl",
+            "props": {
+              "Left": 410,
+              "Top": 34,
+              "Width": 161,
+              "Height": 13,
+              "Caption": "%",
+              "FontColor": "clCream",
+              "LinkFontColor": "clWhite",
+              "LinkFontStyle": [
+                "fsBold",
+                "fsUnderline"
+              ],
+              "WordWrap": true
+            },
+            "children": []
+          },
+          {
+            "class": "TShape",
+            "name": "BetaWarnShape",
+            "props": {
+              "Left": 400,
+              "Top": 8,
+              "Width": 182,
+              "Height": 81,
+              "Brush.Style": "bsClear",
+              "Pen.Color": "clWhite",
+              "Pen.Width": 4,
+              "Shape": "stRoundRect"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "VideosLbl",
+            "props": {
+              "Left": 410,
+              "Top": 16,
+              "Height": 17,
+              "Caption": "SCREENCASTS",
+              "FontColor": 11328489,
+              "FontSize": 1,
+              "UseTitleFont": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLinkLabel",
+            "name": "VideosLinkLbl",
+            "props": {
+              "Left": 410,
+              "Top": 34,
+              "Width": 161,
+              "Height": 39,
+              "Caption": "Watch our <a href=\"%s\">online videos</a> for tips on getting the most out of Beyond Compare.",
+              "FontColor": "clCream",
+              "LinkFontColor": "clWhite",
+              "LinkFontStyle": [
+                "fsBold",
+                "fsUnderline"
+              ],
+              "WordWrap": true
+            },
+            "children": []
+          },
+          {
+            "class": "TPaintBox",
+            "name": "VideosBox",
+            "props": {
+              "Left": 587,
+              "Top": 0,
+              "Width": 2,
+              "Height": 108,
+              "OnPaint": "WebBevelPaint"
+            },
+            "children": []
+          },
+          {
+            "class": "TShape",
+            "name": "LicenseExpiringShape",
+            "props": {
+              "Left": 594,
+              "Top": 8,
+              "Width": 182,
+              "Height": 81,
+              "Brush.Style": "bsClear",
+              "Pen.Color": "clWhite",
+              "Pen.Width": 4,
+              "Shape": "stRoundRect"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "RegisterLbl",
+            "props": {
+              "Left": 603,
+              "Top": 16,
+              "Height": 17,
+              "Caption": "REGISTER",
+              "FontColor": 11328489,
+              "FontSize": 1,
+              "UseTitleFont": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLinkLabel",
+            "name": "RegisterLinkLbl",
+            "props": {
+              "Left": 603,
+              "Top": 34,
+              "Width": 161,
+              "Height": 39,
+              "Caption": "Running in trial mode.  <a href=\"register\">Enter your version %0:d license key</a> or visit <a href=\"%1:s\">our online shop</a>.",
+              "FontColor": "clCream",
+              "LinkFontColor": "clWhite",
+              "LinkFontStyle": [
+                "fsBold",
+                "fsUnderline"
+              ],
+              "WordWrap": true,
+              "OnURLClick": "RegisterLinkLblURLClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TPaintBox",
+            "name": "RegisterBox",
+            "props": {
+              "Left": 780,
+              "Top": 0,
+              "Width": 2,
+              "Height": 108,
+              "OnPaint": "WebBevelPaint"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "MsgLbl",
+            "props": {
+              "Left": 796,
+              "Top": 16,
+              "Height": 17,
+              "Caption": "%",
+              "FontColor": 11328489,
+              "FontSize": 1,
+              "UseTitleFont": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLinkLabel",
+            "name": "MsgLinkLbl",
+            "props": {
+              "Left": 796,
+              "Top": 34,
+              "Width": 161,
+              "Height": 13,
+              "Caption": "%",
+              "FontColor": "clCream",
+              "LinkFontColor": "clWhite",
+              "LinkFontStyle": [
+                "fsBold",
+                "fsUnderline"
+              ],
+              "WordWrap": true
+            },
+            "children": []
+          },
+          {
+            "class": "TPaintBox",
+            "name": "MsgBox",
+            "props": {
+              "Left": 973,
+              "Top": 0,
+              "Width": 2,
+              "Height": 108,
+              "OnPaint": "WebBevelPaint"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiImage",
+            "name": "WebHideImage",
+            "props": {
+              "Left": 732,
+              "Top": 4,
+              "Width": 16,
+              "Height": 16,
+              "Hint": "Hide Web Resources Panel",
+              "OnClick": "WebHideClick",
+              "ImageIndex": "imgXWhite",
+              "Images": "BcImages.MainImages"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "KnowledgeBaseEdit",
+            "props": {
+              "Left": 16,
+              "Top": 38,
+              "Width": 144,
+              "Height": 21,
+              "TabOrder": 0
+            },
+            "children": []
+          }
+        ],
+        "flags": 2,
+        "child_position": 2
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MessagePanel",
+        "props": {
+          "TabOrder": 3
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiStatusBar",
+        "name": "StatusBar",
+        "props": {
+          "Visible": false
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "SessionsPopup",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsOpenItem",
+            "props": {
+              "Caption": "Open",
+              "OnClick": "ManageOpenClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSubmenuItem",
+            "name": "SessionsOpenAsListItem",
+            "props": {
+              "Caption": "Open as New"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsFolderOpenItem",
+            "props": {
+              "Caption": "Open Sessions",
+              "OnClick": "SessionsFolderOpenClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSeparatorItem",
+            "name": "SessionsSeparator1Item",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiSubmenuItem",
+            "name": "SessionsNewListItem",
+            "props": {
+              "Caption": "New",
+              "OnClick": "SessionsNewListClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsClearItem",
+            "props": {
+              "Caption": "Clear Contents",
+              "OnClick": "SessionsClearClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsDeleteItem",
+            "props": {
+              "Caption": "Delete",
+              "ShortCut": 46,
+              "OnClick": "SessionsDeleteClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsSaveAsItem",
+            "props": {
+              "Caption": "Save As...",
+              "OnClick": "ManageSaveAsClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsLockItem",
+            "props": {
+              "Caption": "%",
+              "OnClick": "ManageLockClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsRenameItem",
+            "props": {
+              "Caption": "Rename",
+              "ShortCut": 113,
+              "OnClick": "SessionsRenameClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsEditItem",
+            "props": {
+              "Caption": "Edit",
+              "OnClick": "SessionsEditClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSeparatorItem",
+            "name": "SessionsSeparator2Item",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsExpandAllItem",
+            "props": {
+              "Caption": "Expand All",
+              "OnClick": "SessionsExpandAllClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "SessionsCollapseAllItem",
+            "props": {
+              "Caption": "Collapse All",
+              "OnClick": "SessionsCollapseAllClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "SessionsNewPopup",
+        "props": {
+          "Images": "BcImages.MainImages",
+          "OnPopup": "SessionsNewListClick",
+          "Left": 32
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "TaskPopup",
+        "props": {
+          "Left": 64
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "TaskIsAltItem",
+            "props": {
+              "Caption": "Move Session Icon to Other Page",
+              "OnClick": "TaskIsAltClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TTimer",
+        "name": "AnimateTimer",
+        "props": {
+          "Enabled": false,
+          "Interval": 15,
+          "OnTimer": "AnimateTimerTimer",
+          "Left": 96
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "resource_index": 539,
+  "name": "TFILEFORMATFRAME",
+  "sha256": "058b651b6f802333a87279fff2340a95803bec8d8d8576257caa74b42ffb7c62",
+  "bytes": 59,
+  "parse_status": "complete",
+  "components": 1,
+  "hierarchy": {
+    "class": "TFileFormatFrame",
+    "name": "FileFormatFrame",
+    "props": {
+      "Width": 273,
+      "Height": 321
+    },
+    "children": [],
+    "flags": 1
+  }
+}

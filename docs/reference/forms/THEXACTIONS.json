@@ -1,0 +1,403 @@
+{
+  "resource_index": 548,
+  "name": "THEXACTIONS",
+  "sha256": "cdb17afd233a04f1d6562b9329170c548c9ceea6601a2c47715f9862856c3c8d",
+  "bytes": 5202,
+  "parse_status": "complete",
+  "components": 27,
+  "hierarchy": {
+    "class": "THexActions",
+    "name": "HexActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "FileFormatAction",
+            "props": {
+              "ImageIndex": "imgHexFormatEdit"
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "SelectAllAction",
+            "props": {
+              "Hint": "Select All|Selects all visible bytes."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffItemNextAction",
+            "props": {
+              "Caption": "&Next Difference Bytes",
+              "Hint": "Next Difference Bytes|Positions at next difference bytes."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffItemPrevAction",
+            "props": {
+              "Caption": "&Previous Difference Bytes",
+              "Hint": "Previous Difference Bytes|Positions at previous difference bytes."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExistsNextAction",
+            "props": {
+              "Hint": "Next Existing Byte|Positions at next existing byte, skipping over gaps."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExistsPrevAction",
+            "props": {
+              "Hint": "Previous Existing Byte|Positions at previous existing byte, skipping over gaps."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavCompareAllAction",
+            "props": {
+              "Hint": "Show All|Shows same, left orphan, right orphan and difference bytes."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavDiffAction",
+            "props": {
+              "Hint": "Show Differences|Shows left orphan, right orphan and difference bytes."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavSameAction",
+            "props": {
+              "Hint": "Show Same|Shows same bytes."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyRightAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cop&y to Right",
+              "Hint": "Copy to Right|Copies selected or current bytes to right pane.",
+              "ImageIndex": "imgCopyRight",
+              "MacShortCutStr": "Alt+Meta+Right",
+              "MenuAllowed": false,
+              "ShortCaption": "Copy",
+              "ShortCutStr": "Ctrl+R",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyLeftAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cop&y to Left",
+              "Hint": "Copy to Left|Copies selected or current bytes to left pane.",
+              "ImageIndex": "imgCopyLeft",
+              "MacShortCutStr": "Alt+Meta+Left",
+              "MenuAllowed": false,
+              "ShortCaption": "Copy",
+              "ShortCutStr": "Ctrl+L",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopySideAction",
+            "props": {
+              "Category": "Edit",
+              "Hint": "Copy to Other Side|Copies selected or current bytes to pane on other side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CutAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cu&t",
+              "Hint": "Cut|Cuts selection and puts it on Clipboard.",
+              "ImageIndex": "imgCut",
+              "MacShortCutStr": "Meta+X",
+              "SecondaryShortCutStr": "Shift+Del",
+              "ShortCaption": "Cut",
+              "ShortCutStr": "Ctrl+X",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "PasteAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Paste",
+              "Hint": "Paste|Inserts Clipboard contents.",
+              "ImageIndex": "imgPaste",
+              "MacShortCutStr": "Meta+V",
+              "SecondaryShortCutStr": "Shift+Ins",
+              "ShortCaption": "Paste",
+              "ShortCutStr": "Ctrl+V",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete",
+              "Hint": "Delete|Deletes selection.",
+              "ImageIndex": "imgDelete",
+              "ShortCaption": "Delete",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ReplaceAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Replace...",
+              "Hint": "Replace|Replaces search string.",
+              "ImageIndex": "imgReplace",
+              "MacShortCutStr": "Alt+Meta+F",
+              "ShortCaption": "Replace",
+              "ShortCutStr": "Ctrl+H",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "GoToAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Go To...",
+              "Hint": "Go To|Positions at specified byte.",
+              "ImageIndex": "imgGoTo",
+              "MacShortCutStr": "Meta+L",
+              "ShortCaption": "Go To",
+              "ShortCutStr": "Ctrl+G",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ItemNumAction",
+            "props": {
+              "Category": "View",
+              "Hint": "Current Byte Address|Shows current byte address."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "LittleEndianListAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Little Endian Values",
+              "Hint": "Little Endian Values|Displays little endian values in picked way."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BigEndianListAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Big Endian Values",
+              "Hint": "Big Endian Values|Displays big endian values in picked way."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowItemNumAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Byte &Addresses",
+              "Hint": "Byte Addresses|Shows or hides byte addresses.",
+              "ImageIndex": "imgShowItemNum",
+              "ShortCaption": "Byte #s",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "LayoutAction",
+            "props": {
+              "Category": "View",
+              "Caption": "La&yout...",
+              "Hint": "Layout|Configures layout options."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowThumbnailAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Thu&mbnail",
+              "Hint": "Thumbnail|Shows or hides thumbnail view.",
+              "ImageIndex": "imgShowThumbnail",
+              "ShortCaption": "Thumb",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "OverwritingAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Hint": "Overwrite|Typing replaces bytes instead of inserting them.",
+              "MacShortCutStr": "Ins",
+              "ShortCutStr": "Ins"
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "Edit: Menu",
+            [
+              "Redo: MenuItem",
+              "Sided: SeparatorItem",
+              "CopyRight: MenuItem",
+              "CopyLeft: MenuItem",
+              "CopySide: MenuItem",
+              "Common: SeparatorItem",
+              "Cut: MenuItem",
+              "Copy: MenuItem",
+              "Paste: MenuItem",
+              "Delete: MenuItem"
+            ],
+            "Search: Menu",
+            [
+              "Find: MenuItem",
+              "Replace: MenuItem",
+              "FindPrev: MenuItem",
+              "GoTo: SeparatorItem",
+              "GoTo: MenuItem"
+            ],
+            "View: Menu",
+            [
+              "SameModIgnored: MenuItem",
+              "ItemNum: SeparatorItem",
+              "ItemNum: MenuItem",
+              "LittleEndianList: SubmenuItem",
+              [],
+              "BigEndianList: SubmenuItem",
+              [],
+              "ShowWS: MenuItem",
+              "ShowItemNum: MenuItem",
+              "DisplayFontReset: MenuItem",
+              "Layout: MenuItem",
+              "OverUnder: MenuItem",
+              "ShowThumbnail: MenuItem"
+            ],
+            "Main: Toolbar",
+            [
+              "Redo: ToolButton",
+              "CopyRight: ToolButton",
+              "CopyLeft: ToolButton",
+              "CopySide: ToolButton",
+              "Cut: ToolButton",
+              "Copy: ToolButton",
+              "Paste: ToolButton",
+              "Delete: ToolButton",
+              "Find: ToolButton",
+              "Replace: ToolButton",
+              "FindPrev: ToolButton",
+              "GoTo: ToolButton",
+              "ShowWS: ToolButton",
+              "ShowItemNum: ToolButton",
+              "OverUnder: ToolButton",
+              "ShowThumbnail: ToolButton"
+            ],
+            "Edit: PopupMenu",
+            [
+              "CopyRight: MenuItem",
+              "CopyLeft: MenuItem",
+              "CopySide: MenuItem",
+              "N1: SeparatorItem",
+              "Cut: MenuItem",
+              "Copy: MenuItem",
+              "Paste: MenuItem",
+              "Delete: MenuItem",
+              "N2: SeparatorItem",
+              "ItemNum: MenuItem",
+              "LittleEndianList: SubmenuItem",
+              [],
+              "BigEndianList: SubmenuItem",
+              [],
+              "N3: SeparatorItem",
+              "Open: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenClipboard: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem"
+              ],
+              "Save: MenuItem",
+              "SaveAs: MenuItem",
+              "SaveAsLocal: MenuItem",
+              "SaveAsProfile: MenuItem",
+              "ExplorerList: SubmenuItem",
+              []
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

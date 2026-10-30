@@ -1,0 +1,101 @@
+{
+  "resource_index": 586,
+  "name": "TOPNEWFOLDERDIALOG",
+  "sha256": "d7d84e410b89e58f8c9cead05e12f504f64ff51e317f63001692ff9640d6362e",
+  "bytes": 622,
+  "parse_status": "complete",
+  "components": 8,
+  "hierarchy": {
+    "class": "TOpNewFolderDialog",
+    "name": "OpNewFolderDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "OpNewFolder",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "Create New Folder",
+      "ClientHeight": 123,
+      "ClientWidth": 393,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "NameLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Name:",
+          "FocusControl": "NameEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CreateInLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "Create in:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PathLbl",
+        "props": {
+          "Left": 16,
+          "Top": 71,
+          "Height": 13,
+          "Caption": "%",
+          "ShowAccelChar": false
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "NameEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 377,
+          "Height": 21,
+          "TabOrder": 0,
+          "OnChange": "NameEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 84,
+          "Width": 393,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

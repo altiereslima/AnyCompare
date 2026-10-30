@@ -1,0 +1,72 @@
+{
+  "resource_index": 497,
+  "name": "TDATAFORMATCONVERSIONFRAME",
+  "sha256": "5b60337a51a01621f2b29619cc19c956aeadbd2852453ea65f8d09eacaa8c06f",
+  "bytes": 506,
+  "parse_status": "complete",
+  "components": 5,
+  "hierarchy": {
+    "class": "TDataFormatConversionFrame",
+    "name": "DataFormatConversionFrame",
+    "props": {
+      "HelpKeyword": "FormatDataConversion"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "CodePageLbl",
+        "props": {
+          "Left": 8,
+          "Top": 158,
+          "Height": 13,
+          "Caption": "&Encoding:",
+          "FocusControl": "CodePageEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 2
+      },
+      {
+        "class": "TUiBevel",
+        "name": "CodePageBevel",
+        "props": {
+          "Left": 8,
+          "Top": 150,
+          "Width": 257,
+          "Height": 1,
+          "Shape": "bsTopLine"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 3
+      },
+      {
+        "class": "TUiCodePageEdit",
+        "name": "CodePageEdit",
+        "props": {
+          "Left": 8,
+          "Top": 175,
+          "Width": 257,
+          "Height": 21,
+          "TabOrder": 4,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "CtrlZIsEOFEdit",
+        "props": {
+          "Left": 8,
+          "Top": 204,
+          "Height": 17,
+          "Caption": "Ctrl+&Z indicates end of file",
+          "TabOrder": 5,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

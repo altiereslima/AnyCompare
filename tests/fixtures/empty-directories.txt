@@ -1,0 +1,6 @@
+docs/reference/controlled-folder-replay-2026-10-30/empty/left/both-empty
+docs/reference/controlled-folder-replay-2026-10-30/empty/left/left-empty
+docs/reference/controlled-folder-replay-2026-10-30/empty/right/both-empty
+docs/reference/controlled-folder-replay-2026-10-30/empty/right/right-empty
+docs/reference/controlled-folder-replay-2026-10-30/nested/left/empty
+docs/reference/controlled-folder-replay-2026-10-30/nested/right/empty

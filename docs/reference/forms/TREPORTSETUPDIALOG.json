@@ -1,0 +1,339 @@
+{
+  "resource_index": 616,
+  "name": "TREPORTSETUPDIALOG",
+  "sha256": "df34bed978f24bbce6968f4398730644e0e32a3145fdefd6b9f8843c4467367c",
+  "bytes": 2438,
+  "parse_status": "complete",
+  "components": 27,
+  "hierarchy": {
+    "class": "TReportSetupDialog",
+    "name": "ReportSetupDialog",
+    "props": {
+      "Caption": "Page Setup",
+      "ClientHeight": 283,
+      "ClientWidth": 457,
+      "OnClose": "FormClose",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "MarginLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "MarginLeftLbl",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Height": 13,
+          "Caption": "&Left:",
+          "FocusControl": "MarginLeftEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "MarginRightLbl",
+        "props": {
+          "Left": 128,
+          "Top": 25,
+          "Height": 13,
+          "Caption": "&Right:",
+          "FocusControl": "MarginRightEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "MarginTopLbl",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Height": 13,
+          "Caption": "&Top:",
+          "FocusControl": "MarginTopEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "MarginBottomLbl",
+        "props": {
+          "Left": 128,
+          "Top": 71,
+          "Height": 13,
+          "Caption": "B&ottom:",
+          "FocusControl": "MarginBottomEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PreviewLbl",
+        "props": {
+          "Left": 256,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Preview:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBevel",
+        "name": "PreviewBevel",
+        "props": {
+          "Left": 247,
+          "Top": 8,
+          "Width": 1,
+          "Height": 236,
+          "Shape": "bsLeftLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "MarginLeftEdit",
+        "props": {
+          "Left": 8,
+          "Top": 42,
+          "Width": 49,
+          "Height": 21,
+          "TabOrder": 0,
+          "OnChange": "MarginEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "MarginRightEdit",
+        "props": {
+          "Left": 128,
+          "Top": 42,
+          "Width": 49,
+          "Height": 21,
+          "TabOrder": 1,
+          "OnChange": "MarginEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "MarginTopEdit",
+        "props": {
+          "Left": 8,
+          "Top": 88,
+          "Width": 49,
+          "Height": 21,
+          "TabOrder": 2,
+          "OnChange": "MarginEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "MarginBottomEdit",
+        "props": {
+          "Left": 128,
+          "Top": 88,
+          "Width": 49,
+          "Height": 21,
+          "TabOrder": 3,
+          "OnChange": "MarginEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "MarginMaxBtn",
+        "props": {
+          "Left": 8,
+          "Top": 117,
+          "Caption": "&Max",
+          "TabOrder": 4,
+          "OnClick": "MarginMaxClick",
+          "AutoSize": "asLeft"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "HeaderFontBtn",
+        "props": {
+          "Left": 8,
+          "Top": 156,
+          "Caption": "&Header Font...",
+          "TabOrder": 5,
+          "OnClick": "HeaderFontClick",
+          "AutoSize": "asLeft"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "BodyFontBtn",
+        "props": {
+          "Left": 8,
+          "Top": 187,
+          "Caption": "Bo&dy Font...",
+          "TabOrder": 6,
+          "OnClick": "BodyFontClick",
+          "AutoSize": "asLeft"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "PageBreaksEdit",
+        "props": {
+          "Left": 8,
+          "Top": 218,
+          "Height": 17,
+          "Caption": "Pa&ge breaks between reports",
+          "TabOrder": 7
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "PreviewPanel",
+        "props": {
+          "Left": 256,
+          "Top": 21,
+          "Width": 193,
+          "Height": 223,
+          "BevelOuter": "bvNone",
+          "TabOrder": 8
+        },
+        "children": [
+          {
+            "class": "TShape",
+            "name": "ShadowShape",
+            "props": {
+              "Left": 58,
+              "Top": 44,
+              "Width": 85,
+              "Height": 110,
+              "Brush.Color": "clGray",
+              "Pen.Style": "psClear"
+            },
+            "children": []
+          },
+          {
+            "class": "TShape",
+            "name": "PageShape",
+            "props": {
+              "Left": 54,
+              "Top": 40,
+              "Width": 85,
+              "Height": 110
+            },
+            "children": []
+          },
+          {
+            "class": "TShape",
+            "name": "MarginShape",
+            "props": {
+              "Left": 62,
+              "Top": 48,
+              "Width": 69,
+              "Height": 95,
+              "Brush.Style": "bsClear",
+              "Pen.Style": "psDot"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "SampleLbl",
+            "props": {
+              "Left": 84,
+              "Top": 76,
+              "Height": 36,
+              "Caption": "A",
+              "Font.Charset": "DEFAULT_CHARSET",
+              "Font.Color": "clWindowText",
+              "Font.Height": -32,
+              "Font.Name": "Times New Roman",
+              "Font.Style": [
+                "fsBold"
+              ],
+              "ParentFont": false,
+              "Transparent": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "PortraitEdit",
+            "props": {
+              "Left": 0,
+              "Top": 185,
+              "Height": 17,
+              "Caption": "&Portrait",
+              "TabOrder": 0,
+              "OnClick": "OrientationClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "LandscapeEdit",
+            "props": {
+              "Left": 0,
+              "Top": 206,
+              "Height": 17,
+              "Caption": "L&andscape",
+              "TabOrder": 1,
+              "OnClick": "OrientationClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 244,
+          "Width": 457,
+          "TabOrder": 9
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiAdvancedBtn",
+            "name": "SetupBtn",
+            "props": {
+              "Caption": "Print &Setup...",
+              "OnClick": "SetupClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

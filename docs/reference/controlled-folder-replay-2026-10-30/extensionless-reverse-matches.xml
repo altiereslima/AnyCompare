@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bcreport created="30/10/2026 17:07:10">
+	<foldercomp>
+		<ltpath>C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless\right</ltpath>
+		<rtpath>C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless\left</rtpath>
+		<mode>Same</mode>
+		<foldercomp>
+			<lt>
+				<name>z-dir</name>
+				<size>1</size>
+				<modified>30/10/2026 16:58:17</modified>
+			</lt>
+			<rt>
+				<name>z-dir</name>
+				<size>1</size>
+				<modified>30/10/2026 16:58:17</modified>
+			</rt>
+			<filecomp status="same">
+				<lt>
+					<name>first.txt</name>
+					<size>1</size>
+					<modified>14/11/2023 19:13:20</modified>
+				</lt>
+				<rt>
+					<name>first.txt</name>
+					<size>1</size>
+					<modified>14/11/2023 19:13:20</modified>
+				</rt>
+			</filecomp>
+		</foldercomp>
+		<filecomp status="same">
+			<lt>
+				<name>A-file.txt</name>
+				<size>1</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>A-file.txt</name>
+				<size>1</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+		<filecomp status="same">
+			<lt>
+				<name>README</name>
+				<size>1</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>README</name>
+				<size>1</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+	</foldercomp>
+</bcreport>

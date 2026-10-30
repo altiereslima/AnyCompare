@@ -1,0 +1,117 @@
+{
+  "resource_index": 563,
+  "name": "TMECONTACTFORM",
+  "sha256": "365b3868780806f6d6057f5f8616e1225fddff9fc7bd4f4c6d06bb64e209da22",
+  "bytes": 845,
+  "parse_status": "complete",
+  "components": 9,
+  "hierarchy": {
+    "class": "TMEContactForm",
+    "name": "ContactForm",
+    "props": {
+      "Message": "Contact Information",
+      "MinWidth": 0,
+      "OnAction": "madExcept.HandleContactForm",
+      "Timer": 0
+    },
+    "children": [
+      {
+        "class": "INVButton",
+        "name": "ContinueBtn",
+        "props": {
+          "Caption": "Continue",
+          "Enabled": true,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVButton",
+        "name": "SkipBtn",
+        "props": {
+          "Caption": "Skip",
+          "Enabled": false,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVButton",
+        "name": "CancelBtn",
+        "props": {
+          "Caption": "Abort",
+          "Enabled": true,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVLabel",
+        "name": "Label1",
+        "props": {
+          "Caption": "your name:",
+          "Enabled": true,
+          "Spacing": 0
+        },
+        "children": []
+      },
+      {
+        "class": "INVEdit",
+        "name": "NameEdit",
+        "props": {
+          "Colored": true,
+          "Enabled": true,
+          "Lines": 1,
+          "Optional": true,
+          "OutputName": "contact name",
+          "OutputType": "nvoHeader",
+          "Spacing": 0,
+          "Text": "",
+          "Valid": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVLabel",
+        "name": "Label2",
+        "props": {
+          "Caption": "your email:",
+          "Enabled": true,
+          "Spacing": 0
+        },
+        "children": []
+      },
+      {
+        "class": "INVEdit",
+        "name": "EmailEdit",
+        "props": {
+          "Colored": true,
+          "Enabled": true,
+          "Lines": 1,
+          "Optional": false,
+          "OutputName": "contact email",
+          "OutputType": "nvoHeader",
+          "Spacing": 0,
+          "Text": "",
+          "Valid": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVCheckBox",
+        "name": "MemCheck",
+        "props": {
+          "Caption": "remember me",
+          "Checked": false,
+          "Enabled": true,
+          "OutputName": "",
+          "Spacing": 0
+        },
+        "children": []
+      }
+    ]
+  }
+}

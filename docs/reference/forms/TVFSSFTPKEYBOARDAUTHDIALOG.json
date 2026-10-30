@@ -1,0 +1,46 @@
+{
+  "resource_index": 668,
+  "name": "TVFSSFTPKEYBOARDAUTHDIALOG",
+  "sha256": "5aef3a55f099f0762b81375413a0aec6cd39507043643a3ec3fe6018ae423210",
+  "bytes": 249,
+  "parse_status": "complete",
+  "components": 4,
+  "hierarchy": {
+    "class": "TVfsSftpKeyboardAuthDialog",
+    "name": "VfsSftpKeyboardAuthDialog",
+    "props": {
+      "Caption": "Keyboard Authorization",
+      "ClientHeight": 39,
+      "ClientWidth": 385,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 385,
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

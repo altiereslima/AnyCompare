@@ -1,0 +1,180 @@
+{
+  "resource_index": 571,
+  "name": "TOPCOMPAREDIALOG",
+  "sha256": "769b7bd0b58f915cc1843d5fe9d5b62870a15beddfc78f09b28cd8a31dd196bc",
+  "bytes": 1106,
+  "parse_status": "complete",
+  "components": 15,
+  "hierarchy": {
+    "class": "TOpCompareDialog",
+    "name": "OpCompareDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "OpCompare",
+      "Caption": "Compare Contents",
+      "ClientHeight": 433,
+      "OnClose": "FormClose",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "SelectionPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiImage",
+            "name": "LeftImage",
+            "props": {
+              "Visible": false
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TShape",
+            "name": "Shape",
+            "props": {
+              "Left": 185,
+              "Top": 69,
+              "Width": 22,
+              "Height": 17,
+              "Pen.Style": "psClear"
+            },
+            "children": [],
+            "flags": 2,
+            "child_position": 8
+          },
+          {
+            "class": "TUiImage",
+            "name": "RightImage",
+            "props": {
+              "Left": 188,
+              "ImageIndex": "imgCompare"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "ActionPanel",
+        "props": {
+          "Height": 142
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "ActionDescLbl",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Height": 13,
+              "Caption": "Compare contents of selected files, folders."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "CRC32Edit",
+            "props": {
+              "Left": 8,
+              "Top": 50,
+              "Height": 17,
+              "Caption": "&CRC comparison",
+              "TabOrder": 0
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "BinaryEdit",
+            "props": {
+              "Left": 8,
+              "Top": 71,
+              "Height": 17,
+              "Caption": "Bi&nary comparison",
+              "TabOrder": 1
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "RulesBasedEdit",
+            "props": {
+              "Left": 8,
+              "Top": 92,
+              "Height": 17,
+              "Caption": "R&ules-based comparison",
+              "TabOrder": 2
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "ShowResultsDlgEdit",
+            "props": {
+              "Left": 8,
+              "Top": 117,
+              "Height": 17,
+              "Caption": "Show resul&ts dialog",
+              "TabOrder": 3
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "FilteredWarnPanel",
+        "props": {
+          "Top": 289
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Top": 369,
+          "Height": 64
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "DontShowAgainBevel",
+            "props": {
+              "Left": 0,
+              "Top": 39,
+              "Width": 393,
+              "Height": 2,
+              "Shape": "bsTopLine"
+            },
+            "children": [],
+            "flags": 2,
+            "child_position": 0
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "DontShowAgainEdit",
+            "props": {
+              "Left": 8,
+              "Top": 43,
+              "Height": 17,
+              "Caption": "&Don't show again",
+              "TabOrder": 3
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

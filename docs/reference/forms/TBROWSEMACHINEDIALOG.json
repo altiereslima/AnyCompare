@@ -1,0 +1,79 @@
+{
+  "resource_index": 491,
+  "name": "TBROWSEMACHINEDIALOG",
+  "sha256": "4793ba1ce7409741cb9979615195965bbfde7ea1f6c066ad8ede3ce536bdb831",
+  "bytes": 627,
+  "parse_status": "complete",
+  "components": 5,
+  "hierarchy": {
+    "class": "TBrowseMachineDialog",
+    "name": "BrowseMachineDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgBrowseMachine",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "BorderStyle": "bsSizeable",
+      "Caption": "Select Computer",
+      "ClientHeight": 215,
+      "ClientWidth": 313,
+      "Constraints.MinHeight": 104,
+      "Constraints.MinWidth": 185,
+      "OnCloseQuery": "FormCloseQuery",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiListBox",
+        "name": "ListBox",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 297,
+          "Height": 168,
+          "Anchors": [
+            "akLeft",
+            "akTop",
+            "akRight",
+            "akBottom"
+          ],
+          "TabOrder": 0,
+          "OnClick": "ListBoxClick",
+          "OnDblClick": "ListBoxDblClick",
+          "OnKeyDown": "ListBoxKeyDown"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 176,
+          "Width": 313,
+          "TabOrder": 1,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

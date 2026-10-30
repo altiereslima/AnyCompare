@@ -1,0 +1,291 @@
+{
+  "resource_index": 503,
+  "name": "TDATASESSIONFRAME",
+  "sha256": "351ffb7691ed13e2537f303535cd4a74ef6d0410d7f493cbfb9f591881d469b9",
+  "bytes": 2598,
+  "parse_status": "complete",
+  "components": 23,
+  "hierarchy": {
+    "class": "TDataSessionFrame",
+    "name": "DataSessionFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "SessionDataColumns",
+      "Caption": "Columns"
+    },
+    "children": [
+      {
+        "class": "TUiDrawGrid",
+        "name": "ColsGrid",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 409,
+          "Height": 313,
+          "ColCount": 4,
+          "DefaultColWidth": 96,
+          "DefaultRowHeight": 14,
+          "DefaultDrawing": false,
+          "FixedCols": 0,
+          "Options": [
+            "goFixedVertLine",
+            "goFixedHorzLine",
+            "goVertLine",
+            "goHorzLine",
+            "goRangeSelect",
+            "goThumbTracking"
+          ],
+          "PopupMenu": "ColsPopup",
+          "ScrollBars": "ssVertical",
+          "TabOrder": 0,
+          "OnDblClick": "ColsEditClick",
+          "OnDrawCell": "ColsGridDrawCell"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "ColsInsertBtn",
+        "props": {
+          "Left": 8,
+          "Top": 329,
+          "Width": 24,
+          "Hint": "Insert",
+          "ImageIndex": "imgListAdd",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 1,
+          "OnClick": "ColsInsertClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "ColsRemoveBtn",
+        "props": {
+          "Left": 32,
+          "Top": 329,
+          "Width": 24,
+          "Hint": "Remove",
+          "ImageIndex": "imgListDelete",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 2,
+          "OnClick": "ColsRemoveClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "ColsEditBtn",
+        "props": {
+          "Left": 56,
+          "Top": 329,
+          "Width": 24,
+          "Hint": "Edit",
+          "ImageIndex": "imgListEdit",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 3,
+          "OnClick": "ColsEditClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "ColsMoveUpBtn",
+        "props": {
+          "Left": 80,
+          "Top": 329,
+          "Width": 24,
+          "Hint": "Move Up",
+          "ImageIndex": "imgUp",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 4,
+          "OnClick": "ColsMoveUpClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "ColsMoveDownBtn",
+        "props": {
+          "Left": 104,
+          "Top": 329,
+          "Width": 24,
+          "Hint": "Move Down",
+          "ImageIndex": "imgDown",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 5,
+          "OnClick": "ColsMoveDownClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "ColsEditDefaultBtn",
+        "props": {
+          "Left": 238,
+          "Top": 329,
+          "Width": 85,
+          "Caption": "&Edit Default...",
+          "TabOrder": 6,
+          "OnClick": "ColsEditDefaultClick",
+          "AutoSize": "asRight",
+          "AutoSizeMinWidth": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "ColsResetBtn",
+        "props": {
+          "Left": 322,
+          "Top": 329,
+          "Width": 59,
+          "Caption": "&Reset All",
+          "TabOrder": 7,
+          "OnClick": "ColsResetClick",
+          "AutoSize": "asRight",
+          "AutoSizeMinWidth": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "ColsTidyBtn",
+        "props": {
+          "Left": 380,
+          "Top": 329,
+          "Width": 37,
+          "Caption": "&Tidy",
+          "TabOrder": 8,
+          "OnClick": "ColsTidyClick",
+          "AutoSize": "asRight",
+          "AutoSizeMinWidth": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "ColsPopup",
+        "props": {
+          "Left": 8,
+          "Top": 8
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "ColsEditItem",
+            "props": {
+              "Caption": "Edit...",
+              "ShortCut": 113,
+              "OnClick": "ColsEditClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ColsMoveUpItem",
+            "props": {
+              "Caption": "Move Up",
+              "ShortCut": 16422,
+              "OnClick": "ColsMoveUpClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ColsMoveDownItem",
+            "props": {
+              "Caption": "Move Down",
+              "ShortCut": 16424,
+              "OnClick": "ColsMoveDownClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ColsCutItem",
+            "props": {
+              "Caption": "Cut",
+              "ShortCut": 16472,
+              "OnClick": "ColsCutClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ColsPasteItem",
+            "props": {
+              "Caption": "Paste",
+              "ShortCut": 16470,
+              "OnClick": "ColsPasteClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ColsRemoveItem",
+            "props": {
+              "Caption": "Remove",
+              "ShortCut": 46,
+              "OnClick": "ColsRemoveClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ColsInsertItem",
+            "props": {
+              "Caption": "Insert",
+              "ShortCut": 45,
+              "OnClick": "ColsInsertClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSeparatorItem",
+            "name": "SeparatorItem",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NamesUseDetectItem",
+            "props": {
+              "Caption": "Fill Names Using Comparison",
+              "OnClick": "NamesUseClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NamesUseLeftItem",
+            "props": {
+              "Caption": "Fill Names Using Left File",
+              "OnClick": "NamesUseClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NamesUseRightItem",
+            "props": {
+              "Caption": "Fill Names Using Right File",
+              "OnClick": "NamesUseClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NamesResetItem",
+            "props": {
+              "Caption": "Reset Names",
+              "OnClick": "NamesUseClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "resource_index": 664,
+  "name": "TVFSGENERATESSHKEYSDIALOG",
+  "sha256": "3bdd97130f41d803ecf7f1fbf81ab07ac7ed1ab8307f95e3876efb40e5320bcd",
+  "bytes": 1931,
+  "parse_status": "complete",
+  "components": 19,
+  "hierarchy": {
+    "class": "TVfsGenerateSSHKeysDialog",
+    "name": "VfsGenerateSSHKeysDialog",
+    "props": {
+      "Caption": "Generate SSH Key Pair",
+      "ClientHeight": 307,
+      "ClientWidth": 313,
+      "OnCreate": "FormCreate",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "KeyTypeLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Key type:",
+          "FocusControl": "KeyTypeEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "KeyLengthLbl",
+        "props": {
+          "Left": 164,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Key &length in bits:",
+          "FocusControl": "KeyLengthEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CommentLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "&Comment:",
+          "FocusControl": "CommentEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PassphraseLbl",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Height": 13,
+          "Caption": "&Passphrase:",
+          "FocusControl": "PassphraseEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PassphraseMismatchLbl",
+        "props": {
+          "Left": 156,
+          "Top": 100,
+          "Width": 149,
+          "Height": 13,
+          "Alignment": "taRightJustify",
+          "Caption": "Passphrases do not match",
+          "FontStyle": [
+            "fsBold"
+          ]
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ConfirmPassphraseLbl",
+        "props": {
+          "Left": 8,
+          "Top": 146,
+          "Height": 13,
+          "Caption": "C&onfirm passphrase:",
+          "FocusControl": "ConfirmPassphraseEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PrivateKeyFileLbl",
+        "props": {
+          "Left": 8,
+          "Top": 192,
+          "Height": 13,
+          "Caption": "P&rivate key filename:",
+          "FocusControl": "PrivateKeyFileEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PublicKeyFileLbl",
+        "props": {
+          "Left": 8,
+          "Top": 238,
+          "Height": 13,
+          "Caption": "Public key filename:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PublicKeyFileEdit",
+        "props": {
+          "Left": 8,
+          "Top": 255,
+          "Width": 297,
+          "Height": 13,
+          "AutoSize": false,
+          "Caption": "%",
+          "EllipsisPosition": "epPathEllipsis"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "KeyTypeEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 67,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "KeyLengthEdit",
+        "props": {
+          "Left": 164,
+          "Top": 25,
+          "Width": 65,
+          "Height": 21,
+          "MaxLength": 4,
+          "TabOrder": 1,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "CommentEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 297,
+          "Height": 21,
+          "TabOrder": 2
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "PassphraseEdit",
+        "props": {
+          "Left": 8,
+          "Top": 117,
+          "Width": 297,
+          "Height": 21,
+          "TabOrder": 3,
+          "OnChange": "PassphraseEditChange",
+          "EchoMode": "emPassword"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "ConfirmPassphraseEdit",
+        "props": {
+          "Left": 8,
+          "Top": 165,
+          "Width": 297,
+          "Height": 21,
+          "TabOrder": 4,
+          "OnChange": "PassphraseEditChange",
+          "EchoMode": "emPassword"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpecBar",
+        "name": "PrivateKeyFileEdit",
+        "props": {
+          "Left": 8,
+          "Top": 209,
+          "Width": 297,
+          "TabOrder": 5,
+          "OnBrowse": "PrivateKeyFileEditBrowse",
+          "OnChange": "PrivateKeyFileEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 268,
+          "Width": 313,
+          "TabOrder": 6
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "Caption": "&Generate",
+              "OnClick": "OkClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

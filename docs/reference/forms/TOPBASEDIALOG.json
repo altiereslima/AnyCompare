@@ -1,0 +1,427 @@
+{
+  "resource_index": 570,
+  "name": "TOPBASEDIALOG",
+  "sha256": "b995e42c8b6a2ca8d186a9ec7e54d612555bd5ceb94856aa8a2769e3c583ff0a",
+  "bytes": 3124,
+  "parse_status": "complete",
+  "components": 34,
+  "hierarchy": {
+    "class": "TOpBaseDialog",
+    "name": "OpBaseDialog",
+    "props": {
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "%",
+      "ClientHeight": 387,
+      "ClientWidth": 393,
+      "OnCloseQuery": "FormCloseQuery",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "SelectionPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 393,
+          "Height": 147,
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "SelectionLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Selection:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "LeftFilesLbl",
+            "props": {
+              "Left": 16,
+              "Top": 50,
+              "Height": 13,
+              "Caption": "%",
+              "ShowAccelChar": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "LeftFoldersLbl",
+            "props": {
+              "Left": 16,
+              "Top": 67,
+              "Height": 13,
+              "Caption": "%",
+              "ShowAccelChar": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "LeftTotalBytesLbl",
+            "props": {
+              "Left": 16,
+              "Top": 84,
+              "Height": 13,
+              "Caption": "%",
+              "ShowAccelChar": false
+            },
+            "children": []
+          },
+          {
+            "class": "TShape",
+            "name": "WindowShape",
+            "props": {
+              "Left": 148,
+              "Top": 29,
+              "Width": 97,
+              "Height": 89,
+              "Brush.Color": "clBtnFace"
+            },
+            "children": []
+          },
+          {
+            "class": "TShape",
+            "name": "HeaderShape",
+            "props": {
+              "Left": 148,
+              "Top": 29,
+              "Width": 97,
+              "Height": 6,
+              "Brush.Color": "clActiveCaption"
+            },
+            "children": []
+          },
+          {
+            "class": "TShape",
+            "name": "LeftShape",
+            "props": {
+              "Left": 148,
+              "Top": 45,
+              "Width": 49,
+              "Height": 65,
+              "Brush.Color": "clWindow",
+              "OnMouseDown": "LeftShapeMouseDown"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiImage",
+            "name": "LeftImage",
+            "props": {
+              "Left": 164,
+              "Top": 69,
+              "Width": 16,
+              "Height": 16,
+              "OnClick": "SidesChangedClick",
+              "OnMouseDown": "LeftShapeMouseDown",
+              "ImageIndex": "imgSelectAll",
+              "Images": "BcImages.MainImages"
+            },
+            "children": []
+          },
+          {
+            "class": "TShape",
+            "name": "RightShape",
+            "props": {
+              "Left": 196,
+              "Top": 45,
+              "Width": 49,
+              "Height": 65,
+              "Brush.Color": "clWindow",
+              "OnMouseDown": "RightShapeMouseDown"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiImage",
+            "name": "RightImage",
+            "props": {
+              "Left": 212,
+              "Top": 69,
+              "Width": 16,
+              "Height": 16,
+              "OnClick": "SidesChangedClick",
+              "OnMouseDown": "RightShapeMouseDown",
+              "ImageIndex": "imgSelectAll",
+              "Images": "BcImages.MainImages"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "RightFilesLbl",
+            "props": {
+              "Left": 261,
+              "Top": 50,
+              "Height": 13,
+              "Caption": "%",
+              "ShowAccelChar": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "RightFoldersLbl",
+            "props": {
+              "Left": 261,
+              "Top": 67,
+              "Height": 13,
+              "Caption": "%",
+              "ShowAccelChar": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "RightTotalBytesLbl",
+            "props": {
+              "Left": 261,
+              "Top": 84,
+              "Height": 13,
+              "Caption": "%",
+              "ShowAccelChar": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "BuildProgressLbl",
+            "props": {
+              "Left": 8,
+              "Top": 126,
+              "Height": 13,
+              "Caption": "%"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "LeftCheckEdit",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Height": 17,
+              "Caption": "&Left side",
+              "TabOrder": 0,
+              "OnClick": "SidesChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "LeftRadioEdit",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Height": 17,
+              "Caption": "&Left side",
+              "TabOrder": 1,
+              "OnClick": "SidesChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "RightCheckEdit",
+            "props": {
+              "Left": 253,
+              "Top": 29,
+              "Height": 17,
+              "Caption": "&Right side",
+              "TabOrder": 2,
+              "OnClick": "SidesChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "RightRadioEdit",
+            "props": {
+              "Left": 253,
+              "Top": 29,
+              "Height": 17,
+              "Caption": "&Right side",
+              "TabOrder": 3,
+              "OnClick": "SidesChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "ActionPanel",
+        "props": {
+          "Left": 0,
+          "Top": 147,
+          "Width": 393,
+          "Height": 121,
+          "BevelOuter": "bvNone",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "ActionBevel",
+            "props": {
+              "Left": 8,
+              "Top": 0,
+              "Width": 377,
+              "Height": 1,
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "ActionLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Action:"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "FilteredWarnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 268,
+          "Width": 393,
+          "Height": 80,
+          "BevelOuter": "bvNone",
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "FilteredWarnBevel",
+            "props": {
+              "Left": 8,
+              "Top": 0,
+              "Width": 377,
+              "Height": 1,
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "FilteredWarnLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Filters:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiImage",
+            "name": "FilteredWarnImage",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Width": 16,
+              "Height": 16,
+              "ImageIndex": "imgFilters",
+              "Images": "BcImages.MainImages"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "FilteredWarnDescLbl",
+            "props": {
+              "Left": 32,
+              "Top": 29,
+              "Width": 353,
+              "Height": 26,
+              "AutoSize": false,
+              "Caption": "Selected folder(s) contain items hidden by display or file filters.",
+              "WordWrap": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpeedButton",
+            "name": "ShowFilteredBtn",
+            "props": {
+              "Left": 362,
+              "Top": 55,
+              "Hint": "Show hidden items",
+              "Flat": false,
+              "ImageIndex": "imgPeek",
+              "Images": "BcImages.MainImages",
+              "OnClick": "ShowFilteredClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "IncludeFilteredEdit",
+            "props": {
+              "Left": 32,
+              "Top": 55,
+              "Height": 17,
+              "Caption": "&Include hidden items in operation",
+              "TabOrder": 0,
+              "OnClick": "IncludeFilteredClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 348,
+          "Width": 393,
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "Caption": "&Start"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiHelpBtn",
+            "name": "HelpBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

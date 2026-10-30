@@ -1,0 +1,7 @@
+Hex Compare
+Produced: 27/10/2026 20:49:14
+
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-replay\inserted-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-replay\inserted-right.bin
+64 same byte(s)
+1 right orphan byte(s)

@@ -1,0 +1,109 @@
+{
+  "evidence_id": "ev_a94a5dd817986d06ee77bfca7d86cbc78ca63be3312e5b1daf76b7e2a7e7c7a8",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "load_frida_script",
+  "parameters": {
+    "session_id": "6b845171-45fd-44d1-8dce-edc3edbe8589"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+    "source_kind": "file",
+    "source_path": "C:\\Projetos\\BC4\\anycompare\\tools\\observe_reference_encoding.frida.js",
+    "source_sha256": "efaee6bdbdced39b72a7ff75d318891c9ddda941858fbe55a7916ff760aa838a",
+    "messages": [
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "GetACP",
+          "address": "0x7fffe82fb180"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "MultiByteToWideChar",
+          "address": "0x7fffe82f1490"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "WideCharToMultiByte",
+          "address": "0x7fffe82f2570"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "CreateFileW",
+          "address": "0x7fffe8317050"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "ReadFile",
+          "address": "0x7fffe8317410"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "WriteFile",
+          "address": "0x7fffe8317520"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "ExitProcess",
+          "address": "0x7fffe83017a0"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "target",
+          "pid": 28480,
+          "architecture": "x64",
+          "main_module": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe"
+        }
+      }
+    ],
+    "messages_truncated": false
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}
+

@@ -1,0 +1,69 @@
+{
+  "resource_index": 540,
+  "name": "TFILEFORMATGENERALFRAME",
+  "sha256": "31c9d5415ec66de706c7132350d524e2c0d0d9866bc40c5c61da14acfeec443a",
+  "bytes": 469,
+  "parse_status": "complete",
+  "components": 5,
+  "hierarchy": {
+    "class": "TFileFormatGeneralFrame",
+    "name": "FileFormatGeneralFrame",
+    "props": {
+      "Caption": "General"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "MaskLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Mask:",
+          "FocusControl": "MaskEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DescriptionLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "D&escription:",
+          "FocusControl": "DescriptionEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "MaskEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 257,
+          "Height": 21,
+          "TabOrder": 0,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "DescriptionEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 257,
+          "Height": 242,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 1,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

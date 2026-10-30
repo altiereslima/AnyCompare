@@ -1,0 +1,393 @@
+{
+  "resource_index": 527,
+  "name": "TDIRSYNCSESSIONOPSFRAME",
+  "sha256": "9c4f9b81afa58522fb97cd89dc9f72a164edca094752319498e5e0e3433b6604",
+  "bytes": 3357,
+  "parse_status": "complete",
+  "components": 30,
+  "hierarchy": {
+    "class": "TDirSyncSessionOpsFrame",
+    "name": "DirSyncSessionOpsFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "SessionDirSyncOps",
+      "Caption": "Sync"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "PresetLbl",
+        "props": {
+          "Left": 32,
+          "Top": 12,
+          "Height": 13,
+          "Caption": "&Presets:",
+          "FocusControl": "PresetEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "LeftNewerImage",
+        "props": {
+          "Left": 8,
+          "Top": 38,
+          "Width": 16,
+          "Height": 16,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "LeftNewerLbl",
+        "props": {
+          "Left": 32,
+          "Top": 40,
+          "Height": 13,
+          "Caption": "If file on left is &newer:",
+          "FocusControl": "LeftNewerEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "RightNewerImage",
+        "props": {
+          "Left": 8,
+          "Top": 63,
+          "Width": 16,
+          "Height": 16,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "RightNewerLbl",
+        "props": {
+          "Left": 32,
+          "Top": 65,
+          "Height": 13,
+          "Caption": "If file on right is ne&wer:",
+          "FocusControl": "RightNewerEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "LeftAddedImage",
+        "props": {
+          "Left": 8,
+          "Top": 88,
+          "Width": 16,
+          "Height": 16,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "LeftAddedLbl",
+        "props": {
+          "Left": 32,
+          "Top": 90,
+          "Height": 13,
+          "Caption": "If file was add&ed on left:",
+          "FocusControl": "LeftAddedEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "RightAddedImage",
+        "props": {
+          "Left": 8,
+          "Top": 113,
+          "Width": 16,
+          "Height": 16,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "RightAddedLbl",
+        "props": {
+          "Left": 32,
+          "Top": 115,
+          "Height": 13,
+          "Caption": "If file was added on &right:",
+          "FocusControl": "RightAddedEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "LeftDeletedImage",
+        "props": {
+          "Left": 8,
+          "Top": 138,
+          "Width": 16,
+          "Height": 16,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "LeftDeletedLbl",
+        "props": {
+          "Left": 32,
+          "Top": 140,
+          "Height": 13,
+          "Caption": "If file was de&leted on left:",
+          "FocusControl": "LeftDeletedEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "RightDeletedImage",
+        "props": {
+          "Left": 8,
+          "Top": 163,
+          "Width": 16,
+          "Height": 16,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "RightDeletedLbl",
+        "props": {
+          "Left": 32,
+          "Top": 165,
+          "Height": 13,
+          "Caption": "If file was dele&ted on right:",
+          "FocusControl": "RightDeletedEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "DiffImage",
+        "props": {
+          "Left": 8,
+          "Top": 188,
+          "Width": 16,
+          "Height": 16,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DiffLbl",
+        "props": {
+          "Left": 32,
+          "Top": 190,
+          "Height": 13,
+          "Caption": "If files are di&fferent:",
+          "FocusControl": "DiffEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "SameImage",
+        "props": {
+          "Left": 8,
+          "Top": 213,
+          "Width": 16,
+          "Height": 16,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SameLbl",
+        "props": {
+          "Left": 32,
+          "Top": 215,
+          "Height": 13,
+          "Caption": "If files are the sa&me:",
+          "FocusControl": "SameEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SyncMemoryDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 240,
+          "Width": 409,
+          "Height": 26,
+          "AutoSize": false,
+          "Caption": "Sync Memory remembers the state after each sync in order to detect deleted files and conflicting changes.",
+          "WordWrap": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "PresetEdit",
+        "props": {
+          "Left": 170,
+          "Top": 8,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 0,
+          "OnChange": "PresetEditChange",
+          "Images": "BcImages.MainImages",
+          "OnGetImageIndex": "PresetEditGetImageIndex"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "LeftNewerEdit",
+        "props": {
+          "Left": 170,
+          "Top": 36,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 1,
+          "OnChange": "StatusEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "RightNewerEdit",
+        "props": {
+          "Left": 170,
+          "Top": 61,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 2,
+          "OnChange": "StatusEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "LeftAddedEdit",
+        "props": {
+          "Left": 170,
+          "Top": 86,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 3,
+          "OnChange": "StatusEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "RightAddedEdit",
+        "props": {
+          "Left": 170,
+          "Top": 111,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 4,
+          "OnChange": "StatusEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "LeftDeletedEdit",
+        "props": {
+          "Left": 170,
+          "Top": 136,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 5,
+          "OnChange": "StatusEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "RightDeletedEdit",
+        "props": {
+          "Left": 170,
+          "Top": 161,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 6,
+          "OnChange": "StatusEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "DiffEdit",
+        "props": {
+          "Left": 170,
+          "Top": 186,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 7,
+          "OnChange": "StatusEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "SameEdit",
+        "props": {
+          "Left": 170,
+          "Top": 211,
+          "Width": 247,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 8,
+          "OnChange": "StatusEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "UseSyncMemoryEdit",
+        "props": {
+          "Left": 8,
+          "Top": 270,
+          "Height": 17,
+          "Caption": "&Use Sync Memory",
+          "TabOrder": 9,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "ClearMemoryBtn",
+        "props": {
+          "Left": 334,
+          "Top": 270,
+          "Width": 83,
+          "Caption": "&Clear Memory",
+          "TabOrder": 10,
+          "OnClick": "ClearMemoryClick",
+          "AutoSize": "asRight"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

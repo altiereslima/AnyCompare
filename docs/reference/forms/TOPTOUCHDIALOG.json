@@ -1,0 +1,269 @@
+{
+  "resource_index": 590,
+  "name": "TOPTOUCHDIALOG",
+  "sha256": "7f03839d1598fe0843f06b3b399f9e8812b820cc4e4e32701a1dc94d101d0018",
+  "bytes": 1873,
+  "parse_status": "complete",
+  "components": 21,
+  "hierarchy": {
+    "class": "TOpTouchDialog",
+    "name": "OpTouchDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "OpTouch",
+      "Caption": "Touch",
+      "ClientHeight": 542,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "SelectionPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiImage",
+            "name": "LeftImage",
+            "props": {
+              "ImageIndex": "imgTouch"
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiImage",
+            "name": "RightImage",
+            "props": {
+              "ImageIndex": "imgTouch"
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiImage",
+            "name": "LeftTouchImage",
+            "props": {
+              "Left": 189,
+              "Top": 63,
+              "Width": 16,
+              "Height": 16,
+              "ImageIndex": "imgCopyLeft",
+              "Images": "BcImages.MainImages"
+            },
+            "children": [],
+            "flags": 2,
+            "child_position": 12
+          },
+          {
+            "class": "TUiImage",
+            "name": "RightTouchImage",
+            "props": {
+              "Left": 189,
+              "Top": 63,
+              "Width": 16,
+              "Height": 16,
+              "ImageIndex": "imgCopyRight",
+              "Images": "BcImages.MainImages"
+            },
+            "children": [],
+            "flags": 2,
+            "child_position": 13
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "ActionPanel",
+        "props": {
+          "Height": 276
+        },
+        "children": [
+          {
+            "class": "TUiCheckBox",
+            "name": "RecursiveEdit",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Height": 17,
+              "Caption": "Including folder co&ntents",
+              "TabOrder": 0,
+              "OnClick": "RecursiveClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "UseOtherSideEdit",
+            "props": {
+              "Left": 8,
+              "Top": 54,
+              "Height": 17,
+              "Caption": "&Copy timestamps from other side",
+              "TabOrder": 1,
+              "OnClick": "UseOtherSideClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "UseDateTimeEdit",
+            "props": {
+              "Left": 8,
+              "Top": 75,
+              "Height": 17,
+              "Caption": "Set &timestamps to -->",
+              "TabOrder": 2,
+              "OnClick": "UseOtherSideClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiPanel",
+            "name": "DefaultTypePanel",
+            "props": {
+              "Left": 0,
+              "Top": 205,
+              "Width": 216,
+              "Height": 71,
+              "BevelOuter": "bvNone",
+              "TabOrder": 3
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "DefaultTypeLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "Default:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiRadioButton",
+                "name": "DefaultNowEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Height": 17,
+                  "Caption": "Current s&ystem time",
+                  "TabOrder": 0,
+                  "OnClick": "DefaultTypeClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiRadioButton",
+                "name": "DefaultLastEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 46,
+                  "Height": 17,
+                  "Caption": "L&ast touch",
+                  "TabOrder": 1,
+                  "OnClick": "DefaultTypeClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiPanel",
+            "name": "DateTimePanel",
+            "props": {
+              "Left": 216,
+              "Top": 75,
+              "Width": 169,
+              "Height": 193,
+              "BevelOuter": "bvLowered",
+              "TabOrder": 4
+            },
+            "children": [
+              {
+                "class": "TUiComboBox",
+                "name": "MonthEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Width": 97,
+                  "Height": 21,
+                  "Style": "csDropDownList",
+                  "DropDownCount": 12,
+                  "TabOrder": 0,
+                  "OnChange": "MonthEditChange"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpinEdit",
+                "name": "YearEdit",
+                "props": {
+                  "Left": 112,
+                  "Top": 8,
+                  "Width": 49,
+                  "Height": 21,
+                  "Max": 2999,
+                  "MaxLength": 4,
+                  "Min": 1896,
+                  "Position": 1896,
+                  "TabOrder": 1,
+                  "OnChange": "YearEditChange"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCalendar",
+                "name": "Calendar",
+                "props": {
+                  "Left": 8,
+                  "Top": 36,
+                  "Width": 153,
+                  "Height": 117,
+                  "TabOrder": 2,
+                  "OnChange": "CalendarChange"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiDateTimePicker",
+                "name": "TimeEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 160,
+                  "Width": 98,
+                  "Height": 21,
+                  "Kind": "dtkTime",
+                  "TabOrder": 3
+                },
+                "children": []
+              }
+            ]
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "FilteredWarnPanel",
+        "props": {
+          "Top": 423
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Top": 503
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

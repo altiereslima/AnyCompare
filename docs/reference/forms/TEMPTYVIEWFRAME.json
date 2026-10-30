@@ -1,0 +1,15 @@
+{
+  "resource_index": 531,
+  "name": "TEMPTYVIEWFRAME",
+  "sha256": "88b426e7199170592e53642ea26b3a960389ab19617da587b293262bea8f51e2",
+  "bytes": 38,
+  "parse_status": "complete",
+  "components": 1,
+  "hierarchy": {
+    "class": "TEmptyViewFrame",
+    "name": "EmptyViewFrame",
+    "props": {},
+    "children": [],
+    "flags": 1
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "resource_index": 654,
+  "name": "TVFSDROPBOXPROFILEGENERALFRAME",
+  "sha256": "99381e3b17065dc5a6ab6b0d7f524c1251e9b031d03402dca5f8c306dc922446",
+  "bytes": 631,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "TVfsDropboxProfileGeneralFrame",
+    "name": "VfsDropboxProfileGeneralFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileDropbox",
+      "Caption": "General"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "DisplayNameLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Name:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DisplayNameEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 239,
+          "Height": 13,
+          "AutoSize": false,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "EmailLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "Email:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "EmailEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 239,
+          "Height": 13,
+          "AutoSize": false,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DescriptionLbl",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Height": 13,
+          "Caption": "D&escription:",
+          "FocusControl": "DescriptionEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "DescriptionEdit",
+        "props": {
+          "Left": 8,
+          "Top": 117,
+          "Width": 239,
+          "Height": 184,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 0,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

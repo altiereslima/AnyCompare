@@ -1,0 +1,121 @@
+{
+  "resource_index": 670,
+  "name": "TVFSSFTPVALIDATECHANGEDKEYDIALOG",
+  "sha256": "e4d6032d51998879a7c5844d1f5cfe3227df103d0682352da870748e04f238fc",
+  "bytes": 841,
+  "parse_status": "complete",
+  "components": 11,
+  "hierarchy": {
+    "class": "TVfsSftpValidateChangedKeyDialog",
+    "name": "VfsSftpValidateChangedKeyDialog",
+    "props": {
+      "Caption": "Changed Host Key",
+      "ClientHeight": 204,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiDlgIcon",
+        "name": "Image",
+        "props": {
+          "IconType": "diError"
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "WarnLbl",
+        "props": {
+          "Left": 64,
+          "Top": 16,
+          "Height": 13,
+          "Caption": "WARNING - Potential Security Breach",
+          "FontStyle": [
+            "fsBold"
+          ]
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ValidateKeyLbl",
+        "props": {
+          "Top": 37,
+          "Height": 52,
+          "Caption": "The server's host key does not match the one stored in the trusted cache.  This means that either the server administrator has changed the host key, or you have connected to another computer pretending to be the server."
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "HostLbl",
+        "props": {
+          "Top": 89
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "HostValueLbl",
+        "props": {
+          "Top": 89
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "FingerprintLbl",
+        "props": {
+          "Top": 106
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "FingerprintValueLbl",
+        "props": {
+          "Top": 106
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "AddToCacheLbl",
+        "props": {
+          "Top": 127
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "AddToCacheEdit",
+        "props": {
+          "Top": 148,
+          "Caption": "&Replace existing host key in trusted cache"
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Top": 165
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

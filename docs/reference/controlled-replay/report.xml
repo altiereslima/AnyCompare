@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bcreport created="16/10/2026 16:57:25">
+	<ltpath/>
+	<rtpath/>
+	<filecomparison created="16/10/2026 16:57:25">
+		<filename1>C:\Projetos\BC4\anycompare\docs\reference\controlled-replay\left.txt</filename1>
+		<filename2>C:\Projetos\BC4\anycompare\docs\reference\controlled-replay\right.txt</filename2>
+		<linecomp status="same">
+			<text ltid="1" rtid="1">case:</text>
+		</linecomp>
+		<linecomp status="similar">
+			<text ltid="2">A pedra do sigilo</text>
+			<text rtid="2">A Pedra do Sigilo</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="3" rtid="3">white:</text>
+		</linecomp>
+		<linecomp status="similar">
+			<text ltid="4">uma forja antiga</text>
+			<text rtid="4">uma  forja antiga </text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="5" rtid="5">mixed:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="6">A maga azul</text>
+			<text rtid="6">a maga vermelha</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="7" rtid="7">words:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="8">Fonte da Magia</text>
+			<text rtid="8">Fonte de Magia</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="9" rtid="9">important:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="10">Cadinho</text>
+			<text rtid="10">Crisol</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="11" rtid="11">punctuation:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="12">Texto - antigo</text>
+			<text rtid="12">Texto — antigo</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="13" rtid="13">end:</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="14" rtid="14">anchor-0:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="15">aXbYz</text>
+			<text rtid="15">aUbVz</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="16" rtid="16">anchor-1:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="17">aXbcYz</text>
+			<text rtid="17">aUbcVz</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="18" rtid="18">anchor-2:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="19">aXbcdYz</text>
+			<text rtid="19">aUbcdVz</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="20" rtid="20">anchor-3:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="21">aXabcdYz</text>
+			<text rtid="21">aUabcdVz</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="22" rtid="22">anchor-4:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="23">aXbYcZd</text>
+			<text rtid="23">aUbVcWd</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="24" rtid="24">anchor-5:</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="25">lado A palavra comum fim Z</text>
+			<text rtid="25">lado B palavra comum fim W</text>
+		</linecomp>
+	</filecomparison>
+</bcreport>

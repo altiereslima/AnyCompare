@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bcreport created="30/10/2026 17:07:10">
+	<foldercomp>
+		<ltpath>C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode\right</ltpath>
+		<rtpath>C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode\left</rtpath>
+		<mode>Differences</mode>
+		<foldercomp>
+			<lt>
+				<name>ação</name>
+				<size>7</size>
+				<modified>30/10/2026 16:58:17</modified>
+			</lt>
+			<rt>
+				<name>Ação</name>
+				<size>4</size>
+				<modified>30/10/2026 16:58:17</modified>
+			</rt>
+			<filecomp status="ltonly">
+				<lt>
+					<name>novo.txt</name>
+					<size>3</size>
+					<modified>14/11/2023 19:13:20</modified>
+				</lt>
+			</filecomp>
+		</foldercomp>
+		<filecomp status="diff">
+			<lt>
+				<name>árvore.txt</name>
+				<size>1</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+			<rt>
+				<name>ÁRVORE.txt</name>
+				<size>1</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+	</foldercomp>
+</bcreport>

@@ -1,0 +1,636 @@
+{
+  "resource_index": 614,
+  "name": "TREPORTDIALOG",
+  "sha256": "ebccebd08f459bffcea54a29fb624a9e36f9ff11002d091b126c9dae1b6ff1c6",
+  "bytes": 4917,
+  "parse_status": "complete",
+  "components": 49,
+  "hierarchy": {
+    "class": "TReportDialog",
+    "name": "ReportDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgReport",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "%",
+      "ClientHeight": 394,
+      "ClientWidth": 585,
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "LayoutLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Report la&yout:",
+          "FocusControl": "LayoutListBox"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "OptionsLbl",
+        "props": {
+          "Left": 192,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Report options:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBevel",
+        "name": "OutputBevel",
+        "props": {
+          "Left": 8,
+          "Top": 154,
+          "Width": 569,
+          "Height": 1,
+          "Shape": "bsTopLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiListBox",
+        "name": "LayoutListBox",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 176,
+          "Height": 121,
+          "Items.Strings": [
+            "Side-by-side",
+            "Summary"
+          ],
+          "TabOrder": 0,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "OptionsPanel",
+        "props": {
+          "Left": 192,
+          "Top": 25,
+          "Width": 385,
+          "Height": 121,
+          "BevelOuter": "bvNone",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiPanel",
+            "name": "BasicPanel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 385,
+              "Height": 46,
+              "Align": "alTop",
+              "BevelOuter": "bvNone",
+              "TabOrder": 0
+            },
+            "children": [
+              {
+                "class": "TUiCheckBox",
+                "name": "SelOnlyEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 2,
+                  "Height": 17,
+                  "Caption": "Just &selection",
+                  "TabOrder": 0,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "InsigIgnoredEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 23,
+                  "Height": 17,
+                  "Caption": "Ignore &unimportant",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiPanel",
+            "name": "DisplayFilterPanel",
+            "props": {
+              "Left": 0,
+              "Top": 46,
+              "Width": 385,
+              "Height": 29,
+              "Align": "alTop",
+              "BevelOuter": "bvNone",
+              "TabOrder": 1
+            },
+            "children": [
+              {
+                "class": "TUiComboBox",
+                "name": "DisplayFilterEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 2,
+                  "Width": 185,
+                  "Height": 21,
+                  "Style": "csDropDownList",
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanelView",
+            "name": "LayoutPanelView",
+            "props": {
+              "Left": 0,
+              "Top": 75,
+              "Width": 385,
+              "Height": 46,
+              "Align": "alClient",
+              "TabOrder": 2
+            },
+            "children": [
+              {
+                "class": "TUiActivePanel",
+                "name": "SideBySidePanel",
+                "props": {},
+                "children": [
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "IncludeNumsEdit",
+                    "props": {
+                      "Left": 0,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "Include &numbers",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "OutputPanel",
+        "props": {
+          "Left": 8,
+          "Top": 162,
+          "Width": 401,
+          "Height": 193,
+          "BevelOuter": "bvNone",
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "TitleLbl",
+            "props": {
+              "Left": 0,
+              "Top": 155,
+              "Height": 13,
+              "Caption": "Report t&itle:",
+              "FocusControl": "TitleEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "OutputLbl",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Height": 13,
+              "Caption": "Output options:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "PrintEdit",
+            "props": {
+              "Left": 0,
+              "Top": 17,
+              "Height": 17,
+              "Caption": "P&rinter",
+              "TabOrder": 0,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "HTMLEdit",
+            "props": {
+              "Left": 0,
+              "Top": 38,
+              "Height": 17,
+              "Caption": "&HTML report",
+              "TabOrder": 1,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "PlainTextEdit",
+            "props": {
+              "Left": 0,
+              "Top": 59,
+              "Height": 17,
+              "Caption": "Plain &text",
+              "TabOrder": 2,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiActivePanelView",
+            "name": "OutputPanelView",
+            "props": {
+              "Left": 124,
+              "Top": 0,
+              "Width": 277,
+              "Height": 130,
+              "TabOrder": 3
+            },
+            "children": [
+              {
+                "class": "TUiActivePanel",
+                "name": "PrintPanel",
+                "props": {},
+                "children": [
+                  {
+                    "class": "TUiPanel",
+                    "name": "PrintStyleKindPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Width": 277,
+                      "Height": 46,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 0
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "PrintStyleKindLbl",
+                        "props": {
+                          "Left": 0,
+                          "Top": 0,
+                          "Height": 13,
+                          "Caption": "Difference high&lighting:",
+                          "FocusControl": "PrintStyleKindEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiComboBox",
+                        "name": "PrintStyleKindEdit",
+                        "props": {
+                          "Left": 0,
+                          "Top": 17,
+                          "Width": 94,
+                          "Height": 21,
+                          "Style": "csDropDownList",
+                          "TabOrder": 0,
+                          "OnChange": "SomethingChangedClick",
+                          "Items.Strings": [
+                            "Use color",
+                            "Monochrome"
+                          ]
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "PrintWrapModePanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 46,
+                      "Width": 277,
+                      "Height": 84,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 1
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "PrintWrapModeLbl",
+                        "props": {
+                          "Left": 0,
+                          "Top": 0,
+                          "Height": 13,
+                          "Caption": "Wrap lines:"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiRadioButton",
+                        "name": "PrintWrapNoneEdit",
+                        "props": {
+                          "Left": 0,
+                          "Top": 17,
+                          "Height": 17,
+                          "Caption": "N&o wrap",
+                          "TabOrder": 0,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiRadioButton",
+                        "name": "PrintWrapWordEdit",
+                        "props": {
+                          "Left": 0,
+                          "Top": 38,
+                          "Height": 17,
+                          "Caption": "Wrap wor&ds",
+                          "TabOrder": 1,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiRadioButton",
+                        "name": "PrintWrapCharEdit",
+                        "props": {
+                          "Left": 0,
+                          "Top": 59,
+                          "Height": 17,
+                          "Caption": "&Wrap characters",
+                          "TabOrder": 2,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "class": "TUiActivePanel",
+                "name": "HTMLPanel",
+                "props": {},
+                "children": [
+                  {
+                    "class": "TUiPanel",
+                    "name": "HTMLStylePanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Width": 277,
+                      "Height": 92,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 0
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "HTMLStyleKindLbl",
+                        "props": {
+                          "Left": 0,
+                          "Top": 0,
+                          "Height": 13,
+                          "Caption": "Difference high&lighting:",
+                          "FocusControl": "HTMLStyleKindEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "HTMLStyleURLLbl",
+                        "props": {
+                          "Left": 16,
+                          "Top": 46,
+                          "Height": 13,
+                          "Caption": "Custo&m stylesheet URL:",
+                          "FocusControl": "HTMLStyleURLEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiComboBox",
+                        "name": "HTMLStyleKindEdit",
+                        "props": {
+                          "Left": 0,
+                          "Top": 17,
+                          "Width": 229,
+                          "Height": 21,
+                          "Style": "csDropDownList",
+                          "TabOrder": 0,
+                          "OnChange": "SomethingChangedClick",
+                          "Items.Strings": [
+                            "Use color stylesheet (embedded)",
+                            "Use monochrome stylesheet (embedded)",
+                            "Use custom stylesheet (external)"
+                          ]
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiEdit",
+                        "name": "HTMLStyleURLEdit",
+                        "props": {
+                          "Left": 16,
+                          "Top": 63,
+                          "Width": 261,
+                          "Height": 21,
+                          "TabOrder": 1,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "HTMLWrapEdit",
+                    "props": {
+                      "Left": 0,
+                      "Top": 92,
+                      "Height": 17,
+                      "Caption": "Allow word &wrapping",
+                      "TabOrder": 1,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "TUiEdit",
+            "name": "TitleEdit",
+            "props": {
+              "Left": 0,
+              "Top": 172,
+              "Width": 401,
+              "Height": 21,
+              "TabOrder": 4,
+              "OnChange": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "BtnPanelView",
+        "props": {
+          "Left": 417,
+          "Top": 270,
+          "Width": 160,
+          "Height": 85,
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "BtnPrintPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiButton",
+                "name": "PreviewBtn",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 160,
+                  "Caption": "Print Pre&view",
+                  "TabOrder": 0,
+                  "OnClick": "PreviewClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "SetupBtn",
+                "props": {
+                  "Left": 0,
+                  "Top": 31,
+                  "Width": 160,
+                  "Caption": "Pa&ge Setup...",
+                  "TabOrder": 1,
+                  "OnClick": "SetupClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "PrintBtn",
+                "props": {
+                  "Left": 0,
+                  "Top": 62,
+                  "Width": 160,
+                  "Caption": "&Print...",
+                  "Default": true,
+                  "TabOrder": 2,
+                  "OnClick": "PrintClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "BtnFilePanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiButton",
+                "name": "WebBrowserBtn",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 160,
+                  "Caption": "&View in Browser",
+                  "TabOrder": 0,
+                  "OnClick": "WebBrowserClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "CopyToClipboardBtn",
+                "props": {
+                  "Left": 0,
+                  "Top": 31,
+                  "Width": 160,
+                  "Caption": "&Copy to Clipboard",
+                  "TabOrder": 1,
+                  "OnClick": "CopyToClipboardClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "SaveBtn",
+                "props": {
+                  "Left": 0,
+                  "Top": 62,
+                  "Width": 160,
+                  "Caption": "Save &As...",
+                  "Default": true,
+                  "TabOrder": 2,
+                  "OnClick": "SaveClick"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 355,
+          "Width": 585,
+          "TabOrder": 4
+        },
+        "children": [
+          {
+            "class": "TUiCloseBtn",
+            "name": "CloseBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

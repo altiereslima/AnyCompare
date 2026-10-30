@@ -1,0 +1,636 @@
+{
+  "resource_index": 489,
+  "name": "TBCIMAGES_200",
+  "sha256": "f7e856ecf432ddc522f5af8a0c6349c175f6c697581d5ca58acd3fe37d4c5bfc",
+  "bytes": 2640582,
+  "parse_status": "complete",
+  "components": 13,
+  "hierarchy": {
+    "class": "TBcImages_200",
+    "name": "BcImages",
+    "props": {
+      "OldCreateOrder": false,
+      "OnCreate": "DataModuleCreate",
+      "Height": 320,
+      "Width": 224
+    },
+    "children": [
+      {
+        "class": "TUiImageList",
+        "name": "ContentImages",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 32,
+          "Masked": false,
+          "Width": 56,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 213,
+              "bytes": 64570,
+              "sha256": "bbff816223a9d2c89c9b5f96f7cebbe39f9618d68cc16bf65c5b783f868db4e6"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgContentComparing",
+            "imgContentSameBinary",
+            "imgContentSame",
+            "imgContentSimilar",
+            "imgContentDifferent",
+            "imgContentDifferentBinary",
+            "imgContentConflict",
+            "imgContentError",
+            "imgContentMerged"
+          ],
+          "Left": 48,
+          "Top": 16
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "ContentModels",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 32,
+          "Masked": false,
+          "Width": 56,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 65123,
+              "bytes": 78906,
+              "sha256": "8649ae812ff37a025df206d5108cd8402e4888c0a0fbd178af934dabf37344b3"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgContentArrowDown",
+            "imgContentArrowDownLeft",
+            "imgContentArrowDownRight",
+            "imgContentArrowLeft",
+            "imgContentArrowRight",
+            "imgContentDelete",
+            "imgContentMergeableLeft",
+            "imgContentMergeableOutput",
+            "imgContentMergeableRight",
+            "imgContentSpotLeft",
+            "imgContentSpotRight"
+          ],
+          "Left": 144,
+          "Top": 16
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "GutterImages",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 20,
+          "Masked": false,
+          "Width": 28,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 144440,
+              "bytes": 9018,
+              "sha256": "0fa25f4865c85c5100c77f388d212e6fc9e55af19299cdd77a826ed2e27f60f2"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgGutterCopySectionLeft",
+            "imgGutterCopySectionRight",
+            "imgGutterConflict",
+            "imgGutterConflictOff"
+          ],
+          "Left": 48,
+          "Top": 64
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "GutterModels",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 20,
+          "Masked": false,
+          "Width": 28,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 153710,
+              "bytes": 6778,
+              "sha256": "43e037001151f348e15ae9b2953ee29a9696932f00cf1b2fed26cfb3ee57f88b"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgGutterArrowSelLeft",
+            "imgGutterArrowSelRight",
+            "imgGutterArrowSectionRight"
+          ],
+          "Left": 144,
+          "Top": 64
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "HeaderImages",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 20,
+          "Masked": false,
+          "Width": 20,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 160722,
+              "bytes": 1658,
+              "sha256": "c8c22e89584f8eb2b4a15f76d473b5f29a595149b873867a837ff7f662e410e7"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgHeaderKey"
+          ],
+          "Left": 48,
+          "Top": 112
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "HeaderModels",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 20,
+          "Masked": false,
+          "Width": 20,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 162552,
+              "bytes": 1658,
+              "sha256": "26bf5790eeaaa6381451058fdeebf9f1b9d3dbc664cbac2726b6a9ca6ae461c7"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgSpotLeftTop"
+          ],
+          "Left": 144,
+          "Top": 112
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "HomeImages",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 128,
+          "Masked": false,
+          "Width": 128,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 164385,
+              "bytes": 1048634,
+              "sha256": "af75737e7f617ba2b89c09716ea192d4d811ec6739bcb509a0b2f787ba703006"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgHomeNext",
+            "imgHomePrev",
+            "imgHomeDataCompareSession",
+            "imgHomeDirCompareSession",
+            "imgHomeDirMergeSession",
+            "imgHomeDirSyncSession",
+            "imgHomeHexCompareSession",
+            "imgHomeMP3CompareSession",
+            "imgHomePixCompareSession",
+            "imgHomeRegCompareSession",
+            "imgHomeTableCompareSession",
+            "imgHomeTextCompareSession",
+            "imgHomeTextMergeSession",
+            "imgHomeVerCompareSession",
+            "imgHomeXMLCompareSession",
+            "imgHomeBc2PluginCompareSession"
+          ],
+          "Left": 48,
+          "Top": 160
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "HomeSmallImages",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 64,
+          "Masked": false,
+          "Width": 64,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 1213575,
+              "bytes": 262202,
+              "sha256": "04812b625407c13e7fa272fdbf5ef1ac6679a1059406bb5bb53ea989bae06f07"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgHomeNext",
+            "imgHomePrev",
+            "imgHomeDataCompareSession",
+            "imgHomeDirCompareSession",
+            "imgHomeDirMergeSession",
+            "imgHomeDirSyncSession",
+            "imgHomeHexCompareSession",
+            "imgHomeMP3CompareSession",
+            "imgHomePixCompareSession",
+            "imgHomeRegCompareSession",
+            "imgHomeTableCompareSession",
+            "imgHomeTextCompareSession",
+            "imgHomeTextMergeSession",
+            "imgHomeVerCompareSession",
+            "imgHomeXMLCompareSession",
+            "imgHomeBc2PluginCompareSession"
+          ],
+          "Left": 144,
+          "Top": 160
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "MainImages",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 32,
+          "Masked": false,
+          "Width": 32,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 1476329,
+              "bytes": 946234,
+              "sha256": "559c92b2a46e75524474e897d0a8757e512fe1b35c6235e953bb0627c27b7d38"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgCheckAll",
+            "imgCheckDiff",
+            "imgDown",
+            "imgError",
+            "imgFindCaseSensitive",
+            "imgFindIsRegExp",
+            "imgFindWholeWords",
+            "imgFindWrap",
+            "imgFolderHollow0",
+            "imgFolderHollow1",
+            "imgListAdd",
+            "imgListClone",
+            "imgListDelete",
+            "imgListEdit",
+            "imgLock",
+            "imgMaximize",
+            "imgNameFilterExcludeDirs",
+            "imgNameFilterExcludeFiles",
+            "imgNameFilterIncludeDirs",
+            "imgNameFilterIncludeFiles",
+            "imgNewSessionFolder",
+            "imgPageFirst",
+            "imgPageLast",
+            "imgPageNext",
+            "imgPagePrev",
+            "imgPeek",
+            "imgPin",
+            "imgPlus",
+            "imgRegStr",
+            "imgRegUInt",
+            "imgRestore",
+            "imgSearch",
+            "imgSessionDefaultFolder",
+            "imgSessionFolder",
+            "imgShared",
+            "imgStopRed",
+            "imgStopYellow",
+            "imgSyncCancel",
+            "imgSyncCopyDeleteLeft",
+            "imgSyncCopyDeleteRight",
+            "imgSyncCopyLeft",
+            "imgSyncCopyRight",
+            "imgSyncDelete",
+            "imgSyncPrompt",
+            "imgTriangleUp",
+            "imgUncheckAll",
+            "imgUnpin",
+            "imgUp",
+            "imgValidateSSLCertInvalid",
+            "imgValidateSSLCertValid",
+            "imgWarning",
+            "imgWebBrowserBack",
+            "imgWebBrowserForward",
+            "imgWebBrowserRefresh",
+            "imgXGray",
+            "imgXMLAttribute",
+            "imgXMLComment",
+            "imgXMLData",
+            "imgXMLDocType",
+            "imgXMLElement",
+            "imgXMLInstruction",
+            "imgXWhite",
+            "imgZoomIn",
+            "imgZoomOut",
+            "imgSessionHome",
+            "imgSessionsCombo",
+            "imgSessionSave",
+            "imgSessionSaveAs",
+            "imgSessionEdit",
+            "imgSessionLocked",
+            "imgRules",
+            "imgDataFormatEdit",
+            "imgHexFormatEdit",
+            "imgPixFormatEdit",
+            "imgTableFormatEdit",
+            "imgTextFormatEdit",
+            "imgXMLFormatEdit",
+            "imgSwap",
+            "imgSpecsBack",
+            "imgSpecsForward",
+            "imgAccept",
+            "imgBrowse",
+            "imgUpOneLevel",
+            "imgUpOneLevelAll",
+            "imgRecompare",
+            "imgReport",
+            "imgInfo",
+            "imgFilters",
+            "imgMP3Play2",
+            "imgMP3Pause2",
+            "imgCompare",
+            "imgCopyRight",
+            "imgCopyLeft",
+            "imgCopyLeftOrRight",
+            "imgCopyToOutput",
+            "imgMoveRight",
+            "imgMoveLeft",
+            "imgMoveLeftOrRight",
+            "imgMoveBoth",
+            "imgCopyTo",
+            "imgMoveTo",
+            "imgDelete",
+            "imgRename",
+            "imgTouch",
+            "imgNewFolder",
+            "imgIgnored",
+            "imgUpdateRight",
+            "imgUpdateLeft",
+            "imgUpdateBoth",
+            "imgMirrorRight",
+            "imgMirrorLeft",
+            "imgMP3Play",
+            "imgMP3Pause",
+            "imgSave",
+            "imgSaveAs",
+            "imgExpandAll",
+            "imgCollapseAll",
+            "imgSelectAll",
+            "imgSelectAllFiles",
+            "imgRefresh",
+            "imgFullRefresh",
+            "imgUndo",
+            "imgRedo",
+            "imgConflict",
+            "imgCut",
+            "imgCopy",
+            "imgPaste",
+            "imgFullEdit",
+            "imgConflictSectionOffNext",
+            "imgConflictSectionNext",
+            "imgConflictSectionNextNone",
+            "imgConflictSectionPrev",
+            "imgConflictSectionPrevNone",
+            "imgDiffSectionNextNone",
+            "imgDiffSectionPrevNone",
+            "imgDiffFileNext",
+            "imgDiffFilePrev",
+            "imgCopyFileRight",
+            "imgCopyFileLeft",
+            "imgFind",
+            "imgReplace",
+            "imgFindNext",
+            "imgFindPrev",
+            "imgFindInFiles",
+            "imgGoTo",
+            "imgFavAll",
+            "imgFavDiff",
+            "imgFavSame",
+            "imgFavNone",
+            "imgDirShowAll",
+            "imgDirCompareStructure",
+            "imgDirCompareFilesOnly",
+            "imgDirFlatten",
+            "imgPixDiffTolerance",
+            "imgPixDiffRange",
+            "imgPixDiffBlend",
+            "imgSuppressFilters",
+            "imgShowContext",
+            "imgInsigIgnored",
+            "imgFavorLeft",
+            "imgFavorRight",
+            "imgPixAutoScale",
+            "imgPixRotateRight",
+            "imgPixRotateLeft",
+            "imgPixFlipHorz",
+            "imgPixFlipVert",
+            "imgPixCompareTags",
+            "imgShowWS",
+            "imgShowItemNum",
+            "imgShowSyntaxHighlighting",
+            "imgDisplayFont",
+            "imgDisplayFontIncrease",
+            "imgDisplayFontDecrease",
+            "imgDisplayFontReset",
+            "imgSideBySide",
+            "imgOverUnder",
+            "imgOutputWindow",
+            "imgWebBrowser",
+            "imgShowThumbnail",
+            "imgShowCenter",
+            "imgShowTextDetails",
+            "imgShowHexDetails",
+            "imgShowAlignDetails",
+            "imgShowRuler",
+            "imgPixBlendToggle",
+            "imgPixToleranceGhost",
+            "imgFullScreen",
+            "imgPixZoomActual",
+            "imgPixZoomFit",
+            "imgOptions",
+            "imgFileFormatManager",
+            "imgSaveSnapshot",
+            "imgHelpContents",
+            "imgDataFormat",
+            "imgHexFormat",
+            "imgMP3Format",
+            "imgPixFormat",
+            "imgRegFormat",
+            "imgTableFormat",
+            "imgTextFormat",
+            "imgVerFormat",
+            "imgXMLFormat",
+            "imgExternalFormat",
+            "imgBc2PluginFormat",
+            "imgLocalProfile",
+            "imgAmazonS3Profile",
+            "imgAzureProfile",
+            "imgDropboxProfile",
+            "imgFtpProfile",
+            "imgGitProfile",
+            "imgGoogleDriveProfile",
+            "imgOneDriveProfile",
+            "imgSVNProfile",
+            "imgWebDAVProfile",
+            "imgDataCompareSession",
+            "imgDirCompareSession",
+            "imgDirMergeSession",
+            "imgDirSyncSession",
+            "imgHexCompareSession",
+            "imgMP3CompareSession",
+            "imgPixCompareSession",
+            "imgRegCompareSession",
+            "imgTableCompareSession",
+            "imgTextCompareSession",
+            "imgTextEditSession",
+            "imgTextMergeSession",
+            "imgTextPatchSession",
+            "imgVerCompareSession",
+            "imgXMLCompareSession",
+            "imgExternalCompareSession",
+            "imgBc2PluginCompareSession"
+          ],
+          "Left": 48,
+          "Top": 208
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "MainModels",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 32,
+          "Masked": false,
+          "Width": 32,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 2426491,
+              "bytes": 98362,
+              "sha256": "e44de27e8599dd71180b4abcc8296e88d6538162030cd5ee111eea8801566e09"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgFolderBottom0",
+            "imgFolderBottom1",
+            "imgFolderGhost0",
+            "imgFolderGhost1",
+            "imgFolderLink",
+            "imgFolderOpenError",
+            "imgFolderTop0",
+            "imgFolderTop1",
+            "imgFolderZip",
+            "imgSpot2x3Left",
+            "imgSpot2x3LeftBottom",
+            "imgSpot2x3LeftTop",
+            "imgSpot2x3Right",
+            "imgSpot2x3RightBottom",
+            "imgSpot2x3RightTop",
+            "imgSpot2x3DeleteLeft",
+            "imgSpot2x3DeleteRight",
+            "imgSpot",
+            "imgArrowSelLeft",
+            "imgArrowSelRight",
+            "imgArrowSectionRight",
+            "imgDirMergeLeft",
+            "imgDirMergeRight",
+            "imgDirMergeOutput"
+          ],
+          "Left": 144,
+          "Top": 208
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "NavImages",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 18,
+          "Masked": false,
+          "Width": 14,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 2525441,
+              "bytes": 13162,
+              "sha256": "bb4b8c38c743edd9286413f177c1500de587425221e18bb767a49babb4d18650"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgBookmark0",
+            "imgBookmark1",
+            "imgBookmark2",
+            "imgBookmark3",
+            "imgBookmark4",
+            "imgBookmark5",
+            "imgBookmark6",
+            "imgBookmark7",
+            "imgBookmark8",
+            "imgBookmark9",
+            "imgNavNext",
+            "imgNavPick",
+            "imgNavPrev"
+          ],
+          "Left": 48,
+          "Top": 256
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImageList",
+        "name": "PrefsImages",
+        "props": {
+          "ColorDepth": "cd32Bit",
+          "DrawingStyle": "dsTransparent",
+          "Height": 48,
+          "Masked": false,
+          "Width": 48,
+          "ImagesBitmap.Data": {
+            "binary": {
+              "offset": 2538937,
+              "bytes": 101434,
+              "sha256": "6e186e101985adad58b100fa6aa89484c176d60a2cc522d69a44e1a49aa97720"
+            }
+          },
+          "ImageNames.Strings": [
+            "imgPrefsArchive",
+            "imgPrefsBackup",
+            "imgPrefsColor",
+            "imgPrefsCommand",
+            "imgPrefsText",
+            "imgPrefsNextDiff",
+            "imgPrefsOpenWith",
+            "imgPrefsOp",
+            "imgPrefsStartup",
+            "imgPrefsTab",
+            "imgPrefsTweak"
+          ],
+          "Left": 144,
+          "Top": 256
+        },
+        "children": []
+      }
+    ]
+  }
+}

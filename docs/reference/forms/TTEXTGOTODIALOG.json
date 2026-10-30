@@ -1,0 +1,156 @@
+{
+  "resource_index": 635,
+  "name": "TTEXTGOTODIALOG",
+  "sha256": "8629a8479ccb5d1a3891fb89f299fc82b087e87eb7651b42b10e5a234772ecb7",
+  "bytes": 925,
+  "parse_status": "complete",
+  "components": 13,
+  "hierarchy": {
+    "class": "TTextGoToDialog",
+    "name": "TextGoToDialog",
+    "props": {
+      "Caption": "Go To",
+      "ClientHeight": 148,
+      "ClientWidth": 266,
+      "OnCreate": "FormCreate",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "ItemLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Li&ne:",
+          "FocusControl": "ItemEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ColLbl",
+        "props": {
+          "Left": 137,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Col&umn:",
+          "FocusControl": "ColEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SideLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "Side:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiNumEdit",
+        "name": "ItemEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 121,
+          "Height": 21,
+          "TabOrder": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiNumEdit",
+        "name": "ColEdit",
+        "props": {
+          "Left": 137,
+          "Top": 25,
+          "Width": 121,
+          "Height": 21,
+          "TabOrder": 1
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "LeftSideEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Height": 17,
+          "Caption": "&Left",
+          "TabOrder": 2,
+          "TabStop": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "CenterSideEdit",
+        "props": {
+          "Left": 137,
+          "Top": 71,
+          "Height": 17,
+          "Caption": "&Center",
+          "TabOrder": 3
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "RightSideEdit",
+        "props": {
+          "Left": 8,
+          "Top": 92,
+          "Height": 17,
+          "Caption": "&Right",
+          "TabOrder": 4
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "OutputSideEdit",
+        "props": {
+          "Left": 137,
+          "Top": 92,
+          "Height": 17,
+          "Caption": "&Output",
+          "TabOrder": 5
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 109,
+          "Width": 266,
+          "TabOrder": 6
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

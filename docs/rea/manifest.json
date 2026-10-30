@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-16",
+  "artifact": {
+    "path": "C:\\Projetos\\BC4\\bc4\\BCompare.exe",
+    "sha256": "aba1b98f848a01c3729cfee3e8818ab8e0d947276bc42c9a55c1475c9f8438db",
+    "bytes": 41929704
+  },
+  "pe_evidence_id": "ev_b51566b63e23caf947294d5f63a7f42387d9e1c29ae6a8276c89bd2d3ecbb0f9",
+  "method": "REA-authenticated resources + validated x64 Delphi method-table records + retained REA evidence",
+  "counts": {
+    "forms": 200,
+    "actions": 501,
+    "action_trees": 14,
+    "classes": 210,
+    "published_methods": 1844,
+    "event_declarations": 2042,
+    "native_handlers_resolved": 2039,
+    "events_with_retained_rea_function": 4,
+    "retained_evidence": 90,
+    "function_evidence": 63
+  },
+  "state_counts": {
+    "fora_windows": 14,
+    "parcial": 101,
+    "ausente": 359,
+    "presente": 26,
+    "excluida_usuario": 1
+  },
+  "limitations": [
+    "Only this hash/PE32+ Delphi layout is decoded.",
+    "Event-table address resolution proves a static named binding, not execution or dynamic OnUpdate state.",
+    "Inherited components can omit event/property values; do not treat omission as no handler.",
+    "Action-tree declaration order is preserved; runtime merging/reordering is not yet reconstructed.",
+    "Published method tables do not enumerate every native function.",
+    "Presence in AnyCompare source is not behavioral equivalence."
+  ]
+}

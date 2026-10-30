@@ -1,0 +1,220 @@
+{
+  "resource_index": 646,
+  "name": "TTOTALCMDRPACKERDIALOG",
+  "sha256": "e7769384c4ddb95517aaa2682cbd416accce0d771ef4fbb97667d7587f6fc9b6",
+  "bytes": 1509,
+  "parse_status": "complete",
+  "components": 19,
+  "hierarchy": {
+    "class": "TTotalCmdrPackerDialog",
+    "name": "TotalCmdrPackerDialog",
+    "props": {
+      "Caption": "Add Total Commander \"Packer\" Plug-in",
+      "ClientHeight": 184,
+      "ClientWidth": 363,
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "BottomLineBevel",
+        "props": {
+          "Left": 0,
+          "Top": 143,
+          "Width": 363,
+          "Height": 2,
+          "Align": "alBottom",
+          "Shape": "bsBottomLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "PanelView",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 363,
+          "Height": 143,
+          "Align": "alClient",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "FilePanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "Lbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Width": 340,
+                  "Height": 26,
+                  "AutoSize": false,
+                  "Caption": "Additional archive types can be supported by adding Total Commander \"packer\" plug-ins.",
+                  "WordWrap": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "FilenameLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 42,
+                  "Height": 13,
+                  "Caption": "&Select \"packer\" plug-in file:",
+                  "FocusControl": "FilenameEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "DownloadLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 88,
+                  "Height": 13,
+                  "Caption": "\"Packer\" plug-in files are available at:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLinkLabel",
+                "name": "OfficialLinkLbl",
+                "props": {
+                  "Left": 24,
+                  "Top": 105,
+                  "Height": 13,
+                  "Caption": "%",
+                  "URL": "%"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLinkLabel",
+                "name": "UnofficialLinkLbl",
+                "props": {
+                  "Left": 24,
+                  "Top": 122,
+                  "Height": 13,
+                  "Caption": "%",
+                  "URL": "%"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpecBar",
+                "name": "FilenameEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 59,
+                  "Width": 347,
+                  "TabOrder": 0,
+                  "OnBrowse": "FilenameEditBrowse",
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "ConfirmPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "NameLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "Name:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "NameEditLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Height": 13,
+                  "Caption": "%"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "MaskLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 46,
+                  "Height": 13,
+                  "Caption": "&Mask:",
+                  "FocusControl": "MaskEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "MaskEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 63,
+                  "Width": 347,
+                  "Height": 21,
+                  "TabOrder": 0
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 145,
+          "Width": 363,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiBackBtn",
+            "name": "BackBtn",
+            "props": {
+              "OnClick": "BackClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiNextBtn",
+            "name": "NextBtn",
+            "props": {
+              "OnClick": "NextClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

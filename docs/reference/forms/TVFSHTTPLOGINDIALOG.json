@@ -1,0 +1,122 @@
+{
+  "resource_index": 666,
+  "name": "TVFSHTTPLOGINDIALOG",
+  "sha256": "375d23091bc0962df7b872e90237b7ff934297fe62e0d56a9bec539d7653a0ca",
+  "bytes": 767,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TVfsHttpLoginDialog",
+    "name": "VfsHttpLoginDialog",
+    "props": {
+      "Caption": "Authentication Required",
+      "ClientHeight": 177,
+      "ClientWidth": 435,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "PromptLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 419,
+          "Height": 13,
+          "AutoSize": false,
+          "Caption": "%",
+          "WordWrap": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "UsernameLbl",
+        "props": {
+          "Left": 8,
+          "Top": 29,
+          "Height": 13,
+          "Caption": "&Username:",
+          "FocusControl": "UsernameEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PasswordLbl",
+        "props": {
+          "Left": 8,
+          "Top": 75,
+          "Height": 13,
+          "Caption": "&Password:",
+          "FocusControl": "PasswordEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "UsernameEdit",
+        "props": {
+          "Left": 8,
+          "Top": 46,
+          "Width": 419,
+          "Height": 21,
+          "TabOrder": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "PasswordEdit",
+        "props": {
+          "Left": 8,
+          "Top": 92,
+          "Width": 419,
+          "Height": 21,
+          "TabOrder": 1,
+          "EchoMode": "emPassword"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "SaveCredentialsEdit",
+        "props": {
+          "Left": 8,
+          "Top": 121,
+          "Height": 17,
+          "Caption": "&Save credentials",
+          "TabOrder": 2
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 138,
+          "Width": 435,
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

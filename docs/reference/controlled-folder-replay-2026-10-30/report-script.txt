@@ -1,0 +1,145 @@
+﻿log verbose "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\runtime.log"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\basic-reverse-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\nested-reverse-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\case-parent-reverse-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\unicode-reverse-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory-reverse-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\empty-reverse-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\extensionless-reverse-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\ordering-reverse-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary\left" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary\right"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary-differences.xml"
+criteria binary
+load "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary\right" "C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary\left"
+expand all
+select all
+compare binary
+folder-report layout:xml options:display-all output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary-reverse.xml"
+folder-report layout:xml options:display-matches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary-reverse-matches.xml"
+folder-report layout:xml options:display-mismatches output-to:"C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\large-binary-reverse-differences.xml"

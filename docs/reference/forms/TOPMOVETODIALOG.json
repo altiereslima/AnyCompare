@@ -1,0 +1,112 @@
+{
+  "resource_index": 585,
+  "name": "TOPMOVETODIALOG",
+  "sha256": "f91d31d0ad875395a8a2dcc80b84bf079376b3723b76e35848b0132223d3142a",
+  "bytes": 596,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TOpMoveToDialog",
+    "name": "OpMoveToDialog",
+    "props": {
+      "HelpKeyword": "OpMoveTo",
+      "Caption": "Move to Folder",
+      "ClientHeight": 465,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "SelectionPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiImage",
+            "name": "LeftImage",
+            "props": {
+              "ImageIndex": "imgMoveTo"
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiImage",
+            "name": "RightImage",
+            "props": {
+              "ImageIndex": "imgMoveTo"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "ActionPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "ActionDescLbl",
+            "props": {
+              "Caption": "Move selected files to this folder:"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "FilteredWarnPanel",
+        "props": {
+          "Height": 120
+        },
+        "children": [
+          {
+            "class": "TUiDlgIcon",
+            "name": "WarnImage",
+            "props": {
+              "Left": 8,
+              "Top": 80,
+              "IconType": "diWarning"
+            },
+            "children": [],
+            "flags": 2,
+            "child_position": 3
+          },
+          {
+            "class": "TUiLabel",
+            "name": "WarnLbl",
+            "props": {
+              "Left": 48,
+              "Top": 86,
+              "Width": 337,
+              "Height": 26,
+              "AutoSize": false,
+              "Caption": "Folders with hidden items will not be moved.",
+              "WordWrap": true
+            },
+            "children": [],
+            "flags": 2,
+            "child_position": 4
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Top": 426
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

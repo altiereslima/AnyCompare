@@ -1,0 +1,79 @@
+{
+  "resource_index": 564,
+  "name": "TMEDETAILSFORM",
+  "sha256": "692ee64fb163eea276dd0c0caf921858525dda11f3c1277366e0205c0420579a",
+  "bytes": 551,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TMEDetailsForm",
+    "name": "DetailsForm",
+    "props": {
+      "Message": "Error Details",
+      "MinWidth": 0,
+      "OnAction": "",
+      "Timer": 0
+    },
+    "children": [
+      {
+        "class": "INVButton",
+        "name": "ContinueBtn",
+        "props": {
+          "Caption": "Continue",
+          "Enabled": true,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVButton",
+        "name": "SkipBtn",
+        "props": {
+          "Caption": "Skip",
+          "Enabled": true,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVButton",
+        "name": "CancelBtn",
+        "props": {
+          "Caption": "Abort",
+          "Enabled": true,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVLabel",
+        "name": "Label1",
+        "props": {
+          "Caption": "in which situation did the error occur?",
+          "Enabled": true,
+          "Spacing": 0
+        },
+        "children": []
+      },
+      {
+        "class": "INVEdit",
+        "name": "DetailsMemo",
+        "props": {
+          "Colored": true,
+          "Enabled": true,
+          "Lines": 9,
+          "Optional": false,
+          "OutputName": "error details",
+          "OutputType": "nvoOwnSection",
+          "Spacing": 0,
+          "Text": "",
+          "Valid": true
+        },
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "resource_index": 618,
+  "name": "TSCCOPDIALOG",
+  "sha256": "83e5c3bc3f0741adb3bac80564d07141ee62c1f9bd8106592730717b93df6f4f",
+  "bytes": 719,
+  "parse_status": "complete",
+  "components": 8,
+  "hierarchy": {
+    "class": "TSccOpDialog",
+    "name": "SccOpDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "%",
+      "ClientHeight": 277,
+      "ClientWidth": 497,
+      "Constraints.MinHeight": 145,
+      "Constraints.MinWidth": 269,
+      "OnClose": "FormClose",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "CommentLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "C&omments:",
+          "FocusControl": "CommentEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "CommentEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 481,
+          "Height": 188,
+          "Anchors": [
+            "akLeft",
+            "akTop",
+            "akRight",
+            "akBottom"
+          ],
+          "TabOrder": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "KeepCheckedOutEdit",
+        "props": {
+          "Left": 8,
+          "Top": 221,
+          "Height": 17,
+          "Anchors": [
+            "akLeft",
+            "akBottom"
+          ],
+          "Caption": "&Keep files checked out",
+          "TabOrder": 1
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 238,
+          "Width": 497,
+          "TabOrder": 2,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiAdvancedBtn",
+            "name": "AdvancedBtn",
+            "props": {
+              "Caption": "A&dvanced...",
+              "OnClick": "AdvancedClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

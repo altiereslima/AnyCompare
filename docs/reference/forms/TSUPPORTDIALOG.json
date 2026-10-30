@@ -1,0 +1,138 @@
+{
+  "resource_index": 625,
+  "name": "TSUPPORTDIALOG",
+  "sha256": "86c0a9d3d0604ba463c6eade4fb35560225f5887a31c54ac422c6b944bb5949a",
+  "bytes": 1288,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TSupportDialog",
+    "name": "SupportDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgSupport",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "Support",
+      "ClientHeight": 220,
+      "ClientWidth": 345,
+      "OnCreate": "FormCreate",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "WebLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "For online technical support, please visit our web site at:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLinkLabel",
+        "name": "WebLinkLbl",
+        "props": {
+          "Left": 24,
+          "Top": 25,
+          "Height": 13,
+          "Caption": "%",
+          "URL": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ExportLbl",
+        "props": {
+          "Left": 8,
+          "Top": 46,
+          "Width": 329,
+          "Height": 52,
+          "AutoSize": false,
+          "Caption": "Click the \"Export\" button to save your Beyond Compare settings in a package file, and then email it to us.  This will help us recreate and troubleshoot a problem.  Your passwords will not be included.",
+          "WordWrap": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLinkLabel",
+        "name": "EmailLinkLbl",
+        "props": {
+          "Left": 326,
+          "Top": 102,
+          "Width": 11,
+          "Height": 13,
+          "Alignment": "taRightJustify",
+          "Caption": "%",
+          "URL": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ConfidentialLbl",
+        "props": {
+          "Left": 8,
+          "Top": 129,
+          "Width": 329,
+          "Height": 39,
+          "AutoSize": false,
+          "Caption": "This information will be kept confidential and will only be used to reproduce the problem you are having.",
+          "WordWrap": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLinkLabel",
+        "name": "ExploreSettingsDirLinkLbl",
+        "props": {
+          "Left": 8,
+          "Top": 168,
+          "Height": 13,
+          "Caption": "Explore settings folder",
+          "URL": "%",
+          "OnClick": "ExploreSettingsDirLinkClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "ExportBtn",
+        "props": {
+          "Left": 8,
+          "Top": 98,
+          "Caption": "&Export",
+          "TabOrder": 0,
+          "OnClick": "ExportClick",
+          "AutoSize": "asLeft"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 181,
+          "Width": 345,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiCloseBtn",
+            "name": "CloseBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,13 @@
+case:
+A Pedra do Sigilo
+white:
+uma  forja antiga 
+mixed:
+a maga vermelha
+words:
+Fonte de Magia
+important:
+Crisol
+punctuation:
+Texto — antigo
+end:

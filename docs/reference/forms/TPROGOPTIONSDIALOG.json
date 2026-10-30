@@ -1,0 +1,4094 @@
+{
+  "resource_index": 605,
+  "name": "TPROGOPTIONSDIALOG",
+  "sha256": "72f0ddd61e831d8dd0b92ab2823a18bc34b493ab1430a9471254eb0e52bb413c",
+  "bytes": 38366,
+  "parse_status": "complete",
+  "components": 304,
+  "hierarchy": {
+    "class": "TProgOptionsDialog",
+    "name": "ProgOptionsDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "Options",
+      "ClientHeight": 501,
+      "ClientWidth": 657,
+      "OnActivate": "FormActivate",
+      "OnClose": "FormClose",
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnMouseWheel": "FormMouseWheel",
+      "OnShortCut": "FormShortCut",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "LeftBevel",
+        "props": {
+          "Left": 185,
+          "Top": 0,
+          "Width": 4,
+          "Height": 462,
+          "Align": "alLeft",
+          "Shape": "bsSpacer"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "CategoryPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 185,
+          "Height": 462,
+          "Align": "alLeft",
+          "BevelOuter": "bvNone",
+          "Color": 15591395,
+          "ParentBackground": false,
+          "TabOrder": 0,
+          "OnPaint": "CategoryPanelPaint"
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "CategorySearchBevel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 185,
+              "Height": 41,
+              "Align": "alTop",
+              "Shape": "bsSpacer"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSearchEdit",
+            "name": "CategorySearchEdit",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Width": 169,
+              "Height": 21,
+              "TabOrder": 0,
+              "OnChange": "CategorySearchEditChange"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "PanelView",
+        "props": {
+          "Left": 189,
+          "Top": 0,
+          "Width": 468,
+          "Height": 462,
+          "Align": "alClient",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "StartupPanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsStartup"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "StartupLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Startup",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "WorkspaceAutoLoadNameLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Height": 13,
+                  "Caption": "Load &workspace:",
+                  "FocusControl": "WorkspaceAutoLoadNameEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "WorkspaceAutoSaveNameLbl",
+                "props": {
+                  "Left": 238,
+                  "Top": 34,
+                  "Height": 13,
+                  "Caption": "On exit, sa&ve workspace as:",
+                  "FocusControl": "WorkspaceAutoSaveNameEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiComboBox",
+                "name": "WorkspaceAutoLoadNameEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 51,
+                  "Width": 222,
+                  "Height": 21,
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiComboBox",
+                "name": "WorkspaceAutoSaveNameEdit",
+                "props": {
+                  "Left": 238,
+                  "Top": 51,
+                  "Width": 222,
+                  "Height": 21,
+                  "TabOrder": 1,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "QuickCompareShowEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 80,
+                  "Height": 17,
+                  "Caption": "When starting with file comparison, show &quick compare dialog",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "QuickCompareRulesBasedPanel",
+                "props": {
+                  "Left": 16,
+                  "Top": 99,
+                  "Width": 444,
+                  "Height": 42,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 3
+                },
+                "children": [
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "QuickCompareBinaryEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "B&inary quick compare",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "QuickCompareRulesBasedEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 23,
+                      "Height": 17,
+                      "Caption": "&Rules-based quick compare",
+                      "TabOrder": 1,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "QuickCompareSkipDiffEdit",
+                "props": {
+                  "Left": 24,
+                  "Top": 143,
+                  "Height": 17,
+                  "Caption": "&Open view automatically if files are different",
+                  "TabOrder": 4,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "ClipboardPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 176,
+                  "Width": 468,
+                  "Height": 67,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 5
+                },
+                "children": [
+                  {
+                    "class": "TUiBevel",
+                    "name": "ClipboardBevel",
+                    "props": {
+                      "Left": 8,
+                      "Top": 0,
+                      "Width": 452,
+                      "Height": 1,
+                      "Shape": "bsTopLine"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "ClipboardLbl",
+                    "props": {
+                      "Left": 8,
+                      "Top": 8,
+                      "Height": 22,
+                      "Caption": "Clipboard Compare",
+                      "FontColor": "clGrayText",
+                      "FontSize": 3,
+                      "UseTitleFont": true
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "ClipboardEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 34,
+                      "Height": 17,
+                      "Caption": "Run &Clipboard Compare on Windows startup",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "ShellExtPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 243,
+                  "Width": 468,
+                  "Height": 236,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 6
+                },
+                "children": [
+                  {
+                    "class": "TUiBevel",
+                    "name": "ShellExtBevel",
+                    "props": {
+                      "Left": 8,
+                      "Top": 0,
+                      "Width": 452,
+                      "Height": 1,
+                      "Shape": "bsTopLine"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "ShellExtLbl",
+                    "props": {
+                      "Left": 8,
+                      "Top": 8,
+                      "Height": 22,
+                      "Caption": "Explorer Integration",
+                      "FontColor": "clGrayText",
+                      "FontSize": 3,
+                      "UseTitleFont": true
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "ShellExtMissingLbl",
+                    "props": {
+                      "Left": 8,
+                      "Top": 34,
+                      "Width": 452,
+                      "Height": 39,
+                      "AutoSize": false,
+                      "Caption": "This is a portable install.  Explorer integration requires installation of Beyond Compare for all users or for current user.",
+                      "WordWrap": true,
+                      "FontStyle": [
+                        "fsBold"
+                      ]
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "ShellExtEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 73,
+                      "Height": 17,
+                      "Caption": "Include Beyond Compare in &Explorer context menu",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiListTable",
+                    "name": "ShellExtItemPosTable",
+                    "props": {
+                      "Left": 24,
+                      "Top": 94,
+                      "Width": 280,
+                      "Height": 126,
+                      "Cols.Items": [
+                        "164",
+                        "120"
+                      ],
+                      "Cols.Strings": [
+                        "Command",
+                        "Location"
+                      ],
+                      "ModifyColIndex": 1,
+                      "TabOrder": 1,
+                      "VertLines": true,
+                      "OnModifyApply": "SomethingChangedClick",
+                      "OnModifyInit": "ShellExtItemPosTableModifyInit"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "TabPanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsTab"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "TabLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Tabs",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLinkLabel",
+                "name": "TabTabStopsLinkLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 294,
+                  "Width": 452,
+                  "Height": 26,
+                  "AutoSize": false,
+                  "Caption": "For settings that control tab stops in text files, see <a href=\"\">%s</a>",
+                  "LinkFontColor": "clWindowText",
+                  "LinkFontStyle": [
+                    "fsBold"
+                  ],
+                  "WordWrap": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "ViewNewTabLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Height": 13,
+                  "Caption": "Open sessions in:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "ChildViewNewTabLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 97,
+                  "Height": 13,
+                  "Caption": "Open child sessions in:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "ViewNewTabPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 49,
+                  "Width": 468,
+                  "Height": 42,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 0
+                },
+                "children": [
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "ViewNewWindowEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "A new win&dow",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "ViewNewTabEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 23,
+                      "Height": 17,
+                      "Caption": "A new &tab",
+                      "TabOrder": 1,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "ChildViewNewTabPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 112,
+                  "Width": 468,
+                  "Height": 42,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 1
+                },
+                "children": [
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "ChildViewNewWindowEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "A new wind&ow",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "ChildViewNewTabEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 23,
+                      "Height": 17,
+                      "Caption": "A new ta&b",
+                      "TabOrder": 1,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TabNewNextEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 160,
+                  "Height": 17,
+                  "Caption": "Open &new tab next to active tab",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TabSingleCloseWindowEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 181,
+                  "Height": 17,
+                  "Caption": "Closing &last remaining tab closes the window",
+                  "TabOrder": 3,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TabsConfirmCloseEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 202,
+                  "Height": 17,
+                  "Caption": "&Warn when closing multiple tabs",
+                  "TabOrder": 4,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "WindowsConfirmCloseEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 223,
+                  "Height": 17,
+                  "Caption": "Wa&rn when closing multiple windows",
+                  "TabOrder": 5,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TabSingleHideEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 244,
+                  "Height": 17,
+                  "Caption": "&Hide tab bar if single tab",
+                  "TabOrder": 6,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TabsOnTaskbarEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 265,
+                  "Height": 17,
+                  "Caption": "Show &previews for individual tabs in the taskbar",
+                  "TabOrder": 7,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "ColorPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "ColorLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Colors, Fonts",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLinkLabel",
+                "name": "ColorLinkLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 441,
+                  "Height": 13,
+                  "Caption": "Additional color schemes available on <a href=\"%s\">Scooter Software's web site</a>."
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPageControl",
+                "name": "ColorPageControl",
+                "props": {
+                  "Left": 0,
+                  "Top": 34,
+                  "Width": 468,
+                  "Height": 399,
+                  "ActivePage": "DirColorTabSheet",
+                  "TabOrder": 0
+                },
+                "children": [
+                  {
+                    "class": "TUiTabSheet",
+                    "name": "DirColorTabSheet",
+                    "props": {
+                      "HelpType": "htKeyword",
+                      "HelpKeyword": "OptionsDirColor",
+                      "Caption": "Folder Views",
+                      "OnShow": "ColorTabSheetShow"
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "DirElementLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 13,
+                          "Caption": "&Elements:",
+                          "FocusControl": "DirElementTreeView"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "DirFGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 25,
+                          "Height": 13,
+                          "Caption": "&Text color:",
+                          "FocusControl": "DirFGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "DirBGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 71,
+                          "Height": 13,
+                          "Caption": "Bac&kground:",
+                          "FocusControl": "DirBGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "DirFolderInfoFGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 117,
+                          "Height": 13,
+                          "Caption": "F&older info:",
+                          "FocusControl": "DirFolderInfoFGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "DirLogColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 25,
+                          "Height": 13,
+                          "Caption": "Bac&kground:",
+                          "FocusControl": "DirLogColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "DirFontLbl",
+                        "props": {
+                          "Left": 89,
+                          "Top": 261,
+                          "Width": 363,
+                          "Height": 13,
+                          "AutoSize": false,
+                          "Caption": "Sample Text"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiTreeView",
+                        "name": "DirElementTreeView",
+                        "props": {
+                          "Left": 8,
+                          "Top": 25,
+                          "Width": 244,
+                          "Height": 194,
+                          "ReadOnly": true,
+                          "TabOrder": 0,
+                          "OnChange": "DirElementTreeViewChange"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "DirFGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 42,
+                          "Width": 192,
+                          "Height": 21,
+                          "TabOrder": 1,
+                          "OnSelect": "DirElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "DirBGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 88,
+                          "Width": 192,
+                          "Height": 21,
+                          "TabOrder": 2,
+                          "OnSelect": "DirElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "DirFolderInfoFGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 134,
+                          "Width": 192,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 3,
+                          "OnSelect": "DirElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "DirUseStripesEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 163,
+                          "Height": 17,
+                          "Caption": "Use st&ripes",
+                          "TabOrder": 4,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "DirStripeBGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 184,
+                          "Width": 192,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 5,
+                          "OnSelect": "DirElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "DirLogColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 42,
+                          "Width": 192,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 6,
+                          "OnSelect": "DirElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "DirSelSystemEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 117,
+                          "Height": 17,
+                          "Caption": "Use syste&m",
+                          "TabOrder": 7,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "DirFontSystemEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 235,
+                          "Height": 17,
+                          "Caption": "Use &system font",
+                          "TabOrder": 8,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiButton",
+                        "name": "DirFontBtn",
+                        "props": {
+                          "Left": 8,
+                          "Top": 256,
+                          "Caption": "&Font...",
+                          "TabOrder": 9,
+                          "OnClick": "DirFontClick",
+                          "AutoSize": "asLeft"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "DirColoredFoldersEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 287,
+                          "Height": 17,
+                          "Caption": "&Color folders to reflect content",
+                          "TabOrder": 10,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "DirCenterGradientEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 308,
+                          "Height": 17,
+                          "Caption": "Use &gradient for center background",
+                          "TabOrder": 11,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "DirPreviewEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 346,
+                          "Height": 17,
+                          "Caption": "&Preview",
+                          "TabOrder": 12,
+                          "OnClick": "DirPreviewClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiTabSheet",
+                    "name": "FileColorTabSheet",
+                    "props": {
+                      "HelpType": "htKeyword",
+                      "HelpKeyword": "OptionsFileColor",
+                      "Caption": "File Views",
+                      "OnShow": "ColorTabSheetShow"
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileElementLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 13,
+                          "Caption": "&Elements:",
+                          "FocusControl": "FileElementTreeView"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileFGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 25,
+                          "Height": 13,
+                          "Caption": "&Text color:",
+                          "FocusControl": "FileFGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileBGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 71,
+                          "Height": 13,
+                          "Caption": "Bac&kground:",
+                          "FocusControl": "FileBGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileEditedColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 117,
+                          "Height": 13,
+                          "Caption": "Ed&ited:",
+                          "FocusControl": "FileEditedColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileSavedColorLbl",
+                        "props": {
+                          "Left": 360,
+                          "Top": 117,
+                          "Height": 13,
+                          "Caption": "Sa&ved:",
+                          "FocusControl": "FileSavedColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileItemNumFontLbl",
+                        "props": {
+                          "Left": 360,
+                          "Top": 163,
+                          "Width": 92,
+                          "Height": 23,
+                          "Alignment": "taCenter",
+                          "AutoSize": false,
+                          "Caption": "123",
+                          "Layout": "tlCenter"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileIgnoredColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 194,
+                          "Height": 13,
+                          "Caption": "I&gnored section:",
+                          "FocusControl": "FileIgnoredColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileFontStyleLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 117,
+                          "Height": 13,
+                          "Caption": "&Style:",
+                          "FocusControl": "FileFontStyleEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileDiffBGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 164,
+                          "Height": 13,
+                          "Caption": "Te&xt background:",
+                          "FocusControl": "FileDiffBGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileHasSigBGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 25,
+                          "Height": 13,
+                          "Caption": "&Important background:",
+                          "FocusControl": "FileHasSigBGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileHasInsigBGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 71,
+                          "Height": 13,
+                          "Caption": "&Unimportant background:",
+                          "FocusControl": "FileHasInsigBGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileOutputBGColorLbl",
+                        "props": {
+                          "Left": 260,
+                          "Top": 25,
+                          "Height": 13,
+                          "Caption": "Ed&ited background:",
+                          "FocusControl": "FileOutputBGColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileEditorFontLbl",
+                        "props": {
+                          "Left": 12,
+                          "Top": 266,
+                          "Width": 139,
+                          "Height": 13,
+                          "AutoSize": false,
+                          "Caption": "Sample Text"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileListFontLbl",
+                        "props": {
+                          "Left": 163,
+                          "Top": 266,
+                          "Width": 139,
+                          "Height": 13,
+                          "AutoSize": false,
+                          "Caption": "Sample Text"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileHexFontLbl",
+                        "props": {
+                          "Left": 314,
+                          "Top": 266,
+                          "Width": 139,
+                          "Height": 13,
+                          "AutoSize": false,
+                          "Caption": "89 FE DC BA"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiTreeView",
+                        "name": "FileElementTreeView",
+                        "props": {
+                          "Left": 8,
+                          "Top": 25,
+                          "Width": 244,
+                          "Height": 194,
+                          "ReadOnly": true,
+                          "TabOrder": 0,
+                          "OnChange": "FileElementTreeViewChange"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileFGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 42,
+                          "Width": 192,
+                          "Height": 21,
+                          "TabOrder": 1,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileBGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 88,
+                          "Width": 192,
+                          "Height": 21,
+                          "TabOrder": 2,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FileUseStripesEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 117,
+                          "Height": 17,
+                          "Caption": "Use st&ripes",
+                          "TabOrder": 3,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileStripeBGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 138,
+                          "Width": 192,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 4,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileEditedColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 134,
+                          "Width": 92,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 5,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileSavedColorEdit",
+                        "props": {
+                          "Left": 360,
+                          "Top": 134,
+                          "Width": 92,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 6,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiButton",
+                        "name": "FileItemNumFontBtn",
+                        "props": {
+                          "Left": 260,
+                          "Top": 163,
+                          "Caption": "&Font...",
+                          "TabOrder": 7,
+                          "OnClick": "FileItemNumFontClick",
+                          "AutoSize": "asLeft"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileIgnoredColorEdit",
+                        "props": {
+                          "Left": 360,
+                          "Top": 194,
+                          "Width": 92,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 8,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiComboBox",
+                        "name": "FileFontStyleEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 134,
+                          "Width": 192,
+                          "Height": 22,
+                          "Style": "csOwnerDrawFixed",
+                          "TabOrder": 9,
+                          "OnChange": "FileElementChange",
+                          "OnDrawItem": "FileFontStyleEditDrawItem"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileDiffBGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 181,
+                          "Width": 192,
+                          "Height": 21,
+                          "TabOrder": 10,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FileCurOverUnderOnlyEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 117,
+                          "Width": 193,
+                          "Height": 51,
+                          "Caption": "Only in &over/under layout",
+                          "TabOrder": 11,
+                          "WordWrap": true,
+                          "OnClick": "SomethingChangedClick",
+                          "AutoSize": "asNone"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FileSelSystemEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 117,
+                          "Height": 17,
+                          "Caption": "Use syste&m",
+                          "TabOrder": 12,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileHasSigBGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 42,
+                          "Width": 192,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 13,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileHasInsigBGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 88,
+                          "Width": 192,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 14,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "FileOutputBGColorEdit",
+                        "props": {
+                          "Left": 260,
+                          "Top": 42,
+                          "Width": 192,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 15,
+                          "OnSelect": "FileElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiButton",
+                        "name": "FileEditorFontBtn",
+                        "props": {
+                          "Left": 8,
+                          "Top": 235,
+                          "Caption": "E&ditor Font...",
+                          "TabOrder": 16,
+                          "OnClick": "FileEditorFontClick",
+                          "AutoSize": "asLeft"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiButton",
+                        "name": "FileListFontBtn",
+                        "props": {
+                          "Left": 159,
+                          "Top": 235,
+                          "Caption": "&Listing Font...",
+                          "TabOrder": 17,
+                          "OnClick": "FileListFontClick",
+                          "AutoSize": "asLeft"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiButton",
+                        "name": "FileHexFontBtn",
+                        "props": {
+                          "Left": 310,
+                          "Top": 235,
+                          "Caption": "&Hex Font...",
+                          "TabOrder": 18,
+                          "OnClick": "FileHexFontClick",
+                          "AutoSize": "asLeft"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FilePreviewEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 346,
+                          "Height": 17,
+                          "Caption": "&Preview",
+                          "TabOrder": 19,
+                          "OnClick": "FilePreviewClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiTabSheet",
+                    "name": "PixColorTabSheet",
+                    "props": {
+                      "HelpType": "htKeyword",
+                      "HelpKeyword": "OptionsPixColor",
+                      "Caption": "Picture Compare",
+                      "OnShow": "ColorTabSheetShow"
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "PixElementLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 13,
+                          "Caption": "&Elements:",
+                          "FocusControl": "PixElementTreeView"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "PixColorLbl",
+                        "props": {
+                          "Left": 228,
+                          "Top": 25,
+                          "Height": 13,
+                          "Caption": "Bac&kground:",
+                          "FocusControl": "PixColorEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiTreeView",
+                        "name": "PixElementTreeView",
+                        "props": {
+                          "Left": 8,
+                          "Top": 25,
+                          "Width": 212,
+                          "Height": 194,
+                          "ReadOnly": true,
+                          "TabOrder": 0,
+                          "OnChange": "PixElementTreeViewChange"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiColorEdit",
+                        "name": "PixColorEdit",
+                        "props": {
+                          "Left": 228,
+                          "Top": 42,
+                          "Width": 224,
+                          "Height": 21,
+                          "AllowDefault": false,
+                          "Selected": "clBlack",
+                          "TabOrder": 1,
+                          "OnSelect": "PixElementChange",
+                          "OnShowDlg": "ColorEditShowDlg"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "PixShowCheckerboardEdit",
+                        "props": {
+                          "Left": 228,
+                          "Top": 71,
+                          "Height": 17,
+                          "Caption": "Show &transparency as checkerboarding",
+                          "TabOrder": 2,
+                          "OnClick": "PixElementChange"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "PixPreviewEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 346,
+                          "Height": 17,
+                          "Caption": "&Preview",
+                          "TabOrder": 3,
+                          "OnClick": "PixPreviewClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "TextPanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsText"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "TextLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Text Editing",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "TextContextLinesLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 143,
+                  "Height": 13,
+                  "Caption": "Number of &context lines:",
+                  "FocusControl": "TextContextLinesEdit",
+                  "Transparent": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLinkLabel",
+                "name": "TextTabStopsLinkLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 193,
+                  "Height": 13,
+                  "Caption": "To set tab stops, use <a href=\"\">%s</a>",
+                  "LinkFontColor": "clWindowText",
+                  "LinkFontStyle": [
+                    "fsBold"
+                  ]
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TextAutoIndentEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Height": 17,
+                  "Caption": "Auto i&ndent",
+                  "TabOrder": 0,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TextAutoUnindentEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 55,
+                  "Height": 17,
+                  "Caption": "Bac&kspace unindents",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TextCursorBeyondEOLEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 76,
+                  "Height": 17,
+                  "Caption": "Allow positioning b&eyond end of line",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TextFindCurWordEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 97,
+                  "Height": 17,
+                  "Caption": "Initialize \"Text to find\" to be current &word",
+                  "TabOrder": 3,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "TextShowGapBarsEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 118,
+                  "Height": 17,
+                  "Caption": "Show fi&ltered line counts",
+                  "TabOrder": 4,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpinEdit",
+                "name": "TextContextLinesEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 160,
+                  "Width": 49,
+                  "Height": 21,
+                  "Max": 99,
+                  "MaxLength": 2,
+                  "TabOrder": 5,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "NextDiffPanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsNextDiff"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "NextDiffLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Next Difference",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "NextDiffLoadFirstEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Height": 17,
+                  "Caption": "When &loading new files, go to first difference",
+                  "TabOrder": 0,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "NextDiffAfterCopyEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 55,
+                  "Height": 17,
+                  "Caption": "Go to next difference in files after &copying to other side",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "NextDiffFileSameDirEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 76,
+                  "Height": 17,
+                  "Caption": "Limit \"Next Difference Files\" to current &folder",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "NextDiffNonePanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 93,
+                  "Width": 468,
+                  "Height": 71,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 3
+                },
+                "children": [
+                  {
+                    "class": "TUiLabel",
+                    "name": "NextDiffNoneLbl",
+                    "props": {
+                      "Left": 8,
+                      "Top": 8,
+                      "Height": 13,
+                      "Caption": "When no more differences:"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "NextDiffWrapEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 25,
+                      "Height": 17,
+                      "Caption": "&Wrap around to first difference",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "NextDiffShowMsgEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 46,
+                      "Height": 17,
+                      "Caption": "Show &message panel",
+                      "TabOrder": 1,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "BackupPanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsBackup"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "BackupLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Backups",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "BackupKindLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 80,
+                  "Height": 13,
+                  "Caption": "Bac&kup \"abc.txt\" as:",
+                  "FocusControl": "BackupNameTildeExtEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "BackupOnCopyEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Height": 17,
+                  "Caption": "Backup files before &copy",
+                  "TabOrder": 0,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "BackupOnSaveEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 55,
+                  "Height": 17,
+                  "Caption": "Backup files before &save",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "BackupKindPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 95,
+                  "Width": 468,
+                  "Height": 63,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 2
+                },
+                "children": [
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "BackupNameTildeExtEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "%",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "BackupNameExtTildeEdit",
+                    "props": {
+                      "Left": 165,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "%",
+                      "TabOrder": 1,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "BackupNameExtBakEdit",
+                    "props": {
+                      "Left": 322,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "%",
+                      "TabOrder": 2,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "BackupTildeNameExtEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 23,
+                      "Height": 17,
+                      "Caption": "%",
+                      "TabOrder": 3,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "BackupNameBakEdit",
+                    "props": {
+                      "Left": 165,
+                      "Top": 23,
+                      "Height": 17,
+                      "Caption": "%",
+                      "TabOrder": 4,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "BackupNameBakExtEdit",
+                    "props": {
+                      "Left": 322,
+                      "Top": 23,
+                      "Height": 17,
+                      "Caption": "%",
+                      "TabOrder": 5,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "BackupCopyToDirEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 44,
+                      "Height": 17,
+                      "Caption": "abc.txt in this &folder:",
+                      "TabOrder": 6,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiSpecBar",
+                "name": "BackupDirEdit",
+                "props": {
+                  "Left": 24,
+                  "Top": 160,
+                  "Width": 436,
+                  "AutoCompleteEx": "acDirs",
+                  "TabOrder": 3,
+                  "OnBrowse": "BackupDirEditBrowse",
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "OpPanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsOp"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "OpConfirmLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Confirmations",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "OpSyncConfirmModeLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 244,
+                  "Height": 13,
+                  "Caption": "Synchronize confirmations:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmCopyEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Height": 17,
+                  "Caption": "Confirm file &copy",
+                  "TabOrder": 0,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmMoveEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 55,
+                  "Height": 17,
+                  "Caption": "Confirm file &move",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmOverwriteReadOnlyEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 76,
+                  "Height": 17,
+                  "Caption": "Confirm replacing, deleting &read-only files",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmOverwriteSysFileEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 97,
+                  "Height": 17,
+                  "Caption": "Confirm replacing, deleting &system files",
+                  "TabOrder": 3,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmOverwriteNewerEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 118,
+                  "Height": 17,
+                  "Caption": "Confirm &overwriting newer files",
+                  "TabOrder": 4,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmMoveReplaceEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 139,
+                  "Height": 17,
+                  "Caption": "Confirm replacing files during mo&ve",
+                  "TabOrder": 5,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmCompareEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 160,
+                  "Height": 17,
+                  "Caption": "Confirm con&tent compare",
+                  "TabOrder": 6,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmDeleteEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 181,
+                  "Height": 17,
+                  "Caption": "Confirm file &delete",
+                  "TabOrder": 7,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmDeleteNoSidesEdit",
+                "props": {
+                  "Left": 24,
+                  "Top": 202,
+                  "Height": 17,
+                  "Caption": "Require &explicit side selection in Delete dialog",
+                  "TabOrder": 8,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "OpConfirmMergeEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 223,
+                  "Height": 17,
+                  "Caption": "Confirm file mer&ge",
+                  "TabOrder": 9,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "OpSyncConfirmModePanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 259,
+                  "Width": 468,
+                  "Height": 63,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 10
+                },
+                "children": [
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "OpSyncConfirmPromptEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "&Prompt",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "OpSyncConfirmYesToAllEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 23,
+                      "Height": 17,
+                      "Caption": "&Yes to All",
+                      "TabOrder": 1,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "OpSyncConfirmNoToAllEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 44,
+                      "Height": 17,
+                      "Caption": "&No to All",
+                      "TabOrder": 2,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "OpIncludeFilteredPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 336,
+                  "Width": 468,
+                  "Height": 98,
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 11
+                },
+                "children": [
+                  {
+                    "class": "TUiBevel",
+                    "name": "OpIncludeFilteredBevel",
+                    "props": {
+                      "Left": 8,
+                      "Top": 0,
+                      "Width": 452,
+                      "Height": 1,
+                      "Shape": "bsTopLine"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "OpIncludeFilteredLbl",
+                    "props": {
+                      "Left": 8,
+                      "Top": 8,
+                      "Height": 22,
+                      "Caption": "Filtered Items",
+                      "FontColor": "clGrayText",
+                      "FontSize": 3,
+                      "UseTitleFont": true
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiLabel",
+                    "name": "OpIncludeFilteredDescLbl",
+                    "props": {
+                      "Left": 8,
+                      "Top": 34,
+                      "Width": 452,
+                      "Height": 39,
+                      "AutoSize": false,
+                      "Caption": "Actions performed on folders that contain items hidden by display or file filters can optionally affect the hidden items.",
+                      "WordWrap": true
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "OpIncludeFilteredEdit",
+                    "props": {
+                      "Left": 8,
+                      "Top": 73,
+                      "Height": 17,
+                      "Caption": "&Include hidden items by default",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "ArchivePanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsArchive"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "ArchiveLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Archive Types",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "ArchiveNeedsRestartLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 408,
+                  "Width": 452,
+                  "Height": 26,
+                  "AutoSize": false,
+                  "Caption": "Restart Beyond Compare to use new archive associations",
+                  "WordWrap": true,
+                  "FontColor": "clRed"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiListTable",
+                "name": "ArchiveTable",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Width": 452,
+                  "Height": 335,
+                  "Cols.Items": [
+                    "228",
+                    "228"
+                  ],
+                  "Cols.Strings": [
+                    "Name",
+                    "Mask"
+                  ],
+                  "ModifyColIndex": 1,
+                  "TabOrder": 0,
+                  "VertLines": true,
+                  "OnModifyApply": "ArchiveTableModifyApply"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "ArchiveTotalCmdrPackerBtn",
+                "props": {
+                  "Left": 8,
+                  "Top": 377,
+                  "Caption": "Add &Plug-in...",
+                  "TabOrder": 1,
+                  "OnClick": "ArchiveTotalCmdrPackerClick",
+                  "AutoSize": "asLeft"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "CommandPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "CommandLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "Toolbars, Shortcuts, Menus",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "CommandViewLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Height": 13,
+                  "Caption": "Select &view:",
+                  "FocusControl": "CommandViewEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "CommandTableLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 80,
+                  "Height": 13,
+                  "Caption": "&Commands:",
+                  "FocusControl": "CommandTable"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "CommandLongDescLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 226,
+                  "Width": 452,
+                  "Height": 38,
+                  "AutoSize": false,
+                  "Caption": "%",
+                  "WordWrap": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "CommandShortCutLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 272,
+                  "Height": 13,
+                  "Caption": "&Shortcut:",
+                  "FocusControl": "CommandShortCutEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "CommandDisplayFilterModeLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 326,
+                  "Height": 13,
+                  "Caption": "Display &filter mode:",
+                  "FocusControl": "CommandDisplayFilterModeEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBevel",
+                "name": "ToolbarShowCaptionsBevel",
+                "props": {
+                  "Left": 8,
+                  "Top": 380,
+                  "Width": 452,
+                  "Height": 1,
+                  "Shape": "bsTopLine"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiComboBox",
+                "name": "CommandViewEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 51,
+                  "Width": 135,
+                  "Height": 21,
+                  "AutoDropDown": true,
+                  "Style": "csDropDownList",
+                  "TabOrder": 0,
+                  "OnClick": "CommandViewEditClick",
+                  "Images": "BcImages.MainImages",
+                  "OnGetImageIndex": "CommandViewEditGetImageIndex"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSearchEdit",
+                "name": "CommandSearchEdit",
+                "props": {
+                  "Left": 336,
+                  "Top": 72,
+                  "Width": 124,
+                  "Height": 21,
+                  "TabOrder": 1,
+                  "OnChange": "CommandSearchEditChange"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiListTable",
+                "name": "CommandTable",
+                "props": {
+                  "Left": 8,
+                  "Top": 97,
+                  "Width": 452,
+                  "Height": 121,
+                  "AllowColClick": true,
+                  "AllowColResize": true,
+                  "Cols.Items": [
+                    "165",
+                    "65",
+                    "65",
+                    "165"
+                  ],
+                  "Cols.Strings": [
+                    "Name",
+                    "Menu",
+                    "Toolbar",
+                    "Shortcut"
+                  ],
+                  "Images": "BcImages.MainImages",
+                  "PopupMenu": "CommandPopup",
+                  "TabOrder": 2,
+                  "VertLines": true,
+                  "OnClick": "CommandTableClick",
+                  "OnCompareItems": "CommandTableCompareItems",
+                  "OnGetChecked": "CommandTableGetChecked",
+                  "OnGetHasChecked": "CommandTableGetHasChecked",
+                  "OnGetImageIndex": "CommandTableGetImageIndex",
+                  "OnGetText": "CommandTableGetText",
+                  "OnToggleChecked": "CommandTableToggleChecked"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiShortCutEdit",
+                "name": "CommandShortCutEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 289,
+                  "Width": 153,
+                  "Height": 21,
+                  "TabOrder": 3,
+                  "OnChange": "CommandShortCutEditChange",
+                  "OnKeyDown": "CommandShortCutEditKeyDown"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "CommandShortCutRemoveBtn",
+                "props": {
+                  "Left": 169,
+                  "Top": 289,
+                  "Caption": "&Remove",
+                  "TabOrder": 4,
+                  "OnClick": "CommandShortCutRemoveClick",
+                  "AutoSize": "asLeft"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "CommandShortCutDefaultBtn",
+                "props": {
+                  "Left": 249,
+                  "Top": 289,
+                  "Caption": "&Default",
+                  "TabOrder": 5,
+                  "OnClick": "CommandShortCutDefaultClick",
+                  "AutoSize": "asLeft"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiComboBox",
+                "name": "CommandDisplayFilterModeEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 343,
+                  "Width": 83,
+                  "Height": 21,
+                  "Style": "csDropDownList",
+                  "TabOrder": 6,
+                  "OnChange": "CommandDisplayFilterModeEditChange"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "ToolbarShowCaptionsEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 396,
+                  "Height": 17,
+                  "Caption": "&Large buttons with text labels (all views)",
+                  "TabOrder": 7,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "OpenWithPanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsOpenWith"
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "OpenWithLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 22,
+                  "Caption": "\"Open With\" Applications",
+                  "FontColor": "clGrayText",
+                  "FontSize": 3,
+                  "UseTitleFont": true
+                },
+                "children": []
+              },
+              {
+                "class": "TUiListTable",
+                "name": "OpenWithTable",
+                "props": {
+                  "Left": 8,
+                  "Top": 34,
+                  "Width": 452,
+                  "Height": 200,
+                  "Cols.Items": [
+                    "152",
+                    "152",
+                    "152"
+                  ],
+                  "Cols.Strings": [
+                    "Description",
+                    "Command Line",
+                    "Shortcut"
+                  ],
+                  "DragMode": "dmAutomatic",
+                  "TabOrder": 0,
+                  "VertLines": true,
+                  "WantReturns": true,
+                  "OnClick": "OpenWithTableClick",
+                  "OnDblClick": "OpenWithEditClick",
+                  "OnDeleteItem": "OpenWithTableDeleteItem",
+                  "OnDeleteItemQuery": "OpenWithTableDeleteItemQuery",
+                  "OnDragDrop": "OpenWithTableDragDrop",
+                  "OnDragOver": "OpenWithTableDragOver",
+                  "OnGetText": "OpenWithTableGetText",
+                  "OnInsertNewItem": "OpenWithNewClick",
+                  "OnItemsDeleted": "OpenWithTableItemsDeleted",
+                  "OnKeyDown": "OpenWithTableKeyDown"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "OpenWithNewBtn",
+                "props": {
+                  "Left": 8,
+                  "Top": 242,
+                  "Width": 24,
+                  "Hint": "New",
+                  "ImageIndex": "imgListAdd",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 1,
+                  "OnClick": "OpenWithNewClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "OpenWithDeleteBtn",
+                "props": {
+                  "Left": 32,
+                  "Top": 242,
+                  "Width": 24,
+                  "Hint": "Delete",
+                  "ImageIndex": "imgListDelete",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 2,
+                  "OnClick": "OpenWithDeleteClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "OpenWithEditBtn",
+                "props": {
+                  "Left": 56,
+                  "Top": 242,
+                  "Width": 24,
+                  "Hint": "Edit",
+                  "ImageIndex": "imgListEdit",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 3,
+                  "OnClick": "OpenWithEditClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "OpenWithCloneBtn",
+                "props": {
+                  "Left": 80,
+                  "Top": 242,
+                  "Width": 24,
+                  "Hint": "Clone",
+                  "ImageIndex": "imgListClone",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 4,
+                  "OnClick": "OpenWithCloneClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "TweakPanel",
+            "props": {
+              "HelpType": "htKeyword",
+              "HelpKeyword": "OptionsTweak"
+            },
+            "children": [
+              {
+                "class": "TUiScrollBox",
+                "name": "TweakScrollBox",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 468,
+                  "Height": 462,
+                  "VertScrollBar.Tracking": true,
+                  "Align": "alClient",
+                  "BorderStyle": "bsNone",
+                  "TabOrder": 0
+                },
+                "children": [
+                  {
+                    "class": "TUiBevel",
+                    "name": "TweakBottomSpacerBevel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 1851,
+                      "Width": 451,
+                      "Height": 19,
+                      "Align": "alTop",
+                      "Shape": "bsSpacer"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "CheckForUpdatesPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Width": 451,
+                      "Height": 92,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 0
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "CheckForUpdatesLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Check for Updates",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "CheckForUpdatesDayAmtDaysLbl",
+                        "props": {
+                          "Left": 77,
+                          "Top": 59,
+                          "Height": 13,
+                          "Caption": "days",
+                          "FocusControl": "CheckForUpdatesDayAmtEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "CheckForUpdatesLastCheckedLbl",
+                        "props": {
+                          "Left": 158,
+                          "Top": 59,
+                          "Height": 13,
+                          "Caption": "%"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "CheckForUpdatesBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 91,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "CheckForUpdatesEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Height": 17,
+                          "Caption": "Check every:",
+                          "TabOrder": 0,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "CheckForUpdatesDayAmtEdit",
+                        "props": {
+                          "Left": 24,
+                          "Top": 55,
+                          "Width": 49,
+                          "Height": 21,
+                          "Max": 365,
+                          "MaxLength": 3,
+                          "Min": 1,
+                          "Position": 1,
+                          "TabOrder": 1,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "TextTweakPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 92,
+                      "Width": 451,
+                      "Height": 341,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 1
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "TextTweakLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Editor Display",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "TextItemSpacingLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 143,
+                          "Height": 13,
+                          "Caption": "Extra line spacing:",
+                          "FocusControl": "TextItemSpacingEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "TextItemSpacingPixelsLbl",
+                        "props": {
+                          "Left": 61,
+                          "Top": 164,
+                          "Height": 13,
+                          "Caption": "pixels",
+                          "FocusControl": "TextItemSpacingEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "TextRightMarginOffsetLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 189,
+                          "Height": 13,
+                          "Caption": "Show column line at:",
+                          "FocusControl": "TextRightMarginOffsetEdit",
+                          "Transparent": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "DimPctLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 235,
+                          "Height": 13,
+                          "Caption": "Dim inactive pane by:",
+                          "FocusControl": "DimPctEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "DimPctPctLbl",
+                        "props": {
+                          "Left": 61,
+                          "Top": 256,
+                          "Height": 13,
+                          "Caption": "%",
+                          "FocusControl": "DimPctEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "TextInputFontLbl",
+                        "props": {
+                          "Left": 105,
+                          "Top": 307,
+                          "Width": 338,
+                          "Height": 13,
+                          "AutoSize": false,
+                          "Caption": "Sample Text"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "TextTweakBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 340,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "TextSyntaxDiffsEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Height": 17,
+                          "Caption": "Show syntax highlighting on difference lines",
+                          "TabOrder": 0,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "TextCrosshatchBeyondEOFEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 55,
+                          "Height": 17,
+                          "Caption": "Use crosshatching for lines beyond the end of file",
+                          "TabOrder": 1,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "TextRightGutterEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 76,
+                          "Height": 17,
+                          "Caption": "Right side gutter for left editor (compare only)",
+                          "TabOrder": 2,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "TextUseFontLinkingEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 97,
+                          "Height": 17,
+                          "Caption": "Enable font linking in editors",
+                          "TabOrder": 3,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "TextUseOrphanColorEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 118,
+                          "Height": 17,
+                          "Caption": "Use orphan color",
+                          "TabOrder": 4,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "TextItemSpacingEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 160,
+                          "Width": 49,
+                          "Height": 21,
+                          "Max": 6,
+                          "MaxLength": 2,
+                          "Min": -6,
+                          "TabOrder": 5,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "TextRightMarginOffsetEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 206,
+                          "Width": 49,
+                          "Height": 21,
+                          "TabOrder": 6,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "DimPctEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 252,
+                          "Width": 49,
+                          "Height": 21,
+                          "Increment": 5,
+                          "Max": 100,
+                          "MaxLength": 3,
+                          "TabOrder": 7,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "TextUseInputFontEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 281,
+                          "Height": 17,
+                          "Caption": "Use different font for merge input panes:",
+                          "TabOrder": 8,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiButton",
+                        "name": "TextInputFontBtn",
+                        "props": {
+                          "Left": 24,
+                          "Top": 302,
+                          "Caption": "Font...",
+                          "TabOrder": 9,
+                          "OnClick": "TextInputFontClick",
+                          "AutoSize": "asLeft"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "OpTweakPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 433,
+                      "Width": 451,
+                      "Height": 243,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 2
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "OpTweakLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "File Operations",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileComparePriorityLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 143,
+                          "Height": 13,
+                          "Caption": "Comparison priority:",
+                          "FocusControl": "FileComparePriorityEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileBinaryCompareBufSizeLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 189,
+                          "Height": 13,
+                          "Caption": "Buffer size for binary compare:",
+                          "FocusControl": "FileBinaryCompareBufSizeEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "FileBinaryCompareBufSizeBytesLbl",
+                        "props": {
+                          "Left": 93,
+                          "Top": 210,
+                          "Height": 13,
+                          "Caption": "bytes",
+                          "FocusControl": "FileBinaryCompareBufSizeEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "OpTweakBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 242,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "OpBeepWhenFinishedEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Height": 17,
+                          "Caption": "Beep after long file operations",
+                          "TabOrder": 0,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "OpClearCDReadOnlyEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 55,
+                          "Height": 17,
+                          "Caption": "Remove read-only flag when copying from a CD or DVD",
+                          "TabOrder": 1,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FileCheckForChangesEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 76,
+                          "Height": 17,
+                          "Caption": "Check for files changed on disk",
+                          "TabOrder": 2,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FileCheckForChangesAutoReloadEdit",
+                        "props": {
+                          "Left": 24,
+                          "Top": 97,
+                          "Height": 17,
+                          "Caption": "Automatically reload unless changes will be discarded",
+                          "TabOrder": 3,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "UseIPv6Edit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 118,
+                          "Height": 17,
+                          "Caption": "Use IPv6 when available",
+                          "TabOrder": 4,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiComboBox",
+                        "name": "FileComparePriorityEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 160,
+                          "Width": 67,
+                          "Height": 21,
+                          "Style": "csDropDownList",
+                          "TabOrder": 5,
+                          "OnChange": "SomethingChangedClick",
+                          "Items.Strings": [
+                            "Low",
+                            "Normal",
+                            "High"
+                          ]
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "FileBinaryCompareBufSizeEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 206,
+                          "Width": 81,
+                          "Height": 21,
+                          "Min": 1,
+                          "Position": 1,
+                          "TabOrder": 6,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "InterfacePanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 743,
+                      "Width": 451,
+                      "Height": 214,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 4
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "InterfaceLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Interface",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "ThumbnailScrollLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 143,
+                          "Height": 13,
+                          "Caption": "For thumbnail view on large files:"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "InterfaceBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 213,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "ShowHintsEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Height": 17,
+                          "Caption": "Show hints for toolbar buttons, etc.",
+                          "TabOrder": 0,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "HintShortCutsEdit",
+                        "props": {
+                          "Left": 24,
+                          "Top": 55,
+                          "Height": 17,
+                          "Caption": "Show keyboard shortcut in hints",
+                          "TabOrder": 1,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FileEscCloseEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 76,
+                          "Height": 17,
+                          "Caption": "ESC key closes file views",
+                          "TabOrder": 2,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FileVertScrollBarSingleEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 97,
+                          "Height": 17,
+                          "Caption": "Single vertical scrollbar",
+                          "TabOrder": 3,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "FileUseLeftRatioEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 118,
+                          "Height": 17,
+                          "Caption": "Sticky splitter position",
+                          "TabOrder": 4,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiPanel",
+                        "name": "ThumbnailScrollPanel",
+                        "props": {
+                          "Left": 0,
+                          "Top": 158,
+                          "Width": 451,
+                          "Height": 42,
+                          "BevelOuter": "bvNone",
+                          "TabOrder": 5
+                        },
+                        "children": [
+                          {
+                            "class": "TUiRadioButton",
+                            "name": "ThumbnailCompressEdit",
+                            "props": {
+                              "Left": 8,
+                              "Top": 2,
+                              "Height": 17,
+                              "Caption": "Compress to fit",
+                              "TabOrder": 0,
+                              "OnClick": "SomethingChangedClick"
+                            },
+                            "children": []
+                          },
+                          {
+                            "class": "TUiRadioButton",
+                            "name": "ThumbnailScrollEdit",
+                            "props": {
+                              "Left": 8,
+                              "Top": 23,
+                              "Height": 17,
+                              "Caption": "Allow scrolling",
+                              "TabOrder": 1,
+                              "OnClick": "SomethingChangedClick"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "HomePanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 676,
+                      "Width": 451,
+                      "Height": 67,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 3
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "HomeLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Home View",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "HomeBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 66,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "HomeMRUSessionOnlyEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Height": 17,
+                          "Caption": "Sticky session selection",
+                          "TabOrder": 0,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "LogPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 957,
+                      "Width": 451,
+                      "Height": 260,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 5
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "LogLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Log Panel",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "LogIncludeLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Height": 13,
+                          "Caption": "Include:"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "LogMaxSizeLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 160,
+                          "Height": 13,
+                          "Caption": "Display up to:",
+                          "FocusControl": "LogMaxSizeEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "LogMaxSizeMessagesLbl",
+                        "props": {
+                          "Left": 101,
+                          "Top": 181,
+                          "Height": 13,
+                          "Caption": "messages",
+                          "FocusControl": "LogMaxSizeEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "LogAutoSaveFilenameLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 206,
+                          "Height": 13,
+                          "Caption": "Automatically save messages to file:",
+                          "FocusControl": "LogAutoSaveFilenameEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "LogBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 259,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "LogIncludeOpSummaryEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 51,
+                          "Height": 17,
+                          "Caption": "Operation summaries",
+                          "TabOrder": 0,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "LogIncludeOpDetailsEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 72,
+                          "Height": 17,
+                          "Caption": "Operation details",
+                          "TabOrder": 1,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "LogIncludeWarningEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 93,
+                          "Height": 17,
+                          "Caption": "Warnings",
+                          "TabOrder": 2,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "LogIncludeConnectionEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 114,
+                          "Height": 17,
+                          "Caption": "FTP trace",
+                          "TabOrder": 3,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "LogIncludeDebugEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 135,
+                          "Height": 17,
+                          "Caption": "Debug messages",
+                          "TabOrder": 4,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "LogMaxSizeEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 177,
+                          "Width": 89,
+                          "Height": 21,
+                          "Increment": 1000,
+                          "Min": 1000,
+                          "Position": 1000000,
+                          "TabOrder": 5,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpecBar",
+                        "name": "LogAutoSaveFilenameEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 223,
+                          "Width": 435,
+                          "TabOrder": 6,
+                          "OnBrowse": "LogAutoSaveFilenameEditBrowse",
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "MetricsPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 1217,
+                      "Width": 451,
+                      "Height": 187,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 6
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "MetricsLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Metrics",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "SessionAutoSavedCapacityLbl",
+                        "props": {
+                          "Left": 61,
+                          "Top": 38,
+                          "Height": 13,
+                          "Caption": "max auto-saved sessions",
+                          "FocusControl": "SessionAutoSavedCapacityEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "MRUCapacityLbl",
+                        "props": {
+                          "Left": 61,
+                          "Top": 67,
+                          "Height": 13,
+                          "Caption": "max most recently used (MRU) items",
+                          "FocusControl": "MRUCapacityEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "HintPauseLbl",
+                        "props": {
+                          "Left": 101,
+                          "Top": 96,
+                          "Height": 13,
+                          "Caption": "milliseconds before help hint appears",
+                          "FocusControl": "HintPauseEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "HintHidePauseLbl",
+                        "props": {
+                          "Left": 101,
+                          "Top": 125,
+                          "Height": 13,
+                          "Caption": "milliseconds before help hint disappears",
+                          "FocusControl": "HintHidePauseEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "SearchTimerIntervalLbl",
+                        "props": {
+                          "Left": 101,
+                          "Top": 154,
+                          "Height": 13,
+                          "Caption": "milliseconds before incremental search resets",
+                          "FocusControl": "SearchTimerIntervalEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "MetricsBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 186,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "SessionAutoSavedCapacityEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Width": 49,
+                          "Height": 21,
+                          "TabOrder": 0,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "MRUCapacityEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 63,
+                          "Width": 49,
+                          "Height": 21,
+                          "Min": 1,
+                          "Position": 1,
+                          "TabOrder": 1,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "HintPauseEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 92,
+                          "Width": 89,
+                          "Height": 21,
+                          "TabOrder": 2,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "HintHidePauseEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 121,
+                          "Width": 89,
+                          "Height": 21,
+                          "TabOrder": 3,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpinEdit",
+                        "name": "SearchTimerIntervalEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 150,
+                          "Width": 89,
+                          "Height": 21,
+                          "TabOrder": 4,
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "FilterPresetPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 1404,
+                      "Width": 451,
+                      "Height": 242,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 7
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "FilterPresetLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Name Filter Presets",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "FilterPresetBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 241,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiListTable",
+                        "name": "FilterPresetTable",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Width": 435,
+                          "Height": 161,
+                          "Cols.Items": [
+                            "219",
+                            "219"
+                          ],
+                          "Cols.Strings": [
+                            "Name",
+                            "Mask"
+                          ],
+                          "DragMode": "dmAutomatic",
+                          "TabOrder": 0,
+                          "VertLines": true,
+                          "WantReturns": true,
+                          "OnClick": "FilterPresetTableClick",
+                          "OnDblClick": "FilterPresetEditClick",
+                          "OnDeleteItemQuery": "FilterPresetTableDeleteItemQuery",
+                          "OnDragDrop": "FilterPresetTableDragDrop",
+                          "OnDragOver": "FilterPresetTableDragOver",
+                          "OnGetText": "FilterPresetTableGetText",
+                          "OnInsertNewItem": "FilterPresetNewClick",
+                          "OnItemsDeleted": "SomethingChangedClick",
+                          "OnKeyDown": "FilterPresetTableKeyDown"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBitBtn",
+                        "name": "FilterPresetNewBtn",
+                        "props": {
+                          "Left": 8,
+                          "Top": 203,
+                          "Width": 24,
+                          "Hint": "New",
+                          "ImageIndex": "imgListAdd",
+                          "Images": "BcImages.MainImages",
+                          "TabOrder": 1,
+                          "OnClick": "FilterPresetNewClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBitBtn",
+                        "name": "FilterPresetDeleteBtn",
+                        "props": {
+                          "Left": 32,
+                          "Top": 203,
+                          "Width": 24,
+                          "Hint": "Delete",
+                          "ImageIndex": "imgListDelete",
+                          "Images": "BcImages.MainImages",
+                          "TabOrder": 2,
+                          "OnClick": "FilterPresetDeleteClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBitBtn",
+                        "name": "FilterPresetEditBtn",
+                        "props": {
+                          "Left": 56,
+                          "Top": 203,
+                          "Width": 24,
+                          "Hint": "Edit",
+                          "ImageIndex": "imgListEdit",
+                          "Images": "BcImages.MainImages",
+                          "TabOrder": 3,
+                          "OnClick": "FilterPresetEditClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "ScriptPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 1646,
+                      "Width": 451,
+                      "Height": 134,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 8
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "ScriptLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Scripts",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiLabel",
+                        "name": "ScriptSharedDirLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 80,
+                          "Height": 13,
+                          "Caption": "Shared scripts folder:",
+                          "FocusControl": "ScriptSharedDirEdit"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "ScriptBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 133,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "ScriptBeepWhenFinishedEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Height": 17,
+                          "Caption": "Beep when finished",
+                          "TabOrder": 0,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiCheckBox",
+                        "name": "ScriptCloseWhenFinishedEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 55,
+                          "Height": 17,
+                          "Caption": "Close when finished",
+                          "TabOrder": 1,
+                          "OnClick": "SomethingChangedClick"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpecBar",
+                        "name": "ScriptSharedDirEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 97,
+                          "Width": 435,
+                          "AutoCompleteEx": "acDirs",
+                          "TabOrder": 2,
+                          "OnBrowse": "ScriptSharedDirEditBrowse",
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "class": "TUiPanel",
+                    "name": "SharedSessionPanel",
+                    "props": {
+                      "Left": 0,
+                      "Top": 1780,
+                      "Width": 451,
+                      "Height": 71,
+                      "Align": "alTop",
+                      "BevelOuter": "bvNone",
+                      "TabOrder": 9
+                    },
+                    "children": [
+                      {
+                        "class": "TUiLabel",
+                        "name": "SharedSessionLbl",
+                        "props": {
+                          "Left": 8,
+                          "Top": 8,
+                          "Height": 22,
+                          "Caption": "Shared Sessions File",
+                          "FontColor": "clGrayText",
+                          "FontSize": 3,
+                          "UseTitleFont": true
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiBevel",
+                        "name": "SharedSessionBevel",
+                        "props": {
+                          "Left": 8,
+                          "Top": 70,
+                          "Width": 435,
+                          "Height": 1,
+                          "Shape": "bsTopLine"
+                        },
+                        "children": []
+                      },
+                      {
+                        "class": "TUiSpecBar",
+                        "name": "SharedSessionFilenameEdit",
+                        "props": {
+                          "Left": 8,
+                          "Top": 34,
+                          "Width": 435,
+                          "TabOrder": 0,
+                          "OnBrowse": "SharedSessionFilenameEditBrowse",
+                          "OnChange": "SomethingChangedClick"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 462,
+          "Width": 657,
+          "ParentBackground": false,
+          "ParentColor": true,
+          "TabOrder": 2,
+          "OnPaint": "BtnPanelPaint"
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "OnClick": "ApplyClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {
+              "OnClick": "CancelClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAdvancedBtn",
+            "name": "ApplyBtn",
+            "props": {
+              "Caption": "&Apply",
+              "OnClick": "ApplyClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "CommandPopup",
+        "props": {
+          "Left": 8,
+          "Top": 8
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "CommandMenuAllowedAllItem",
+            "props": {
+              "Caption": "Show All in Menu",
+              "OnClick": "CommandMenuAllowedAllClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "CommandToolbarAllowedAllItem",
+            "props": {
+              "Caption": "Show All on Toolbar",
+              "OnClick": "CommandToolbarAllowedAllClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

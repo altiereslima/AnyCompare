@@ -1,0 +1,308 @@
+{
+  "evidence_id": "ev_9965aa99f2d13f5f3ff8089bfce9a6ba79a9fff5511acf58a47dac3a1ca201ee",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "instrument_with_frida",
+  "parameters": {
+    "session_id": "2f528908-575e-4a79-8c9a-ef701d6aa027",
+    "device_id": "local",
+    "mode": "spawn",
+    "program": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+    "argv": [
+      "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+      "/solo",
+      "/silent",
+      "/ro",
+      "@C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report-script.txt"
+    ]
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "2f528908-575e-4a79-8c9a-ef701d6aa027",
+    "device_id": "local",
+    "state": "detached",
+    "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+    "pid": 26608,
+    "mode": "spawn",
+    "scripts": [
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "name": "rea-682a8411-f9c8-4126-b3ba-f0e544e9a915"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "ready",
+          "module": "BCompare.exe",
+          "base": "0x400000",
+          "pid": 26608,
+          "limit": 100
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "font",
+          "height": -12,
+          "width": 0,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "font",
+          "height": -11,
+          "width": 0,
+          "weight": 400,
+          "quality": 0,
+          "face": "Tahoma"
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "align",
+          "address": "0x859830",
+          "unit": 4,
+          "n": 1,
+          "m": 2,
+          "left": null,
+          "right": null,
+          "stack": [
+            "0x114e685",
+            "0x114e05d",
+            "0x114e80d",
+            "0x115fec0",
+            "0x1160dba",
+            "0x1173586",
+            "0x118cce2",
+            "0x118cd36",
+            "0x19b0613",
+            "0x19b10f1",
+            "0x19b168e",
+            "0x10d7405"
+          ]
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "align",
+          "address": "0x859830",
+          "unit": 4,
+          "n": 5,
+          "m": 9,
+          "left": null,
+          "right": null,
+          "stack": [
+            "0x114e685",
+            "0x114e05d",
+            "0x114e80d",
+            "0x115fec0",
+            "0x1160dba",
+            "0x1173586",
+            "0x118cce2",
+            "0x118cd36",
+            "0x19b0613",
+            "0x19b10f1",
+            "0x19b168e",
+            "0x10d7405"
+          ]
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "align",
+          "address": "0x859830",
+          "unit": 4,
+          "n": 7,
+          "m": 7,
+          "left": null,
+          "right": null,
+          "stack": [
+            "0x114e685",
+            "0x114e05d",
+            "0x114e80d",
+            "0x115fec0",
+            "0x1160dba",
+            "0x1173586",
+            "0x118cce2",
+            "0x118cd36",
+            "0x19b0613",
+            "0x19b10f1",
+            "0x19b168e",
+            "0x10d7405"
+          ]
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "align",
+          "address": "0x859830",
+          "unit": 4,
+          "n": 6,
+          "m": 5,
+          "left": null,
+          "right": null,
+          "stack": [
+            "0x114e685",
+            "0x114e05d",
+            "0x114e80d",
+            "0x115fec0",
+            "0x1160dba",
+            "0x1173586",
+            "0x118cce2",
+            "0x118cd36",
+            "0x19b0613",
+            "0x19b10f1",
+            "0x19b168e",
+            "0x10d7405"
+          ]
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "align",
+          "address": "0x859830",
+          "unit": 4,
+          "n": 9,
+          "m": 9,
+          "left": null,
+          "right": null,
+          "stack": [
+            "0x114e685",
+            "0x114e05d",
+            "0x114e80d",
+            "0x115fec0",
+            "0x1160dba",
+            "0x1173586",
+            "0x118cce2",
+            "0x118cd36",
+            "0x19b0613",
+            "0x19b10f1",
+            "0x19b168e",
+            "0x10d7405"
+          ]
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "align",
+          "address": "0x859830",
+          "unit": 4,
+          "n": 4,
+          "m": 4,
+          "left": null,
+          "right": null,
+          "stack": [
+            "0x114e685",
+            "0x114e05d",
+            "0x114e80d",
+            "0x115fec0",
+            "0x1160dba",
+            "0x1173586",
+            "0x118cce2",
+            "0x118cd36",
+            "0x19b0613",
+            "0x19b10f1",
+            "0x19b168e",
+            "0x10d7405"
+          ]
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "align",
+          "address": "0x859830",
+          "unit": 4,
+          "n": 5,
+          "m": 5,
+          "left": null,
+          "right": null,
+          "stack": [
+            "0x114e685",
+            "0x114e05d",
+            "0x114e80d",
+            "0x115fec0",
+            "0x1160dba",
+            "0x1173586",
+            "0x118cce2",
+            "0x118cd36",
+            "0x19b0613",
+            "0x19b10f1",
+            "0x19b168e",
+            "0x10d7405"
+          ]
+        }
+      },
+      {
+        "script_id": "682a8411-f9c8-4126-b3ba-f0e544e9a915",
+        "type": "send",
+        "payload": {
+          "kind": "align",
+          "address": "0x859830",
+          "unit": 4,
+          "n": 6,
+          "m": 6,
+          "left": null,
+          "right": null,
+          "stack": [
+            "0x114e685",
+            "0x114e05d",
+            "0x114e80d",
+            "0x115fec0",
+            "0x1160dba",
+            "0x1173586",
+            "0x118cce2",
+            "0x118cd36",
+            "0x19b0613",
+            "0x19b10f1",
+            "0x19b168e",
+            "0x10d7405"
+          ]
+        }
+      }
+    ],
+    "messages_truncated": false,
+    "source_kind": "file",
+    "source_path": "C:\\Projetos\\BC4\\anycompare\\tools\\observe_reference_fonts_and_alignment.frida.js",
+    "source_sha256": "7b663a522972bf8a2ce32ef4145a15f18c044401c7d7a59f1f6bad43866fcec1",
+    "cleanup_error": null
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

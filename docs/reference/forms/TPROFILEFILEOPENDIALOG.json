@@ -1,0 +1,249 @@
+{
+  "resource_index": 600,
+  "name": "TPROFILEFILEOPENDIALOG",
+  "sha256": "d0d320454c4c24e3ce24b9195801c15e67a942ec897e4ce0e15d6cfb71753e4c",
+  "bytes": 2011,
+  "parse_status": "complete",
+  "components": 15,
+  "hierarchy": {
+    "class": "TProfileFileOpenDialog",
+    "name": "ProfileFileOpenDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "Open File Using Profile",
+      "ClientHeight": 371,
+      "ClientWidth": 362,
+      "Constraints.MinHeight": 190,
+      "Constraints.MinWidth": 185,
+      "OnClose": "FormClose",
+      "OnCloseQuery": "FormCloseQuery",
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnKeyDown": "FormKeyDown",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "LeftBevel",
+        "props": {
+          "Left": 0,
+          "Top": 37,
+          "Width": 8,
+          "Height": 237,
+          "Align": "alLeft",
+          "Shape": "bsSpacer"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBevel",
+        "name": "RightBevel",
+        "props": {
+          "Left": 354,
+          "Top": 37,
+          "Width": 8,
+          "Height": 237,
+          "Align": "alRight",
+          "Shape": "bsSpacer"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "DirPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 362,
+          "Height": 37,
+          "Align": "alTop",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0,
+          "DesignSize": [
+            362,
+            37
+          ]
+        },
+        "children": [
+          {
+            "class": "TUiSpeedButton",
+            "name": "DirUpOneLevelBtn",
+            "props": {
+              "Left": 331,
+              "Top": 8,
+              "Hint": "Up One Level",
+              "Anchors": [
+                "akTop",
+                "akRight"
+              ],
+              "Flat": false,
+              "ImageIndex": "imgUpOneLevel",
+              "Images": "BcImages.MainImages",
+              "OnClick": "DirUpOneLevelClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpecBar",
+            "name": "DirEdit",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Width": 315,
+              "AcceptImageIndex": "imgAccept",
+              "Anchors": [
+                "akLeft",
+                "akTop",
+                "akRight"
+              ],
+              "AutoCompleteEx": "acDirs",
+              "Images": "BcImages.MainImages",
+              "TabOrder": 0,
+              "OnAcceptClick": "DirAcceptClick",
+              "OnBrowse": "DirEditBrowse",
+              "OnChange": "DirEditChange",
+              "OnUpdateTitles": "DirEditUpdateTitles"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiListView",
+        "name": "ListView",
+        "props": {
+          "Left": 8,
+          "Top": 37,
+          "Width": 346,
+          "Height": 237,
+          "Align": "alClient",
+          "Columns": [
+            {
+              "AutoSize": true
+            }
+          ],
+          "ReadOnly": true,
+          "RowSelect": true,
+          "ShowColumnHeaders": false,
+          "TabOrder": 1,
+          "ViewStyle": "vsReport",
+          "OnDblClick": "ListViewDblClick",
+          "OnSelectItem": "ListViewSelectItem"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "NamePanel",
+        "props": {
+          "Left": 0,
+          "Top": 274,
+          "Width": 362,
+          "Height": 58,
+          "Align": "alBottom",
+          "BevelOuter": "bvNone",
+          "TabOrder": 2,
+          "DesignSize": [
+            362,
+            58
+          ]
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "NameLbl",
+            "props": {
+              "Left": 8,
+              "Top": 12,
+              "Height": 13,
+              "Caption": "File &name:",
+              "FocusControl": "NameEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "FilterLbl",
+            "props": {
+              "Left": 8,
+              "Top": 41,
+              "Height": 13,
+              "Caption": "Files of &type:",
+              "FocusControl": "FilterEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiComboBox",
+            "name": "NameEdit",
+            "props": {
+              "Left": 79,
+              "Top": 8,
+              "Width": 274,
+              "Height": 21,
+              "Anchors": [
+                "akLeft",
+                "akTop",
+                "akRight"
+              ],
+              "TabOrder": 0,
+              "OnChange": "NameEditChange",
+              "IsMRU": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiComboBox",
+            "name": "FilterEdit",
+            "props": {
+              "Left": 79,
+              "Top": 37,
+              "Width": 274,
+              "Height": 21,
+              "Style": "csDropDownList",
+              "Anchors": [
+                "akLeft",
+                "akTop",
+                "akRight"
+              ],
+              "TabOrder": 1,
+              "OnChange": "FilterEditChange"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 332,
+          "Width": 362,
+          "TabOrder": 3,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "OnClick": "OkClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

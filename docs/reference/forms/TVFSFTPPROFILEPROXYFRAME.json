@@ -1,0 +1,171 @@
+{
+  "resource_index": 661,
+  "name": "TVFSFTPPROFILEPROXYFRAME",
+  "sha256": "48941b63221a991343616cbb4a012f519d1bf17c1f14af76ad44b812f90d4f24",
+  "bytes": 1228,
+  "parse_status": "complete",
+  "components": 12,
+  "hierarchy": {
+    "class": "TVfsFtpProfileProxyFrame",
+    "name": "VfsFtpProfileProxyFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileFtpProxy",
+      "Caption": "Proxy"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "ProxyTypeLbl",
+        "props": {
+          "Left": 8,
+          "Top": 58,
+          "Height": 13,
+          "Caption": "Proxy &type:",
+          "FocusControl": "ProxyTypeEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiLabel",
+        "name": "HostLbl",
+        "props": {
+          "Left": 8,
+          "Top": 104,
+          "Height": 13,
+          "Caption": "&Host:",
+          "FocusControl": "HostEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PortLbl",
+        "props": {
+          "Left": 198,
+          "Top": 104,
+          "Height": 13,
+          "Caption": "P&ort:",
+          "FocusControl": "PortEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 2
+      },
+      {
+        "class": "TUiLabel",
+        "name": "UsernameLbl",
+        "props": {
+          "Left": 8,
+          "Top": 150,
+          "Height": 13,
+          "Caption": "&Username:",
+          "FocusControl": "UsernameEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 3
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PasswordLbl",
+        "props": {
+          "Left": 131,
+          "Top": 150,
+          "Height": 13,
+          "Caption": "Pass&word:",
+          "FocusControl": "PasswordEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 4
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "EnabledEdit",
+        "props": {
+          "Left": 8,
+          "Top": 33,
+          "Height": 17,
+          "Caption": "Use &proxy",
+          "TabOrder": 1,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "ProxyTypeEdit",
+        "props": {
+          "Left": 8,
+          "Top": 75,
+          "Width": 163,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 2,
+          "OnChange": "ProxyTypeEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "HostEdit",
+        "props": {
+          "Left": 8,
+          "Top": 121,
+          "Width": 182,
+          "Height": 21,
+          "TabOrder": 3,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiNumEdit",
+        "name": "PortEdit",
+        "props": {
+          "Left": 198,
+          "Top": 121,
+          "Width": 49,
+          "Height": 21,
+          "MaxLength": 5,
+          "TabOrder": 4,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "UsernameEdit",
+        "props": {
+          "Left": 8,
+          "Top": 167,
+          "Width": 115,
+          "Height": 21,
+          "TabOrder": 5,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "PasswordEdit",
+        "props": {
+          "Left": 131,
+          "Top": 167,
+          "Width": 116,
+          "Height": 21,
+          "TabOrder": 6,
+          "OnChange": "SomethingChangedClick",
+          "EchoMode": "emPassword"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

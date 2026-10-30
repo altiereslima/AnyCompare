@@ -1,0 +1,25 @@
+case:
+A pedra do sigilo
+white:
+uma forja antiga
+mixed:
+A maga azul
+words:
+Fonte da Magia
+important:
+Cadinho
+punctuation:
+Texto - antigo
+end:
+anchor-0:
+aXbYz
+anchor-1:
+aXbcYz
+anchor-2:
+aXbcdYz
+anchor-3:
+aXabcdYz
+anchor-4:
+aXbYcZd
+anchor-5:
+lado A palavra comum fim Z

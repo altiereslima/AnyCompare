@@ -1,0 +1,64 @@
+{
+  "evidence_id": "ev_41c4b73dae69a05c40b6cce804bafce29f7ed0bc2c93aa82bb5150ddaa9c601f",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "instrument_with_frida",
+  "parameters": {
+    "session_id": "7aefe40a-91de-40e7-8b23-7e2d077612c9",
+    "device_id": "local",
+    "mode": "spawn",
+    "program": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-reverse-runtime\\BCompare.exe",
+    "argv": [
+      "@C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-reverse-replay\\report-script.txt",
+      "/silent"
+    ]
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "7aefe40a-91de-40e7-8b23-7e2d077612c9",
+    "device_id": "local",
+    "state": "running",
+    "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-reverse-runtime\\BCompare.exe",
+    "pid": 6744,
+    "mode": "spawn",
+    "scripts": [
+      {
+        "script_id": "5f942eeb-73f5-40ea-9b7f-2c11e896cf29",
+        "name": "rea-5f942eeb-73f5-40ea-9b7f-2c11e896cf29"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "5f942eeb-73f5-40ea-9b7f-2c11e896cf29",
+        "type": "send",
+        "payload": {
+          "kind": "target",
+          "path": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-reverse-runtime\\BCompare.exe",
+          "base": "0x400000",
+          "pid": 6744
+        }
+      }
+    ],
+    "messages_truncated": false,
+    "source_kind": "file",
+    "source_path": "C:\\Projetos\\BC4\\anycompare\\tools\\observe_reference_section_count.frida.js",
+    "source_sha256": "ccc473b889a4b73d467eff414f326d3057463de7217e5d2dcd5d0804863d6328",
+    "cleanup_error": null
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

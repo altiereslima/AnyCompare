@@ -1,0 +1,515 @@
+{
+  "resource_index": 675,
+  "name": "TVFSVIEWSSLCERTDIALOG",
+  "sha256": "6cb2e508405f540d4fda15a409a80f3ef669a3efb3a097482eab6314c03a1087",
+  "bytes": 3199,
+  "parse_status": "complete",
+  "components": 46,
+  "hierarchy": {
+    "class": "TVfsViewSSLCertDialog",
+    "name": "VfsViewSSLCertDialog",
+    "props": {
+      "Caption": "View Certificate",
+      "ClientHeight": 517,
+      "ClientWidth": 409,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "SubjectLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Subject"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectCommonNameDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 29,
+          "Height": 13,
+          "Caption": "Common name:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectCommonNameLbl",
+        "props": {
+          "Left": 120,
+          "Top": 29,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectOrganizationDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 50,
+          "Height": 13,
+          "Caption": "Organization:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectOrganizationLbl",
+        "props": {
+          "Left": 120,
+          "Top": 50,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectOriganizationalUnitDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Height": 13,
+          "Caption": "Unit:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectOriganizationalUnitLbl",
+        "props": {
+          "Left": 120,
+          "Top": 71,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectCountryDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 92,
+          "Height": 13,
+          "Caption": "Country:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectCountryLbl",
+        "props": {
+          "Left": 120,
+          "Top": 92,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectStateDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 113,
+          "Height": 13,
+          "Caption": "State:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectStateLbl",
+        "props": {
+          "Left": 120,
+          "Top": 113,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectLocalityDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 134,
+          "Height": 13,
+          "Caption": "Locality:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectLocalityLbl",
+        "props": {
+          "Left": 120,
+          "Top": 134,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectEmailDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 155,
+          "Height": 13,
+          "Caption": "Email:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SubjectEmailLbl",
+        "props": {
+          "Left": 120,
+          "Top": 155,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBevel",
+        "name": "IssuerBevel",
+        "props": {
+          "Left": 8,
+          "Top": 176,
+          "Width": 393,
+          "Height": 1,
+          "Shape": "bsTopLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerLbl",
+        "props": {
+          "Left": 8,
+          "Top": 184,
+          "Height": 13,
+          "Caption": "Issuer"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerCommonNameDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 205,
+          "Height": 13,
+          "Caption": "Common name:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerCommonNameLbl",
+        "props": {
+          "Left": 120,
+          "Top": 205,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerOrganizationDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 226,
+          "Height": 13,
+          "Caption": "Organization:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerOrganizationLbl",
+        "props": {
+          "Left": 120,
+          "Top": 226,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerOrganizationalUnitDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 247,
+          "Height": 13,
+          "Caption": "Unit:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerOrganizationalUnitLbl",
+        "props": {
+          "Left": 120,
+          "Top": 247,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerCountryDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 268,
+          "Height": 13,
+          "Caption": "Country:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerCountryLbl",
+        "props": {
+          "Left": 120,
+          "Top": 268,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerStateDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 289,
+          "Height": 13,
+          "Caption": "State:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerStateLbl",
+        "props": {
+          "Left": 120,
+          "Top": 289,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerLocalityDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 310,
+          "Height": 13,
+          "Caption": "Locality:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerLocalityLbl",
+        "props": {
+          "Left": 120,
+          "Top": 310,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerEmailDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 331,
+          "Height": 13,
+          "Caption": "Email:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuerEmailLbl",
+        "props": {
+          "Left": 120,
+          "Top": 331,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBevel",
+        "name": "DetailsBevel",
+        "props": {
+          "Left": 8,
+          "Top": 352,
+          "Width": 393,
+          "Height": 1,
+          "Shape": "bsTopLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DetailsLbl",
+        "props": {
+          "Left": 8,
+          "Top": 360,
+          "Height": 13,
+          "Caption": "Details"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuedOnDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 381,
+          "Height": 13,
+          "Caption": "Issued on:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "IssuedOnLbl",
+        "props": {
+          "Left": 120,
+          "Top": 381,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ExpiresOnDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 402,
+          "Height": 13,
+          "Caption": "Expires on:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ExpiresOnLbl",
+        "props": {
+          "Left": 120,
+          "Top": 402,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SerialNumberDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 423,
+          "Height": 13,
+          "Caption": "Serial number:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SerialNumberLbl",
+        "props": {
+          "Left": 120,
+          "Top": 423,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "MD5FingerprintDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 444,
+          "Height": 13,
+          "Caption": "MD5 fingerprint:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "MD5FingerprintLbl",
+        "props": {
+          "Left": 120,
+          "Top": 444,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SHA1FingerprintDescLbl",
+        "props": {
+          "Left": 8,
+          "Top": 465,
+          "Height": 13,
+          "Caption": "SHA1 fingerprint:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SHA1FingerprintLbl",
+        "props": {
+          "Left": 120,
+          "Top": 465,
+          "Height": 13,
+          "Caption": "%"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 478,
+          "Width": 409,
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiCloseBtn",
+            "name": "CloseBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

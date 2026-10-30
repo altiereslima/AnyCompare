@@ -1,0 +1,14 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\alternating-reverse-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\alternating-reverse-right.bin
+00000000    42 41 42 41 42 41 42   BABABAB <> 00000000 41 42 41 42 41 42 41 42  ABABABAB
+----------------------------------------------------------------------------------------
+00000007 41 42 41 42 41 42 41 42  ABABABAB =  00000008 41 42 41 42 41 42 41 42  ABABABAB
+0000000F 41 42 41 42 41 42 41 42  ABABABAB    00000010 41 42 41 42 41 42 41 42  ABABABAB
+00000017 41 42 41 42 41 42 41 42  ABABABAB    00000018 41 42 41 42 41 42 41 42  ABABABAB
+----------------------------------------------------------------------------------------
+0000001F 41                       A        <>
+----------------------------------------------------------------------------------------

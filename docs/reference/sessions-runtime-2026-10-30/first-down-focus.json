@@ -1,0 +1,37 @@
+{
+  "window": {
+    "app": "process:C:\\Projetos\\BC4\\anycompare\\.codex\\reference-sessions-runtime\\BC4Reference.exe",
+    "id": 1114846,
+    "title": "example.txt - Comparar Textos - Beyond Compare"
+  },
+  "accessibility": {
+    "focused_element": "384 árvore",
+    "tree": "Window: \"example.txt - Comparar Textos - Beyond Compare\", App: BC4Reference.exe.\n\t0 janela example.txt - Comparar Textos - Beyond Compare Secondary Actions: Raise\n\t\t384 árvore\n\t\t\t385 item da árvore (selectable, settable, string) Novo Value: 0\n\t\t\t386 item da árvore (selectable, settable, string) Comparar Pastas (F) Value: 1\n\t\t\t387 item da árvore (selectable, settable, string) Combinar Pasta (L) Value: 1\n\t\t\t388 item da árvore (selectable, settable, string) Sincronizar Pastas Value: 1\n\t\t\t389 item da árvore (selectable, settable, string) Comparar Textos Value: 1\n\t\t\t390 item da árvore (selectable, settable, string) Mesclar Texto Value: 1\n\t\t\t391 item da árvore (selectable, settable, string) Comparar Tabelas Value: 1\n\t\t\t392 item da árvore (selectable, settable, string) Comparar Hex Value: 1\n\t\t\t393 item da árvore (selectable, settable, string) Comparar MP3 Value: 1\n\t\t\t394 item da árvore (selectable, settable, string) Comparar Imagens Value: 1\n\t\t\t395 item da árvore (selectable, settable, string) Comparar Registro Value: 1\n\t\t\t396 item da árvore (selectable, settable, string) Comparar Versões Value: 1\n\t\t1 painel ID: 264320\n\t\t\t2 painel ID: 461064\n\t\t\t\t3 barra de ferramentas MainBar ID: 592192\n\t\t\t\t\t4 painel ID: 854090\n\t\t\t\t\t717 botão Página Inicial\n\t\t\t\t\t718 separador (disabled)\n\t\t\t\t\t719 botão Todos\n\t\t\t\t\t720 botão Diferenças\n\t\t\t\t\t721 botão Iguais\n\t\t\t\t\t722 separador (disabled)\n\t\t\t\t\t723 botão Contexto\n\t\t\t\t\t724 botão Menor\n\t\t\t\t\t725 separador (disabled)\n\t\t\t\t\t726 botão Regras\n\t\t\t\t\t727 item de menu Formato\n\t\t\t\t\t728 separador (disabled)\n\t\t\t\t\t729 botão (disabled) Copiar\n\t\t\t\t\t730 botão Editar\n\t\t\t\t\t731 separador (disabled)\n\t\t\t\t\t732 botão Próxima Seção\n\t\t\t\t\t733 botão Seção Anterior\n\t\t\t\t\t734 separador (disabled)\n\t\t\t\t\t735 botão Inverter\n\t\t\t\t\t736 botão Recarregar\n\t\t\t25 Barra de status ID: 393400\n\t\t\t\t26 text Foca em sessões suspensas botão de listagem que podem ser abertos nesta visualização.\n\t\t\t\t27 text Foca em sessões suspensas botão de listagem que podem ser abertos nesta visualização.\n\t\t\t\t28 text Foca em sessões suspensas botão de listagem que podem ser abertos nesta visualização.\n\t\t\t\t29 text Foca em sessões suspensas botão de listagem que podem ser abertos nesta visualização.\n\t\t\t30 painel ID: 1050822\n\t\t\t\t31 painel ID: 395476\n\t\t\t\t\t32 painel ID: 592220\n\t\t\t\t\t\t33 painel ID: 657784\n\t\t\t\t\t\t\t34 painel ID: 330106\n\t\t\t\t\t\t\t35 barra de rolagem (disabled, settable, float) Value: 0 ID: 199260\n\t\t\t\t\t\t\t\t36 botão (disabled) Uma coluna à esquerda ID: UpButton\n\t\t\t\t\t\t\t\t37 botão (disabled) Uma coluna à direita ID: DownButton\n\t\t\t\t\t\t38 painel ID: 461118\n\t\t\t\t\t\t\t39 painel ID: 723180\n\t\t\t\t\t40 painel ID: 395506\n\t\t\t\t\t\t41 painel ID: 330040\n\t\t\t\t\t\t\t42 painel ID: 199254\n\t\t\t\t\t\t\t\t43 painel ID: 199264\n\t\t\t\t\t\t\t\t44 barra de rolagem (disabled, settable, float) Value: 0 ID: 199262\n\t\t\t\t\t\t\t\t\t45 botão (disabled) Uma linha acima ID: UpButton\n\t\t\t\t\t\t\t\t\t46 botão (disabled) Uma linha abaixo ID: DownButton\n\t\t\t\t\t\t\t\t47 Barra de status ID: 199258\n\t\t\t\t\t\t\t\t\t48 text 1: 1\n\t\t\t\t\t\t\t\t\t49 text Texto padrão\n\t\t\t\t\t\t\t\t\t50 text Editar desativado\n\t\t\t\t\t\t\t\t51 barra de rolagem (disabled, settable, float) Value: 0 ID: 199256\n\t\t\t\t\t\t\t\t\t52 botão (disabled) Uma coluna à esquerda ID: UpButton\n\t\t\t\t\t\t\t\t\t53 botão (disabled) Uma coluna à direita ID: DownButton\n\t\t\t\t\t\t\t54 barra de ferramentas ID: 264650\n\t\t\t\t\t\t\t\t55 caixa de combinação (settable, string) Value: C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\right\\example.txt ID: 264652\n\t\t\t\t\t\t\t\t\t56 editar (settable, string) Value: C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\right\\example.txt ID: 1001\n\t\t\t\t\t\t\t\t\t57 botão Abrir ID: DropDown\n\t\t\t\t\t\t\t\t737 botão (disabled)\n\t\t\t\t\t\t\t\t738 item de menu\n\t\t\t\t\t\t60 painel ID: 854278\n\t\t\t\t\t\t\t61 painel ID: 2099254\n\t\t\t\t\t\t\t\t62 painel ID: 1376572\n\t\t\t\t\t\t\t\t63 barra de rolagem (disabled, settable, float) Value: 0 ID: 526366\n\t\t\t\t\t\t\t\t\t64 botão (disabled) Uma linha acima ID: UpButton\n\t\t\t\t\t\t\t\t\t65 botão (disabled) Uma linha abaixo ID: DownButton\n\t\t\t\t\t\t\t\t66 Barra de status ID: 264648\n\t\t\t\t\t\t\t\t\t67 text 1: 1\n\t\t\t\t\t\t\t\t\t68 text Texto padrão\n\t\t\t\t\t\t\t\t\t69 text Editar desativado\n\t\t\t\t\t\t\t\t70 barra de rolagem (disabled, settable, float) Value: 0 ID: 2754534\n\t\t\t\t\t\t\t\t\t71 botão (disabled) Uma coluna à esquerda ID: UpButton\n\t\t\t\t\t\t\t\t\t72 botão (disabled) Uma coluna à direita ID: DownButton\n\t\t\t\t\t\t\t73 barra de ferramentas ID: 526180\n\t\t\t\t\t\t\t\t74 caixa de combinação (settable, string) Value: C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\left\\example.txt ID: 2492594\n\t\t\t\t\t\t\t\t\t75 editar (settable, string) Value: C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\left\\example.txt ID: 1001\n\t\t\t\t\t\t\t\t\t76 botão Abrir ID: DropDown\n\t\t\t\t\t\t\t\t739 botão (disabled)\n\t\t\t\t\t\t\t\t740 item de menu\n\t\t\t79 painel ID: 1181956\n\t\t80 painel ID: 264578\n\t\t\t81 barra de menus ID: 330044\n\t\t\t\t741 item de menu Sessão\n\t\t\t\t742 item de menu Arquivo (F)\n\t\t\t\t743 item de menu Editar\n\t\t\t\t744 item de menu Pesquisar\n\t\t\t\t745 item de menu Visualizar\n\t\t\t\t746 item de menu Ferramentas\n\t\t\t\t747 item de menu Ajuda (H)\n\t\t\t\t748 custom (disabled)\n\t\t90 barra de título (settable, string) Value: example.txt - Comparar Textos - Beyond Compare\n\t\t\t91 barra de menus Sistema ID: MenuBar\n\t\t\t\t92 item de menu Sistema\n\t\t\t93 botão Minimizar\n\t\t\t94 botão Maximizar\n\t\t\t95 botão Fechar\n\nThe focused UI element is 384 árvore."
+  },
+  "screenshots": [
+    {
+      "height": 870,
+      "id": "screenshot-0",
+      "originX": 241,
+      "originY": 155,
+      "width": 1618,
+      "zIndex": 0
+    },
+    {
+      "height": 223,
+      "id": "screenshot-1",
+      "originX": 326,
+      "originY": 250,
+      "width": 201,
+      "zIndex": 1
+    },
+    {
+      "height": 218,
+      "id": "screenshot-2",
+      "originX": 326,
+      "originY": 250,
+      "width": 196,
+      "zIndex": 2
+    }
+  ]
+}

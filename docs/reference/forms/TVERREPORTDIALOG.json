@@ -1,0 +1,19 @@
+{
+  "resource_index": 648,
+  "name": "TVERREPORTDIALOG",
+  "sha256": "00c3f5edb0e1605fe0975e106820afdc671d1ae59b48c1abad0f67051cda7043",
+  "bytes": 101,
+  "parse_status": "complete",
+  "components": 1,
+  "hierarchy": {
+    "class": "TVerReportDialog",
+    "name": "VerReportDialog",
+    "props": {
+      "Caption": "Version Compare Report",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [],
+    "flags": 1
+  }
+}

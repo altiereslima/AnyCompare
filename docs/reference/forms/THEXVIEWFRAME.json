@@ -1,0 +1,264 @@
+{
+  "resource_index": 554,
+  "name": "THEXVIEWFRAME",
+  "sha256": "c684959deaaf620cb343046a7766cd9b597cf338e0835ab582ea9f3b97529b6a",
+  "bytes": 2913,
+  "parse_status": "complete",
+  "components": 15,
+  "hierarchy": {
+    "class": "THexViewFrame",
+    "name": "HexViewFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ViewHex"
+    },
+    "children": [
+      {
+        "class": "TUiThumbnail",
+        "name": "Thumbnail",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 39,
+          "Height": 642,
+          "Align": "alLeft",
+          "PopupMenu": "ThumbnailPopup",
+          "TabOrder": 0,
+          "OnGetColors": "ThumbnailGetColors",
+          "OnGetPriority": "ThumbnailGetPriority",
+          "OnLock": "ThumbnailLock",
+          "OnRequestMoveBy": "ThumbnailRequestMoveBy",
+          "OnRequestMoveTo": "ThumbnailRequestMoveTo",
+          "OnUnlock": "ThumbnailUnlock"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MainPanel",
+        "props": {
+          "Left": 39,
+          "Top": 0,
+          "Width": 711,
+          "Height": 642,
+          "Align": "alClient",
+          "BevelOuter": "bvNone",
+          "TabOrder": 1,
+          "OnResize": "MainPanelResize"
+        },
+        "children": [
+          {
+            "class": "TUiSplitter",
+            "name": "Splitter",
+            "props": {
+              "Left": 354,
+              "Top": 0,
+              "Height": 642,
+              "AutoSnap": false,
+              "OnMoved": "SplitterMoved"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiPanel",
+            "name": "LeftPanel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 354,
+              "Height": 642,
+              "Align": "alLeft",
+              "BevelOuter": "bvNone",
+              "TabOrder": 0
+            },
+            "children": [
+              {
+                "class": "TUiHexEditor",
+                "name": "LeftEditor",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 354,
+                  "Height": 642,
+                  "Align": "alClient",
+                  "BorderKind": "bkLowered",
+                  "StatusPanels": [
+                    {
+                      "Width": 75
+                    },
+                    {
+                      "Width": 100
+                    }
+                  ],
+                  "StatusVisible": true,
+                  "TabOrder": 0,
+                  "TabStop": false,
+                  "OnCurChanged": "EditorCurChanged",
+                  "OnDeleteBytes": "EditorDeleteBytes",
+                  "OnEditAllowed": "EditorEditAllowed",
+                  "OnExtraChanged": "EditorExtraChanged",
+                  "OnFetchBytes": "EditorFetchBytes",
+                  "OnGetByteAfterGap": "EditorGetByteAfterGap",
+                  "OnGetByteKind": "EditorGetByteKind",
+                  "OnGetEditPosition": "EditorGetEditPosition",
+                  "OnGetItemNum": "EditorGetItemNum",
+                  "OnInsertBytes": "EditorInsertBytes",
+                  "OnLock": "EditorLock",
+                  "OnModifyByte": "EditorModifyByte",
+                  "OnMouseWheel": "EditorMouseWheel",
+                  "OnSelChanged": "EditorSelChanged",
+                  "OnTopHorzChanged": "EditorTopHorzChanged",
+                  "OnTopItemChanged": "EditorTopItemChanged",
+                  "OnUnlock": "EditorUnlock",
+                  "OnViewportChanged": "EditorViewportChanged"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiPanel",
+            "name": "RightPanel",
+            "props": {
+              "Left": 357,
+              "Top": 0,
+              "Width": 354,
+              "Height": 642,
+              "Align": "alClient",
+              "BevelOuter": "bvNone",
+              "TabOrder": 1
+            },
+            "children": [
+              {
+                "class": "TUiHexEditor",
+                "name": "RightEditor",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 354,
+                  "Height": 642,
+                  "Align": "alClient",
+                  "BorderKind": "bkLowered",
+                  "StatusPanels": [
+                    {
+                      "Width": 75
+                    },
+                    {
+                      "Width": 100
+                    }
+                  ],
+                  "StatusVisible": true,
+                  "TabOrder": 0,
+                  "TabStop": false,
+                  "OnCurChanged": "EditorCurChanged",
+                  "OnDeleteBytes": "EditorDeleteBytes",
+                  "OnEditAllowed": "EditorEditAllowed",
+                  "OnExtraChanged": "EditorExtraChanged",
+                  "OnFetchBytes": "EditorFetchBytes",
+                  "OnGetByteAfterGap": "EditorGetByteAfterGap",
+                  "OnGetByteKind": "EditorGetByteKind",
+                  "OnGetEditPosition": "EditorGetEditPosition",
+                  "OnGetItemNum": "EditorGetItemNum",
+                  "OnInsertBytes": "EditorInsertBytes",
+                  "OnLock": "EditorLock",
+                  "OnModifyByte": "EditorModifyByte",
+                  "OnMouseWheel": "EditorMouseWheel",
+                  "OnSelChanged": "EditorSelChanged",
+                  "OnTopHorzChanged": "EditorTopHorzChanged",
+                  "OnTopItemChanged": "EditorTopItemChanged",
+                  "OnUnlock": "EditorUnlock",
+                  "OnViewportChanged": "EditorViewportChanged"
+                },
+                "children": []
+              }
+            ]
+          }
+        ],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobProgressPanel",
+        "props": {
+          "TabOrder": 2
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobErrorPanel",
+        "props": {
+          "TabOrder": 3
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MessagePanel",
+        "props": {
+          "TabOrder": 4
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiStatusBar",
+        "name": "StatusBar",
+        "props": {
+          "Panels": [
+            {
+              "Style": "psOwnerDraw",
+              "Width": 225,
+              "Images": "BcImages.ContentImages"
+            },
+            {
+              "Alignment": "taCenter",
+              "Width": 70
+            },
+            {
+              "Width": 225
+            }
+          ]
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "ThumbnailPopup",
+        "props": {
+          "Left": 64
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "ThumbnailScrollItem",
+            "props": {
+              "AutoCheck": true,
+              "Caption": "Allow Scrolling",
+              "Hint": "Allows scrolling of thumbnail view of large files, instead of compressing the thumbnail to fit.",
+              "OnClick": "ThumbnailScrollClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ThumbnailHideItem",
+            "props": {
+              "Caption": "Hide Thumbnail",
+              "Hint": "Hides thumbnail view.",
+              "OnClick": "ThumbnailHideClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

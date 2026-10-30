@@ -1,0 +1,904 @@
+{
+  "resource_index": 636,
+  "name": "TTEXTGRAMMARITEMDIALOG",
+  "sha256": "bac490bcaf35de75756fcba18cf75cbd5376fd71681392f3c1de52838491db97",
+  "bytes": 7534,
+  "parse_status": "complete",
+  "components": 77,
+  "hierarchy": {
+    "class": "TTextGrammarItemDialog",
+    "name": "TextGrammarItemDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgTextGrammarItem",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "Grammar Item",
+      "ClientHeight": 293,
+      "ClientWidth": 542,
+      "OnCreate": "FormCreate",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "ElementLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Element name:",
+          "FocusControl": "ElementEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CategoryLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "Category:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "ElementEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 169,
+          "Height": 21,
+          "TabOrder": 0,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "CategoryBasicEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Height": 17,
+          "Caption": "B&asic",
+          "TabOrder": 1,
+          "OnClick": "CategoryClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "CategoryDelimitedEdit",
+        "props": {
+          "Left": 8,
+          "Top": 92,
+          "Height": 17,
+          "Caption": "&Delimited",
+          "TabOrder": 2,
+          "OnClick": "CategoryClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "CategoryListEdit",
+        "props": {
+          "Left": 8,
+          "Top": 113,
+          "Height": 17,
+          "Caption": "&List",
+          "TabOrder": 3,
+          "OnClick": "CategoryClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "CategoryColumnsEdit",
+        "props": {
+          "Left": 8,
+          "Top": 134,
+          "Height": 17,
+          "Caption": "Col&umns",
+          "TabOrder": 4,
+          "OnClick": "CategoryClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "CategoryLinesEdit",
+        "props": {
+          "Left": 8,
+          "Top": 155,
+          "Height": 17,
+          "Caption": "L&ines",
+          "TabOrder": 5,
+          "OnClick": "CategoryClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "PanelView",
+        "props": {
+          "Left": 177,
+          "Top": 0,
+          "Width": 365,
+          "Height": 237,
+          "TabOrder": 6
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "BasicPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "BasicLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "&Text matching:",
+                  "FocusControl": "BasicEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpeedButton",
+                "name": "BasicREBtn",
+                "props": {
+                  "Left": 334,
+                  "Top": 25,
+                  "Hint": "Insert Regular Expression Element",
+                  "DropDown": true,
+                  "Flat": false,
+                  "PopupMenu": "REPopup"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "BasicEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Width": 318,
+                  "Height": 21,
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "BasicCaseSensitiveEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 54,
+                  "Height": 17,
+                  "Caption": "Match character &case",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "BasicIsRegExpEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 75,
+                  "Height": 17,
+                  "Caption": "Regular e&xpression",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "BasicREHelpBtn",
+                "props": {
+                  "Left": 279,
+                  "Top": 72,
+                  "Width": 78,
+                  "HelpType": "htKeyword",
+                  "HelpKeyword": "Sample_Regular_Expressions",
+                  "Caption": "RE Example&s",
+                  "TabOrder": 3,
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "DelimitedPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "DelimitedLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "&Text from:",
+                  "FocusControl": "DelimitedEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpeedButton",
+                "name": "DelimitedREBtn",
+                "props": {
+                  "Left": 334,
+                  "Top": 25,
+                  "Hint": "Insert Regular Expression Element",
+                  "DropDown": true,
+                  "Flat": false,
+                  "PopupMenu": "REPopup"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "DelimitedStopLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 54,
+                  "Height": 13,
+                  "Caption": "t&o:",
+                  "FocusControl": "DelimitedStopEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpeedButton",
+                "name": "DelimitedStopREBtn",
+                "props": {
+                  "Left": 334,
+                  "Top": 71,
+                  "Hint": "Insert Regular Expression Element",
+                  "DropDown": true,
+                  "Flat": false,
+                  "PopupMenu": "REPopup"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "DelimitedEscapeLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 100,
+                  "Height": 13,
+                  "Caption": "Esca&pe character:",
+                  "FocusControl": "DelimitedEscapeEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "DelimitedEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Width": 318,
+                  "Height": 21,
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "DelimitedStopEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 71,
+                  "Width": 318,
+                  "Height": 21,
+                  "TabOrder": 1,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "DelimitedEscapeStopEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 71,
+                  "Width": 33,
+                  "Height": 21,
+                  "MaxLength": 1,
+                  "TabOrder": 2,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "DelimitedEscapeEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 117,
+                  "Width": 33,
+                  "Height": 21,
+                  "MaxLength": 1,
+                  "TabOrder": 3,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DelimitedStopEOLEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 146,
+                  "Height": 17,
+                  "Caption": "Stop at e&nd of line",
+                  "TabOrder": 4,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DelimitedCaseSensitiveEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 167,
+                  "Height": 17,
+                  "Caption": "Match character &case",
+                  "TabOrder": 5,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DelimitedIsRegExpEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 188,
+                  "Height": 17,
+                  "Caption": "Regular e&xpressions",
+                  "TabOrder": 6,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "DelimitedREHelpBtn",
+                "props": {
+                  "Left": 279,
+                  "Top": 185,
+                  "Width": 78,
+                  "HelpType": "htKeyword",
+                  "HelpKeyword": "Sample_Regular_Expressions",
+                  "Caption": "RE Example&s",
+                  "TabOrder": 7,
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "ListPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "ListLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "&Text in list:",
+                  "FocusControl": "ListItemsEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpeedButton",
+                "name": "ListREBtn",
+                "props": {
+                  "Left": 334,
+                  "Top": 25,
+                  "Hint": "Insert Regular Expression Element",
+                  "DropDown": true,
+                  "Flat": false,
+                  "PopupMenu": "REPopup"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiMemo",
+                "name": "ListItemsEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Width": 318,
+                  "Height": 153,
+                  "ScrollBars": "ssVertical",
+                  "TabOrder": 0,
+                  "WordWrap": false,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "ListCaseSensitiveEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 186,
+                  "Height": 17,
+                  "Caption": "Match character &case",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "ListIsRegExpEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 207,
+                  "Height": 17,
+                  "Caption": "Regular e&xpressions",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "ListREHelpBtn",
+                "props": {
+                  "Left": 279,
+                  "Top": 204,
+                  "Width": 78,
+                  "HelpType": "htKeyword",
+                  "HelpKeyword": "Sample_Regular_Expressions",
+                  "Caption": "RE Example&s",
+                  "TabOrder": 3,
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "ColumnsPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "ColumnsLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "&Text from column:",
+                  "FocusControl": "ColumnsEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "ColumnsStopLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 54,
+                  "Height": 13,
+                  "Caption": "t&o column:",
+                  "FocusControl": "ColumnsStopEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpinEdit",
+                "name": "ColumnsEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Width": 50,
+                  "Height": 21,
+                  "Min": 1,
+                  "Position": 1,
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpinEdit",
+                "name": "ColumnsStopEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 71,
+                  "Width": 50,
+                  "Height": 21,
+                  "Min": 1,
+                  "Position": 1,
+                  "TabOrder": 1,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "ColumnsStopEOLEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 100,
+                  "Height": 17,
+                  "Caption": "to e&nd of line",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "LinesPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "LinesLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "&Text matching:",
+                  "FocusControl": "LinesEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpeedButton",
+                "name": "LinesREBtn",
+                "props": {
+                  "Left": 334,
+                  "Top": 25,
+                  "Hint": "Insert Regular Expression Element",
+                  "DropDown": true,
+                  "Flat": false,
+                  "PopupMenu": "REPopup"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "LinesCountLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 79,
+                  "Height": 13,
+                  "Caption": "and &next:",
+                  "FocusControl": "LinesCountEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "LinesCountLinesLbl",
+                "props": {
+                  "Left": 64,
+                  "Top": 100,
+                  "Height": 13,
+                  "Caption": "lines",
+                  "FocusControl": "LinesCountEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "LinesEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Width": 318,
+                  "Height": 21,
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "Lines1Edit",
+                "props": {
+                  "Left": 8,
+                  "Top": 54,
+                  "Height": 17,
+                  "Caption": "&or line 1",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpinEdit",
+                "name": "LinesCountEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 96,
+                  "Width": 50,
+                  "Height": 21,
+                  "Position": 1,
+                  "TabOrder": 2,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "LinesCaseSensitiveEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 125,
+                  "Height": 17,
+                  "Caption": "Match character &case",
+                  "TabOrder": 3,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "LinesIsRegExpEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 146,
+                  "Height": 17,
+                  "Caption": "Regular e&xpression",
+                  "TabOrder": 4,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "LinesREHelpBtn",
+                "props": {
+                  "Left": 279,
+                  "Top": 143,
+                  "Width": 78,
+                  "HelpType": "htKeyword",
+                  "HelpKeyword": "Sample_Regular_Expressions",
+                  "Caption": "RE Example&s",
+                  "TabOrder": 5,
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "ElementCaseSigEdit",
+        "props": {
+          "Left": 185,
+          "Top": 237,
+          "Height": 17,
+          "Caption": "This element is case sensiti&ve",
+          "TabOrder": 7
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 254,
+          "Width": 542,
+          "TabOrder": 8
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "OnClick": "OkClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiHelpBtn",
+            "name": "HelpBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "REPopup",
+        "props": {
+          "Left": 8,
+          "Top": 8
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "TabItem",
+            "props": {
+              "Caption": "Tab Character (\\t)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "AnyItem",
+            "props": {
+              "Caption": "Any Character (.)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "AlphaItem",
+            "props": {
+              "Caption": "Any Alphanumeric Character (\\w)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NonAlphaItem",
+            "props": {
+              "Caption": "Any Non-alphanumeric Character (\\W)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NumItem",
+            "props": {
+              "Caption": "Any Numeric Character (\\d)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NonNumItem",
+            "props": {
+              "Caption": "Any Non-numeric Character (\\D)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "WSItem",
+            "props": {
+              "Caption": "Any Whitespace Character (\\s)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "CharSetItem",
+            "props": {
+              "Caption": "Character in Set ([])",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NotCharSetItem",
+            "props": {
+              "Caption": "Character Not in Set ([^])",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "BeginItem",
+            "props": {
+              "Caption": "Beginning of Line (^)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "EndItem",
+            "props": {
+              "Caption": "End of Line ($)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "FormFeedItem",
+            "props": {
+              "Caption": "Form Feed Character (\\xc)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "OrItem",
+            "props": {
+              "Caption": "Or (|)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ZeroOrMoreItem",
+            "props": {
+              "Caption": "0 Or More Matches (*)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "OneOrMoreItem",
+            "props": {
+              "Caption": "1 Or More Matches (+)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ZeroOrOneItem",
+            "props": {
+              "Caption": "0 Or 1 Matches (?)",
+              "OnClick": "REItemClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

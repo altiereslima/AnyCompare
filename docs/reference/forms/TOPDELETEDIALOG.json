@@ -1,0 +1,141 @@
+{
+  "resource_index": 577,
+  "name": "TOPDELETEDIALOG",
+  "sha256": "9bef7d9e868e87e573b0aee85e02dd2191ef61686c150899ff2b292974d503e5",
+  "bytes": 809,
+  "parse_status": "complete",
+  "components": 12,
+  "hierarchy": {
+    "class": "TOpDeleteDialog",
+    "name": "OpDeleteDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "OpDelete",
+      "Caption": "Delete",
+      "ClientHeight": 381,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "SelectionPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiImage",
+            "name": "LeftImage",
+            "props": {
+              "ImageIndex": "imgDelete"
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiImage",
+            "name": "RightImage",
+            "props": {
+              "ImageIndex": "imgDelete"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "ActionPanel",
+        "props": {
+          "Height": 75
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "ActionDescLbl",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Height": 13,
+              "Caption": "Delete selected files, folders."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "UseRecycleBinEdit",
+            "props": {
+              "Left": 8,
+              "Top": 50,
+              "Height": 17,
+              "Caption": "&Use recycle bin if possible",
+              "TabOrder": 0,
+              "OnClick": "UseRecycleBinClick"
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "FilteredWarnPanel",
+        "props": {
+          "Top": 222,
+          "Height": 120
+        },
+        "children": [
+          {
+            "class": "TUiDlgIcon",
+            "name": "WarnImage",
+            "props": {
+              "Left": 8,
+              "Top": 80,
+              "IconType": "diWarning"
+            },
+            "children": [],
+            "flags": 2,
+            "child_position": 3
+          },
+          {
+            "class": "TUiLabel",
+            "name": "WarnLbl",
+            "props": {
+              "Left": 48,
+              "Top": 86,
+              "Width": 337,
+              "Height": 26,
+              "AutoSize": false,
+              "Caption": "Folders with hidden items will not be deleted.",
+              "WordWrap": true
+            },
+            "children": [],
+            "flags": 2,
+            "child_position": 4
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Top": 342
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "Caption": "&Delete"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "resource_index": 594,
+  "name": "TPIXREPLACEMENTITEMDIALOG",
+  "sha256": "d7a233a3988cda05586def308ea934ffcfcf52f13d5a9223f5dcff0b2759e63d",
+  "bytes": 1099,
+  "parse_status": "complete",
+  "components": 12,
+  "hierarchy": {
+    "class": "TPixReplacementItemDialog",
+    "name": "PixReplacementItemDialog",
+    "props": {
+      "Caption": "Replacement Item",
+      "ClientHeight": 173,
+      "ClientWidth": 337,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "FindColorLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Color to find:",
+          "FocusControl": "FindColorEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ReplaceColorLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "R&eplace with:",
+          "FocusControl": "ReplaceColorEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiColorEdit",
+        "name": "FindColorEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 321,
+          "Height": 21,
+          "AllowDefault": false,
+          "Selected": "clBlack",
+          "TabOrder": 0,
+          "OnSelect": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiColorEdit",
+        "name": "ReplaceColorEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 321,
+          "Height": 21,
+          "AllowDefault": false,
+          "Selected": "clBlack",
+          "TabOrder": 1,
+          "OnSelect": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "IsSrcPanel",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Width": 321,
+          "Height": 34,
+          "BevelOuter": "bvNone",
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "IsSrcLbl",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Height": 13,
+              "Caption": "Side:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "LeftIsSrcEdit",
+            "props": {
+              "Left": 0,
+              "Top": 17,
+              "Height": 17,
+              "Caption": "&Left",
+              "TabOrder": 0,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "RightIsSrcEdit",
+            "props": {
+              "Left": 160,
+              "Top": 17,
+              "Height": 17,
+              "Caption": "&Right",
+              "TabOrder": 1,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 134,
+          "Width": 337,
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

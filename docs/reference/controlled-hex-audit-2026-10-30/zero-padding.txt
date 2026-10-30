@@ -1,0 +1,7 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\zero-padding-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\zero-padding-right.bin
+72 same byte(s)
+1 right orphan byte(s)

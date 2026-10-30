@@ -1,0 +1,98 @@
+{
+  "resource_index": 538,
+  "name": "TFILEFORMATCONVERSIONFRAME",
+  "sha256": "37f94891739bbca25cf03a3ba2a1dafb63284d51186209cc0604184d451422cc",
+  "bytes": 875,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "TFileFormatConversionFrame",
+    "name": "FileFormatConversionFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "Caption": "Conversion"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "ConvertLoadAppLbl",
+        "props": {
+          "Left": 24,
+          "Top": 33,
+          "Height": 13,
+          "Caption": "&Loading:",
+          "FocusControl": "ConvertLoadAppEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ConvertSaveAppLbl",
+        "props": {
+          "Left": 24,
+          "Top": 96,
+          "Height": 13,
+          "Caption": "Sa&ving:",
+          "FocusControl": "ConvertSaveAppEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "ConvertKindEdit",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 257,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 0,
+          "OnChange": "ConvertKindEditChange"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpecBar",
+        "name": "ConvertLoadAppEdit",
+        "props": {
+          "Left": 24,
+          "Top": 50,
+          "Width": 241,
+          "TabOrder": 1,
+          "OnBrowse": "ConvertAppEditBrowse",
+          "OnChange": "SomethingChangedClick",
+          "OnGetArgs": "ConvertAppEditGetArgs"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "ConvertNoEditEdit",
+        "props": {
+          "Left": 24,
+          "Top": 75,
+          "Height": 17,
+          "Caption": "D&isable editing",
+          "TabOrder": 2,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpecBar",
+        "name": "ConvertSaveAppEdit",
+        "props": {
+          "Left": 24,
+          "Top": 113,
+          "Width": 241,
+          "TabOrder": 3,
+          "OnBrowse": "ConvertAppEditBrowse",
+          "OnChange": "SomethingChangedClick",
+          "OnGetArgs": "ConvertAppEditGetArgs"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

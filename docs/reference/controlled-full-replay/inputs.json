@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    {
+      "source": "C:\\Users\\Altieres\\Desktop\\resumo.txt",
+      "copy": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\left.txt",
+      "sha256": "a87b932dd2cb3afbbf1c1fbb388bfcbffa2ed62281962abd52a77b138c8a54cc",
+      "bytes": 345688
+    },
+    {
+      "source": "C:\\Users\\Altieres\\Desktop\\resumo 1.txt",
+      "copy": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\right.txt",
+      "sha256": "06b4a221cc5aae070e86356b05a2bd166590350d061839a5031181ae6b18ea22",
+      "bytes": 345282
+    }
+  ],
+  "portable_state_present_before_spawn": true,
+  "portable_state_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "limitations": [
+    "Copies of the current user samples; a separate portable settings marker is created before each execution."
+  ]
+}

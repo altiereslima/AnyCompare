@@ -1,0 +1,124 @@
+{
+  "resource_index": 514,
+  "name": "TDIROPERRORSDIALOG",
+  "sha256": "3c83a1abd4f9ce6ca39c64bb4f9d218a7151691d06a470b2ace693f746d9e8de",
+  "bytes": 841,
+  "parse_status": "complete",
+  "components": 9,
+  "hierarchy": {
+    "class": "TDirOpErrorsDialog",
+    "name": "DirOpErrorsDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "File Operation Errors",
+      "ClientHeight": 295,
+      "ClientWidth": 337,
+      "Constraints.MinHeight": 127,
+      "Constraints.MinWidth": 105,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "LeftBevel",
+        "props": {
+          "Left": 0,
+          "Top": 32,
+          "Width": 8,
+          "Height": 224,
+          "Align": "alLeft",
+          "Shape": "bsSpacer"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBevel",
+        "name": "RightBevel",
+        "props": {
+          "Left": 329,
+          "Top": 32,
+          "Width": 8,
+          "Height": 224,
+          "Align": "alRight",
+          "Shape": "bsSpacer"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "TopPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 337,
+          "Height": 32,
+          "Align": "alTop",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiImage",
+            "name": "ProblemsImage",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Width": 16,
+              "Height": 16,
+              "ImageIndex": "imgError",
+              "Images": "BcImages.MainImages"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "ProblemsLbl",
+            "props": {
+              "Left": 32,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Problems:"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiMemo",
+        "name": "ErrorsEdit",
+        "props": {
+          "Left": 8,
+          "Top": 32,
+          "Width": 321,
+          "Height": 224,
+          "Align": "alClient",
+          "ReadOnly": true,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 1
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 256,
+          "Width": 337,
+          "TabOrder": 2,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiCloseBtn",
+            "name": "CloseBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

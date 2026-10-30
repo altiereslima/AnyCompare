@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bcreport created="30/10/2026 17:07:10">
+	<foldercomp>
+		<ltpath>C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory\left</ltpath>
+		<rtpath>C:\Projetos\BC4\anycompare\docs\reference\controlled-folder-replay-2026-10-30\file-directory\right</rtpath>
+		<foldercomp>
+			<rt>
+				<name>conflict</name>
+				<size>5</size>
+				<modified>30/10/2026 16:58:17</modified>
+			</rt>
+			<filecomp status="rtonly">
+				<rt>
+					<name>child.txt</name>
+					<size>5</size>
+					<modified>14/11/2023 19:13:20</modified>
+				</rt>
+			</filecomp>
+		</foldercomp>
+		<foldercomp>
+			<lt>
+				<name>other</name>
+				<size>1</size>
+				<modified>30/10/2026 16:58:17</modified>
+			</lt>
+			<filecomp status="ltonly">
+				<lt>
+					<name>child.txt</name>
+					<size>1</size>
+					<modified>14/11/2023 19:13:20</modified>
+				</lt>
+			</filecomp>
+		</foldercomp>
+		<filecomp status="ltonly">
+			<lt>
+				<name>conflict</name>
+				<size>4</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</lt>
+		</filecomp>
+		<filecomp status="rtonly">
+			<rt>
+				<name>other</name>
+				<size>4</size>
+				<modified>14/11/2023 19:13:20</modified>
+			</rt>
+		</filecomp>
+	</foldercomp>
+</bcreport>

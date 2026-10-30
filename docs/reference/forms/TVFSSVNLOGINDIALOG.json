@@ -1,0 +1,133 @@
+{
+  "resource_index": 672,
+  "name": "TVFSSVNLOGINDIALOG",
+  "sha256": "fc3cd5553413ac563e3e8d1cf7dd2307a4d3dde5eefd38b9e4b7d58cb28aff88",
+  "bytes": 854,
+  "parse_status": "complete",
+  "components": 11,
+  "hierarchy": {
+    "class": "TVfsSVNLoginDialog",
+    "name": "VfsSVNLoginDialog",
+    "props": {
+      "ActiveControl": "UsernameEdit",
+      "Caption": "Authentication Required",
+      "ClientHeight": 202,
+      "ClientWidth": 435,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "SpecLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Site:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "UsernameLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "&Username:",
+          "FocusControl": "UsernameEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PasswordLbl",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Height": 13,
+          "Caption": "&Password:",
+          "FocusControl": "PasswordEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "SpecPanel",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 419,
+          "Height": 21,
+          "Alignment": "taLeftJustify",
+          "BevelOuter": "bvLowered",
+          "TabOrder": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "UsernameEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 419,
+          "Height": 21,
+          "TabOrder": 1
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "PasswordEdit",
+        "props": {
+          "Left": 8,
+          "Top": 117,
+          "Width": 419,
+          "Height": 21,
+          "TabOrder": 2,
+          "EchoMode": "emPassword"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "SavePasswordEdit",
+        "props": {
+          "Left": 8,
+          "Top": 146,
+          "Height": 17,
+          "Caption": "&Save password",
+          "TabOrder": 3
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 163,
+          "Width": 435,
+          "TabOrder": 4
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

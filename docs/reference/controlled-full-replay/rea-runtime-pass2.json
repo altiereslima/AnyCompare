@@ -1,0 +1,454 @@
+{
+  "evidence_id": "ev_570b22bb309ecc18e935468049af23be8bdd14ac089a043fa66dec4ccaf6f7b2",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "frida_session_status",
+  "parameters": {
+    "session_id": "6b845171-45fd-44d1-8dce-edc3edbe8589"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "6b845171-45fd-44d1-8dce-edc3edbe8589",
+    "device_id": "local",
+    "state": "detached",
+    "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+    "pid": 28480,
+    "mode": "spawn",
+    "scripts": [
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "name": "rea-a4f84ee5-a5de-4d8e-8253-b99634b63ec9"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "GetACP",
+          "address": "0x7fffe82fb180"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "MultiByteToWideChar",
+          "address": "0x7fffe82f1490"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "WideCharToMultiByte",
+          "address": "0x7fffe82f2570"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "CreateFileW",
+          "address": "0x7fffe8317050"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "ReadFile",
+          "address": "0x7fffe8317410"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "WriteFile",
+          "address": "0x7fffe8317520"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "ExitProcess",
+          "address": "0x7fffe83017a0"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "target",
+          "pid": 28480,
+          "architecture": "x64",
+          "main_module": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 10,
+          "result_length": 10
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 0,
+          "flags": 1024,
+          "input_length": -1,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 65001,
+          "flags": 0,
+          "input_length": 6,
+          "result_length": 6
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 65001,
+          "flags": 0,
+          "input_length": 9,
+          "result_length": 9
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 1,
+          "input_length": 256,
+          "result_length": 256
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 0,
+          "flags": 0,
+          "input_length": 6122,
+          "result_length": 6122
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 65001,
+          "flags": 8,
+          "input_length": 33536,
+          "result_length": 33536
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 437,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCState.xml",
+          "handle": "0x4f4"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCState.xml",
+          "handle": "0x4f4"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\report-script.txt",
+          "handle": "0x500"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "io-first",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\report-script.txt",
+          "requested_bytes": 609,
+          "success": true
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\right.txt",
+          "handle": "0x528"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\left.txt",
+          "handle": "0x52c"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "io-first",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\right.txt",
+          "requested_bytes": 2,
+          "success": true
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "io-first",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\left.txt",
+          "requested_bytes": 2,
+          "success": true
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\report.html",
+          "handle": "0x514"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 65001,
+          "flags": 512,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "io-first",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\left.txt",
+          "handle": "0x4f4"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\right.txt",
+          "handle": "0x530"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\report.xml",
+          "handle": "0x548"
+        }
+      },
+      {
+        "script_id": "a4f84ee5-a5de-4d8e-8253-b99634b63ec9",
+        "type": "send",
+        "payload": {
+          "kind": "io-first",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-full-replay\\report.xml",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      }
+    ],
+    "messages_truncated": false
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}
+

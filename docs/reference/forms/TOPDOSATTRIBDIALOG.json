@@ -1,0 +1,126 @@
+{
+  "resource_index": 578,
+  "name": "TOPDOSATTRIBDIALOG",
+  "sha256": "8e4e19c07684ab4b2e9606fa476486c057683080c325aac611ab07efb7d95852",
+  "bytes": 852,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TOpDOSAttribDialog",
+    "name": "OpDOSAttribDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "OpAttrib",
+      "Caption": "Attributes",
+      "ClientHeight": 400,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "ActionPanel",
+        "props": {
+          "Height": 134
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "ActionDescLbl",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Width": 377,
+              "Height": 26,
+              "AutoSize": false,
+              "Caption": "Check a box to set attribute on selected files.  Uncheck a box to clear attribute.",
+              "WordWrap": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "ReadOnlyEdit",
+            "props": {
+              "Left": 8,
+              "Top": 63,
+              "Height": 17,
+              "Caption": "R&ead-only",
+              "TabOrder": 0
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "HiddenEdit",
+            "props": {
+              "Left": 8,
+              "Top": 84,
+              "Height": 17,
+              "Caption": "&Hidden",
+              "TabOrder": 1
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "ArchiveEdit",
+            "props": {
+              "Left": 200,
+              "Top": 63,
+              "Height": 17,
+              "Caption": "&Archive",
+              "TabOrder": 2
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "SysFileEdit",
+            "props": {
+              "Left": 200,
+              "Top": 84,
+              "Height": 17,
+              "Caption": "S&ystem",
+              "TabOrder": 3
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "RecursiveEdit",
+            "props": {
+              "Left": 8,
+              "Top": 109,
+              "Height": 17,
+              "Caption": "Including folder &contents",
+              "TabOrder": 4,
+              "OnClick": "RecursiveClick"
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "FilteredWarnPanel",
+        "props": {
+          "Top": 281
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Top": 361
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

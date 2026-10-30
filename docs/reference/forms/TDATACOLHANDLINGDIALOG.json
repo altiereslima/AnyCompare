@@ -1,0 +1,276 @@
+{
+  "resource_index": 495,
+  "name": "TDATACOLHANDLINGDIALOG",
+  "sha256": "de4ffa380d6a3e1566ea1e76fa90761a6417066d4365afdb84da5d2765fae334",
+  "bytes": 2234,
+  "parse_status": "complete",
+  "components": 20,
+  "hierarchy": {
+    "class": "TDataColHandlingDialog",
+    "name": "DataColHandlingDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgDataColHandling",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "%",
+      "ClientHeight": 202,
+      "ClientWidth": 426,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "NameLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Name:",
+          "FocusControl": "NameEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ValTypeLbl",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Height": 13,
+          "Caption": "&Type:",
+          "FocusControl": "ValTypeEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DateTimeToleranceLbl",
+        "props": {
+          "Left": 225,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "D&ate tolerance:",
+          "FocusControl": "DateTimeToleranceEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "FloatToleranceLbl",
+        "props": {
+          "Left": 225,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "Nu&meric tolerance:",
+          "FocusControl": "FloatToleranceEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "StrInsigLbl",
+        "props": {
+          "Left": 225,
+          "Top": 100,
+          "Height": 13,
+          "Caption": "Text important, except for:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "NameEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 209,
+          "Height": 21,
+          "TabOrder": 0,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "IsKeyEdit",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 17,
+          "Caption": "&Key",
+          "TabOrder": 1,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "UseDefaultEdit",
+        "props": {
+          "Left": 8,
+          "Top": 75,
+          "Height": 17,
+          "Caption": "Use &default",
+          "TabOrder": 2,
+          "OnClick": "UseDefaultClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "ValTypeEdit",
+        "props": {
+          "Left": 8,
+          "Top": 117,
+          "Width": 209,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 3,
+          "OnChange": "SomethingChangedClick",
+          "Items.Strings": [
+            "Detected",
+            "Boolean",
+            "Date",
+            "Numeric",
+            "Text"
+          ]
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "InsigEdit",
+        "props": {
+          "Left": 8,
+          "Top": 146,
+          "Height": 17,
+          "Caption": "&Unimportant",
+          "TabOrder": 4,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "DateTimeToleranceEdit",
+        "props": {
+          "Left": 225,
+          "Top": 25,
+          "Width": 65,
+          "Height": 21,
+          "TabOrder": 5,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "DateTimeToleranceKindEdit",
+        "props": {
+          "Left": 298,
+          "Top": 25,
+          "Width": 120,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 6,
+          "OnChange": "SomethingChangedClick",
+          "Items.Strings": [
+            "seconds",
+            "minutes",
+            "hours",
+            "days"
+          ]
+        },
+        "children": []
+      },
+      {
+        "class": "TUiNumEdit",
+        "name": "FloatToleranceEdit",
+        "props": {
+          "Left": 225,
+          "Top": 71,
+          "Width": 65,
+          "Height": 21,
+          "Kind": "numFloat",
+          "TabOrder": 7,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "FloatToleranceKindEdit",
+        "props": {
+          "Left": 298,
+          "Top": 71,
+          "Width": 120,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 8,
+          "OnChange": "SomethingChangedClick",
+          "Items.Strings": [
+            "absolute",
+            "relative (%)"
+          ]
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "StrCaseInsigEdit",
+        "props": {
+          "Left": 225,
+          "Top": 117,
+          "Height": 17,
+          "Caption": "Character &case (ABC = abc)",
+          "TabOrder": 9,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "StrWSInsigEdit",
+        "props": {
+          "Left": 225,
+          "Top": 138,
+          "Height": 17,
+          "Caption": "&Whitespace",
+          "TabOrder": 10,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 163,
+          "Width": 426,
+          "TabOrder": 11
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

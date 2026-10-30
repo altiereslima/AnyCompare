@@ -1,0 +1,247 @@
+{
+  "resource_index": 520,
+  "name": "TDIRSESSIONHANDLINGFRAME",
+  "sha256": "abcc3a8982d41fe78aa03a2563836977d0e6a3ed409a35ca1182651878a51183",
+  "bytes": 2399,
+  "parse_status": "complete",
+  "components": 18,
+  "hierarchy": {
+    "class": "TDirSessionHandlingFrame",
+    "name": "DirSessionHandlingFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "SessionDirHandling",
+      "Caption": "Handling"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "DirHandlingLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Folder handling:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ArchiveHandlingLbl",
+        "props": {
+          "Left": 8,
+          "Top": 113,
+          "Height": 13,
+          "Caption": "Archi&ve handling (e.g. zip files):",
+          "FocusControl": "ArchiveHandlingEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBevel",
+        "name": "FileHandlingBevel",
+        "props": {
+          "Left": 8,
+          "Top": 159,
+          "Width": 409,
+          "Height": 1,
+          "Shape": "bsTopLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "FileHandlingLbl",
+        "props": {
+          "Left": 8,
+          "Top": 167,
+          "Height": 13,
+          "Caption": "File handling:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "RefreshLbl",
+        "props": {
+          "Left": 8,
+          "Top": 293,
+          "Height": 13,
+          "Caption": "Automatic &refresh:",
+          "FocusControl": "RefreshIntervalEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "AutoBuildEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Height": 17,
+          "Caption": "Automatically sca&n subfolders in background",
+          "TabOrder": 0,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "AutoBuildTopOrphansEdit",
+        "props": {
+          "Left": 24,
+          "Top": 46,
+          "Height": 17,
+          "Caption": "Automatically scan top-level orp&han subfolders",
+          "TabOrder": 1,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "ExpandAllOnLoadEdit",
+        "props": {
+          "Left": 8,
+          "Top": 67,
+          "Height": 17,
+          "Caption": "E&xpand subfolders when loading session",
+          "TabOrder": 2,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "ExpandDiffsOnLoadEdit",
+        "props": {
+          "Left": 24,
+          "Top": 88,
+          "Height": 17,
+          "Caption": "Only expand subfolders with di&fferences",
+          "TabOrder": 3,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "ArchiveHandlingEdit",
+        "props": {
+          "Left": 8,
+          "Top": 130,
+          "Width": 146,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 4,
+          "OnChange": "SomethingChangedClick",
+          "Items.Strings": [
+            "As files always",
+            "As folders once opened",
+            "As folders always"
+          ]
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "TouchLocalOnUploadEdit",
+        "props": {
+          "Left": 8,
+          "Top": 184,
+          "Height": 17,
+          "Caption": "&Touch local files when copying to an FTP site",
+          "TabOrder": 5,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "FollowSymLinksEdit",
+        "props": {
+          "Left": 8,
+          "Top": 205,
+          "Height": 17,
+          "Caption": "Follow s&ymbolic links",
+          "TabOrder": 6,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "KeepShortNamesEdit",
+        "props": {
+          "Left": 8,
+          "Top": 226,
+          "Height": 17,
+          "Caption": "Maintain DOS &8.3 aliases",
+          "TabOrder": 7,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "CopyACLsEdit",
+        "props": {
+          "Left": 8,
+          "Top": 247,
+          "Height": 17,
+          "Caption": "Copy NTFS file per&missions (requires admin rights)",
+          "TabOrder": 8,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "CopyCreationDatesEdit",
+        "props": {
+          "Left": 8,
+          "Top": 268,
+          "Height": 17,
+          "Caption": "Copy creati&on dates",
+          "TabOrder": 9,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "RefreshIntervalEdit",
+        "props": {
+          "Left": 8,
+          "Top": 310,
+          "Width": 50,
+          "Height": 21,
+          "Max": 9999,
+          "MaxLength": 4,
+          "TabOrder": 10,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "RefreshGranularityEdit",
+        "props": {
+          "Left": 64,
+          "Top": 310,
+          "Width": 73,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 11,
+          "OnChange": "SomethingChangedClick",
+          "Items.Strings": [
+            "Seconds",
+            "Minutes"
+          ]
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

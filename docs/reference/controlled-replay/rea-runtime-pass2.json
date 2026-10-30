@@ -1,0 +1,817 @@
+{
+  "evidence_id": "ev_7d4dba38e7571b48eb7f763e320b8e003f9448abfa13f20234cbf32f62e12216",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "frida_session_status",
+  "parameters": {
+    "session_id": "5910d042-6cc1-41df-b138-4b4eb39274df"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "5910d042-6cc1-41df-b138-4b4eb39274df",
+    "device_id": "local",
+    "state": "detached",
+    "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+    "pid": 8164,
+    "mode": "spawn",
+    "scripts": [
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "name": "rea-6daef2b8-9bf4-4d17-8032-378a8c3698ef"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "GetACP",
+          "address": "0x7ff9c961a780"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "MultiByteToWideChar",
+          "address": "0x7ff9c96104e0"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "WideCharToMultiByte",
+          "address": "0x7ff9c96115c0"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "CreateFileW",
+          "address": "0x7ff9c9637040"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "ReadFile",
+          "address": "0x7ff9c9637400"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "WriteFile",
+          "address": "0x7ff9c9637510"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "ExitProcess",
+          "address": "0x7ff9c9621470"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "target",
+          "pid": 8164,
+          "architecture": "x64",
+          "main_module": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 10,
+          "result_length": 10
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 0,
+          "flags": 1024,
+          "input_length": -1,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 65001,
+          "flags": 0,
+          "input_length": 6,
+          "result_length": 6
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 65001,
+          "flags": 0,
+          "input_length": 9,
+          "result_length": 9
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 1,
+          "input_length": 256,
+          "result_length": 256
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 0,
+          "flags": 0,
+          "input_length": 6042,
+          "result_length": 6042
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 65001,
+          "flags": 8,
+          "input_length": 33536,
+          "result_length": 33536
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 437,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report-script.txt",
+          "handle": "0x4e4"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report-script.txt",
+          "requested_bytes": 579,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "handle": "0x528"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "handle": "0x52c"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 2,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 266,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 266,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 16384,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 2,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 273,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 273,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 16384,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 8,
+          "input_length": 5,
+          "result_length": 5
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 16384,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 16384,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 906,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "handle": "0x52c"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api-first",
+          "name": "WideCharToMultiByte",
+          "code_page": 65001,
+          "flags": 512,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.html",
+          "requested_bytes": 90,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "handle": "0x53c"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "handle": "0x530"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 2,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 273,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 273,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 16384,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 2,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 266,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 266,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 16384,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\left.txt",
+          "requested_bytes": 16384,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "ReadFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\right.txt",
+          "requested_bytes": 16384,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "file-open",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.xml",
+          "handle": "0x544"
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.xml",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.xml",
+          "requested_bytes": 1024,
+          "success": true
+        }
+      },
+      {
+        "script_id": "6daef2b8-9bf4-4d17-8032-378a8c3698ef",
+        "type": "send",
+        "payload": {
+          "kind": "io",
+          "name": "WriteFile",
+          "path": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report.xml",
+          "requested_bytes": 999,
+          "success": true
+        }
+      }
+    ],
+    "messages_truncated": false
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

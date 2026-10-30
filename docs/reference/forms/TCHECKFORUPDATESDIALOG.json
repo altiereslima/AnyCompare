@@ -1,0 +1,85 @@
+{
+  "resource_index": 493,
+  "name": "TCHECKFORUPDATESDIALOG",
+  "sha256": "882713da0aaf9788157e15c0bed388fba7437c409cd8ea7c2f9e790b3a4ec2d6",
+  "bytes": 797,
+  "parse_status": "complete",
+  "components": 5,
+  "hierarchy": {
+    "class": "TCheckForUpdatesDialog",
+    "name": "CheckForUpdatesDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "Program Updates and News",
+      "ClientHeight": 266,
+      "ClientWidth": 411,
+      "Constraints.MinHeight": 128,
+      "Constraints.MinWidth": 185,
+      "OnClose": "FormClose",
+      "OnKeyDown": "FormKeyDown",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiWebBrowser",
+        "name": "WebBrowser",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 411,
+          "Height": 214,
+          "Align": "alClient",
+          "TabOrder": 0,
+          "OnStatusTextChange": "WebBrowserStatusTextChange",
+          "OnNavigateError": "WebBrowserNavigateError",
+          "OnCanNavigate": "WebBrowserCanNavigate"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "ToDesktopPanel",
+        "props": {
+          "Left": 0,
+          "Top": 214,
+          "Width": 411,
+          "Height": 33,
+          "Align": "alBottom",
+          "BevelOuter": "bvNone",
+          "TabOrder": 1,
+          "OnPaint": "ToDesktopPanelPaint"
+        },
+        "children": [
+          {
+            "class": "TUiCheckBox",
+            "name": "ToDesktopEdit",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 17,
+              "Caption": "&Download to Desktop only",
+              "TabOrder": 0
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiStatusBar",
+        "name": "StatusBar",
+        "props": {
+          "Left": 0,
+          "Top": 247,
+          "Width": 411,
+          "Height": 19,
+          "Panels": [],
+          "SimplePanel": true
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

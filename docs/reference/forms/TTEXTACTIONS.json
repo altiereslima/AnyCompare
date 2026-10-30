@@ -1,0 +1,1864 @@
+{
+  "resource_index": 629,
+  "name": "TTEXTACTIONS",
+  "sha256": "bb0e0f00ea3f0175e4eee710551306128a68106cb09051d2550880a9fa397ba6",
+  "bytes": 29483,
+  "parse_status": "complete",
+  "components": 117,
+  "hierarchy": {
+    "class": "TTextActions",
+    "name": "TextActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "FileFormatAction",
+            "props": {
+              "ImageIndex": "imgTextFormatEdit"
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "SelectAllAction",
+            "props": {
+              "Hint": "Select All|Selects all visible lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExistsNextAction",
+            "props": {
+              "Hint": "Next Existing Line|Positions at next existing line, skipping over gaps."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExistsPrevAction",
+            "props": {
+              "Hint": "Previous Existing Line|Positions at previous existing line, skipping over gaps."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavCompareAllAction",
+            "props": {
+              "Hint": "Show All|Shows same, left orphan, right orphan and difference lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavDiffAction",
+            "props": {
+              "Hint": "Show Differences|Shows left orphan, right orphan and difference lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavSameAction",
+            "props": {
+              "Hint": "Show Same|Shows same lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavCompareNoneAction",
+            "props": {
+              "Hint": "Show None|Shows no lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogSameAction",
+            "props": {
+              "Hint": "Toggle Same|Shows or hides same lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogLeftOrphanAction",
+            "props": {
+              "Hint": "Toggle Left Orphans|Shows or hides left orphan lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogRightOrphanAction",
+            "props": {
+              "Hint": "Toggle Right Orphans|Shows or hides right orphan lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogDiffAction",
+            "props": {
+              "Hint": "Toggle Differences|Shows or hides difference lines."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "CheckInAction",
+            "props": {
+              "Category": "File",
+              "Caption": "Check &In...",
+              "Hint": "Check In|Checks file into source control."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CheckOutAction",
+            "props": {
+              "Category": "File",
+              "Caption": "Check Ou&t",
+              "Hint": "Check Out|Checks out file from source control."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "UndoCheckOutAction",
+            "props": {
+              "Category": "File",
+              "Caption": "&Undo Check Out",
+              "Hint": "Undo Check Out|Undoes checkout from source control."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ApplyPatchAction",
+            "props": {
+              "Category": "File",
+              "Caption": "&Apply Patch",
+              "Hint": "Apply Patch|Applies patch file."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "AlignWithAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Align &With...",
+              "Hint": "Align With|Marks item for manual realignment.",
+              "MacShortCutStr": "Shift+Meta+A",
+              "ShortCutStr": "F7"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "IsolateAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "I&solate",
+              "Hint": "Isolate|Realigns comparison so that selected lines are by themselves."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ReplacementAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Replace&ment...",
+              "Hint": "Replacement|Adds item to replacement list based on current difference."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyRightAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cop&y to Right",
+              "Hint": "Copy to Right|Copies selected lines or current section to right pane.",
+              "ImageIndex": "imgCopyRight",
+              "MacShortCutStr": "Alt+Meta+Right",
+              "MenuAllowed": false,
+              "ShortCaption": "Copy",
+              "ShortCutStr": "Ctrl+R",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyLeftAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cop&y to Left",
+              "Hint": "Copy to Left|Copies selected lines or current section to left pane.",
+              "ImageIndex": "imgCopyLeft",
+              "MacShortCutStr": "Alt+Meta+Left",
+              "MenuAllowed": false,
+              "ShortCaption": "Copy",
+              "ShortCutStr": "Ctrl+L",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopySideAction",
+            "props": {
+              "Category": "Edit",
+              "Hint": "Copy to Other Side|Copies selected lines or current section to pane on other side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyItemRightAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cop&y Line to Right",
+              "Hint": "Copy Line to Right|Copies current line to right pane.",
+              "MacShortCutStr": "Ctrl+Meta+Right",
+              "MenuAllowed": false,
+              "ShortCaption": "Copy Line",
+              "ShortCutStr": "Shift+Ctrl+R",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyItemLeftAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cop&y Line to Left",
+              "Hint": "Copy Line to Left|Copies current line to left pane.",
+              "MacShortCutStr": "Ctrl+Meta+Left",
+              "MenuAllowed": false,
+              "ShortCaption": "Copy Line",
+              "ShortCutStr": "Shift+Ctrl+L",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyItemSideAction",
+            "props": {
+              "Category": "Edit",
+              "Hint": "Copy Line to Other Side|Copies current line to pane on other side.",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ConflictAction",
+            "props": {
+              "Category": "Edit",
+              "AutoCheck": true,
+              "Caption": "&Conflict",
+              "Hint": "Conflict|Clears or sets conflict for selected lines or current section.",
+              "ImageIndex": "imgConflict",
+              "ShortCaption": "Conflict"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakeLeftAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Ta&ke Left",
+              "Hint": "Take Left|Takes selected lines or current section from left pane.",
+              "MacShortCutStr": "Alt+Meta+Left",
+              "ShortCaption": "Left",
+              "ShortCutStr": "Ctrl+L"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakeCenterAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Ta&ke Center",
+              "Hint": "Take Center|Takes selected lines or current section from center pane.",
+              "ShortCaption": "Center"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakeRightAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Ta&ke Right",
+              "Hint": "Take Right|Takes selected lines or current section from right pane.",
+              "MacShortCutStr": "Alt+Meta+Right",
+              "ShortCaption": "Right",
+              "ShortCutStr": "Ctrl+R"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakeLeftRightAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Take Left Then Ri&ght",
+              "Hint": "Take Left Then Right|Takes selected lines or current section from left then right panes.",
+              "MacShortCutStr": "Meta+B",
+              "ShortCutStr": "Ctrl+B"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakeRightLeftAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Take Rig&ht Then Left",
+              "Hint": "Take Right Then Left|Takes selected lines or current section from right then left panes.",
+              "MacShortCutStr": "Shift+Meta+B",
+              "ShortCutStr": "Shift+Ctrl+B"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakeItemLeftAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Ta&ke Left Line",
+              "Hint": "Take Left Line|Takes current line from left pane.",
+              "MacShortCutStr": "Ctrl+Meta+Left",
+              "ShortCutStr": "Shift+Ctrl+L"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakeItemCenterAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Ta&ke Center Line",
+              "Hint": "Take Center Line|Takes current line from center pane."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakeItemRightAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Ta&ke Right Line",
+              "Hint": "Take Right Line|Takes current line from right pane.",
+              "MacShortCutStr": "Ctrl+Meta+Right",
+              "ShortCutStr": "Shift+Ctrl+R"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "IncreaseIndentAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "I&ncrease Indent",
+              "Hint": "Increase Indent|Increases indentation of selected lines.",
+              "MacShortCutStr": "Meta+]",
+              "ShortCutStr": "Shift+Ctrl+I"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DecreaseIndentAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "D&ecrease Indent",
+              "Hint": "Decrease Indent|Decreases indentation of selected lines.",
+              "MacShortCutStr": "Meta+[",
+              "ShortCutStr": "Shift+Ctrl+U"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CutAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cu&t",
+              "Hint": "Cut|Cuts selection and puts it on Clipboard.",
+              "ImageIndex": "imgCut",
+              "MacShortCutStr": "Meta+X",
+              "SecondaryShortCutStr": "Shift+Del",
+              "ShortCaption": "Cut",
+              "ShortCutStr": "Ctrl+X",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "PasteAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Paste",
+              "Hint": "Paste|Inserts Clipboard contents.",
+              "ImageIndex": "imgPaste",
+              "MacShortCutStr": "Meta+V",
+              "SecondaryShortCutStr": "Shift+Ins",
+              "ShortCaption": "Paste",
+              "ShortCutStr": "Ctrl+V",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete",
+              "Hint": "Delete|Deletes selection.",
+              "ImageIndex": "imgDelete",
+              "ShortCaption": "Delete",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteItemAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete Line",
+              "Hint": "Delete Line|Deletes current line.",
+              "MenuAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteItemBeginAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete to Start of Line",
+              "Hint": "Delete to Start of Line|Deletes to start of current line.",
+              "MacShortCutStr": "Meta+BkSp",
+              "MenuAllowed": false,
+              "ShortCutStr": "Shift+Ctrl+BkSp"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteItemEndAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete to End of Line",
+              "Hint": "Delete to End of Line|Deletes to end of current line.",
+              "MacShortCutStr": "Ctrl+K",
+              "MenuAllowed": false,
+              "ShortCutStr": "Shift+Ctrl+Del"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteWordAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete Word",
+              "Hint": "Delete Word|Deletes current word.",
+              "MenuAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteWordBeginAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete to Start of Word",
+              "Hint": "Delete to Start of Word|Deletes to start of current word.",
+              "MacShortCutStr": "Alt+BkSp",
+              "MenuAllowed": false,
+              "ShortCutStr": "Ctrl+BkSp"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteWordEndAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete to End of Word",
+              "Hint": "Delete to End of Word|Deletes to end of current word.",
+              "MacShortCutStr": "Alt+Del",
+              "MenuAllowed": false,
+              "ShortCutStr": "Ctrl+Del"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "InsertItemBeforeAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Insert Line &Before",
+              "Hint": "Insert Line Before|Inserts new line before current one.",
+              "MacShortCutStr": "Shift+Ctrl+Enter",
+              "MenuAllowed": false,
+              "ShortCutStr": "Shift+Ctrl+Enter"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "InsertItemAfterAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Insert Line After",
+              "Hint": "Insert Line After|Inserts new line after current one.",
+              "MacShortCutStr": "Ctrl+Enter",
+              "MenuAllowed": false,
+              "ShortCutStr": "Ctrl+Enter"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SelectSectionAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Select Secti&on",
+              "Hint": "Select Section|Selects all lines in current section.",
+              "MacShortCutStr": "Meta+D",
+              "ShortCutStr": "Ctrl+D"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CompareToClipboardAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Compare Se&lection to Clipboard",
+              "Hint": "Compare Selection to Clipboard|Compares selected text to clipboard in new view."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ConvertListAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Con&vert File",
+              "Hint": "Convert File|Performs picked file conversion."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TrimTrailWSAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Trim &Trailing Whitespace",
+              "Hint": "Trim Trailing Whitespace|Strips off spaces and tab characters at the end of lines."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "LeadSpaceToTabAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Leading Spaces to Tabs",
+              "Hint": "Leading Spaces to Tabs|Replaces spaces at the beginning of lines with tab characters."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TabToSpaceAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Tabs to &Spaces",
+              "Hint": "Tabs to Spaces|Replaces tab characters with spaces."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "EndingStyleListAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Line &Endings",
+              "Hint": "Line Endings|Converts line endings to picked style."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ToWindowsAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "To &Windows/DOS",
+              "Hint": "To Windows/DOS|Converts line endings to Windows/DOS style."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ToUnixAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "To &Unix",
+              "Hint": "To Unix|Converts line endings to Unix style."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ToMacAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "To &Macintosh",
+              "Hint": "To Macintosh|Converts line endings to Macintosh style."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FullEditAction",
+            "props": {
+              "Category": "Edit",
+              "AutoCheck": true,
+              "Caption": "&Full Edit",
+              "Hint": "Full Edit|Enables character-mode editing in the main file view.",
+              "ImageIndex": "imgFullEdit",
+              "MacShortCutStr": "Alt+Enter",
+              "ShortCaption": "Edit",
+              "ShortCutStr": "F2"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ConflictSectionOffNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Clear &Conflict Section, Next",
+              "Hint": "Clear Conflict Section, Next|Clears conflict for current section and positions at next conflict section.",
+              "ImageIndex": "imgConflictSectionOffNext",
+              "ShortCaption": "Clear Conflict, Next",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ConflictSectionNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Next &Conflict Section",
+              "Hint": "Next Conflict Section|Positions at next conflict section.",
+              "ImageIndex": "imgConflictSectionNext",
+              "MacShortCutStr": "Shift+Alt+Down",
+              "ShortCaption": "Next Conflict",
+              "ShortCutStr": "Alt+N"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ConflictSectionPrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Previous &Conflict Section",
+              "Hint": "Previous Conflict Section|Positions at previous conflict section.",
+              "ImageIndex": "imgConflictSectionPrev",
+              "MacShortCutStr": "Shift+Alt+Up",
+              "ShortCaption": "Prev Conflict",
+              "ShortCutStr": "Alt+P"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Nex&t Difference",
+              "Hint": "Next Difference|Positions at next difference text.",
+              "MacShortCutStr": "Ctrl+Alt+Down",
+              "ShortCutStr": "Shift+Ctrl+N"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffPrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Previo&us Difference",
+              "Hint": "Previous Difference|Positions at previous difference text.",
+              "MacShortCutStr": "Ctrl+Alt+Up",
+              "ShortCutStr": "Shift+Ctrl+P"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffSectionNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Next Difference Section",
+              "Hint": "Next Difference Section|Positions at next unignored difference section.",
+              "ImageIndex": "imgDown",
+              "MacShortCutStr": "Alt+Down",
+              "ShortCaption": "Next Section",
+              "ShortCutStr": "Ctrl+N"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffSectionPrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Previous Difference Section",
+              "Hint": "Previous Difference Section|Positions at previous unignored difference section.",
+              "ImageIndex": "imgUp",
+              "MacShortCutStr": "Alt+Up",
+              "ShortCaption": "Prev Section",
+              "ShortCutStr": "Ctrl+P"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffReplacedNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Next Repl&acement",
+              "Hint": "Next Replacement|Positions at next replacement text.",
+              "MacShortCutStr": "Shift+Ctrl+Alt+Down",
+              "ShortCutStr": "Shift+Ctrl+Alt+N"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DiffReplacedPrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Previous Replace&ment",
+              "Hint": "Previous Replacement|Positions at previous replacement text.",
+              "MacShortCutStr": "Shift+Ctrl+Alt+Up",
+              "ShortCutStr": "Shift+Ctrl+Alt+P"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakenLeftNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Next Left T&aken",
+              "Hint": "Next Left Taken|Positions at next range of lines where left was taken."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakenLeftPrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Previous Left T&aken",
+              "Hint": "Previous Left Taken|Positions at previous range of lines where left was taken."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakenRightNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Next Rig&ht Taken",
+              "Hint": "Next Right Taken|Positions at next range of lines where right was taken."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TakenRightPrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Previous Rig&ht Taken",
+              "Hint": "Previous Right Taken|Positions at previous range of lines where right was taken."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "EditNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Next &Edit",
+              "Hint": "Next Edit|Positions at next edited text."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "EditPrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Previous E&dit",
+              "Hint": "Previous Edit|Positions at previous edited text."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ReplaceAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Replace...",
+              "Hint": "Replace|Replaces search string.",
+              "ImageIndex": "imgReplace",
+              "MacShortCutStr": "Alt+Meta+F",
+              "ShortCaption": "Replace",
+              "ShortCutStr": "Ctrl+H",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FindInFilesAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Find in File&s...",
+              "Hint": "Find in Files|Finds search string in multiple files.",
+              "ImageIndex": "imgFindInFiles",
+              "MacShortCutStr": "Shift+Meta+F",
+              "ShortCaption": "Files",
+              "ShortCutStr": "Shift+Ctrl+F"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MacFindUseSelAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Use Selection for Find",
+              "Hint": "Use Selection for Find|Finds selected text.",
+              "MacShortCutStr": "Meta+E"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "GoToAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Go To...",
+              "Hint": "Go To|Positions at specified line and column.",
+              "ImageIndex": "imgGoTo",
+              "MacShortCutStr": "Meta+L",
+              "ShortCaption": "Go To",
+              "ShortCutStr": "Ctrl+G",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BookmarkToggleListAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Toggle &Bookmark",
+              "Hint": "Toggle Bookmark|Sets or clears picked bookmark."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BookmarkGoToListAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Go to Boo&kmark",
+              "Hint": "Go to Bookmark|Positions at picked bookmark."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BookmarkClearAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "C&lear Bookmarks",
+              "Hint": "Clear Bookmarks|Removes all bookmarks."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "GoInputAction",
+            "props": {
+              "Category": "Search",
+              "Hint": "Go Input|Positions in input pane.",
+              "MacShortCutStr": "Alt+PgUp",
+              "ShortCutStr": "Alt+PgUp"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "GoOutputAction",
+            "props": {
+              "Category": "Search",
+              "Hint": "Go Output|Positions in output pane.",
+              "MacShortCutStr": "Alt+PgDn",
+              "ShortCutStr": "Alt+PgDn"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavMergeAllAction",
+            "props": {
+              "Category": "Favorites",
+              "Caption": "Show All",
+              "Hint": "Show All|Shows unchanged, same change, left change, right change, different change and conflict lines.",
+              "ImageIndex": "imgFavAll",
+              "ShortCaption": "All"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavChangedAction",
+            "props": {
+              "Category": "DropDown",
+              "Caption": "Show Changes",
+              "Hint": "Show Changes|Shows same change, left change, right change, different change and conflict lines.",
+              "ImageIndex": "imgFavDiff",
+              "ShortCaption": "Diffs"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavConflictAction",
+            "props": {
+              "Category": "DropDown",
+              "Caption": "Show Conflicts",
+              "Hint": "Show Conflicts|Shows conflict lines.",
+              "ShortCaption": "Conflicts"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavLeftAction",
+            "props": {
+              "Category": "DropDown",
+              "Caption": "Show Left Changes",
+              "Hint": "Show Left Changes|Shows same change, left change, different change and conflict lines.",
+              "ShortCaption": "Left"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavRightAction",
+            "props": {
+              "Category": "DropDown",
+              "Caption": "Show Right Changes",
+              "Hint": "Show Right Changes|Shows same change, right change, different change and conflict lines.",
+              "ShortCaption": "Right"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavMergeableAction",
+            "props": {
+              "Category": "DropDown",
+              "Caption": "Show Mergeable",
+              "Hint": "Show Mergeable|Shows same change, left change, right change and different change lines.",
+              "ShortCaption": "Okay"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavUnchangedAction",
+            "props": {
+              "Category": "Favorites",
+              "Caption": "Show Unchanged",
+              "Hint": "Show Unchanged|Shows unchanged lines.",
+              "ImageIndex": "imgFavSame",
+              "ShortCaption": "Same"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavMergeNoneAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Show None",
+              "Hint": "Show None|Shows no lines.",
+              "ImageIndex": "imgFavNone",
+              "MenuAllowed": false,
+              "ShortCaption": "None",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogNoModAction",
+            "props": {
+              "Category": "Toggles",
+              "Hint": "Toggle Unchanged|Shows or hides unchanged lines.",
+              "ShortCaption": "Same"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogSameModAction",
+            "props": {
+              "Category": "Toggles",
+              "Hint": "Toggle Same Changes|Shows or hides same change lines.",
+              "ShortCaption": "Same Diffs"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogLeftModAction",
+            "props": {
+              "Category": "Toggles",
+              "Hint": "Toggle Left Changes|Shows or hides left change lines.",
+              "ShortCaption": "Left"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogRightModAction",
+            "props": {
+              "Category": "Toggles",
+              "Hint": "Toggle Right Changes|Shows or hides right change lines.",
+              "ShortCaption": "Right"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogDiffModAction",
+            "props": {
+              "Category": "Toggles",
+              "Hint": "Toggle Different Changes|Shows or hides different change lines.",
+              "ShortCaption": "Diffs"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "TogConflictAction",
+            "props": {
+              "Category": "Toggles",
+              "Hint": "Toggle Conflicts|Shows or hides conflict lines.",
+              "ShortCaption": "Conflicts"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowContextAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Show &Context",
+              "Hint": "Show Context|Shows lines surrounding difference.",
+              "ImageIndex": "imgShowContext",
+              "ShortCaption": "Context"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavorLeftAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Favor &Left Changes",
+              "Hint": "Favor Left Changes|Suppresses highlighting of left-only changes in output.",
+              "ImageIndex": "imgFavorLeft",
+              "ShortCaption": "Favor Left",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FavorRightAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Fa&vor Right Changes",
+              "Hint": "Favor Right Changes|Suppresses highlighting of right-only changes in output.",
+              "ImageIndex": "imgFavorRight",
+              "ShortCaption": "Favor Right",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "IgnoredAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "I&gnored",
+              "Hint": "Ignored|Ignores or unignores differences in selected lines or current section.",
+              "ImageIndex": "imgIgnored",
+              "ShortCaption": "Ignored",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowItemNumAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Line &Numbers",
+              "Hint": "Line Numbers|Shows or hides line numbers.",
+              "ImageIndex": "imgShowItemNum",
+              "ShortCaption": "Line #s",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowSyntaxHighlightingAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Syntax &Highlighting",
+              "Hint": "Syntax Highlighting|Shows or hides syntax highlighting.",
+              "ImageIndex": "imgShowSyntaxHighlighting",
+              "ShortCaption": "Syntax",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "OutputWindowAction",
+            "props": {
+              "Category": "View",
+              "Caption": "Detached Out&put Pane",
+              "Hint": "Detached Output Pane|Shows output pane in separate window.",
+              "ImageIndex": "imgOutputWindow"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ZoomAction",
+            "props": {
+              "Category": "View",
+              "Hint": "Zoom|Makes current pane larger.",
+              "ShortCutStr": "F11"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ZoomLeftAction",
+            "props": {
+              "Category": "View",
+              "Hint": "Zoom Left|Makes left pane incrementally larger.",
+              "ShortCutStr": "Ctrl+Alt+Right"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ZoomRightAction",
+            "props": {
+              "Category": "View",
+              "Hint": "Zoom Right|Makes right pane incrementally larger.",
+              "ShortCutStr": "Ctrl+Alt+Left"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "WebBrowserAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "We&bpages",
+              "Hint": "Webpages|Shows or hides webpage panels.",
+              "ImageIndex": "imgWebBrowser",
+              "ShortCaption": "Web",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowThumbnailAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Thu&mbnail",
+              "Hint": "Thumbnail|Shows or hides thumbnail view.",
+              "ImageIndex": "imgShowThumbnail",
+              "ShortCaption": "Thumb",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowCenterAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "C&enter Pane",
+              "Hint": "Center Pane|Shows or hides center pane.",
+              "ImageIndex": "imgShowCenter",
+              "ShortCaption": "Center",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowTextDetailsAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Text &Details",
+              "Hint": "Text Details|Shows or hides text details panel.",
+              "ImageIndex": "imgShowTextDetails",
+              "ShortCaption": "Details",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowHexDetailsAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "He&x Details",
+              "Hint": "Hex Details|Shows or hides hexadecimal details panel.",
+              "ImageIndex": "imgShowHexDetails",
+              "ShortCaption": "Hex",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowAlignDetailsAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "&Alignment Details",
+              "Hint": "Alignment Details|Shows or hides alignment details panel.",
+              "ImageIndex": "imgShowAlignDetails",
+              "ShortCaption": "Alignment",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowRulerAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "&Ruler",
+              "Hint": "Ruler|Shows or hides ruler in details panel.",
+              "ImageIndex": "imgShowRuler",
+              "ShortCaption": "Ruler",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "OverwritingAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Hint": "Overwrite|Typing replaces characters instead of inserting them.",
+              "MacShortCutStr": "Ins",
+              "ShortCutStr": "Ins"
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "File: Menu",
+            [
+              "ExplorerList: SubmenuItem",
+              [],
+              "Vcs: SeparatorItem",
+              "CheckIn: MenuItem",
+              "CheckOut: MenuItem",
+              "UndoCheckOut: MenuItem",
+              "ApplyPatch: MenuItem"
+            ],
+            "MergeFile: Menu",
+            [
+              "Info: MenuItem",
+              "Vcs: SeparatorItem",
+              "CheckIn: MenuItem",
+              "CheckOut: MenuItem",
+              "UndoCheckOut: MenuItem"
+            ],
+            "Edit: Menu",
+            [
+              "Redo: MenuItem",
+              "Sided: SeparatorItem",
+              "AlignWith: MenuItem",
+              "Isolate: MenuItem",
+              "Replacement: MenuItem",
+              "CopyRight: MenuItem",
+              "CopyLeft: MenuItem",
+              "CopySide: MenuItem",
+              "CopyItemRight: MenuItem",
+              "CopyItemLeft: MenuItem",
+              "CopyItemSide: MenuItem",
+              "Conflict: MenuItem",
+              "TakeLeft: MenuItem",
+              "TakeCenter: MenuItem",
+              "TakeRight: MenuItem",
+              "TakeLeftRight: MenuItem",
+              "TakeRightLeft: MenuItem",
+              "TakeItemLeft: MenuItem",
+              "TakeItemCenter: MenuItem",
+              "TakeItemRight: MenuItem",
+              "IncreaseIndent: MenuItem",
+              "DecreaseIndent: MenuItem",
+              "Common: SeparatorItem",
+              "Cut: MenuItem",
+              "Copy: MenuItem",
+              "Paste: MenuItem",
+              "Delete: MenuItem",
+              "DeleteItem: MenuItem",
+              "DeleteItemBegin: MenuItem",
+              "DeleteItemEnd: MenuItem",
+              "DeleteWord: MenuItem",
+              "DeleteWordBegin: MenuItem",
+              "DeleteWordEnd: MenuItem",
+              "InsertItemBefore: MenuItem",
+              "InsertItemAfter: MenuItem",
+              "SelectAll: MenuItem",
+              "SelectSection: MenuItem",
+              "CompareToClipboard: MenuItem",
+              "Convert: SeparatorItem",
+              "ConvertList: SubmenuItem",
+              [
+                "TrimTrailWS: MenuItem",
+                "LeadSpaceToTab: MenuItem",
+                "TabToSpace: MenuItem",
+                "EndingStyleList: SubmenuItem",
+                [
+                  "ToWindows: MenuItem",
+                  "ToUnix: MenuItem",
+                  "ToMac: MenuItem"
+                ]
+              ],
+              "FullEdit: MenuItem"
+            ],
+            "Search: Menu",
+            [
+              "ConflictSectionOffNext: MenuItem",
+              "ConflictSectionNext: MenuItem",
+              "ConflictSectionPrev: MenuItem",
+              "DiffNext: MenuItem",
+              "DiffPrev: MenuItem",
+              "DiffSectionNext: MenuItem",
+              "DiffSectionPrev: MenuItem",
+              "TakeFileRight: MenuItem",
+              "DiffReplacedNext: MenuItem",
+              "DiffReplacedPrev: MenuItem",
+              "TakenLeftNext: MenuItem",
+              "TakenLeftPrev: MenuItem",
+              "TakenRightNext: MenuItem",
+              "TakenRightPrev: MenuItem",
+              "Edit: SeparatorItem",
+              "EditNext: MenuItem",
+              "EditPrev: MenuItem",
+              "Find: MenuItem",
+              "Replace: MenuItem",
+              "FindPrev: MenuItem",
+              "FindInFiles: MenuItem",
+              "MacFindUseSel: MenuItem",
+              "GoTo: SeparatorItem",
+              "GoTo: MenuItem",
+              "Bookmark: SeparatorItem",
+              "BookmarkToggleList: SubmenuItem",
+              [
+                "BookmarkToggle0: MenuItem",
+                "BookmarkToggle1: MenuItem",
+                "BookmarkToggle2: MenuItem",
+                "BookmarkToggle3: MenuItem",
+                "BookmarkToggle4: MenuItem",
+                "BookmarkToggle5: MenuItem",
+                "BookmarkToggle6: MenuItem",
+                "BookmarkToggle7: MenuItem",
+                "BookmarkToggle8: MenuItem",
+                "BookmarkToggle9: MenuItem"
+              ],
+              "BookmarkGoToList: SubmenuItem",
+              [
+                "BookmarkGoTo0: MenuItem",
+                "BookmarkGoTo1: MenuItem",
+                "BookmarkGoTo2: MenuItem",
+                "BookmarkGoTo3: MenuItem",
+                "BookmarkGoTo4: MenuItem",
+                "BookmarkGoTo5: MenuItem",
+                "BookmarkGoTo6: MenuItem",
+                "BookmarkGoTo7: MenuItem",
+                "BookmarkGoTo8: MenuItem",
+                "BookmarkGoTo9: MenuItem"
+              ],
+              "BookmarkClear: MenuItem"
+            ],
+            "View: Menu",
+            [
+              "FavCompareNone: MenuItem",
+              "FavMergeAll: MenuItem",
+              "FavChanged: MenuItem",
+              "FavConflict: MenuItem",
+              "FavLeft: MenuItem",
+              "FavRight: MenuItem",
+              "FavMergeable: MenuItem",
+              "FavUnchanged: MenuItem",
+              "FavMergeNone: MenuItem",
+              "InsigIgnored: SeparatorItem",
+              "ShowContext: MenuItem",
+              "SameModIgnored: MenuItem",
+              "FavorLeft: MenuItem",
+              "FavorRight: MenuItem",
+              "Ignored: SeparatorItem",
+              "Ignored: MenuItem",
+              "ShowWS: MenuItem",
+              "ShowItemNum: MenuItem",
+              "ShowSyntaxHighlighting: MenuItem",
+              "OverUnder: MenuItem",
+              "OutputWindow: MenuItem",
+              "WebBrowser: MenuItem",
+              "ShowThumbnail: MenuItem",
+              "ShowCenter: MenuItem",
+              "ShowTextDetails: MenuItem",
+              "ShowHexDetails: MenuItem",
+              "ShowAlignDetails: MenuItem",
+              "ShowRuler: MenuItem"
+            ],
+            "Main: Toolbar",
+            [
+              "FavCompareNone: ToolButton",
+              "FavMergeAll: ToolButton",
+              "DisplayFilters: SubmenuButton",
+              [
+                "FavChanged: MenuItem",
+                "FavConflict: MenuItem",
+                "FavLeft: MenuItem",
+                "FavRight: MenuItem",
+                "FavMergeable: MenuItem"
+              ],
+              "FavChanged: ToolButton",
+              "FavConflict: ToolButton",
+              "FavLeft: ToolButton",
+              "FavRight: ToolButton",
+              "FavMergeable: ToolButton",
+              "FavUnchanged: ToolButton",
+              "FavMergeNone: ToolButton",
+              "TogDiff: ToolButton",
+              "TogNoMod: ToolButton",
+              "TogSameMod: ToolButton",
+              "TogLeftMod: ToolButton",
+              "TogRightMod: ToolButton",
+              "TogDiffMod: ToolButton",
+              "TogConflict: ToolButton",
+              "InsigIgnored: SeparatorButton",
+              "ShowContext: ToolButton",
+              "InsigIgnored: ToolButton",
+              "FavorLeft: ToolButton",
+              "FavorRight: ToolButton",
+              "Redo: ToolButton",
+              "CopyRight: ToolButton",
+              "CopyLeft: ToolButton",
+              "CopySide: ToolButton",
+              "CopyItemRight: ToolButton",
+              "CopyItemLeft: ToolButton",
+              "CopyItemSide: ToolButton",
+              "Conflict: ToolButton",
+              "TakeLeft: ToolButton",
+              "TakeCenter: ToolButton",
+              "TakeRight: ToolButton",
+              "Cut: ToolButton",
+              "Copy: ToolButton",
+              "Paste: ToolButton",
+              "Delete: ToolButton",
+              "FullEdit: ToolButton",
+              "Search: SeparatorButton",
+              "ConflictSectionOffNext: ToolButton",
+              "ConflictSectionNext: ToolButton",
+              "ConflictSectionPrev: ToolButton",
+              "DiffSectionNext: ToolButton",
+              "DiffSectionPrev: ToolButton",
+              "Find: ToolButton",
+              "Replace: ToolButton",
+              "FindPrev: ToolButton",
+              "GoTo: ToolButton",
+              "View: SeparatorButton",
+              "Ignored: ToolButton",
+              "ShowWS: ToolButton",
+              "ShowItemNum: ToolButton",
+              "ShowSyntaxHighlighting: ToolButton",
+              "OverUnder: ToolButton",
+              "WebBrowser: ToolButton",
+              "ShowThumbnail: ToolButton",
+              "ShowCenter: ToolButton",
+              "ShowTextDetails: ToolButton",
+              "ShowHexDetails: ToolButton",
+              "ShowAlignDetails: ToolButton",
+              "ShowRuler: ToolButton"
+            ],
+            "Edit: PopupMenu",
+            [
+              "AlignWith: MenuItem",
+              "Isolate: MenuItem",
+              "Replacement: MenuItem",
+              "CopyRight: MenuItem",
+              "CopyLeft: MenuItem",
+              "CopySide: MenuItem",
+              "CopyItemRight: MenuItem",
+              "CopyItemLeft: MenuItem",
+              "CopyItemSide: MenuItem",
+              "IncreaseIndent: MenuItem",
+              "DecreaseIndent: MenuItem",
+              "N1: SeparatorItem",
+              "Cut: MenuItem",
+              "Copy: MenuItem",
+              "Paste: MenuItem",
+              "Delete: MenuItem",
+              "DeleteItem: MenuItem",
+              "DeleteItemBegin: MenuItem",
+              "DeleteItemEnd: MenuItem",
+              "DeleteWord: MenuItem",
+              "DeleteWordBegin: MenuItem",
+              "DeleteWordEnd: MenuItem",
+              "InsertItemBefore: MenuItem",
+              "InsertItemAfter: MenuItem",
+              "N2: SeparatorItem",
+              "SelectSection: MenuItem",
+              "CompareToClipboard: MenuItem",
+              "N3: SeparatorItem",
+              "FullEdit: MenuItem",
+              "N4: SeparatorItem",
+              "Ignored: MenuItem",
+              "N5: SeparatorItem",
+              "New: MenuItem",
+              "Open: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenClipboard: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem",
+                "OpenTextPatch: MenuItem"
+              ],
+              "Save: MenuItem",
+              "SaveAs: MenuItem",
+              "SaveAsLocal: MenuItem",
+              "SaveAsProfile: MenuItem",
+              "ExplorerList: SubmenuItem",
+              [],
+              "N6: SeparatorItem",
+              "CheckIn: MenuItem",
+              "CheckOut: MenuItem",
+              "UndoCheckOut: MenuItem"
+            ],
+            "LeftEdit: PopupMenu",
+            [
+              "AlignWith: MenuItem",
+              "Isolate: MenuItem",
+              "Conflict: MenuItem",
+              "TakeLeft: MenuItem",
+              "TakeLeftRight: MenuItem",
+              "TakeRightLeft: MenuItem",
+              "TakeItemLeft: MenuItem",
+              "N1: SeparatorItem",
+              "Copy: MenuItem",
+              "N2: SeparatorItem",
+              "SelectSection: MenuItem",
+              "CompareToClipboard: MenuItem",
+              "N3: SeparatorItem",
+              "FullEdit: MenuItem",
+              "N4: SeparatorItem",
+              "Ignored: MenuItem",
+              "N5: SeparatorItem",
+              "Open: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenClipboard: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem",
+                "OpenTextPatch: MenuItem"
+              ],
+              "SaveAs: MenuItem",
+              "SaveAsLocal: MenuItem",
+              "SaveAsProfile: MenuItem",
+              "ExplorerList: SubmenuItem",
+              []
+            ],
+            "CenterEdit: PopupMenu",
+            [
+              "AlignWith: MenuItem",
+              "Isolate: MenuItem",
+              "Conflict: MenuItem",
+              "TakeCenter: MenuItem",
+              "TakeLeftRight: MenuItem",
+              "TakeRightLeft: MenuItem",
+              "TakeItemCenter: MenuItem",
+              "N1: SeparatorItem",
+              "Copy: MenuItem",
+              "N2: SeparatorItem",
+              "SelectSection: MenuItem",
+              "CompareToClipboard: MenuItem",
+              "N3: SeparatorItem",
+              "FullEdit: MenuItem",
+              "N4: SeparatorItem",
+              "Ignored: MenuItem",
+              "N5: SeparatorItem",
+              "Open: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenClipboard: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem",
+                "OpenTextPatch: MenuItem"
+              ],
+              "SaveAs: MenuItem",
+              "SaveAsLocal: MenuItem",
+              "SaveAsProfile: MenuItem",
+              "ExplorerList: SubmenuItem",
+              []
+            ],
+            "RightEdit: PopupMenu",
+            [
+              "AlignWith: MenuItem",
+              "Isolate: MenuItem",
+              "Conflict: MenuItem",
+              "TakeRight: MenuItem",
+              "TakeLeftRight: MenuItem",
+              "TakeRightLeft: MenuItem",
+              "TakeItemRight: MenuItem",
+              "N1: SeparatorItem",
+              "Copy: MenuItem",
+              "N2: SeparatorItem",
+              "SelectSection: MenuItem",
+              "CompareToClipboard: MenuItem",
+              "N3: SeparatorItem",
+              "FullEdit: MenuItem",
+              "N4: SeparatorItem",
+              "Ignored: MenuItem",
+              "N5: SeparatorItem",
+              "Open: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenClipboard: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem",
+                "OpenTextPatch: MenuItem"
+              ],
+              "SaveAs: MenuItem",
+              "SaveAsLocal: MenuItem",
+              "SaveAsProfile: MenuItem",
+              "ExplorerList: SubmenuItem",
+              []
+            ],
+            "OutputEdit: PopupMenu",
+            [
+              "Conflict: MenuItem",
+              "TakeLeft: MenuItem",
+              "TakeCenter: MenuItem",
+              "TakeRight: MenuItem",
+              "TakeLeftRight: MenuItem",
+              "TakeRightLeft: MenuItem",
+              "TakeItemLeft: MenuItem",
+              "TakeItemCenter: MenuItem",
+              "TakeItemRight: MenuItem",
+              "IncreaseIndent: MenuItem",
+              "DecreaseIndent: MenuItem",
+              "N1: SeparatorItem",
+              "Cut: MenuItem",
+              "Copy: MenuItem",
+              "Paste: MenuItem",
+              "Delete: MenuItem",
+              "DeleteItem: MenuItem",
+              "DeleteItemBegin: MenuItem",
+              "DeleteItemEnd: MenuItem",
+              "DeleteWord: MenuItem",
+              "DeleteWordBegin: MenuItem",
+              "DeleteWordEnd: MenuItem",
+              "InsertItemBefore: MenuItem",
+              "InsertItemAfter: MenuItem",
+              "N2: SeparatorItem",
+              "SelectSection: MenuItem",
+              "CompareToClipboard: MenuItem",
+              "N3: SeparatorItem",
+              "FullEdit: MenuItem",
+              "N4: SeparatorItem",
+              "Ignored: MenuItem",
+              "N5: SeparatorItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem",
+                "OpenTextPatch: MenuItem"
+              ],
+              "Save: MenuItem",
+              "SaveAs: MenuItem",
+              "SaveAsLocal: MenuItem",
+              "SaveAsProfile: MenuItem",
+              "ExplorerList: SubmenuItem",
+              []
+            ],
+            "DetailsEdit: PopupMenu",
+            [
+              "Cut: MenuItem",
+              "Copy: MenuItem",
+              "Paste: MenuItem",
+              "Delete: MenuItem",
+              "DeleteItemBegin: MenuItem",
+              "DeleteItemEnd: MenuItem",
+              "DeleteWord: MenuItem",
+              "DeleteWordBegin: MenuItem",
+              "DeleteWordEnd: MenuItem"
+            ],
+            "InputDetailsEdit: PopupMenu",
+            [
+              "Copy: MenuItem"
+            ],
+            "Gutter: PopupMenu",
+            [
+              "CopyRight: MenuItem",
+              "CopyLeft: MenuItem",
+              "CopySide: MenuItem",
+              "CopyItemRight: MenuItem",
+              "CopyItemLeft: MenuItem",
+              "CopyItemSide: MenuItem",
+              "N1: SeparatorItem",
+              "ShowItemNum: MenuItem",
+              "N2: SeparatorItem",
+              "BookmarkToggleList: SubmenuItem",
+              [
+                "BookmarkToggle0: MenuItem",
+                "BookmarkToggle1: MenuItem",
+                "BookmarkToggle2: MenuItem",
+                "BookmarkToggle3: MenuItem",
+                "BookmarkToggle4: MenuItem",
+                "BookmarkToggle5: MenuItem",
+                "BookmarkToggle6: MenuItem",
+                "BookmarkToggle7: MenuItem",
+                "BookmarkToggle8: MenuItem",
+                "BookmarkToggle9: MenuItem"
+              ],
+              "BookmarkGoToList: SubmenuItem",
+              [
+                "BookmarkGoTo0: MenuItem",
+                "BookmarkGoTo1: MenuItem",
+                "BookmarkGoTo2: MenuItem",
+                "BookmarkGoTo3: MenuItem",
+                "BookmarkGoTo4: MenuItem",
+                "BookmarkGoTo5: MenuItem",
+                "BookmarkGoTo6: MenuItem",
+                "BookmarkGoTo7: MenuItem",
+                "BookmarkGoTo8: MenuItem",
+                "BookmarkGoTo9: MenuItem"
+              ],
+              "BookmarkClear: MenuItem"
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "resource_index": 610,
+  "name": "TREGISTERDIALOG",
+  "sha256": "3dbd3e57fb5ba8ba6aab33ddba1d4e2f5af3ddbfa0ab0bf8707e78461415530f",
+  "bytes": 639,
+  "parse_status": "complete",
+  "components": 8,
+  "hierarchy": {
+    "class": "TRegisterDialog",
+    "name": "RegisterDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgRegister",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "Register Beyond Compare",
+      "ClientHeight": 259,
+      "ClientWidth": 465,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "PromptLbl",
+        "props": {
+          "Left": 8,
+          "Top": 194,
+          "Width": 449,
+          "Height": 26,
+          "AutoSize": false,
+          "Caption": "%",
+          "WordWrap": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "KeyMemo",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 449,
+          "Height": 153,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 0,
+          "WantReturns": false
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "AllUsersEdit",
+        "props": {
+          "Left": 8,
+          "Top": 169,
+          "Height": 17,
+          "Caption": "Register for &all users",
+          "TabOrder": 1
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 220,
+          "Width": 465,
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "OnClick": "OkClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiHelpBtn",
+            "name": "HelpBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

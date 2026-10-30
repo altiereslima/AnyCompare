@@ -1,0 +1,364 @@
+{
+  "resource_index": 528,
+  "name": "TDIRSYNCVIEWFRAME",
+  "sha256": "ad71cfb88d21b6200dc5e69a65e64c5cc4040f1c9b2ae7fca283b8d616040f2e",
+  "bytes": 3018,
+  "parse_status": "complete",
+  "components": 27,
+  "hierarchy": {
+    "class": "TDirSyncViewFrame",
+    "name": "DirSyncViewFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ViewDirSync"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "TopPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 750,
+          "Height": 175,
+          "Align": "alTop",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiSpeedButton",
+            "name": "SwapBtn",
+            "props": {
+              "Left": 363,
+              "Top": 8,
+              "Hint": "Swap Sides|Exchanges left, right base folders.",
+              "Flat": false,
+              "ImageIndex": "imgSwap",
+              "Images": "BcImages.MainImages",
+              "OnClick": "SwapExecute"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiArrowShape",
+            "name": "LeftArrowShape",
+            "props": {
+              "Left": 2,
+              "Top": 30,
+              "Width": 24,
+              "Height": 41,
+              "ArrowHeads": "ahNone"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "PresetLbl",
+            "props": {
+              "Left": 27,
+              "Top": 37,
+              "Height": 13,
+              "Caption": "Operations:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "PresetDescLbl",
+            "props": {
+              "Left": 27,
+              "Top": 81,
+              "Height": 13,
+              "Caption": "Update each side with newer, orphan files from other side",
+              "Transparent": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpeedButton",
+            "name": "RulesBtn",
+            "props": {
+              "Left": 285,
+              "Top": 54,
+              "Hint": "Rules|Edits current Rules definitions.",
+              "Flat": false,
+              "ImageIndex": "imgRules",
+              "Images": "BcImages.MainImages",
+              "OnClick": "RulesExecute"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiArrowShape",
+            "name": "CenterArrowShape",
+            "props": {
+              "Left": 309,
+              "Top": 54,
+              "Width": 53,
+              "Height": 21,
+              "ArrowHeads": "ahNone",
+              "Direction": "adRight"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "NameFilterLbl",
+            "props": {
+              "Left": 363,
+              "Top": 37,
+              "Height": 13,
+              "Caption": "Filters:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpeedButton",
+            "name": "NameFilterBtn",
+            "props": {
+              "Left": 540,
+              "Top": 54,
+              "Hint": "Name Filters|Edits name file filters.",
+              "Flat": false,
+              "ImageIndex": "imgFilters",
+              "Images": "BcImages.MainImages",
+              "OnClick": "NameFilterClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiArrowShape",
+            "name": "RightArrowShape",
+            "props": {
+              "Left": 564,
+              "Top": 30,
+              "Width": 24,
+              "Height": 41,
+              "ArrowHeads": "ahNone",
+              "Direction": "adRightUp"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "RunStatsLbl",
+            "props": {
+              "Left": 27,
+              "Top": 102,
+              "Width": 328,
+              "Height": 65,
+              "AutoSize": false,
+              "Caption": "%"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "SummaryLbl",
+            "props": {
+              "Left": 363,
+              "Top": 83,
+              "Width": 298,
+              "Height": 57,
+              "AutoSize": false,
+              "Caption": "%",
+              "WordWrap": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpecComboBar",
+            "name": "LeftSpecEdit",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Width": 347,
+              "AllowDropFiles": false,
+              "AutoCompleteEx": "acDirs",
+              "EllipsisPosition": "epPathEllipsis",
+              "Images": "BcImages.MainImages",
+              "SupportsProfile": true,
+              "TabOrder": 0,
+              "OnAccept": "AcceptClick",
+              "OnBrowse": "SpecEditBrowse",
+              "OnChange": "SpecEditChange",
+              "OnDropDown": "SpecEditDropDown"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpecComboBar",
+            "name": "RightSpecEdit",
+            "props": {
+              "Left": 394,
+              "Top": 8,
+              "Width": 348,
+              "AllowDropFiles": false,
+              "AutoCompleteEx": "acDirs",
+              "EllipsisPosition": "epPathEllipsis",
+              "Images": "BcImages.MainImages",
+              "SupportsProfile": true,
+              "TabOrder": 1,
+              "OnAccept": "AcceptClick",
+              "OnBrowse": "SpecEditBrowse",
+              "OnChange": "SpecEditChange",
+              "OnDropDown": "SpecEditDropDown"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiComboBox",
+            "name": "PresetEdit",
+            "props": {
+              "Left": 27,
+              "Top": 54,
+              "Width": 250,
+              "Height": 21,
+              "Style": "csDropDownList",
+              "TabOrder": 2,
+              "OnChange": "PresetEditChange",
+              "Images": "BcImages.MainImages",
+              "OnGetImageIndex": "PresetEditGetImageIndex"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiComboBox",
+            "name": "NameFilterEdit",
+            "props": {
+              "Left": 363,
+              "Top": 54,
+              "Width": 169,
+              "Height": 21,
+              "TabOrder": 3
+            },
+            "children": []
+          },
+          {
+            "class": "TUiBitBtn",
+            "name": "AcceptBtn",
+            "props": {
+              "Left": 588,
+              "Top": 54,
+              "Caption": "Accept",
+              "ImageIndex": "imgAccept",
+              "Images": "BcImages.MainImages",
+              "TabOrder": 4,
+              "OnClick": "AcceptClick",
+              "AutoSize": "asRight"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiBitBtn",
+            "name": "CancelBtn",
+            "props": {
+              "Left": 669,
+              "Top": 54,
+              "Caption": "Cancel",
+              "ImageIndex": "imgSyncCancel",
+              "Images": "BcImages.MainImages",
+              "TabOrder": 5,
+              "OnClick": "CancelClick",
+              "AutoSize": "asRight"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiBitBtn",
+            "name": "RunBtn",
+            "props": {
+              "Left": 669,
+              "Top": 83,
+              "Height": 57,
+              "TabOrder": 6,
+              "AutoSize": "asLeft",
+              "Layout": "blImageBottom"
+            },
+            "children": []
+          }
+        ],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MainPanel",
+        "props": {
+          "Top": 175,
+          "Height": 406,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiPanel",
+            "name": "TreeViewPanel",
+            "props": {
+              "Height": 383
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiPanel",
+            "name": "OtherFiltersPanel",
+            "props": {
+              "Top": 383
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiPanel",
+            "name": "RunNoPanel",
+            "props": {
+              "Left": 298,
+              "Top": 34,
+              "Width": 153,
+              "Height": 41,
+              "BorderStyle": "bsSingle",
+              "Caption": "Nothing to sync!",
+              "Color": "clWindow",
+              "Ctl3D": false,
+              "ParentBackground": false,
+              "ParentCtl3D": false,
+              "TabOrder": 2
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TLogFrame",
+        "name": "LogFrame",
+        "props": {
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiVirtualListBox",
+            "name": "ListBox",
+            "props": {
+              "PopupMenu": "LogPopup"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MessagePanel",
+        "props": {
+          "TabOrder": 3
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

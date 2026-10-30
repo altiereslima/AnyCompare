@@ -1,0 +1,9 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\replacement-run-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\replacement-run-right.bin
+00000000 48 45 41 44 61 62 63 64  HEADabcd <> 00000000 48 45 41 44 41 42 43 44  HEADABCD
+00000008 65 66 67 68 54 41 49 4C  efghTAIL    00000008 45 46 47 48 54 41 49 4C  EFGHTAIL
+----------------------------------------------------------------------------------------

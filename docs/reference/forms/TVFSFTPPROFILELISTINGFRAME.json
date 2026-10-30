@@ -1,0 +1,214 @@
+{
+  "resource_index": 659,
+  "name": "TVFSFTPPROFILELISTINGFRAME",
+  "sha256": "92dda156b6972caf1e92d79ac1b973a52c6173847fb82526d31a66893df8d7c7",
+  "bytes": 1774,
+  "parse_status": "complete",
+  "components": 16,
+  "hierarchy": {
+    "class": "TVfsFtpProfileListingFrame",
+    "name": "VfsFtpProfileListingFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileFtpListing",
+      "Caption": "Listings"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "LinkResolutionPanel",
+        "props": {
+          "Left": 0,
+          "Top": 25,
+          "Width": 255,
+          "Height": 71,
+          "BevelOuter": "bvNone",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "LinkResolutionLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Link resolution:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "FastEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Height": 17,
+              "Caption": "&Fast",
+              "TabOrder": 0,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "SimpleEdit",
+            "props": {
+              "Left": 8,
+              "Top": 46,
+              "Height": 17,
+              "Caption": "&Simple",
+              "TabOrder": 1,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "ListOptionsPanel",
+        "props": {
+          "Left": 0,
+          "Top": 96,
+          "Width": 255,
+          "Height": 155,
+          "BevelOuter": "bvNone",
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "ListOptionsLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "LIST options:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "UseMLSDEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Height": 17,
+              "Caption": "Use &MLSD command",
+              "TabOrder": 0,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "ShowHiddenEdit",
+            "props": {
+              "Left": 8,
+              "Top": 46,
+              "Height": 17,
+              "Caption": "Show &hidden [-a]",
+              "TabOrder": 1,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "ForceLongFormatEdit",
+            "props": {
+              "Left": 8,
+              "Top": 67,
+              "Height": 17,
+              "Caption": "F&orce long format [-l]",
+              "TabOrder": 2,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "CompleteTimestampsEdit",
+            "props": {
+              "Left": 8,
+              "Top": 88,
+              "Height": 17,
+              "Caption": "Complete &timestamps [-T]",
+              "TabOrder": 3,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "ResolveLinksEdit",
+            "props": {
+              "Left": 8,
+              "Top": 109,
+              "Height": 17,
+              "Caption": "Resolve &links [-L]",
+              "TabOrder": 4,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "RecursiveEdit",
+            "props": {
+              "Left": 8,
+              "Top": 130,
+              "Height": 17,
+              "Caption": "&Recursive [-R]",
+              "TabOrder": 5,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MiscPanel",
+        "props": {
+          "Left": 0,
+          "Top": 251,
+          "Width": 255,
+          "Height": 54,
+          "BevelOuter": "bvNone",
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiCheckBox",
+            "name": "HideVMSVersionsEdit",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 17,
+              "Caption": "Hide &VMS versions",
+              "TabOrder": 0,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "FetchIncompleteTimestampsEdit",
+            "props": {
+              "Left": 8,
+              "Top": 29,
+              "Height": 17,
+              "Caption": "F&etch incomplete timestamps",
+              "TabOrder": 1,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

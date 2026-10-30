@@ -1,0 +1,151 @@
+{
+  "resource_index": 533,
+  "name": "TEXTERNALFORMATGENERALFRAME",
+  "sha256": "acc57013b0f0c3c8edf10c6b0d83c45cfb06d645f764297c79d56645ff1835fd",
+  "bytes": 1368,
+  "parse_status": "complete",
+  "components": 11,
+  "hierarchy": {
+    "class": "TExternalFormatGeneralFrame",
+    "name": "ExternalFormatGeneralFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "FormatExternalGeneral"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "DescriptionLbl",
+        "props": {
+          "Top": 240
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiLabel",
+        "name": "QuickCompareCmdLineLbl",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Height": 13,
+          "Caption": "&Quick compare command line:",
+          "FocusControl": "QuickCompareCmdLineEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 2
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ViewCmdLineLbl",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Height": 13,
+          "Caption": "Compare &view command line:",
+          "FocusControl": "ViewCmdLineEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 3
+      },
+      {
+        "class": "TUiLabel",
+        "name": "QuickMergeCmdLineLbl",
+        "props": {
+          "Left": 8,
+          "Top": 146,
+          "Height": 13,
+          "Caption": "Q&uick merge command line:",
+          "FocusControl": "QuickMergeCmdLineEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 4
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ViewMergeCmdLineLbl",
+        "props": {
+          "Left": 8,
+          "Top": 192,
+          "Height": 13,
+          "Caption": "Merge vie&w command line:",
+          "FocusControl": "ViewMergeCmdLineEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 5
+      },
+      {
+        "class": "TUiMemo",
+        "name": "DescriptionEdit",
+        "props": {
+          "Top": 257,
+          "Height": 56,
+          "TabOrder": 5
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiSpecBar",
+        "name": "QuickCompareCmdLineEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Width": 257,
+          "TabOrder": 1,
+          "OnBrowse": "CmdLineEditBrowse",
+          "OnChange": "SomethingChangedClick",
+          "OnGetArgs": "CompareCmdLineEditGetArgs"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpecBar",
+        "name": "ViewCmdLineEdit",
+        "props": {
+          "Left": 8,
+          "Top": 117,
+          "Width": 257,
+          "TabOrder": 2,
+          "OnBrowse": "CmdLineEditBrowse",
+          "OnChange": "SomethingChangedClick",
+          "OnGetArgs": "CompareCmdLineEditGetArgs"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpecBar",
+        "name": "QuickMergeCmdLineEdit",
+        "props": {
+          "Left": 8,
+          "Top": 163,
+          "Width": 257,
+          "TabOrder": 3,
+          "OnBrowse": "CmdLineEditBrowse",
+          "OnChange": "SomethingChangedClick",
+          "OnGetArgs": "MergeCmdLineEditGetArgs"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpecBar",
+        "name": "ViewMergeCmdLineEdit",
+        "props": {
+          "Left": 8,
+          "Top": 209,
+          "Width": 257,
+          "TabOrder": 4,
+          "OnBrowse": "CmdLineEditBrowse",
+          "OnChange": "SomethingChangedClick",
+          "OnGetArgs": "MergeCmdLineEditGetArgs"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

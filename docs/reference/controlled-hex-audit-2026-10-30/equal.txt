@@ -1,0 +1,6 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\equal-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\equal-right.bin
+64 same byte(s)

@@ -1,0 +1,458 @@
+{
+  "resource_index": 607,
+  "name": "TREGACTIONS",
+  "sha256": "ed6c00642cd56c91c7dde16cf5a6ff17b8272715fdd6644739d79c5cfa862a45",
+  "bytes": 5983,
+  "parse_status": "complete",
+  "components": 32,
+  "hierarchy": {
+    "class": "TRegActions",
+    "name": "RegActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "SwapAction",
+            "props": {
+              "Hint": "Swap Sides|Exchanges left, right registries."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "ReloadAction",
+            "props": {
+              "Caption": "&Reload",
+              "Hint": "Reload|Reloads displayed registries."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "RecompareAction",
+            "props": {
+              "Caption": "Reco&mpare",
+              "Hint": "Recompare|Recompares displayed registries without reloading them."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "OpenAction",
+            "props": {
+              "Caption": "&Open...",
+              "Hint": "Open|Opens registry into picked pane."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "OpenLocalAction",
+            "props": {
+              "Caption": "Open Registry File on File S&ystem...",
+              "Hint": "Open Registry File on File System|Opens existing local registry file into picked pane."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "OpenProfileAction",
+            "props": {
+              "Caption": "Open Registry File Using &Profile...",
+              "Hint": "Open Registry File Using Profile|Opens existing registry file into picked pane using profile."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "UpOneLevelListAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Up One Level",
+              "Hint": "Up One Level|Changes base keys on picked sides to their parent keys.",
+              "ImageIndex": "imgUpOneLevel"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "UpOneLevelLeftAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Left Side",
+              "Hint": "Up One Level on Left Side|Changes left base key to its parent key."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "UpOneLevelRightAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Right Side",
+              "Hint": "Up One Level on Right Side|Changes right base key to its parent key."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "UpOneLevelBothAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Both Sides",
+              "Hint": "Up One Level on Both Sides|Changes both base keys to their parent keys."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "OpenRegAction",
+            "props": {
+              "Category": "File",
+              "Caption": "Open &Registry...",
+              "Hint": "Open Registry|Opens live registry into picked pane.",
+              "MenuAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SetAsBasesAction",
+            "props": {
+              "Category": "Edit",
+              "Hint": "Set as Base Keys|Sets selected keys as base keys."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SetBothAsBasesAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Set B&oth as Base Keys",
+              "Hint": "Set Both as Base Keys|Sets selected key and key on other side as base keys."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SetAsOtherBaseAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Set as Base Key on Ot&her Side",
+              "Hint": "Set as Base Key on Other Side|Sets selected key as base key on other side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyRightAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cop&y to Right",
+              "Hint": "Copy to Right|Copies selected items to right pane.",
+              "ImageIndex": "imgCopyRight",
+              "MenuAllowed": false,
+              "ShortCaption": "Copy",
+              "ShortCutStr": "Ctrl+R",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyLeftAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Cop&y to Left",
+              "Hint": "Copy to Left|Copies selected items to left pane.",
+              "ImageIndex": "imgCopyLeft",
+              "MenuAllowed": false,
+              "ShortCaption": "Copy",
+              "ShortCutStr": "Ctrl+L",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopySideAction",
+            "props": {
+              "Category": "Edit",
+              "Hint": "Copy to Other Side|Copies selected items to pane on other side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "DeleteAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Delete",
+              "Hint": "Delete|Deletes selected items.",
+              "ImageIndex": "imgDelete",
+              "ShortCaption": "Delete",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RenameAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Re&name",
+              "Hint": "Rename|Renames item.",
+              "ImageIndex": "imgRename",
+              "ShortCaption": "Rename",
+              "ShortCutStr": "F2",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "NewKeyAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "New &Key",
+              "Hint": "New Key|Adds a new key."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "NewValAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "New &Value",
+              "Hint": "New Value|Adds a new value.",
+              "ShortCutStr": "Ins"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ModifyAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Modify...",
+              "Hint": "Modify|Modifies value."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyKeyNameAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Copy Key Name",
+              "Hint": "Copy Key Name|Copies key's name to Clipboard."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExportKeyAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Export...",
+              "Hint": "Export|Saves key as registry file."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExportAllAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Export A&ll...",
+              "Hint": "Export All|Saves all keys as registry file."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExpandAllAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Expand All",
+              "Hint": "Expand All|Opens all items.",
+              "ImageIndex": "imgExpandAll",
+              "ShortCaption": "Expand"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CollapseAllAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Collapse All",
+              "Hint": "Collapse All|Closes all items.",
+              "ImageIndex": "imgCollapseAll",
+              "ShortCaption": "Collapse"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowTextDetailsAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Text &Details",
+              "Hint": "Text Details|Shows or hides text details panel.",
+              "ImageIndex": "imgShowTextDetails",
+              "ShortCaption": "Details",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowHexDetailsAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "He&x Details",
+              "Hint": "Hex Details|Shows or hides hexadecimal details panel.",
+              "ImageIndex": "imgShowHexDetails",
+              "ShortCaption": "Hex",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "Session: Menu",
+            [
+              "Swap: MenuItem",
+              "UpOneLevelList: SubmenuItem",
+              [
+                "UpOneLevelLeft: MenuItem",
+                "UpOneLevelRight: MenuItem",
+                "UpOneLevelBoth: MenuItem"
+              ]
+            ],
+            "File: Menu",
+            [
+              "Open: MenuItem",
+              "OpenReg: MenuItem"
+            ],
+            "Edit: Menu",
+            [
+              "SetAsBases: MenuItem",
+              "SetBothAsBases: MenuItem",
+              "SetAsOtherBase: MenuItem",
+              "Undo: SeparatorItem",
+              "Redo: MenuItem",
+              "Sided: SeparatorItem",
+              "CopyRight: MenuItem",
+              "CopyLeft: MenuItem",
+              "CopySide: MenuItem",
+              "Copy: MenuItem",
+              "Delete: MenuItem",
+              "Rename: MenuItem",
+              "NewKey: MenuItem",
+              "NewVal: MenuItem",
+              "Modify: MenuItem",
+              "Export: SeparatorItem",
+              "CopyKeyName: MenuItem",
+              "ExportKey: MenuItem",
+              "ExportAll: MenuItem"
+            ],
+            "View: Menu",
+            [
+              "SameModIgnored: MenuItem",
+              "Expanded: SeparatorItem",
+              "ExpandAll: MenuItem",
+              "CollapseAll: MenuItem",
+              "OverUnder: MenuItem",
+              "ShowTextDetails: MenuItem",
+              "ShowHexDetails: MenuItem"
+            ],
+            "Main: Toolbar",
+            [
+              "Redo: ToolButton",
+              "CopyRight: ToolButton",
+              "CopyLeft: ToolButton",
+              "CopySide: ToolButton",
+              "Copy: ToolButton",
+              "Delete: ToolButton",
+              "Rename: ToolButton",
+              "View: SeparatorButton",
+              "ExpandAll: ToolButton",
+              "CollapseAll: ToolButton",
+              "OverUnder: ToolButton",
+              "ShowTextDetails: ToolButton",
+              "ShowHexDetails: ToolButton"
+            ],
+            "Edit: PopupMenu",
+            [
+              "SetAsBases: MenuItem",
+              "SetBothAsBases: MenuItem",
+              "SetAsOtherBase: MenuItem",
+              "N1: SeparatorItem",
+              "CopyRight: MenuItem",
+              "CopyLeft: MenuItem",
+              "CopySide: MenuItem",
+              "N2: SeparatorItem",
+              "Copy: MenuItem",
+              "Delete: MenuItem",
+              "Rename: MenuItem",
+              "NewKey: MenuItem",
+              "NewVal: MenuItem",
+              "Modify: MenuItem",
+              "N3: SeparatorItem",
+              "CopyKeyName: MenuItem",
+              "ExportKey: MenuItem",
+              "N4: SeparatorItem",
+              "Open: MenuItem",
+              "OpenReg: MenuItem",
+              "OpenLocal: MenuItem",
+              "OpenProfile: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem"
+              ],
+              "ExplorerList: SubmenuItem",
+              []
+            ],
+            "DetailsEdit: PopupMenu",
+            [
+              "CopyRight: MenuItem",
+              "CopyLeft: MenuItem",
+              "CopySide: MenuItem",
+              "N1: SeparatorItem",
+              "Copy: MenuItem",
+              "Modify: MenuItem"
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

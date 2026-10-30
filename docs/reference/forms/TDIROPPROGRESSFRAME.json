@@ -1,0 +1,142 @@
+{
+  "resource_index": 515,
+  "name": "TDIROPPROGRESSFRAME",
+  "sha256": "16ecdd8a86703830e578dcaab4363e71a5fb796c26f7a0ded9bf74fce57efb81",
+  "bytes": 1025,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TDirOpProgressFrame",
+    "name": "DirOpProgressFrame",
+    "props": {
+      "Left": 0,
+      "Top": 0,
+      "Width": 583,
+      "Height": 38,
+      "TabOrder": 0,
+      "Visible": false
+    },
+    "children": [
+      {
+        "class": "TUiImage",
+        "name": "ProgressImage",
+        "props": {
+          "Left": 240,
+          "Top": 4,
+          "Width": 17,
+          "Height": 16,
+          "Center": true,
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ProgressLbl",
+        "props": {
+          "Left": 261,
+          "Top": 4,
+          "Width": 295,
+          "Height": 13,
+          "AutoSize": false,
+          "Caption": "%",
+          "ShowAccelChar": false
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "RemainingLbl",
+        "props": {
+          "Left": 564,
+          "Top": 4,
+          "Height": 13,
+          "Caption": "%",
+          "ShowAccelChar": false
+        },
+        "children": []
+      },
+      {
+        "class": "TUiImage",
+        "name": "ErrorImage",
+        "props": {
+          "Left": 52,
+          "Top": 21,
+          "Width": 16,
+          "Height": 16,
+          "ImageIndex": "imgError",
+          "Images": "BcImages.MainImages"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLinkLabel",
+        "name": "ErrorCountLinkLbl",
+        "props": {
+          "Left": 72,
+          "Top": 21,
+          "Height": 13,
+          "Hint": "View all errors in a popup window",
+          "Caption": "%",
+          "OnClick": "ErrorCountLinkClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ErrorLbl",
+        "props": {
+          "Left": 261,
+          "Top": 21,
+          "Height": 13,
+          "Caption": "%",
+          "ShowAccelChar": false
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "CancelBtn",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 22,
+          "Height": 21,
+          "Hint": "Stop|Stops operation.",
+          "ImageIndex": "imgStopRed",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 0,
+          "OnClick": "CancelClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "PauseBtn",
+        "props": {
+          "Left": 26,
+          "Top": 0,
+          "Width": 22,
+          "Height": 21,
+          "ImageIndex": "imgMP3Pause",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 1,
+          "OnClick": "PauseClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiProgressBar",
+        "name": "ProgressBar",
+        "props": {
+          "Left": 52,
+          "Top": 2,
+          "Width": 184,
+          "Height": 17,
+          "TabOrder": 2
+        },
+        "children": []
+      }
+    ]
+  }
+}

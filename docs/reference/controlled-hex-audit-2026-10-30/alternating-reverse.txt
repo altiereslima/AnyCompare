@@ -1,0 +1,8 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\alternating-reverse-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\alternating-reverse-right.bin
+31 same byte(s)
+1 left orphan byte(s)
+1 right orphan byte(s)

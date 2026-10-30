@@ -1,0 +1,60 @@
+{
+  "scope": "finite geometry, not complete visual equivalence",
+  "source_sha256": {
+    "docs\\reference\\screenshots\\text-loaded.png": "4a293ecace800a7f14cbe250d1e768d357e1300f3b04693266087ce722974b39",
+    "docs\\reference\\screenshots\\side-by-side-2026-10-14.png": "2d52771a3d2ccdc0a5dd4cd9e6bfc3a9c34fcee175303067899425095530fc1f"
+  },
+  "capture": "C:\\Projetos\\BC4\\anycompare\\docs\\validation\\0.1.17\\text-dividers-all.png",
+  "capture_sha256": "1e3cf4a6b879e9c3627392967c1aa9c16f243581d73b9a6ab9683fd94422f59d",
+  "checks": [
+    {
+      "name": "detail_seams",
+      "expected": [
+        767,
+        784
+      ],
+      "actual": [
+        767,
+        784
+      ],
+      "tolerance_px": 0,
+      "passed": true
+    },
+    {
+      "name": "pane_dividers",
+      "expected": [
+        143,
+        276,
+        409,
+        932,
+        1065,
+        1198
+      ],
+      "actual": [
+        143,
+        276,
+        409,
+        932,
+        1065,
+        1198
+      ],
+      "tolerance_px": 0,
+      "passed": true
+    },
+    {
+      "name": "window_status_dividers",
+      "expected": [
+        225,
+        525,
+        606
+      ],
+      "actual": [
+        225,
+        525,
+        606
+      ],
+      "tolerance_px": 0,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+AnyCompare — comparação de arquivos
+
+Nome: João
+Versão: original
+Quantidade: 10
+Linha somente na esquerda
+
+Fim do arquivo.

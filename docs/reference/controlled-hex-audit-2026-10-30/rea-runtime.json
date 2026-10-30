@@ -1,0 +1,71 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_6dba8124d1c9ed3b285fe9576e0e9ebfb462bc14a19975765cf8a775864444cb\",\"subject\":null,\"provider\":{\"id\":\"frida\",\"name\":\"Frida\",\"version\":null},\"analysis_profile\":null,\"predicate_type\":\"rea.frida.instrumentation-observation\",\"operation\":\"instrument_with_frida\",\"parameters\":{\"session_id\":\"4fbbb1ae-f0a3-4a94-9441-6b80b49c1eb9\",\"device_id\":\"local\",\"mode\":\"spawn\",\"program\":\"C:\\\\Projetos\\\\BC4\\\\anycompare\\\\.codex\\\\reference-hex-audit-runtime\\\\BCompare.exe\",\"argv\":[\"@C:\\\\Projetos\\\\BC4\\\\anycompare\\\\docs\\\\reference\\\\controlled-hex-audit-2026-10-30\\\\report-script.txt\",\"/silent\"]},\"raw_result\":null,\"normalized_result\":{\"session_id\":\"4fbbb1ae-f0a3-4a94-9441-6b80b49c1eb9\",\"device_id\":\"local\",\"state\":\"detached\",\"target\":\"C:\\\\Projetos\\\\BC4\\\\anycompare\\\\.codex\\\\reference-hex-audit-runtime\\\\BCompare.exe\",\"pid\":20876,\"mode\":\"spawn\",\"scripts\":[{\"script_id\":\"27ae6414-c511-4a40-a14c-eaa9a0cfba7d\",\"name\":\"rea-27ae6414-c511-4a40-a14c-eaa9a0cfba7d\"}],\"messages\":[{\"script_id\":\"27ae6414-c511-4a40-a14c-eaa9a0cfba7d\",\"type\":\"send\",\"payload\":{\"app\":\"C:\\\\Projetos\\\\BC4\\\\anycompare\\\\.codex\\\\reference-hex-audit-runtime\\\\BCompare.exe\",\"pid\":20876,\"scope\":\"Hex audit 30 cases, isolated profile\"}}],\"messages_truncated\":false,\"source_kind\":\"inline\",\"source_path\":null,\"source_sha256\":\"da2f06b6863c91c70aefc863005bba3e8175a9a831cd241f93337c011ea834fc\",\"cleanup_error\":null},\"confidence\":\"observed\",\"authority\":\"external-service\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"The target operating system and architecture were not reported by this observation.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_6dba8124d1c9ed3b285fe9576e0e9ebfb462bc14a19975765cf8a775864444cb",
+    "subject": null,
+    "provider": {
+      "id": "frida",
+      "name": "Frida",
+      "version": null
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.frida.instrumentation-observation",
+    "operation": "instrument_with_frida",
+    "parameters": {
+      "session_id": "4fbbb1ae-f0a3-4a94-9441-6b80b49c1eb9",
+      "device_id": "local",
+      "mode": "spawn",
+      "program": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-hex-audit-runtime\\BCompare.exe",
+      "argv": [
+        "@C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-hex-audit-2026-10-30\\report-script.txt",
+        "/silent"
+      ]
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "session_id": "4fbbb1ae-f0a3-4a94-9441-6b80b49c1eb9",
+      "device_id": "local",
+      "state": "detached",
+      "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-hex-audit-runtime\\BCompare.exe",
+      "pid": 20876,
+      "mode": "spawn",
+      "scripts": [
+        {
+          "script_id": "27ae6414-c511-4a40-a14c-eaa9a0cfba7d",
+          "name": "rea-27ae6414-c511-4a40-a14c-eaa9a0cfba7d"
+        }
+      ],
+      "messages": [
+        {
+          "script_id": "27ae6414-c511-4a40-a14c-eaa9a0cfba7d",
+          "type": "send",
+          "payload": {
+            "app": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-hex-audit-runtime\\BCompare.exe",
+            "pid": 20876,
+            "scope": "Hex audit 30 cases, isolated profile"
+          }
+        }
+      ],
+      "messages_truncated": false,
+      "source_kind": "inline",
+      "source_path": null,
+      "source_sha256": "da2f06b6863c91c70aefc863005bba3e8175a9a831cd241f93337c011ea834fc",
+      "cleanup_error": null
+    },
+    "confidence": "observed",
+    "authority": "external-service",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "The target operating system and architecture were not reported by this observation."
+    ],
+    "relationship_coverage": null,
+    "locations": [],
+    "evidence_links": []
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "resource_index": 609,
+  "name": "TREGFINDFRAME",
+  "sha256": "90694b34b35ecacd2f7e9f5bbefced055b9d798c618d6387a4de568ec925530d",
+  "bytes": 582,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TRegFindFrame",
+    "name": "RegFindFrame",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiButton",
+        "name": "FindPrevBtn",
+        "props": {
+          "TabOrder": 6
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiButton",
+        "name": "FindNextBtn",
+        "props": {
+          "TabOrder": 7
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiButton",
+        "name": "ReplaceBtn",
+        "props": {
+          "TabOrder": 8
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiButton",
+        "name": "ReplaceAllBtn",
+        "props": {
+          "TabOrder": 9
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiButton",
+        "name": "SelectAllBtn",
+        "props": {
+          "TabOrder": 10
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "AutoCloseEdit",
+        "props": {
+          "TabOrder": 11
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "InKeyEdit",
+        "props": {
+          "Left": 231,
+          "Top": 59,
+          "Height": 17,
+          "Caption": "&Keys",
+          "TabOrder": 3,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 20
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "InValueEdit",
+        "props": {
+          "Left": 275,
+          "Top": 59,
+          "Height": 17,
+          "Caption": "&Values",
+          "TabOrder": 4,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 21
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "InDataEdit",
+        "props": {
+          "Left": 327,
+          "Top": 59,
+          "Height": 17,
+          "Caption": "&Data",
+          "TabOrder": 5,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 22
+      }
+    ],
+    "flags": 1
+  }
+}

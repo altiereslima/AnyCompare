@@ -1,0 +1,78 @@
+{
+  "resource_index": 560,
+  "name": "TKEYUPGRADEDIALOG",
+  "sha256": "52abc450f73612390b9d6f81392929c45c14fb86701fb0aa9b1978dbe22982ff",
+  "bytes": 579,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TKeyUpgradeDialog",
+    "name": "KeyUpgradeDialog",
+    "props": {
+      "Caption": "Beyond Compare %d Key Detected",
+      "ClientHeight": 115,
+      "ClientWidth": 345,
+      "OnCreate": "FormCreate",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiDlgIcon",
+        "name": "Image",
+        "props": {
+          "Left": 16,
+          "Top": 16,
+          "IconType": "diError"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "Lbl",
+        "props": {
+          "Left": 64,
+          "Top": 16,
+          "Width": 273,
+          "Height": 39,
+          "AutoSize": false,
+          "Caption": "This appears to be a version %d key, which will not work with version 4.  For information on upgrading your license, please visit:",
+          "WordWrap": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLinkLabel",
+        "name": "LinkLbl",
+        "props": {
+          "Left": 80,
+          "Top": 63,
+          "Height": 13,
+          "Caption": "%",
+          "URL": "%",
+          "OnClick": "LinkClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 76,
+          "Width": 345,
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiCloseBtn",
+            "name": "CloseBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

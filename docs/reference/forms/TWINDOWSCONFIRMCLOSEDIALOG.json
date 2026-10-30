@@ -1,0 +1,94 @@
+{
+  "resource_index": 680,
+  "name": "TWINDOWSCONFIRMCLOSEDIALOG",
+  "sha256": "21c21f230d59e409cdc05213ac5d430c9944b2b7b4267937e16ebdb28249da26",
+  "bytes": 549,
+  "parse_status": "complete",
+  "components": 8,
+  "hierarchy": {
+    "class": "TWindowsConfirmCloseDialog",
+    "name": "WindowsConfirmCloseDialog",
+    "props": {
+      "Caption": "Confirm",
+      "ClientHeight": 112,
+      "ClientWidth": 321,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiDlgIcon",
+        "name": "Image",
+        "props": {
+          "Left": 16,
+          "Top": 16,
+          "IconType": "diConfirmation"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "Lbl",
+        "props": {
+          "Left": 64,
+          "Top": 24,
+          "Height": 13,
+          "Caption": "Close all windows?"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 48,
+          "Width": 321,
+          "Height": 64,
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "DontShowAgainBevel",
+            "props": {
+              "Left": 0,
+              "Top": 39,
+              "Width": 321,
+              "Height": 2,
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "Caption": "&Yes"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "DontShowAgainEdit",
+            "props": {
+              "Left": 8,
+              "Top": 43,
+              "Height": 17,
+              "Caption": "&Don't show again",
+              "TabOrder": 2
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

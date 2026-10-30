@@ -1,0 +1,36 @@
+{
+  "resource_index": 529,
+  "name": "TDIRVIEWFRAME",
+  "sha256": "591d6c23f1f245cac8e3e9eb5147ab3a15e1c5db42b810835b7c49a6ddc8f05f",
+  "bytes": 146,
+  "parse_status": "complete",
+  "components": 3,
+  "hierarchy": {
+    "class": "TDirViewFrame",
+    "name": "DirViewFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ViewDir"
+    },
+    "children": [
+      {
+        "class": "TLogFrame",
+        "name": "LogFrame",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiVirtualListBox",
+            "name": "ListBox",
+            "props": {
+              "PopupMenu": "LogPopup"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "resource_index": 621,
+  "name": "TSESSIONSAVEASDIALOG",
+  "sha256": "3c08f244d6eb764bb21b1ae62437e6e5f530f7d4aac8a513f13f09fe746231f9",
+  "bytes": 1686,
+  "parse_status": "complete",
+  "components": 14,
+  "hierarchy": {
+    "class": "TSessionSaveAsDialog",
+    "name": "SessionSaveAsDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "Save Session As",
+      "ClientHeight": 215,
+      "ClientWidth": 313,
+      "Constraints.MinHeight": 195,
+      "Constraints.MinWidth": 303,
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "EditLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Save current settings as:",
+          "FocusControl": "Edit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "TreeViewLbl",
+        "props": {
+          "Left": 8,
+          "Top": 83,
+          "Height": 13,
+          "Caption": "&Create in:",
+          "FocusControl": "TreeView"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "Edit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 297,
+          "Height": 21,
+          "AutoComplete": false,
+          "Anchors": [
+            "akLeft",
+            "akTop",
+            "akRight"
+          ],
+          "TabOrder": 0,
+          "OnChange": "EditChange",
+          "OnClick": "EditClick",
+          "OnKeyDown": "EditKeyDown"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "ClassEdit",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Width": 297,
+          "Height": 21,
+          "AutoComplete": false,
+          "Style": "csDropDownList",
+          "Anchors": [
+            "akLeft",
+            "akTop",
+            "akRight"
+          ],
+          "TabOrder": 1,
+          "Images": "BcImages.MainImages",
+          "OnGetImageIndex": "ClassEditGetImageIndex"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiTreeView",
+        "name": "TreeView",
+        "props": {
+          "Left": 8,
+          "Top": 100,
+          "Width": 297,
+          "Height": 76,
+          "Anchors": [
+            "akLeft",
+            "akTop",
+            "akRight",
+            "akBottom"
+          ],
+          "Images": "BcImages.MainImages",
+          "PopupMenu": "TreePopup",
+          "TabOrder": 2,
+          "OnCancelEdit": "TreeViewCancelEdit",
+          "OnChange": "TreeViewChange",
+          "OnEdited": "TreeViewEdited",
+          "OnEditing": "TreeViewEditing"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 176,
+          "Width": 313,
+          "TabOrder": 3,
+          "SizeGripper": true,
+          "ItemTabOrder0": false
+        },
+        "children": [
+          {
+            "class": "TUiBitBtn",
+            "name": "NewSubfolderBtn",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Caption": "&New Subfolder",
+              "ImageIndex": "imgNewSessionFolder",
+              "Images": "BcImages.MainImages",
+              "TabOrder": 0,
+              "OnClick": "NewSubfolderClick",
+              "AutoSize": "asLeft"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "OnClick": "OkClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "TreePopup",
+        "props": {
+          "Left": 8,
+          "Top": 8
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "NewSubfolderItem",
+            "props": {
+              "Caption": "New Subfolder",
+              "ShortCut": 45,
+              "OnClick": "NewSubfolderClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "DeleteItem",
+            "props": {
+              "Caption": "Delete",
+              "ShortCut": 46,
+              "OnClick": "DeleteClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "RenameItem",
+            "props": {
+              "Caption": "Rename",
+              "ShortCut": 113,
+              "OnClick": "RenameClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,418 @@
+{
+  "resource_index": 510,
+  "name": "TDIRFINDDIALOG",
+  "sha256": "6c86b4d5041c08b3be6620c0d6fc1d5d761395fb021d8e21ccba9d29389eac4d",
+  "bytes": 3419,
+  "parse_status": "complete",
+  "components": 37,
+  "hierarchy": {
+    "class": "TDirFindDialog",
+    "name": "DirFindDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgDirFind",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "Find Filename",
+      "ClientHeight": 278,
+      "ClientWidth": 337,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "FindPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 337,
+          "Height": 54,
+          "Align": "alTop",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "FindTextLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "&Text to find:",
+              "FocusControl": "FindTextEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpeedButton",
+            "name": "FindREBtn",
+            "props": {
+              "Left": 306,
+              "Top": 25,
+              "Hint": "Insert Regular Expression Element",
+              "DropDown": true,
+              "Flat": false,
+              "PopupMenu": "FindREPopup"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiComboBox",
+            "name": "FindTextEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Width": 290,
+              "Height": 21,
+              "TabOrder": 0,
+              "OnChange": "SomethingChangedClick",
+              "IsMRU": true
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "OptionsPanel",
+        "props": {
+          "Left": 0,
+          "Top": 54,
+          "Width": 337,
+          "Height": 185,
+          "Align": "alTop",
+          "BevelOuter": "bvNone",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "SidesLbl",
+            "props": {
+              "Left": 8,
+              "Top": 109,
+              "Height": 13,
+              "Caption": "Sides:",
+              "FocusControl": "FindTextEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "CaseSensitiveEdit",
+            "props": {
+              "Left": 8,
+              "Top": 0,
+              "Height": 17,
+              "Caption": "Match character &case",
+              "TabOrder": 0,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "WholeWordsEdit",
+            "props": {
+              "Left": 8,
+              "Top": 21,
+              "Height": 17,
+              "Caption": "&Whole words only",
+              "TabOrder": 1,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "IsRegExpEdit",
+            "props": {
+              "Left": 8,
+              "Top": 42,
+              "Height": 17,
+              "Caption": "Regular e&xpression",
+              "TabOrder": 2,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiButton",
+            "name": "REHelpBtn",
+            "props": {
+              "Left": 251,
+              "Top": 39,
+              "Width": 78,
+              "HelpType": "htKeyword",
+              "HelpKeyword": "Sample_Regular_Expressions",
+              "Caption": "RE Example&s",
+              "TabOrder": 3,
+              "AutoSize": "asRight"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "WrapEdit",
+            "props": {
+              "Left": 8,
+              "Top": 63,
+              "Height": 17,
+              "Caption": "Wra&p search",
+              "TabOrder": 4,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "UpEdit",
+            "props": {
+              "Left": 8,
+              "Top": 84,
+              "Height": 17,
+              "Caption": "Search &up",
+              "TabOrder": 5,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "LeftSideEdit",
+            "props": {
+              "Left": 8,
+              "Top": 126,
+              "Height": 17,
+              "Caption": "&Left",
+              "TabOrder": 6,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "CenterSideEdit",
+            "props": {
+              "Left": 8,
+              "Top": 147,
+              "Height": 17,
+              "Caption": "Ce&nter",
+              "TabOrder": 7,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "RightSideEdit",
+            "props": {
+              "Left": 8,
+              "Top": 168,
+              "Height": 17,
+              "Caption": "&Right",
+              "TabOrder": 8,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 239,
+          "Width": 337,
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {
+              "OnClick": "OkClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiYesToAllBtn",
+            "name": "SelectAllBtn",
+            "props": {
+              "Caption": "Select &All",
+              "OnClick": "OkClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "FindREPopup",
+        "props": {
+          "Left": 8,
+          "Top": 8
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "FindTabItem",
+            "props": {
+              "Caption": "Tab Character (\\t)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "AnyItem",
+            "props": {
+              "Caption": "Any Character (.)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "AlphaItem",
+            "props": {
+              "Caption": "Any Alphanumeric Character (\\w)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NonAlphaItem",
+            "props": {
+              "Caption": "Any Non-alphanumeric Character (\\W)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NumItem",
+            "props": {
+              "Caption": "Any Numeric Character (\\d)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NonNumItem",
+            "props": {
+              "Caption": "Any Non-numeric Character (\\D)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "WSItem",
+            "props": {
+              "Caption": "Any Whitespace Character (\\s)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "CharSetItem",
+            "props": {
+              "Caption": "Character in Set ([])",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "NotCharSetItem",
+            "props": {
+              "Caption": "Character Not in Set ([^])",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "BeginItem",
+            "props": {
+              "Caption": "Beginning of Line (^)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "EndItem",
+            "props": {
+              "Caption": "End of Line ($)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "TaggedItem",
+            "props": {
+              "Caption": "Tagged Expression (())",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "OrItem",
+            "props": {
+              "Caption": "Or (|)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ZeroOrMoreItem",
+            "props": {
+              "Caption": "0 Or More Matches (*)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "OneOrMoreItem",
+            "props": {
+              "Caption": "1 Or More Matches (+)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ZeroOrOneItem",
+            "props": {
+              "Caption": "0 Or 1 Matches (?)",
+              "OnClick": "FindREItemClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

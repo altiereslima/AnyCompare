@@ -1,0 +1,401 @@
+{
+  "resource_index": 541,
+  "name": "TFILEFORMATMANAGERDIALOG",
+  "sha256": "a6eac7f2ad309296bde610c1015b4279598925e461ce5bbe5f2f97bd57a0f586",
+  "bytes": 3556,
+  "parse_status": "complete",
+  "components": 28,
+  "hierarchy": {
+    "class": "TFileFormatManagerDialog",
+    "name": "FileFormatManagerDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgFileFormatManager",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "BorderStyle": "bsSizeable",
+      "Caption": "File Formats",
+      "ClientHeight": 590,
+      "ClientWidth": 632,
+      "Constraints.MinHeight": 473,
+      "Constraints.MinWidth": 417,
+      "OnActivate": "FormActivate",
+      "OnCloseQuery": "FormCloseQuery",
+      "OnCreate": "FormCreate",
+      "OnDestroy": "FormDestroy",
+      "OnResize": "FormResize",
+      "OnShortCut": "FormShortCut",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "BottomLineBevel",
+        "props": {
+          "Left": 0,
+          "Top": 540,
+          "Width": 632,
+          "Height": 11,
+          "Align": "alBottom",
+          "Shape": "bsBottomLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "Panel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 632,
+          "Height": 540,
+          "Align": "alClient",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "TopBevel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 632,
+              "Height": 8,
+              "Align": "alTop",
+              "Shape": "bsSpacer"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiBevel",
+            "name": "LeftBevel",
+            "props": {
+              "Left": 0,
+              "Top": 8,
+              "Width": 8,
+              "Height": 532,
+              "Align": "alLeft",
+              "Shape": "bsSpacer"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSplitter",
+            "name": "Splitter",
+            "props": {
+              "Left": 192,
+              "Top": 8,
+              "Width": 8,
+              "Height": 532,
+              "AutoSnap": false,
+              "OnCanResize": "SplitterCanResize",
+              "OnMoved": "SplitterMoved"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiPanel",
+            "name": "ListPanel",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Width": 184,
+              "Height": 532,
+              "Align": "alLeft",
+              "BevelOuter": "bvNone",
+              "TabOrder": 0,
+              "OnResize": "ListPanelResize"
+            },
+            "children": [
+              {
+                "class": "TUiListView",
+                "name": "ListView",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 184,
+                  "Height": 501,
+                  "Checkboxes": true,
+                  "Columns": [
+                    {
+                      "AutoSize": true
+                    },
+                    {
+                      "AutoSize": true
+                    }
+                  ],
+                  "ColumnClick": false,
+                  "DragMode": "dmAutomatic",
+                  "RowSelect": true,
+                  "PopupMenu": "ListPopup",
+                  "SmallImages": "BcImages.MainImages",
+                  "TabOrder": 0,
+                  "ViewStyle": "vsReport",
+                  "OnCustomDrawItem": "ListViewCustomDrawItem",
+                  "OnCustomDrawSubItem": "ListViewCustomDrawSubItem",
+                  "OnEdited": "ListViewEdited",
+                  "OnEditing": "ListViewEditing",
+                  "OnDragDrop": "ListViewDragDrop",
+                  "OnDragOver": "ListViewDragOver",
+                  "OnKeyDown": "ListViewKeyDown",
+                  "OnSelectItem": "ListViewSelectItem",
+                  "OnCancelEdit": "ListViewCancelEdit",
+                  "OnCanCheck": "ListViewCanCheck",
+                  "OnChecked": "ListViewChecked"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "NewBtn",
+                "props": {
+                  "Left": 0,
+                  "Top": 509,
+                  "Width": 24,
+                  "Hint": "New",
+                  "ImageIndex": "imgListAdd",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 1,
+                  "OnClick": "NewClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "DeleteBtn",
+                "props": {
+                  "Left": 24,
+                  "Top": 509,
+                  "Width": 24,
+                  "Hint": "Delete",
+                  "ImageIndex": "imgListDelete",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 2,
+                  "OnClick": "DeleteClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "MoveUpBtn",
+                "props": {
+                  "Left": 48,
+                  "Top": 509,
+                  "Width": 24,
+                  "Hint": "Move Up",
+                  "ImageIndex": "imgUp",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 3,
+                  "OnClick": "MoveUpClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiBitBtn",
+                "name": "MoveDownBtn",
+                "props": {
+                  "Left": 72,
+                  "Top": 509,
+                  "Width": 24,
+                  "Hint": "Move Down",
+                  "ImageIndex": "imgDown",
+                  "Images": "BcImages.MainImages",
+                  "TabOrder": 4,
+                  "OnClick": "MoveDownClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiPanel",
+            "name": "EditPanel",
+            "props": {
+              "Left": 200,
+              "Top": 8,
+              "Width": 432,
+              "Height": 532,
+              "Align": "alClient",
+              "BevelOuter": "bvNone",
+              "TabOrder": 1,
+              "OnResize": "EditPanelResize"
+            },
+            "children": [
+              {
+                "class": "TUiPageControl",
+                "name": "EditPageControl",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 424,
+                  "Height": 501,
+                  "TabOrder": 0
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "EditResBtn",
+                "props": {
+                  "Left": 0,
+                  "Top": 509,
+                  "Caption": "Factory &Defaults",
+                  "TabOrder": 1,
+                  "OnClick": "EditResClick",
+                  "AutoSize": "asLeft"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "EditSaveBtn",
+                "props": {
+                  "Left": 191,
+                  "Top": 509,
+                  "Caption": "Save",
+                  "Default": true,
+                  "TabOrder": 2,
+                  "OnClick": "EditSaveClick",
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "EditSaveAsBtn",
+                "props": {
+                  "Left": 271,
+                  "Top": 509,
+                  "Caption": "Save &As...",
+                  "TabOrder": 3,
+                  "OnClick": "EditSaveAsClick",
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "EditCancelBtn",
+                "props": {
+                  "Left": 351,
+                  "Top": 509,
+                  "Cancel": true,
+                  "Caption": "Cancel",
+                  "TabOrder": 4,
+                  "OnClick": "EditCancelClick",
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 551,
+          "Width": 632,
+          "TabOrder": 1,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiLinkLabel",
+            "name": "LinkLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Additional file formats available on <a href=\"%s\">Scooter Software's web site</a>."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCloseBtn",
+            "name": "CloseBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "ListPopup",
+        "props": {
+          "Left": 8,
+          "Top": 8
+        },
+        "children": [
+          {
+            "class": "TUiSubmenuItem",
+            "name": "NewListItem",
+            "props": {
+              "Caption": "New",
+              "OnClick": "NewListClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "MoveUpItem",
+            "props": {
+              "Caption": "Move Up",
+              "ShortCut": 16422,
+              "OnClick": "MoveUpClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "MoveDownItem",
+            "props": {
+              "Caption": "Move Down",
+              "ShortCut": 16424,
+              "OnClick": "MoveDownClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "DeleteItem",
+            "props": {
+              "Caption": "Delete",
+              "ShortCut": 46,
+              "OnClick": "DeleteClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "RenameItem",
+            "props": {
+              "Caption": "Rename",
+              "ShortCut": 113,
+              "OnClick": "RenameClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "NewPopup",
+        "props": {
+          "Images": "BcImages.MainImages",
+          "OnPopup": "NewListClick",
+          "Left": 40,
+          "Top": 8
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

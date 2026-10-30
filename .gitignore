@@ -1,0 +1,16 @@
+/target
+/.codex/
+/dist/
+__pycache__/
+*.pyc
+*.log
+*.exe
+*.dll
+/assets/reference/resources/
+/assets/forms/
+/docs/reference/english-installer/
+/docs/reference/ghidra-session/
+/docs/validation/*/
+!/docs/validation/0.1.17/
+/docs/validation/0.1.17/*.png
+/docs/validation/0.1.17/rea-*.json

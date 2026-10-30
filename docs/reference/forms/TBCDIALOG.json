@@ -1,0 +1,28 @@
+{
+  "resource_index": 485,
+  "name": "TBCDIALOG",
+  "sha256": "608bde23f88e0897558a4c0db39c3d52c11a6bd5a1442911b771bf28b380257c",
+  "bytes": 186,
+  "parse_status": "complete",
+  "components": 1,
+  "hierarchy": {
+    "class": "TBcDialog",
+    "name": "BcDialog",
+    "props": {
+      "Left": 0,
+      "Top": 0,
+      "BorderIcons": [
+        "biSystemMenu"
+      ],
+      "BorderStyle": "bsDialog",
+      "ClientHeight": 158,
+      "ClientWidth": 222,
+      "Color": "clBtnFace",
+      "KeyPreview": true,
+      "ShowHint": true,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": []
+  }
+}

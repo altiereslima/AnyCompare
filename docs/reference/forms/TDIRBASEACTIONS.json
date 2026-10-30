@@ -1,0 +1,570 @@
+{
+  "resource_index": 508,
+  "name": "TDIRBASEACTIONS",
+  "sha256": "0fd3042fbd9f7a0a5697564ded118ec1cc34bb74794da6f07257b060f002364b",
+  "bytes": 8411,
+  "parse_status": "complete",
+  "components": 39,
+  "hierarchy": {
+    "class": "TDirBaseActions",
+    "name": "DirBaseActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "SwapAction",
+            "props": {
+              "Hint": "Swap Sides|Exchanges left, right base folders."
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiAction",
+            "name": "BrowseListAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "B&rowse for Folder",
+              "Hint": "Browse for Folder|Browses for an existing folder on picked side.",
+              "ImageIndex": "imgBrowse"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BrowseLeftAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Left Side",
+              "Hint": "Browse for Folder on Left Side|Browses for an existing folder on left side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BrowseCenterAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Center Side",
+              "Hint": "Browse for Folder on Center Side|Browses for an existing folder on center side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BrowseRightAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Right Side",
+              "Hint": "Browse for Folder on Right Side|Browses for an existing folder on right side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "BrowseOutputAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Output Side",
+              "Hint": "Browse for Folder on Output Side|Browses for an existing folder on output side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "StopAction",
+            "props": {
+              "Category": "Session",
+              "Hint": "Stop Loading|Terminates comparison.",
+              "ImageIndex": "imgStopRed",
+              "ShortCaption": "Stop"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExpandAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Open Folder",
+              "Hint": "Open Folder|Opens selected folder."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CollapseAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Close Folder",
+              "Hint": "Close Folder|Closes selected folder."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExpandSubfoldersAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Open Subfolders",
+              "Hint": "Open Subfolders|Opens selected folders and all their subfolders."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CollapseSubfoldersAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Close Subfolders",
+              "Hint": "Close Subfolders|Closes selected folders and their subfolders."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SetAsBaseFoldersAction",
+            "props": {
+              "Category": "Actions",
+              "Hint": "Set as Base Folders|Sets selected folders as base folders."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SetAsOtherBaseFolderAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Set as Base on Ot&her Side",
+              "Hint": "Set as Base on Other Side|Sets selected folder as base folder on other side."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "OpenAction",
+            "props": {
+              "Category": "Actions",
+              "Hint": "Open|Opens selected items in new view."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "OpenWithListAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Open &With",
+              "Hint": "Open With|Opens selected items in new view of picked type."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "AssocAppAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Associated Application",
+              "Hint": "Associated Application|Opens selected items with associated application."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RevealInFinderAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Reveal in Finder",
+              "Hint": "Reveal in Finder|Shows Finder and selects the picked file."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExcludeAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "&Exclude",
+              "Hint": "Exclude|Filters selected items to remove them from comparison."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CopyFilenamesAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Copy F&ilename",
+              "Hint": "Copy Filename|Copies selected items' paths to Clipboard."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RefreshSelectionAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Refresh &Selection",
+              "Hint": "Refresh Selection|Refreshes selected items.",
+              "MacShortCutStr": "Alt+Meta+R",
+              "ShortCutStr": "Shift+F5"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExplorerListAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "E&xplorer",
+              "Hint": "Explorer|Shows Windows Explorer context menu for selected items."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExpandAllAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Expand All",
+              "Hint": "Expand All|Opens all folders.",
+              "ImageIndex": "imgExpandAll",
+              "ShortCaption": "Expand"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CollapseAllAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Collapse All",
+              "Hint": "Collapse All|Closes all folders.",
+              "ImageIndex": "imgCollapseAll",
+              "ShortCaption": "Collapse"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SelectAllAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "Select &All",
+              "Hint": "Select All|Selects all visible items.",
+              "ImageIndex": "imgSelectAll",
+              "MacShortCutStr": "Meta+A",
+              "ShortCaption": "Select",
+              "ShortCutStr": "Ctrl+A"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SelectInvertAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Invert Selection",
+              "Hint": "Invert Selection|Selects all items not currently selected, and deselects all items currently selected."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RefreshAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "&Refresh",
+              "Hint": "Refresh|Refreshes open folders.",
+              "ImageIndex": "imgRefresh",
+              "MacShortCutStr": "Meta+R",
+              "ShortCaption": "Refresh",
+              "ShortCutStr": "F5"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FullRefreshAction",
+            "props": {
+              "Category": "Edit",
+              "Caption": "F&ull Refresh",
+              "Hint": "Full Refresh|Refreshes entire comparison.",
+              "ImageIndex": "imgFullRefresh",
+              "MacShortCutStr": "Shift+Meta+R",
+              "ShortCaption": "Full Refresh",
+              "ShortCutStr": "Ctrl+F5",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExistsNextAction",
+            "props": {
+              "Category": "Search",
+              "Hint": "Next Existing Filename|Positions at next filename, skipping over gaps.",
+              "MacShortCutStr": "Ctrl+Down",
+              "ShortCutStr": "Alt+Down"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ExistsPrevAction",
+            "props": {
+              "Category": "Search",
+              "Hint": "Previous Existing Filename|Positions at previous filename, skipping over gaps.",
+              "MacShortCutStr": "Ctrl+Up",
+              "ShortCutStr": "Alt+Up"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FindFilenameAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Find Filename...",
+              "Hint": "Find Filename|Finds filename matching search string.",
+              "ImageIndex": "imgFind",
+              "MacShortCutStr": "Meta+F",
+              "ShortCaption": "Find Filename",
+              "ShortCutStr": "Ctrl+F",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FindFilenameNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Find Ne&xt Filename",
+              "Hint": "Find Next Filename|Finds next filename matching search string.",
+              "ImageIndex": "imgFindNext",
+              "MacShortCutStr": "Meta+G",
+              "ShortCaption": "Next Filename",
+              "ShortCutStr": "F3",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "FindFilenamePrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "Find Pre&vious Filename",
+              "Hint": "Find Previous Filename|Finds previous filename matching search string.",
+              "ImageIndex": "imgFindPrev",
+              "MacShortCutStr": "Shift+Meta+G",
+              "ShortCaption": "Prev Filename",
+              "ShortCutStr": "Shift+F3",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SuppressFiltersAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Suppress Filters",
+              "Hint": "Suppress Filters|Temporarily suppresses display and file filters.",
+              "ImageIndex": "imgSuppressFilters",
+              "ShortCaption": "Peek"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ColListAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Columns",
+              "Hint": "Columns|Shows or hides picked column.",
+              "DynVisible": true
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "LegendAction",
+            "props": {
+              "Category": "View",
+              "Caption": "&Legend",
+              "Hint": "Legend|Shows or hides legend window.",
+              "MacShortCutStr": "Alt+Meta+L",
+              "ShortCutStr": "Ctrl+Alt+L"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowLogAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "L&og",
+              "Hint": "Log|Shows or hides log panel."
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "Session: Menu",
+            [
+              "Swap: MenuItem",
+              "BrowseList: SubmenuItem",
+              [
+                "BrowseLeft: MenuItem",
+                "BrowseCenter: MenuItem",
+                "BrowseRight: MenuItem",
+                "BrowseOutput: MenuItem"
+              ]
+            ],
+            "Actions: Menu",
+            [
+              "Expand: MenuItem",
+              "Collapse: MenuItem",
+              "ExpandSubfolders: MenuItem",
+              "CollapseSubfolders: MenuItem",
+              "SetAsBaseFolders: MenuItem",
+              "SetAsOtherBaseFolder: MenuItem",
+              "Open: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem",
+                "OpenTextPatch: MenuItem",
+                "N2: SeparatorItem",
+                "OpenDirCompare: MenuItem",
+                "OpenDirMerge: MenuItem",
+                "OpenDirSync: MenuItem",
+                "OpenTextCompare: MenuItem",
+                "OpenTextMerge: MenuItem",
+                "OpenDataCompare: MenuItem",
+                "OpenHexCompare: MenuItem",
+                "OpenMP3Compare: MenuItem",
+                "OpenPixCompare: MenuItem",
+                "OpenRegCompare: MenuItem",
+                "OpenTableCompare: MenuItem",
+                "OpenVerCompare: MenuItem",
+                "OpenXMLCompare: MenuItem"
+              ],
+              "Common: SeparatorItem",
+              "Exclude: MenuItem",
+              "CopyFilenames: MenuItem",
+              "RefreshSelection: MenuItem",
+              "Last: SeparatorItem",
+              "ExplorerList: SubmenuItem",
+              []
+            ],
+            "MergeFile: Menu",
+            [],
+            "Edit: Menu",
+            [
+              "ExpandAll: MenuItem",
+              "CollapseAll: MenuItem",
+              "SelectAll: MenuItem",
+              "SelectInvert: MenuItem",
+              "Refresh: MenuItem",
+              "FullRefresh: MenuItem"
+            ],
+            "Search: Menu",
+            [
+              "FindFilename: MenuItem",
+              "FindFilenameNext: MenuItem",
+              "FindFilenamePrev: MenuItem"
+            ],
+            "View: Menu",
+            [
+              "SameModIgnored: MenuItem",
+              "SuppressFilters: MenuItem",
+              "Layout: SeparatorItem",
+              "ColList: SubmenuItem",
+              [],
+              "Legend: MenuItem",
+              "ShowLog: MenuItem"
+            ],
+            "Main: Toolbar",
+            [
+              "Rules: ToolButton",
+              "Actions: SeparatorButton",
+              "Edit: SeparatorButton",
+              "ExpandAll: ToolButton",
+              "CollapseAll: ToolButton",
+              "SelectAll: ToolButton",
+              "Refresh: ToolButton",
+              "FullRefresh: ToolButton",
+              "Search: SeparatorButton",
+              "FindFilename: ToolButton",
+              "FindFilenameNext: ToolButton",
+              "FindFilenamePrev: ToolButton",
+              "Info: ToolButton",
+              "Stop: ToolButton",
+              "FileFilters: SeparatorButton",
+              "SuppressFilters: ToolButton"
+            ],
+            "Tree: PopupMenu",
+            [
+              "Expand: MenuItem",
+              "Collapse: MenuItem",
+              "ExpandSubfolders: MenuItem",
+              "CollapseSubfolders: MenuItem",
+              "SetAsBaseFolders: MenuItem",
+              "SetAsOtherBaseFolder: MenuItem",
+              "Open: MenuItem",
+              "OpenWithList: SubmenuItem",
+              [
+                "AssocApp: MenuItem",
+                "RevealInFinder: MenuItem",
+                "N1: SeparatorItem",
+                "OpenTextEdit: MenuItem",
+                "OpenTextPatch: MenuItem",
+                "N2: SeparatorItem",
+                "OpenDirCompare: MenuItem",
+                "OpenDirMerge: MenuItem",
+                "OpenDirSync: MenuItem",
+                "OpenTextCompare: MenuItem",
+                "OpenTextMerge: MenuItem",
+                "OpenDataCompare: MenuItem",
+                "OpenHexCompare: MenuItem",
+                "OpenMP3Compare: MenuItem",
+                "OpenPixCompare: MenuItem",
+                "OpenRegCompare: MenuItem",
+                "OpenTableCompare: MenuItem",
+                "OpenVerCompare: MenuItem",
+                "OpenXMLCompare: MenuItem"
+              ],
+              "N1: SeparatorItem",
+              "Exclude: MenuItem",
+              "CopyFilenames: MenuItem",
+              "RefreshSelection: MenuItem",
+              "N2: SeparatorItem",
+              "ExplorerList: SubmenuItem",
+              []
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

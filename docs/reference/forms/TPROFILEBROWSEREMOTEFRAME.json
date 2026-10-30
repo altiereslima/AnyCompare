@@ -1,0 +1,40 @@
+{
+  "resource_index": 599,
+  "name": "TPROFILEBROWSEREMOTEFRAME",
+  "sha256": "2ccb415c795665167dc2805bc6c21390e4602f79f05f9ff28e5e2261abc4cd95",
+  "bytes": 341,
+  "parse_status": "complete",
+  "components": 2,
+  "hierarchy": {
+    "class": "TProfileBrowseRemoteFrame",
+    "name": "ProfileBrowseRemoteFrame",
+    "props": {
+      "Left": 0,
+      "Top": 0,
+      "Width": 424,
+      "Height": 511,
+      "TabOrder": 0
+    },
+    "children": [
+      {
+        "class": "TUiTreeView",
+        "name": "TreeView",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 424,
+          "Height": 511,
+          "Align": "alClient",
+          "ReadOnly": true,
+          "TabOrder": 0,
+          "OnChange": "TreeViewChange",
+          "OnCollapsed": "TreeViewCollapsed",
+          "OnCollapsing": "TreeViewCollapsing",
+          "OnDeletion": "TreeViewDeletion",
+          "OnExpanding": "TreeViewExpanding"
+        },
+        "children": []
+      }
+    ]
+  }
+}

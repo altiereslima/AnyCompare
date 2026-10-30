@@ -1,0 +1,333 @@
+{
+  "resource_index": 499,
+  "name": "TDATAFORMATTYPEFRAME",
+  "sha256": "d2e1c55e361f1a92a29d12bb58b5dbc720d06ec202d302e39bb06526aafade45",
+  "bytes": 2793,
+  "parse_status": "complete",
+  "components": 26,
+  "hierarchy": {
+    "class": "TDataFormatTypeFrame",
+    "name": "DataFormatTypeFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "FormatDataType",
+      "Caption": "Type"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "HasNamesLbl",
+        "props": {
+          "Left": 8,
+          "Top": 238,
+          "Height": 13,
+          "Caption": "Fi&rst line contains:",
+          "FocusControl": "HasNamesEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "FmtDelimitedEdit",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 17,
+          "Caption": "De&limited",
+          "TabOrder": 0,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "FmtFixedEdit",
+        "props": {
+          "Left": 140,
+          "Top": 8,
+          "Height": 17,
+          "Caption": "&Fixed",
+          "TabOrder": 1,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "FmtTypePanelView",
+        "props": {
+          "Left": 0,
+          "Top": 25,
+          "Width": 273,
+          "Height": 213,
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "DlmPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "DlmDelimitersLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 33,
+                  "Height": 13,
+                  "Caption": "Delimiters:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "DlmQualifierLbl",
+                "props": {
+                  "Left": 140,
+                  "Top": 33,
+                  "Height": 13,
+                  "Caption": "Text qualifier:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DlmDetectEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 17,
+                  "Caption": "De&tect",
+                  "TabOrder": 0,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DlmUseCommaEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 50,
+                  "Height": 17,
+                  "Caption": "&Comma",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DlmUseSemicolonEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 71,
+                  "Height": 17,
+                  "Caption": "Se&micolon",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DlmUseSpaceEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 92,
+                  "Height": 17,
+                  "Caption": "&Space",
+                  "TabOrder": 3,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DlmUseTabEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 113,
+                  "Height": 17,
+                  "Caption": "Ta&b",
+                  "TabOrder": 4,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DlmUseOtherDelimEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 134,
+                  "Height": 17,
+                  "Caption": "&Other:",
+                  "TabOrder": 5,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCharEdit",
+                "name": "DlmOtherDelimEdit",
+                "props": {
+                  "Left": 65,
+                  "Top": 132,
+                  "Width": 17,
+                  "Height": 21,
+                  "TabOrder": 6,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiRadioButton",
+                "name": "DlmUseQuoteEdit",
+                "props": {
+                  "Left": 140,
+                  "Top": 50,
+                  "Height": 17,
+                  "Caption": "&Quote",
+                  "TabOrder": 7,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiRadioButton",
+                "name": "DlmUseApostropheEdit",
+                "props": {
+                  "Left": 140,
+                  "Top": 71,
+                  "Height": 17,
+                  "Caption": "A&postrophe",
+                  "TabOrder": 8,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiRadioButton",
+                "name": "DlmUseNoneQualifierEdit",
+                "props": {
+                  "Left": 140,
+                  "Top": 92,
+                  "Height": 17,
+                  "Caption": "Non&e",
+                  "TabOrder": 9,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiRadioButton",
+                "name": "DlmUseOtherQualifierEdit",
+                "props": {
+                  "Left": 140,
+                  "Top": 113,
+                  "Height": 17,
+                  "Caption": "Ot&her:",
+                  "TabOrder": 10,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCharEdit",
+                "name": "DlmOtherQualifierEdit",
+                "props": {
+                  "Left": 197,
+                  "Top": 111,
+                  "Width": 17,
+                  "Height": 21,
+                  "TabOrder": 11,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DlmIgnoreMultipleDelimsEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 167,
+                  "Height": 17,
+                  "Caption": "Treat consec&utive delimiters as one",
+                  "TabOrder": 12,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "DlmTrimWSEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 188,
+                  "Height": 17,
+                  "Caption": "Treat surrounding &whitespace as part of delimiter",
+                  "TabOrder": 13,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "FxdPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "FxdWidthsLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 8,
+                  "Height": 13,
+                  "Caption": "&Column widths (separate with semicolons):",
+                  "FocusControl": "FxdWidthsEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "FxdWidthsEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 25,
+                  "Width": 257,
+                  "Height": 21,
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "HasNamesEdit",
+        "props": {
+          "Left": 8,
+          "Top": 255,
+          "Width": 102,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 3,
+          "OnChange": "SomethingChangedClick",
+          "Items.Strings": [
+            "Detect",
+            "Column names",
+            "Cell data"
+          ]
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

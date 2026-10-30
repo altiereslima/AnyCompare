@@ -1,0 +1,251 @@
+{
+  "resource_index": 651,
+  "name": "TVFSAMAZONS3PROFILEGENERALFRAME",
+  "sha256": "aa34a38046cb70266bc30e9d5ec2bb3f67d3d08ff753d67f1192691f2fdafa37",
+  "bytes": 2071,
+  "parse_status": "complete",
+  "components": 20,
+  "hierarchy": {
+    "class": "TVfsAmazonS3ProfileGeneralFrame",
+    "name": "VfsAmazonS3ProfileGeneralFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileAmazonS3",
+      "Caption": "General"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "AuthTypeLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "A&uthentication type:",
+          "FocusControl": "AuthTypeEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "BucketLbl",
+        "props": {
+          "Left": 8,
+          "Top": 146,
+          "Height": 13,
+          "Caption": "&Bucket (optional):",
+          "FocusControl": "BucketEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "DescriptionLbl",
+        "props": {
+          "Left": 8,
+          "Top": 192,
+          "Height": 13,
+          "Caption": "D&escription:",
+          "FocusControl": "DescriptionEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiComboBox",
+        "name": "AuthTypeEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 239,
+          "Height": 21,
+          "Style": "csDropDownList",
+          "TabOrder": 0,
+          "OnChange": "AuthTypeEditChange",
+          "Items.Strings": [
+            "Saved S3 credentials",
+            "Load from credentials file",
+            "Load from environment variables"
+          ]
+        },
+        "children": []
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "PanelView",
+        "props": {
+          "Left": 0,
+          "Top": 54,
+          "Width": 255,
+          "Height": 92,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "ProfilePanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "AccessKeyIDLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 0,
+                  "Height": 13,
+                  "Caption": "Access key &ID:",
+                  "FocusControl": "AccessKeyIDEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "SecretAccessKeyLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 46,
+                  "Height": 13,
+                  "Caption": "&Secret access key:",
+                  "FocusControl": "SecretAccessKeyEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "AccessKeyIDEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 17,
+                  "Width": 239,
+                  "Height": 21,
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "SecretAccessKeyEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 63,
+                  "Width": 239,
+                  "Height": 21,
+                  "TabOrder": 1,
+                  "OnChange": "SomethingChangedClick",
+                  "EchoMode": "emPassword"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "CredFilePanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "CredFilePathLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 0,
+                  "Height": 13,
+                  "Caption": "&Credentials or config file:",
+                  "FocusControl": "CredFilePathEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiLabel",
+                "name": "CredFileProfileLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 46,
+                  "Height": 13,
+                  "Caption": "&Profile name:",
+                  "FocusControl": "CredFileProfileEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "CredFilePathEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 17,
+                  "Width": 239,
+                  "Height": 21,
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiEdit",
+                "name": "CredFileProfileEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 63,
+                  "Width": 239,
+                  "Height": 21,
+                  "TabOrder": 1,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "EnvVarsPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "EnvVarsLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 0,
+                  "Width": 239,
+                  "Height": 84,
+                  "AutoSize": false,
+                  "Caption": "Load access keys from AWS_* environment variables or credentials file.",
+                  "WordWrap": true
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiEdit",
+        "name": "BucketEdit",
+        "props": {
+          "Left": 8,
+          "Top": 163,
+          "Width": 239,
+          "Height": 21,
+          "TabOrder": 2,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiMemo",
+        "name": "DescriptionEdit",
+        "props": {
+          "Left": 8,
+          "Top": 209,
+          "Width": 239,
+          "Height": 92,
+          "ScrollBars": "ssVertical",
+          "TabOrder": 3,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

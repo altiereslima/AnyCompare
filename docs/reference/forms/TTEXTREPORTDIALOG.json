@@ -1,0 +1,180 @@
+{
+  "resource_index": 639,
+  "name": "TTEXTREPORTDIALOG",
+  "sha256": "d8e227ee4dfaee0264e8bb39cd42c6832683c1b71f37e61cbf93fe450d92d94d",
+  "bytes": 1247,
+  "parse_status": "complete",
+  "components": 16,
+  "hierarchy": {
+    "class": "TTextReportDialog",
+    "name": "TextReportDialog",
+    "props": {
+      "Caption": "Text Compare Report",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiListBox",
+        "name": "LayoutListBox",
+        "props": {
+          "Items.Strings": [
+            "Side-by-side",
+            "Summary",
+            "Interleaved",
+            "Patch",
+            "Statistics",
+            "XML Dump"
+          ]
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "OptionsPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiPanel",
+            "name": "DisplayFilterPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiCheckBox",
+                "name": "ShowContextEdit",
+                "props": {
+                  "Left": 217,
+                  "Top": 2,
+                  "Height": 17,
+                  "Caption": "Show Conte&xt",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ],
+            "flags": 1
+          },
+          {
+            "class": "TUiActivePanelView",
+            "name": "LayoutPanelView",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiActivePanel",
+                "name": "SideBySidePanel",
+                "props": {},
+                "children": [
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "IncludeNumsEdit",
+                    "props": {
+                      "Caption": "Include line &numbers"
+                    },
+                    "children": [],
+                    "flags": 1
+                  }
+                ],
+                "flags": 1
+              },
+              {
+                "class": "TUiActivePanel",
+                "name": "InterleavedPanel",
+                "props": {},
+                "children": [
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "LeftIsSrcEdit",
+                    "props": {
+                      "Left": 0,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "Stri&keout left differences",
+                      "TabOrder": 0,
+                      "OnClick": "IsSrcClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "RightIsSrcEdit",
+                    "props": {
+                      "Left": 148,
+                      "Top": 2,
+                      "Height": 17,
+                      "Caption": "Strik&eout right differences",
+                      "TabOrder": 1,
+                      "OnClick": "IsSrcClick"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiActivePanel",
+                "name": "PatchPanel",
+                "props": {},
+                "children": [
+                  {
+                    "class": "TUiLabel",
+                    "name": "PatchKindLbl",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Height": 13,
+                      "Caption": "Patch style:"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "PatchNormalEdit",
+                    "props": {
+                      "Left": 0,
+                      "Top": 17,
+                      "Height": 17,
+                      "Caption": "&Normal diff",
+                      "TabOrder": 0,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "PatchContextEdit",
+                    "props": {
+                      "Left": 0,
+                      "Top": 38,
+                      "Height": 17,
+                      "Caption": "Cont&ext diff",
+                      "TabOrder": 1,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  },
+                  {
+                    "class": "TUiRadioButton",
+                    "name": "PatchUnifiedEdit",
+                    "props": {
+                      "Left": 0,
+                      "Top": 59,
+                      "Height": 17,
+                      "Caption": "Uni&fied diff",
+                      "TabOrder": 2,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

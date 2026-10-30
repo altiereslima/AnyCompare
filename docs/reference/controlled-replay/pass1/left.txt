@@ -1,0 +1,13 @@
+case:
+A pedra do sigilo
+white:
+uma forja antiga
+mixed:
+A maga azul
+words:
+Fonte da Magia
+important:
+Cadinho
+punctuation:
+Texto - antigo
+end:

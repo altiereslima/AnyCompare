@@ -1,0 +1,3757 @@
+{
+  "evidence_id": "ev_68c4e114010bb9e208847fe0689810f2dd60d04dfce1ce21b681f4ad00d813cf",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "instrument_with_frida",
+  "parameters": {
+    "session_id": "b3f26da3-0685-49d1-9cc7-e71a142d1029",
+    "device_id": "local",
+    "mode": "spawn",
+    "program": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+    "argv": [
+      "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+      "/solo",
+      "/silent",
+      "/ro",
+      "@C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-replay\\report-script.txt"
+    ]
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "b3f26da3-0685-49d1-9cc7-e71a142d1029",
+    "device_id": "local",
+    "state": "detached",
+    "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+    "pid": 24056,
+    "mode": "spawn",
+    "scripts": [
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "name": "rea-3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "ready",
+          "pid": 24056,
+          "record_limit": 30,
+          "alignment_limit": 30
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 0,
+          "n": 5,
+          "chars": [
+            {
+              "c": "c",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 0,
+          "n": 5,
+          "chars": [
+            {
+              "c": "c",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 0,
+          "n": 5,
+          "chars": [
+            {
+              "c": "c",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 0,
+          "n": 5,
+          "chars": [
+            {
+              "c": "c",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 0,
+          "n": 5,
+          "chars": [
+            {
+              "c": "c",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 0,
+          "n": 5,
+          "chars": [
+            {
+              "c": "c",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 1,
+          "n": 17,
+          "chars": [
+            {
+              "c": "A",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "p",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "l",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 1,
+          "n": 17,
+          "chars": [
+            {
+              "c": "A",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "P",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "S",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "l",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 1,
+          "n": 17,
+          "chars": [
+            {
+              "c": "A",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "p",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "l",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 1,
+          "n": 17,
+          "chars": [
+            {
+              "c": "A",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "P",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "S",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "l",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 1,
+          "n": 17,
+          "chars": [
+            {
+              "c": "A",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "p",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "s",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "l",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 1,
+          "n": 17,
+          "chars": [
+            {
+              "c": "A",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "P",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "S",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "l",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 6,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 2,
+          "n": 6,
+          "chars": [
+            {
+              "c": "w",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "h",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 2,
+          "n": 6,
+          "chars": [
+            {
+              "c": "w",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "h",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 2,
+          "n": 6,
+          "chars": [
+            {
+              "c": "w",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "h",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 2,
+          "n": 6,
+          "chars": [
+            {
+              "c": "w",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "h",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 2,
+          "n": 6,
+          "chars": [
+            {
+              "c": "w",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "h",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 2,
+          "n": 6,
+          "chars": [
+            {
+              "c": "w",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "h",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 3,
+          "n": 16,
+          "chars": [
+            {
+              "c": "u",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "f",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "j",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "n",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 3,
+          "n": 18,
+          "chars": [
+            {
+              "c": "u",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "f",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "j",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "n",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 3,
+          "n": 16,
+          "chars": [
+            {
+              "c": "u",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "f",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "j",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "n",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 3,
+          "n": 18,
+          "chars": [
+            {
+              "c": "u",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "f",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "j",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "n",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 3,
+          "n": 16,
+          "chars": [
+            {
+              "c": "u",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "f",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "j",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "n",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 3,
+          "n": 18,
+          "chars": [
+            {
+              "c": "u",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 1,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "f",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "o",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "r",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "j",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 2,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 3,
+              "continuation": 0,
+              "significant": 0
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "n",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "t",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "g",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "a",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 4,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": " ",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 5,
+              "continuation": 0,
+              "significant": 0
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 4,
+          "n": 6,
+          "chars": [
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "x",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 4,
+          "n": 6,
+          "chars": [
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "x",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 4,
+          "n": 6,
+          "chars": [
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "x",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 4,
+          "n": 6,
+          "chars": [
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "x",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 4,
+          "n": 6,
+          "chars": [
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "x",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "chars",
+          "line": 4,
+          "n": 6,
+          "chars": [
+            {
+              "c": "m",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "i",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "x",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "e",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": "d",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            },
+            {
+              "c": ":",
+              "type": 0,
+              "kind": 0,
+              "grammar": -1,
+              "segment": 0,
+              "continuation": 0,
+              "significant": 1
+            }
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 1,
+          "m": 2,
+          "left": [
+            32
+          ],
+          "right": [
+            32,
+            32
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 5,
+          "m": 9,
+          "left": [
+            32,
+            65,
+            90,
+            85,
+            76
+          ],
+          "right": [
+            32,
+            86,
+            69,
+            82,
+            77,
+            69,
+            76,
+            72,
+            65
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 7,
+          "m": 7,
+          "left": [
+            65,
+            32,
+            77,
+            65,
+            71,
+            73,
+            65
+          ],
+          "right": [
+            69,
+            32,
+            77,
+            65,
+            71,
+            73,
+            65
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 6,
+          "m": 5,
+          "left": [
+            65,
+            68,
+            73,
+            78,
+            72,
+            79
+          ],
+          "right": [
+            82,
+            73,
+            83,
+            79,
+            76
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 9,
+          "m": 9,
+          "left": [
+            32,
+            45,
+            32,
+            65,
+            78,
+            84,
+            73,
+            71,
+            79
+          ],
+          "right": [
+            32,
+            8212,
+            32,
+            65,
+            78,
+            84,
+            73,
+            71,
+            79
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 4,
+          "m": 4,
+          "left": [
+            88,
+            66,
+            89,
+            90
+          ],
+          "right": [
+            85,
+            66,
+            86,
+            90
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 5,
+          "m": 5,
+          "left": [
+            88,
+            66,
+            67,
+            89,
+            90
+          ],
+          "right": [
+            85,
+            66,
+            67,
+            86,
+            90
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 6,
+          "m": 6,
+          "left": [
+            88,
+            66,
+            67,
+            68,
+            89,
+            90
+          ],
+          "right": [
+            85,
+            66,
+            67,
+            68,
+            86,
+            90
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 7,
+          "m": 7,
+          "left": [
+            88,
+            65,
+            66,
+            67,
+            68,
+            89,
+            90
+          ],
+          "right": [
+            85,
+            65,
+            66,
+            67,
+            68,
+            86,
+            90
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 6,
+          "m": 6,
+          "left": [
+            88,
+            66,
+            89,
+            67,
+            90,
+            68
+          ],
+          "right": [
+            85,
+            66,
+            86,
+            67,
+            87,
+            68
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 22,
+          "m": 22,
+          "left": [
+            32,
+            65,
+            32,
+            80,
+            65,
+            76,
+            65,
+            86,
+            82,
+            65,
+            32,
+            67,
+            79,
+            77,
+            85,
+            77,
+            32,
+            70,
+            73,
+            77,
+            32,
+            90
+          ],
+          "right": [
+            32,
+            66,
+            32,
+            80,
+            65,
+            76,
+            65,
+            86,
+            82,
+            65,
+            32,
+            67,
+            79,
+            77,
+            85,
+            77,
+            32,
+            70,
+            73,
+            77,
+            32,
+            87
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 1,
+          "m": 2,
+          "left": [
+            32
+          ],
+          "right": [
+            32,
+            32
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 5,
+          "m": 9,
+          "left": [
+            32,
+            65,
+            90,
+            85,
+            76
+          ],
+          "right": [
+            32,
+            86,
+            69,
+            82,
+            77,
+            69,
+            76,
+            72,
+            65
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 7,
+          "m": 7,
+          "left": [
+            65,
+            32,
+            77,
+            65,
+            71,
+            73,
+            65
+          ],
+          "right": [
+            69,
+            32,
+            77,
+            65,
+            71,
+            73,
+            65
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 6,
+          "m": 5,
+          "left": [
+            65,
+            68,
+            73,
+            78,
+            72,
+            79
+          ],
+          "right": [
+            82,
+            73,
+            83,
+            79,
+            76
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 9,
+          "m": 9,
+          "left": [
+            32,
+            45,
+            32,
+            65,
+            78,
+            84,
+            73,
+            71,
+            79
+          ],
+          "right": [
+            32,
+            8212,
+            32,
+            65,
+            78,
+            84,
+            73,
+            71,
+            79
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 4,
+          "m": 4,
+          "left": [
+            88,
+            66,
+            89,
+            90
+          ],
+          "right": [
+            85,
+            66,
+            86,
+            90
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 5,
+          "m": 5,
+          "left": [
+            88,
+            66,
+            67,
+            89,
+            90
+          ],
+          "right": [
+            85,
+            66,
+            67,
+            86,
+            90
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 6,
+          "m": 6,
+          "left": [
+            88,
+            66,
+            67,
+            68,
+            89,
+            90
+          ],
+          "right": [
+            85,
+            66,
+            67,
+            68,
+            86,
+            90
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 7,
+          "m": 7,
+          "left": [
+            88,
+            65,
+            66,
+            67,
+            68,
+            89,
+            90
+          ],
+          "right": [
+            85,
+            65,
+            66,
+            67,
+            68,
+            86,
+            90
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 6,
+          "m": 6,
+          "left": [
+            88,
+            66,
+            89,
+            67,
+            90,
+            68
+          ],
+          "right": [
+            85,
+            66,
+            86,
+            67,
+            87,
+            68
+          ]
+        }
+      },
+      {
+        "script_id": "3620d9c4-8088-4d0e-8d7a-8f43eca1e6d4",
+        "type": "send",
+        "payload": {
+          "kind": "align32",
+          "n": 22,
+          "m": 22,
+          "left": [
+            32,
+            65,
+            32,
+            80,
+            65,
+            76,
+            65,
+            86,
+            82,
+            65,
+            32,
+            67,
+            79,
+            77,
+            85,
+            77,
+            32,
+            70,
+            73,
+            77,
+            32,
+            90
+          ],
+          "right": [
+            32,
+            66,
+            32,
+            80,
+            65,
+            76,
+            65,
+            86,
+            82,
+            65,
+            32,
+            67,
+            79,
+            77,
+            85,
+            77,
+            32,
+            70,
+            73,
+            77,
+            32,
+            87
+          ]
+        }
+      }
+    ],
+    "messages_truncated": false,
+    "source_kind": "file",
+    "source_path": "C:\\Projetos\\BC4\\anycompare\\tools\\observe_reference_inline.frida.js",
+    "source_sha256": "07bb5083c9a9ae78f05169fac7e3798abfc6ad0f80c6de490a7a55aa3d6e027b",
+    "cleanup_error": null
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

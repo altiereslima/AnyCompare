@@ -1,0 +1,72 @@
+{
+  "resource_index": 617,
+  "name": "TSCCCHOOSEPROVIDERDIALOG",
+  "sha256": "f54bcc52efb28ef73b6305ba00dc21bdbfe2c2ff65486f406aeaedd234e1c28b",
+  "bytes": 475,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TSccChooseProviderDialog",
+    "name": "SccChooseProviderDialog",
+    "props": {
+      "Caption": "Provider",
+      "ClientHeight": 207,
+      "ClientWidth": 323,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "ProviderLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "Choose source control &provider:",
+          "FocusControl": "ProviderListBox"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiListBox",
+        "name": "ProviderListBox",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 307,
+          "Height": 143,
+          "TabOrder": 0,
+          "OnDblClick": "ProviderListBoxDblClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 168,
+          "Width": 323,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

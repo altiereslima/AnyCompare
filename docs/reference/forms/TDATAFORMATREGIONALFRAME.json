@@ -1,0 +1,83 @@
+{
+  "resource_index": 498,
+  "name": "TDATAFORMATREGIONALFRAME",
+  "sha256": "30dfbe8f2fdad9f99518952e91a7bced39f417f97ae88ad117dfc78d30ede11b",
+  "bytes": 697,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TDataFormatRegionalFrame",
+    "name": "DataFormatRegionalFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "FormatDataRegional",
+      "Caption": "Regional"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "DecimalSeparatorLbl",
+        "props": {
+          "Left": 8,
+          "Top": 33,
+          "Height": 13,
+          "Caption": "De&cimal separator:",
+          "FocusControl": "DecimalSeparatorEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ThousandSeparatorLbl",
+        "props": {
+          "Left": 8,
+          "Top": 79,
+          "Height": 13,
+          "Caption": "&Thousands separator:",
+          "FocusControl": "ThousandSeparatorEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "NumUseSystemEdit",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 17,
+          "Caption": "Use s&ystem",
+          "TabOrder": 0,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCharEdit",
+        "name": "DecimalSeparatorEdit",
+        "props": {
+          "Left": 8,
+          "Top": 50,
+          "Width": 17,
+          "Height": 21,
+          "TabOrder": 1,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCharEdit",
+        "name": "ThousandSeparatorEdit",
+        "props": {
+          "Left": 8,
+          "Top": 96,
+          "Width": 17,
+          "Height": 21,
+          "TabOrder": 2,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

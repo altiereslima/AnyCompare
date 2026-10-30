@@ -1,0 +1,98 @@
+{
+  "resource_index": 502,
+  "name": "TDATASESSIONALIGNMENTFRAME",
+  "sha256": "4f483cdb88e008d1b277a1e891b170b3bd42a7a40ecd125927a917b66d16171e",
+  "bytes": 884,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "TDataSessionAlignmentFrame",
+    "name": "DataSessionAlignmentFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "SessionDataAlignment",
+      "Caption": "Alignment"
+    },
+    "children": [
+      {
+        "class": "TUiRadioButton",
+        "name": "AlignSortEdit",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 17,
+          "Caption": "S&orted alignment",
+          "TabOrder": 0,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "AlignNoneEdit",
+        "props": {
+          "Left": 8,
+          "Top": 29,
+          "Height": 17,
+          "Caption": "&Unaligned",
+          "TabOrder": 1,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "AlignSmartEdit",
+        "props": {
+          "Left": 8,
+          "Top": 50,
+          "Height": 17,
+          "Caption": "Standa&rd alignment",
+          "TabOrder": 2,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "AlignQuickEdit",
+        "props": {
+          "Left": 8,
+          "Top": 71,
+          "Height": 17,
+          "Caption": "&Myers O(ND) alignment",
+          "TabOrder": 3,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "AlignPatienceEdit",
+        "props": {
+          "Left": 8,
+          "Top": 96,
+          "Height": 17,
+          "Caption": "&Patience Diff alignment",
+          "TabOrder": 4,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "UseClosenessEdit",
+        "props": {
+          "Left": 8,
+          "Top": 117,
+          "Height": 17,
+          "Caption": "Use &closeness matching",
+          "TabOrder": 5,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

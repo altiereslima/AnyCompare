@@ -1,0 +1,100 @@
+{
+  "scope": "Editor frames, 3px splitter, visible section brackets; not all UI pixels",
+  "source": "docs\\reference\\screenshots\\text-loaded.png",
+  "source_sha256": "4a293ecace800a7f14cbe250d1e768d357e1300f3b04693266087ce722974b39",
+  "capture": "C:\\Projetos\\BC4\\anycompare\\docs\\validation\\0.1.17\\text-dividers-all.png",
+  "capture_sha256": "1e3cf4a6b879e9c3627392967c1aa9c16f243581d73b9a6ab9683fd94422f59d",
+  "client_size": [
+    1616,
+    838
+  ],
+  "color_tolerance": 1,
+  "position_tolerance_px": 0,
+  "bracket_scroll_translation_px": 32,
+  "checks": [
+    {
+      "name": "panel_top_y",
+      "expected": [
+        114
+      ],
+      "actual": [
+        114
+      ],
+      "passed": true
+    },
+    {
+      "name": "panel_left_edges_x",
+      "expected": [
+        43,
+        832
+      ],
+      "actual": [
+        43,
+        832
+      ],
+      "passed": true
+    },
+    {
+      "name": "viewport_and_panel_right_edges_x",
+      "expected": [
+        811,
+        828,
+        1615
+      ],
+      "actual": [
+        811,
+        828,
+        1615
+      ],
+      "passed": true
+    },
+    {
+      "name": "viewport_edges_above_navigation_x",
+      "expected": [
+        811,
+        828,
+        1598,
+        1615
+      ],
+      "actual": [
+        811,
+        828,
+        1598,
+        1615
+      ],
+      "passed": true
+    },
+    {
+      "name": "reference_right_navigation_bevel",
+      "passed": true
+    },
+    {
+      "name": "candidate_right_navigation_bevel",
+      "passed": true
+    },
+    {
+      "name": "reference_splitter_3px",
+      "passed": true
+    },
+    {
+      "name": "candidate_splitter_3px",
+      "passed": true
+    },
+    {
+      "name": "active_bracket_mask",
+      "reference_pixels": 164,
+      "candidate_pixels": 164,
+      "missing_pixels": 0,
+      "extra_pixels": 0,
+      "passed": true
+    },
+    {
+      "name": "inactive_bracket_mask",
+      "reference_pixels": 164,
+      "candidate_pixels": 164,
+      "missing_pixels": 0,
+      "extra_pixels": 0,
+      "passed": true
+    }
+  ]
+}

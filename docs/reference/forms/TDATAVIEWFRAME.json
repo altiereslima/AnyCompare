@@ -1,0 +1,379 @@
+{
+  "resource_index": 505,
+  "name": "TDATAVIEWFRAME",
+  "sha256": "2706c6ffd4716b092a18cd7222c81da37a12bb0bb087ebbb6cb13c7ff2b68080",
+  "bytes": 4672,
+  "parse_status": "complete",
+  "components": 20,
+  "hierarchy": {
+    "class": "TDataViewFrame",
+    "name": "DataViewFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ViewData"
+    },
+    "children": [
+      {
+        "class": "TUiThumbnail",
+        "name": "Thumbnail",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 39,
+          "Height": 642,
+          "Align": "alLeft",
+          "PopupMenu": "ThumbnailPopup",
+          "TabOrder": 0,
+          "OnGetColors": "ThumbnailGetColors",
+          "OnGetPriority": "ThumbnailGetPriority",
+          "OnLock": "ThumbnailLock",
+          "OnRequestMoveBy": "ThumbnailRequestMoveBy",
+          "OnRequestMoveTo": "ThumbnailRequestMoveTo",
+          "OnUnlock": "ThumbnailUnlock"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 0
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MainPanel",
+        "props": {
+          "Left": 39,
+          "Top": 0,
+          "Width": 711,
+          "Height": 642,
+          "Align": "alClient",
+          "BevelOuter": "bvNone",
+          "TabOrder": 1,
+          "OnResize": "MainPanelResize"
+        },
+        "children": [
+          {
+            "class": "TUiPanel",
+            "name": "InputPanel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 711,
+              "Height": 572,
+              "Align": "alClient",
+              "BevelOuter": "bvNone",
+              "TabOrder": 0,
+              "OnResize": "InputPanelResize"
+            },
+            "children": [
+              {
+                "class": "TUiSplitter",
+                "name": "Splitter",
+                "props": {
+                  "Left": 354,
+                  "Top": 0,
+                  "Height": 572,
+                  "AutoSnap": false,
+                  "OnMoved": "SplitterMoved"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiPanel",
+                "name": "LeftPanel",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Width": 354,
+                  "Height": 572,
+                  "Align": "alLeft",
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 0
+                },
+                "children": [
+                  {
+                    "class": "TUiGrid",
+                    "name": "LeftEditor",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Width": 354,
+                      "Height": 572,
+                      "Align": "alClient",
+                      "BorderKind": "bkLowered",
+                      "HdrImages": "BcImages.HeaderImages",
+                      "HdrPopupMenu": "ColPopup",
+                      "SelAllowed": false,
+                      "StatusPanels": [
+                        {
+                          "Width": 75
+                        },
+                        {
+                          "Width": 100
+                        }
+                      ],
+                      "StatusVisible": true,
+                      "TabOrder": 0,
+                      "TabStop": false,
+                      "OnColDblClick": "EditorColDblClick",
+                      "OnColsChanged": "EditorColsChanged",
+                      "OnCurChanged": "EditorCurChanged",
+                      "OnDrawCellPrep": "EditorDrawCellPrep",
+                      "OnDrawGutterPrep": "EditorDrawGutterPrep",
+                      "OnExtraChanged": "EditorExtraChanged",
+                      "OnGetCellAlignment": "EditorGetCellAlignment",
+                      "OnGetCellSegs": "EditorGetCellSegs",
+                      "OnGetItemNum": "EditorGetItemNum",
+                      "OnKeyDown": "EditorKeyDown",
+                      "OnLock": "EditorLock",
+                      "OnModifyApply": "EditorModifyApply",
+                      "OnModifyInit": "EditorModifyInit",
+                      "OnMouseWheel": "EditorMouseWheel",
+                      "OnSelChanged": "EditorSelChanged",
+                      "OnTopColChanged": "EditorTopColChanged",
+                      "OnTopItemChanged": "EditorTopItemChanged",
+                      "OnUnlock": "EditorUnlock",
+                      "OnViewportChanged": "EditorViewportChanged"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "class": "TUiPanel",
+                "name": "RightPanel",
+                "props": {
+                  "Left": 357,
+                  "Top": 0,
+                  "Width": 354,
+                  "Height": 572,
+                  "Align": "alClient",
+                  "BevelOuter": "bvNone",
+                  "TabOrder": 1
+                },
+                "children": [
+                  {
+                    "class": "TUiGrid",
+                    "name": "RightEditor",
+                    "props": {
+                      "Left": 0,
+                      "Top": 0,
+                      "Width": 354,
+                      "Height": 572,
+                      "Align": "alClient",
+                      "BorderKind": "bkLowered",
+                      "HdrImages": "BcImages.HeaderImages",
+                      "HdrPopupMenu": "ColPopup",
+                      "SelAllowed": false,
+                      "StatusPanels": [
+                        {
+                          "Width": 75
+                        },
+                        {
+                          "Width": 100
+                        }
+                      ],
+                      "StatusVisible": true,
+                      "TabOrder": 0,
+                      "TabStop": false,
+                      "OnColDblClick": "EditorColDblClick",
+                      "OnColsChanged": "EditorColsChanged",
+                      "OnCurChanged": "EditorCurChanged",
+                      "OnDrawCellPrep": "EditorDrawCellPrep",
+                      "OnDrawGutterPrep": "EditorDrawGutterPrep",
+                      "OnExtraChanged": "EditorExtraChanged",
+                      "OnGetCellAlignment": "EditorGetCellAlignment",
+                      "OnGetCellSegs": "EditorGetCellSegs",
+                      "OnGetItemNum": "EditorGetItemNum",
+                      "OnKeyDown": "EditorKeyDown",
+                      "OnLock": "EditorLock",
+                      "OnModifyApply": "EditorModifyApply",
+                      "OnModifyInit": "EditorModifyInit",
+                      "OnMouseWheel": "EditorMouseWheel",
+                      "OnSelChanged": "EditorSelChanged",
+                      "OnTopColChanged": "EditorTopColChanged",
+                      "OnTopItemChanged": "EditorTopItemChanged",
+                      "OnUnlock": "EditorUnlock",
+                      "OnViewportChanged": "EditorViewportChanged"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "class": "TUiPanel",
+            "name": "DetailsPanel",
+            "props": {
+              "Left": 0,
+              "Top": 572,
+              "Width": 711,
+              "Height": 70,
+              "Align": "alBottom",
+              "BevelOuter": "bvLowered",
+              "TabOrder": 1,
+              "OnResize": "DetailsPanelResize"
+            },
+            "children": [
+              {
+                "class": "TUiGrid",
+                "name": "LeftDetailsEditor",
+                "props": {
+                  "Left": 1,
+                  "Top": 1,
+                  "Width": 749,
+                  "Height": 33,
+                  "HdrImages": "BcImages.HeaderImages",
+                  "HdrPopupMenu": "ColPopup",
+                  "ScrollBars": "ssNone",
+                  "SelAllowed": false,
+                  "ShowUnfocused": false,
+                  "SingleItem": true,
+                  "TabOrder": 0,
+                  "TabStop": false,
+                  "OnColDblClick": "EditorColDblClick",
+                  "OnColsChanged": "EditorColsChanged",
+                  "OnCurChanged": "EditorCurChanged",
+                  "OnDrawCellPrep": "EditorDrawCellPrep",
+                  "OnGetCellAlignment": "EditorGetCellAlignment",
+                  "OnGetCellSegs": "EditorGetCellSegs",
+                  "OnGetItemNum": "EditorGetItemNum",
+                  "OnKeyDown": "EditorKeyDown",
+                  "OnLock": "EditorLock",
+                  "OnModifyApply": "EditorModifyApply",
+                  "OnModifyInit": "EditorModifyInit",
+                  "OnSelChanged": "EditorSelChanged",
+                  "OnTopColChanged": "EditorTopColChanged",
+                  "OnUnlock": "EditorUnlock"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiGrid",
+                "name": "RightDetailsEditor",
+                "props": {
+                  "Left": 1,
+                  "Top": 34,
+                  "Width": 749,
+                  "Height": 34,
+                  "HdrImages": "BcImages.HeaderImages",
+                  "HdrPopupMenu": "ColPopup",
+                  "HdrVisible": false,
+                  "ScrollBars": "ssHorizontal",
+                  "SelAllowed": false,
+                  "ShowUnfocused": false,
+                  "SingleItem": true,
+                  "TabOrder": 1,
+                  "TabStop": false,
+                  "OnColDblClick": "EditorColDblClick",
+                  "OnColsChanged": "EditorColsChanged",
+                  "OnCurChanged": "EditorCurChanged",
+                  "OnDrawCellPrep": "EditorDrawCellPrep",
+                  "OnGetCellAlignment": "EditorGetCellAlignment",
+                  "OnGetCellSegs": "EditorGetCellSegs",
+                  "OnGetItemNum": "EditorGetItemNum",
+                  "OnKeyDown": "EditorKeyDown",
+                  "OnLock": "EditorLock",
+                  "OnModifyApply": "EditorModifyApply",
+                  "OnModifyInit": "EditorModifyInit",
+                  "OnSelChanged": "EditorSelChanged",
+                  "OnTopColChanged": "EditorTopColChanged",
+                  "OnUnlock": "EditorUnlock"
+                },
+                "children": []
+              }
+            ]
+          }
+        ],
+        "flags": 2,
+        "child_position": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobProgressPanel",
+        "props": {
+          "TabOrder": 2
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "JobErrorPanel",
+        "props": {
+          "TabOrder": 3
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "MessagePanel",
+        "props": {
+          "TabOrder": 4
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiStatusBar",
+        "name": "StatusBar",
+        "props": {
+          "Panels": [
+            {
+              "Style": "psOwnerDraw",
+              "Width": 225,
+              "Images": "BcImages.ContentImages"
+            },
+            {
+              "Width": 300
+            },
+            {
+              "Width": 225
+            }
+          ]
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "ColPopup",
+        "props": {
+          "OnPopup": "ColListClick",
+          "Left": 65
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPopupMenu",
+        "name": "ThumbnailPopup",
+        "props": {
+          "Left": 96
+        },
+        "children": [
+          {
+            "class": "TUiMenuItem",
+            "name": "ThumbnailScrollItem",
+            "props": {
+              "AutoCheck": true,
+              "Caption": "Allow Scrolling",
+              "Hint": "Allows scrolling of thumbnail view of large files, instead of compressing the thumbnail to fit.",
+              "OnClick": "ThumbnailScrollClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMenuItem",
+            "name": "ThumbnailHideItem",
+            "props": {
+              "Caption": "Hide Thumbnail",
+              "Hint": "Hides thumbnail view.",
+              "OnClick": "ThumbnailHideClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

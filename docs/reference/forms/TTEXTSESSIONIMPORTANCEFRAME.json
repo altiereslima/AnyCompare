@@ -1,0 +1,211 @@
+{
+  "resource_index": 641,
+  "name": "TTEXTSESSIONIMPORTANCEFRAME",
+  "sha256": "6cae2195de83369f138b725b79f543c1f116fbc77b33ab87405074dbd1cd7836",
+  "bytes": 2053,
+  "parse_status": "complete",
+  "components": 15,
+  "hierarchy": {
+    "class": "TTextSessionImportanceFrame",
+    "name": "TextSessionImportanceFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "SessionTextImportance",
+      "Caption": "Importance"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "InsigsLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "&Unimportant text:",
+          "FocusControl": "InsigsListBox"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "SigsLbl",
+        "props": {
+          "Left": 8,
+          "Top": 157,
+          "Height": 13,
+          "Caption": "Mark &grammar elements that are important to the comparison:",
+          "FocusControl": "SigsListBox"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "LeftGrammarLbl",
+        "props": {
+          "Left": 324,
+          "Top": 174,
+          "Height": 13,
+          "Caption": "%",
+          "FocusControl": "LeftGrammarEditBtn"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "RightGrammarLbl",
+        "props": {
+          "Left": 324,
+          "Top": 222,
+          "Height": 13,
+          "Caption": "%",
+          "FocusControl": "RightGrammarEditBtn"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiListBox",
+        "name": "InsigsListBox",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 409,
+          "Height": 93,
+          "DragMode": "dmAutomatic",
+          "TabOrder": 0,
+          "OnClick": "InsigsListBoxClick",
+          "OnDblClick": "InsigsEditClick",
+          "OnDragDrop": "InsigsListBoxDragDrop",
+          "OnDragOver": "InsigsListBoxDragOver",
+          "OnKeyDown": "InsigsListBoxKeyDown"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "InsigsNewBtn",
+        "props": {
+          "Left": 8,
+          "Top": 126,
+          "Width": 24,
+          "Hint": "New",
+          "ImageIndex": "imgListAdd",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 1,
+          "OnClick": "InsigsNewClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "InsigsDeleteBtn",
+        "props": {
+          "Left": 32,
+          "Top": 126,
+          "Width": 24,
+          "Hint": "Delete",
+          "ImageIndex": "imgListDelete",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 2,
+          "OnClick": "InsigsDeleteClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "InsigsEditBtn",
+        "props": {
+          "Left": 56,
+          "Top": 126,
+          "Width": 24,
+          "Hint": "Edit",
+          "ImageIndex": "imgListEdit",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 3,
+          "OnClick": "InsigsEditClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "InsigsCloneBtn",
+        "props": {
+          "Left": 80,
+          "Top": 126,
+          "Width": 24,
+          "Hint": "Clone",
+          "ImageIndex": "imgListClone",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 4,
+          "OnClick": "InsigsCloneClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckListBox",
+        "name": "SigsListBox",
+        "props": {
+          "Left": 8,
+          "Top": 174,
+          "Width": 308,
+          "Height": 132,
+          "OnClickCheck": "SomethingChangedClick",
+          "TabOrder": 5
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "LeftGrammarEditBtn",
+        "props": {
+          "Left": 324,
+          "Top": 191,
+          "Caption": "&Edit Grammar...",
+          "TabOrder": 6,
+          "OnClick": "GrammarEditClick",
+          "AutoSize": "asLeft"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiButton",
+        "name": "RightGrammarEditBtn",
+        "props": {
+          "Left": 324,
+          "Top": 239,
+          "Caption": "Edi&t Grammar...",
+          "TabOrder": 7,
+          "OnClick": "GrammarEditClick",
+          "AutoSize": "asLeft"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "OrphansAlwaysSigEdit",
+        "props": {
+          "Left": 8,
+          "Top": 314,
+          "Height": 17,
+          "Caption": "&Orphan lines are always important",
+          "TabOrder": 8,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "CompareEndingsEdit",
+        "props": {
+          "Left": 8,
+          "Top": 335,
+          "Height": 17,
+          "Caption": "Com&pare line endings (PC/Mac/Unix)",
+          "TabOrder": 9,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

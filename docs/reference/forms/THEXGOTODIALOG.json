@@ -1,0 +1,172 @@
+{
+  "resource_index": 550,
+  "name": "THEXGOTODIALOG",
+  "sha256": "4b92b631a03459df0b4e0529a41b597d6773eec45dd36cd4a52f08cd813e0273",
+  "bytes": 1023,
+  "parse_status": "complete",
+  "components": 14,
+  "hierarchy": {
+    "class": "THexGoToDialog",
+    "name": "HexGoToDialog",
+    "props": {
+      "Caption": "Go To",
+      "ClientHeight": 185,
+      "ClientWidth": 265,
+      "OnClose": "FormClose",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "NumLbl",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 13,
+          "Caption": "B&yte Address:",
+          "FocusControl": "NumEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiNumEdit",
+        "name": "NumEdit",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Width": 249,
+          "Height": 21,
+          "TabOrder": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "KindPanel",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Width": 249,
+          "Height": 42,
+          "BevelOuter": "bvNone",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "KindLbl",
+            "props": {
+              "Left": 8,
+              "Top": 0,
+              "Height": 13,
+              "Caption": "Kind:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "KindDecEdit",
+            "props": {
+              "Left": 8,
+              "Top": 17,
+              "Height": 17,
+              "Caption": "&Decimal",
+              "TabOrder": 0,
+              "OnClick": "KindClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "KindHexEdit",
+            "props": {
+              "Left": 124,
+              "Top": 17,
+              "Height": 17,
+              "Caption": "&Hex",
+              "TabOrder": 1,
+              "OnClick": "KindClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "SidePanel",
+        "props": {
+          "Left": 8,
+          "Top": 104,
+          "Width": 249,
+          "Height": 42,
+          "BevelOuter": "bvNone",
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "SideLbl",
+            "props": {
+              "Left": 8,
+              "Top": 0,
+              "Height": 13,
+              "Caption": "Side:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "LeftSideEdit",
+            "props": {
+              "Left": 8,
+              "Top": 17,
+              "Height": 17,
+              "Caption": "&Left",
+              "TabOrder": 0
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "RightSideEdit",
+            "props": {
+              "Left": 124,
+              "Top": 17,
+              "Height": 17,
+              "Caption": "&Right",
+              "TabOrder": 1
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 146,
+          "Width": 265,
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "resource_index": 517,
+  "name": "TDIRREPORTDIALOG",
+  "sha256": "bd35c163fca44073b9123dac27b50346550461457d81eff2d5d2ed04b90536ae",
+  "bytes": 1564,
+  "parse_status": "complete",
+  "components": 20,
+  "hierarchy": {
+    "class": "TDirReportDialog",
+    "name": "DirReportDialog",
+    "props": {
+      "Caption": "Folder Compare Report",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiListBox",
+        "name": "LayoutListBox",
+        "props": {
+          "Items.Strings": [
+            "Side-by-side",
+            "Summary",
+            "XML Dump"
+          ]
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "OptionsPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiPanel",
+            "name": "BasicPanel",
+            "props": {
+              "Height": 0
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiPanel",
+            "name": "DisplayFilterPanel",
+            "props": {
+              "Top": 0
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiActivePanelView",
+            "name": "LayoutPanelView",
+            "props": {
+              "Height": 0,
+              "Align": "alNone"
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiPanel",
+            "name": "ColsPanel",
+            "props": {
+              "Left": 0,
+              "Top": 29,
+              "Width": 385,
+              "Height": 76,
+              "Align": "alTop",
+              "BevelOuter": "bvNone",
+              "TabOrder": 3
+            },
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "ColsLbl",
+                "props": {
+                  "Left": 0,
+                  "Top": 0,
+                  "Height": 13,
+                  "Caption": "Col&umns:"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "VcsStatusEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 17,
+                  "Height": 17,
+                  "Caption": "Status",
+                  "TabOrder": 0,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "VersionEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 34,
+                  "Height": 17,
+                  "Caption": "Version",
+                  "TabOrder": 1,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "SizeEdit",
+                "props": {
+                  "Left": 0,
+                  "Top": 51,
+                  "Height": 17,
+                  "Caption": "Size",
+                  "TabOrder": 2,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "CRCEdit",
+                "props": {
+                  "Left": 131,
+                  "Top": 17,
+                  "Height": 17,
+                  "Caption": "CRC",
+                  "TabOrder": 3,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "ModifiedEdit",
+                "props": {
+                  "Left": 131,
+                  "Top": 34,
+                  "Height": 17,
+                  "Caption": "Modified",
+                  "TabOrder": 4,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "AttributesEdit",
+                "props": {
+                  "Left": 131,
+                  "Top": 51,
+                  "Height": 17,
+                  "Caption": "Attributes",
+                  "TabOrder": 5,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "UnixOwnerEdit",
+                "props": {
+                  "Left": 262,
+                  "Top": 17,
+                  "Height": 17,
+                  "Caption": "Owner",
+                  "TabOrder": 6,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiCheckBox",
+                "name": "UnixGroupEdit",
+                "props": {
+                  "Left": 262,
+                  "Top": 34,
+                  "Height": 17,
+                  "Caption": "Group",
+                  "TabOrder": 7,
+                  "OnClick": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "OutputPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiActivePanelView",
+            "name": "OutputPanelView",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiActivePanel",
+                "name": "HTMLPanel",
+                "props": {},
+                "children": [
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "CompoundEdit",
+                    "props": {
+                      "Left": 0,
+                      "Top": 113,
+                      "Height": 17,
+                      "Caption": "Include links to &file reports",
+                      "TabOrder": 2,
+                      "OnClick": "SomethingChangedClick"
+                    },
+                    "children": []
+                  }
+                ],
+                "flags": 1
+              }
+            ],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

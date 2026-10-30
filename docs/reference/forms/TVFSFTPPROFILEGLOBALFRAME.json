@@ -1,0 +1,245 @@
+{
+  "resource_index": 658,
+  "name": "TVFSFTPPROFILEGLOBALFRAME",
+  "sha256": "d805fa1e95330e5f8b2a88d4591879813865ebf4c9a56075fb778f5ffc36a533",
+  "bytes": 1945,
+  "parse_status": "complete",
+  "components": 18,
+  "hierarchy": {
+    "class": "TVfsFtpProfileGlobalFrame",
+    "name": "VfsFtpProfileGlobalFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileFtpGlobal",
+      "Caption": "Global"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "EmailAddressPanel",
+        "props": {
+          "Left": 8,
+          "Top": 0,
+          "Width": 239,
+          "Height": 62,
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "EmailAddressLbl",
+            "props": {
+              "Left": 0,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "&Email address for anonymous logins:",
+              "FocusControl": "EmailAddressEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "EmailAddressEdit",
+            "props": {
+              "Left": 0,
+              "Top": 25,
+              "Width": 239,
+              "Height": 21,
+              "TabOrder": 0,
+              "OnChange": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "SSHPanel",
+        "props": {
+          "Left": 8,
+          "Top": 62,
+          "Width": 239,
+          "Height": 93,
+          "BevelOuter": "bvNone",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "SSHBevel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 239,
+              "Height": 1,
+              "Align": "alTop",
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "SSHPrivateKeyFileLbl",
+            "props": {
+              "Left": 0,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "SS&H private key file:",
+              "FocusControl": "SSHPrivateKeyFileEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpecBar",
+            "name": "SSHPrivateKeyFileEdit",
+            "props": {
+              "Left": 0,
+              "Top": 25,
+              "Width": 239,
+              "TabOrder": 0,
+              "OnBrowse": "AuthFileEditBrowse",
+              "OnChange": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiButton",
+            "name": "SSHCreateKeysBtn",
+            "props": {
+              "Left": 163,
+              "Top": 54,
+              "Width": 76,
+              "Caption": "Create &Keys",
+              "TabOrder": 1,
+              "OnClick": "SSHCreateKeysClick",
+              "AutoSize": "asRight"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "SSLPanel",
+        "props": {
+          "Left": 8,
+          "Top": 155,
+          "Width": 239,
+          "Height": 93,
+          "BevelOuter": "bvNone",
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "SSLBevel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 239,
+              "Height": 1,
+              "Align": "alTop",
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "SSLClientCertFileLbl",
+            "props": {
+              "Left": 0,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "SS&L client certificate:",
+              "FocusControl": "SSLClientCertFileEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpecBar",
+            "name": "SSLClientCertFileEdit",
+            "props": {
+              "Left": 0,
+              "Top": 25,
+              "Width": 239,
+              "TabOrder": 0,
+              "OnBrowse": "AuthFileEditBrowse",
+              "OnChange": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiButton",
+            "name": "SSLCreateCertBtn",
+            "props": {
+              "Left": 136,
+              "Top": 54,
+              "Width": 103,
+              "Caption": "Create &Certificate",
+              "TabOrder": 1,
+              "OnClick": "SSLCreateCertClick",
+              "AutoSize": "asRight"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "ASCIITypesPanel",
+        "props": {
+          "Left": 8,
+          "Top": 248,
+          "Width": 239,
+          "Height": 61,
+          "BevelOuter": "bvNone",
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "ASCIITypesBevel",
+            "props": {
+              "Left": 0,
+              "Top": 0,
+              "Width": 239,
+              "Height": 1,
+              "Align": "alTop",
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "ASCIITypesLbl",
+            "props": {
+              "Left": 0,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "A&SCII types:",
+              "FocusControl": "ASCIITypesEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiMemo",
+            "name": "ASCIITypesEdit",
+            "props": {
+              "Left": 0,
+              "Top": 25,
+              "Width": 239,
+              "Height": 28,
+              "ScrollBars": "ssVertical",
+              "TabOrder": 0,
+              "WordWrap": false,
+              "OnChange": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

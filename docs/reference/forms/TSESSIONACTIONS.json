@@ -1,0 +1,289 @@
+{
+  "resource_index": 619,
+  "name": "TSESSIONACTIONS",
+  "sha256": "01ebe64db2b227f2329db61bfebea470c089d896544aed72b87bfc1f741fd2ab",
+  "bytes": 3986,
+  "parse_status": "complete",
+  "components": 19,
+  "hierarchy": {
+    "class": "TSessionActions",
+    "name": "SessionActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "SessionHomeAction",
+            "props": {
+              "Category": "Session",
+              "Hint": "Home|Replaces current view with Home view.",
+              "ImageIndex": "imgSessionHome",
+              "MacShortCutStr": "Shift+Meta+Home",
+              "Scope": "Session",
+              "ShortCaption": "Home",
+              "ShortCutStr": "Alt+Home"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SessionsComboAction",
+            "props": {
+              "Category": "Session",
+              "Hint": "Sessions Button|Focuses on dropdown button listing sessions that can be opened in this view.",
+              "ImageIndex": "imgSessionsCombo",
+              "Scope": "Session",
+              "ShortCaption": "Sessions"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SessionSaveAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Save Session",
+              "Hint": "Save Session|Saves this session.",
+              "ImageIndex": "imgSessionSave",
+              "MacShortCutStr": "Ctrl+Meta+S",
+              "Scope": "Session",
+              "ShortCaption": "Save",
+              "ShortCutStr": "Shift+Ctrl+S",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SessionSaveAsAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Save Session &As...",
+              "Hint": "Save Session As|Saves this session with new name.",
+              "ImageIndex": "imgSessionSaveAs",
+              "Scope": "Session",
+              "ShortCaption": "Save As",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SessionEditAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "S&ession Settings...",
+              "Hint": "Session Settings|Edits current session settings.",
+              "ImageIndex": "imgSessionEdit",
+              "Scope": "Session"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SessionLockedAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Locked",
+              "Hint": "Locked|Locks or unlocks current session.",
+              "ImageIndex": "imgSessionLocked",
+              "Scope": "Session",
+              "ShortCaption": "Locked",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SessionClearAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "&Clear Session",
+              "Hint": "Clear Session|Replaces current view with empty session.",
+              "MacShortCutStr": "Ctrl+Meta+C",
+              "Scope": "Session",
+              "ShortCutStr": "Shift+Ctrl+C"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "RulesAction",
+            "props": {
+              "Category": "Session",
+              "Hint": "Rules|Edits current Rules definitions.",
+              "ImageIndex": "imgRules",
+              "ShortCaption": "Rules"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SwapAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Swap Si&des",
+              "Hint": "Swap Sides|Exchanges left, right files.",
+              "ImageIndex": "imgSwap",
+              "ShortCaption": "Swap"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ReportAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "%s Re&port...",
+              "Hint": "%0:s Report|Produces %0:s report.",
+              "ImageIndex": "imgReport",
+              "MacShortCutStr": "Meta+P",
+              "ShortCaption": "Report",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "InfoAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "%s &Info",
+              "Hint": "%0:s Info|Displays %0:s statistics.",
+              "ImageIndex": "imgInfo",
+              "ShortCaption": "Info",
+              "ShortCutStr": "Ctrl+I",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CompareParentsAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Compare Parent &Folders",
+              "Hint": "Compare Parent Folders|Compares folders containing current items in new view.",
+              "Scope": "Session"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "MergeParentsAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Merge Parent &Folders",
+              "Hint": "Merge Parent Folders|Merges folders containing current items in new view.",
+              "Scope": "Session"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "InsigIgnoredAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Ignore &Unimportant Differences",
+              "Hint": "Ignore Unimportant Differences|Treats unimportant differences as same.",
+              "ImageIndex": "imgInsigIgnored",
+              "ShortCaption": "Minor"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SameModIgnoredAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "Ignore S&ame Changes",
+              "Hint": "Ignore Same Changes|Treats same changes as same."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ShowToolbarAction",
+            "props": {
+              "Category": "View",
+              "AutoCheck": true,
+              "Caption": "&Toolbar",
+              "Hint": "Toolbar|Shows or hides toolbar.",
+              "Scope": "Session"
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "Session: Menu",
+            [
+              "Settings: SeparatorItem",
+              "SessionSave: MenuItem",
+              "SessionSaveAs: MenuItem",
+              "SessionEdit: MenuItem",
+              "SessionLocked: MenuItem",
+              "SessionClear: MenuItem",
+              "CloseTab: MenuItem",
+              "Specs: SeparatorItem",
+              "Swap: MenuItem",
+              "Report: SeparatorItem",
+              "Report: MenuItem",
+              "Info: MenuItem",
+              "Views: SeparatorItem",
+              "CompareParents: MenuItem",
+              "MergeParents: MenuItem"
+            ],
+            "MergeFile: Menu",
+            [
+              "SessionEdit: MenuItem",
+              "Specs: SeparatorItem",
+              "Swap: MenuItem",
+              "Report: SeparatorItem",
+              "Report: MenuItem",
+              "Info: MenuItem",
+              "Last: SeparatorItem"
+            ],
+            "View: Menu",
+            [
+              "InsigIgnored: MenuItem",
+              "SameModIgnored: MenuItem",
+              "Layout: SeparatorItem",
+              "ShowToolbar: MenuItem"
+            ],
+            "Main: Toolbar",
+            [
+              "SessionHome: ToolButton",
+              "SessionsCombo: TreeButton",
+              "SessionSave: ToolButton",
+              "SessionSaveAs: ToolButton",
+              "SessionLocked: ToolButton",
+              "InsigIgnored: SeparatorButton",
+              "InsigIgnored: ToolButton",
+              "Rules: SeparatorButton",
+              "Rules: ToolButton",
+              "Specs: SeparatorButton",
+              "Swap: ToolButton",
+              "Report: ToolButton",
+              "Info: ToolButton"
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

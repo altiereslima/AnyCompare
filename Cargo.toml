@@ -1,0 +1,26 @@
+[package]
+name = "anycompare"
+version = "0.1.17"
+edition = "2021"
+
+[profile.release]
+strip = "debuginfo"
+
+[dependencies]
+eframe = "0.29.1"
+egui = "0.29.1"
+similar = { version = "2.6", features = ["inline"] }
+rfd = "0.15"
+walkdir = "2.5"
+chrono = "0.4"
+image = { version = "0.25", default-features = false, features = ["png"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0"
+encoding_rs = "0.8"
+regex = "1.13.1"
+raw-window-handle = "0.6"
+windows-sys = { version = "0.59", features = ["Win32_Globalization", "Win32_UI_WindowsAndMessaging", "Win32_UI_Input_KeyboardAndMouse", "Win32_UI_Shell", "Win32_System_LibraryLoader", "Win32_Graphics_Gdi", "Win32_Storage_FileSystem"] }
+windows = { version = "0.58", features = ["Win32_Foundation", "Win32_UI_Shell", "Win32_System_Com"] }
+
+[patch.crates-io]
+epaint = { path = "vendor/epaint" }

@@ -1,0 +1,178 @@
+{
+  "resource_index": 525,
+  "name": "TDIRSYNCACTIONS",
+  "sha256": "e9b1e948e6585dfcde2e6c8bc173e54fa704d6803bf8589ca347e4d422b41b66",
+  "bytes": 2278,
+  "parse_status": "complete",
+  "components": 12,
+  "hierarchy": {
+    "class": "TDirSyncActions",
+    "name": "DirSyncActions",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiActionList",
+        "name": "List",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiAction",
+            "name": "RunAction",
+            "props": {
+              "Category": "Session",
+              "Hint": "Run Sync|Performs all sync operations."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "CompareBaseViewAction",
+            "props": {
+              "Category": "Session",
+              "Caption": "Co&mpare Base Folders",
+              "Hint": "Compare Base Folders|Compares base folders in new view.",
+              "ImageIndex": "imgDirCompareSession",
+              "ShortCaption": "Compare View",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SyncLeaveAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Lea&ve Alone",
+              "Hint": "Leave Alone|Changes sync operation to leave alone."
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SyncCopyLeftAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Copy Right to &Left",
+              "Hint": "Copy Right to Left|Changes sync operation to copy right to left.",
+              "ImageIndex": "imgCopyLeft"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SyncCopyRightAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Copy Left to &Right",
+              "Hint": "Copy Left to Right|Changes sync operation to copy left to right.",
+              "ImageIndex": "imgCopyRight"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SyncDeleteLeftAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Delete Le&ft",
+              "Hint": "Delete Left|Changes sync operation to delete left.",
+              "ImageIndex": "imgDelete"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "SyncDeleteRightAction",
+            "props": {
+              "Category": "Actions",
+              "Caption": "Delete Ri&ght",
+              "Hint": "Delete Right|Changes sync operation to delete right.",
+              "ImageIndex": "imgDelete"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ConflictNextAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Next Conflict",
+              "Hint": "Next Conflict|Positions at next conflict.",
+              "ImageIndex": "imgDown",
+              "MacShortCutStr": "Ctrl+Alt+Down",
+              "ShortCaption": "Next Conflict",
+              "ShortCutStr": "Ctrl+N",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          },
+          {
+            "class": "TUiAction",
+            "name": "ConflictPrevAction",
+            "props": {
+              "Category": "Search",
+              "Caption": "&Previous Conflict",
+              "Hint": "Previous Conflict|Positions at previous conflict.",
+              "ImageIndex": "imgUp",
+              "MacShortCutStr": "Ctrl+Alt+Up",
+              "ShortCaption": "Prev Conflict",
+              "ShortCutStr": "Ctrl+P",
+              "ToolbarAllowed": false
+            },
+            "children": []
+          }
+        ],
+        "flags": 1
+      },
+      {
+        "class": "TUiActionTree",
+        "name": "Tree",
+        "props": {
+          "Nodes": [
+            "Session: Menu",
+            [
+              "Info: MenuItem",
+              "Run: MenuItem",
+              "Views: SeparatorItem",
+              "CompareBaseView: MenuItem"
+            ],
+            "Actions: Menu",
+            [
+              "SyncLeave: MenuItem",
+              "SyncCopyLeft: MenuItem",
+              "SyncCopyRight: MenuItem",
+              "SyncDeleteLeft: MenuItem",
+              "SyncDeleteRight: MenuItem",
+              "N1: SeparatorItem"
+            ],
+            "Search: Menu",
+            [
+              "ConflictNext: MenuItem",
+              "ConflictPrev: MenuItem"
+            ],
+            "Main: Toolbar",
+            [
+              "Search: SeparatorButton",
+              "ConflictNext: ToolButton",
+              "ConflictPrev: ToolButton",
+              "Info: ToolButton",
+              "CompareBaseView: ToolButton"
+            ],
+            "Tree: PopupMenu",
+            [
+              "SyncLeave: MenuItem",
+              "SyncCopyLeft: MenuItem",
+              "SyncCopyRight: MenuItem",
+              "SyncDeleteLeft: MenuItem",
+              "SyncDeleteRight: MenuItem",
+              "First: SeparatorItem"
+            ]
+          ]
+        },
+        "children": [],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

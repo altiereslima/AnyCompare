@@ -1,0 +1,170 @@
+{
+  "evidence_id": "ev_5750415e0ca42b9a9d3e71e986e9c9125baa9ca1ebce196e92f3bfd85a36b65b",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "instrument_with_frida",
+  "parameters": {
+    "session_id": "03c7d877-450a-4984-acb4-cd122ffc41c8",
+    "device_id": "local",
+    "mode": "attach",
+    "pid": 4796
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "03c7d877-450a-4984-acb4-cd122ffc41c8",
+    "device_id": "local",
+    "state": "running",
+    "target": "BCompare.exe (pid 4796)",
+    "pid": 4796,
+    "mode": "attach",
+    "scripts": [
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "name": "rea-c4672402-7b25-4807-9b81-684831cc1ad5"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "SysListView32",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "SysHeader32",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "ComboLBox",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "tooltips_class32",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "TUiButton",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "TUiComboBox",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "Edit",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "TUiStatusBar",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "TUiProgressBar",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "class": "TUiSpecComboBox",
+          "height": -12,
+          "weight": 400,
+          "quality": 0,
+          "face": "Segoe UI"
+        }
+      },
+      {
+        "script_id": "c4672402-7b25-4807-9b81-684831cc1ad5",
+        "type": "send",
+        "payload": {
+          "kind": "complete",
+          "pid": 4796,
+          "examined": 111,
+          "unique": 10
+        }
+      }
+    ],
+    "messages_truncated": false,
+    "source_kind": "file",
+    "source_path": "C:\\Projetos\\BC4\\anycompare\\tools\\read_reference_window_fonts.frida.js",
+    "source_sha256": "ae874388970e23c205c21042b561f01d9bfc91b89c9d0bd5c362a7f87bf4a09b",
+    "cleanup_error": null
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

@@ -1,0 +1,11 @@
+* text=auto
+*.rs text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.png binary
+*.ico binary
+*.bin binary
+tests/fixtures/** -text
+docs/reference/controlled*/** -text

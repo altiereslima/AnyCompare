@@ -1,0 +1,709 @@
+{
+  "artifact_sha256": "aba1b98f848a01c3729cfee3e8818ab8e0d947276bc42c9a55c1475c9f8438db",
+  "rea_evidence_id": "ev_7d4dba38e7571b48eb7f763e320b8e003f9448abfa13f20234cbf32f62e12216",
+  "files": {
+    "left.txt": "7cc9c077970103b6e155d182f89372f05e6a97eb9d82e16ab6b0d6288dc0ed2b",
+    "report.html": "6e751efef8afc7a84077ba9878df1ce795b576c9b1935a0e1012bd9af4c89bb3",
+    "report.xml": "ebe62ecd8a8f1fdda7a91e6173ceb692e951fa1d54eda1736a3ed9023ea07650",
+    "right.txt": "0a37790c595375a70769d97fde41fe73c43cf2d9f481f5c8730d43f48d38ee2a"
+  },
+  "rows": [
+    {
+      "status": "same",
+      "left": "case:",
+      "right": "case:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "case:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "case:"
+        }
+      ]
+    },
+    {
+      "status": "similar",
+      "left": "A pedra do sigilo",
+      "right": "A Pedra do Sigilo",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "A "
+        },
+        {
+          "kind": "Unimportant",
+          "text": "p"
+        },
+        {
+          "kind": "Same",
+          "text": "edra do "
+        },
+        {
+          "kind": "Unimportant",
+          "text": "s"
+        },
+        {
+          "kind": "Same",
+          "text": "igilo"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "A "
+        },
+        {
+          "kind": "Unimportant",
+          "text": "P"
+        },
+        {
+          "kind": "Same",
+          "text": "edra do "
+        },
+        {
+          "kind": "Unimportant",
+          "text": "S"
+        },
+        {
+          "kind": "Same",
+          "text": "igilo"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "white:",
+      "right": "white:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "white:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "white:"
+        }
+      ]
+    },
+    {
+      "status": "similar",
+      "left": "uma forja antiga",
+      "right": "uma  forja antiga ",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "uma forja antiga"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "uma "
+        },
+        {
+          "kind": "Unimportant",
+          "text": " "
+        },
+        {
+          "kind": "Same",
+          "text": "forja antiga"
+        },
+        {
+          "kind": "Unimportant",
+          "text": " "
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "mixed:",
+      "right": "mixed:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "mixed:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "mixed:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "A maga azul",
+      "right": "a maga vermelha",
+      "left_inline": [
+        {
+          "kind": "Unimportant",
+          "text": "A"
+        },
+        {
+          "kind": "Same",
+          "text": " maga a"
+        },
+        {
+          "kind": "Diff",
+          "text": "zul"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Unimportant",
+          "text": "a"
+        },
+        {
+          "kind": "Same",
+          "text": " maga "
+        },
+        {
+          "kind": "Diff",
+          "text": "vermelh"
+        },
+        {
+          "kind": "Same",
+          "text": "a"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "words:",
+      "right": "words:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "words:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "words:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "Fonte da Magia",
+      "right": "Fonte de Magia",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "Fonte d"
+        },
+        {
+          "kind": "Diff",
+          "text": "a"
+        },
+        {
+          "kind": "Same",
+          "text": " Magia"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "Fonte d"
+        },
+        {
+          "kind": "Diff",
+          "text": "e"
+        },
+        {
+          "kind": "Same",
+          "text": " Magia"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "important:",
+      "right": "important:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "important:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "important:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "Cadinho",
+      "right": "Crisol",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "C"
+        },
+        {
+          "kind": "Diff",
+          "text": "adinh"
+        },
+        {
+          "kind": "Same",
+          "text": "o"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "C"
+        },
+        {
+          "kind": "Diff",
+          "text": "ris"
+        },
+        {
+          "kind": "Same",
+          "text": "o"
+        },
+        {
+          "kind": "Diff",
+          "text": "l"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "punctuation:",
+      "right": "punctuation:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "punctuation:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "punctuation:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "Texto - antigo",
+      "right": "Texto — antigo",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "Texto "
+        },
+        {
+          "kind": "Diff",
+          "text": "-"
+        },
+        {
+          "kind": "Same",
+          "text": " antigo"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "Texto "
+        },
+        {
+          "kind": "Diff",
+          "text": "—"
+        },
+        {
+          "kind": "Same",
+          "text": " antigo"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "end:",
+      "right": "end:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "end:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "end:"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "anchor-0:",
+      "right": "anchor-0:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-0:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-0:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "aXbYz",
+      "right": "aUbVz",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "XbY"
+        },
+        {
+          "kind": "Same",
+          "text": "z"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "UbV"
+        },
+        {
+          "kind": "Same",
+          "text": "z"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "anchor-1:",
+      "right": "anchor-1:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-1:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-1:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "aXbcYz",
+      "right": "aUbcVz",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "X"
+        },
+        {
+          "kind": "Same",
+          "text": "bc"
+        },
+        {
+          "kind": "Diff",
+          "text": "Y"
+        },
+        {
+          "kind": "Same",
+          "text": "z"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "U"
+        },
+        {
+          "kind": "Same",
+          "text": "bc"
+        },
+        {
+          "kind": "Diff",
+          "text": "V"
+        },
+        {
+          "kind": "Same",
+          "text": "z"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "anchor-2:",
+      "right": "anchor-2:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-2:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-2:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "aXbcdYz",
+      "right": "aUbcdVz",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "X"
+        },
+        {
+          "kind": "Same",
+          "text": "bcd"
+        },
+        {
+          "kind": "Diff",
+          "text": "Y"
+        },
+        {
+          "kind": "Same",
+          "text": "z"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "U"
+        },
+        {
+          "kind": "Same",
+          "text": "bcd"
+        },
+        {
+          "kind": "Diff",
+          "text": "V"
+        },
+        {
+          "kind": "Same",
+          "text": "z"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "anchor-3:",
+      "right": "anchor-3:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-3:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-3:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "aXabcdYz",
+      "right": "aUabcdVz",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "X"
+        },
+        {
+          "kind": "Same",
+          "text": "abcd"
+        },
+        {
+          "kind": "Diff",
+          "text": "Y"
+        },
+        {
+          "kind": "Same",
+          "text": "z"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "U"
+        },
+        {
+          "kind": "Same",
+          "text": "abcd"
+        },
+        {
+          "kind": "Diff",
+          "text": "V"
+        },
+        {
+          "kind": "Same",
+          "text": "z"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "anchor-4:",
+      "right": "anchor-4:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-4:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-4:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "aXbYcZd",
+      "right": "aUbVcWd",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "XbYcZ"
+        },
+        {
+          "kind": "Same",
+          "text": "d"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "a"
+        },
+        {
+          "kind": "Diff",
+          "text": "UbVcW"
+        },
+        {
+          "kind": "Same",
+          "text": "d"
+        }
+      ]
+    },
+    {
+      "status": "same",
+      "left": "anchor-5:",
+      "right": "anchor-5:",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-5:"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "anchor-5:"
+        }
+      ]
+    },
+    {
+      "status": "different",
+      "left": "lado A palavra comum fim Z",
+      "right": "lado B palavra comum fim W",
+      "left_inline": [
+        {
+          "kind": "Same",
+          "text": "lado "
+        },
+        {
+          "kind": "Diff",
+          "text": "A"
+        },
+        {
+          "kind": "Same",
+          "text": " palavra comum fim "
+        },
+        {
+          "kind": "Diff",
+          "text": "Z"
+        }
+      ],
+      "right_inline": [
+        {
+          "kind": "Same",
+          "text": "lado "
+        },
+        {
+          "kind": "Diff",
+          "text": "B"
+        },
+        {
+          "kind": "Same",
+          "text": " palavra comum fim "
+        },
+        {
+          "kind": "Diff",
+          "text": "W"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Output from factory/default portable settings; not every user session or grammar.",
+    "The second Frida replay retained 74 messages without hitting its cap; API interception still does not establish complete conversion-call coverage."
+  ]
+}

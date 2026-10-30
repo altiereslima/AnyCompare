@@ -1,0 +1,124 @@
+{
+  "resource_index": 669,
+  "name": "TVFSSFTPPASSPHRASEDIALOG",
+  "sha256": "277daf9d3ed5d686732b0e2ea2add3fc581961b635a7ddeebceaf9b909460c7d",
+  "bytes": 841,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TVfsSftpPassphraseDialog",
+    "name": "VfsSftpPassphraseDialog",
+    "props": {
+      "Caption": "Enter Passphrase",
+      "ClientHeight": 140,
+      "ClientWidth": 417,
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "TopBevel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 417,
+          "Height": 8,
+          "Align": "alTop",
+          "Shape": "bsSpacer"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "InvalidLbl",
+        "props": {
+          "Left": 0,
+          "Top": 8,
+          "Height": 13,
+          "Align": "alTop",
+          "Alignment": "taCenter",
+          "Caption": "Passphrase is incorrect.",
+          "FontColor": "clRed"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CommentLbl",
+        "props": {
+          "Left": 8,
+          "Top": 25,
+          "Height": 13,
+          "Caption": "Private key:"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CommentEdit",
+        "props": {
+          "Left": 8,
+          "Top": 42,
+          "Width": 401,
+          "Height": 13,
+          "AutoSize": false,
+          "Caption": "%",
+          "EllipsisPosition": "epPathEllipsis"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiLabel",
+        "name": "PassphraseLbl",
+        "props": {
+          "Left": 8,
+          "Top": 63,
+          "Height": 13,
+          "Caption": "&SSH private key passphrase:",
+          "FocusControl": "PassphraseEdit"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiEdit",
+        "name": "PassphraseEdit",
+        "props": {
+          "Left": 8,
+          "Top": 80,
+          "Width": 401,
+          "Height": 21,
+          "TabOrder": 0,
+          "EchoMode": "emPassword"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 101,
+          "Width": 417,
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "resource_index": 565,
+  "name": "TMESCRSHOTFORM",
+  "sha256": "a5c8e7a6f6f8174a5af2e0626a268db64945ca4bf13548456e870c8dce3e9a42",
+  "bytes": 674,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "TMEScrShotForm",
+    "name": "ScrShotForm",
+    "props": {
+      "ActiveControl": "ContinueBtn",
+      "Message": "Screenshot Configuration",
+      "MinWidth": 0,
+      "OnAction": "madExcept.HandleScreenshotForm",
+      "Timer": 250
+    },
+    "children": [
+      {
+        "class": "INVButton",
+        "name": "ContinueBtn",
+        "props": {
+          "Caption": "Continue",
+          "Enabled": true,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVButton",
+        "name": "SkipBtn",
+        "props": {
+          "Caption": "Skip",
+          "Enabled": false,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVButton",
+        "name": "CancelBtn",
+        "props": {
+          "Caption": "Abort",
+          "Enabled": true,
+          "NoOwnerDraw": false,
+          "Visible": true
+        },
+        "children": []
+      },
+      {
+        "class": "INVCheckBox",
+        "name": "AttachCheck",
+        "props": {
+          "Caption": "attach a screenshot to the bug report",
+          "Checked": true,
+          "Enabled": true,
+          "OutputName": "",
+          "Spacing": 0
+        },
+        "children": []
+      },
+      {
+        "class": "INVImage",
+        "name": "ScrShotImg",
+        "props": {
+          "Border": true,
+          "Clickable": true,
+          "Enabled": true,
+          "File": "",
+          "Height": 0,
+          "Spacing": 0,
+          "Width": 0
+        },
+        "children": []
+      },
+      {
+        "class": "INVLabel",
+        "name": "Label1",
+        "props": {
+          "Caption": "(click to edit image)",
+          "Enabled": true,
+          "Spacing": 0
+        },
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "resource_index": 632,
+  "name": "TTEXTFORMATCONVERSIONFRAME",
+  "sha256": "b8000369f0f3f5e7d11de6be8031d3054a1d25a38881e6b6db4488eb589a1228",
+  "bytes": 1092,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TTextFormatConversionFrame",
+    "name": "TextFormatConversionFrame",
+    "props": {
+      "HelpKeyword": "FormatTextConversion"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "CodePageLbl",
+        "props": {
+          "Left": 8,
+          "Top": 158,
+          "Height": 13,
+          "Caption": "&Encoding:",
+          "FocusControl": "CodePageEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 2
+      },
+      {
+        "class": "TUiLabel",
+        "name": "CharPerLineLbl",
+        "props": {
+          "Left": 101,
+          "Top": 233,
+          "Height": 13,
+          "Caption": "c&haracters per line limit",
+          "FocusControl": "CharPerLineEdit"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 3
+      },
+      {
+        "class": "TUiLabel",
+        "name": "ConvertOnSaveLbl",
+        "props": {
+          "Left": 8,
+          "Top": 258,
+          "Height": 13,
+          "Caption": "When saving:"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 4
+      },
+      {
+        "class": "TUiBevel",
+        "name": "CodePageBevel",
+        "props": {
+          "Left": 8,
+          "Top": 150,
+          "Width": 257,
+          "Height": 1,
+          "Shape": "bsTopLine"
+        },
+        "children": [],
+        "flags": 2,
+        "child_position": 5
+      },
+      {
+        "class": "TUiCodePageEdit",
+        "name": "CodePageEdit",
+        "props": {
+          "Left": 8,
+          "Top": 175,
+          "Width": 257,
+          "Height": 21,
+          "TabOrder": 4,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "CtrlZIsEOFEdit",
+        "props": {
+          "Left": 8,
+          "Top": 204,
+          "Height": 17,
+          "Caption": "Ctrl+&Z indicates end of file",
+          "TabOrder": 5,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiSpinEdit",
+        "name": "CharPerLineEdit",
+        "props": {
+          "Left": 8,
+          "Top": 229,
+          "Width": 89,
+          "Height": 21,
+          "Min": 1,
+          "Position": 1,
+          "TabOrder": 6,
+          "OnChange": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "TrimTrailingWSEdit",
+        "props": {
+          "Left": 8,
+          "Top": 275,
+          "Height": 17,
+          "Caption": "&Trim trailing whitespace",
+          "TabOrder": 7,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "TidyLeadingWSEdit",
+        "props": {
+          "Left": 8,
+          "Top": 296,
+          "Height": 17,
+          "Caption": "C&onvert leading spaces to tabs",
+          "TabOrder": 8,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

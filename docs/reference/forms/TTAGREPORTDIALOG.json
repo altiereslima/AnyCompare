@@ -1,0 +1,37 @@
+{
+  "resource_index": 627,
+  "name": "TTAGREPORTDIALOG",
+  "sha256": "29b2711038f7f46aba6434b01c36aab661c876c13457533fcaac9d4f7bc8a88a",
+  "bytes": 155,
+  "parse_status": "complete",
+  "components": 3,
+  "hierarchy": {
+    "class": "TTagReportDialog",
+    "name": "TagReportDialog",
+    "props": {
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "OptionsPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiActivePanelView",
+            "name": "LayoutPanelView",
+            "props": {
+              "Height": 0,
+              "Align": "alNone"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

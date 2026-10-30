@@ -1,0 +1,8 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\equal-blocks-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\equal-blocks-right.bin
+8 same byte(s)
+8 left orphan byte(s)
+8 right orphan byte(s)

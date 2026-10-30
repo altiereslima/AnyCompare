@@ -1,0 +1,203 @@
+{
+  "resource_index": 608,
+  "name": "TREGBROWSEDIALOG",
+  "sha256": "2fe82850cbbd7c6dc668e5e3b6901f54ef8b2d3c00360d0971ce087476b85a39",
+  "bytes": 1471,
+  "parse_status": "complete",
+  "components": 14,
+  "hierarchy": {
+    "class": "TRegBrowseDialog",
+    "name": "RegBrowseDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "Open Registry",
+      "ClientHeight": 217,
+      "ClientWidth": 313,
+      "Constraints.MaxHeight": 252,
+      "Constraints.MinHeight": 252,
+      "Constraints.MinWidth": 185,
+      "OnCreate": "FormCreate",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "MachinePanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 313,
+          "Height": 89,
+          "Align": "alTop",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0,
+          "DesignSize": [
+            313,
+            89
+          ]
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "MachineLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Computer:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "MachineLocalEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Height": 17,
+              "Caption": "&Local",
+              "TabOrder": 0,
+              "OnClick": "MachineKindClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "MachineRemoteEdit",
+            "props": {
+              "Left": 8,
+              "Top": 46,
+              "Height": 17,
+              "Caption": "&Remote:",
+              "TabOrder": 1,
+              "OnClick": "MachineKindClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpecBar",
+            "name": "MachineEdit",
+            "props": {
+              "Left": 24,
+              "Top": 67,
+              "Width": 281,
+              "Anchors": [
+                "akLeft",
+                "akTop",
+                "akRight"
+              ],
+              "AutoCompleteEx": "acNone",
+              "TabOrder": 2,
+              "OnBrowse": "MachineEditBrowse",
+              "OnChange": "MachineEditChange"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiPanel",
+        "name": "PathPanel",
+        "props": {
+          "Left": 0,
+          "Top": 89,
+          "Width": 313,
+          "Height": 89,
+          "Align": "alClient",
+          "BevelOuter": "bvNone",
+          "TabOrder": 1,
+          "DesignSize": [
+            313,
+            89
+          ]
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "PathLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Base:"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "PathAllEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Height": 17,
+              "Caption": "&All",
+              "TabOrder": 0,
+              "OnClick": "PathKindClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiRadioButton",
+            "name": "PathOtherEdit",
+            "props": {
+              "Left": 8,
+              "Top": 46,
+              "Height": 17,
+              "Caption": "&Key:",
+              "TabOrder": 1,
+              "OnClick": "PathKindClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpecBar",
+            "name": "PathEdit",
+            "props": {
+              "Left": 24,
+              "Top": 67,
+              "Width": 281,
+              "Anchors": [
+                "akLeft",
+                "akTop",
+                "akRight"
+              ],
+              "AutoCompleteEx": "acNone",
+              "TabOrder": 2,
+              "OnBrowse": "PathEditBrowse",
+              "OnChange": "PathEditChange"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 178,
+          "Width": 313,
+          "TabOrder": 2,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

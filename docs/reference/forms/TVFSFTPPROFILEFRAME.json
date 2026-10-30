@@ -1,0 +1,29 @@
+{
+  "resource_index": 657,
+  "name": "TVFSFTPPROFILEFRAME",
+  "sha256": "b2f19dbef6d92ea4f10e0f9044df31479d6b745bf37cac2a8c16554265c175d0",
+  "bytes": 162,
+  "parse_status": "complete",
+  "components": 2,
+  "hierarchy": {
+    "class": "TVfsFtpProfileFrame",
+    "name": "VfsFtpProfileFrame",
+    "props": {},
+    "children": [
+      {
+        "class": "TUiCheckBox",
+        "name": "UseDefaultsEdit",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 17,
+          "Caption": "Use &default",
+          "TabOrder": 0,
+          "OnClick": "SomethingChangedClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

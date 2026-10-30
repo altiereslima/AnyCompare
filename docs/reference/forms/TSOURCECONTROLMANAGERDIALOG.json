@@ -1,0 +1,199 @@
+{
+  "resource_index": 624,
+  "name": "TSOURCECONTROLMANAGERDIALOG",
+  "sha256": "89533bec8e2191acc0a9f391df6a9c6dfe27373f54811b2ee07f575d411ab7ca",
+  "bytes": 1811,
+  "parse_status": "complete",
+  "components": 13,
+  "hierarchy": {
+    "class": "TSourceControlManagerDialog",
+    "name": "SourceControlManagerDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "DlgSourceControlManager",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "BorderStyle": "bsSizeable",
+      "Caption": "Source Control Integration",
+      "ClientHeight": 590,
+      "ClientWidth": 632,
+      "Constraints.MinHeight": 233,
+      "Constraints.MinWidth": 188,
+      "OnResize": "FormResize",
+      "OnShow": "FormShow",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "BottomLineBevel",
+        "props": {
+          "Left": 0,
+          "Top": 540,
+          "Width": 632,
+          "Height": 11,
+          "Align": "alBottom",
+          "Shape": "bsBottomLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiPanel",
+        "name": "Panel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 632,
+          "Height": 540,
+          "Align": "alClient",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "PathLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "Enter &path to add a new association:",
+              "FocusControl": "PathEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "ListLbl",
+            "props": {
+              "Left": 8,
+              "Top": 54,
+              "Height": 13,
+              "Caption": "&Existing associations:",
+              "FocusControl": "ListTable"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiSpecBar",
+            "name": "PathEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Width": 535,
+              "AutoCompleteEx": "acDirs",
+              "TabOrder": 0,
+              "OnBrowse": "PathEditBrowse",
+              "OnChange": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiButton",
+            "name": "AddBtn",
+            "props": {
+              "Left": 551,
+              "Top": 25,
+              "Caption": "&Add...",
+              "TabOrder": 1,
+              "OnClick": "AddClick",
+              "AutoSize": "asRight"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiListTable",
+            "name": "ListTable",
+            "props": {
+              "Left": 8,
+              "Top": 71,
+              "Width": 616,
+              "Height": 413,
+              "Cols.Items": [
+                "308",
+                "308"
+              ],
+              "Cols.Strings": [
+                "Folder",
+                "Project"
+              ],
+              "TabOrder": 2,
+              "VertLines": true,
+              "WantReturns": true,
+              "OnClick": "SomethingChangedClick",
+              "OnDblClick": "ConfigClick",
+              "OnDeleteItem": "ListTableDeleteItem",
+              "OnDeleteItemQuery": "ListTableDeleteItemQuery",
+              "OnGetText": "ListTableGetText",
+              "OnItemsDeleted": "SomethingChangedClick"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiButton",
+            "name": "RemoveBtn",
+            "props": {
+              "Left": 467,
+              "Top": 492,
+              "Caption": "&Remove...",
+              "TabOrder": 3,
+              "OnClick": "RemoveClick",
+              "AutoSize": "asRight"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiButton",
+            "name": "ConfigBtn",
+            "props": {
+              "Left": 548,
+              "Top": 492,
+              "Width": 76,
+              "Caption": "&Configure...",
+              "TabOrder": 4,
+              "OnClick": "ConfigClick",
+              "AutoSize": "asRight"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "ShowSilentCheckOutEdit",
+            "props": {
+              "Left": 8,
+              "Top": 523,
+              "Height": 17,
+              "Caption": "&Display silent check out command in menus",
+              "TabOrder": 5,
+              "OnClick": "ShowSilentCheckOutClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 551,
+          "Width": 632,
+          "TabOrder": 1,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiCloseBtn",
+            "name": "CloseBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

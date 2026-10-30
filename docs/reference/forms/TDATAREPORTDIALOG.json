@@ -1,0 +1,66 @@
+{
+  "resource_index": 501,
+  "name": "TDATAREPORTDIALOG",
+  "sha256": "0e749d54f758f3de5acaf278e8bfaa70ab4ca64bcaa924108f44e2a3449c1ee0",
+  "bytes": 339,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TDataReportDialog",
+    "name": "DataReportDialog",
+    "props": {
+      "Caption": "Table Compare Report",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiListBox",
+        "name": "LayoutListBox",
+        "props": {
+          "Items.Strings": [
+            "Side-by-side",
+            "Summary",
+            "Interleaved"
+          ]
+        },
+        "children": [],
+        "flags": 1
+      },
+      {
+        "class": "TUiPanel",
+        "name": "OptionsPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiActivePanelView",
+            "name": "LayoutPanelView",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiActivePanel",
+                "name": "SideBySidePanel",
+                "props": {},
+                "children": [
+                  {
+                    "class": "TUiCheckBox",
+                    "name": "IncludeNumsEdit",
+                    "props": {
+                      "Caption": "Include row &numbers"
+                    },
+                    "children": [],
+                    "flags": 1
+                  }
+                ],
+                "flags": 1
+              }
+            ],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

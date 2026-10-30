@@ -1,0 +1,66 @@
+{
+  "resource_index": 611,
+  "name": "TREGREPORTDIALOG",
+  "sha256": "6c702531e87d0325862a552ad5e9048d6b5979d50c4e6921ccca822ec5379fa4",
+  "bytes": 298,
+  "parse_status": "complete",
+  "components": 6,
+  "hierarchy": {
+    "class": "TRegReportDialog",
+    "name": "RegReportDialog",
+    "props": {
+      "Caption": "Registry Compare Report",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "OptionsPanel",
+        "props": {},
+        "children": [
+          {
+            "class": "TUiPanel",
+            "name": "BasicPanel",
+            "props": {
+              "Height": 23
+            },
+            "children": [
+              {
+                "class": "TUiCheckBox",
+                "name": "InsigIgnoredEdit",
+                "props": {
+                  "Height": 0
+                },
+                "children": [],
+                "flags": 1
+              }
+            ],
+            "flags": 1
+          },
+          {
+            "class": "TUiPanel",
+            "name": "DisplayFilterPanel",
+            "props": {
+              "Top": 23
+            },
+            "children": [],
+            "flags": 1
+          },
+          {
+            "class": "TUiActivePanelView",
+            "name": "LayoutPanelView",
+            "props": {
+              "Height": 0,
+              "Align": "alNone"
+            },
+            "children": [],
+            "flags": 1
+          }
+        ],
+        "flags": 1
+      }
+    ],
+    "flags": 1
+  }
+}

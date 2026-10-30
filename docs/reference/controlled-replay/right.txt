@@ -1,0 +1,25 @@
+case:
+A Pedra do Sigilo
+white:
+uma  forja antiga 
+mixed:
+a maga vermelha
+words:
+Fonte de Magia
+important:
+Crisol
+punctuation:
+Texto — antigo
+end:
+anchor-0:
+aUbVz
+anchor-1:
+aUbcVz
+anchor-2:
+aUbcdVz
+anchor-3:
+aUabcdVz
+anchor-4:
+aUbVcWd
+anchor-5:
+lado B palavra comum fim W

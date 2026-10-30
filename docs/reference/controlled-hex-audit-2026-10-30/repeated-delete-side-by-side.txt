@@ -1,0 +1,10 @@
+Hex Compare
+Produced: 30/10/2026 09:08:42
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\repeated-delete-left.bin
+Right file: C:\Projetos\BC4\anycompare\docs\reference\controlled-hex-audit-2026-10-30\repeated-delete-right.bin
+00000000 41 41 41 42 41 41 41 42  AAABAAAB =  00000000 41 41 41 42 41 41 41 42  AAABAAAB
+----------------------------------------------------------------------------------------
+00000008 41 41 41 42              AAAB     <>
+----------------------------------------------------------------------------------------

@@ -1,0 +1,6014 @@
+{
+  "evidence_id": "ev_f6ce2d5861b3386fdc40af3c9483be2cacb7905e5960b109744dc25d3bf1e9f3",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "frida_session_status",
+  "parameters": {
+    "session_id": "11d8dd79-ac16-4233-a44a-88ced433f923"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "11d8dd79-ac16-4233-a44a-88ced433f923",
+    "device_id": "local",
+    "state": "detached",
+    "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe",
+    "pid": 8632,
+    "mode": "spawn",
+    "scripts": [
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "name": "rea-871ade88-870c-48ea-bfb5-14bf0092e78c"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "GetACP",
+          "address": "0x7ff9c961a780"
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "MultiByteToWideChar",
+          "address": "0x7ff9c96104e0"
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "WideCharToMultiByte",
+          "address": "0x7ff9c96115c0"
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "CreateFileW",
+          "address": "0x7ff9c9637040"
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "ReadFile",
+          "address": "0x7ff9c9637400"
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "WriteFile",
+          "address": "0x7ff9c9637510"
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "hook",
+          "name": "ExitProcess",
+          "address": "0x7ff9c9621470"
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "target",
+          "pid": 8632,
+          "architecture": "x64",
+          "main_module": "C:\\Projetos\\BC4\\anycompare\\.codex\\reference-runtime\\BCompare.exe"
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "GetACP",
+          "result": 1252
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 10,
+          "result_length": 10
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 10,
+          "result_length": 10
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 10,
+          "result_length": 10
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 0,
+          "flags": 1024,
+          "input_length": -1,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 33,
+          "result_length": 33
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 33,
+          "result_length": 33
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 33,
+          "result_length": 33
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 28,
+          "result_length": 28
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 28,
+          "result_length": 28
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 33,
+          "result_length": 33
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 33,
+          "result_length": 33
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "WideCharToMultiByte",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 37,
+          "result_length": 37
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 9,
+          "result_length": 9
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 9,
+          "result_length": 9
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 29,
+          "result_length": 29
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 28,
+          "result_length": 28
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 30,
+          "result_length": 30
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 22,
+          "result_length": 22
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 29,
+          "result_length": 29
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 32,
+          "result_length": 32
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 40,
+          "result_length": 40
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 37,
+          "result_length": 37
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 36,
+          "result_length": 36
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 37,
+          "result_length": 37
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 28,
+          "result_length": 28
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 30,
+          "result_length": 30
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 14,
+          "result_length": 14
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 14,
+          "result_length": 14
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 32,
+          "result_length": 32
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 30,
+          "result_length": 30
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 33,
+          "result_length": 33
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 39,
+          "result_length": 39
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 23,
+          "result_length": 23
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 29,
+          "result_length": 29
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 28,
+          "result_length": 28
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 30,
+          "result_length": 30
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 28,
+          "result_length": 28
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 30,
+          "result_length": 30
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 36,
+          "result_length": 36
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 44,
+          "result_length": 44
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 34,
+          "result_length": 34
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 37,
+          "result_length": 37
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 46,
+          "result_length": 46
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 34,
+          "result_length": 34
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 50,
+          "result_length": 50
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 29,
+          "result_length": 29
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 35,
+          "result_length": 35
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 42,
+          "result_length": 42
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 29,
+          "result_length": 29
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 23,
+          "result_length": 23
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 22,
+          "result_length": 22
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 42,
+          "result_length": 42
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 43,
+          "result_length": 43
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 37,
+          "result_length": 37
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 38,
+          "result_length": 38
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 23,
+          "result_length": 23
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 22,
+          "result_length": 22
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 30,
+          "result_length": 30
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 30,
+          "result_length": 30
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 29,
+          "result_length": 29
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 28,
+          "result_length": 28
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 42,
+          "result_length": 42
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 63,
+          "result_length": 63
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 58,
+          "result_length": 58
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 34,
+          "result_length": 34
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 5,
+          "result_length": 5
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 14,
+          "result_length": 14
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 14,
+          "result_length": 14
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 9,
+          "result_length": 9
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 22,
+          "result_length": 22
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 14,
+          "result_length": 14
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 22,
+          "result_length": 22
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 43,
+          "result_length": 43
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 22,
+          "result_length": 22
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 25,
+          "result_length": 25
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 23,
+          "result_length": 23
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 22,
+          "result_length": 22
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 24,
+          "result_length": 24
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 28,
+          "result_length": 28
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 35,
+          "result_length": 35
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 16,
+          "result_length": 16
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 36,
+          "result_length": 36
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 31,
+          "result_length": 31
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 21,
+          "result_length": 21
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 23,
+          "result_length": 23
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 10,
+          "result_length": 10
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 10,
+          "result_length": 10
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 12,
+          "result_length": 12
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 10,
+          "result_length": 10
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 11,
+          "result_length": 11
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 14,
+          "result_length": 14
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 14,
+          "result_length": 14
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 20,
+          "result_length": 20
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 26,
+          "result_length": 26
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 18,
+          "result_length": 18
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 19,
+          "result_length": 19
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 27,
+          "result_length": 27
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 17,
+          "result_length": 17
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 14,
+          "result_length": 14
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 15,
+          "result_length": 15
+        }
+      },
+      {
+        "script_id": "871ade88-870c-48ea-bfb5-14bf0092e78c",
+        "type": "send",
+        "payload": {
+          "kind": "api",
+          "name": "MultiByteToWideChar",
+          "code_page": 1252,
+          "flags": 0,
+          "input_length": 13,
+          "result_length": 13
+        }
+      }
+    ],
+    "messages_truncated": false
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

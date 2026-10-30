@@ -1,0 +1,106 @@
+{
+  "resource_index": 496,
+  "name": "TDATACOLINSERTDIALOG",
+  "sha256": "5e9cbfb0d11fff262e48af85f45210bb7c3a501a60c8d7f24cf7e16c0a206fc5",
+  "bytes": 758,
+  "parse_status": "complete",
+  "components": 7,
+  "hierarchy": {
+    "class": "TDataColInsertDialog",
+    "name": "DataColInsertDialog",
+    "props": {
+      "BorderStyle": "bsSizeable",
+      "Caption": "Insert Columns",
+      "ClientHeight": 271,
+      "ClientWidth": 217,
+      "Constraints.MinHeight": 134,
+      "Constraints.MinWidth": 185,
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiCheckListBox",
+        "name": "ListBox",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 200,
+          "Height": 193,
+          "Anchors": [
+            "akLeft",
+            "akTop",
+            "akRight",
+            "akBottom"
+          ],
+          "TabOrder": 0
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "AllBtn",
+        "props": {
+          "Left": 8,
+          "Top": 209,
+          "Width": 24,
+          "Hint": "Mark All",
+          "Anchors": [
+            "akLeft",
+            "akBottom"
+          ],
+          "ImageIndex": "imgCheckAll",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 1,
+          "OnClick": "AllClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "NoneBtn",
+        "props": {
+          "Left": 32,
+          "Top": 209,
+          "Width": 24,
+          "Hint": "Unmark All",
+          "Anchors": [
+            "akLeft",
+            "akBottom"
+          ],
+          "ImageIndex": "imgUncheckAll",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 2,
+          "OnClick": "NoneClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 232,
+          "Width": 217,
+          "TabOrder": 3,
+          "SizeGripper": true
+        },
+        "children": [
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "resource_index": 633,
+  "name": "TTEXTFORMATGRAMMARFRAME",
+  "sha256": "6250298e6218377bb245c208a89d92f96e09c1dd80d1407ec612930f6c6cccec",
+  "bytes": 2330,
+  "parse_status": "complete",
+  "components": 13,
+  "hierarchy": {
+    "class": "TTextFormatGrammarFrame",
+    "name": "TextFormatGrammarFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "FormatTextGrammar",
+      "Caption": "Grammar"
+    },
+    "children": [
+      {
+        "class": "TUiLabel",
+        "name": "WeightsLbl",
+        "props": {
+          "Left": 8,
+          "Top": 192,
+          "Height": 13,
+          "Caption": "Line &weights:",
+          "FocusControl": "WeightsTable"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiListBox",
+        "name": "GrammarListBox",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Width": 257,
+          "Height": 145,
+          "DragMode": "dmAutomatic",
+          "ParentShowHint": false,
+          "ShowHint": false,
+          "TabOrder": 0,
+          "OnClick": "GrammarListBoxClick",
+          "OnDblClick": "GrammarEditClick",
+          "OnDragDrop": "GrammarListBoxDragDrop",
+          "OnDragOver": "GrammarListBoxDragOver",
+          "OnKeyDown": "GrammarListBoxKeyDown"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "GrammarNewBtn",
+        "props": {
+          "Left": 8,
+          "Top": 161,
+          "Width": 24,
+          "Hint": "New",
+          "ImageIndex": "imgListAdd",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 1,
+          "OnClick": "GrammarNewClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "GrammarDeleteBtn",
+        "props": {
+          "Left": 32,
+          "Top": 161,
+          "Width": 24,
+          "Hint": "Delete",
+          "ImageIndex": "imgListDelete",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 2,
+          "OnClick": "GrammarDeleteClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "GrammarEditBtn",
+        "props": {
+          "Left": 56,
+          "Top": 161,
+          "Width": 24,
+          "Hint": "Edit",
+          "ImageIndex": "imgListEdit",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 3,
+          "OnClick": "GrammarEditClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "GrammarCloneBtn",
+        "props": {
+          "Left": 80,
+          "Top": 161,
+          "Width": 24,
+          "Hint": "Clone",
+          "ImageIndex": "imgListClone",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 4,
+          "OnClick": "GrammarCloneClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "GrammarMoveUpBtn",
+        "props": {
+          "Left": 104,
+          "Top": 161,
+          "Width": 24,
+          "Hint": "Move Up",
+          "ImageIndex": "imgUp",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 5,
+          "OnClick": "GrammarMoveUpClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "GrammarMoveDownBtn",
+        "props": {
+          "Left": 128,
+          "Top": 161,
+          "Width": 24,
+          "Hint": "Move Down",
+          "ImageIndex": "imgDown",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 6,
+          "OnClick": "GrammarMoveDownClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiListTable",
+        "name": "WeightsTable",
+        "props": {
+          "Left": 8,
+          "Top": 209,
+          "Width": 257,
+          "Height": 73,
+          "AllowDeleteItemDefault": true,
+          "Cols.Items": [
+            "192",
+            "64"
+          ],
+          "Cols.Strings": [
+            "Text matching",
+            "Priority"
+          ],
+          "DragMode": "dmAutomatic",
+          "TabOrder": 7,
+          "VertLines": true,
+          "WantReturns": true,
+          "OnDblClick": "WeightsEditClick",
+          "OnDeleteItem": "WeightsTableDeleteItem",
+          "OnDragDrop": "WeightsTableDragDrop",
+          "OnDragOver": "WeightsTableDragOver",
+          "OnGetText": "WeightsTableGetText",
+          "OnInsertNewItem": "WeightsNewClick",
+          "OnItemsDeleted": "SomethingChangedClick",
+          "OnKeyDown": "WeightsTableKeyDown"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "WeightsNewBtn",
+        "props": {
+          "Left": 8,
+          "Top": 290,
+          "Width": 24,
+          "Hint": "New",
+          "ImageIndex": "imgListAdd",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 8,
+          "OnClick": "WeightsNewClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "WeightsDeleteBtn",
+        "props": {
+          "Left": 32,
+          "Top": 290,
+          "Width": 24,
+          "Hint": "Delete",
+          "ImageIndex": "imgListDelete",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 9,
+          "OnClick": "WeightsDeleteClick"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBitBtn",
+        "name": "WeightsEditBtn",
+        "props": {
+          "Left": 56,
+          "Top": 290,
+          "Width": 24,
+          "Hint": "Edit",
+          "ImageIndex": "imgListEdit",
+          "Images": "BcImages.MainImages",
+          "TabOrder": 10,
+          "OnClick": "WeightsEditClick"
+        },
+        "children": []
+      }
+    ],
+    "flags": 1
+  }
+}

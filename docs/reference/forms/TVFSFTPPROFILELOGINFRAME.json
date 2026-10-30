@@ -1,0 +1,374 @@
+{
+  "resource_index": 660,
+  "name": "TVFSFTPPROFILELOGINFRAME",
+  "sha256": "90beecb0afee69d2d45aaca8f31fb1b06de105bd90d9e683576977ec765d529e",
+  "bytes": 2839,
+  "parse_status": "complete",
+  "components": 30,
+  "hierarchy": {
+    "class": "TVfsFtpProfileLoginFrame",
+    "name": "VfsFtpProfileLoginFrame",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "ProfileFtpLogin",
+      "Caption": "Login"
+    },
+    "children": [
+      {
+        "class": "TUiPanel",
+        "name": "SpecPanel",
+        "props": {
+          "Left": 0,
+          "Top": 0,
+          "Width": 255,
+          "Height": 125,
+          "Align": "alTop",
+          "BevelOuter": "bvNone",
+          "TabOrder": 0
+        },
+        "children": [
+          {
+            "class": "TUiLabel",
+            "name": "ProtocolLbl",
+            "props": {
+              "Left": 8,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "&Protocol:",
+              "FocusControl": "ProtocolEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "HostLbl",
+            "props": {
+              "Left": 137,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "&Host:",
+              "FocusControl": "HostEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "PortLbl",
+            "props": {
+              "Left": 198,
+              "Top": 8,
+              "Height": 13,
+              "Caption": "P&ort:",
+              "FocusControl": "PortEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "UsernameLbl",
+            "props": {
+              "Left": 8,
+              "Top": 54,
+              "Height": 13,
+              "Caption": "&Username:",
+              "FocusControl": "UsernameEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiLabel",
+            "name": "PasswordLbl",
+            "props": {
+              "Left": 131,
+              "Top": 54,
+              "Height": 13,
+              "Caption": "Pass&word:",
+              "FocusControl": "PasswordEdit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiComboBox",
+            "name": "ProtocolEdit",
+            "props": {
+              "Left": 8,
+              "Top": 25,
+              "Width": 121,
+              "Height": 21,
+              "Style": "csDropDownList",
+              "TabOrder": 0,
+              "OnChange": "ProtocolEditChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "HostEdit",
+            "props": {
+              "Left": 137,
+              "Top": 25,
+              "Width": 53,
+              "Height": 21,
+              "TabOrder": 1,
+              "OnChange": "HostPortChanged",
+              "OnExit": "HostEditExit"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiNumEdit",
+            "name": "PortEdit",
+            "props": {
+              "Left": 198,
+              "Top": 25,
+              "Width": 49,
+              "Height": 21,
+              "MaxLength": 5,
+              "TabOrder": 2,
+              "OnChange": "HostPortChanged"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "UsernameEdit",
+            "props": {
+              "Left": 8,
+              "Top": 71,
+              "Width": 115,
+              "Height": 21,
+              "TabOrder": 3,
+              "OnChange": "UsernameEditChange"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiEdit",
+            "name": "PasswordEdit",
+            "props": {
+              "Left": 131,
+              "Top": 71,
+              "Width": 116,
+              "Height": 21,
+              "TabOrder": 4,
+              "OnChange": "SomethingChangedClick",
+              "EchoMode": "emPassword"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "SavePasswordEdit",
+            "props": {
+              "Left": 8,
+              "Top": 100,
+              "Height": 17,
+              "Caption": "Sa&ve password",
+              "TabOrder": 5,
+              "OnClick": "SomethingChangedClick"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "AuthPanelView",
+        "props": {
+          "Left": 0,
+          "Top": 125,
+          "Width": 255,
+          "Height": 46,
+          "Align": "alTop",
+          "TabOrder": 1
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "SSHPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "SSHPrivateKeyFileLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 0,
+                  "Height": 13,
+                  "Caption": "&SSH private key file:",
+                  "FocusControl": "SSHPrivateKeyFileEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpecBar",
+                "name": "SSHPrivateKeyFileEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 17,
+                  "Width": 155,
+                  "TabOrder": 0,
+                  "OnBrowse": "AuthFileEditBrowse",
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "SSHCreateKeysBtn",
+                "props": {
+                  "Left": 171,
+                  "Top": 16,
+                  "Width": 76,
+                  "Caption": "Create &Keys",
+                  "TabOrder": 1,
+                  "OnClick": "SSHCreateKeysClick",
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "SSLPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "SSLClientCertFileLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 0,
+                  "Height": 13,
+                  "Caption": "&SSL client cert file:",
+                  "FocusControl": "SSLClientCertFileEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiSpecBar",
+                "name": "SSLClientCertFileEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 17,
+                  "Width": 128,
+                  "TabOrder": 0,
+                  "OnBrowse": "AuthFileEditBrowse",
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiButton",
+                "name": "SSLCreateCertBtn",
+                "props": {
+                  "Left": 144,
+                  "Top": 16,
+                  "Width": 103,
+                  "Caption": "Create &Certificate",
+                  "TabOrder": 1,
+                  "OnClick": "SSLCreateCertClick",
+                  "AutoSize": "asRight"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "class": "TUiActivePanelView",
+        "name": "PanelView",
+        "props": {
+          "Left": 0,
+          "Top": 171,
+          "Width": 255,
+          "Height": 138,
+          "Align": "alClient",
+          "TabOrder": 2
+        },
+        "children": [
+          {
+            "class": "TUiActivePanel",
+            "name": "DescriptionPanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TUiLabel",
+                "name": "DescriptionLbl",
+                "props": {
+                  "Left": 8,
+                  "Top": 0,
+                  "Height": 13,
+                  "Caption": "D&escription:",
+                  "FocusControl": "DescriptionEdit"
+                },
+                "children": []
+              },
+              {
+                "class": "TUiMemo",
+                "name": "DescriptionEdit",
+                "props": {
+                  "Left": 8,
+                  "Top": 17,
+                  "Width": 239,
+                  "Height": 113,
+                  "ScrollBars": "ssVertical",
+                  "TabOrder": 0,
+                  "OnChange": "SomethingChangedClick"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "class": "TUiActivePanel",
+            "name": "BrowsePanel",
+            "props": {},
+            "children": [
+              {
+                "class": "TProfileBrowseRemoteFrame",
+                "name": "BrowseFrame",
+                "props": {
+                  "Left": 8,
+                  "Top": 31,
+                  "Width": 239,
+                  "Height": 99,
+                  "TabOrder": 0
+                },
+                "children": [
+                  {
+                    "class": "TUiTreeView",
+                    "name": "TreeView",
+                    "props": {
+                      "Width": 239,
+                      "Height": 99
+                    },
+                    "children": [],
+                    "flags": 1
+                  }
+                ],
+                "flags": 4
+              },
+              {
+                "class": "TUiButton",
+                "name": "BrowseBtn",
+                "props": {
+                  "Left": 8,
+                  "Top": 0,
+                  "Caption": "Connect && &Browse",
+                  "TabOrder": 1,
+                  "OnClick": "BrowseClick",
+                  "AutoSize": "asLeft"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}

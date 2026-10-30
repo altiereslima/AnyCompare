@@ -1,0 +1,1270 @@
+[
+  {
+    "name": "basic",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic\\right",
+    "report_sha256": "9c7fe01f48dea323cc751f80eda749c19f9c9e2c64eddfa8b95963ebd479813c",
+    "entries": [
+      {
+        "kind": "file",
+        "left": "changed.txt",
+        "right": "changed.txt",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "left.txt",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "right.txt",
+        "status": "right-only"
+      },
+      {
+        "kind": "file",
+        "left": "same.txt",
+        "right": "same.txt",
+        "status": "same"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "file",
+          "left": "same.txt",
+          "right": "same.txt",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "file",
+          "left": "changed.txt",
+          "right": "changed.txt",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": "left.txt",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "right.txt",
+          "status": "right-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "basic-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\basic\\left",
+    "report_sha256": "43b7e7b2141d065990a13c99c43b35d639c92340736d1264f8fd60bea12b953c",
+    "entries": [
+      {
+        "kind": "file",
+        "left": "changed.txt",
+        "right": "changed.txt",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "left.txt",
+        "status": "right-only"
+      },
+      {
+        "kind": "file",
+        "left": "right.txt",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "file",
+        "left": "same.txt",
+        "right": "same.txt",
+        "status": "same"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "file",
+          "left": "same.txt",
+          "right": "same.txt",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "file",
+          "left": "changed.txt",
+          "right": "changed.txt",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "left.txt",
+          "status": "right-only"
+        },
+        {
+          "kind": "file",
+          "left": "right.txt",
+          "right": null,
+          "status": "left-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "nested",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested\\right",
+    "report_sha256": "f65b375961907e974a892ebb2f71eecafb55b2ad87038ba55153a938a5ba443e",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "empty",
+        "right": "empty",
+        "status": "same"
+      },
+      {
+        "kind": "directory",
+        "left": "parent",
+        "right": "parent",
+        "status": "different"
+      },
+      {
+        "kind": "directory",
+        "left": "parent/deep",
+        "right": "parent/deep",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "parent/deep/diff.txt",
+        "right": "parent/deep/diff.txt",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "parent/equal.txt",
+        "right": "parent/equal.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "parent/left.txt",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "parent/right.txt",
+        "status": "right-only"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "empty",
+          "right": "empty",
+          "status": "same"
+        },
+        {
+          "kind": "directory",
+          "left": "parent",
+          "right": "parent",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "parent/equal.txt",
+          "right": "parent/equal.txt",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": "parent",
+          "right": "parent",
+          "status": "different"
+        },
+        {
+          "kind": "directory",
+          "left": "parent/deep",
+          "right": "parent/deep",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": "parent/deep/diff.txt",
+          "right": "parent/deep/diff.txt",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": "parent/left.txt",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "parent/right.txt",
+          "status": "right-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "nested-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\nested\\left",
+    "report_sha256": "67d4ff2eb461cbf9fa2e6d9a2d25d5df1d1652def690c1b7c5749ad06c144c36",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "empty",
+        "right": "empty",
+        "status": "same"
+      },
+      {
+        "kind": "directory",
+        "left": "parent",
+        "right": "parent",
+        "status": "different"
+      },
+      {
+        "kind": "directory",
+        "left": "parent/deep",
+        "right": "parent/deep",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "parent/deep/diff.txt",
+        "right": "parent/deep/diff.txt",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "parent/equal.txt",
+        "right": "parent/equal.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "parent/left.txt",
+        "status": "right-only"
+      },
+      {
+        "kind": "file",
+        "left": "parent/right.txt",
+        "right": null,
+        "status": "left-only"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "empty",
+          "right": "empty",
+          "status": "same"
+        },
+        {
+          "kind": "directory",
+          "left": "parent",
+          "right": "parent",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "parent/equal.txt",
+          "right": "parent/equal.txt",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": "parent",
+          "right": "parent",
+          "status": "different"
+        },
+        {
+          "kind": "directory",
+          "left": "parent/deep",
+          "right": "parent/deep",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": "parent/deep/diff.txt",
+          "right": "parent/deep/diff.txt",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "parent/left.txt",
+          "status": "right-only"
+        },
+        {
+          "kind": "file",
+          "left": "parent/right.txt",
+          "right": null,
+          "status": "left-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "case-parent",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent\\right",
+    "report_sha256": "5fbf8c01760d3c6cb7693bdfbf8511212d704ef8157a0b01bfb15105936330ba",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "Data",
+        "right": "data",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "Data/equal.txt",
+        "right": "data/EQUAL.TXT",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "data/new.txt",
+        "status": "right-only"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "Data",
+          "right": "data",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "Data/equal.txt",
+          "right": "data/EQUAL.TXT",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": "Data",
+          "right": "data",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "data/new.txt",
+          "status": "right-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "case-parent-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\case-parent\\left",
+    "report_sha256": "16c9b13bbdfe382b9ea790ea403f63b75d90e5eda8b683dd22399620cbd47a22",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "data",
+        "right": "Data",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "data/EQUAL.TXT",
+        "right": "Data/equal.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "data/new.txt",
+        "right": null,
+        "status": "left-only"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "data",
+          "right": "Data",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "data/EQUAL.TXT",
+          "right": "Data/equal.txt",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": "data",
+          "right": "Data",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": "data/new.txt",
+          "right": null,
+          "status": "left-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "unicode",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode\\right",
+    "report_sha256": "d3a63476a74d0808547686343838461fb6d136caaea659317a4b832fbb057a67",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "Ação",
+        "right": "ação",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "Ação/índice.txt",
+        "right": "ação/ÍNDICE.TXT",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "ação/novo.txt",
+        "status": "right-only"
+      },
+      {
+        "kind": "file",
+        "left": "ÁRVORE.txt",
+        "right": "árvore.txt",
+        "status": "different"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "Ação",
+          "right": "ação",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "Ação/índice.txt",
+          "right": "ação/ÍNDICE.TXT",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": "Ação",
+          "right": "ação",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "ação/novo.txt",
+          "status": "right-only"
+        },
+        {
+          "kind": "file",
+          "left": "ÁRVORE.txt",
+          "right": "árvore.txt",
+          "status": "different"
+        }
+      ]
+    }
+  },
+  {
+    "name": "unicode-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\unicode\\left",
+    "report_sha256": "f524e0ee575c6871be659d02cd01ddec13cf38b2dd7e8593425d91eb87b2fd9b",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "ação",
+        "right": "Ação",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "ação/ÍNDICE.TXT",
+        "right": "Ação/índice.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "ação/novo.txt",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "file",
+        "left": "árvore.txt",
+        "right": "ÁRVORE.txt",
+        "status": "different"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "ação",
+          "right": "Ação",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "ação/ÍNDICE.TXT",
+          "right": "Ação/índice.txt",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": "ação",
+          "right": "Ação",
+          "status": "different"
+        },
+        {
+          "kind": "file",
+          "left": "ação/novo.txt",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "file",
+          "left": "árvore.txt",
+          "right": "ÁRVORE.txt",
+          "status": "different"
+        }
+      ]
+    }
+  },
+  {
+    "name": "file-directory",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory\\right",
+    "report_sha256": "8d59f3f5db5ebd65f5c79aeb5a250d37b9234bc38e135c24efd59bfaa936721e",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": null,
+        "right": "conflict",
+        "status": "right-only"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "conflict/child.txt",
+        "status": "right-only"
+      },
+      {
+        "kind": "directory",
+        "left": "other",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "file",
+        "left": "other/child.txt",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "file",
+        "left": "conflict",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "other",
+        "status": "right-only"
+      }
+    ],
+    "filtered": {
+      "matches": [],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": null,
+          "right": "conflict",
+          "status": "right-only"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "conflict/child.txt",
+          "status": "right-only"
+        },
+        {
+          "kind": "directory",
+          "left": "other",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "file",
+          "left": "other/child.txt",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "file",
+          "left": "conflict",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "other",
+          "status": "right-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "file-directory-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\file-directory\\left",
+    "report_sha256": "d3f41fe10ce0faa01ed385a757798adafaef148d63fb6f35d7ac0f3080697dca",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "conflict",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "file",
+        "left": "conflict/child.txt",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "directory",
+        "left": null,
+        "right": "other",
+        "status": "right-only"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "other/child.txt",
+        "status": "right-only"
+      },
+      {
+        "kind": "file",
+        "left": null,
+        "right": "conflict",
+        "status": "right-only"
+      },
+      {
+        "kind": "file",
+        "left": "other",
+        "right": null,
+        "status": "left-only"
+      }
+    ],
+    "filtered": {
+      "matches": [],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": "conflict",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "file",
+          "left": "conflict/child.txt",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "directory",
+          "left": null,
+          "right": "other",
+          "status": "right-only"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "other/child.txt",
+          "status": "right-only"
+        },
+        {
+          "kind": "file",
+          "left": null,
+          "right": "conflict",
+          "status": "right-only"
+        },
+        {
+          "kind": "file",
+          "left": "other",
+          "right": null,
+          "status": "left-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "empty",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty\\right",
+    "report_sha256": "e5476987b6a41ee96f8353c9dfa72981c3f3d660e3dc8068adb9cbc212a7c31e",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "both-empty",
+        "right": "both-empty",
+        "status": "same"
+      },
+      {
+        "kind": "directory",
+        "left": "left-empty",
+        "right": null,
+        "status": "left-only"
+      },
+      {
+        "kind": "directory",
+        "left": null,
+        "right": "right-empty",
+        "status": "right-only"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "both-empty",
+          "right": "both-empty",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": "left-empty",
+          "right": null,
+          "status": "left-only"
+        },
+        {
+          "kind": "directory",
+          "left": null,
+          "right": "right-empty",
+          "status": "right-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "empty-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\empty\\left",
+    "report_sha256": "90eb745df9a6e05d3b21b55da5cea8ee45051791d945c1631da135167beb418d",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "both-empty",
+        "right": "both-empty",
+        "status": "same"
+      },
+      {
+        "kind": "directory",
+        "left": null,
+        "right": "left-empty",
+        "status": "right-only"
+      },
+      {
+        "kind": "directory",
+        "left": "right-empty",
+        "right": null,
+        "status": "left-only"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "both-empty",
+          "right": "both-empty",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "directory",
+          "left": null,
+          "right": "left-empty",
+          "status": "right-only"
+        },
+        {
+          "kind": "directory",
+          "left": "right-empty",
+          "right": null,
+          "status": "left-only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "extensionless",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless\\right",
+    "report_sha256": "492dc0becb5b146bcb7b5cb3349baa0a0d91d67e529712f4a004125ad4dcb763",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "z-dir",
+        "right": "z-dir",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "z-dir/first.txt",
+        "right": "z-dir/first.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": ".hidden",
+        "right": ".hidden",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "A-file.txt",
+        "right": "A-file.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "README",
+        "right": "README",
+        "status": "same"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "z-dir",
+          "right": "z-dir",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "z-dir/first.txt",
+          "right": "z-dir/first.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "A-file.txt",
+          "right": "A-file.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "README",
+          "right": "README",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "file",
+          "left": ".hidden",
+          "right": ".hidden",
+          "status": "different"
+        }
+      ]
+    }
+  },
+  {
+    "name": "extensionless-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\extensionless\\left",
+    "report_sha256": "769767fce8a389ecbde372814d02b3762174f5f7e2adf85e77058f18f94a78d3",
+    "entries": [
+      {
+        "kind": "directory",
+        "left": "z-dir",
+        "right": "z-dir",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "z-dir/first.txt",
+        "right": "z-dir/first.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": ".hidden",
+        "right": ".hidden",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "A-file.txt",
+        "right": "A-file.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "README",
+        "right": "README",
+        "status": "same"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "directory",
+          "left": "z-dir",
+          "right": "z-dir",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "z-dir/first.txt",
+          "right": "z-dir/first.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "A-file.txt",
+          "right": "A-file.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "README",
+          "right": "README",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "file",
+          "left": ".hidden",
+          "right": ".hidden",
+          "status": "different"
+        }
+      ]
+    }
+  },
+  {
+    "name": "ordering",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering\\right",
+    "report_sha256": "4254cb340dd982b265e78a4eb4fb5ed4c3cb216d29acc2353676ed86824fef7c",
+    "entries": [
+      {
+        "kind": "file",
+        "left": "Árvore.txt",
+        "right": "Árvore.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "índice.txt",
+        "right": "índice.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "item1.txt",
+        "right": "item1.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "item2.txt",
+        "right": "item2.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "item10.txt",
+        "right": "item10.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "novo.txt",
+        "right": "novo.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "zeta.txt",
+        "right": "zeta.txt",
+        "status": "same"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "file",
+          "left": "Árvore.txt",
+          "right": "Árvore.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "índice.txt",
+          "right": "índice.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "item1.txt",
+          "right": "item1.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "item2.txt",
+          "right": "item2.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "item10.txt",
+          "right": "item10.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "novo.txt",
+          "right": "novo.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "zeta.txt",
+          "right": "zeta.txt",
+          "status": "same"
+        }
+      ],
+      "differences": []
+    }
+  },
+  {
+    "name": "ordering-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\ordering\\left",
+    "report_sha256": "a91b7a8038b2d9de807384ab02276f43a9d8afa87ce45f5ead45557903e8e563",
+    "entries": [
+      {
+        "kind": "file",
+        "left": "Árvore.txt",
+        "right": "Árvore.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "índice.txt",
+        "right": "índice.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "item1.txt",
+        "right": "item1.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "item2.txt",
+        "right": "item2.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "item10.txt",
+        "right": "item10.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "novo.txt",
+        "right": "novo.txt",
+        "status": "same"
+      },
+      {
+        "kind": "file",
+        "left": "zeta.txt",
+        "right": "zeta.txt",
+        "status": "same"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "file",
+          "left": "Árvore.txt",
+          "right": "Árvore.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "índice.txt",
+          "right": "índice.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "item1.txt",
+          "right": "item1.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "item2.txt",
+          "right": "item2.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "item10.txt",
+          "right": "item10.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "novo.txt",
+          "right": "novo.txt",
+          "status": "same"
+        },
+        {
+          "kind": "file",
+          "left": "zeta.txt",
+          "right": "zeta.txt",
+          "status": "same"
+        }
+      ],
+      "differences": []
+    }
+  },
+  {
+    "name": "large-binary",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary\\left",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary\\right",
+    "report_sha256": "ca6cf13d1ff7d4825b8d2c4d994d04a51220b9e64f00032bde422b3598d05c90",
+    "entries": [
+      {
+        "kind": "file",
+        "left": "chunk.bin",
+        "right": "chunk.bin",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "empty.bin",
+        "right": "empty.bin",
+        "status": "same"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "file",
+          "left": "empty.bin",
+          "right": "empty.bin",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "file",
+          "left": "chunk.bin",
+          "right": "chunk.bin",
+          "status": "different"
+        }
+      ]
+    }
+  },
+  {
+    "name": "large-binary-reverse",
+    "left": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary\\right",
+    "right": "C:\\Projetos\\BC4\\anycompare\\docs\\reference\\controlled-folder-replay-2026-10-30\\large-binary\\left",
+    "report_sha256": "a21600791c94446b7bb1c438caccfb758b46eb5b6d8ec8f1e241339834056810",
+    "entries": [
+      {
+        "kind": "file",
+        "left": "chunk.bin",
+        "right": "chunk.bin",
+        "status": "different"
+      },
+      {
+        "kind": "file",
+        "left": "empty.bin",
+        "right": "empty.bin",
+        "status": "same"
+      }
+    ],
+    "filtered": {
+      "matches": [
+        {
+          "kind": "file",
+          "left": "empty.bin",
+          "right": "empty.bin",
+          "status": "same"
+        }
+      ],
+      "differences": [
+        {
+          "kind": "file",
+          "left": "chunk.bin",
+          "right": "chunk.bin",
+          "status": "different"
+        }
+      ]
+    }
+  }
+]

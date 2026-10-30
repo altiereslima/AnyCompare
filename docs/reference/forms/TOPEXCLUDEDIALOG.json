@@ -1,0 +1,128 @@
+{
+  "resource_index": 580,
+  "name": "TOPEXCLUDEDIALOG",
+  "sha256": "09728bd9f237b0d2eb69e2bb4cef0e24a7ab3949dafb90cccd30aaf648723a8b",
+  "bytes": 888,
+  "parse_status": "complete",
+  "components": 10,
+  "hierarchy": {
+    "class": "TOpExcludeDialog",
+    "name": "OpExcludeDialog",
+    "props": {
+      "HelpType": "htKeyword",
+      "HelpKeyword": "OpExclude",
+      "BorderIcons": [
+        "biSystemMenu",
+        "biHelp"
+      ],
+      "Caption": "Exclude from Session",
+      "ClientHeight": 143,
+      "ClientWidth": 393,
+      "OnCreate": "FormCreate",
+      "PixelsPerInch": 96,
+      "TextHeight": 13
+    },
+    "children": [
+      {
+        "class": "TUiBevel",
+        "name": "TopLineBevel",
+        "props": {
+          "Left": 8,
+          "Top": 54,
+          "Width": 377,
+          "Height": 2,
+          "Shape": "bsTopLine"
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "SelFilenamesEdit",
+        "props": {
+          "Left": 8,
+          "Top": 8,
+          "Height": 17,
+          "Caption": "&Selected filename(s)",
+          "Checked": true,
+          "TabOrder": 0,
+          "TabStop": true
+        },
+        "children": []
+      },
+      {
+        "class": "TUiRadioButton",
+        "name": "AllOfFileTypeEdit",
+        "props": {
+          "Left": 8,
+          "Top": 29,
+          "Height": 17,
+          "Caption": "%",
+          "TabOrder": 1
+        },
+        "children": []
+      },
+      {
+        "class": "TUiCheckBox",
+        "name": "RelativeToBaseEdit",
+        "props": {
+          "Left": 8,
+          "Top": 62,
+          "Height": 17,
+          "Caption": "&Only in this folder",
+          "TabOrder": 2
+        },
+        "children": []
+      },
+      {
+        "class": "TUiBtnPanel",
+        "name": "BtnPanel",
+        "props": {
+          "Left": 0,
+          "Top": 79,
+          "Width": 393,
+          "Height": 64,
+          "TabOrder": 3
+        },
+        "children": [
+          {
+            "class": "TUiBevel",
+            "name": "DontShowAgainBevel",
+            "props": {
+              "Left": 0,
+              "Top": 39,
+              "Width": 393,
+              "Height": 2,
+              "Shape": "bsTopLine"
+            },
+            "children": []
+          },
+          {
+            "class": "TUiOkBtn",
+            "name": "OkBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCancelBtn",
+            "name": "CancelBtn",
+            "props": {},
+            "children": []
+          },
+          {
+            "class": "TUiCheckBox",
+            "name": "DontShowAgainEdit",
+            "props": {
+              "Left": 8,
+              "Top": 43,
+              "Height": 17,
+              "Caption": "&Don't show again during this session",
+              "TabOrder": 2
+            },
+            "children": []
+          }
+        ]
+      }
+    ],
+    "flags": 1
+  }
+}
