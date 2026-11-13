@@ -3,6 +3,9 @@ use super::icons::IconManager;
 use egui::*;
 
 pub const HEIGHT: f32 = 25.0;
+fn native_height() -> f32 {
+    crate::resources::control_height("TVIEWFORM", "TabControl").unwrap_or(HEIGHT)
+}
 const TAB_WIDTH: f32 = 286.0;
 
 #[derive(Clone)]
@@ -58,7 +61,7 @@ pub fn show(ui: &mut Ui, icons: &mut IconManager) {
         .unwrap();
     let mut action = None;
     TopBottomPanel::top("session_tabs")
-        .exact_height(HEIGHT)
+        .exact_height(native_height())
         .show_separator_line(false)
         .frame(Frame::none())
         .show_inside(ui, |ui| {
@@ -186,21 +189,21 @@ pub fn show(ui: &mut Ui, icons: &mut IconManager) {
                                 FontId::proportional(12.0),
                                 Color32::BLACK,
                             );
-                            if selected || close.hovered() {
-                                painter.rect_filled(close_rect, 2.0, Color32::from_gray(150));
-                            }
-                            let color = if selected || close.hovered() {
-                                Color32::from_gray(220)
-                            } else {
-                                Color32::from_gray(140)
-                            };
-                            for (a, b) in [
-                                (vec2(-2.5, -2.5), vec2(2.5, 2.5)),
-                                (vec2(-2.5, 2.5), vec2(2.5, -2.5)),
-                            ] {
-                                painter.line_segment(
-                                    [close_rect.center() + a, close_rect.center() + b],
-                                    Stroke::new(1.0_f32, color),
+                            if let Some(texture) = icons.reference_png(ui.ctx(), "TAB_CLOSE") {
+                                let state = match (selected, close.hovered()) {
+                                    (false, false) => 0,
+                                    (false, true) => 1,
+                                    (true, false) => 2,
+                                    (true, true) => 3,
+                                };
+                                painter.image(
+                                    texture.id(),
+                                    Rect::from_center_size(close_rect.center(), vec2(16.0, 16.0)),
+                                    Rect::from_min_max(
+                                        pos2(state as f32 / 4.0, 0.0),
+                                        pos2((state + 1) as f32 / 4.0, 1.0),
+                                    ),
+                                    Color32::WHITE,
                                 );
                             }
                             if selected && changed {

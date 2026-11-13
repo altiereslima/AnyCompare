@@ -2,6 +2,7 @@ use egui::{ColorImage, Context, TextureHandle, TextureOptions};
 use std::collections::HashMap;
 
 include!("icon_catalog.rs");
+include!("bc5_home_icons.rs");
 
 /// Icon texture premultiplied in gamma (sRGB) space. egui's `from_rgba_unmultiplied`
 /// premultiplies in linear space while the painter blends in gamma space, which made
@@ -37,6 +38,76 @@ pub struct IconManager {
 }
 
 impl IconManager {
+    /// BC5 has separate 64 px and 32 px Home artwork. Never resample one list
+    /// into the other: their pixel drawings differ, including at the same DPI.
+    pub fn home_icon(
+        &mut self,
+        ctx: &Context,
+        name: &str,
+        large: bool,
+        enabled: bool,
+    ) -> Option<TextureHandle> {
+        let scale = match ctx.pixels_per_point() {
+            p if p <= 1.0 => 100,
+            p if p <= 1.25 => 125,
+            p if p <= 1.5 => 150,
+            _ => 200,
+        };
+        let group = if large {
+            "HomeImages"
+        } else {
+            "HomeMediumImages"
+        };
+        let key = format!("bc5:{group}:{name}@{scale}:{enabled}");
+        if let Some(texture) = self.textures.get(&key) {
+            return Some(texture.clone());
+        }
+        let (_, _, _, bytes) = BC5_HOME_ICONS
+            .iter()
+            .find(|(n, g, s, _)| *n == name && *g == group && *s == scale)?;
+        let mut pixels = image::load_from_memory(bytes).ok()?.to_rgba8();
+        if !enabled {
+            for pixel in pixels.pixels_mut() {
+                let [gray, alpha] = disabled_pixel(pixel[0], pixel[1], pixel[2], pixel[3]);
+                *pixel = image::Rgba([gray, gray, gray, alpha]);
+            }
+        }
+        let texture = ctx.load_texture(
+            &key,
+            icon_image(
+                [pixels.width() as usize, pixels.height() as usize],
+                pixels.as_raw(),
+            ),
+            TextureOptions::NEAREST,
+        );
+        self.textures.insert(key, texture.clone());
+        Some(texture)
+    }
+    pub fn reference_png(&mut self, ctx: &Context, name: &str) -> Option<TextureHandle> {
+        let scale = match ctx.pixels_per_point() {
+            p if p <= 1.0 => 100,
+            p if p <= 1.25 => 125,
+            p if p <= 1.5 => 150,
+            _ => 200,
+        };
+        let key = format!("reference:{name}@{scale}");
+        if let Some(texture) = self.textures.get(&key) {
+            return Some(texture.clone());
+        }
+        let pixels = image::load_from_memory(crate::resources::png(name, scale)?)
+            .ok()?
+            .to_rgba8();
+        let texture = ctx.load_texture(
+            &key,
+            icon_image(
+                [pixels.width() as usize, pixels.height() as usize],
+                pixels.as_raw(),
+            ),
+            TextureOptions::NEAREST,
+        );
+        self.textures.insert(key, texture.clone());
+        Some(texture)
+    }
     /// MainModels stores red masks which the native folder view recolors per side.
     pub fn folder_model(
         &mut self,

@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "bundle_version": 1,
+    "forms": 200,
+    "icons": 1360,
+    "languages": {
+      "0": 524,
+      "1033": 205
+    },
+    "reference_sha256": "aba1b98f848a01c3729cfee3e8818ab8e0d947276bc42c9a55c1475c9f8438db",
+    "resources": 729,
+    "strings": 4974,
+    "types": {
+      "#1": 25,
+      "#10": 209,
+      "#11": 1,
+      "#12": 25,
+      "#14": 17,
+      "#16": 1,
+      "#2": 27,
+      "#23": 1,
+      "#24": 1,
+      "#3": 68,
+      "#6": 311,
+      "MAD": 2,
+      "PNG": 41
+    }
+  },
+  "works_without_external_assets": true,
+  "tamper_test_rejected": "Corrupt resource: CALIBRATE"
+}

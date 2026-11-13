@@ -1,5 +1,7 @@
 # Prioridade do projeto — confirmada em 30/10/2026
 
+> **Atualização de 02/11/2026:** o usuário mudou a sequência para terminar o básico e iniciar a implementação completa do BC5.2.7.32913, usando REA/Craft. A exigência histórica de terminar 100% do BC4 antes de BC5 está substituída. A lista abaixo continua útil como inventário de lacunas compartilhadas, sem significar que o BC4 foi concluído.
+
 O usuário determinou: **“mas antes vamos terminar o 4 100%”**.
 
 A primeira fase é concluir a reconstrução do Beyond Compare 4.4.7.28397 Pro.

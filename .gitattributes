@@ -7,5 +7,6 @@
 *.png binary
 *.ico binary
 *.bin binary
+*.pack binary
 tests/fixtures/** -text
 docs/reference/controlled*/** -text

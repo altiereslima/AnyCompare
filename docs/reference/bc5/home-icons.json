@@ -1,0 +1,901 @@
+{
+  "reference_sha256": "d4753f363c84db3974e4f43d0f8e2972555995943902f4c4b46992e41b30d2a5",
+  "icons": [
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeDirCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "3f6460323c244f83df5067fa74883b86496c38e7c773f577a79a1c56489c64ef"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeDirMergeSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "35612c3a3824209896dd26ad0e3d770aa6d758bca1a80fd1441cfe5e889ea452"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeDirSyncSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "1721c39489c6d315010817d2f6ae0eb13151a05758ddf00f539876de8e452c5c"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeHexCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "4a0a5ae07bc71cd3999ee70ac2928037b7a1227b7f0af8fd3ad50304164b0eae"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeMediaCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "e4f7ecfdbbaca09d8174e77dd6b2cd7b1d984cea1e069d0624e5ed87283995dd"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomePixCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "d0158a0d671887feae299dbb94da98bdf39bab5833b17c7b06a790069d77971b"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeRegCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "6b194facf1d4da155201224af9076e798c8ad666e94a4f0174ee1262effd305e"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeTableCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "e14fea0b5847649cdbc0891fe2c761f418ae3e7acdfcd76428905f340b56ff42"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeTextCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "5ab1c98ca5101b36f65b416e3b46c1d019fd486d45640a9c3da9d6bf148baffd"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeTextEditSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "4333d1fc38a625979f6e83878e2b0106239d1e48f758aca68e294e47c65d28b0"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeTextMergeSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "78791358bdd742d80b870e374530bf742f7621586c2b2877a425175a134ca187"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeTextPatchSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "4da4c281fd4a732d861f60dc20bd791afb44de809a7143ca83bd96892f1b9ca1"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeVerCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "3aa1953487d6cabcc18eb919e604eb5e4ec8650acc764cad4ff321e4619fc551"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeImages/imgHomeXMLCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "4da4c281fd4a732d861f60dc20bd791afb44de809a7143ca83bd96892f1b9ca1"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeDirCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "2ebb69f2cd1313d45ca2d26f61388d41e4058f8064e0ad5ac332b5bdd88d1ac3"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeDirMergeSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "a01feb278566036f74ab681cb54d37594f00a18dd27d504420954a4f3e4b504e"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeDirSyncSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "756c0832769964857f67b9bbffc40302ecdf6e329395c3d92553d79e92fc9fbc"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeHexCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "efa9abc7613c4efc5861f49fda8874adf59c3ec9fdb5fae0d90071f2d80e68d6"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeMediaCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "aca170e67e40eacc568997a08f7a1a4c7c91cff66b2ece784d520c061fb6426c"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomePixCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "26888c7aa447d1abde0a62fbf7ffe33a1eef033872daa9a474ba60516435e8c8"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeRegCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "5a3e202397ff07d4f0a0f9217f110674c579e766da1c6645bfb0a1dfe0ef9112"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeTableCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "64aa03673e1c949c8c8e4e9fbce3d644c74fe7837996680c2c506f9495f0ed8e"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeTextCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "f1ccadc92f843496c04097a9e41700fa4fcad751b06d47e457b466ad82519a52"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeTextEditSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "cd2aa11316d84247ab9a496de4092aca3b6b9cf0856c51d290fb47daed680b06"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeTextMergeSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "816488af61652ccf7d4466ca1b1292a1be67f97593c79fe6ea9916703f792e21"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeTextPatchSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "c8d42a00592706108946b0fa03a0b5ec7abd933413274897687a58351a55def1"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeVerCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "4caa0027e8a7a15350eb6cfd54e4e3af184aceed2264c9a753a806299b112ced"
+    },
+    {
+      "path": "assets/bc5/home/100/HomeMediumImages/imgHomeXMLCompareSession.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "c8d42a00592706108946b0fa03a0b5ec7abd933413274897687a58351a55def1"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeDirCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "71536fee6be680d855dab1068da79a710e17317f139cd7538b055670c81c9b76"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeDirMergeSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "0f7b1e73247ae933950710d8f97efe53555b1ba8f6f0a8dfe957b13bdfd3eb2f"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeDirSyncSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "169aec7c5794f7741b1d3929c1d6e356e792dac4a92ae0c64b301fc50dd77bb2"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeHexCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "ca2b8f572576e4dc6ee32fb8370607d5f52f957ba2476786e70c046a8f519380"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeMediaCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "4099fb7e8175156405691e7b359580fc45da97c3c6fae0ece6ff4468e933981d"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomePixCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "43b3db084513bab50f7a4dd7b7ccfa5ecb792d20dac1cceed433509616a95403"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeRegCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "de3725f7b5ab5ad408fcf95a28423867aef7f81047f490ca947b7fd1c9ae2f31"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeTableCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "c5b9be483ee400c3d22eba9ea77c73b76540840c82b7990b42ea38e124e3afbe"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeTextCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "970281432db2b6f88cd1c7b63128f3064297b01d66234fc8e9edaca8b9b88bdc"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeTextEditSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "5e1c8e6c80faab98818c4f2e3b8943cec8d09e0b98e8dcf7f9ce0b5f16e5bb18"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeTextMergeSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "0e5295ac5125aefcb7d4b6cedee02dff775af2e0b3dadb836622b160274a93fc"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeTextPatchSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "1834d12b0d84bb07d96c6a89c695ae876e98663081b7cb68d87c32e3780aa50b"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeVerCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "46f96ac323006b5ec0d4a984d79847e03820136e9ab545d553988f727e2bd739"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeImages/imgHomeXMLCompareSession.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "1834d12b0d84bb07d96c6a89c695ae876e98663081b7cb68d87c32e3780aa50b"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeDirCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "fe460fd6a34434e0bf28bbb085bdfef1b705c091858a5f15527eb02b5621be8d"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeDirMergeSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "405eced9f0994ef1bce6a97f251a4b6196306ac2736673f23dd859ea1b9c1cef"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeDirSyncSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "eae52fe9450a15d106393449038ea630767527b1d26a228a252cec8ce3110e7d"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeHexCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "1dcef4be447188f7269f2c045713e566d84ee232b320bb86e954dee39f8a2dff"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeMediaCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "5ce1767dc7d03fc21bc9ac37efb13c2f82c563ea68f1c515bd7a3b2784a26790"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomePixCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "f93c875fc4957da51987236a629c85198323bd662d9e641224776daa0cbcc910"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeRegCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "14c038eddda0efa1635b8407754f5f1590ef12c8491063a79575a319e0796dd5"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeTableCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "ccb495af3cc57ebd83f78e35e394108ad167d3cb6d038664fd72ffd0f3e36bc3"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeTextCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "cfda1ca4edee735a429e63ffd58e71c59623e6991fc7eb699b122a4e840c230b"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeTextEditSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "529771b0a19e68bcb33bca1ce4a748f7bd7ab4caafc21062c2fa6ea11546806b"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeTextMergeSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "72fa7fa8471b1b08d4b53603ab4451ee5af92322df3b43fda8bed7896dfee48a"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeTextPatchSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "1709d1d66d945c6637a71640964ef91428106cbda8af11858de21e8d9e32f2f6"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeVerCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "44e183ebe20a57652c3c839f6608de96275b28412d92fb8fe41856789dabbaa8"
+    },
+    {
+      "path": "assets/bc5/home/125/HomeMediumImages/imgHomeXMLCompareSession.png",
+      "size": [
+        40,
+        40
+      ],
+      "sha256": "1709d1d66d945c6637a71640964ef91428106cbda8af11858de21e8d9e32f2f6"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeDirCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "e0d9df96dd6a3236b2f428012bce009bc0b468a22440e4e9b13063b05a0d52d0"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeDirMergeSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "6e976fc4d34f6dd20d996fdb06d7b78856953452bd18f91876849d585326ffb6"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeDirSyncSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "70489a35ceaabd8ee1b235697bf89537105d2b40e4cfac6a88c483792fadfbbe"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeHexCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "cef7128d34e19de49b5fa7a519a5f87863ea281e2ef307214950253ad0ae275c"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeMediaCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "160ede8c2c92216c78140cf99966d28dfda03d30f6fa0b55ba1495acc377de7f"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomePixCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "40ebacdf7a7529706a5e6b53c470b7f7e551a6e2a04d382b982031c55a56efae"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeRegCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "b1ee787228e8afdb5f8cd0fe5c53a19dffa96e8eeff325cbf45f55b93ab1b424"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeTableCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "234c29781819306f687820d103bc52f4b5e6d0dfb71803c2467db4d796502a07"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeTextCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "ebe40330f52c505e9f21848488e58522208ad1227ebb17251d53e0607936e956"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeTextEditSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "369af4637b579e73be905bfcaaa6a9e2a945f90ee73d2e501f3608b9d003ad0d"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeTextMergeSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "ebc292de2c8e0c1382942fdccfca84a0ef97656d0d8875ea932090b026eb6b13"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeTextPatchSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "4f7bf18e4011e1948c82da37ebab3cdfcd6bde70666ac84ba75af7702a80b184"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeVerCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "793e2e955c2efb28e46f121c92f1efcec67273a9373b6d2335698d764a8eba71"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeImages/imgHomeXMLCompareSession.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "4f7bf18e4011e1948c82da37ebab3cdfcd6bde70666ac84ba75af7702a80b184"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeDirCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "a4edc44b38119c5f3ceaf9f90a13b62677ecc98bb3d67a1937e2dd7015fce87d"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeDirMergeSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "7da19bdb61a32a5dfbb6df769f18c31a5dfabcc2021d64aa03b90bbdcce833bb"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeDirSyncSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "255f3fdb348879c8a7c6bc1e78578034a75891469fad82d7a061e5ed9011d446"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeHexCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "3f25df9d9df4169bb34f60768c113377a585dcb913dc140c74cc89b5bca8f1e2"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeMediaCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "2e61054419d2fc1a92366acf980ea6e22059c921904a40639b4accb5be11f4f8"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomePixCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "711e0761ec39334bbc56bdd3a46d61637c221e1f5e839a7b81d2f1699aca0974"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeRegCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "1835212142fed36f9596b0f2592f66ed97ec00b7ab46662a68f1d5993098a078"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeTableCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "f2539b56c167c952e26b16db449773fa1da0c2f283705aa2b242042171470d8e"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeTextCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "fa3d5cfbaeef78ed40006e8f89f590ef14c291667b8e17335c3a6d8e8461c2b6"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeTextEditSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "dc83586ae775310bfd2b0cfaaa076dc7906a9e23866925284ccd7b9633d79b20"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeTextMergeSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "b30949cecce0f4725e3e3b54148a70d34be0e3399dbbbfd7ff4ddfba22ba1426"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeTextPatchSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "c2cc41a4fe6f1bbc163a7bb8d0f18c7655993a22b4631aa53b3fb652a2273e0c"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeVerCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "c76d9d9fa41bc791ba12bc02b467ca40f3382c4e269962621d37a7d9dfaa9702"
+    },
+    {
+      "path": "assets/bc5/home/150/HomeMediumImages/imgHomeXMLCompareSession.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "c2cc41a4fe6f1bbc163a7bb8d0f18c7655993a22b4631aa53b3fb652a2273e0c"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeDirCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "498e4908161d447cb8dfebed4979d312175072496c1372a1d06b93807ee7a74c"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeDirMergeSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "019dea25f4b9288beee93c8bc7aa1d462a72a0a783168758b05f8ab4a32c76d6"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeDirSyncSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "1d9251152251313ad4e5e80bd308f17929216d24a7beb2518539cfe5d31daceb"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeHexCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "052f9c0ed1cbae308c6eec0a853c7d534aafedf2c5f957d4e7d79f177ed1f02c"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeMediaCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "96ff2f822597292ae35a7921695e08b03834d8b5c400ce2d68a3610434e54291"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomePixCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "21c1ae915fc4f8c35e6050953c17da37682960c645a5e90eccc6978475b9aad3"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeRegCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "8e39e7ff3e6e7f9ac4761229f4798062ccbfb79cbf9750d806bedef2f6d0e894"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeTableCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "7ac22f8c0302ae34ade06aa596e62bfd98fab68d9e5a36877ad2c673a4c10b88"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeTextCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "2c95918efba952fbf11874ec082eb5b605b3e831dc611a20dcd165505ae5422a"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeTextEditSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "6e871f7c03739dc72535d2f141ff34f11158dac36c7e61b36ed6ddb1a977236a"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeTextMergeSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "81a778f9979f6891b2ad5af1943e750e0e89cd82a40dd1ffd279cbbe754c679a"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeTextPatchSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "bc53a9d02c9071d4ac3c60c06855ca9086b9dbd43df173bf93d0d857006731e1"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeVerCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "ae83cdddddabedaa4642e59a13373b2408a670f150227fb42fc631f75cac4278"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeImages/imgHomeXMLCompareSession.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "bc53a9d02c9071d4ac3c60c06855ca9086b9dbd43df173bf93d0d857006731e1"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeDirCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "9dc190daaa2ff48d600d23ea0e9a06e6aae54531952a7c5f7d4bb82a0b191845"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeDirMergeSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "3cac1035fff90987d7d2876bef742f4c5c1c1516fc103a139a79f45b91f4562b"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeDirSyncSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "86c13282aa2c3589d6cd2bffa5743fd36b79f6df8b6e1d36fe5a184883552229"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeHexCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "5576558153b850c5457eda5c6f71449e2bdfe5ad174dcd0757da44ff8f473eb3"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeMediaCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "5bb3be8bf7d47996bfc793877028158cb199b0d13cfbbb2c7623f5d5ccafff72"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomePixCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "647e23d20f30e14ece164b0c8756dffe36063944e31476b113b112c278e74a03"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeRegCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "6669f4355f620483d48c0ac324c0d7e715cce66a82344c477de7b5a6b9c3ec4c"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeTableCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "b841f23f583db091ccec9266028e1553282653e957ab61d185864d30cfc7b290"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeTextCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "d761c8858c91dbc6e3e6406368413966c6730e721a943fdcbefe88e67caf27fb"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeTextEditSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "ab3caa81b14538daa3ef7d120ef33f73efe3b3c9ce46a949a05faa6605a7ca97"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeTextMergeSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "971bc2210738f7d4d47b93988448926a380adfab66fa08fb1dd651e1b44208f6"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeTextPatchSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "3af82486e81750115dacc7ac758a0498f41d960904c186abc8187d2cd0bccbf7"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeVerCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "fd247b5d943ef4e7049f375e6a2cdf0473c1612735772701f98dd886e343f430"
+    },
+    {
+      "path": "assets/bc5/home/200/HomeMediumImages/imgHomeXMLCompareSession.png",
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "3af82486e81750115dacc7ac758a0498f41d960904c186abc8187d2cd0bccbf7"
+    }
+  ]
+}

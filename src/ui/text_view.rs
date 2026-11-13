@@ -14,14 +14,12 @@ pub enum RowKind {
 pub struct ViewRow {
     pub top: f32,
     pub kind: RowKind,
+    height: f32,
 }
 
 impl ViewRow {
     pub fn height(&self) -> f32 {
-        match self.kind {
-            RowKind::Line(_) => LINE_HEIGHT,
-            RowKind::Fold { .. } => FOLD_HEIGHT,
-        }
+        self.height
     }
 }
 
@@ -30,6 +28,7 @@ pub struct TextView {
     pub visible: Vec<usize>,
     pub line_y: Vec<Option<f32>>,
     pub height: f32,
+    pub line_heights: Vec<f32>,
 }
 
 impl TextView {
@@ -61,6 +60,7 @@ impl TextView {
             visible: Vec::new(),
             line_y: vec![None; diff.lines.len()],
             height: 0.0,
+            line_heights: vec![LINE_HEIGHT; diff.lines.len()],
         };
         let mut index = 0;
         while index < included.len() {
@@ -76,6 +76,7 @@ impl TextView {
                 let expanded = revealed.iter().any(|area| overlaps(area, &range));
                 view.rows.push(ViewRow {
                     top: view.height,
+                    height: FOLD_HEIGHT,
                     kind: RowKind::Fold {
                         range: range.clone(),
                         expanded,
@@ -96,10 +97,27 @@ impl TextView {
         self.rows.push(ViewRow {
             top: self.height,
             kind: RowKind::Line(index),
+            height: LINE_HEIGHT,
         });
         self.visible.push(index);
         self.line_y[index] = Some(self.height);
         self.height += LINE_HEIGHT;
+    }
+
+    /// Both panes use the greater wrapped height of each aligned pair. These
+    /// are display metrics only; the diff and physical documents stay intact.
+    pub fn with_heights(mut self, heights: &[f32]) -> Self {
+        self.height = 0.0;
+        for row in &mut self.rows {
+            row.top = self.height;
+            if let RowKind::Line(index) = row.kind {
+                row.height = heights[index].max(LINE_HEIGHT);
+                self.line_heights[index] = row.height;
+                self.line_y[index] = Some(self.height);
+            }
+            self.height += row.height;
+        }
+        self
     }
 }
 
@@ -149,6 +167,6 @@ mod tests {
             TextView::new(&diff, FilterMode::Differences, false, &revealed).visible,
             vec![2]
         );
-        assert_eq!(diff.lines[0].left_text, "header");
+        assert_eq!(&*diff.lines[0].left_text, "header");
     }
 }

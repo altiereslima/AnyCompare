@@ -1,0 +1,127 @@
+{
+  "class": "TTableRgnFrame",
+  "name": "TableRgnFrame",
+  "props": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 273,
+    "Height": 125,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "DecimalSeparatorLbl",
+      "props": {
+        "Left": 8,
+        "Top": 33,
+        "Height": 13,
+        "Caption": "De&cimal separator:",
+        "FocusControl": "DecimalSeparatorEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "ThousandSeparatorLbl",
+      "props": {
+        "Left": 8,
+        "Top": 79,
+        "Height": 13,
+        "Caption": "&Thousands separator:",
+        "FocusControl": "ThousandSeparatorEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "DateOrderLbl",
+      "props": {
+        "Left": 140,
+        "Top": 33,
+        "Height": 13,
+        "Caption": "Date &order:",
+        "FocusControl": "DateOrderEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "DateSeparatorLbl",
+      "props": {
+        "Left": 140,
+        "Top": 79,
+        "Height": 13,
+        "Caption": "Date &separator:",
+        "FocusControl": "DateSeparatorEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseSystemEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "Use s&ystem",
+        "TabOrder": 0,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCharEdit",
+      "name": "DecimalSeparatorEdit",
+      "props": {
+        "Left": 8,
+        "Top": 50,
+        "Width": 17,
+        "Height": 21,
+        "TabOrder": 1,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCharEdit",
+      "name": "ThousandSeparatorEdit",
+      "props": {
+        "Left": 8,
+        "Top": 96,
+        "Width": 17,
+        "Height": 21,
+        "TabOrder": 2,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "DateOrderEdit",
+      "props": {
+        "Left": 140,
+        "Top": 50,
+        "Width": 67,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 3,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCharEdit",
+      "name": "DateSeparatorEdit",
+      "props": {
+        "Left": 140,
+        "Top": 96,
+        "Width": 17,
+        "Height": 21,
+        "TabOrder": 4,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    }
+  ]
+}

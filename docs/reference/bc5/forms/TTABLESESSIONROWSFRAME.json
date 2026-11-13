@@ -1,0 +1,106 @@
+{
+  "class": "TTableSessionRowsFrame",
+  "name": "TableSessionRowsFrame",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "SessionTableRows",
+    "Caption": "Rows"
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "SheetLbl",
+      "props": {
+        "Left": 316,
+        "Top": 12,
+        "Height": 13,
+        "Caption": "S&heet:",
+        "FocusControl": "SheetEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "KeyLbl",
+      "props": {
+        "Left": 8,
+        "Top": 162,
+        "Height": 13,
+        "Caption": "Key columns are defined.  Key based alignment will be used.",
+        "FontStyle": [
+          "fsBold"
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseDefaultEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "Use de&fault",
+        "TabOrder": 0,
+        "OnClick": "UseDefaultClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "SheetEdit",
+      "props": {
+        "Left": 352,
+        "Top": 8,
+        "Width": 65,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 1,
+        "OnChange": "SheetEditChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TLineAlignDefFrame",
+      "name": "Frame",
+      "props": {
+        "Left": 0,
+        "Top": 33,
+        "Width": 425,
+        "Height": 104,
+        "TabOrder": 2
+      },
+      "children": [],
+      "flags": 4
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "AlignSortEdit",
+      "props": {
+        "Left": 8,
+        "Top": 137,
+        "Height": 17,
+        "Caption": "S&ort rows before alignment",
+        "TabOrder": 3,
+        "OnClick": "AlignSortClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiButton",
+      "name": "EditDefaultBtn",
+      "props": {
+        "Left": 333,
+        "Top": 329,
+        "Width": 84,
+        "Caption": "&Edit Default...",
+        "TabOrder": 4,
+        "OnClick": "EditDefaultClick",
+        "AutoSize": "asRight",
+        "AutoSizeMinWidth": 0
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

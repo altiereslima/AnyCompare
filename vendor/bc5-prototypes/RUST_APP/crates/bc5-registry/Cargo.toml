@@ -1,0 +1,15 @@
+[package]
+name = "bc5-registry"
+version = "0.1.0"
+edition = "2021"
+description = "Registro Windows: leitor .reg e diff tipado, em Rust puro, com evidencias e sem regras presumidas do BC5"
+license = "MIT"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "bc5-registry-inspect"
+path = "src/main.rs"
+
+[dependencies]

@@ -11,9 +11,13 @@ mod native_prompt;
 pub mod session_menu;
 pub mod session_picker;
 pub mod session_tabs;
+pub mod table_compare;
 mod text_chrome;
 pub mod text_compare;
+pub mod text_edit;
 mod text_view;
 pub mod theme;
 pub mod toolbar;
 pub mod toolbar_spec;
+
+pub mod version_compare;

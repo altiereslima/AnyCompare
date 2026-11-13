@@ -1,0 +1,21 @@
+{
+  "class": "TVfsFtpProfileFrame",
+  "name": "VfsFtpProfileFrame",
+  "props": {},
+  "children": [
+    {
+      "class": "TUiCheckBox",
+      "name": "UseDefaultsEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "Use &default",
+        "TabOrder": 0,
+        "OnClick": "UseDefaultsClick"
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

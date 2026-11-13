@@ -1,0 +1,12 @@
+﻿Table Compare
+Produced: 02/11/2026 14:04:01
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\review\craft-2026-11-02\tables\csv-identical\left.csv
+Right file: C:\Projetos\BC4\anycompare\docs\review\craft-2026-11-02\tables\csv-identical\right.csv
+  1: 2:   3:        1: 2:   3:
+---------------------------------
+2 a  café 1.00  = 2 a  café 1.00
+3 b  ação 2     = 3 b  ação 2
+1 id text value = 1 id text value
+---------------------------------

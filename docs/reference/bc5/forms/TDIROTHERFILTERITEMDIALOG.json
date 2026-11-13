@@ -1,0 +1,974 @@
+{
+  "class": "TDirOtherFilterItemDialog",
+  "name": "DirOtherFilterItemDialog",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "DlgDirOtherFilterItem",
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "Caption": "Other Filter",
+    "ClientHeight": 244,
+    "ClientWidth": 536,
+    "OnCreate": "FormCreate",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiBevel",
+      "name": "LeftBevel",
+      "props": {
+        "Left": 178,
+        "Top": 8,
+        "Width": 2,
+        "Height": 197,
+        "Shape": "bsLeftLine"
+      },
+      "children": []
+    },
+    {
+      "class": "TPanel",
+      "name": "LeftPanel",
+      "props": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 178,
+        "Height": 205,
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TUiLabel",
+          "name": "KindLbl",
+          "props": {
+            "Left": 8,
+            "Top": 8,
+            "Height": 13,
+            "Caption": "Filter on:"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "KindDateEdit",
+          "props": {
+            "Left": 8,
+            "Top": 25,
+            "Height": 17,
+            "Caption": "Date &modified",
+            "TabOrder": 0,
+            "OnClick": "KindEditChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "KindSizeEdit",
+          "props": {
+            "Left": 8,
+            "Top": 46,
+            "Height": 17,
+            "Caption": "&Size",
+            "TabOrder": 1,
+            "OnClick": "KindEditChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "KindContentEdit",
+          "props": {
+            "Left": 8,
+            "Top": 67,
+            "Height": 17,
+            "Caption": "&Content",
+            "TabOrder": 2,
+            "OnClick": "KindEditChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "KindDOSAttrEdit",
+          "props": {
+            "Left": 8,
+            "Top": 88,
+            "Height": 17,
+            "Caption": "&DOS attribute",
+            "TabOrder": 3,
+            "OnClick": "KindEditChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "KindUnixFileTypeEdit",
+          "props": {
+            "Left": 8,
+            "Top": 109,
+            "Height": 17,
+            "Caption": "&Unix file type",
+            "TabOrder": 4,
+            "OnClick": "KindEditChange"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "KindVcsStatusEdit",
+          "props": {
+            "Left": 8,
+            "Top": 130,
+            "Height": 17,
+            "Caption": "&Version control status",
+            "TabOrder": 5,
+            "OnClick": "KindEditChange"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TUiActivePanelView",
+      "name": "PanelView",
+      "props": {
+        "Left": 180,
+        "Top": 0,
+        "Width": 354,
+        "Height": 205,
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TUiActivePanel",
+          "name": "DatePanel",
+          "props": {},
+          "children": [
+            {
+              "class": "TUiPanel",
+              "name": "DateSubPanel",
+              "props": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 354,
+                "Height": 50,
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TUiLabel",
+                  "name": "DateSubLbl",
+                  "props": {
+                    "Left": 8,
+                    "Top": 8,
+                    "Height": 13,
+                    "Caption": "Exclude files:"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiBevel",
+                  "name": "DateTopBevel",
+                  "props": {
+                    "Left": 8,
+                    "Top": 48,
+                    "Width": 338,
+                    "Height": 2,
+                    "Shape": "bsTopLine"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "DateOlderEdit",
+                  "props": {
+                    "Left": 8,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "&Older than",
+                    "TabOrder": 0,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "DateNewerEdit",
+                  "props": {
+                    "Left": 177,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "&Newer than",
+                    "TabOrder": 1,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TUiCheckBox",
+              "name": "DateUseDaysEdit",
+              "props": {
+                "Left": 8,
+                "Top": 58,
+                "Height": 17,
+                "Caption": "Da&y(s) ago",
+                "TabOrder": 1,
+                "OnClick": "SomethingChangedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiSpinEdit",
+              "name": "DateDaysEdit",
+              "props": {
+                "Left": 8,
+                "Top": 83,
+                "Width": 49,
+                "Height": 21,
+                "Max": 9999,
+                "MaxLength": 4,
+                "TabOrder": 2,
+                "OnChange": "SomethingChangedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiDateTimePicker",
+              "name": "DateDateEdit",
+              "props": {
+                "Left": 8,
+                "Top": 83,
+                "Width": 101,
+                "Height": 21,
+                "TabOrder": 3,
+                "OnChange": "SomethingChangedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiDateTimePicker",
+              "name": "DateTimeEdit",
+              "props": {
+                "Left": 117,
+                "Top": 83,
+                "Width": 101,
+                "Height": 21,
+                "Kind": "dtkTime",
+                "TabOrder": 4,
+                "OnChange": "SomethingChangedClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TUiActivePanel",
+          "name": "SizePanel",
+          "props": {},
+          "children": [
+            {
+              "class": "TUiPanel",
+              "name": "SizeSubPanel",
+              "props": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 354,
+                "Height": 50,
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TUiLabel",
+                  "name": "SizeSubLbl",
+                  "props": {
+                    "Left": 8,
+                    "Top": 8,
+                    "Height": 13,
+                    "Caption": "Exclude files:"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "SizeSmallerEdit",
+                  "props": {
+                    "Left": 8,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "Small&er than",
+                    "TabOrder": 0,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "SizeLargerEdit",
+                  "props": {
+                    "Left": 177,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "&Larger than",
+                    "TabOrder": 1,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TUiSpinEdit",
+              "name": "SizeEdit",
+              "props": {
+                "Left": 8,
+                "Top": 50,
+                "Width": 89,
+                "Height": 21,
+                "TabOrder": 1,
+                "OnChange": "SomethingChangedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiComboBox",
+              "name": "SizeUnitEdit",
+              "props": {
+                "Left": 101,
+                "Top": 50,
+                "Width": 67,
+                "Height": 21,
+                "Style": "csDropDownList",
+                "TabOrder": 2,
+                "OnChange": "SomethingChangedClick"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TUiActivePanel",
+          "name": "ContentPanel",
+          "props": {},
+          "children": [
+            {
+              "class": "TUiSpeedButton",
+              "name": "ContentFindREBtn",
+              "props": {
+                "Left": 323,
+                "Top": 50,
+                "Hint": "Insert Regular Expression Element",
+                "DropDown": true,
+                "Flat": false,
+                "PopupMenu": "ContentFindREPopup"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiPanel",
+              "name": "ContentSubPanel",
+              "props": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 354,
+                "Height": 50,
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TUiLabel",
+                  "name": "ContentSubLbl",
+                  "props": {
+                    "Left": 8,
+                    "Top": 8,
+                    "Height": 13,
+                    "Caption": "Exclude files:"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "ContentSubEdit",
+                  "props": {
+                    "Left": 8,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "C&ontaining",
+                    "TabOrder": 0,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "ContentSubNonEdit",
+                  "props": {
+                    "Left": 177,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "&Not containing",
+                    "TabOrder": 1,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TUiEdit",
+              "name": "ContentFindStrEdit",
+              "props": {
+                "Left": 8,
+                "Top": 50,
+                "Width": 307,
+                "Height": 21,
+                "TabOrder": 1,
+                "OnChange": "SomethingChangedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiCheckBox",
+              "name": "ContentCaseSensitiveEdit",
+              "props": {
+                "Left": 8,
+                "Top": 79,
+                "Height": 17,
+                "Caption": "Match character cas&e",
+                "TabOrder": 2,
+                "OnClick": "SomethingChangedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiCheckBox",
+              "name": "ContentWholeWordsEdit",
+              "props": {
+                "Left": 8,
+                "Top": 100,
+                "Height": 17,
+                "Caption": "&Whole words only",
+                "TabOrder": 3,
+                "OnClick": "SomethingChangedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiCheckBox",
+              "name": "ContentIsRegExpEdit",
+              "props": {
+                "Left": 8,
+                "Top": 121,
+                "Height": 17,
+                "Caption": "Regular e&xpression",
+                "TabOrder": 4,
+                "OnClick": "SomethingChangedClick"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiButton",
+              "name": "ContentREHelpBtn",
+              "props": {
+                "Left": 24,
+                "Top": 142,
+                "HelpType": "htKeyword",
+                "HelpKeyword": "Sample_Regular_Expressions",
+                "Caption": "RE Exam&ples",
+                "TabOrder": 5,
+                "AutoSize": "asLeft"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TUiActivePanel",
+          "name": "DOSAttrPanel",
+          "props": {},
+          "children": [
+            {
+              "class": "TUiPanel",
+              "name": "DOSAttrSubPanel",
+              "props": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 354,
+                "Height": 50,
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TUiLabel",
+                  "name": "DOSAttrSubLbl",
+                  "props": {
+                    "Left": 8,
+                    "Top": 8,
+                    "Height": 13,
+                    "Caption": "Exclude files if DOS attribute:"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiBevel",
+                  "name": "DOSAttrTopBevel",
+                  "props": {
+                    "Left": 8,
+                    "Top": 48,
+                    "Width": 338,
+                    "Height": 2,
+                    "Shape": "bsTopLine"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "DOSAttrSubEdit",
+                  "props": {
+                    "Left": 8,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "&Is set",
+                    "TabOrder": 0,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "DOSAttrSubNonEdit",
+                  "props": {
+                    "Left": 177,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "Is &not set",
+                    "TabOrder": 1,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TUiGridPanel",
+              "name": "DOSAttrGridPanel",
+              "props": {
+                "Left": 8,
+                "Top": 58,
+                "Width": 338,
+                "Height": 147,
+                "BevelOuter": "bvNone",
+                "ColumnCollection": [
+                  {
+                    "Value": {
+                      "extended80_hex": "00000000000000c80440"
+                    }
+                  },
+                  {
+                    "Value": {
+                      "extended80_hex": "00000000000000c80440"
+                    }
+                  }
+                ],
+                "ControlCollection": [],
+                "RowCollection": [
+                  {
+                    "Value": {
+                      "extended80_hex": "df374992244992e40240"
+                    }
+                  },
+                  {
+                    "Value": {
+                      "extended80_hex": "df374992244992e40240"
+                    }
+                  },
+                  {
+                    "Value": {
+                      "extended80_hex": "df374992244992e40240"
+                    }
+                  },
+                  {
+                    "Value": {
+                      "extended80_hex": "df374992244992e40240"
+                    }
+                  },
+                  {
+                    "Value": {
+                      "extended80_hex": "df374992244992e40240"
+                    }
+                  },
+                  {
+                    "Value": {
+                      "extended80_hex": "df374992244992e40240"
+                    }
+                  },
+                  {
+                    "Value": {
+                      "extended80_hex": "c4b04892244992e40240"
+                    }
+                  }
+                ],
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TUiActivePanel",
+          "name": "UnixFileTypePanel",
+          "props": {},
+          "children": [
+            {
+              "class": "TUiPanel",
+              "name": "UnixFileTypeSubPanel",
+              "props": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 354,
+                "Height": 50,
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TUiLabel",
+                  "name": "UnixFileTypeSubLbl",
+                  "props": {
+                    "Left": 8,
+                    "Top": 8,
+                    "Height": 13,
+                    "Caption": "Exclude files if Unix file type:"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiBevel",
+                  "name": "UnixFileTypeTopBevel",
+                  "props": {
+                    "Left": 8,
+                    "Top": 48,
+                    "Width": 338,
+                    "Height": 2,
+                    "Shape": "bsTopLine"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "UnixFileTypeSubEdit",
+                  "props": {
+                    "Left": 8,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "&Is",
+                    "TabOrder": 0,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "UnixFileTypeSubNonEdit",
+                  "props": {
+                    "Left": 177,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "Is &not",
+                    "TabOrder": 1,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TUiPanel",
+              "name": "UnixFileTypeListPanel",
+              "props": {
+                "Left": 8,
+                "Top": 58,
+                "Width": 338,
+                "Height": 147,
+                "BevelOuter": "bvNone",
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "class": "TUiActivePanel",
+          "name": "VcsStatusPanel",
+          "props": {},
+          "children": [
+            {
+              "class": "TUiPanel",
+              "name": "VcsStatusSubPanel",
+              "props": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 354,
+                "Height": 50,
+                "BevelOuter": "bvNone",
+                "TabOrder": 0
+              },
+              "children": [
+                {
+                  "class": "TUiLabel",
+                  "name": "VcsStatusSubLbl",
+                  "props": {
+                    "Left": 8,
+                    "Top": 8,
+                    "Height": 13,
+                    "Caption": "Exclude files if version control status:"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiBevel",
+                  "name": "VcsStatusTopBevel",
+                  "props": {
+                    "Left": 8,
+                    "Top": 48,
+                    "Width": 338,
+                    "Height": 2,
+                    "Shape": "bsTopLine"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "VcsStatusSubEdit",
+                  "props": {
+                    "Left": 8,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "&Is set",
+                    "TabOrder": 0,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                },
+                {
+                  "class": "TUiRadioButton",
+                  "name": "VcsStatusSubNonEdit",
+                  "props": {
+                    "Left": 177,
+                    "Top": 25,
+                    "Height": 17,
+                    "Caption": "Is &not set",
+                    "TabOrder": 1,
+                    "OnClick": "SomethingChangedClick"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "class": "TUiPanel",
+              "name": "VcsStatusListPanel",
+              "props": {
+                "Left": 8,
+                "Top": 58,
+                "Width": 338,
+                "Height": 147,
+                "BevelOuter": "bvNone",
+                "TabOrder": 1
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "TUiBtnPanel",
+      "name": "BtnPanel",
+      "props": {
+        "Left": 0,
+        "Top": 205,
+        "Width": 536,
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TUiOkBtn",
+          "name": "OkBtn",
+          "props": {},
+          "children": []
+        },
+        {
+          "class": "TUiCancelBtn",
+          "name": "CancelBtn",
+          "props": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TUiPopupMenu",
+      "name": "ContentFindREPopup",
+      "props": {
+        "Left": 500,
+        "Top": 8
+      },
+      "children": [
+        {
+          "class": "TUiMenuItem",
+          "name": "TabItem",
+          "props": {
+            "Caption": "Tab Character (\\t)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "AnyItem",
+          "props": {
+            "Caption": "Any Character (.)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "AlphaItem",
+          "props": {
+            "Caption": "Any Alphanumeric Character (\\w)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "NonAlphaItem",
+          "props": {
+            "Caption": "Any Non-alphanumeric Character (\\W)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "NumItem",
+          "props": {
+            "Caption": "Any Numeric Character (\\d)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "NonNumItem",
+          "props": {
+            "Caption": "Any Non-numeric Character (\\D)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "WSItem",
+          "props": {
+            "Caption": "Any Whitespace Character (\\s)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "CharSetItem",
+          "props": {
+            "Caption": "Character in Set ([])",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "NotCharSetItem",
+          "props": {
+            "Caption": "Character Not in Set ([^])",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "BeginItem",
+          "props": {
+            "Caption": "Beginning of Line (^)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "EndItem",
+          "props": {
+            "Caption": "End of Line ($)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "TaggedItem",
+          "props": {
+            "Caption": "Tagged Expression (())",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "OrItem",
+          "props": {
+            "Caption": "Or (|)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "ZeroOrMoreItem",
+          "props": {
+            "Caption": "0 Or More Matches (*)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "OneOrMoreItem",
+          "props": {
+            "Caption": "1 Or More Matches (+)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiMenuItem",
+          "name": "ZeroOrOneItem",
+          "props": {
+            "Caption": "0 Or 1 Matches (?)",
+            "OnClick": "ContentFindREItemClick"
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}

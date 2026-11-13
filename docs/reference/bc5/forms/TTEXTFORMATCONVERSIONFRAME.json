@@ -1,0 +1,78 @@
+{
+  "class": "TTextFormatConversionFrame",
+  "name": "TextFormatConversionFrame",
+  "props": {
+    "HelpKeyword": "FormatTextConversion"
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "CharPerLineLbl",
+      "props": {
+        "Left": 101,
+        "Top": 233,
+        "Height": 13,
+        "Caption": "c&haracters per line limit",
+        "FocusControl": "CharPerLineEdit"
+      },
+      "children": [],
+      "flags": 2,
+      "child_position": 3
+    },
+    {
+      "class": "TUiLabel",
+      "name": "ConvertOnSaveLbl",
+      "props": {
+        "Left": 8,
+        "Top": 258,
+        "Height": 13,
+        "Caption": "When saving:"
+      },
+      "children": [],
+      "flags": 2,
+      "child_position": 4
+    },
+    {
+      "class": "TUiSpinEdit",
+      "name": "CharPerLineEdit",
+      "props": {
+        "Left": 8,
+        "Top": 229,
+        "Width": 89,
+        "Height": 21,
+        "Min": 1,
+        "Position": 1,
+        "TabOrder": 6,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "TrimTrailingWSEdit",
+      "props": {
+        "Left": 8,
+        "Top": 275,
+        "Height": 17,
+        "Caption": "&Trim trailing whitespace",
+        "TabOrder": 7,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "TidyLeadingWSEdit",
+      "props": {
+        "Left": 8,
+        "Top": 296,
+        "Height": 17,
+        "Caption": "C&onvert leading spaces to tabs",
+        "TabOrder": 8,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

@@ -1,0 +1,65 @@
+{
+  "scope": "Popup body width/height only; no native theme, shadow or font/color equivalence",
+  "checks": [
+    {
+      "capture": "native-sessions-collapsed-pt-BR.png",
+      "rect": [
+        84,
+        63,
+        196,
+        20
+      ],
+      "expected_size": [
+        196,
+        20
+      ],
+      "authority": "native-runtime",
+      "passed": true
+    },
+    {
+      "capture": "native-sessions-expanded-pt-BR.png",
+      "rect": [
+        84,
+        63,
+        196,
+        218
+      ],
+      "expected_size": [
+        196,
+        218
+      ],
+      "authority": "native-runtime",
+      "passed": true
+    },
+    {
+      "capture": "native-sessions-collapsed-en.png",
+      "rect": [
+        47,
+        63,
+        184,
+        20
+      ],
+      "expected_size": [
+        184,
+        20
+      ],
+      "authority": "internal-consistency",
+      "passed": true
+    },
+    {
+      "capture": "native-sessions-expanded-en.png",
+      "rect": [
+        47,
+        63,
+        184,
+        218
+      ],
+      "expected_size": [
+        184,
+        218
+      ],
+      "authority": "internal-consistency",
+      "passed": true
+    }
+  ]
+}

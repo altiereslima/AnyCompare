@@ -1,0 +1,71 @@
+{
+  "schema": "bc5-media-xtra-structural-probe-v1",
+  "warning": "Xtra payloads are synthetic and not validated as Xtra metadata",
+  "requires_windows_bc5_test": true,
+  "cases": [
+    {
+      "id": "xtra_01_unchanged",
+      "left": {
+        "name": "xtra_01_unchanged_A.m4a",
+        "sha256": "9bd4386a6a0fc3897c2f3da26f3f2d8f3d8928ab19db7e34abd8133519a9e0ca",
+        "bytes": 3750,
+        "xtra_hex": "53594e54484554494320585452412053414d45"
+      },
+      "right": {
+        "name": "xtra_01_unchanged_B.m4a",
+        "sha256": "9bd4386a6a0fc3897c2f3da26f3f2d8f3d8928ab19db7e34abd8133519a9e0ca",
+        "bytes": 3750,
+        "xtra_hex": "53594e54484554494320585452412053414d45"
+      },
+      "expected_bc5": "UNKNOWN; do not use as a golden result"
+    },
+    {
+      "id": "xtra_02_only_xtra",
+      "left": {
+        "name": "xtra_02_only_xtra_A.m4a",
+        "sha256": "75de172d1995cd4189b3440880b24046e77b3cb4da6b1eac2857eb16937522db",
+        "bytes": 3750,
+        "xtra_hex": "53594e5448455449432058545241204c454654"
+      },
+      "right": {
+        "name": "xtra_02_only_xtra_B.m4a",
+        "sha256": "9a8aeafd54dc195300dad9bbbe7280768310a7bb423373e4ed5af02394166fdf",
+        "bytes": 3751,
+        "xtra_hex": "53594e5448455449432058545241205249474854"
+      },
+      "expected_bc5": "UNKNOWN; do not use as a golden result"
+    },
+    {
+      "id": "xtra_03_title_only",
+      "left": {
+        "name": "xtra_03_title_only_A.m4a",
+        "sha256": "9bd4386a6a0fc3897c2f3da26f3f2d8f3d8928ab19db7e34abd8133519a9e0ca",
+        "bytes": 3750,
+        "xtra_hex": "53594e54484554494320585452412053414d45"
+      },
+      "right": {
+        "name": "xtra_03_title_only_B.m4a",
+        "sha256": "1c0f8e1d76a37bf42bd1fe4b750b88400d5c7bd01fdac3a8d025cd7948c4ba59",
+        "bytes": 3750,
+        "xtra_hex": "53594e54484554494320585452412053414d45"
+      },
+      "expected_bc5": "UNKNOWN; do not use as a golden result"
+    },
+    {
+      "id": "xtra_04_both",
+      "left": {
+        "name": "xtra_04_both_A.m4a",
+        "sha256": "75de172d1995cd4189b3440880b24046e77b3cb4da6b1eac2857eb16937522db",
+        "bytes": 3750,
+        "xtra_hex": "53594e5448455449432058545241204c454654"
+      },
+      "right": {
+        "name": "xtra_04_both_B.m4a",
+        "sha256": "c1c359eee2d9a4187fad4e5a2cde399674a12016b65e400936f9d6f20c126120",
+        "bytes": 3751,
+        "xtra_hex": "53594e5448455449432058545241205249474854"
+      },
+      "expected_bc5": "UNKNOWN; do not use as a golden result"
+    }
+  ]
+}

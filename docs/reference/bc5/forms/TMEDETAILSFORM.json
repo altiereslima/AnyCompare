@@ -1,0 +1,71 @@
+{
+  "class": "TMEDetailsForm",
+  "name": "DetailsForm",
+  "props": {
+    "Message": "Error Details",
+    "MinWidth": 0,
+    "OnAction": "",
+    "Timer": 0
+  },
+  "children": [
+    {
+      "class": "INVButton",
+      "name": "ContinueBtn",
+      "props": {
+        "Caption": "Continue",
+        "Enabled": true,
+        "NoOwnerDraw": false,
+        "Visible": true
+      },
+      "children": []
+    },
+    {
+      "class": "INVButton",
+      "name": "SkipBtn",
+      "props": {
+        "Caption": "Skip",
+        "Enabled": true,
+        "NoOwnerDraw": false,
+        "Visible": true
+      },
+      "children": []
+    },
+    {
+      "class": "INVButton",
+      "name": "CancelBtn",
+      "props": {
+        "Caption": "Abort",
+        "Enabled": true,
+        "NoOwnerDraw": false,
+        "Visible": true
+      },
+      "children": []
+    },
+    {
+      "class": "INVLabel",
+      "name": "Label1",
+      "props": {
+        "Caption": "in which situation did the error occur?",
+        "Enabled": true,
+        "Spacing": 0
+      },
+      "children": []
+    },
+    {
+      "class": "INVEdit",
+      "name": "DetailsMemo",
+      "props": {
+        "Colored": true,
+        "Enabled": true,
+        "Lines": 9,
+        "Optional": false,
+        "OutputName": "error details",
+        "OutputType": "nvoOwnSection",
+        "Spacing": 0,
+        "Text": "",
+        "Valid": true
+      },
+      "children": []
+    }
+  ]
+}

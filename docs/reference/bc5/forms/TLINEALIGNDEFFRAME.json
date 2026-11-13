@@ -1,0 +1,132 @@
+{
+  "class": "TLineAlignDefFrame",
+  "name": "LineAlignDefFrame",
+  "props": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 425,
+    "Height": 104,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "SkewToleranceLbl",
+      "props": {
+        "Left": 216,
+        "Top": 33,
+        "Height": 13,
+        "Caption": "Ske&w tolerance:",
+        "FocusControl": "SkewToleranceEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "SkewToleranceDescLbl",
+      "props": {
+        "Left": 277,
+        "Top": 54,
+        "Height": 13,
+        "Caption": "lines (default 2000)"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiRadioButton",
+      "name": "AlignNoneEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "&Unaligned",
+        "TabOrder": 0,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiRadioButton",
+      "name": "AlignSmartEdit",
+      "props": {
+        "Left": 8,
+        "Top": 29,
+        "Height": 17,
+        "Caption": "Standa&rd alignment",
+        "TabOrder": 1,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiRadioButton",
+      "name": "AlignQuickEdit",
+      "props": {
+        "Left": 8,
+        "Top": 50,
+        "Height": 17,
+        "Caption": "&Myers O(ND) alignment",
+        "TabOrder": 2,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiRadioButton",
+      "name": "AlignPatienceEdit",
+      "props": {
+        "Left": 8,
+        "Top": 71,
+        "Height": 17,
+        "Caption": "&Patience Diff alignment",
+        "TabOrder": 3,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "NeverAlignDiffsEdit",
+      "props": {
+        "Left": 216,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "&Never align differences",
+        "TabOrder": 4,
+        "OnClick": "NeverAlignDiffsClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiSpinEdit",
+      "name": "SkewToleranceEdit",
+      "props": {
+        "Left": 216,
+        "Top": 50,
+        "Width": 57,
+        "Height": 21,
+        "Increment": 50,
+        "Max": 30000,
+        "MaxLength": 5,
+        "Min": 1,
+        "Position": 2000,
+        "TabOrder": 5,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseClosenessEdit",
+      "props": {
+        "Left": 216,
+        "Top": 79,
+        "Height": 17,
+        "Caption": "Use &closeness matching",
+        "TabOrder": 6,
+        "OnClick": "UseClosenessClick"
+      },
+      "children": []
+    }
+  ]
+}

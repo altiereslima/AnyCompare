@@ -1,0 +1,281 @@
+{
+  "class": "TOpCopyToOutputDialog",
+  "name": "OpCopyToOutputDialog",
+  "props": {
+    "HelpKeyword": "OpCopyToOutput",
+    "Caption": "Copy to Output",
+    "ClientWidth": 489,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiPanel",
+      "name": "SelectionPanel",
+      "props": {
+        "Width": 489
+      },
+      "children": [
+        {
+          "class": "TUiLabel",
+          "name": "LeftFilesLbl",
+          "props": {
+            "Left": 129
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiLabel",
+          "name": "LeftFoldersLbl",
+          "props": {
+            "Left": 129
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiLabel",
+          "name": "LeftTotalBytesLbl",
+          "props": {
+            "Left": 129
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiWindowShape",
+          "name": "WindowShape",
+          "props": {
+            "Left": 8,
+            "Images": "BcImages.ContentImages",
+            "LeftImageIndex": -1,
+            "RightImageIndex": -1,
+            "ShowCenter": true
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiLabel",
+          "name": "RightFilesLbl",
+          "props": {
+            "Left": 363
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiLabel",
+          "name": "RightFoldersLbl",
+          "props": {
+            "Left": 363
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiLabel",
+          "name": "RightTotalBytesLbl",
+          "props": {
+            "Left": 363
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiLabel",
+          "name": "CenterFilesLbl",
+          "props": {
+            "Left": 246,
+            "Top": 50,
+            "Height": 13,
+            "Caption": "%",
+            "ShowAccelChar": false
+          },
+          "children": [],
+          "flags": 2,
+          "child_position": 8
+        },
+        {
+          "class": "TUiLabel",
+          "name": "CenterFoldersLbl",
+          "props": {
+            "Left": 246,
+            "Top": 67,
+            "Height": 13,
+            "Caption": "%",
+            "ShowAccelChar": false
+          },
+          "children": [],
+          "flags": 2,
+          "child_position": 9
+        },
+        {
+          "class": "TUiLabel",
+          "name": "CenterTotalBytesLbl",
+          "props": {
+            "Left": 246,
+            "Top": 84,
+            "Height": 13,
+            "Caption": "%",
+            "ShowAccelChar": false
+          },
+          "children": [],
+          "flags": 2,
+          "child_position": 10
+        },
+        {
+          "class": "TUiCheckBox",
+          "name": "LeftCheckEdit",
+          "props": {
+            "Left": 121
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "LeftRadioEdit",
+          "props": {
+            "Left": 121
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiCheckBox",
+          "name": "RightCheckEdit",
+          "props": {
+            "Left": 355,
+            "TabOrder": 4
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "RightRadioEdit",
+          "props": {
+            "Left": 355,
+            "TabOrder": 5
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiCheckBox",
+          "name": "CenterCheckEdit",
+          "props": {
+            "Left": 238,
+            "Top": 29,
+            "Height": 17,
+            "Caption": "&Center side",
+            "TabOrder": 2,
+            "OnClick": "SidesChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "CenterRadioEdit",
+          "props": {
+            "Left": 238,
+            "Top": 29,
+            "Height": 17,
+            "Caption": "&Center side",
+            "TabOrder": 3,
+            "OnClick": "SidesChangedClick"
+          },
+          "children": []
+        }
+      ],
+      "flags": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "ActionPanel",
+      "props": {
+        "Width": 489
+      },
+      "children": [
+        {
+          "class": "TUiBevel",
+          "name": "ActionBevel",
+          "props": {
+            "Width": 473
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiLabel",
+          "name": "ActionDescLbl",
+          "props": {
+            "Caption": "Copy selected files and folders to the output folder."
+          },
+          "children": [],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "FilteredWarnPanel",
+      "props": {
+        "Width": 489
+      },
+      "children": [
+        {
+          "class": "TUiBevel",
+          "name": "FilteredWarnBevel",
+          "props": {
+            "Width": 473
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiLabel",
+          "name": "FilteredWarnDescLbl",
+          "props": {
+            "Width": 449
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiSpeedButton",
+          "name": "ShowFilteredBtn",
+          "props": {
+            "Left": 458
+          },
+          "children": [],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    },
+    {
+      "class": "TUiBtnPanel",
+      "name": "BtnPanel",
+      "props": {
+        "Width": 489
+      },
+      "children": [
+        {
+          "class": "TUiBevel",
+          "name": "DontShowAgainBevel",
+          "props": {
+            "Width": 489
+          },
+          "children": [],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    }
+  ],
+  "flags": 1
+}

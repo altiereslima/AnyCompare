@@ -2,6 +2,8 @@ use egui::*;
 
 pub struct Output {
     pub response: Response,
+    #[cfg(test)]
+    pub field_rect: Rect,
     pub selected: Option<String>,
     pub submitted: bool,
 }
@@ -77,6 +79,7 @@ pub fn show_sized(
             .frame(false)
             .desired_width(edit_rect.width())
             .margin(vec2(1.0, 0.0))
+            .min_size(vec2(0.0, (size.y - 6.0).max(0.0)))
             .hint_text(crate::i18n::tr(if hint.starts_with("Arquivo ") {
                 "Entre o nome do arquivo aqui"
             } else {
@@ -227,6 +230,8 @@ pub fn show_sized(
         !open && response.lost_focus() && ui.input(|input| input.key_pressed(Key::Enter));
     Output {
         response,
+        #[cfg(test)]
+        field_rect: rect,
         selected,
         submitted,
     }

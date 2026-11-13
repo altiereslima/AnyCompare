@@ -2,6 +2,20 @@ use std::path::{Path, PathBuf};
 
 pub const APP_TITLE: &str = "AnyCompare";
 
+pub(super) fn save_question(side: Option<bool>, path: Option<&Path>) -> String {
+    // Translate the entire source key before inserting a path. Translating the
+    // side first produced mixed-language strings that no catalog could match.
+    let mut question = crate::i18n::tr(match side {
+        Some(true) => "Salvar alterações ao arquivo esquerdo?",
+        Some(false) => "Salvar alterações ao arquivo direito?",
+        None => "Salvar alterações ao arquivo?",
+    });
+    if let Some(path) = path {
+        question.push_str(&format!("\n\n{}", path.display()));
+    }
+    question
+}
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SaveChoice {
     Save,
@@ -35,6 +49,9 @@ pub trait DialogHost {
         self.file(save, true, current)
     }
     fn confirm_save(&mut self, left: bool, path: Option<&Path>) -> SaveChoice;
+    fn confirm_save_file(&mut self, path: Option<&Path>) -> SaveChoice {
+        self.confirm_save(true, path)
+    }
     fn file(&mut self, save: bool, left: bool, current: Option<&Path>) -> Option<PathBuf>;
     fn folder(&mut self, left: bool, current: &Path) -> Option<PathBuf>;
     fn error(&mut self, message: &str);
@@ -111,13 +128,20 @@ impl DialogHost for NativeDialogs<'_> {
         }
     }
     fn confirm_save(&mut self, left: bool, path: Option<&Path>) -> SaveChoice {
-        let side = crate::i18n::tr(if left { "esquerdo" } else { "direito" });
-        let mut question = crate::i18n::tr(&format!("Salvar alterações ao arquivo {side}?"));
-        if let Some(path) = path {
-            question.push_str(&format!("\n\n{}", path.display()));
-        }
+        let question = save_question(Some(left), path);
         match self.message(
             &question,
+            rfd::MessageLevel::Warning,
+            rfd::MessageButtons::YesNoCancel,
+        ) {
+            rfd::MessageDialogResult::Yes => SaveChoice::Save,
+            rfd::MessageDialogResult::No => SaveChoice::Discard,
+            _ => SaveChoice::Cancel,
+        }
+    }
+    fn confirm_save_file(&mut self, path: Option<&Path>) -> SaveChoice {
+        match self.message(
+            &save_question(None, path),
             rfd::MessageLevel::Warning,
             rfd::MessageButtons::YesNoCancel,
         ) {
@@ -262,6 +286,7 @@ pub struct TestDialogs {
     pub field_answers: std::collections::VecDeque<Option<Vec<DialogField>>>,
     pub recycled: Vec<PathBuf>,
     pub opened: Vec<PathBuf>,
+    pub opened_selection: Vec<bool>,
     pub information: Vec<String>,
 }
 
@@ -307,8 +332,9 @@ impl DialogHost for TestDialogs {
         self.recycled.extend_from_slice(paths);
         Ok(())
     }
-    fn open_path(&mut self, path: &Path, _: bool) -> Result<(), String> {
+    fn open_path(&mut self, path: &Path, select: bool) -> Result<(), String> {
         self.opened.push(path.into());
+        self.opened_selection.push(select);
         Ok(())
     }
     fn report_path(&mut self, _: &str) -> Option<PathBuf> {

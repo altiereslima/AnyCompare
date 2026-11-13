@@ -1,5 +1,5 @@
 use super::aligned_editor::{
-    self, EditorCache, LayoutOptions, FONT_SIZE, GUTTER_WIDTH, ROW_HEIGHT, TEXT_OFFSET,
+    self, EditorCache, LayoutOptions, GUTTER_WIDTH, ROW_HEIGHT, TEXT_OFFSET,
 };
 use super::dialogs::{DialogField, DialogHost, SaveChoice};
 use super::text_view::{self, RowKind, TextView, FOLD_HEIGHT};
@@ -54,6 +54,34 @@ pub enum TextCompareAction {
     BackToHome,
 }
 
+type ViewKey = (u64, u64, FilterMode, bool, Vec<std::ops::Range<usize>>);
+
+/// Byte offset of character `index` (the end when past it), skipping whole
+/// blocks by counting their non-continuation bytes: every frame converts the
+/// editor's character cursors, which on a long file sit megabytes in.
+pub(crate) fn char_to_byte(text: &str, index: usize) -> usize {
+    const BLOCK: usize = 4096;
+    let bytes = text.as_bytes();
+    let (mut at, mut seen) = (0, 0);
+    while at + BLOCK <= bytes.len() {
+        // Extend the block to the next character boundary.
+        let mut end = at + BLOCK;
+        while end < bytes.len() && bytes[end] & 0xC0 == 0x80 {
+            end += 1;
+        }
+        let count = bytes[at..end].iter().filter(|&&b| b & 0xC0 != 0x80).count();
+        if seen + count > index {
+            break;
+        }
+        seen += count;
+        at = end;
+    }
+    text[at..]
+        .char_indices()
+        .nth(index - seen)
+        .map_or(text.len(), |(i, _)| at + i)
+}
+
 pub struct TextCompareScreen {
     pub left_path: String,
     pub right_path: String,
@@ -70,6 +98,9 @@ pub struct TextCompareScreen {
     redo: Vec<(String, String)>,
     context_lines: bool,
     line_numbers: bool,
+    word_wrap: bool,
+    wrap_cache: aligned_editor::wrap::WrapCache,
+    reflow_caret: Option<bool>,
     active_left: bool,
     scroll_offset_y: f32,
     scroll_offset_x: [f32; 2],
@@ -81,6 +112,13 @@ pub struct TextCompareScreen {
     caret: [(usize, usize); 2],
     revealed: Vec<std::ops::Range<usize>>,
     view_revision: u64,
+    /// Aligned view of the current comparison, rebuilt only when its inputs change.
+    view_cache: Option<(ViewKey, std::sync::Arc<TextView>)>,
+    /// Bumped whenever `view_cache` is rebuilt; identifies the editor geometry.
+    view_generation: u64,
+    thumbnail_cache: Option<((u64, usize, u32), Vec<Color32>)>,
+    /// Buffers at the end of the last edited frame, the base of the next undo step.
+    edit_base: Option<(String, String)>,
     previous_filter: FilterMode,
     search: SearchState,
     recent_paths: Vec<String>,
@@ -138,7 +176,7 @@ impl GutterArrow {
 
 impl TextCompareScreen {
     pub fn session_options(&self) -> serde_json::Value {
-        serde_json::json!({"filter":format!("{:?}",self.filter_mode),"editing":self.editing,"context":self.context_lines,"line_numbers":self.line_numbers,"details":self.show_details,"thumbnail":self.show_thumbnail,"whitespace":self.show_whitespace,"filtered_counts":self.show_filtered_counts,"ignore_minor":self.ignore_minor,"ignore_case":self.rules.ignore_case,"ignore_whitespace":self.rules.ignore_whitespace,"rules_enabled":self.rules_enabled})
+        serde_json::json!({"filter":format!("{:?}",self.filter_mode),"editing":self.editing,"word_wrap":self.word_wrap,"context":self.context_lines,"line_numbers":self.line_numbers,"details":self.show_details,"thumbnail":self.show_thumbnail,"whitespace":self.show_whitespace,"filtered_counts":self.show_filtered_counts,"ignore_minor":self.ignore_minor,"ignore_case":self.rules.ignore_case,"ignore_whitespace":self.rules.ignore_whitespace,"rules_enabled":self.rules_enabled})
     }
     pub fn apply_session_options(&mut self, value: &serde_json::Value) {
         self.filter_mode = match value["filter"].as_str() {
@@ -150,6 +188,7 @@ impl TextCompareScreen {
             ("editing", &mut self.editing),
             ("context", &mut self.context_lines),
             ("line_numbers", &mut self.line_numbers),
+            ("word_wrap", &mut self.word_wrap),
             ("details", &mut self.show_details),
             ("thumbnail", &mut self.show_thumbnail),
             ("whitespace", &mut self.show_whitespace),
@@ -182,6 +221,9 @@ impl TextCompareScreen {
             redo: Vec::new(),
             context_lines: false,
             line_numbers: false,
+            word_wrap: false,
+            wrap_cache: Default::default(),
+            reflow_caret: None,
             active_left: true,
             scroll_offset_y: 0.0,
             scroll_offset_x: [0.0; 2],
@@ -193,6 +235,10 @@ impl TextCompareScreen {
             caret: [(1, 1); 2],
             revealed: Vec::new(),
             view_revision: 0,
+            view_cache: None,
+            view_generation: 0,
+            thumbnail_cache: None,
+            edit_base: None,
             previous_filter: FilterMode::All,
             search: SearchState::default(),
             recent_paths: Vec::new(),
@@ -335,22 +381,39 @@ impl TextCompareScreen {
     }
 
     fn accept_comparison(&mut self, result: DiffResult, ms: u128) {
-        self.diff_result = result;
+        let previous = std::mem::replace(&mut self.diff_result, result);
+        // Releasing tens of thousands of shared lines takes milliseconds; it
+        // does not need to delay the frame that shows the edit.
+        if previous.lines.len() > 10_000 {
+            std::thread::spawn(move || drop(previous));
+        }
         self.revision = self.revision.wrapping_add(1);
-        self.max_line_lengths = [
-            self.left
-                .text
-                .lines()
-                .map(|s| s.chars().count())
-                .max()
-                .unwrap_or(0),
-            self.right
-                .text
-                .lines()
-                .map(|s| s.chars().count())
-                .max()
-                .unwrap_or(0),
-        ];
+        // Longest line in characters, one pass over the bytes per side (both
+        // sides at once): this runs after every keystroke on the whole buffers.
+        fn longest(text: &str) -> usize {
+            // Same result as `lines().map(|l| l.chars().count()).max()`, which
+            // drops a carriage return only right before the line feed.
+            let (mut best, mut current, mut previous) = (0, 0, 0u8);
+            for &byte in text.as_bytes() {
+                if byte == b'\n' {
+                    best = best.max(current - usize::from(previous == b'\r'));
+                    current = 0;
+                } else if byte & 0xC0 != 0x80 {
+                    current += 1;
+                }
+                previous = byte;
+            }
+            best.max(current)
+        }
+        let (left, right) = (&self.left.text, &self.right.text);
+        self.max_line_lengths = if left.len() + right.len() > 1 << 20 {
+            std::thread::scope(|scope| {
+                let other = scope.spawn(|| longest(right));
+                [longest(left), other.join().unwrap()]
+            })
+        } else {
+            [longest(left), longest(right)]
+        };
         self.load_time_ms = ms;
         self.selected_line_idx = self
             .selected_line_idx
@@ -765,12 +828,7 @@ impl TextCompareScreen {
             .widget_id
             .and_then(|id| TextEdit::load_state(ctx, id))
             .and_then(|state| state.cursor.char_range());
-        let byte = |index| {
-            text.char_indices()
-                .nth(index)
-                .map(|(i, _)| i)
-                .unwrap_or(text.len())
-        };
+        let byte = |index| char_to_byte(text, index);
         cursor
             .map(|r| {
                 let a = byte(r.primary.index);
@@ -1045,8 +1103,8 @@ impl TextCompareScreen {
                         .map(|n| n.to_string())
                         .unwrap_or_default()
                 ),
-                left: line.left_text.clone(),
-                right: line.right_text.clone(),
+                left: line.left_text.to_string(),
+                right: line.right_text.to_string(),
                 different: line.status != DiffStatus::Same,
             })
             .collect::<Vec<_>>();
@@ -1859,6 +1917,21 @@ impl TextCompareScreen {
                             crate::i18n::tr("Iguais"),
                         );
                         ui.checkbox(&mut self.editing, crate::i18n::tr("Editar textos"));
+                        let wrap = ui.checkbox(
+                            &mut self.word_wrap,
+                            crate::i18n::tr("Quebra automática de linha"),
+                        );
+                        #[cfg(test)]
+                        ui.data_mut(|d| {
+                            d.insert_temp(Id::new("text_compare_wrap_toggle"), wrap.rect)
+                        });
+                        if wrap.changed() {
+                            self.scroll_offset_x = [0.0; 2];
+                            // Preserve the actual caret/selection. Request a
+                            // scroll to its new visual position after reflow.
+                            self.reflow_caret = Some(self.active_left);
+                            ui.close_menu();
+                        }
                         ui.checkbox(
                             &mut self.line_numbers,
                             crate::i18n::tr("Números das linhas"),
@@ -2410,20 +2483,70 @@ impl TextCompareScreen {
         );
         let count = self.diff_result.lines.len().max(1);
         ui.painter().rect_filled(strip, 0.0, Color32::WHITE);
-        for (index, line) in self.diff_result.lines.iter().enumerate() {
-            let color = match line.status {
-                DiffStatus::Same => Color32::WHITE,
-                DiffStatus::Different => Color32::from_rgb(252, 100, 100),
-                DiffStatus::Unimportant => Color32::from_rgb(120, 120, 255),
-                _ => BcTheme::THUMBNAIL_ORPHAN,
+        // One color per physical pixel row, painted as a single mesh: a large file
+        // has many lines per pixel, and one shape per line made every frame O(N).
+        // When several lines share a pixel the most important status wins
+        // (INFERIDO: the original shows a solid difference column on such files).
+        let ppp = ui.ctx().pixels_per_point();
+        let pixels = (strip.height() * ppp).round().max(1.0) as usize;
+        let key = (self.revision, pixels, ppp.to_bits());
+        if self.thumbnail_cache.as_ref().map(|(k, _)| *k) != Some(key) {
+            let rank = |status: DiffStatus| match status {
+                DiffStatus::Same => 0,
+                DiffStatus::Unimportant => 1,
+                DiffStatus::LeftOrphan | DiffStatus::RightOrphan => 2,
+                DiffStatus::Different => 3,
             };
-            let y = strip.top() + index as f32 / count as f32 * strip.height();
-            let row = Rect::from_min_size(
-                pos2(strip.left(), y),
-                vec2(strip.width(), (strip.height() / count as f32).max(1.0)),
-            );
-            ui.painter().rect_filled(row, 0.0, color);
+            let lines = &self.diff_result.lines;
+            let mut colors = Vec::with_capacity(pixels);
+            for pixel in 0..pixels {
+                let (a, b) = (
+                    pixel as f64 / pixels as f64 * count as f64,
+                    (pixel + 1) as f64 / pixels as f64 * count as f64,
+                );
+                let range = if b - a <= 1.0 {
+                    let center = ((a + b) / 2.0) as usize;
+                    center..center + 1
+                } else {
+                    a.floor() as usize..(b.ceil() as usize)
+                };
+                let status = lines
+                    .get(range.start.min(lines.len())..range.end.min(lines.len()))
+                    .unwrap_or_default()
+                    .iter()
+                    .map(|line| line.status)
+                    .max_by_key(|status| rank(*status))
+                    .unwrap_or(DiffStatus::Same);
+                colors.push(match status {
+                    DiffStatus::Same => Color32::WHITE,
+                    DiffStatus::Different => Color32::from_rgb(252, 100, 100),
+                    DiffStatus::Unimportant => Color32::from_rgb(120, 120, 255),
+                    _ => BcTheme::THUMBNAIL_ORPHAN,
+                });
+            }
+            self.thumbnail_cache = Some((key, colors));
         }
+        let colors = &self.thumbnail_cache.as_ref().unwrap().1;
+        let mut mesh = egui::Mesh::default();
+        let mut run = 0;
+        while run < colors.len() {
+            let color = colors[run];
+            let mut end = run + 1;
+            while end < colors.len() && colors[end] == color {
+                end += 1;
+            }
+            if color != Color32::WHITE {
+                mesh.add_colored_rect(
+                    Rect::from_min_max(
+                        pos2(strip.left(), strip.top() + run as f32 / ppp),
+                        pos2(strip.right(), strip.top() + end as f32 / ppp),
+                    ),
+                    color,
+                );
+            }
+            run = end;
+        }
+        ui.painter().add(mesh);
         if response.clicked() || response.dragged() {
             if let Some(pos) = response.interact_pointer_pos() {
                 self.selected_line_idx = (((pos.y - strip.top()) / strip.height()).clamp(0.0, 1.0)
@@ -2442,12 +2565,65 @@ impl TextCompareScreen {
             self.view_revision = self.view_revision.wrapping_add(1);
             self.previous_filter = self.filter_mode;
         }
-        let view = TextView::new(
-            &self.diff_result,
-            self.filter_mode,
-            self.context_lines,
-            &self.revealed,
-        );
+        // Whole physical pixels, so the gutter and its icons of the right pane
+        // stay on the pixel grid instead of being blended.
+        let ppp = ui.ctx().pixels_per_point();
+        // The frame starts one pixel under the thumbnail's right edge. The
+        // native splitter is 3 px; its left edge is at half the main panel,
+        // rather than half the space remaining after subtracting the splitter.
+        let frame_rect = Rect::from_min_max(ui.cursor().min - vec2(1.0, 0.0), ui.max_rect().max);
+        let first_width = ((frame_rect.width() / 2.0 * ppp).floor() / ppp).max(1.0);
+        let pane_widths = [
+            first_width,
+            (frame_rect.width() - first_width - super::text_chrome::SPLITTER_WIDTH).max(1.0),
+        ];
+        let wrap_widths = self.word_wrap.then(|| {
+            pane_widths
+                .map(|width| (width - super::text_chrome::BAR_WIDTH - 2.0 - TEXT_OFFSET).max(1.0))
+        });
+        let view: std::sync::Arc<TextView> = if let Some(widths) = wrap_widths {
+            self.scroll_offset_x = [0.0; 2];
+            let geometry = self
+                .wrap_cache
+                .get(ui, &self.diff_result, self.revision, widths);
+            std::sync::Arc::new(
+                TextView::new(
+                    &self.diff_result,
+                    self.filter_mode,
+                    self.context_lines,
+                    &self.revealed,
+                )
+                .with_heights(&geometry.heights),
+            )
+        } else {
+            self.wrap_cache.clear();
+            let key: ViewKey = (
+                self.revision,
+                self.view_revision,
+                self.filter_mode,
+                self.context_lines,
+                self.revealed.clone(),
+            );
+            match &self.view_cache {
+                Some((cached, view)) if *cached == key => view.clone(),
+                _ => {
+                    let view = std::sync::Arc::new(TextView::new(
+                        &self.diff_result,
+                        self.filter_mode,
+                        self.context_lines,
+                        &self.revealed,
+                    ));
+                    self.view_generation = self.view_generation.wrapping_add(1);
+                    self.view_cache = Some((key, view.clone()));
+                    view
+                }
+            }
+        };
+        let geometry_revision = if wrap_widths.is_some() {
+            self.view_revision
+        } else {
+            self.view_generation
+        };
         let visible = &view.visible;
         #[cfg(test)]
         self.fold_controls.clear();
@@ -2463,9 +2639,19 @@ impl TextCompareScreen {
                 .unwrap_or_else(|| *visible.last().unwrap());
             ui.ctx().request_repaint();
         }
-        let before = self
-            .editing
-            .then(|| (self.left.text.clone(), self.right.text.clone()));
+        // The undo base is refreshed only when the buffers changed outside an edit
+        // (load, merge, undo...); a plain frame compares instead of cloning 2 x N bytes.
+        if self.editing {
+            let stale = self
+                .edit_base
+                .as_ref()
+                .is_none_or(|(left, right)| *left != self.left.text || *right != self.right.text);
+            if stale {
+                self.edit_base = Some((self.left.text.clone(), self.right.text.clone()));
+            }
+        } else {
+            self.edit_base = None;
+        }
         let mut edited = false;
         if self.scroll_to_selection {
             if let Some(y) = view.line_y.get(self.selected_line_idx).copied().flatten() {
@@ -2512,6 +2698,17 @@ impl TextCompareScreen {
             }
             self.scroll_to_selection = false;
         }
+        let reflow = self.reflow_caret.take();
+        if let Some(left) = reflow {
+            if let Some(id) = self.editor_cache[usize::from(!left)].widget_id {
+                ui.memory_mut(|memory| memory.request_focus(id));
+            }
+        }
+        let scroll_to_match = self
+            .pending_selection
+            .as_ref()
+            .map(|(left, _)| *left)
+            .or(reflow);
         if let Some((left, range)) = self.pending_selection.take() {
             if let Some(id) = self.editor_cache[usize::from(!left)].widget_id {
                 if let Some(mut state) = TextEdit::load_state(ui.ctx(), id) {
@@ -2526,18 +2723,6 @@ impl TextCompareScreen {
                 }
             }
         }
-        // Whole physical pixels, so the gutter and its icons of the right pane
-        // stay on the pixel grid instead of being blended.
-        let ppp = ui.ctx().pixels_per_point();
-        // The frame starts one pixel under the thumbnail's right edge. The
-        // native splitter is 3 px; its left edge is at half the main panel,
-        // rather than half the space remaining after subtracting the splitter.
-        let frame_rect = Rect::from_min_max(ui.cursor().min - vec2(1.0, 0.0), ui.max_rect().max);
-        let first_width = ((frame_rect.width() / 2.0 * ppp).floor() / ppp).max(1.0);
-        let pane_widths = [
-            first_width,
-            (frame_rect.width() - first_width - super::text_chrome::SPLITTER_WIDTH).max(1.0),
-        ];
         let mut panes = ui.new_child(UiBuilder::new().max_rect(frame_rect));
         // The thumbnail and editor share this edge. The central panel's
         // inherited clip would otherwise cut off the left frame's one pixel.
@@ -2597,13 +2782,19 @@ impl TextCompareScreen {
                             )),
                             |ui| {
                                 let char_width = ui.fonts(|fonts| {
-                                    fonts.glyph_width(&FontId::monospace(FONT_SIZE), 'M')
+                                    fonts.glyph_width(&aligned_editor::editor_font(), 'M')
                                 });
-                                let content_width =
+                                let content_width = if self.word_wrap {
+                                    editor_width.max(TEXT_OFFSET + 1.0)
+                                } else {
                                     (self.max_line_lengths[side] as f32 * char_width + TEXT_OFFSET)
-                                        .max(editor_width);
-                                ScrollArea::both()
+                                        .max(editor_width)
+                                };
+                                ScrollArea::new([!self.word_wrap, true])
                                     .id_salt(("aligned_pane", left))
+                                    // Offsets are synchronized explicitly between panes.
+                                    // An internal scroll animation fights that synchronization.
+                                    .animated(false)
                                     .auto_shrink([false; 2])
                                     .scroll_bar_visibility(
                                         egui::scroll_area::ScrollBarVisibility::AlwaysHidden,
@@ -2656,7 +2847,7 @@ impl TextCompareScreen {
                                                         == DiffStatus::Same);
                                             let rect = Rect::from_min_size(
                                                 origin + vec2(0.0, view_row.top),
-                                                vec2(content_width, row_height),
+                                                vec2(content_width, view_row.height()),
                                             );
                                             let hit_rect = Rect::from_min_max(
                                                 pos2(origin.x + viewport.left(), rect.top()),
@@ -2687,7 +2878,7 @@ impl TextCompareScreen {
                                                     hit_rect.left()
                                                         + GUTTER_BUTTON_LEFT
                                                         + GUTTER_BUTTON_WIDTH,
-                                                    rect.bottom(),
+                                                    rect.top() + row_height,
                                                 ),
                                             );
                                             let button = gutter_arrow.map(|kind| {
@@ -2791,7 +2982,7 @@ impl TextCompareScreen {
                                                 filter: self.filter_mode,
                                                 context: self.context_lines,
                                                 revision: self.revision,
-                                                view_revision: self.view_revision,
+                                                view_revision: geometry_revision,
                                                 paint_range: [
                                                     ((viewport.top() / 128.0).floor() * 128.0
                                                         - 128.0)
@@ -2802,6 +2993,7 @@ impl TextCompareScreen {
                                                 ],
                                                 unchanged: true,
                                                 rules: self.active_rules(),
+                                                wrap_widths,
                                             };
                                             let (text, other) = if left {
                                                 (&mut self.left.text, &self.right.text)
@@ -2809,22 +3001,28 @@ impl TextCompareScreen {
                                                 (&mut self.right.text, &self.left.text)
                                             };
                                             let cache = &mut self.editor_cache[side];
-                                            let layout = cache.layout(
-                                                ui,
-                                                text,
-                                                other,
-                                                &self.diff_result,
-                                                options,
-                                                &self.revealed,
-                                            );
-                                            let initial_text = text.clone();
+                                            // Keep no galley reference across the editor: an edit
+                                            // then updates the cached rows in place.
+                                            let (leading_y, galley_height) = {
+                                                let layout = cache.layout(
+                                                    ui,
+                                                    text,
+                                                    other,
+                                                    &self.diff_result,
+                                                    options,
+                                                    &self.revealed,
+                                                    Some(&view),
+                                                );
+                                                (layout.leading_y, layout.galley.size().y)
+                                            };
+                                            let mut layout_calls = 0;
                                             let editor_origin =
-                                                origin + vec2(TEXT_OFFSET, layout.leading_y);
+                                                origin + vec2(TEXT_OFFSET, leading_y);
                                             let editor_rect = Rect::from_min_size(
                                                 editor_origin,
                                                 vec2(
                                                     content_width - TEXT_OFFSET,
-                                                    layout.galley.size().y.max(row_height),
+                                                    galley_height.max(row_height),
                                                 ),
                                             );
                                             ui.allocate_new_ui(
@@ -2844,8 +3042,11 @@ impl TextCompareScreen {
                                                     ));
                                                     ui.visuals_mut().text_cursor.stroke.width = 0.0;
                                                     ui.visuals_mut().text_cursor.preview = false;
+                                                    // TextEdit lays out the unchanged buffer first and
+                                                    // again only after each event that mutated it.
                                                     let mut layouter =
                                                         |ui: &Ui, text: &str, _: f32| {
+                                                            layout_calls += 1;
                                                             cache
                                                                 .layout(
                                                                     ui,
@@ -2853,11 +3054,12 @@ impl TextCompareScreen {
                                                                     other,
                                                                     &self.diff_result,
                                                                     LayoutOptions {
-                                                                        unchanged: text
-                                                                            == initial_text,
+                                                                        unchanged: layout_calls
+                                                                            == 1,
                                                                         ..options
                                                                     },
                                                                     &self.revealed,
+                                                                    Some(&view),
                                                                 )
                                                                 .galley
                                                         };
@@ -2874,16 +3076,32 @@ impl TextCompareScreen {
                                                     };
                                                     let mut output = editor
                                                         .id_salt(("aligned_editor", left))
-                                                        .font(FontId::monospace(FONT_SIZE))
+                                                        .font(aligned_editor::editor_font())
                                                         .margin(Vec2::ZERO)
                                                         .frame(false)
                                                         .desired_width(content_width - TEXT_OFFSET)
                                                         .desired_rows(1)
                                                         .layouter(&mut layouter)
+                                                        .disable_undoer()
                                                         .show(ui);
+                                                    if cache.paints_rows() {
+                                                        let (diff, painted_view) =
+                                                            cache.painted(&self.diff_result, &view);
+                                                        aligned_editor::paint_rows(
+                                                            ui,
+                                                            ui.painter(),
+                                                            output.galley_pos
+                                                                - vec2(0.0, leading_y),
+                                                            diff,
+                                                            painted_view,
+                                                            left,
+                                                            self.show_whitespace,
+                                                        );
+                                                    }
                                                     cache.widget_id = Some(output.response.id);
                                                     cache.widget_rect = Some(output.response.rect);
-                                                    if self.show_whitespace {
+                                                    if self.show_whitespace && !cache.paints_rows()
+                                                    {
                                                         let painter = ui
                                                             .painter()
                                                             .with_clip_rect(output.text_clip_rect);
@@ -2910,8 +3128,7 @@ impl TextCompareScreen {
                                                                             + glyph.pos.to_vec2(),
                                                                         Align2::LEFT_BOTTOM,
                                                                         marker,
-                                                                        FontId::monospace(
-                                                                            FONT_SIZE,
+                                                                        aligned_editor::editor_font(
                                                                         ),
                                                                         Color32::from_gray(130),
                                                                     );
@@ -2924,6 +3141,21 @@ impl TextCompareScreen {
                                                         self.active_left = left;
                                                         if let Some(mut range) = output.cursor_range
                                                         {
+                                                            if scroll_to_match == Some(left) {
+                                                                ui.scroll_to_rect(
+                                                                    output
+                                                                        .galley
+                                                                        .pos_from_cursor(
+                                                                            &range.primary,
+                                                                        )
+                                                                        .translate(
+                                                                            output
+                                                                                .galley_pos
+                                                                                .to_vec2(),
+                                                                        ),
+                                                                    Some(Align::Center),
+                                                                );
+                                                            }
                                                             // Keep a select-all intact even when the
                                                             // last line is filtered out.
                                                             let whole =
@@ -2968,8 +3200,8 @@ impl TextCompareScreen {
                                                                 }
                                                             }
                                                             let caret = (
-                                                                range.primary.rcursor.row + 1,
-                                                                range.primary.rcursor.column + 1,
+                                                                range.primary.pcursor.paragraph + 1,
+                                                                range.primary.pcursor.offset + 1,
                                                             );
                                                             if self.caret[side] != caret
                                                                 || output.response.changed()
@@ -3254,7 +3486,7 @@ impl TextCompareScreen {
             ui.ctx().request_repaint();
         }
         if edited {
-            if let Some(before) = before {
+            if let Some(before) = self.edit_base.take() {
                 if before.0 != self.left.text || before.1 != self.right.text {
                     if self.undo.len() >= 20 {
                         self.undo.remove(0);
@@ -3262,10 +3494,24 @@ impl TextCompareScreen {
                     self.undo.push(before);
                     self.redo.clear();
                     let side = usize::from(!self.active_left);
-                    if let Some((result, ms)) =
+                    if let Some((result, ms, view)) =
                         self.editor_cache[side].take_comparison(&self.left.text, &self.right.text)
                     {
                         self.accept_comparison(result, ms);
+                        // The editor already built the aligned view of this comparison.
+                        if !self.word_wrap {
+                            self.view_cache = Some((
+                                (
+                                    self.revision,
+                                    self.view_revision,
+                                    self.filter_mode,
+                                    self.context_lines,
+                                    self.revealed.clone(),
+                                ),
+                                std::sync::Arc::new(view),
+                            ));
+                            self.view_generation = self.view_generation.wrapping_add(1);
+                        }
                     } else {
                         self.compare();
                     }
@@ -3376,11 +3622,7 @@ fn insert_search_expression(ctx: &Context, id: Id, text: &mut String, expression
                 ..range.primary.index.max(range.secondary.index)
         })
         .unwrap_or_else(|| text.chars().count()..text.chars().count());
-    let byte_at = |index| {
-        text.char_indices()
-            .nth(index)
-            .map_or(text.len(), |(byte, _)| byte)
-    };
+    let byte_at = |index| char_to_byte(text, index);
     let bytes = byte_at(range.start)..byte_at(range.end);
     text.replace_range(bytes, expression);
     state
@@ -3419,7 +3661,7 @@ fn draw_section_brackets(
             continue;
         };
         let top = origin.y + first + ROW_HEIGHT;
-        let bottom = origin.y + last + ROW_HEIGHT - 3.0;
+        let bottom = origin.y + last + view.line_heights[section.end - 1] - 3.0;
         if bottom < clip.top() || top >= clip.bottom() {
             continue;
         }
@@ -3548,7 +3790,7 @@ fn render_diff_line(ui: &Ui, rect: Rect, line: &AlignedLine, appearance: LineApp
     if line_numbers {
         if let Some(number) = line_no {
             painter.text(
-                pos2(gutter.right() - 4.0, rect.center().y),
+                pos2(gutter.right() - 4.0, rect.top() + ROW_HEIGHT / 2.0),
                 Align2::RIGHT_CENTER,
                 number.to_string(),
                 FontId::monospace(12.0),
@@ -3560,12 +3802,14 @@ fn render_diff_line(ui: &Ui, rect: Rect, line: &AlignedLine, appearance: LineApp
         // pixel size on the physical grid; under the mouse a light-blue frame
         // of the row height minus one surrounds it (sampled at 100%).
         let size = arrow.size_vec2() / painter.ctx().pixels_per_point();
-        let min =
-            painter.round_pos_to_pixels(pos2(gutter.left() + 4.0, rect.center().y - size.y / 2.0));
+        let min = painter.round_pos_to_pixels(pos2(
+            gutter.left() + 4.0,
+            rect.top() + ROW_HEIGHT / 2.0 - size.y / 2.0,
+        ));
         if hot {
             let frame = painter.round_rect_to_pixels(Rect::from_min_size(
                 pos2(min.x, rect.top() + 1.0),
-                vec2(size.x, rect.height() - 1.0),
+                vec2(size.x, ROW_HEIGHT - 1.0),
             ));
             painter.rect_filled(frame, 0.0, BcTheme::GUTTER_HOT_BORDER);
             painter.rect_filled(frame.shrink(1.0), 0.0, BcTheme::GUTTER_HOT_FILL);
@@ -3601,7 +3845,7 @@ fn inline_job(chunks: &[InlineChunk], _active: bool) -> egui::text::LayoutJob {
             &chunk.text,
             0.0,
             TextFormat {
-                font_id: FontId::monospace(FONT_SIZE),
+                font_id: aligned_editor::editor_font(),
                 color: match chunk.kind {
                     InlineChunkKind::Diff => BcTheme::DIFF_TEXT,
                     InlineChunkKind::Unimportant => BcTheme::MINOR_TEXT,
@@ -3641,7 +3885,7 @@ fn detail_job(chunks: &[InlineChunk], end_of_line: bool) -> egui::text::LayoutJo
             "¤",
             0.0,
             TextFormat {
-                font_id: FontId::monospace(FONT_SIZE),
+                font_id: aligned_editor::editor_font(),
                 color: Color32::from_gray(160),
                 ..Default::default()
             },
@@ -3686,6 +3930,7 @@ fn draw_hatching(painter: &Painter, rect: Rect) {
 mod tests {
     use super::super::dialogs::{SaveChoice, TestDialogs};
     use super::*;
+    include!("text_compare/wrap_tests.rs");
 
     #[test]
     fn detail_whitespace_and_end_markers_do_not_change_the_document() {
@@ -3952,6 +4197,7 @@ mod tests {
         );
         screen.compare();
         let ctx = Context::default();
+        super::super::theme::apply(&ctx);
         let mut icons = IconManager::new();
         render_frame(
             &ctx,
@@ -3971,6 +4217,27 @@ mod tests {
             "edited"
         );
         remove_pair(&dir);
+    }
+
+    #[test]
+    fn char_to_byte_matches_char_indices_across_blocks() {
+        let text: String = (0..3000)
+            .map(|i| {
+                if i % 3 == 0 {
+                    "ação🙂
+"
+                } else {
+                    "abc"
+                }
+            })
+            .collect();
+        for index in (0..text.chars().count() + 3).step_by(7) {
+            let expected = text
+                .char_indices()
+                .nth(index)
+                .map_or(text.len(), |(i, _)| i);
+            assert_eq!(char_to_byte(&text, index), expected, "{index}");
+        }
     }
 
     #[test]
@@ -4013,6 +4280,125 @@ mod tests {
             serde_json::json!({"version": env!("CARGO_PKG_VERSION"), "metric": "egui input/layout frame, no GPU submission",
             "file_bytes": [screen.left.text.len(), screen.right.text.len()], "keypresses": frames.len(),
             "mean_ms": frames.iter().sum::<f64>() / frames.len() as f64, "max_ms": frames.iter().copied().fold(0.0_f64, f64::max), "frames_ms": frames})
+        );
+    }
+
+    /// Manual benchmark with the user's large pair (57,108 lines, nearly every
+    /// line different): open (read + compare + first frame), wheel scrolling
+    /// down/up and typing. Override the pair with ANYCOMPARE_BENCH_LEFT/RIGHT.
+    #[test]
+    #[ignore = "manual benchmark with the user's large sample documents"]
+    fn profile_large_pair() {
+        let left = std::env::var("ANYCOMPARE_BENCH_LEFT")
+            .unwrap_or_else(|_| "C:/Projetos/BC4/teste de desempenho/ingles.txt".into());
+        let right = std::env::var("ANYCOMPARE_BENCH_RIGHT")
+            .unwrap_or_else(|_| "C:/Projetos/BC4/teste de desempenho/portugues.txt".into());
+        let ms = |start: Instant| start.elapsed().as_secs_f64() * 1000.0;
+        let stats = |frames: &[f64]| {
+            let mut sorted = frames.to_vec();
+            sorted.sort_by(f64::total_cmp);
+            serde_json::json!({"count": frames.len(),
+                "mean_ms": frames.iter().sum::<f64>() / frames.len().max(1) as f64,
+                "p95_ms": sorted.get(sorted.len() * 95 / 100).copied().unwrap_or(0.0),
+                "max_ms": sorted.last().copied().unwrap_or(0.0)})
+        };
+        let ctx = Context::default();
+        super::super::theme::apply(&ctx);
+        let mut icons = IconManager::new();
+        let mut screen = TextCompareScreen::new();
+        let open = Instant::now();
+        screen.load_files(&left, &right);
+        let load_ms = ms(open);
+        assert!(screen.error.is_none(), "{:?}", screen.error);
+        render_frame(&ctx, &mut screen, &mut icons, vec![]);
+        let open_ms = ms(open);
+        for _ in 0..2 {
+            render_frame(&ctx, &mut screen, &mut icons, vec![]);
+        }
+        let over = Event::PointerMoved(pos2(300.0, 400.0));
+        let wheel = |dy: f32| Event::MouseWheel {
+            unit: egui::MouseWheelUnit::Line,
+            delta: vec2(0.0, dy),
+            modifiers: Modifiers::NONE,
+        };
+        render_frame(&ctx, &mut screen, &mut icons, vec![over.clone()]);
+        let mut down = Vec::new();
+        let mut tessellate = Vec::new();
+        for _ in 0..60 {
+            let start = Instant::now();
+            let output = render_frame(
+                &ctx,
+                &mut screen,
+                &mut icons,
+                vec![over.clone(), wheel(-3.0)],
+            );
+            down.push(ms(start));
+            let start = Instant::now();
+            let shape_count = output.shapes.len();
+            let primitives = ctx.tessellate(output.shapes, output.pixels_per_point);
+            tessellate.push(ms(start));
+            if tessellate.len() == 1 {
+                let vertices: usize = primitives
+                    .iter()
+                    .map(|p| match &p.primitive {
+                        egui::epaint::Primitive::Mesh(m) => m.vertices.len(),
+                        _ => 0,
+                    })
+                    .sum();
+                println!(
+                    "shapes {shape_count} primitives {} vertices {vertices}",
+                    primitives.len()
+                );
+            }
+            assert!(!primitives.is_empty());
+        }
+        let scrolled = screen.scroll_offset_y;
+        let mut up = Vec::new();
+        for _ in 0..60 {
+            let start = Instant::now();
+            render_frame(
+                &ctx,
+                &mut screen,
+                &mut icons,
+                vec![over.clone(), wheel(3.0)],
+            );
+            up.push(ms(start));
+        }
+        // Jump to the middle and to the end (scrollbar drag / Ctrl+End cost).
+        let mut jumps = Vec::new();
+        for line in [
+            screen.diff_result.lines.len() / 2,
+            screen.diff_result.lines.len() - 1,
+            0,
+        ] {
+            screen.selected_line_idx = line;
+            screen.scroll_to_selection = true;
+            let start = Instant::now();
+            render_frame(&ctx, &mut screen, &mut icons, vec![]);
+            jumps.push(ms(start));
+        }
+        render_frame(&ctx, &mut screen, &mut icons, vec![]);
+        focus_at(&ctx, &screen, true, 3);
+        render_frame(&ctx, &mut screen, &mut icons, vec![]);
+        let mut typing = Vec::new();
+        for _ in 0..20 {
+            let start = Instant::now();
+            render_frame(&ctx, &mut screen, &mut icons, vec![Event::Text("x".into())]);
+            typing.push(ms(start));
+        }
+        assert!(
+            screen.left.text.contains("xxxxxxxxxx"),
+            "typing must reach the buffer"
+        );
+        println!(
+            "{}",
+            serde_json::json!({"version": env!("CARGO_PKG_VERSION"),
+                "metric": "egui input/layout frame, no GPU submission",
+                "lines": [screen.left.text.lines().count(), screen.right.text.lines().count()],
+                "aligned_rows": screen.diff_result.lines.len(),
+                "load_compare_ms": load_ms, "open_first_frame_ms": open_ms,
+                "scrolled_px": scrolled, "scroll_down": stats(&down), "tessellate": stats(&tessellate), "scroll_up": stats(&up),
+                "jumps_ms": jumps, "typing": stats(&typing)})
         );
     }
 
@@ -4269,7 +4655,7 @@ mod tests {
             .diff_result
             .lines
             .iter()
-            .any(|line| line.left_text == "🙂fim"));
+            .any(|line| &*line.left_text == "🙂fim"));
         focus_at(&ctx, &screen, true, screen.left.text.chars().count());
         render_frame(
             &ctx,
@@ -4316,6 +4702,7 @@ mod tests {
         ] {
             for filter in [FilterMode::All, FilterMode::Differences, FilterMode::Same] {
                 let ctx = Context::default();
+                super::super::theme::apply(&ctx);
                 let mut icons = IconManager::new();
                 let mut screen = TextCompareScreen::new();
                 screen.left.text = left.into();
@@ -4334,6 +4721,7 @@ mod tests {
     #[test]
     fn gap_controls_expand_both_sides_and_allow_editing_real_text() {
         let ctx = Context::default();
+        super::super::theme::apply(&ctx);
         let mut icons = IconManager::new();
         let mut screen = TextCompareScreen::new();
         screen.left.text = "header\nname\nold\ntail\n".into();
@@ -4409,6 +4797,7 @@ mod tests {
     #[test]
     fn filtered_editor_navigation_skips_hidden_lines_and_edits_recompute_sections() {
         let ctx = Context::default();
+        super::super::theme::apply(&ctx);
         let mut icons = IconManager::new();
         let mut screen = TextCompareScreen::new();
         screen.left.text = "a\nb\nsame\nd\n".into();
@@ -4645,7 +5034,7 @@ mod tests {
         render_frame(&ctx, &mut screen, &mut icons, vec![]);
         // The caret sits on an equal line: only the selection can enable Copy.
         let caret = screen.selected_line_idx;
-        assert_eq!(screen.diff_result.lines[caret].right_text, "meio");
+        assert_eq!(&*screen.diff_result.lines[caret].right_text, "meio");
         assert_eq!(screen.diff_result.lines[caret].status, DiffStatus::Same);
         assert!(!screen.has_selection(&ctx, false));
         render_frame(&ctx, &mut screen, &mut icons, vec![ctrl(Key::A)]);

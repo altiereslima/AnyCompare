@@ -46,6 +46,10 @@ impl Workspace {
                 ));
             }
             let valid = match session.files.kind {
+                crate::history::SessionKind::TextEdit => {
+                    session.files.left.is_file()
+                        && crate::document::same_file(&session.files.left, &session.files.right)
+                }
                 crate::history::SessionKind::Folder => {
                     session.files.left.is_dir() && session.files.right.is_dir()
                 }

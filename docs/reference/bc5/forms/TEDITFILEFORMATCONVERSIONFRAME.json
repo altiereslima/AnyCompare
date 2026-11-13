@@ -1,0 +1,49 @@
+{
+  "class": "TEditFileFormatConversionFrame",
+  "name": "EditFileFormatConversionFrame",
+  "props": {},
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "ConvertSaveAppLbl",
+      "props": {
+        "Left": 24,
+        "Top": 96,
+        "Height": 13,
+        "Caption": "Sa&ving:",
+        "FocusControl": "ConvertSaveAppEdit"
+      },
+      "children": [],
+      "flags": 2,
+      "child_position": 1
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "ConvertNoEditEdit",
+      "props": {
+        "Left": 24,
+        "Top": 75,
+        "Height": 17,
+        "Caption": "D&isable editing",
+        "TabOrder": 2,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiSpecBar",
+      "name": "ConvertSaveAppEdit",
+      "props": {
+        "Left": 24,
+        "Top": 113,
+        "Width": 241,
+        "TabOrder": 3,
+        "OnBrowse": "ConvertAppEditBrowse",
+        "OnChange": "SomethingChangedClick",
+        "OnGetArgs": "ConvertAppEditGetArgs"
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

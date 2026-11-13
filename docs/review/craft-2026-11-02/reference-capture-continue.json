@@ -1,0 +1,1 @@
+{"error":{"category":"missing","code":"not_found","message":"Process 3268 has no windows open.","remediation":"Pass the pid of a running app with a window on screen (Task Manager's Details tab shows it).","retryable":false}}

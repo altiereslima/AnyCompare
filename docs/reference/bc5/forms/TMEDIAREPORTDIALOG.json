@@ -1,0 +1,11 @@
+{
+  "class": "TMediaReportDialog",
+  "name": "MediaReportDialog",
+  "props": {
+    "Caption": "Media Compare Report",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [],
+  "flags": 1
+}

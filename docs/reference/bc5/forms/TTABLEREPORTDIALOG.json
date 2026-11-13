@@ -1,0 +1,88 @@
+{
+  "class": "TTableReportDialog",
+  "name": "TableReportDialog",
+  "props": {
+    "Caption": "Table Compare Report",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiListBox",
+      "name": "LayoutListBox",
+      "props": {
+        "Items.Strings": [
+          "Side-by-side",
+          "Summary",
+          "Interleaved"
+        ]
+      },
+      "children": [],
+      "flags": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "OptionsPanel",
+      "props": {},
+      "children": [
+        {
+          "class": "TUiPanel",
+          "name": "BasicPanel",
+          "props": {},
+          "children": [
+            {
+              "class": "TUiCheckBox",
+              "name": "InsigIgnoredEdit",
+              "props": {
+                "TabOrder": 2
+              },
+              "children": [],
+              "flags": 1
+            },
+            {
+              "class": "TUiCheckBox",
+              "name": "CurSheetOnlyEdit",
+              "props": {
+                "Left": 94,
+                "Top": 2,
+                "Height": 17,
+                "Caption": "Just curr&ent sheet",
+                "TabOrder": 1,
+                "OnClick": "SomethingChangedClick"
+              },
+              "children": []
+            }
+          ],
+          "flags": 1
+        },
+        {
+          "class": "TUiActivePanelView",
+          "name": "LayoutPanelView",
+          "props": {},
+          "children": [
+            {
+              "class": "TUiActivePanel",
+              "name": "SideBySidePanel",
+              "props": {},
+              "children": [
+                {
+                  "class": "TUiCheckBox",
+                  "name": "IncludeNumsEdit",
+                  "props": {
+                    "Caption": "Include row &numbers"
+                  },
+                  "children": [],
+                  "flags": 1
+                }
+              ],
+              "flags": 1
+            }
+          ],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    }
+  ],
+  "flags": 1
+}

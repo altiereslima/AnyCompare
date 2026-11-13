@@ -1,0 +1,17 @@
+{
+  "version": "0.2.2-preview",
+  "date": "2026-11-04",
+  "executable": "dist/preview/AnyCompare-0.2.2.exe",
+  "size": 24718336,
+  "sha256": "60d81b141b52345cf74dac0f5dff69ea589efc99d48d5d0026c5560b234c9b27",
+  "validation": "headless-egui-keyboard-and-pointer-events",
+  "automatic_tests": {"passed": 171, "failed": 0, "ignored": 9},
+  "separate_ignored_tests": {"english_ui_passed": 2},
+  "clippy": "passed-with-deny-warnings",
+  "build": "release-passed",
+  "new_native_windows_opened": false,
+  "pixel_parity_verified": false,
+  "stable_executable_changed": false,
+  "previous_preview_changed": false,
+  "limitations": ["Native visual/GPU validation pending", "Full Text Edit command parity pending", "Text Compare word wrap pending"]
+}

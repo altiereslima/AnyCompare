@@ -1,0 +1,136 @@
+{
+  "class": "TMediaView",
+  "name": "MediaView",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "ViewOther",
+    "OnResize": "ViewResize"
+  },
+  "children": [
+    {
+      "class": "TUiPanel",
+      "name": "MainPanel",
+      "props": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 750,
+        "Height": 586,
+        "Align": "alClient",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0,
+        "OnResize": "MainPanelResize"
+      },
+      "children": [
+        {
+          "class": "TUiSplitter",
+          "name": "Splitter",
+          "props": {
+            "Left": 373,
+            "Top": 0,
+            "Height": 586,
+            "OnMoved": "SplitterMoved"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiPanel",
+          "name": "LeftPanel",
+          "props": {
+            "Left": 0,
+            "Top": 0,
+            "Width": 373,
+            "Height": 586,
+            "Align": "alLeft",
+            "BevelOuter": "bvNone",
+            "TabOrder": 0
+          },
+          "children": []
+        },
+        {
+          "class": "TUiPanel",
+          "name": "RightPanel",
+          "props": {
+            "Left": 376,
+            "Top": 0,
+            "Width": 374,
+            "Height": 586,
+            "Align": "alClient",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": []
+        }
+      ],
+      "flags": 2,
+      "child_position": 0
+    },
+    {
+      "class": "TUiPanel",
+      "name": "DetailsPanel",
+      "props": {
+        "Left": 0,
+        "Top": 586,
+        "Width": 750,
+        "Height": 56,
+        "Align": "alBottom",
+        "BevelOuter": "bvLowered",
+        "Color": "clBtnShadow",
+        "ParentBackground": false,
+        "TabOrder": 1,
+        "OnResize": "DetailsPanelResize"
+      },
+      "children": [],
+      "flags": 2,
+      "child_position": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "JobProgressPanel",
+      "props": {
+        "TabOrder": 2
+      },
+      "children": [],
+      "flags": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "JobErrorPanel",
+      "props": {
+        "TabOrder": 3
+      },
+      "children": [],
+      "flags": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "MessagePanel",
+      "props": {
+        "TabOrder": 4
+      },
+      "children": [],
+      "flags": 1
+    },
+    {
+      "class": "TUiStatusBar",
+      "name": "StatusBar",
+      "props": {
+        "Panels": [
+          {
+            "Style": "psOwnerDraw",
+            "Width": 225,
+            "Images": "BcImages.ContentImages"
+          },
+          {
+            "Width": 300
+          },
+          {
+            "Width": 225
+          }
+        ]
+      },
+      "children": [],
+      "flags": 1
+    }
+  ],
+  "flags": 1
+}

@@ -1,0 +1,11 @@
+﻿Table Compare
+Produced: 02/11/2026 14:04:02
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\review\craft-2026-11-02\tables\no-header\left.csv
+Right file: C:\Projetos\BC4\anycompare\docs\review\craft-2026-11-02\tables\no-header\right.csv
+  1: 2:    3:     1: 2:    3:
+-----------------------------
+1 a  alpha 1  = 1 a  alpha 1
+2 b  beta  2  = 2 b  beta  2
+-----------------------------

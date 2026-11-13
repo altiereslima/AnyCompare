@@ -1,9 +1,12 @@
 # AnyCompare
 
-Reconstrução em Rust da interface e das funções do Beyond Compare 4.4.7.28397.
+Reconstrução em Rust da interface e das funções do Beyond Compare, com base no BC4 e alvo atual BC5.2.7.32913.
 A cópia completa está em desenvolvimento; o inventário de recursos não comprova equivalência funcional.
 
-Estado atual: [30/10/2026 — versão 0.1.17](docs/STATUS-ABAS-0.1.17.md).
+Estado atual: [02/11/2026 — versão 0.2.0](docs/STATUS-BC5-0.2.0.md). Pendências: [paridade BC5](docs/BC5-PARIDADE.md).
+
+A prévia local 0.2.5 acrescenta rolagem automática à seleção em Tabelas e
+está em `dist/preview/AnyCompare-0.2.5.exe`. [Detalhes da prévia](docs/STATUS-BC5-0.2.5-PREVIA.md)
 
 ## Executar
 
@@ -15,6 +18,11 @@ são incorporados ao executável. As entregas locais também ficam em `dist/AnyC
 cargo run -- --text arquivo-esquerdo.txt arquivo-direito.txt
 cargo run -- --folder pasta-esquerda pasta-direita
 cargo run -- --hex binario-esquerdo binario-direito
+cargo run -- --table planilha-esquerda.xlsx planilha-direita.ods
+cargo run -- --registry arquivo-esquerdo.reg arquivo-direito.reg
+cargo run -- --media audio-esquerdo.m4a audio-direito.m4a
+cargo run -- --edit arquivo.reg
+cargo run -- arquivo-esquerdo.csv arquivo-direito.csv
 ```
 
 Também é possível selecionar arquivos/pastas pelos botões ou arrastar um par para a janela.
@@ -22,7 +30,12 @@ As sessões abertas permanecem em abas abaixo do menu, com ícones, seleção e 
 
 ## Disponível nesta versão
 
-- Árvore Sessões nos comparadores de Texto/Pastas/Hex, com Novo e histórico próprio.
+- Comparar Versões PE32/PE32+, com abertura automática de pares DLL/EXE e árvore de metadados.
+- Tabelas com várias planilhas Excel/ODS e tabelas HTML, abas inferiores e pares órfãos; leitura de datas regionais e preservação da ordem original.
+
+- Comparação de tabelas CSV/TSV/TAB/SSV/PSV e planilhas XLS/XLSX/XLSB/ODS. Detecção automática, grade por células, chaves repetidas, busca, filtros, seleção de planilha e regras de cabeçalho/chave. Excel/ODS somente leitura; valores ou fórmulas armazenadas, sem recálculo.
+- Edição de células dos arquivos delimitados por duplo clique/F2, cópia de registros, desfazer/refazer e salvar preservando codificação e terminadores.
+- Árvore Sessões nos comparadores de Texto/Pastas/Hex/Tabelas, com Novo e histórico próprio.
 - Página inicial com cores e recursos do original; faixa vermelha removida por solicitação do usuário.
 - Comparação de texto com alinhamento, cores por caractere, filtros e contexto; validada contra os relatórios do original nos dois resumos fornecidos.
 - Faixas de linhas filtradas com contagem e botões +/− sincronizados para expandir/recolher os trechos.
@@ -94,7 +107,17 @@ dist/AnyCompare.exe --text tests/fixtures/left/example.txt tests/fixtures/right/
 repete a inicialização das telas e registra capturas, códigos de saída e hashes dos arquivos de entrada.
 
 A interface usa o renderizador OpenGL do eframe; a comparação de arquivos é calculada na CPU.
-Monitores de FPS podem reconhecer a janela gráfica.
+Para ocultar o contador do MSI Afterburner, execute o comando abaixo em um
+PowerShell como administrador. Ele configura a detecção como **None** no
+RTSS para o executável estável e a prévia mais recente em `dist`.
+
+```powershell
+.\tools\disable-rtss-overlay.ps1
+```
+
+Use `-Executable` com o caminho do executável se estiver usando outra prévia.
+`-Check` consulta o perfil e o nível de detecção. Reabra o AnyCompare depois
+de aplicar o perfil.
 
 ## Limites atuais
 
@@ -103,3 +126,7 @@ perfis remotos, regras avançadas e outros módulos/menus do original continuam 
 Os controles ainda não implementados permanecem desabilitados.
 A comparação de pastas usa uma lista de caminhos recursiva; a árvore hierárquica completa não foi reproduzida.
 Não houve validação de equivalência binária nem verificação de cada ação do original em execução.
+
+## Recursos incorporados
+
+O executável contém um pacote verificado dos 729 recursos originais, suas definições de formulários e imagens derivadas. Consulte `--verify-resources` para o inventário e execute `python tools/pack_reference_resources.py --verify-executable dist/AnyCompare.exe` para verificar os hashes incorporados. A presença dos dados não certifica os comportamentos ainda pendentes dos módulos.

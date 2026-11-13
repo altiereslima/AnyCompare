@@ -1,0 +1,239 @@
+{
+  "class": "TTableColHandlingDialog",
+  "name": "TableColHandlingDialog",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "DlgTableColHandling",
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "Caption": "%",
+    "ClientHeight": 194,
+    "ClientWidth": 410,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "AsTextLbl",
+      "props": {
+        "Left": 8,
+        "Top": 58,
+        "Height": 13,
+        "Caption": "&Type:",
+        "FocusControl": "AsTextEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "StrInsigLbl",
+      "props": {
+        "Left": 209,
+        "Top": 8,
+        "Height": 13,
+        "Caption": "Text important, except for:"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "DateTimeToleranceLbl",
+      "props": {
+        "Left": 209,
+        "Top": 71,
+        "Height": 13,
+        "Caption": "Dat&e tolerance:",
+        "FocusControl": "DateTimeToleranceEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "NumToleranceLbl",
+      "props": {
+        "Left": 209,
+        "Top": 117,
+        "Height": 13,
+        "Caption": "&Numeric tolerance:",
+        "FocusControl": "NumToleranceEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "IsKeyEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "&Key",
+        "TabOrder": 0,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseDefaultEdit",
+      "props": {
+        "Left": 8,
+        "Top": 33,
+        "Height": 17,
+        "Caption": "Use &default",
+        "TabOrder": 1,
+        "OnClick": "UseDefaultClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "AsTextEdit",
+      "props": {
+        "Left": 8,
+        "Top": 75,
+        "Width": 193,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 2,
+        "OnChange": "SomethingChangedClick",
+        "Items.Strings": [
+          "General",
+          "Text"
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "InsigEdit",
+      "props": {
+        "Left": 8,
+        "Top": 104,
+        "Height": 17,
+        "Caption": "&Unimportant",
+        "TabOrder": 3,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "StrCaseInsigEdit",
+      "props": {
+        "Left": 209,
+        "Top": 25,
+        "Height": 17,
+        "Caption": "Character &case (ABC = abc)",
+        "TabOrder": 4,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "StrWSInsigEdit",
+      "props": {
+        "Left": 209,
+        "Top": 46,
+        "Height": 17,
+        "Caption": "&Whitespace",
+        "TabOrder": 5,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiSpinEdit",
+      "name": "DateTimeToleranceEdit",
+      "props": {
+        "Left": 209,
+        "Top": 88,
+        "Width": 65,
+        "Height": 21,
+        "TabOrder": 6,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "DateTimeToleranceKindEdit",
+      "props": {
+        "Left": 282,
+        "Top": 88,
+        "Width": 120,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 7,
+        "OnChange": "SomethingChangedClick",
+        "Items.Strings": [
+          "seconds",
+          "minutes",
+          "hours",
+          "days"
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TUiNumEdit",
+      "name": "NumToleranceEdit",
+      "props": {
+        "Left": 209,
+        "Top": 134,
+        "Width": 65,
+        "Height": 21,
+        "Kind": "numFloat",
+        "TabOrder": 8,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "NumToleranceRelativeEdit",
+      "props": {
+        "Left": 282,
+        "Top": 134,
+        "Width": 120,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 9,
+        "OnChange": "SomethingChangedClick",
+        "Items.Strings": [
+          "absolute",
+          "relative (%)"
+        ]
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBtnPanel",
+      "name": "BtnPanel",
+      "props": {
+        "Left": 0,
+        "Top": 155,
+        "Width": 410,
+        "TabOrder": 10
+      },
+      "children": [
+        {
+          "class": "TUiOkBtn",
+          "name": "OkBtn",
+          "props": {},
+          "children": []
+        },
+        {
+          "class": "TUiCancelBtn",
+          "name": "CancelBtn",
+          "props": {},
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}

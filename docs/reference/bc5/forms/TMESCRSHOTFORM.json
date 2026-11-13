@@ -1,0 +1,82 @@
+{
+  "class": "TMEScrShotForm",
+  "name": "ScrShotForm",
+  "props": {
+    "ActiveControl": "ContinueBtn",
+    "Message": "Screenshot Configuration",
+    "MinWidth": 0,
+    "OnAction": "madExcept.HandleScreenshotForm",
+    "Timer": 250
+  },
+  "children": [
+    {
+      "class": "INVButton",
+      "name": "ContinueBtn",
+      "props": {
+        "Caption": "Continue",
+        "Enabled": true,
+        "NoOwnerDraw": false,
+        "Visible": true
+      },
+      "children": []
+    },
+    {
+      "class": "INVButton",
+      "name": "SkipBtn",
+      "props": {
+        "Caption": "Skip",
+        "Enabled": false,
+        "NoOwnerDraw": false,
+        "Visible": true
+      },
+      "children": []
+    },
+    {
+      "class": "INVButton",
+      "name": "CancelBtn",
+      "props": {
+        "Caption": "Abort",
+        "Enabled": true,
+        "NoOwnerDraw": false,
+        "Visible": true
+      },
+      "children": []
+    },
+    {
+      "class": "INVCheckBox",
+      "name": "AttachCheck",
+      "props": {
+        "Caption": "attach a screenshot to the bug report",
+        "Checked": true,
+        "Enabled": true,
+        "OutputName": "",
+        "Spacing": 0
+      },
+      "children": []
+    },
+    {
+      "class": "INVImage",
+      "name": "ScrShotImg",
+      "props": {
+        "Border": true,
+        "Clickable": true,
+        "Enabled": true,
+        "File": "",
+        "Height": 0,
+        "Spacing": 0,
+        "Width": 0
+      },
+      "children": []
+    },
+    {
+      "class": "INVLabel",
+      "name": "Label1",
+      "props": {
+        "Caption": "(click to edit image)",
+        "Enabled": true,
+        "Spacing": 0
+      },
+      "children": []
+    }
+  ]
+}

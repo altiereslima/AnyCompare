@@ -1,0 +1,10 @@
+{
+  "class": "TFileReportDialog",
+  "name": "FileReportDialog",
+  "props": {
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [],
+  "flags": 1
+}

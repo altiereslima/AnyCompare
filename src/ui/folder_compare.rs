@@ -1635,7 +1635,7 @@ impl FolderCompareScreen {
                         ui.painter()
                             .line_segment([cell.right_top(), cell.right_bottom()], border);
                     }
-                    // The default tree ordering is ascending by name.
+                    // Native column heading indicator, distinct from the SORT_UP button image.
                     let c = columns.name.center_top() + vec2(0.0, 3.0);
                     ui.painter().line_segment(
                         [c + vec2(-3.0, 2.0), c],

@@ -1,0 +1,773 @@
+﻿{
+    "date":  "2026-11-03",
+    "version":  "0.2.1",
+    "binary":  "C:\\Projetos\\BC4\\anycompare\\.codex\\build-021\\release\\anycompare.exe",
+    "sha256":  "E6F7CCDA97C839D4D68DD17F4EA6A53390F83AB892829FE76CC0C21F93317AC7",
+    "bytes":  24513536,
+    "screens":  [
+                    {
+                        "screen":  "home",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/home.png",
+                        "working_directory":  "C:\\Users\\Altieres\\Documents\\ChatGPT\\anycompare"
+                    },
+                    {
+                        "screen":  "text",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/text.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "text-modified",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/text-modified.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "hex",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/hex.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "hex-aligned",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/hex-aligned.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "hex-empty",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/hex-empty.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "hex-duplicate-anchor",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/hex-duplicate-anchor.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "home-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/home-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "text-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/text-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "search-pt",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/search-pt.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "search-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/search-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "paths-history",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/paths-history.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "search-history",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/search-history.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "hex-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/hex-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "menu-Sessão-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/menu-Sessão-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "menu-Sessão-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/menu-Sessão-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "menu-Ferramentas-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/menu-Ferramentas-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "menu-Ferramentas-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/menu-Ferramentas-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "menu-Editar-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/menu-Editar-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "menu-Editar-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/menu-Editar-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "tabs-text-pt",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/tabs-text-pt.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "tabs-text-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/tabs-text-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "tabs-text-modified",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/tabs-text-modified.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "tabs-hex",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/tabs-hex.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder-drop-pair",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder-drop-pair.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder-drop-separate",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder-drop-separate.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder-drop-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder-drop-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder-nested",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder-nested.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder-type-conflict",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder-type-conflict.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder-case",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder-case.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "folder-matches",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/folder-matches.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-csv",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-csv.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-tsv",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-tsv.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-tab",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-tab.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-ssv",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-ssv.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-psv",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-psv.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-xlsx",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-xlsx.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-ods",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-ods.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-xls",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-xls.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-xlsb",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-xlsb.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-auto",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-auto.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-differences",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-differences.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-search",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-search.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-drop",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-drop.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-menu-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-menu-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-sessions-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-sessions-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-menu-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-menu-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-sessions-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-sessions-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version-64",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version-64.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version-differences",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version-differences.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-html",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-html.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version-Sessão-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version-Sessão-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version-Arquivo-(F)-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version-Arquivo-(F)-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version-Sessões-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version-Sessões-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version-Sessão-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version-Sessão-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version-Arquivo-(F)-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version-Arquivo-(F)-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "version-Sessões-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/version-Sessões-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-regional",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-regional.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-html-orphan",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-html-orphan.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-excel-second-sheet",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-excel-second-sheet.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-excel-geometry",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-excel-geometry.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-history-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-history-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-history-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-history-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "sessions-text-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/sessions-text-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "sessions-folder-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/sessions-folder-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "sessions-hex-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/sessions-hex-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "sessions-text-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/sessions-text-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "sessions-folder-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/sessions-folder-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "sessions-hex-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/sessions-hex-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "native-sessions-collapsed-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/native-sessions-collapsed-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "native-sessions-expanded-pt-BR",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/native-sessions-expanded-pt-BR.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "native-sessions-collapsed-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/native-sessions-collapsed-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "native-sessions-expanded-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/native-sessions-expanded-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "text-editing",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/text-editing.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "text-read-only",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/text-read-only.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "text-differences",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/text-differences.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "text-dividers-all",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/text-dividers-all.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "text-dividers-differences",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/text-dividers-differences.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "home-bc5-wide",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/home-bc5-wide.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "home-bc5-narrow",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/home-bc5-narrow.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-cell-context-pt",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-cell-context-pt.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-cell-context-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-cell-context-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-cell-edit-pt",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-cell-edit-pt.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "table-cell-edit-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/table-cell-edit-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "media-mp3",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/media-mp3.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "media-flac",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/media-flac.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "media-m4a",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/media-m4a.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "registry-reg",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/registry-reg.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    },
+                    {
+                        "screen":  "registry-reg-en",
+                        "exited":  true,
+                        "exit_code":  0,
+                        "stderr_bytes":  0,
+                        "capture":  "docs/validation/0.2.1/registry-reg-en.png",
+                        "working_directory":  "C:\\Projetos\\BC4\\anycompare"
+                    }
+                ],
+    "input_integrity":  [
+                            {
+                                "path":  "C:\\Users\\Altieres\\Desktop\\resumo.txt",
+                                "sha256_before":  "A87B932DD2CB3AFBBF1C1FBB388BFCBFFA2ED62281962ABD52A77B138C8A54CC",
+                                "sha256_after":  "A87B932DD2CB3AFBBF1C1FBB388BFCBFFA2ED62281962ABD52A77B138C8A54CC",
+                                "unchanged":  true
+                            },
+                            {
+                                "path":  "C:\\Users\\Altieres\\Desktop\\resumo 1.txt",
+                                "sha256_before":  "06B4A221CC5AAE070E86356B05A2BD166590350D061839A5031181AE6B18EA22",
+                                "sha256_after":  "06B4A221CC5AAE070E86356B05A2BD166590350D061839A5031181AE6B18EA22",
+                                "unchanged":  true
+                            }
+                        ],
+    "visual_geometry":  [
+                            {
+                                "report":  "docs/validation/0.2.1/dividers.json",
+                                "passed":  true
+                            },
+                            {
+                                "report":  "docs/validation/0.2.1/geometry.json",
+                                "passed":  true
+                            },
+                            {
+                                "report":  "docs/validation/0.2.1/popup-geometry.json",
+                                "passed":  true
+                            }
+                        ]
+}

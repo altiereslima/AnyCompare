@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.scootersoftware.com/download/v5whatsnew",
+    "sha256": "d3f8dbd8b07f41fef296c79a49f44fa8ba95795177aac6a6f3f04f1ce86c45bd",
+    "bytes": 10335,
+    "retrieved": "2026-11-02"
+  },
+  {
+    "url": "https://www.scootersoftware.com/all/v5changelog",
+    "sha256": "9eecc213b9f358a40f29411f106da9a37f48c18a2f8a0675efb363665ae40394",
+    "bytes": 71582,
+    "retrieved": "2026-11-02"
+  },
+  {
+    "url": "https://www.scootersoftware.com/download/v4whatsnew",
+    "sha256": "da6d012a9ed3d3be83c4ecd32b60c29daeb43a1da48ace47867a395a40a96ccb",
+    "bytes": 13559,
+    "retrieved": "2026-11-02"
+  },
+  {
+    "url": "https://www.scootersoftware.com/download/v4changelog",
+    "sha256": "141212b9d16ef2c28967f3cc5432f4c488c78da6b1fd2ca66ab46ae7915874ef",
+    "bytes": 117965,
+    "retrieved": "2026-11-02"
+  },
+  {
+    "url": "https://www.scootersoftware.com/v5help/sessiontablecolumns.html",
+    "sha256": "bb86e4a376cec70a5146f889051fa591b72f3288c547344d850e5aa4cdad68a2",
+    "bytes": 47573,
+    "retrieved": "2026-11-02"
+  },
+  {
+    "url": "https://www.scootersoftware.com/v5help/dlgtablecolhandling.html",
+    "sha256": "faaf326e4b69863659bd74345391125d018a8a6b98fb8a635666668d24f5da50",
+    "bytes": 46772,
+    "retrieved": "2026-11-02"
+  }
+]

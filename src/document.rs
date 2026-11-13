@@ -339,6 +339,10 @@ impl Document {
             || self.line_ending != self.saved_line_ending
     }
 
+    pub fn saved_text(&self) -> &str {
+        &self.saved_text
+    }
+
     pub fn metadata_label(&self) -> Option<String> {
         self.disk_bytes.as_ref().map(|bytes| {
             let date = self
@@ -363,6 +367,42 @@ impl Document {
 
     pub fn encoding_label(&self) -> &'static str {
         self.encoding.label()
+    }
+
+    /// CSV record terminators exclude newlines inside quoted cell values.
+    /// Inspect retained terminators, never normalize the file merely to label it.
+    pub fn record_line_ending(&self, delimiter: u8) -> LineEnding {
+        let mut quoted = false;
+        let mut field_start = true;
+        let mut newline = 0;
+        let mut first = None;
+        let mut bytes = self.saved_text.bytes().peekable();
+        while let Some(b) = bytes.next() {
+            if b == b'"' && (quoted || field_start) {
+                if quoted && bytes.peek() == Some(&b'"') {
+                    bytes.next();
+                } else {
+                    quoted = !quoted;
+                }
+            } else if b == b'\n' {
+                if !quoted {
+                    let ending = self
+                        .saved_endings
+                        .get(newline)
+                        .copied()
+                        .unwrap_or(self.line_ending);
+                    if first.is_some_and(|old| old != ending) {
+                        return LineEnding::Mixed;
+                    }
+                    first = Some(ending);
+                    field_start = true;
+                }
+                newline += 1;
+            } else if !quoted {
+                field_start = b == delimiter;
+            }
+        }
+        first.unwrap_or(self.line_ending)
     }
 
     /// Only unchanged, loaded documents can establish byte equality from the

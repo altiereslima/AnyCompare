@@ -1,0 +1,1081 @@
+{
+  "nodes": [
+    {
+      "class": "TViewForm",
+      "depth": 0,
+      "frame": {
+        "h": 877,
+        "w": 1632,
+        "x": 52,
+        "y": 52
+      },
+      "role": "Window",
+      "title": "example.txt - Text Compare - Beyond Compare"
+    },
+    {
+      "class": "TTextCompareViewFrame",
+      "depth": 1,
+      "frame": {
+        "h": 813,
+        "w": 1616,
+        "x": 60,
+        "y": 108
+      },
+      "identifier": "68368",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiDock",
+      "depth": 2,
+      "frame": {
+        "h": 42,
+        "w": 1616,
+        "x": 60,
+        "y": 108
+      },
+      "identifier": "68428",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiToolbar",
+      "depth": 3,
+      "frame": {
+        "h": 41,
+        "w": 1616,
+        "x": 60,
+        "y": 108
+      },
+      "identifier": "68512",
+      "role": "ToolBar",
+      "title": "MainBar"
+    },
+    {
+      "class": "TUiTreeButton",
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 70,
+        "x": 107,
+        "y": 110
+      },
+      "identifier": "68514",
+      "role": "Pane"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 62,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Home"
+    },
+    {
+      "depth": 4,
+      "enabled": false,
+      "frame": {
+        "h": 37,
+        "w": 6,
+        "x": 177,
+        "y": 110
+      },
+      "role": "Separator"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 183,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "All"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 228,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Diffs"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 273,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Same"
+    },
+    {
+      "depth": 4,
+      "enabled": false,
+      "frame": {
+        "h": 37,
+        "w": 6,
+        "x": 318,
+        "y": 110
+      },
+      "role": "Separator"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 53,
+        "x": 324,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Context"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 377,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Minor"
+    },
+    {
+      "depth": 4,
+      "enabled": false,
+      "frame": {
+        "h": 37,
+        "w": 6,
+        "x": 422,
+        "y": 110
+      },
+      "role": "Separator"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 428,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Rules"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 64,
+        "x": 473,
+        "y": 110
+      },
+      "role": "MenuItem",
+      "title": "Format"
+    },
+    {
+      "depth": 4,
+      "enabled": false,
+      "frame": {
+        "h": 37,
+        "w": 6,
+        "x": 537,
+        "y": 110
+      },
+      "role": "Separator"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 543,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Copy"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 588,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Edit"
+    },
+    {
+      "depth": 4,
+      "enabled": false,
+      "frame": {
+        "h": 37,
+        "w": 6,
+        "x": 633,
+        "y": 110
+      },
+      "role": "Separator"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 78,
+        "x": 639,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Next Section"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 77,
+        "x": 717,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Prev Section"
+    },
+    {
+      "depth": 4,
+      "enabled": false,
+      "frame": {
+        "h": 37,
+        "w": 6,
+        "x": 794,
+        "y": 110
+      },
+      "role": "Separator"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 45,
+        "x": 800,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Swap"
+    },
+    {
+      "depth": 4,
+      "frame": {
+        "h": 37,
+        "w": 48,
+        "x": 845,
+        "y": 110
+      },
+      "role": "Button",
+      "title": "Reload"
+    },
+    {
+      "class": "TUiStatusBar",
+      "depth": 2,
+      "frame": {
+        "h": 19,
+        "w": 1616,
+        "x": 60,
+        "y": 902
+      },
+      "identifier": "StatusBar",
+      "role": "StatusBar"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 17,
+        "w": 225,
+        "x": 60,
+        "y": 904
+      },
+      "identifier": "StatusBar.Pane0",
+      "role": "Edit"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 17,
+        "w": 298,
+        "x": 287,
+        "y": 904
+      },
+      "identifier": "StatusBar.Pane1",
+      "role": "Edit",
+      "title": "Same",
+      "value": "Same"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 17,
+        "w": 79,
+        "x": 587,
+        "y": 904
+      },
+      "identifier": "StatusBar.Pane2",
+      "role": "Edit",
+      "title": "\tInsert",
+      "value": "\tInsert"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 17,
+        "w": 992,
+        "x": 668,
+        "y": 904
+      },
+      "identifier": "StatusBar.Pane3",
+      "role": "Edit",
+      "title": "Load time: 0,05 seconds",
+      "value": "Load time: 0,05 seconds"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 16,
+        "w": 16,
+        "x": 1660,
+        "y": 905
+      },
+      "identifier": "StatusBar.Grip",
+      "role": "Custom"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 2,
+      "frame": {
+        "h": 752,
+        "w": 1573,
+        "x": 103,
+        "y": 150
+      },
+      "identifier": "264768",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 3,
+      "frame": {
+        "h": 752,
+        "w": 1573,
+        "x": 103,
+        "y": 150
+      },
+      "identifier": "264766",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 4,
+      "frame": {
+        "h": 52,
+        "w": 1573,
+        "x": 103,
+        "y": 850
+      },
+      "identifier": "68382",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiEditor",
+      "depth": 5,
+      "frame": {
+        "h": 33,
+        "w": 1571,
+        "x": 104,
+        "y": 868
+      },
+      "identifier": "68398",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiEditorWindow",
+      "depth": 6,
+      "frame": {
+        "h": 16,
+        "w": 1571,
+        "x": 104,
+        "y": 868
+      },
+      "identifier": "68400",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiScrollBar",
+      "depth": 6,
+      "enabled": false,
+      "frame": {
+        "h": 17,
+        "w": 1571,
+        "x": 104,
+        "y": 884
+      },
+      "identifier": "68502",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiEditor",
+      "depth": 5,
+      "frame": {
+        "h": 16,
+        "w": 1571,
+        "x": 104,
+        "y": 851
+      },
+      "identifier": "68384",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiEditorWindow",
+      "depth": 6,
+      "frame": {
+        "h": 16,
+        "w": 1571,
+        "x": 104,
+        "y": 851
+      },
+      "identifier": "68386",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 4,
+      "frame": {
+        "h": 700,
+        "w": 1573,
+        "x": 103,
+        "y": 150
+      },
+      "identifier": "68374",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 5,
+      "frame": {
+        "h": 700,
+        "w": 784,
+        "x": 892,
+        "y": 150
+      },
+      "identifier": "68392",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiEditor",
+      "depth": 6,
+      "frame": {
+        "h": 653,
+        "w": 784,
+        "x": 892,
+        "y": 197
+      },
+      "identifier": "68492",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiEditorWindow",
+      "depth": 7,
+      "frame": {
+        "h": 634,
+        "w": 765,
+        "x": 893,
+        "y": 198
+      },
+      "identifier": "68500",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiScrollBar",
+      "depth": 7,
+      "enabled": false,
+      "frame": {
+        "h": 578,
+        "w": 17,
+        "x": 1658,
+        "y": 198
+      },
+      "identifier": "68498",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiStatusBar",
+      "depth": 7,
+      "frame": {
+        "h": 17,
+        "w": 366,
+        "x": 893,
+        "y": 832
+      },
+      "identifier": "StatusBar",
+      "role": "StatusBar",
+      "title": "1: 1"
+    },
+    {
+      "depth": 8,
+      "frame": {
+        "h": 15,
+        "w": 100,
+        "x": 893,
+        "y": 834
+      },
+      "identifier": "StatusBar.Pane0",
+      "role": "Edit",
+      "title": "1: 1",
+      "value": "1: 1"
+    },
+    {
+      "depth": 8,
+      "frame": {
+        "h": 15,
+        "w": 131,
+        "x": 995,
+        "y": 834
+      },
+      "identifier": "StatusBar.Pane1",
+      "role": "Edit",
+      "title": "Default text",
+      "value": "Default text"
+    },
+    {
+      "depth": 8,
+      "frame": {
+        "h": 15,
+        "w": 131,
+        "x": 1128,
+        "y": 834
+      },
+      "identifier": "StatusBar.Pane2",
+      "role": "Edit"
+    },
+    {
+      "class": "TUiScrollBar",
+      "depth": 7,
+      "enabled": false,
+      "frame": {
+        "h": 17,
+        "w": 398,
+        "x": 1259,
+        "y": 832
+      },
+      "identifier": "68494",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiToolbar",
+      "depth": 6,
+      "frame": {
+        "h": 23,
+        "w": 784,
+        "x": 892,
+        "y": 150
+      },
+      "identifier": "68472",
+      "role": "ToolBar"
+    },
+    {
+      "class": "TUiSpecComboBox",
+      "depth": 7,
+      "frame": {
+        "h": 23,
+        "w": 699,
+        "x": 892,
+        "y": 150
+      },
+      "identifier": "68474",
+      "role": "ComboBox",
+      "title": "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\right\\example.txt",
+      "value": "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\right\\example.txt"
+    },
+    {
+      "class": "Edit",
+      "depth": 8,
+      "frame": {
+        "h": 17,
+        "w": 676,
+        "x": 895,
+        "y": 153
+      },
+      "identifier": "1001",
+      "role": "Edit",
+      "title": "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\right\\example.txt",
+      "value": "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\right\\example.txt"
+    },
+    {
+      "class": "ComboLBox",
+      "depth": 8,
+      "frame": {
+        "h": 2,
+        "w": 699,
+        "x": 0,
+        "y": 23
+      },
+      "identifier": "ListBox",
+      "role": "List"
+    },
+    {
+      "depth": 8,
+      "frame": {
+        "h": 21,
+        "w": 15,
+        "x": 1575,
+        "y": 151
+      },
+      "identifier": "DropDown",
+      "role": "Button",
+      "title": "Botão suspenso"
+    },
+    {
+      "depth": 7,
+      "enabled": false,
+      "frame": {
+        "h": 22,
+        "w": 23,
+        "x": 1591,
+        "y": 150
+      },
+      "role": "Button"
+    },
+    {
+      "depth": 7,
+      "frame": {
+        "h": 22,
+        "w": 37,
+        "x": 1614,
+        "y": 150
+      },
+      "role": "MenuItem"
+    },
+    {
+      "depth": 7,
+      "enabled": false,
+      "frame": {
+        "h": 22,
+        "w": 23,
+        "x": 1651,
+        "y": 150
+      },
+      "role": "Button"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 5,
+      "frame": {
+        "h": 700,
+        "w": 786,
+        "x": 103,
+        "y": 150
+      },
+      "identifier": "68376",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiEditor",
+      "depth": 6,
+      "frame": {
+        "h": 653,
+        "w": 786,
+        "x": 103,
+        "y": 197
+      },
+      "identifier": "68462",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiEditorWindow",
+      "depth": 7,
+      "frame": {
+        "h": 634,
+        "w": 767,
+        "x": 104,
+        "y": 198
+      },
+      "identifier": "68470",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiScrollBar",
+      "depth": 7,
+      "enabled": false,
+      "frame": {
+        "h": 634,
+        "w": 17,
+        "x": 871,
+        "y": 198
+      },
+      "identifier": "68468",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiStatusBar",
+      "depth": 7,
+      "frame": {
+        "h": 17,
+        "w": 366,
+        "x": 104,
+        "y": 832
+      },
+      "identifier": "StatusBar",
+      "role": "StatusBar",
+      "title": "1: 1"
+    },
+    {
+      "depth": 8,
+      "frame": {
+        "h": 15,
+        "w": 100,
+        "x": 104,
+        "y": 834
+      },
+      "identifier": "StatusBar.Pane0",
+      "role": "Edit",
+      "title": "1: 1",
+      "value": "1: 1"
+    },
+    {
+      "depth": 8,
+      "frame": {
+        "h": 15,
+        "w": 131,
+        "x": 206,
+        "y": 834
+      },
+      "identifier": "StatusBar.Pane1",
+      "role": "Edit",
+      "title": "Default text",
+      "value": "Default text"
+    },
+    {
+      "depth": 8,
+      "frame": {
+        "h": 15,
+        "w": 131,
+        "x": 339,
+        "y": 834
+      },
+      "identifier": "StatusBar.Pane2",
+      "role": "Edit"
+    },
+    {
+      "class": "TUiScrollBar",
+      "depth": 7,
+      "enabled": false,
+      "frame": {
+        "h": 17,
+        "w": 400,
+        "x": 470,
+        "y": 832
+      },
+      "identifier": "68464",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiToolbar",
+      "depth": 6,
+      "frame": {
+        "h": 23,
+        "w": 786,
+        "x": 103,
+        "y": 150
+      },
+      "identifier": "68432",
+      "role": "ToolBar"
+    },
+    {
+      "class": "TUiSpecComboBox",
+      "depth": 7,
+      "frame": {
+        "h": 23,
+        "w": 701,
+        "x": 103,
+        "y": 150
+      },
+      "identifier": "68434",
+      "role": "ComboBox",
+      "title": "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\left\\example.txt",
+      "value": "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\left\\example.txt"
+    },
+    {
+      "class": "Edit",
+      "depth": 8,
+      "frame": {
+        "h": 17,
+        "w": 678,
+        "x": 106,
+        "y": 153
+      },
+      "identifier": "1001",
+      "role": "Edit",
+      "title": "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\left\\example.txt",
+      "value": "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\left\\example.txt"
+    },
+    {
+      "class": "ComboLBox",
+      "depth": 8,
+      "frame": {
+        "h": 2,
+        "w": 701,
+        "x": 0,
+        "y": 23
+      },
+      "identifier": "ListBox",
+      "role": "List"
+    },
+    {
+      "depth": 8,
+      "frame": {
+        "h": 21,
+        "w": 15,
+        "x": 788,
+        "y": 151
+      },
+      "identifier": "DropDown",
+      "role": "Button",
+      "title": "Botão suspenso"
+    },
+    {
+      "depth": 7,
+      "enabled": false,
+      "frame": {
+        "h": 22,
+        "w": 23,
+        "x": 804,
+        "y": 150
+      },
+      "role": "Button"
+    },
+    {
+      "depth": 7,
+      "frame": {
+        "h": 22,
+        "w": 37,
+        "x": 827,
+        "y": 150
+      },
+      "role": "MenuItem"
+    },
+    {
+      "depth": 7,
+      "enabled": false,
+      "frame": {
+        "h": 22,
+        "w": 23,
+        "x": 864,
+        "y": 150
+      },
+      "role": "Button"
+    },
+    {
+      "class": "TUiThumbnail",
+      "depth": 2,
+      "frame": {
+        "h": 752,
+        "w": 43,
+        "x": 60,
+        "y": 150
+      },
+      "identifier": "68430",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiCustomDock",
+      "depth": 1,
+      "frame": {
+        "h": 25,
+        "w": 1616,
+        "x": 60,
+        "y": 83
+      },
+      "identifier": "68424",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiMainMenu",
+      "depth": 2,
+      "frame": {
+        "h": 25,
+        "w": 1616,
+        "x": 60,
+        "y": 83
+      },
+      "identifier": "68426",
+      "role": "MenuBar"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 21,
+        "w": 51,
+        "x": 62,
+        "y": 85
+      },
+      "role": "MenuItem",
+      "title": "Session"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 21,
+        "w": 30,
+        "x": 113,
+        "y": 85
+      },
+      "role": "MenuItem",
+      "title": "File"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 21,
+        "w": 32,
+        "x": 143,
+        "y": 85
+      },
+      "role": "MenuItem",
+      "title": "Edit"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 21,
+        "w": 47,
+        "x": 175,
+        "y": 85
+      },
+      "role": "MenuItem",
+      "title": "Search"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 21,
+        "w": 37,
+        "x": 222,
+        "y": 85
+      },
+      "role": "MenuItem",
+      "title": "View"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 21,
+        "w": 41,
+        "x": 259,
+        "y": 85
+      },
+      "role": "MenuItem",
+      "title": "Tools"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 21,
+        "w": 37,
+        "x": 300,
+        "y": 85
+      },
+      "role": "MenuItem",
+      "title": "Help"
+    },
+    {
+      "depth": 3,
+      "enabled": false,
+      "frame": {
+        "h": 15,
+        "w": 127,
+        "x": 1547,
+        "y": 88
+      },
+      "role": "Custom"
+    },
+    {
+      "depth": 1,
+      "frame": {
+        "h": 23,
+        "w": 1616,
+        "x": 60,
+        "y": 60
+      },
+      "identifier": "TitleBar",
+      "role": "TitleBar",
+      "title": "example.txt - Text Compare - Beyond Compare"
+    },
+    {
+      "depth": 2,
+      "frame": {
+        "h": 22,
+        "w": 22,
+        "x": 60,
+        "y": 60
+      },
+      "identifier": "SystemMenuBar",
+      "role": "MenuBar",
+      "title": "Barra de menus do sistema"
+    },
+    {
+      "depth": 3,
+      "frame": {
+        "h": 22,
+        "w": 22,
+        "x": 60,
+        "y": 60
+      },
+      "identifier": "Item 1",
+      "role": "MenuItem",
+      "title": "Sistema"
+    },
+    {
+      "depth": 2,
+      "frame": {
+        "h": 30,
+        "w": 47,
+        "x": 1537,
+        "y": 53
+      },
+      "identifier": "Minimize",
+      "role": "Button",
+      "title": "Minimizar"
+    },
+    {
+      "depth": 2,
+      "frame": {
+        "h": 30,
+        "w": 46,
+        "x": 1584,
+        "y": 53
+      },
+      "identifier": "Maximize",
+      "role": "Button",
+      "title": "Maximizar"
+    },
+    {
+      "depth": 2,
+      "frame": {
+        "h": 30,
+        "w": 47,
+        "x": 1630,
+        "y": 53
+      },
+      "identifier": "Close",
+      "role": "Button",
+      "title": "Fechar"
+    }
+  ],
+  "truncated": false,
+  "windows": 1
+}

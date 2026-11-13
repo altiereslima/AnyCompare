@@ -1,0 +1,76 @@
+{
+  "class": "TBcView",
+  "name": "BcView",
+  "props": {},
+  "children": [
+    {
+      "class": "TUiPanel",
+      "name": "MessagePanel",
+      "props": {
+        "Left": 0,
+        "Top": 684,
+        "Width": 750,
+        "Height": 47,
+        "Align": "alBottom",
+        "BevelOuter": "bvNone",
+        "BorderStyle": "bsSingle",
+        "Color": "clInfoBk",
+        "ParentBackground": false,
+        "TabOrder": 0,
+        "Visible": false
+      },
+      "children": [
+        {
+          "class": "TUiDlgIcon",
+          "name": "MessageImage",
+          "props": {
+            "Left": 8,
+            "Top": 7
+          },
+          "children": []
+        },
+        {
+          "class": "TUiLabel",
+          "name": "MessageLbl",
+          "props": {
+            "Left": 48,
+            "Top": 17,
+            "Height": 16,
+            "Caption": "%",
+            "FontSize": 2
+          },
+          "children": []
+        },
+        {
+          "class": "TUiLinkLabel",
+          "name": "MessageActionLinkLbl",
+          "props": {
+            "Left": 67,
+            "Top": 17,
+            "Height": 16,
+            "Caption": "%",
+            "FontSize": 2,
+            "URL": "%",
+            "Visible": false
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TUiStatusBar",
+      "name": "StatusBar",
+      "props": {
+        "Left": 0,
+        "Top": 731,
+        "Width": 750,
+        "Height": 19,
+        "AutoHint": true,
+        "Panels": [],
+        "MacBottomBar": true
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

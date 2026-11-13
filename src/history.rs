@@ -6,6 +6,35 @@ pub enum SessionKind {
     Text,
     Folder,
     Hex,
+    Table,
+    Version,
+    Registry,
+    Media,
+    TextEdit,
+}
+
+impl SessionKind {
+    pub fn for_paths(left: &std::path::Path, right: &std::path::Path) -> Self {
+        if left.is_dir() && right.is_dir() {
+            Self::Folder
+        } else if crate::pe_version::supported(left) && crate::pe_version::supported(right) {
+            Self::Version
+        } else if [left, right]
+            .iter()
+            .all(|p| p.extension().is_some_and(|e| e.eq_ignore_ascii_case("reg")))
+        {
+            Self::Registry
+        } else if [left, right]
+            .iter()
+            .all(|p| crate::property_sources::media_path(p))
+        {
+            Self::Media
+        } else if crate::table::supported(left) || crate::table::supported(right) {
+            Self::Table
+        } else {
+            Self::Text
+        }
+    }
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -17,6 +46,10 @@ pub struct RecentSession {
     /// 0.1.9, which take the history file's date on load. Ignored by equality.
     #[serde(default)]
     pub saved: i64,
+    /// Pre-table histories recorded CSV sessions as Text. Only those legacy
+    /// automatic records are upgraded; new explicit Text choices stay Text.
+    #[serde(default)]
+    routing_version: u32,
 }
 
 impl PartialEq for RecentSession {
@@ -34,7 +67,20 @@ impl RecentSession {
             left,
             right,
             saved: now(),
+            routing_version: 1,
         }
+    }
+
+    pub fn resolve_legacy_format(mut self) -> Self {
+        if self.routing_version == 0 {
+            if self.kind == SessionKind::Text
+                && (crate::table::supported(&self.left) || crate::table::supported(&self.right))
+            {
+                self.kind = SessionKind::Table;
+            }
+            self.routing_version = 1;
+        }
+        self
     }
 
     /// "left <--> right" with file names, as the original session titles.
@@ -45,7 +91,11 @@ impl RecentSession {
                 .to_string_lossy()
                 .into_owned()
         };
-        format!("{} <--> {}", name(&self.left), name(&self.right))
+        if self.kind == SessionKind::TextEdit {
+            name(&self.left)
+        } else {
+            format!("{} <--> {}", name(&self.left), name(&self.right))
+        }
     }
 }
 
@@ -105,7 +155,17 @@ impl History {
             if entry.saved == 0 {
                 entry.saved = file_date;
             }
+            *entry = entry.clone().resolve_legacy_format();
         }
+        let mut seen = Vec::new();
+        history.entries.retain(|entry| {
+            if seen.contains(entry) {
+                false
+            } else {
+                seen.push(entry.clone());
+                true
+            }
+        });
         Ok(history)
     }
 
@@ -169,6 +229,26 @@ impl History {
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn old_csv_recents_upgrade_but_new_explicit_text_and_hex_choices_survive() {
+        let old = r#"{"kind":"Text","left":"left.csv","right":"right.csv","saved":123}"#;
+        let entry: RecentSession = serde_json::from_str(old).unwrap();
+        assert_eq!(entry.resolve_legacy_format().kind, SessionKind::Table);
+        for kind in [SessionKind::Text, SessionKind::Hex] {
+            let entry = RecentSession::new(kind, "left.csv".into(), "right.csv".into());
+            let restored: RecentSession =
+                serde_json::from_str(&serde_json::to_string(&entry).unwrap()).unwrap();
+            assert_eq!(restored.resolve_legacy_format().kind, kind);
+        }
+        let text = old.replace(".csv", ".txt");
+        assert_eq!(
+            serde_json::from_str::<RecentSession>(&text)
+                .unwrap()
+                .resolve_legacy_format()
+                .kind,
+            SessionKind::Text
+        );
+    }
     #[test]
     fn history_roundtrips_unicode_paths_and_deduplicates() {
         let session = RecentSession::new(

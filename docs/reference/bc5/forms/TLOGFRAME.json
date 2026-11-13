@@ -1,0 +1,73 @@
+{
+  "class": "TLogFrame",
+  "name": "LogFrame",
+  "props": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 702,
+    "Height": 100,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TUiPanel",
+      "name": "LeftPanel",
+      "props": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 21,
+        "Height": 100,
+        "Align": "alLeft",
+        "BevelOuter": "bvNone",
+        "TabOrder": 0
+      },
+      "children": [
+        {
+          "class": "TUiSpeedButton",
+          "name": "OptionsBtn",
+          "props": {
+            "Left": 2,
+            "Top": 2,
+            "Width": 18,
+            "Height": 18,
+            "Hint": "Log Options|Changes handling of log messages.",
+            "ImageIndex": "imgOptions",
+            "Images": "BcImages.MainImages",
+            "OnClick": "OptionsClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiSpeedButton",
+          "name": "SaveBtn",
+          "props": {
+            "Left": 2,
+            "Top": 22,
+            "Width": 18,
+            "Height": 18,
+            "Hint": "Save Log|Saves log messages to file.",
+            "ImageIndex": "imgSave",
+            "Images": "BcImages.MainImages",
+            "OnClick": "SaveClick"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "class": "TUiVirtualListBox",
+      "name": "ListBox",
+      "props": {
+        "Left": 21,
+        "Top": 0,
+        "Width": 681,
+        "Height": 100,
+        "Align": "alClient",
+        "TabOrder": 1,
+        "OnDrawPrep": "ListBoxDrawPrep",
+        "OnGetText": "ListBoxGetText"
+      },
+      "children": []
+    }
+  ]
+}

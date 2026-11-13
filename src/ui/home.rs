@@ -1,16 +1,7 @@
-//! Home view, rebuilt from THomeViewFrame (docs/reference/forms/THOMEVIEWFRAME.json) and the
-//! original's layout code (REA 18/10/2026):
-//! - the frame is VCL-scaled from Tahoma 8 to Segoe UI 9, i.e. MulDiv(v, 15, 13) ([`sc`]);
-//! - SessionsPanelPaint 0x18f4f60: header gradient (240)->(224) down to the tree top, and
-//!   (160,160,160) lines under the header, on the right edge and above the bottom area;
-//! - SessionsPanelResize 0x18f3d10: bottom area = max(button, search edit) + MulDiv(8);
-//! - task grid 0x18f4070 / 0x18f3ec0: cells of 120x100 (scaled), cols = min(n, w / cellw - 2),
-//!   rows = ceil(n / cols), cols = ceil(n / rows); horizontal margin (w - cols*cellw) / 2,
-//!   vertical margin (h - rows*cellh) / 3; tip labels 12 above the grid; the page arrow is
-//!   centred on the first row at the right.
-//!
-//! Pixel values (colours, tree metrics, chevrons, Windows 11 buttons) were measured on a
-//! 100% capture of the original Home sent by the user on 18/10/2026.
+//! Home: BC5's twelve simultaneous launchers and separate 64/32 px artwork.
+//! Tree drawing retains the measured BC4 controls. BC5 desktop geometry is
+//! observed in docs/reference/bc5 and the user's 02/11/2026 screenshots; its
+//! resize handler has not been recovered. Do not describe the fit as decompiled.
 
 use super::dialogs::DialogHost;
 use crate::history::{RecentSession, SessionKind};
@@ -23,6 +14,11 @@ pub enum HomeAction {
     OpenTextCompare,
     OpenFolderCompare,
     OpenHexCompare,
+    OpenTableCompare,
+    OpenVersionCompare,
+    OpenRegistryCompare,
+    OpenMediaCompare,
+    OpenTextEdit,
     OpenRecentSession(RecentSession),
     ForgetRecentSession(RecentSession),
 }
@@ -51,7 +47,6 @@ const EDIT_UNDERLINE: Color32 = Color32::from_rgb(131, 131, 131);
 const MENU_HEIGHT: f32 = 25.0;
 const ROW: f32 = 18.0;
 const INDENT: f32 = 19.0;
-const DEFAULT_PANEL_WIDTH: f32 = 230.0;
 
 /// Explorer-theme chevrons at 100%: (dx from the level's centre column, dy from the row top,
 /// colour), sampled over the tree background.
@@ -136,8 +131,8 @@ struct SessionType {
     kind: Option<SessionKind>,
 }
 
-/// First page of the original Home (folder and text sessions).
-const PAGE_1: [SessionType; 5] = [
+/// BC5 primary sessions: six large icons, all visible on the Home.
+const PRIMARY: [SessionType; 6] = [
     SessionType {
         small: "imgDirCompareSession",
         big: "imgHomeDirCompareSession",
@@ -168,16 +163,16 @@ const PAGE_1: [SessionType; 5] = [
         label: "Mesclar Texto",
         kind: None,
     },
+    SessionType {
+        small: "imgTextEditSession",
+        big: "imgHomeTextEditSession",
+        label: "Editar texto",
+        kind: Some(SessionKind::TextEdit),
+    },
 ];
 
-/// Second page ("Mais Ícones de Sessão").
-const PAGE_2: [SessionType; 6] = [
-    SessionType {
-        small: "imgTableCompareSession",
-        big: "imgHomeDataCompareSession",
-        label: "Comparar Tabelas",
-        kind: None,
-    },
+/// BC5 secondary sessions use the original 32 px artwork.
+const SECONDARY: [SessionType; 6] = [
     SessionType {
         small: "imgHexCompareSession",
         big: "imgHomeHexCompareSession",
@@ -186,9 +181,9 @@ const PAGE_2: [SessionType; 6] = [
     },
     SessionType {
         small: "imgMP3CompareSession",
-        big: "imgHomeMP3CompareSession",
-        label: "Comparar MP3",
-        kind: None,
+        big: "imgHomeMediaCompareSession",
+        label: "Comparar Mídia",
+        kind: Some(SessionKind::Media),
     },
     SessionType {
         small: "imgPixCompareSession",
@@ -200,13 +195,19 @@ const PAGE_2: [SessionType; 6] = [
         small: "imgRegCompareSession",
         big: "imgHomeRegCompareSession",
         label: "Comparar Registro",
-        kind: None,
+        kind: Some(SessionKind::Registry),
+    },
+    SessionType {
+        small: "imgTableCompareSession",
+        big: "imgHomeTableCompareSession",
+        label: "Comparar Tabelas",
+        kind: Some(SessionKind::Table),
     },
     SessionType {
         small: "imgVerCompareSession",
         big: "imgHomeVerCompareSession",
         label: "Comparar Versões",
-        kind: None,
+        kind: Some(SessionKind::Version),
     },
 ];
 
@@ -226,6 +227,11 @@ fn open_action(kind: SessionKind) -> HomeAction {
         SessionKind::Text => HomeAction::OpenTextCompare,
         SessionKind::Folder => HomeAction::OpenFolderCompare,
         SessionKind::Hex => HomeAction::OpenHexCompare,
+        SessionKind::Table => HomeAction::OpenTableCompare,
+        SessionKind::Version => HomeAction::OpenVersionCompare,
+        SessionKind::Registry => HomeAction::OpenRegistryCompare,
+        SessionKind::Media => HomeAction::OpenMediaCompare,
+        SessionKind::TextEdit => HomeAction::OpenTextEdit,
     }
 }
 
@@ -234,6 +240,11 @@ fn kind_icon(kind: SessionKind) -> &'static str {
         SessionKind::Text => "imgTextCompareSession",
         SessionKind::Folder => "imgDirCompareSession",
         SessionKind::Hex => "imgHexCompareSession",
+        SessionKind::Table => "imgTableCompareSession",
+        SessionKind::Version => "imgVerCompareSession",
+        SessionKind::Registry => "imgRegCompareSession",
+        SessionKind::Media => "imgMP3CompareSession",
+        SessionKind::TextEdit => "imgTextEditSession",
     }
 }
 
@@ -293,8 +304,6 @@ pub struct HomeScreen {
     selected: Option<String>,
     expanded: BTreeSet<String>,
     expansion_initialized: bool,
-    page: usize,
-    panel_width: f32,
 }
 
 impl HomeScreen {
@@ -306,8 +315,6 @@ impl HomeScreen {
             selected: None,
             expanded: BTreeSet::new(),
             expansion_initialized: false,
-            page: 0,
-            panel_width: DEFAULT_PANEL_WIDTH,
         }
     }
 
@@ -347,7 +354,14 @@ impl HomeScreen {
             ancestors_last: vec![],
         });
         if new_open {
-            let types: Vec<SessionType> = PAGE_1.iter().chain(PAGE_2.iter()).copied().collect();
+            // Preserve the existing session-picker contents. Standalone Text
+            // Edit is a Home launcher, not an implemented comparison session.
+            let types: Vec<SessionType> = PRIMARY
+                .iter()
+                .chain(SECONDARY.iter())
+                .filter(|t| t.label != "Editar texto")
+                .copied()
+                .collect();
             for (n, t) in types.iter().enumerate() {
                 rows.push(Row {
                     node: Node::NewType(*t),
@@ -503,14 +517,8 @@ impl HomeScreen {
             .frame(Frame::none())
             .show_inside(ui, |ui| {
                 let band = ui.max_rect();
-                // Home band: 25 rows fitted on the original (no toolbar below it), then the
-                // TopLineBevel (bsTopLine): one (160) row and one white row.
-                super::chrome::gradient(
-                    ui,
-                    Rect::from_min_size(band.min, vec2(band.width(), MENU_HEIGHT)),
-                    Color32::from_rgb(237, 241, 245),
-                    Color32::from_rgb(218, 224, 231),
-                );
+                // BC5 flat menu, then the two-pixel TopLineBevel.
+                ui.painter().rect_filled(band, 0.0, Color32::WHITE);
                 let y = band.top() + MENU_HEIGHT;
                 ui.painter().rect_filled(
                     Rect::from_min_max(pos2(band.left(), y), pos2(band.right(), y + 1.0)),
@@ -531,7 +539,7 @@ impl HomeScreen {
 
         super::session_tabs::show(ui, icons);
         SidePanel::left("home_sessions")
-            .exact_width(self.panel_width)
+            .exact_width((ui.available_width() * 0.20).floor())
             .resizable(false)
             .show_separator_line(false)
             .frame(Frame::none().fill(TREE_BG))
@@ -570,8 +578,20 @@ impl HomeScreen {
                 super::session_menu::suffix(ui, icons, false);
             });
             super::chrome::menu_button(ui, "Visualizar", |ui| {
-                ui.radio_value(&mut self.page, 0, crate::i18n::tr("Primeira página"));
-                ui.radio_value(&mut self.page, 1, crate::i18n::tr("Outras sessões"));
+                if super::chrome::menu_item(ui, icons, "Expandir Tudo", true).clicked() {
+                    self.expanded.insert("new".into());
+                    self.expanded.insert("auto".into());
+                    for record in &self.recent {
+                        self.expanded
+                            .insert(format!("auto/{}", group_of(record.saved)));
+                    }
+                    ui.close_menu();
+                }
+                if super::chrome::menu_item(ui, icons, "Recolher Tudo", true).clicked() {
+                    self.expanded.clear();
+                    self.expansion_initialized = true;
+                    ui.close_menu();
+                }
             });
             super::chrome::menu_button(ui, "Ferramentas", |ui| {
                 if super::chrome::menu_item(ui, icons, "Opções...", true).clicked() {
@@ -891,7 +911,11 @@ impl HomeScreen {
             PopupCloseBehavior::CloseOnClick,
             |ui| {
                 ui.set_min_width(170.0);
-                for t in PAGE_1.iter().chain(PAGE_2.iter()) {
+                for t in PRIMARY
+                    .iter()
+                    .chain(SECONDARY.iter())
+                    .filter(|t| t.label != "Editar texto")
+                {
                     if super::chrome::menu_item(ui, icons, t.label, t.kind.is_some()).clicked() {
                         if let Some(kind) = t.kind {
                             *action = open_action(kind);
@@ -977,42 +1001,23 @@ impl HomeScreen {
             );
         }
 
-        // Task grid (0x18f4070): area below the spec panel, minus the 16 px web-panel
-        // toggle (scaled) kept at the bottom right in the original.
-        let area = Rect::from_min_max(
-            pos2(panel.left(), panel.top() + spec_h),
-            pos2(panel.right(), panel.bottom() - sc(16)),
-        );
-        let items: &[SessionType] = if self.page == 0 { &PAGE_1 } else { &PAGE_2 };
-        let n = items.len() as i32;
-        let (aw, ah) = (area.width() as i32, area.height() as i32);
-        let (mut cell_w, mut cell_h, mut big) = (sc(120) as i32, sc(100) as i32, true);
-        let layout = |cell_w: i32| task_grid(n, aw, cell_w);
-        let (mut cols, mut rows) = layout(cell_w);
-        if ah < cell_h * rows {
-            cell_w = sc(110) as i32;
-            cell_h = sc(70) as i32;
-            big = false;
-            (cols, rows) = layout(cell_w);
-        }
-        let left_off = (aw - cell_w * cols).max(0) / 2;
-        let top_off = (ah - cell_h * rows).max(0) / 3;
-        let tip = crate::i18n::tr("Arraste pastas e arquivos para cá");
+        // BC5 displays both families simultaneously. Keep the selected-session
+        // description independent from the grid, so changing history does not
+        // move the session launchers or hide a family behind a page arrow.
+        let area = Rect::from_min_max(panel.min, panel.max - vec2(0.0, sc(16)));
+        let grid = HomeGrid::new(area);
+        let tip = crate::i18n::tr("Arraste pastas ou arquivos para o ícone da sessão");
         let desc = crate::i18n::tr("ou clique no ícone da sessão para começar:");
-        let tip_h = text_height(ui, 13.0);
-        let desc_h = text_height(ui, 12.0);
-        let tip_top = top_off as f32 - tip_h - desc_h - sc(12);
-        if tip_top >= 0.0 && big {
-            for (text, size, y) in [
-                (&tip, 13.0, tip_top),
-                (&desc, 12.0, tip_top + tip_h + sc(4)),
-            ] {
-                let w = text_width(ui, text, size);
+        for (text, size, y) in [
+            (&tip, 13.0, grid.top - 46.0),
+            (&desc, 12.0, grid.top - 24.0),
+        ] {
+            if y >= panel.top() + spec_h {
                 paint_text(
                     &painter,
                     pos2(
-                        area.left() + ((aw as f32 - w) / 2.0).floor(),
-                        area.top() + y,
+                        (area.center().x - text_width(ui, text, size) / 2.0).floor(),
+                        y,
                     ),
                     text,
                     size,
@@ -1020,16 +1025,8 @@ impl HomeScreen {
                 );
             }
         }
-        let image_size = if big { 64.0 } else { 32.0 };
-        for (index, item) in items.iter().enumerate() {
-            let (col, row) = (index as i32 % cols, index as i32 / cols);
-            let cell = Rect::from_min_size(
-                pos2(
-                    area.left() + (left_off + col * cell_w) as f32,
-                    area.top() + (top_off + row * cell_h) as f32,
-                ),
-                vec2(cell_w as f32, cell_h as f32),
-            );
+        for (index, item) in PRIMARY.iter().chain(SECONDARY.iter()).enumerate() {
+            let (cell, large) = grid.cell(index);
             let available = item.kind.is_some();
             let response = ui
                 .interact(
@@ -1046,20 +1043,13 @@ impl HomeScreen {
                 } else {
                     "Esta sessão ainda não está disponível"
                 }));
-            let image_top = cell.top() + if big { 17.0 } else { 6.0 };
-            let texture = if available {
-                icons.get_icon(ui.ctx(), item.big)
-            } else {
-                icons.get_icon_with_state(ui.ctx(), item.big, false)
-            };
-            if let Some(texture) = texture {
+            let image_size = if large { 64.0 } else { 32.0 };
+            let image_top = cell.top() + 17.0;
+            if let Some(texture) = icons.home_icon(ui.ctx(), item.big, large, available) {
                 painter.image(
                     texture.id(),
                     Rect::from_min_size(
-                        pos2(
-                            cell.left() + ((cell_w as f32 - image_size) / 2.0).floor(),
-                            image_top,
-                        ),
+                        pos2((cell.center().x - image_size / 2.0).floor(), image_top),
                         vec2(image_size, image_size),
                     ),
                     Rect::from_min_max(Pos2::ZERO, pos2(1.0, 1.0)),
@@ -1067,11 +1057,10 @@ impl HomeScreen {
                 );
             }
             let caption = crate::i18n::tr(item.label);
-            let w = text_width(ui, &caption, 13.0);
             paint_text(
                 &painter,
                 pos2(
-                    cell.left() + ((cell_w as f32 - w) / 2.0).floor(),
+                    (cell.center().x - text_width(ui, &caption, 13.0) / 2.0).floor(),
                     image_top + image_size + 1.0,
                 ),
                 &caption,
@@ -1088,49 +1077,52 @@ impl HomeScreen {
                 }
             }
         }
-        // Page arrow (Task1OtherImage / Task2OtherImage), centred on the first row.
-        let arrow = if self.page == 0 {
-            "imgHomeNext"
-        } else {
-            "imgHomePrev"
-        };
-        let arrow_x = if self.page == 0 {
-            ((cell_w - 64) / 2 + (aw - cell_w)).max(left_off + cell_w * cols)
-        } else {
-            ((cell_w - 64) / 2).min(left_off - 64)
-        };
-        let arrow_rect = Rect::from_min_size(
-            pos2(
-                area.left() + arrow_x as f32,
-                area.top() + (top_off + (cell_h - 64) / 2) as f32,
-            ),
-            vec2(64.0, 64.0),
-        );
-        if let Some(texture) = icons.get_icon(ui.ctx(), arrow) {
-            painter.image(
-                texture.id(),
-                arrow_rect,
-                Rect::from_min_max(Pos2::ZERO, pos2(1.0, 1.0)),
-                Color32::WHITE,
-            );
-        }
-        if ui
-            .interact(arrow_rect, ui.id().with("home_page_arrow"), Sense::click())
-            .on_hover_text(crate::i18n::tr("Mais Ícones de Sessão"))
-            .clicked()
-        {
-            self.page = 1 - self.page;
-        }
     }
 }
 
-/// Columns and rows of the task grid (0x18f3ec0): cols = min(n, width / cell - 2),
-/// rows = ceil(n / cols), then cols = ceil(n / rows); each at least 1.
-fn task_grid(n: i32, width: i32, cell_w: i32) -> (i32, i32) {
-    let mut cols = (width / cell_w - 2).min(n).max(1);
-    let rows = ((n + cols - 1) / cols).max(1);
-    cols = ((n + rows - 1) / rows).max(1);
-    (cols, rows)
+/// Six columns in the supplied BC5 desktop capture; wrap each band on
+/// narrower windows without pagination. Geometry remains independent of history.
+struct HomeGrid {
+    left: f32,
+    top: f32,
+    columns: usize,
+    primary_rows: usize,
+}
+impl HomeGrid {
+    fn new(area: Rect) -> Self {
+        let columns = ((area.width() / 138.0).floor() as usize).clamp(1, 6);
+        let primary_rows = 6_usize.div_ceil(columns);
+        let total = primary_rows as f32 * 115.0 + 28.0 + primary_rows as f32 * 81.0;
+        // Placement fitted to the two native desktop captures, not a recovered
+        // BC5 resize handler. Keep this limitation in the parity report.
+        let top = (area.top() + area.height() / 6.0 + 120.0)
+            .min(area.bottom() - total)
+            .max(area.top());
+        Self {
+            left: (area.center().x - columns as f32 * 69.0).floor(),
+            top: top.floor(),
+            columns,
+            primary_rows,
+        }
+    }
+    fn cell(&self, index: usize) -> (Rect, bool) {
+        let large = index < 6;
+        let local = index % 6;
+        let row = local / self.columns;
+        let top = self.top
+            + if large {
+                row as f32 * 115.0
+            } else {
+                self.primary_rows as f32 * 115.0 + 28.0 + row as f32 * 81.0
+            };
+        (
+            Rect::from_min_size(
+                pos2(self.left + (local % self.columns) as f32 * 138.0, top),
+                vec2(138.0, if large { 115.0 } else { 81.0 }),
+            ),
+            large,
+        )
+    }
 }
 
 fn hline(painter: &Painter, left: f32, right: f32, y: f32, color: Color32) {
@@ -1205,10 +1197,6 @@ fn text_width(ui: &Ui, text: &str, size: f32) -> f32 {
         .size()
         .x
         .round()
-}
-
-fn text_height(ui: &Ui, size: f32) -> f32 {
-    ui.fonts(|f| f.row_height(&font(size))).round()
 }
 
 fn paint_text(painter: &Painter, pos: Pos2, text: &str, size: f32, color: Color32) {
@@ -1350,16 +1338,39 @@ mod tests {
     use super::*;
 
     #[test]
-    fn task_grid_follows_the_original_rule() {
-        // 918 px wide right panel of the user's capture: 5 icons -> 3 + 2.
-        assert_eq!(task_grid(5, 918, sc(120) as i32), (3, 2));
-        assert_eq!(task_grid(6, 918, sc(120) as i32), (3, 2));
-        assert_eq!(task_grid(5, 600, sc(120) as i32), (2, 3));
-        assert_eq!(task_grid(5, 2000, sc(120) as i32), (5, 1));
+    fn bc5_home_shows_all_twelve_types_without_pagination() {
+        assert_eq!(PRIMARY.len() + SECONDARY.len(), 12);
+        assert_eq!(PRIMARY[5].label, "Editar texto");
+        assert_eq!(SECONDARY[0].kind, Some(SessionKind::Hex));
+        assert_eq!(SECONDARY[4].kind, Some(SessionKind::Table));
         assert_eq!(
-            (sc(120), sc(100), sc(24), sc(88)),
-            (138.0, 115.0, 28.0, 102.0)
+            PRIMARY
+                .iter()
+                .chain(SECONDARY.iter())
+                .filter(|t| t.kind.is_some())
+                .count(),
+            8
         );
+        for width in [700.0, 1153.0, 1919.0] {
+            let area = Rect::from_min_max(
+                pos2((width * 0.2_f32).floor() + 5.0, 27.0),
+                pos2(width, 1000.0),
+            );
+            let grid = HomeGrid::new(area);
+            for index in 0..12 {
+                let (cell, large) = grid.cell(index);
+                assert!(
+                    area.contains_rect(cell),
+                    "type {index} at width {width}: {cell:?}"
+                );
+                assert_eq!(large, index < 6);
+                for previous in 0..index {
+                    assert!(!cell
+                        .shrink(0.1)
+                        .intersects(grid.cell(previous).0.shrink(0.1)));
+                }
+            }
+        }
     }
 
     #[test]

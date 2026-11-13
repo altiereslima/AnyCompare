@@ -1,0 +1,104 @@
+{
+  "class": "TTextSessionAlignmentFrame",
+  "name": "TextSessionAlignmentFrame",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "SessionTextAlignment",
+    "Caption": "Alignment"
+  },
+  "children": [
+    {
+      "class": "TLineAlignDefFrame",
+      "name": "Frame",
+      "props": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 425,
+        "Height": 104,
+        "TabOrder": 0
+      },
+      "children": [],
+      "flags": 4
+    },
+    {
+      "class": "TUiPanel",
+      "name": "ConflictScanLinesPanel",
+      "props": {
+        "Left": 0,
+        "Top": 104,
+        "Width": 425,
+        "Height": 96,
+        "BevelOuter": "bvNone",
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TUiBevel",
+          "name": "ConflictScanLinesBevel",
+          "props": {
+            "Left": 8,
+            "Top": 0,
+            "Width": 409,
+            "Height": 1,
+            "Shape": "bsTopLine"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiLabel",
+          "name": "ConflictScanLinesLbl",
+          "props": {
+            "Left": 8,
+            "Top": 8,
+            "Height": 13,
+            "Caption": "A merge conflict is:"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "ConflictScanLinesNegEdit",
+          "props": {
+            "Left": 8,
+            "Top": 25,
+            "Height": 17,
+            "Caption": "&Only different change lines",
+            "TabOrder": 0,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "ConflictScanLinesOtherEdit",
+          "props": {
+            "Left": 8,
+            "Top": 46,
+            "Height": 17,
+            "Caption": "&Left change and right change separated by lines:",
+            "TabOrder": 1,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiSpinEdit",
+          "name": "ConflictScanLinesEdit",
+          "props": {
+            "Left": 24,
+            "Top": 67,
+            "Width": 41,
+            "Height": 21,
+            "Max": 256,
+            "MaxLength": 3,
+            "Position": 1,
+            "TabOrder": 2,
+            "OnChange": "SomethingChangedClick"
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "path": "C:\\Projetos\\Into the Breach\\Jogo\\scripts\\localization\\Global.csv",
+    "bytes": 497322,
+    "sha256": "736f1286b7dc06e49cd47718c92898af655976a5e1af965277c29db59a0f5baa",
+    "bom": true,
+    "physical_lines": 1030,
+    "logical_rows": 1010,
+    "widths": {
+      "12": 1010
+    },
+    "duplicate_keys": 24,
+    "multiline_cells": 10,
+    "quoted_fields": 2420,
+    "preview_keys": [
+      "ID",
+      "Tutorial_InfoButton_Text",
+      "Tutorial_InfoButton_Title",
+      "Tutorial_CombatPower_Text"
+    ]
+  },
+  {
+    "path": "C:\\Projetos\\Into the Breach\\Jogo_diff\\scripts\\localization\\Global.csv",
+    "bytes": 497322,
+    "sha256": "736f1286b7dc06e49cd47718c92898af655976a5e1af965277c29db59a0f5baa",
+    "bom": true,
+    "physical_lines": 1030,
+    "logical_rows": 1010,
+    "widths": {
+      "12": 1010
+    },
+    "duplicate_keys": 24,
+    "multiline_cells": 10,
+    "quoted_fields": 2420,
+    "preview_keys": [
+      "ID",
+      "Tutorial_InfoButton_Text",
+      "Tutorial_InfoButton_Title",
+      "Tutorial_CombatPower_Text"
+    ]
+  },
+  {
+    "same_rows": true,
+    "same_bytes": true
+  }
+]

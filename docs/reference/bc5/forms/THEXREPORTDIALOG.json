@@ -1,0 +1,79 @@
+{
+  "class": "THexReportDialog",
+  "name": "HexReportDialog",
+  "props": {
+    "Caption": "Hex Compare Report",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiListBox",
+      "name": "LayoutListBox",
+      "props": {
+        "Items.Strings": [
+          "Side-by-side",
+          "Summary",
+          "Interleaved"
+        ]
+      },
+      "children": [],
+      "flags": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "OptionsPanel",
+      "props": {},
+      "children": [
+        {
+          "class": "TUiPanel",
+          "name": "BasicPanel",
+          "props": {
+            "Height": 0
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiPanel",
+          "name": "DisplayFilterPanel",
+          "props": {
+            "Top": 0
+          },
+          "children": [],
+          "flags": 1
+        },
+        {
+          "class": "TUiActivePanelView",
+          "name": "LayoutPanelView",
+          "props": {
+            "Top": 29,
+            "Height": 92
+          },
+          "children": [
+            {
+              "class": "TUiActivePanel",
+              "name": "SideBySidePanel",
+              "props": {},
+              "children": [
+                {
+                  "class": "TUiCheckBox",
+                  "name": "IncludeNumsEdit",
+                  "props": {
+                    "Caption": "Include byt&e addresses"
+                  },
+                  "children": [],
+                  "flags": 1
+                }
+              ],
+              "flags": 1
+            }
+          ],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    }
+  ],
+  "flags": 1
+}

@@ -1,0 +1,78 @@
+{
+  "class": "TTextFormatMiscFrame",
+  "name": "TextFormatMiscFrame",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "FormatTextMisc",
+    "Caption": "Misc"
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "TabSizeLbl",
+      "props": {
+        "Left": 8,
+        "Top": 33,
+        "Height": 13,
+        "Caption": "&Tab stop:",
+        "FocusControl": "TabSizeEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "TabAsSpacesEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "&Insert spaces instead of tabs",
+        "TabOrder": 0,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiSpinEdit",
+      "name": "TabSizeEdit",
+      "props": {
+        "Left": 8,
+        "Top": 50,
+        "Width": 41,
+        "Height": 21,
+        "Min": 1,
+        "Position": 8,
+        "TabOrder": 1,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "LineBasedEdit",
+      "props": {
+        "Left": 8,
+        "Top": 79,
+        "Height": 17,
+        "Caption": "&Lines are independent",
+        "TabOrder": 2,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "ColBasedEdit",
+      "props": {
+        "Left": 8,
+        "Top": 100,
+        "Height": 17,
+        "Caption": "&Column-based data",
+        "TabOrder": 3,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

@@ -1,0 +1,50 @@
+{
+  "class": "TFormattedSpecFrame",
+  "name": "FormattedSpecFrame",
+  "props": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 584,
+    "Height": 16,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TUiImage",
+      "name": "SpecImage",
+      "props": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 16,
+        "Height": 16,
+        "Images": "BcImages.MainImages"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "SpecPreLbl",
+      "props": {
+        "Left": 20,
+        "Top": 0,
+        "Height": 13,
+        "Caption": "%",
+        "FontColor": "clHotLight"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "SpecLbl",
+      "props": {
+        "Left": 39,
+        "Top": 0,
+        "Width": 544,
+        "Height": 13,
+        "AutoSize": false,
+        "Caption": "%"
+      },
+      "children": []
+    }
+  ]
+}

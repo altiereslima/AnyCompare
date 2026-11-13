@@ -1,6 +1,12 @@
 # Estado da reconstrução — histórico de 14/10/2026
 
-**Estado atual 0.1.17.** Leia [STATUS-ABAS-0.1.17.md](STATUS-ABAS-0.1.17.md).
+**Prévia 0.2.5.** Rolagem automática durante a seleção por arrasto em Tabelas.
+184 testes passaram. [Validação](STATUS-BC5-0.2.5-PREVIA.md)
+
+**Estado atual 0.2.0.** Leia [STATUS-BC5-0.2.0.md](STATUS-BC5-0.2.0.md) e [BC5-PARIDADE.md](BC5-PARIDADE.md).
+Prévia de 04/11/2026: [0.2.1 — editor PT/EN e correções de mídia](STATUS-BC5-0.2.1-PREVIA.md),
+em `dist/preview/AnyCompare-0.2.1.exe`. Estável 0.2.0 preservada; 162 testes e
+três isolados passaram, sem janelas novas. Auditoria visual completa pendente.
 As limitações e contagens abaixo descrevem versões anteriores. Ghidra e a
 validação completa dos resumos já avançaram; não usar este histórico como status atual.
 

@@ -1,0 +1,11 @@
+{
+  "class": "TPixReportDialog",
+  "name": "PixReportDialog",
+  "props": {
+    "Caption": "Picture Compare Report",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [],
+  "flags": 1
+}

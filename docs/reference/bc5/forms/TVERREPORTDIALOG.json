@@ -1,0 +1,11 @@
+{
+  "class": "TVerReportDialog",
+  "name": "VerReportDialog",
+  "props": {
+    "Caption": "Version Compare Report",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [],
+  "flags": 1
+}

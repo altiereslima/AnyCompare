@@ -1,0 +1,162 @@
+{
+  "class": "TOpCopyToDialog",
+  "name": "OpCopyToDialog",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "OpCopyTo",
+    "Caption": "Copy to Folder",
+    "ClientHeight": 425,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiPanel",
+      "name": "SelectionPanel",
+      "props": {},
+      "children": [
+        {
+          "class": "TUiWindowShape",
+          "name": "WindowShape",
+          "props": {
+            "LeftImageIndex": "imgCopyTo",
+            "RightImageIndex": "imgCopyTo"
+          },
+          "children": [],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "ActionPanel",
+      "props": {
+        "Height": 159
+      },
+      "children": [
+        {
+          "class": "TUiLabel",
+          "name": "ActionDescLbl",
+          "props": {
+            "Left": 8,
+            "Top": 29,
+            "Height": 13,
+            "Caption": "Copy selected files to this &folder:",
+            "FocusControl": "DirEdit"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiSpecComboBar",
+          "name": "DirEdit",
+          "props": {
+            "Left": 8,
+            "Top": 46,
+            "Width": 377,
+            "AutoCompleteEx": "acDirs",
+            "Images": "BcImages.MainImages",
+            "SupportsProfile": true,
+            "TabOrder": 0,
+            "OnBrowse": "DirEditBrowse",
+            "OnChange": "DirEditChange",
+            "OnUpdateTitles": "DirEditUpdateTitles"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiPanel",
+          "name": "DirStructurePanel",
+          "props": {
+            "Left": 0,
+            "Top": 75,
+            "Width": 393,
+            "Height": 84,
+            "Align": "alBottom",
+            "BevelOuter": "bvNone",
+            "TabOrder": 1
+          },
+          "children": [
+            {
+              "class": "TUiLabel",
+              "name": "DirStructureLbl",
+              "props": {
+                "Left": 8,
+                "Top": 0,
+                "Height": 13,
+                "Caption": "Folder structure:"
+              },
+              "children": []
+            },
+            {
+              "class": "TUiRadioButton",
+              "name": "DirKeepRelativeEdit",
+              "props": {
+                "Left": 8,
+                "Top": 17,
+                "Height": 17,
+                "Caption": "Keep relati&ve folder structure",
+                "TabOrder": 0
+              },
+              "children": []
+            },
+            {
+              "class": "TUiRadioButton",
+              "name": "DirKeepBaseEdit",
+              "props": {
+                "Left": 8,
+                "Top": 38,
+                "Height": 17,
+                "Caption": "Keep b&ase folder structure",
+                "TabOrder": 1
+              },
+              "children": []
+            },
+            {
+              "class": "TUiRadioButton",
+              "name": "DirFlattenEdit",
+              "props": {
+                "Left": 8,
+                "Top": 59,
+                "Height": 17,
+                "Caption": "&Don't keep folder structure",
+                "TabOrder": 2
+              },
+              "children": []
+            }
+          ]
+        }
+      ],
+      "flags": 1
+    },
+    {
+      "class": "TUiPanel",
+      "name": "FilteredWarnPanel",
+      "props": {
+        "Top": 306
+      },
+      "children": [],
+      "flags": 1
+    },
+    {
+      "class": "TUiBtnPanel",
+      "name": "BtnPanel",
+      "props": {
+        "Top": 386
+      },
+      "children": [
+        {
+          "class": "TUiOkBtn",
+          "name": "OkBtn",
+          "props": {
+            "OnClick": "OkClick"
+          },
+          "children": [],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    }
+  ],
+  "flags": 1
+}

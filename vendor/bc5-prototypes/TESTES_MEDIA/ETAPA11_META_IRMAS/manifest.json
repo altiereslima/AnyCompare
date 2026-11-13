@@ -1,0 +1,139 @@
+{
+  "schema": "bc5-mp4-meta-siblings-v1",
+  "bc5_semantic_golden": false,
+  "source": "mdta_01_identical_A.m4a",
+  "cases": [
+    {
+      "id": "01_orders",
+      "A": {
+        "name": "01_orders_A.m4a",
+        "bytes": 1158,
+        "sha256": "4d3bbbd21d474cb2741deaa432d912bc1593265abea702992270fcff27d48473",
+        "meta": [
+          {
+            "key": "mdta:com.bc5.alpha",
+            "value": "Primeiro"
+          },
+          {
+            "key": "mdta:com.bc5.beta",
+            "value": "Segundo"
+          }
+        ]
+      },
+      "B": {
+        "name": "01_orders_B.m4a",
+        "bytes": 1158,
+        "sha256": "08d6c3cdaf27b99b2e600dd1a79bb3a0a03e45f7bac32a045227fa83f74cf022",
+        "meta": [
+          {
+            "key": "mdta:com.bc5.beta",
+            "value": "Segundo"
+          },
+          {
+            "key": "mdta:com.bc5.alpha",
+            "value": "Primeiro"
+          }
+        ]
+      }
+    },
+    {
+      "id": "02_value",
+      "A": {
+        "name": "02_value_A.m4a",
+        "bytes": 1153,
+        "sha256": "401b8f7058a78ddb2bbd54dbf23b64bc137851746dbe612316a22b7eed1abaa2",
+        "meta": [
+          {
+            "key": "mdta:com.bc5.alpha",
+            "value": "Igual"
+          },
+          {
+            "key": "mdta:com.bc5.beta",
+            "value": "Antes"
+          }
+        ]
+      },
+      "B": {
+        "name": "02_value_B.m4a",
+        "bytes": 1154,
+        "sha256": "931fde1dec0bf99012625e2292e174b48970532fdc7c2579e6f3fd76b4578721",
+        "meta": [
+          {
+            "key": "mdta:com.bc5.alpha",
+            "value": "Igual"
+          },
+          {
+            "key": "mdta:com.bc5.beta",
+            "value": "Depois"
+          }
+        ]
+      }
+    },
+    {
+      "id": "03_unicode",
+      "A": {
+        "name": "03_unicode_A.m4a",
+        "bytes": 1161,
+        "sha256": "7db0d85bd5240effd443b33b66540c13cb288367b17a90ddacbeb10e3937aa36",
+        "meta": [
+          {
+            "key": "mdta:com.bc5.título",
+            "value": "São Paulo"
+          },
+          {
+            "key": "mdta:com.bc5.beta",
+            "value": "ação"
+          }
+        ]
+      },
+      "B": {
+        "name": "03_unicode_B.m4a",
+        "bytes": 1161,
+        "sha256": "7db0d85bd5240effd443b33b66540c13cb288367b17a90ddacbeb10e3937aa36",
+        "meta": [
+          {
+            "key": "mdta:com.bc5.título",
+            "value": "São Paulo"
+          },
+          {
+            "key": "mdta:com.bc5.beta",
+            "value": "ação"
+          }
+        ]
+      }
+    },
+    {
+      "id": "04_repeated",
+      "A": {
+        "name": "04_repeated_A.m4a",
+        "bytes": 1144,
+        "sha256": "59130cdbf34b1bf152a767339724e61819b77c421ed2eabf17e36204e9b192b7",
+        "meta": [
+          {
+            "key": "mdta:com.bc5.same",
+            "value": "A"
+          },
+          {
+            "key": "mdta:com.bc5.same",
+            "value": "B"
+          }
+        ]
+      },
+      "B": {
+        "name": "04_repeated_B.m4a",
+        "bytes": 1144,
+        "sha256": "1d7728374f921945b9b1ea52982761d446df4058bde9810f36d13223b570bfe3",
+        "meta": [
+          {
+            "key": "mdta:com.bc5.same",
+            "value": "B"
+          },
+          {
+            "key": "mdta:com.bc5.same",
+            "value": "A"
+          }
+        ]
+      }
+    }
+  ]
+}

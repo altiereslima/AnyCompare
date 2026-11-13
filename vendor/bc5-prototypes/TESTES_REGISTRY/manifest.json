@@ -1,0 +1,80 @@
+[
+  {
+    "name": "01_iguais_esquerda.reg",
+    "encoding": "utf16",
+    "sha256": "a36bc6a0c098415f1e7069abd6acc26dcab3fcc0398570f1b8505cf9dca4d4c3",
+    "bytes": 242
+  },
+  {
+    "name": "01_iguais_direita.reg",
+    "encoding": "utf16",
+    "sha256": "bf539eda836f87ace378f8deb1dd0a54d4f3a42e445d4d0277eb40d3b0b18525",
+    "bytes": 250
+  },
+  {
+    "name": "02_diferencas_esquerda.reg",
+    "encoding": "utf16",
+    "sha256": "3fa6a72bdecad10e841d3e40f4e2e2ebdf5c7704755da2f32077902691560c26",
+    "bytes": 292
+  },
+  {
+    "name": "02_diferencas_direita.reg",
+    "encoding": "utf16",
+    "sha256": "0b5ef148fa869c9230dc7c8938eadf976e22f65c511da567553013a0dabd5855",
+    "bytes": 290
+  },
+  {
+    "name": "03_tipos_esquerda.reg",
+    "encoding": "utf16",
+    "sha256": "cbc063bdf85b17e4156e816e591f79a9ef3493042a760fde8482f66f6a536ae4",
+    "bytes": 540
+  },
+  {
+    "name": "03_tipos_direita.reg",
+    "encoding": "utf16",
+    "sha256": "ad7d115ee528d91d2f653dc989bcbdaf84cdb3bcad628370b9c21650e4d56439",
+    "bytes": 530
+  },
+  {
+    "name": "04_chaves_esquerda.reg",
+    "encoding": "utf16",
+    "sha256": "a6b344ba0330f605ae95f13a825d00245132a9c0fdb627bc76a016365dd9b9d2",
+    "bytes": 184
+  },
+  {
+    "name": "04_chaves_direita.reg",
+    "encoding": "utf16",
+    "sha256": "99b953f8dd3560abbaf85d38e02751a6f357f2198d708cb73952be250e4c2d41",
+    "bytes": 184
+  },
+  {
+    "name": "05_delecao_invalida.reg",
+    "encoding": "utf16",
+    "sha256": "d8f16f9aed66eed0e74b87c5428ee1107cc606e62b24db37d2c27d34d1ae077f",
+    "bytes": 164
+  },
+  {
+    "name": "06_duplicado_conflitante.reg",
+    "encoding": "utf16",
+    "sha256": "af1b57c73c2ce127ac9f74dd27aee09b4838568d91c3a69ef5db39d2f95c1f65",
+    "bytes": 242
+  },
+  {
+    "name": "07_ascii_regedit4.reg",
+    "encoding": "utf8",
+    "sha256": "12e7a5524ab2b37dd86d628111e8bc5de78baed340eaf465e554557278df52f0",
+    "bytes": 68
+  },
+  {
+    "name": "08_utf8_bom.reg",
+    "encoding": "utf8",
+    "sha256": "eae5b211508004081e12dde249affa3190a7d082f178a7b5464ace3c7d84ad0f",
+    "bytes": 102
+  },
+  {
+    "name": "09_utf16_curto.reg",
+    "encoding": "utf16",
+    "sha256": "4af5595ea6181ddbbe1d442a8c20c514c5b4fe11325264fd114d7ef79485f259",
+    "bytes": 204
+  }
+]

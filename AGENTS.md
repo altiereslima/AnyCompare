@@ -1,10 +1,46 @@
 # AnyCompare — instruções para continuidade
 
-> **Entrega atual 0.1.17.** Continuar por `docs/STATUS-ABAS-0.1.17.md`. A prioridade é completar Comparar Pastas do BC4. Os registros anteriores são históricos.
+> **PAUSADO em 13/11/2026 a pedido do usuário — ler primeiro
+> `docs/PAUSA-2026-11-13-DESEMPENHO.md`.** Trabalho de desempenho (abrir/rolar/editar
+> contra o BC4 original) e troca da fonte do editor para Consolas 13 px em andamento,
+> não commitado, com instrumentação `PERFTMP` ainda no código e suíte completa não
+> rodada. egui agora é vendorizado em `vendor/egui` (patch no Cargo.toml).
 
-> **Prioridade explícita de 30/10/2026:** concluir o Beyond Compare **4 100%**
-> antes de adicionar novidades do Beyond Compare 5. Não iniciar implementações
-> da versão 5 enquanto houver pendências da 4. Leia `docs/ESCOPO-BC4.md`.
+> **Prévia 0.2.5.** Rolagem automática durante o arrasto de seleção em
+> Tabelas. 184 testes passaram em modo oculto, Clippy limpo. Ver
+> `docs/STATUS-BC5-0.2.5-PREVIA.md` e `docs/BC5-PARIDADE.md`.
+
+> **Prévia 0.2.4, 05/11/2026.** Seleção múltipla em Tabelas com operações em
+> lote e Ctrl+A limitado à vista. 183 testes passaram, Clippy limpo.
+> Manter testes ocultos. Ver `docs/STATUS-BC5-0.2.4-PREVIA.md` e
+> `docs/BC5-PARIDADE.md` para a entrega e as lacunas.
+
+> **Prévia atual 0.2.3, 05/11/2026:** ler `docs/STATUS-BC5-0.2.3-PREVIA.md`.
+> Word Wrap no comparador, navegação por edições/marcadores no editor e correção
+> de idioma de propriedades. 179 testes e oito isolados passaram, Clippy limpo.
+> `dist/preview/AnyCompare-0.2.3.exe`; estável e prévias antigas preservadas.
+> Manter testes ocultos. A matriz `docs/BC5-PARIDADE.md` marca o que falta.
+
+> **Prévia atual 0.2.2, 04/11/2026:** ler `docs/STATUS-BC5-0.2.2-PREVIA.md`.
+> Pesquisa/substituição/Ir para e histórico de edição do editor independente
+> implementados; 171 testes e dois isolados EN passaram, Clippy limpo. Executável
+> em `dist/preview/AnyCompare-0.2.2.exe`; estável 0.2.0 preservada. Continuar com
+> testes ocultos, sem trazer novas janelas à frente. Paridade BC5 ainda incompleta.
+
+> **04/11/2026 — prévia 0.2.1:** ler `docs/STATUS-BC5-0.2.1-PREVIA.md`.
+> Editor independente e abertura pelo Registro (PT/EN), Word Wrap nele e correções
+> de mídias reais implementados. Prévia em `dist/preview`, estável 0.2.0 preservada.
+> 162 testes automáticos e três isolados passaram; Clippy limpo. Preferência atual
+> do usuário: testes ocultos, sem trazer novas janelas para a frente. Paridade
+> visual completa e Word Wrap de Comparar Textos continuam pendentes.
+
+> **RETOMADO em 03/11/2026:** usuário pediu revisar `C:\Projetos\BC4\BC5_RUST_MEDIA_ETAPA24_TRANSFERENCIA_COMPACTA`, aproveitar código válido e corrigir menu contextual/duplo clique das tabelas, continuando as pendências BC5. A pausa abaixo foi revogada. Não substituir a base atual pelos fontes antigos do pacote.
+
+> **PAUSADO novamente em 02/11/2026 por pedido explícito do usuário.** Ler `docs/PAUSA-2026-11-02-HOME-BC5.md`. Fonte 0.2.1 em desenvolvimento; entrega validada permanece 0.2.0. Não continuar implementação ou verificações sem nova retomada. As notas de retomada abaixo precedem esta pausa.
+
+> **Retomada e entrega de 02/11/2026:** versão **0.2.0** validada em dist. Ler `docs/STATUS-BC5-0.2.0.md`, `docs/BC5-PARIDADE.md` e `docs/MIGRACAO-BC5.md`. A pausa anterior foi revogada pelo novo pedido. Continuar a auditoria e implementação de **todas as telas/menus/submenus do BC5**, incluindo funcionamento e comparação visual; não encerrar com inventário apenas. Word Wrap e demais novidades pendentes estão marcadas na matriz.
+
+> **Prioridade atualizada pelo usuário em 02/11/2026:** terminar o básico da base e avançar para a implementação completa do **Beyond Compare 5.2.7.32913**, referência `C:\Projetos\BC4\BC5\BCompare-pt-5.2.7.32913.exe`. O pedido atual substitui a exigência anterior de concluir 100% do BC4 antes de iniciar BC5. Usar REA e Craft para confrontar resultados; não declarar fidelidade 100% com base em inventários. A entrega atual é 0.2.0; a equivalência completa ainda está pendente.
 
 
 > **30/10/2026 — popup:** versão atual **0.1.14**. Leia

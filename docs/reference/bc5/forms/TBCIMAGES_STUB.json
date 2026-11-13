@@ -1,0 +1,173 @@
+{
+  "class": "TBcImages",
+  "name": "BcImages",
+  "props": {
+    "OldCreateOrder": false,
+    "Height": 320,
+    "Width": 224
+  },
+  "children": [
+    {
+      "class": "TUiImageList",
+      "name": "ContentImages",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Masked": false,
+        "Width": 28,
+        "Left": 48,
+        "Top": 16
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "ContentModels",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Masked": false,
+        "Width": 28,
+        "Left": 144,
+        "Top": 16
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "GutterImages",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Height": 10,
+        "Masked": false,
+        "Width": 14,
+        "Left": 48,
+        "Top": 64
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "GutterModels",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Height": 10,
+        "Masked": false,
+        "Width": 14,
+        "Left": 144,
+        "Top": 64
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "HeaderImages",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Height": 10,
+        "Masked": false,
+        "Width": 10,
+        "Left": 48,
+        "Top": 112
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "HeaderModels",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Height": 10,
+        "Masked": false,
+        "Width": 10,
+        "Left": 144,
+        "Top": 112
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "HomeImages",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Height": 64,
+        "Masked": false,
+        "Width": 64,
+        "Left": 48,
+        "Top": 160
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "HomeMediumImages",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Height": 32,
+        "Masked": false,
+        "Width": 32,
+        "Left": 144,
+        "Top": 160
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "MainImages",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Masked": false,
+        "Left": 48,
+        "Top": 208
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "MainModels",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Masked": false,
+        "Left": 144,
+        "Top": 208
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "NavImages",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Height": 9,
+        "Masked": false,
+        "Width": 7,
+        "Left": 48,
+        "Top": 256
+      },
+      "children": []
+    },
+    {
+      "class": "TUiImageList",
+      "name": "PrefsImages",
+      "props": {
+        "ColorDepth": "cd32Bit",
+        "DrawingStyle": "dsTransparent",
+        "Height": 24,
+        "Masked": false,
+        "Width": 24,
+        "Left": 144,
+        "Top": 256
+      },
+      "children": []
+    }
+  ]
+}

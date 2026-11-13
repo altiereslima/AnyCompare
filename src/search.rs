@@ -1,7 +1,7 @@
 use regex::{NoExpand, Regex, RegexBuilder};
 use std::ops::Range;
 
-#[derive(Clone, Default)]
+#[derive(Clone, Default, PartialEq, Eq)]
 pub struct SearchOptions {
     pub query: String,
     pub case_sensitive: bool,

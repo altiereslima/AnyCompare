@@ -14,6 +14,8 @@ pub enum Request {
     Close,
     CompareUsing(SessionKind),
     ParentFolders,
+    EditText(std::path::PathBuf),
+    SourceSaved(std::path::PathBuf),
 }
 fn id() -> Id {
     Id::new("anycompare_session_menu_request")
@@ -35,6 +37,11 @@ pub fn prefix(ui: &mut Ui, icons: &mut IconManager, has_session: bool) {
             ("Comparar Pastas", SessionKind::Folder),
             ("Comparar Textos", SessionKind::Text),
             ("Comparar Hexadecimal", SessionKind::Hex),
+            ("Comparar Tabelas", SessionKind::Table),
+            ("Comparar Versões", SessionKind::Version),
+            ("Comparar Registro", SessionKind::Registry),
+            ("Comparar Mídia", SessionKind::Media),
+            ("Editor de Texto", SessionKind::TextEdit),
         ] {
             if menu_item(ui, icons, label, true).clicked() {
                 request(ui.ctx(), Request::New(kind));
@@ -80,6 +87,10 @@ pub fn suffix(ui: &mut Ui, icons: &mut IconManager, has_pair: bool) {
         for (label, kind) in [
             ("Comparar Textos", SessionKind::Text),
             ("Comparar Hexadecimal", SessionKind::Hex),
+            ("Comparar Tabelas", SessionKind::Table),
+            ("Comparar Versões", SessionKind::Version),
+            ("Comparar Registro", SessionKind::Registry),
+            ("Comparar Mídia", SessionKind::Media),
         ] {
             if menu_item(ui, icons, label, has_pair).clicked() {
                 request(ui.ctx(), Request::CompareUsing(kind));

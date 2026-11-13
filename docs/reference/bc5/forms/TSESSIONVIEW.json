@@ -1,0 +1,16 @@
+{
+  "class": "TSessionView",
+  "name": "SessionView",
+  "props": {},
+  "children": [
+    {
+      "class": "TUiPopupMenu",
+      "name": "ToolbarPopup",
+      "props": {
+        "OnPopup": "ToolbarListClick"
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

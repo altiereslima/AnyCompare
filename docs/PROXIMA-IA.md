@@ -1,6 +1,48 @@
 # Passagem para a próxima IA — AnyCompare (24/10/2026)
 
-> **Entrega atual 0.1.17.** Continuar por `STATUS-ABAS-0.1.17.md`. A prioridade é completar Comparar Pastas do BC4. Os registros anteriores são históricos.
+> **Prévia atual 0.2.3, 05/11/2026:** ler `STATUS-BC5-0.2.3-PREVIA.md` e
+> `BC5-PARIDADE.md`. Word Wrap de Comparar Textos funcional em PT/EN, sem
+> alterar quebras físicas. Editor tem Próxima/Edição anterior e marcadores
+> numerados. Troca de idioma de Mídia corrigida sem recarregar. 179 testes e
+> oito isolados passaram. Prévia `dist/preview/AnyCompare-0.2.3.exe`, SHA
+> `a49fa6dd…54d7eaaa`; preservar estável 0.2.0. Testar sem janelas visíveis.
+> Próximas lacunas: seleção múltipla/regras de Tabelas, reprodução, Registro,
+> módulos ausentes, formatos/conversores e confronto visual. Não declarar 1:1.
+
+> **Prévia atual 0.2.2, 04/11/2026:** ler `STATUS-BC5-0.2.2-PREVIA.md`.
+> `dist/preview/AnyCompare-0.2.2.exe`, SHA `60d81b14…234c9b27`; estável 0.2.0
+> preservada. Pesquisa/substituição/Go To no editor independente, histórico e
+> Undo corrigidos; 171 testes automáticos e dois isolados EN passaram, Clippy
+> limpo. Confirmação/seletor Abrir/Salvar agora de arquivo único. Testar oculto,
+> sem novas janelas. Restam sintaxe/fontes/bookmarks/outros comandos, auditoria
+> visual e Word Wrap de Comparar Textos. Notas anteriores sobre pesquisa ausente
+> no editor são históricas. Não houve commit nem publicação.
+
+> **04/11/2026 — PRÉVIA do editor/mídia:** ler `STATUS-BC5-0.2.1-PREVIA.md`.
+> Prévia em `dist/preview/AnyCompare-0.2.1.exe`, SHA `2ebd6ce5…c2cdba0`;
+> estável `dist/AnyCompare.exe` permanece 0.2.0. **Registro → Abrir Com → Editor
+> de Texto** agora funcional, inglês **Registry → Open With → Text Editor**,
+> editor independente e Word Wrap básico nele. Comparar Textos ainda sem Word Wrap.
+> WAV/Opus e campos M4A/MP3 corrigidos contra relatórios nativos de mídias reais.
+> 162 testes, dois testes isolados EN e um de mídias reais passaram; Clippy limpo.
+> Testar oculto; não houve novas janelas/capturas visuais. Editor ainda parcial;
+> pesquisa/substituição/sintaxe/fontes e paridade visual permanecem pendentes.
+> As notas abaixo sobre editor ausente/desabilitado são anteriores a esta prévia.
+
+> **04/11/2026 — testes ocultos:** usuário pediu não trazer janelas para a frente.
+> Testes via eventos em `egui::Context`: 152 aprovados na suíte geral e um teste
+> separado com quatro mídias reais, hashes intactos. Menus básicos de propriedades
+> corrigidos no fonte; `dist` continua 0.2.0. Ler
+> `validation/0.2.1/CONTEXT-HIDDEN-2026-11-04.md`. **Registro → Abrir Com → Editar
+> Texto** é o editor interno do BC5 e continua pendente, item desabilitado; não
+> substituir por Comparar Textos ou aplicativo associado. Manter testes sem novas
+> janelas visíveis enquanto essa preferência não for alterada pelo usuário.
+
+> **Retomada em 03/11/2026:** revisar pacote ETAPA24 indicado pelo usuário e corrigir menu contextual/edição direta de células; continuar BC5. A pausa abaixo foi revogada. Usar a base real em C:\Projetos\BC4\anycompare; preservar alterações existentes.
+
+> **PAUSA atual de 02/11/2026:** usuário pediu “vamos pausar” durante a correção da Home BC5. Ler `PAUSA-2026-11-02-HOME-BC5.md` antes das notas abaixo. Fonte 0.2.1 ainda não entregue; dist permanece 0.2.0 validada. Não prosseguir até nova retomada.
+
+> **Retomada e entrega de 02/11/2026: 0.2.0.** Ler `STATUS-BC5-0.2.0.md` e `BC5-PARIDADE.md`. 136 testes, 81 capturas e executável validado em dist. Pedido ativo ampliado: abrir todas as telas, menus/submenus e confrontar comportamento e visual com BC5.2.7.32913. A pausa anterior foi revogada. Não declarar 1:1: vários módulos/estados ainda faltam; Word Wrap continua pendente. Continuar implementação, não somente inventários.
 
 > **Ordem confirmada pelo usuário em 30/10/2026:** terminar o **BC4 100%**;
 > somente depois incorporar novidades do BC5. Isso inclui as funcionalidades

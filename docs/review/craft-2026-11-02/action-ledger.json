@@ -1,0 +1,6691 @@
+{
+  "date": "2026-11-02",
+  "version": "0.1.17",
+  "method": "Craft native resource verification + current source references. Presence of a name is not proof of behavior. Missing reference is not proof of absence. Historical assessments are labelled separately.",
+  "reference_sha256": "aba1b98f848a01c3729cfee3e8818ab8e0d947276bc42c9a55c1475c9f8438db",
+  "actions": [
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacCommandLineToolsAction",
+      "caption": "Install Command Line Tools...",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "SessionNewListAction",
+      "caption": "&New Session",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "TabNewAction",
+      "caption": "New &Tab",
+      "shortcut": "Ctrl+T",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "WindowNewAction",
+      "caption": "New &Window",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "SessionOpenAction",
+      "caption": "&Open Session",
+      "shortcut": "Shift+Ctrl+O",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "WorkspaceLoadListAction",
+      "caption": "Load Wor&kspace",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "WorkspaceManagerAction",
+      "caption": "Manage Workspaces...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "WorkspaceSaveAsAction",
+      "caption": "Sa&ve Workspace As...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "CloseTabAction",
+      "caption": "Close Tab",
+      "shortcut": "Ctrl+W",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "ExitAction",
+      "caption": "E&xit",
+      "shortcut": "Ctrl+Q",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "ProgramOptionsAction",
+      "caption": "&Options...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "FileFormatManagerAction",
+      "caption": "File &Formats...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "ProfileManagerAction",
+      "caption": "&Profiles...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "SourceControlManagerAction",
+      "caption": "Source Co&ntrol Integration...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "ExportAction",
+      "caption": "&Export Settings...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "ImportAction",
+      "caption": "&Import Settings...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "RestoreAction",
+      "caption": "&Restore Factory Defaults...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "SaveSnapshotAction",
+      "caption": "Save Snaps&hot...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "EditTextFileAction",
+      "caption": "E&dit Text File",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "ViewPatchAction",
+      "caption": "View P&atch...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "RaiseExceptionAction",
+      "caption": "Raise E&xception",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowMinimizeAction",
+      "caption": "Minimize",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowMinimizeAllAction",
+      "caption": "Minimize All",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowZoomAction",
+      "caption": "Zoom",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowZoomAllAction",
+      "caption": "Zoom All",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowNextAction",
+      "caption": "Cycle Through Windows",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowPrevAction",
+      "caption": "Cycle Back Through Windows",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "TabNextAction",
+      "caption": null,
+      "shortcut": "Ctrl+Tab",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "TabPrevAction",
+      "caption": null,
+      "shortcut": "Shift+Ctrl+Tab",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacTabToWindowAction",
+      "caption": "Move Tab to New Window",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowMergeAllAction",
+      "caption": "Merge All Windows",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowActivateAllAction",
+      "caption": "Bring All to Front",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "MacWindowArrangeAllAction",
+      "caption": "Arrange in Front",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "HelpContentsAction",
+      "caption": "&Contents",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "ContextHelpAction",
+      "caption": "Context Sensitive &Help",
+      "shortcut": "F1",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "VisitSiteAction",
+      "caption": "Scooter Software on the &Web",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "CheckForUpdatesAction",
+      "caption": "Check for &Updates",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "SupportAction",
+      "caption": "&Support",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "EnterKeyAction",
+      "caption": "&Enter Key...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TBASEACTIONS",
+      "name": "AboutAction",
+      "caption": "&About %s",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "FileFormatAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "SelectAllAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "DiffItemNextAction",
+      "caption": "&Next Difference Row",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 928
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "DiffItemPrevAction",
+      "caption": "&Previous Difference Row",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 931
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "ExistsNextAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "ExistsPrevAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "FavCompareAllAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1222
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 924
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1952
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "FavDiffAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1223
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 925
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1953
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "FavSameAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1224
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 926
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1954
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "FavCompareNoneAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "TogSameAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "TogLeftOrphanAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "TogRightOrphanAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "TogDiffAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "CopyRightAction",
+      "caption": "Cop&y to Right",
+      "shortcut": "Ctrl+R",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "CopyLeftAction",
+      "caption": "Cop&y to Left",
+      "shortcut": "Ctrl+L",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "CopySideAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1228
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 927
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1959
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "CutAction",
+      "caption": "Cu&t",
+      "shortcut": "Ctrl+X",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "PasteAction",
+      "caption": "&Paste",
+      "shortcut": "Ctrl+V",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "DeleteAction",
+      "caption": "&Delete",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "InsertAction",
+      "caption": "&Insert",
+      "shortcut": "Ins",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "EditAction",
+      "caption": "&Edit",
+      "shortcut": "F2",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "EditNextAction",
+      "caption": "Next &Edit",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "EditPrevAction",
+      "caption": "Previous E&dit",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "GoToAction",
+      "caption": "&Go To...",
+      "shortcut": "Ctrl+G",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "ResizeColsToFitAction",
+      "caption": "&Resize Columns to Fit",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "ShowColsAction",
+      "caption": "&Columns...",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "ShowItemNumAction",
+      "caption": "Row &Numbers",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "ShowThumbnailAction",
+      "caption": "Thu&mbnail",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDATAACTIONS",
+      "name": "ShowDetailsAction",
+      "caption": "Text &Details",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "ExpandAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CollapseAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "ExpandSubfoldersAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CollapseSubfoldersAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "NameFilterEditAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "NameFilterAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1234
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SpecsBackAction",
+      "caption": "Back",
+      "shortcut": "Alt+Left",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SpecsForwardAction",
+      "caption": "Forward",
+      "shortcut": "Alt+Right",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpOneLevelListAction",
+      "caption": "Up One Level",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpOneLevelLeftAction",
+      "caption": "&Left Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpOneLevelCenterAction",
+      "caption": "&Center Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpOneLevelRightAction",
+      "caption": "&Right Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpOneLevelOutputAction",
+      "caption": "&Output Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpOneLevelAllAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MergeBaseViewAction",
+      "caption": "&Merge Base Folders",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SyncBaseViewAction",
+      "caption": "S&ync Base Folders",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CompareToOutputListAction",
+      "caption": "Compare to O&utput",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CompareLeftToOutputAction",
+      "caption": "&Left Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CompareCenterToOutputAction",
+      "caption": "&Center Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CompareRightToOutputAction",
+      "caption": "&Right Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "QuickCompareAction",
+      "caption": "&Quick Compare",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CompareToAction",
+      "caption": "Compare To...",
+      "shortcut": "F7",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "AlignAction",
+      "caption": "A&lign",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "AlignWithAction",
+      "caption": "A&lign With...",
+      "shortcut": "F6",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CompareAction",
+      "caption": "&Compare Contents",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MergeAction",
+      "caption": "&Merge...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CopyRightAction",
+      "caption": "Cop&y to Right",
+      "shortcut": "Ctrl+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CopyLeftAction",
+      "caption": "Cop&y to Left",
+      "shortcut": "Ctrl+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CopyAction",
+      "caption": "Cop&y to Side...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CopySideAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1228
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 927
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1959
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CopyToOutputAction",
+      "caption": "Cop&y to Output...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MoveRightAction",
+      "caption": "&Move to Right",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MoveLeftAction",
+      "caption": "&Move to Left",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MoveAction",
+      "caption": "&Move to Side...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MoveSideAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MoveBothAction",
+      "caption": "Exchange",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "CopyToAction",
+      "caption": "Copy to &Folder...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MoveToAction",
+      "caption": "Mo&ve to Folder...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "DeleteAction",
+      "caption": "&Delete",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "PermanentDeleteAction",
+      "caption": null,
+      "shortcut": "Shift+Del",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "RenameAction",
+      "caption": "&Rename",
+      "shortcut": "F2",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "AttributesAction",
+      "caption": "&Attributes...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TouchAction",
+      "caption": "&Touch...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "NewFolderAction",
+      "caption": "&New Folder...",
+      "shortcut": "Ins",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "IgnoredAction",
+      "caption": "I&gnored",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FileReportAction",
+      "caption": "File Compare Re&port...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SyncListAction",
+      "caption": "Synchroni&ze",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpdateRightAction",
+      "caption": "Update &Right...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpdateLeftAction",
+      "caption": "Update &Left...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "UpdateBothAction",
+      "caption": "Update &Both...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MirrorRightAction",
+      "caption": "Mirror to Ri&ght...",
+      "shortcut": "Shift+Ctrl+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "MirrorLeftAction",
+      "caption": "Mirror to Le&ft...",
+      "shortcut": "Shift+Ctrl+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SourceControlListAction",
+      "caption": "So&urce Control",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsAddAction",
+      "caption": "&Add to Source Control",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsRemoveAction",
+      "caption": "&Remove from Source Control",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsGetLatestAction",
+      "caption": "Get Latest &Version",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsGetAction",
+      "caption": "&Get...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsCheckInAction",
+      "caption": "Check &In...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsCheckOutAction",
+      "caption": "Check &Out",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsUndoCheckOutAction",
+      "caption": "&Undo Check Out",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsDiffAction",
+      "caption": "Show &Differences",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsHistoryAction",
+      "caption": "Show &History",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsPropertiesAction",
+      "caption": "Show &Properties",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "VcsRunAppAction",
+      "caption": "Ru&n Source Control Application",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectAllFilesAction",
+      "caption": "Select All &Files",
+      "shortcut": "Shift+Ctrl+A",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectNewerListAction",
+      "caption": "Select &Newer",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectNewerLeftAction",
+      "caption": "&Left Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectNewerRightAction",
+      "caption": "&Right Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectNewerBothAction",
+      "caption": "&Both Sides",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectOrphanListAction",
+      "caption": "Select &Orphans",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectOrphanLeftAction",
+      "caption": "&Left Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectOrphanRightAction",
+      "caption": "&Right Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "SelectOrphanBothAction",
+      "caption": "&Both Sides",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "DiffNextAction",
+      "caption": "&Next Difference",
+      "shortcut": "Ctrl+N",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "DiffPrevAction",
+      "caption": "&Previous Difference",
+      "shortcut": "Ctrl+P",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavCompareAllAction",
+      "caption": "Show All",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1222
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 924
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1952
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavDiffAction",
+      "caption": "Show Differences",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1223
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 925
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1953
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavSameAction",
+      "caption": "Show Same",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1224
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 926
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1954
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavNoOrphanAction",
+      "caption": "Show No Orphans",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavDiffNoOrphanAction",
+      "caption": "Show Differences but No Orphans",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavOrphanAction",
+      "caption": "Show Orphans",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavLeftNewerAction",
+      "caption": "Show Left Newer",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavRightNewerAction",
+      "caption": "Show Right Newer",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavLeftNewerOrphanAction",
+      "caption": "Show Left Newer and Left Orphans",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavRightNewerOrphanAction",
+      "caption": "Show Right Newer and Right Orphans",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavLeftOrphanAction",
+      "caption": "Show Left Orphans",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavRightOrphanAction",
+      "caption": "Show Right Orphans",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavCompareNoneAction",
+      "caption": "Show None",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavMergeAllAction",
+      "caption": "Show All",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavChangedAction",
+      "caption": "Show Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavConflictAction",
+      "caption": "Show Conflicts",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavLeftAction",
+      "caption": "Show Left Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavRightAction",
+      "caption": "Show Right Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavMergeableAction",
+      "caption": "Show Mergeable",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavUnchangedAction",
+      "caption": "Show Unchanged",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "FavMergeNoneAction",
+      "caption": "Show None",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogSameAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogLeftOrphanAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogRightOrphanAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogLeftNewerAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogRightNewerAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogDiffAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogNoModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogSameModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogLeftAddAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogRightAddAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogLeftDelAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogRightDelAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogLeftModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogRightModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogDiffModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "TogConflictAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "DirShowAllAction",
+      "caption": "&Always Show Folders",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "DirCompareStructureAction",
+      "caption": "Compare Files and Fol&der Structure",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1225
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "DirCompareFilesOnlyAction",
+      "caption": "Only Compare &Files",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "DirFlattenAction",
+      "caption": "&Ignore Folder Structure",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1226
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRACTIONS",
+      "name": "ShowCenterAction",
+      "caption": "Ce&nter Pane",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "SwapAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 936
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "BrowseListAction",
+      "caption": "B&rowse for Folder",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "BrowseLeftAction",
+      "caption": "&Left Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "BrowseCenterAction",
+      "caption": "&Center Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "BrowseRightAction",
+      "caption": "&Right Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "BrowseOutputAction",
+      "caption": "&Output Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "StopAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1232
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ExpandAction",
+      "caption": "Open Folder",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "CollapseAction",
+      "caption": "Close Folder",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ExpandSubfoldersAction",
+      "caption": "Open Subfolders",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "CollapseSubfoldersAction",
+      "caption": "Close Subfolders",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "SetAsBaseFoldersAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "SetAsOtherBaseFolderAction",
+      "caption": "Set as Base on Ot&her Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "OpenAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "OpenWithListAction",
+      "caption": "Open &With",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "AssocAppAction",
+      "caption": "Associated Application",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "RevealInFinderAction",
+      "caption": "Reveal in Finder",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ExcludeAction",
+      "caption": "&Exclude",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "CopyFilenamesAction",
+      "caption": "Copy F&ilename",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "RefreshSelectionAction",
+      "caption": "Refresh &Selection",
+      "shortcut": "Shift+F5",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ExplorerListAction",
+      "caption": "E&xplorer",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ExpandAllAction",
+      "caption": "&Expand All",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1230
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "CollapseAllAction",
+      "caption": "&Collapse All",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1230
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "SelectAllAction",
+      "caption": "Select &All",
+      "shortcut": "Ctrl+A",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "SelectInvertAction",
+      "caption": "&Invert Selection",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "RefreshAction",
+      "caption": "&Refresh",
+      "shortcut": "F5",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1231
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "FullRefreshAction",
+      "caption": "F&ull Refresh",
+      "shortcut": "Ctrl+F5",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ExistsNextAction",
+      "caption": null,
+      "shortcut": "Alt+Down",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ExistsPrevAction",
+      "caption": null,
+      "shortcut": "Alt+Up",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "FindFilenameAction",
+      "caption": "&Find Filename...",
+      "shortcut": "Ctrl+F",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "FindFilenameNextAction",
+      "caption": "Find Ne&xt Filename",
+      "shortcut": "F3",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "FindFilenamePrevAction",
+      "caption": "Find Pre&vious Filename",
+      "shortcut": "Shift+F3",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "SuppressFiltersAction",
+      "caption": "&Suppress Filters",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1227
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ColListAction",
+      "caption": "&Columns",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "LegendAction",
+      "caption": "&Legend",
+      "shortcut": "Ctrl+Alt+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRBASEACTIONS",
+      "name": "ShowLogAction",
+      "caption": "L&og",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "RunAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "CompareBaseViewAction",
+      "caption": "Co&mpare Base Folders",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "SyncLeaveAction",
+      "caption": "Lea&ve Alone",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "SyncCopyLeftAction",
+      "caption": "Copy Right to &Left",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "SyncCopyRightAction",
+      "caption": "Copy Left to &Right",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "SyncDeleteLeftAction",
+      "caption": "Delete Le&ft",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "SyncDeleteRightAction",
+      "caption": "Delete Ri&ght",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "ConflictNextAction",
+      "caption": "&Next Conflict",
+      "shortcut": "Ctrl+N",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TDIRSYNCACTIONS",
+      "name": "ConflictPrevAction",
+      "caption": "&Previous Conflict",
+      "shortcut": "Ctrl+P",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "FileFormatAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "ReloadAction",
+      "caption": "&Reload Files",
+      "shortcut": "F5",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 936
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "RecompareAction",
+      "caption": "Reco&mpare Files",
+      "shortcut": "Ctrl+F5",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "CompareUsingViewListAction",
+      "caption": "Compare Files &Using",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "MergeViewAction",
+      "caption": "Mer&ge Files",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "CompareToOutputListAction",
+      "caption": "Compare to O&utput",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "CompareLeftToOutputAction",
+      "caption": "&Left Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "CompareCenterToOutputAction",
+      "caption": "&Center Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "CompareRightToOutputAction",
+      "caption": "&Right Side",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "OpenAction",
+      "caption": "&Open File...",
+      "shortcut": "Ctrl+O",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "OpenLocalAction",
+      "caption": "Open File on File S&ystem...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "OpenProfileAction",
+      "caption": "Open File Using &Profile...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "OpenClipboardAction",
+      "caption": "Open &Clipboard",
+      "shortcut": "Shift+Ctrl+V",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "OpenWithListAction",
+      "caption": "Open &With",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "AssocAppAction",
+      "caption": "Associated Application",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "RevealInFinderAction",
+      "caption": "Reveal in Finder",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "SaveAction",
+      "caption": "&Save File",
+      "shortcut": "Ctrl+S",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "SaveAsAction",
+      "caption": "Save File &As...",
+      "shortcut": "F12",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "SaveAsLocalAction",
+      "caption": "Save File on Fi&le System As...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "SaveAsProfileAction",
+      "caption": "Save File Using Pro&file As...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "ExplorerListAction",
+      "caption": "E&xplorer",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "UndoAction",
+      "caption": null,
+      "shortcut": "Ctrl+Z",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "RedoAction",
+      "caption": null,
+      "shortcut": "Ctrl+Y",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "CopyAction",
+      "caption": "&Copy",
+      "shortcut": "Ctrl+C",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "SelectAllAction",
+      "caption": "Select &All",
+      "shortcut": "Ctrl+A",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "DiffItemNextAction",
+      "caption": "&Next Difference Item",
+      "shortcut": "Ctrl+N",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 928
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "DiffItemPrevAction",
+      "caption": "&Previous Difference Item",
+      "shortcut": "Ctrl+P",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 931
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "DiffFileNextAction",
+      "caption": "Next D&ifference Files",
+      "shortcut": "Ctrl+M",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "DiffFilePrevAction",
+      "caption": "Previ&ous Difference Files",
+      "shortcut": "Shift+Ctrl+M",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "CopyFileRightAction",
+      "caption": "&Copy File to Right and Open Next Difference",
+      "shortcut": "Ctrl+Alt+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "CopyFileLeftAction",
+      "caption": "Cop&y File to Left and Open Next Difference",
+      "shortcut": "Ctrl+Alt+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "TakeFileLeftAction",
+      "caption": "Take Left File and Open Next Difference",
+      "shortcut": "Ctrl+Alt+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "TakeFileRightAction",
+      "caption": "Take Right File and Open Next Difference",
+      "shortcut": "Ctrl+Alt+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "ExistsNextAction",
+      "caption": null,
+      "shortcut": "Alt+Down",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "ExistsPrevAction",
+      "caption": null,
+      "shortcut": "Alt+Up",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "FindAction",
+      "caption": "&Find...",
+      "shortcut": "Ctrl+F",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "FindNextAction",
+      "caption": "Find Ne&xt",
+      "shortcut": "F3",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "FindPrevAction",
+      "caption": "Find Pre&vious",
+      "shortcut": "Shift+F3",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "GoLeftAction",
+      "caption": null,
+      "shortcut": "Alt+Left",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "GoRightAction",
+      "caption": null,
+      "shortcut": "Alt+Right",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "GoNextAction",
+      "caption": null,
+      "shortcut": "F6",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "GoPrevAction",
+      "caption": null,
+      "shortcut": "Shift+F6",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "FavCompareAllAction",
+      "caption": "Show All",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1222
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 924
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1952
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "FavDiffAction",
+      "caption": "Show Differences",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1223
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 925
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1953
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "FavSameAction",
+      "caption": "Show Same",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1224
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 926
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1954
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "FavCompareNoneAction",
+      "caption": "Show None",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "TogSameAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "TogLeftOrphanAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "TogRightOrphanAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "TogDiffAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "ShowWSAction",
+      "caption": "Visible &Whitespace",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "DisplayFontAction",
+      "caption": "Display &Font...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "DisplayFontIncreaseAction",
+      "caption": "Increase Display Font Size",
+      "shortcut": "Ctrl+Num +",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "DisplayFontDecreaseAction",
+      "caption": "Decrease Display Font Size",
+      "shortcut": "Ctrl+Num -",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "DisplayFontResetAction",
+      "caption": "Reset Display Font Size",
+      "shortcut": "Ctrl+Num 0",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "SideBySideAction",
+      "caption": "&Side-by-side Layout",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "OverUnderAction",
+      "caption": "&Over-under Layout",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TFILEACTIONS",
+      "name": "ShowSpecInfoAction",
+      "caption": "File &Info",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "FileFormatAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "SelectAllAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "DiffItemNextAction",
+      "caption": "&Next Difference Bytes",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 928
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "DiffItemPrevAction",
+      "caption": "&Previous Difference Bytes",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 931
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "ExistsNextAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "ExistsPrevAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "FavCompareAllAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1222
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 924
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1952
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "FavDiffAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1223
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 925
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1953
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "FavSameAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1224
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 926
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1954
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "CopyRightAction",
+      "caption": "Cop&y to Right",
+      "shortcut": "Ctrl+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "CopyLeftAction",
+      "caption": "Cop&y to Left",
+      "shortcut": "Ctrl+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "CopySideAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1228
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 927
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1959
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "CutAction",
+      "caption": "Cu&t",
+      "shortcut": "Ctrl+X",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "PasteAction",
+      "caption": "&Paste",
+      "shortcut": "Ctrl+V",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "DeleteAction",
+      "caption": "&Delete",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "ReplaceAction",
+      "caption": "&Replace...",
+      "shortcut": "Ctrl+H",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "GoToAction",
+      "caption": "&Go To...",
+      "shortcut": "Ctrl+G",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "ItemNumAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "LittleEndianListAction",
+      "caption": "&Little Endian Values",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "BigEndianListAction",
+      "caption": "&Big Endian Values",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "ShowItemNumAction",
+      "caption": "Byte &Addresses",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "LayoutAction",
+      "caption": "La&yout...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "ShowThumbnailAction",
+      "caption": "Thu&mbnail",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THEXACTIONS",
+      "name": "OverwritingAction",
+      "caption": null,
+      "shortcut": "Ins",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THOMEACTIONS",
+      "name": "FindAction",
+      "caption": null,
+      "shortcut": "Ctrl+F",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THOMEACTIONS",
+      "name": "ShowManageAction",
+      "caption": "Show Session &Management",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "THOMEACTIONS",
+      "name": "MaximizeManageAction",
+      "caption": "Ma&ximize Session Management",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "THOMEACTIONS",
+      "name": "ShowWebAction",
+      "caption": "Show &Web Resources",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "excluida_usuario"
+    },
+    {
+      "form": "TMP3ACTIONS",
+      "name": "Play2Action",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TMP3ACTIONS",
+      "name": "PlayAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TMP3ACTIONS",
+      "name": "IsSigAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TMP3ACTIONS",
+      "name": "ShowDetailsAction",
+      "caption": "Text &Details",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "FileFormatAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "DiffToleranceAction",
+      "caption": "To&lerance Mode",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "DiffRangeAction",
+      "caption": "Mismatch Ran&ge Mode",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "DiffBlendAction",
+      "caption": "&Blend Mode",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "AutoScaleAction",
+      "caption": "Auto S&cale",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "RotateRightAction",
+      "caption": "Rotate Cloc&kwise",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "RotateLeftAction",
+      "caption": "Rotate Cou&nterclockwise",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "FlipHorzAction",
+      "caption": "Flip &Horizontally",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "FlipVertAction",
+      "caption": "Flip &Vertically",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "OffsetResetAction",
+      "caption": "&Reset Difference Offset",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "CompareTagsAction",
+      "caption": "Compare &Metadata",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "BlendToggleAction",
+      "caption": "Blend T&oggle",
+      "shortcut": "F8",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "FullScreenAction",
+      "caption": "Full Scr&een",
+      "shortcut": "F11",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "ZoomListAction",
+      "caption": "&Zoom",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "ZoomInAction",
+      "caption": "Zoom &In",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "ZoomOutAction",
+      "caption": "Zoom &Out",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "ZoomActualAction",
+      "caption": "&Actual Size",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TPIXACTIONS",
+      "name": "ZoomFitAction",
+      "caption": "&Fit to Window",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "SwapAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 936
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "ReloadAction",
+      "caption": "&Reload",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 936
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "RecompareAction",
+      "caption": "Reco&mpare",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "OpenAction",
+      "caption": "&Open...",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "OpenLocalAction",
+      "caption": "Open Registry File on File S&ystem...",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "OpenProfileAction",
+      "caption": "Open Registry File Using &Profile...",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "UpOneLevelListAction",
+      "caption": "Up One Level",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "UpOneLevelLeftAction",
+      "caption": "&Left Side",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "UpOneLevelRightAction",
+      "caption": "&Right Side",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "UpOneLevelBothAction",
+      "caption": "&Both Sides",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "OpenRegAction",
+      "caption": "Open &Registry...",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "SetAsBasesAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "SetBothAsBasesAction",
+      "caption": "Set B&oth as Base Keys",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "SetAsOtherBaseAction",
+      "caption": "Set as Base Key on Ot&her Side",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "CopyRightAction",
+      "caption": "Cop&y to Right",
+      "shortcut": "Ctrl+R",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "CopyLeftAction",
+      "caption": "Cop&y to Left",
+      "shortcut": "Ctrl+L",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "CopySideAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1228
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 927
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1959
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "DeleteAction",
+      "caption": "&Delete",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "RenameAction",
+      "caption": "Re&name",
+      "shortcut": "F2",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "NewKeyAction",
+      "caption": "New &Key",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "NewValAction",
+      "caption": "New &Value",
+      "shortcut": "Ins",
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "ModifyAction",
+      "caption": "&Modify...",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "CopyKeyNameAction",
+      "caption": "&Copy Key Name",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "ExportKeyAction",
+      "caption": "&Export...",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "ExportAllAction",
+      "caption": "Export A&ll...",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "ExpandAllAction",
+      "caption": "&Expand All",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1230
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "CollapseAllAction",
+      "caption": "&Collapse All",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1230
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "ShowTextDetailsAction",
+      "caption": "Text &Details",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TREGACTIONS",
+      "name": "ShowHexDetailsAction",
+      "caption": "He&x Details",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SessionHomeAction",
+      "caption": null,
+      "shortcut": "Alt+Home",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 936
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SessionsComboAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1229
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 937
+        },
+        {
+          "file": "src/ui/session_picker.rs",
+          "line": 141
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1958
+        },
+        {
+          "file": "src/ui/toolbar.rs",
+          "line": 427
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SessionSaveAction",
+      "caption": "&Save Session",
+      "shortcut": "Shift+Ctrl+S",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SessionSaveAsAction",
+      "caption": "Save Session &As...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SessionEditAction",
+      "caption": "S&ession Settings...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SessionLockedAction",
+      "caption": "&Locked",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SessionClearAction",
+      "caption": "&Clear Session",
+      "shortcut": "Shift+Ctrl+C",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "RulesAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SwapAction",
+      "caption": "Swap Si&des",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 936
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "ReportAction",
+      "caption": "%s Re&port...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "InfoAction",
+      "caption": "%s &Info",
+      "shortcut": "Ctrl+I",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "CompareParentsAction",
+      "caption": "Compare Parent &Folders",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "MergeParentsAction",
+      "caption": "Merge Parent &Folders",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "InsigIgnoredAction",
+      "caption": "Ignore &Unimportant Differences",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1956
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "SameModIgnoredAction",
+      "caption": "Ignore S&ame Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TSESSIONACTIONS",
+      "name": "ShowToolbarAction",
+      "caption": "&Toolbar",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FileFormatAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1962
+        }
+      ],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "SelectAllAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1233
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ExistsNextAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ExistsPrevAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavCompareAllAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1222
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 924
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1952
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavDiffAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1223
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 925
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1953
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavSameAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1224
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 926
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1954
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavCompareNoneAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogSameAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogLeftOrphanAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogRightOrphanAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogDiffAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CheckInAction",
+      "caption": "Check &In...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CheckOutAction",
+      "caption": "Check Ou&t",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "UndoCheckOutAction",
+      "caption": "&Undo Check Out",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ApplyPatchAction",
+      "caption": "&Apply Patch",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "AlignWithAction",
+      "caption": "Align &With...",
+      "shortcut": "F7",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "IsolateAction",
+      "caption": "I&solate",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ReplacementAction",
+      "caption": "Replace&ment...",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CopyRightAction",
+      "caption": "Cop&y to Right",
+      "shortcut": "Ctrl+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CopyLeftAction",
+      "caption": "Cop&y to Left",
+      "shortcut": "Ctrl+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CopySideAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/folder_compare.rs",
+          "line": 1228
+        },
+        {
+          "file": "src/ui/hex_compare.rs",
+          "line": 927
+        },
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1959
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CopyItemRightAction",
+      "caption": "Cop&y Line to Right",
+      "shortcut": "Shift+Ctrl+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CopyItemLeftAction",
+      "caption": "Cop&y Line to Left",
+      "shortcut": "Shift+Ctrl+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CopyItemSideAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ConflictAction",
+      "caption": "&Conflict",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakeLeftAction",
+      "caption": "Ta&ke Left",
+      "shortcut": "Ctrl+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakeCenterAction",
+      "caption": "Ta&ke Center",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakeRightAction",
+      "caption": "Ta&ke Right",
+      "shortcut": "Ctrl+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakeLeftRightAction",
+      "caption": "Take Left Then Ri&ght",
+      "shortcut": "Ctrl+B",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakeRightLeftAction",
+      "caption": "Take Rig&ht Then Left",
+      "shortcut": "Shift+Ctrl+B",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakeItemLeftAction",
+      "caption": "Ta&ke Left Line",
+      "shortcut": "Shift+Ctrl+L",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakeItemCenterAction",
+      "caption": "Ta&ke Center Line",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakeItemRightAction",
+      "caption": "Ta&ke Right Line",
+      "shortcut": "Shift+Ctrl+R",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "IncreaseIndentAction",
+      "caption": "I&ncrease Indent",
+      "shortcut": "Shift+Ctrl+I",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DecreaseIndentAction",
+      "caption": "D&ecrease Indent",
+      "shortcut": "Shift+Ctrl+U",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CutAction",
+      "caption": "Cu&t",
+      "shortcut": "Ctrl+X",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "PasteAction",
+      "caption": "&Paste",
+      "shortcut": "Ctrl+V",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DeleteAction",
+      "caption": "&Delete",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DeleteItemAction",
+      "caption": "&Delete Line",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DeleteItemBeginAction",
+      "caption": "&Delete to Start of Line",
+      "shortcut": "Shift+Ctrl+BkSp",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DeleteItemEndAction",
+      "caption": "&Delete to End of Line",
+      "shortcut": "Shift+Ctrl+Del",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DeleteWordAction",
+      "caption": "&Delete Word",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DeleteWordBeginAction",
+      "caption": "&Delete to Start of Word",
+      "shortcut": "Ctrl+BkSp",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DeleteWordEndAction",
+      "caption": "&Delete to End of Word",
+      "shortcut": "Ctrl+Del",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "InsertItemBeforeAction",
+      "caption": "Insert Line &Before",
+      "shortcut": "Shift+Ctrl+Enter",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "InsertItemAfterAction",
+      "caption": "&Insert Line After",
+      "shortcut": "Ctrl+Enter",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "SelectSectionAction",
+      "caption": "Select Secti&on",
+      "shortcut": "Ctrl+D",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "CompareToClipboardAction",
+      "caption": "Compare Se&lection to Clipboard",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ConvertListAction",
+      "caption": "Con&vert File",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TrimTrailWSAction",
+      "caption": "Trim &Trailing Whitespace",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "LeadSpaceToTabAction",
+      "caption": "&Leading Spaces to Tabs",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TabToSpaceAction",
+      "caption": "Tabs to &Spaces",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "EndingStyleListAction",
+      "caption": "Line &Endings",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ToWindowsAction",
+      "caption": "To &Windows/DOS",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ToUnixAction",
+      "caption": "To &Unix",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ToMacAction",
+      "caption": "To &Macintosh",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FullEditAction",
+      "caption": "&Full Edit",
+      "shortcut": "F2",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1957
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ConflictSectionOffNextAction",
+      "caption": "Clear &Conflict Section, Next",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ConflictSectionNextAction",
+      "caption": "Next &Conflict Section",
+      "shortcut": "Alt+N",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ConflictSectionPrevAction",
+      "caption": "Previous &Conflict Section",
+      "shortcut": "Alt+P",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DiffNextAction",
+      "caption": "Nex&t Difference",
+      "shortcut": "Shift+Ctrl+N",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DiffPrevAction",
+      "caption": "Previo&us Difference",
+      "shortcut": "Shift+Ctrl+P",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DiffSectionNextAction",
+      "caption": "&Next Difference Section",
+      "shortcut": "Ctrl+N",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1960
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DiffSectionPrevAction",
+      "caption": "&Previous Difference Section",
+      "shortcut": "Ctrl+P",
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1961
+        }
+      ],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DiffReplacedNextAction",
+      "caption": "Next Repl&acement",
+      "shortcut": "Shift+Ctrl+Alt+N",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "DiffReplacedPrevAction",
+      "caption": "Previous Replace&ment",
+      "shortcut": "Shift+Ctrl+Alt+P",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakenLeftNextAction",
+      "caption": "Next Left T&aken",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakenLeftPrevAction",
+      "caption": "Previous Left T&aken",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakenRightNextAction",
+      "caption": "Next Rig&ht Taken",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TakenRightPrevAction",
+      "caption": "Previous Rig&ht Taken",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "EditNextAction",
+      "caption": "Next &Edit",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "EditPrevAction",
+      "caption": "Previous E&dit",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ReplaceAction",
+      "caption": "&Replace...",
+      "shortcut": "Ctrl+H",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FindInFilesAction",
+      "caption": "Find in File&s...",
+      "shortcut": "Shift+Ctrl+F",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "MacFindUseSelAction",
+      "caption": "Use Selection for Find",
+      "shortcut": null,
+      "status": "outside_windows",
+      "source_references": [],
+      "historical_status_2026_10_16": "fora_windows"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "GoToAction",
+      "caption": "&Go To...",
+      "shortcut": "Ctrl+G",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "BookmarkToggleListAction",
+      "caption": "Toggle &Bookmark",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "BookmarkGoToListAction",
+      "caption": "Go to Boo&kmark",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "BookmarkClearAction",
+      "caption": "C&lear Bookmarks",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "GoInputAction",
+      "caption": null,
+      "shortcut": "Alt+PgUp",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "GoOutputAction",
+      "caption": null,
+      "shortcut": "Alt+PgDn",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavMergeAllAction",
+      "caption": "Show All",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavChangedAction",
+      "caption": "Show Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavConflictAction",
+      "caption": "Show Conflicts",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavLeftAction",
+      "caption": "Show Left Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavRightAction",
+      "caption": "Show Right Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavMergeableAction",
+      "caption": "Show Mergeable",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavUnchangedAction",
+      "caption": "Show Unchanged",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavMergeNoneAction",
+      "caption": "Show None",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogNoModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogSameModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogLeftModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogRightModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogDiffModAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "TogConflictAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowContextAction",
+      "caption": "Show &Context",
+      "shortcut": null,
+      "status": "source_candidate_unverified",
+      "source_references": [
+        {
+          "file": "src/ui/text_compare.rs",
+          "line": 1955
+        }
+      ],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavorLeftAction",
+      "caption": "Favor &Left Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "FavorRightAction",
+      "caption": "Fa&vor Right Changes",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "IgnoredAction",
+      "caption": "I&gnored",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowItemNumAction",
+      "caption": "Line &Numbers",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "presente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowSyntaxHighlightingAction",
+      "caption": "Syntax &Highlighting",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "OutputWindowAction",
+      "caption": "Detached Out&put Pane",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ZoomAction",
+      "caption": null,
+      "shortcut": "F11",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ZoomLeftAction",
+      "caption": null,
+      "shortcut": "Ctrl+Alt+Right",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ZoomRightAction",
+      "caption": null,
+      "shortcut": "Ctrl+Alt+Left",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "WebBrowserAction",
+      "caption": "We&bpages",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowThumbnailAction",
+      "caption": "Thu&mbnail",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowCenterAction",
+      "caption": "C&enter Pane",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowTextDetailsAction",
+      "caption": "Text &Details",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "parcial"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowHexDetailsAction",
+      "caption": "He&x Details",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowAlignDetailsAction",
+      "caption": "&Alignment Details",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "ShowRulerAction",
+      "caption": "&Ruler",
+      "shortcut": null,
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TTEXTACTIONS",
+      "name": "OverwritingAction",
+      "caption": null,
+      "shortcut": "Ins",
+      "status": "unverified",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TVERACTIONS",
+      "name": "IsSigAction",
+      "caption": null,
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    },
+    {
+      "form": "TVERACTIONS",
+      "name": "ShowDetailsAction",
+      "caption": "Text &Details",
+      "shortcut": null,
+      "status": "module_absent",
+      "source_references": [],
+      "historical_status_2026_10_16": "ausente"
+    }
+  ],
+  "forms": [
+    {
+      "resource_index": 483,
+      "name": "TABOUTDIALOG",
+      "sha256": "426fffa137991f355b7a1f18f8f78c3450aa9ef7c56ccc4cf7f78638333ffed9",
+      "bytes": 60079,
+      "parse_status": "complete",
+      "components": 23
+    },
+    {
+      "resource_index": 484,
+      "name": "TBASEACTIONS",
+      "sha256": "77e1ca144fba38271d1b25b195ddf4f2adbcf1e632125a50e3e13051d8b24188",
+      "bytes": 10497,
+      "parse_status": "complete",
+      "components": 43
+    },
+    {
+      "resource_index": 485,
+      "name": "TBCDIALOG",
+      "sha256": "608bde23f88e0897558a4c0db39c3d52c11a6bd5a1442911b771bf28b380257c",
+      "bytes": 186,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 486,
+      "name": "TBCIMAGES",
+      "sha256": "59a346d5f26f541a65fb41aca9dfa081d1a1f675898e44e8cc1461e3f6b5e910",
+      "bytes": 666584,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 487,
+      "name": "TBCIMAGES_125",
+      "sha256": "9d9407f8632811724dcb687b2632b3e8016efcaeb2cddea41337817523eaa5f5",
+      "bytes": 1037312,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 488,
+      "name": "TBCIMAGES_150",
+      "sha256": "0b068e85a770d8a8c96743e290acedef669e852d415ae89301c3032d58c6f52c",
+      "bytes": 1489752,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 489,
+      "name": "TBCIMAGES_200",
+      "sha256": "f7e856ecf432ddc522f5af8a0c6349c175f6c697581d5ca58acd3fe37d4c5bfc",
+      "bytes": 2640582,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 490,
+      "name": "TBETAEXPIREDDIALOG",
+      "sha256": "266411986cb6ea05a8979ccfc5fec3989fd3b9a91b0312cfb892ba20500758a0",
+      "bytes": 916,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 491,
+      "name": "TBROWSEMACHINEDIALOG",
+      "sha256": "4793ba1ce7409741cb9979615195965bbfde7ea1f6c066ad8ede3ce536bdb831",
+      "bytes": 627,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 492,
+      "name": "TBROWSEREGISTRYDIALOG",
+      "sha256": "d86c2501d775c3b946aaf0c7c81271db8ff04df8b3661f33cba752864513fdfa",
+      "bytes": 591,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 493,
+      "name": "TCHECKFORUPDATESDIALOG",
+      "sha256": "882713da0aaf9788157e15c0bed388fba7437c409cd8ea7c2f9e790b3a4ec2d6",
+      "bytes": 797,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 494,
+      "name": "TDATAACTIONS",
+      "sha256": "732378ae754487d032bd4bfa011e730f6d2afd8625cd3f8f7548aa6ac326f011",
+      "bytes": 5730,
+      "parse_status": "complete",
+      "components": 33
+    },
+    {
+      "resource_index": 495,
+      "name": "TDATACOLHANDLINGDIALOG",
+      "sha256": "de4ffa380d6a3e1566ea1e76fa90761a6417066d4365afdb84da5d2765fae334",
+      "bytes": 2234,
+      "parse_status": "complete",
+      "components": 20
+    },
+    {
+      "resource_index": 496,
+      "name": "TDATACOLINSERTDIALOG",
+      "sha256": "5e9cbfb0d11fff262e48af85f45210bb7c3a501a60c8d7f24cf7e16c0a206fc5",
+      "bytes": 758,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 497,
+      "name": "TDATAFORMATCONVERSIONFRAME",
+      "sha256": "5b60337a51a01621f2b29619cc19c956aeadbd2852453ea65f8d09eacaa8c06f",
+      "bytes": 506,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 498,
+      "name": "TDATAFORMATREGIONALFRAME",
+      "sha256": "30dfbe8f2fdad9f99518952e91a7bced39f417f97ae88ad117dfc78d30ede11b",
+      "bytes": 697,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 499,
+      "name": "TDATAFORMATTYPEFRAME",
+      "sha256": "d2e1c55e361f1a92a29d12bb58b5dbc720d06ec202d302e39bb06526aafade45",
+      "bytes": 2793,
+      "parse_status": "complete",
+      "components": 26
+    },
+    {
+      "resource_index": 500,
+      "name": "TDATAGOTODIALOG",
+      "sha256": "65b888d339bec2a91a89acc3926d7dda6d7726978d380fca1a8208daf1a57f5a",
+      "bytes": 760,
+      "parse_status": "complete",
+      "components": 11
+    },
+    {
+      "resource_index": 501,
+      "name": "TDATAREPORTDIALOG",
+      "sha256": "0e749d54f758f3de5acaf278e8bfaa70ab4ca64bcaa924108f44e2a3449c1ee0",
+      "bytes": 339,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 502,
+      "name": "TDATASESSIONALIGNMENTFRAME",
+      "sha256": "4f483cdb88e008d1b277a1e891b170b3bd42a7a40ecd125927a917b66d16171e",
+      "bytes": 884,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 503,
+      "name": "TDATASESSIONFRAME",
+      "sha256": "351ffb7691ed13e2537f303535cd4a74ef6d0410d7f493cbfb9f591881d469b9",
+      "bytes": 2598,
+      "parse_status": "complete",
+      "components": 23
+    },
+    {
+      "resource_index": 504,
+      "name": "TDATASHOWCOLSDIALOG",
+      "sha256": "1da3a5a16ec5f45de1594ac046c5db1041470ad879c745c5d1d8bae89b83d943",
+      "bytes": 1036,
+      "parse_status": "complete",
+      "components": 8
+    },
+    {
+      "resource_index": 505,
+      "name": "TDATAVIEWFRAME",
+      "sha256": "2706c6ffd4716b092a18cd7222c81da37a12bb0bb087ebbb6cb13c7ff2b68080",
+      "bytes": 4672,
+      "parse_status": "complete",
+      "components": 20
+    },
+    {
+      "resource_index": 506,
+      "name": "TDIRACTIONS",
+      "sha256": "608a3e1de2e44e966cceb276600db813de8f8ea5f04fdf5a9de3507fd4019f22",
+      "bytes": 26081,
+      "parse_status": "complete",
+      "components": 120
+    },
+    {
+      "resource_index": 507,
+      "name": "TDIRALIGNWITHITEMDIALOG",
+      "sha256": "76df985ec5fc353103506b7d27d06c323496c5fa7aa2b53c8b5da20c3851f390",
+      "bytes": 3839,
+      "parse_status": "complete",
+      "components": 43
+    },
+    {
+      "resource_index": 508,
+      "name": "TDIRBASEACTIONS",
+      "sha256": "0fd3042fbd9f7a0a5697564ded118ec1cc34bb74794da6f07257b060f002364b",
+      "bytes": 8411,
+      "parse_status": "complete",
+      "components": 39
+    },
+    {
+      "resource_index": 509,
+      "name": "TDIRBASEVIEWFRAME",
+      "sha256": "5d6c7159c2805f7155678b9124d89c02fec4c95e9965703e1411c0f60aa31bc6",
+      "bytes": 2160,
+      "parse_status": "complete",
+      "components": 23
+    },
+    {
+      "resource_index": 510,
+      "name": "TDIRFINDDIALOG",
+      "sha256": "6c86b4d5041c08b3be6620c0d6fc1d5d761395fb021d8e21ccba9d29389eac4d",
+      "bytes": 3419,
+      "parse_status": "complete",
+      "components": 37
+    },
+    {
+      "resource_index": 511,
+      "name": "TDIRLEGENDDIALOG",
+      "sha256": "85e221cfcd86ad20295f4fc78c215483e1fb52d1095a8136619b365538c37831",
+      "bytes": 451,
+      "parse_status": "complete",
+      "components": 4
+    },
+    {
+      "resource_index": 512,
+      "name": "TDIRLOADERRORDIALOG",
+      "sha256": "ec0393cc9aeb6f028ce47bbc52206defe7d45019728e1be86d5633d7c41b1b35",
+      "bytes": 764,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 513,
+      "name": "TDIRNAMEFILTERPRESETDIALOG",
+      "sha256": "407f71e918dad183f40992070ce57a17dd8ca5588ebbe7e43a07973562220786",
+      "bytes": 773,
+      "parse_status": "complete",
+      "components": 9
+    },
+    {
+      "resource_index": 514,
+      "name": "TDIROPERRORSDIALOG",
+      "sha256": "3c83a1abd4f9ce6ca39c64bb4f9d218a7151691d06a470b2ace693f746d9e8de",
+      "bytes": 841,
+      "parse_status": "complete",
+      "components": 9
+    },
+    {
+      "resource_index": 515,
+      "name": "TDIROPPROGRESSFRAME",
+      "sha256": "16ecdd8a86703830e578dcaab4363e71a5fb796c26f7a0ded9bf74fce57efb81",
+      "bytes": 1025,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 516,
+      "name": "TDIROTHERFILTERITEMDIALOG",
+      "sha256": "1e4dd60d070a2d85c0e1e58570f978bb60ba0c04f1f449d88bbac8fb1eedee8a",
+      "bytes": 4206,
+      "parse_status": "complete",
+      "components": 45
+    },
+    {
+      "resource_index": 517,
+      "name": "TDIRREPORTDIALOG",
+      "sha256": "bd35c163fca44073b9123dac27b50346550461457d81eff2d5d2ed04b90536ae",
+      "bytes": 1564,
+      "parse_status": "complete",
+      "components": 20
+    },
+    {
+      "resource_index": 518,
+      "name": "TDIRSCRIPTDIALOG",
+      "sha256": "fd5fec509f822b3ff491e9b44d6fbb709333570cef00aca8155244de47457a3b",
+      "bytes": 1869,
+      "parse_status": "complete",
+      "components": 22
+    },
+    {
+      "resource_index": 519,
+      "name": "TDIRSESSIONCOMPARISONFRAME",
+      "sha256": "0ce578b6cfad47caadf3eb26baac174407a6ea3ffa1bded3284a13db398bcab1",
+      "bytes": 3137,
+      "parse_status": "complete",
+      "components": 26
+    },
+    {
+      "resource_index": 520,
+      "name": "TDIRSESSIONHANDLINGFRAME",
+      "sha256": "abcc3a8982d41fe78aa03a2563836977d0e6a3ed409a35ca1182651878a51183",
+      "bytes": 2399,
+      "parse_status": "complete",
+      "components": 18
+    },
+    {
+      "resource_index": 521,
+      "name": "TDIRSESSIONMISCFRAME",
+      "sha256": "b40b4c14606515ed7a715ea59af597d2793b45c89d57260c4ec1fce8bf6f8bdc",
+      "bytes": 2037,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 522,
+      "name": "TDIRSESSIONNAMEFILTERFRAME",
+      "sha256": "daa0ede7037edee7566c9a943846b6332e7f1b92cb3017fef76e1547ff4b2219",
+      "bytes": 1883,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 523,
+      "name": "TDIRSESSIONOTHERFILTERSFRAME",
+      "sha256": "1f829dd962d3e34489932497f24f9914079355695e810fa57e8d9bc9877ec3bb",
+      "bytes": 1239,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 524,
+      "name": "TDIRSESSIONSPECSFRAME",
+      "sha256": "535ec24158a38e8c1b29918b6cf777c7fad6f53c24069916ad12789bfc078327",
+      "bytes": 2737,
+      "parse_status": "complete",
+      "components": 20
+    },
+    {
+      "resource_index": 525,
+      "name": "TDIRSYNCACTIONS",
+      "sha256": "e9b1e948e6585dfcde2e6c8bc173e54fa704d6803bf8589ca347e4d422b41b66",
+      "bytes": 2278,
+      "parse_status": "complete",
+      "components": 12
+    },
+    {
+      "resource_index": 526,
+      "name": "TDIRSYNCSESSIONHANDLINGFRAME",
+      "sha256": "5fe3134a771a4b34362b082779619eeaa30c1f180376cd773f02e81037323589",
+      "bytes": 2005,
+      "parse_status": "complete",
+      "components": 17
+    },
+    {
+      "resource_index": 527,
+      "name": "TDIRSYNCSESSIONOPSFRAME",
+      "sha256": "9c4f9b81afa58522fb97cd89dc9f72a164edca094752319498e5e0e3433b6604",
+      "bytes": 3357,
+      "parse_status": "complete",
+      "components": 30
+    },
+    {
+      "resource_index": 528,
+      "name": "TDIRSYNCVIEWFRAME",
+      "sha256": "ad71cfb88d21b6200dc5e69a65e64c5cc4040f1c9b2ae7fca283b8d616040f2e",
+      "bytes": 3018,
+      "parse_status": "complete",
+      "components": 27
+    },
+    {
+      "resource_index": 529,
+      "name": "TDIRVIEWFRAME",
+      "sha256": "591d6c23f1f245cac8e3e9eb5147ab3a15e1c5db42b810835b7c49a6ddc8f05f",
+      "bytes": 146,
+      "parse_status": "complete",
+      "components": 3
+    },
+    {
+      "resource_index": 530,
+      "name": "TDOWNLOADUPDATEDIALOG",
+      "sha256": "46ca04cf80aafa3de36b696fbe2ced5d6fddf18beccb43365d6fed8577777e98",
+      "bytes": 5788,
+      "parse_status": "complete",
+      "components": 24
+    },
+    {
+      "resource_index": 531,
+      "name": "TEMPTYVIEWFRAME",
+      "sha256": "88b426e7199170592e53642ea26b3a960389ab19617da587b293262bea8f51e2",
+      "bytes": 38,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 532,
+      "name": "TEXPORTDIALOG",
+      "sha256": "9294d42f5dcf8e35dd14b7bf16822f4d085a2ed68d64bbeb80f8de3070ab3154",
+      "bytes": 3982,
+      "parse_status": "complete",
+      "components": 28
+    },
+    {
+      "resource_index": 533,
+      "name": "TEXTERNALFORMATGENERALFRAME",
+      "sha256": "acc57013b0f0c3c8edf10c6b0d83c45cfb06d645f764297c79d56645ff1835fd",
+      "bytes": 1368,
+      "parse_status": "complete",
+      "components": 11
+    },
+    {
+      "resource_index": 534,
+      "name": "TFILEACTIONS",
+      "sha256": "b1b1ffd71d392ed38cff0be2557331dd5e574f776736a3fe6db5e8781826420d",
+      "bytes": 14184,
+      "parse_status": "complete",
+      "components": 61
+    },
+    {
+      "resource_index": 535,
+      "name": "TFILECODEPAGEERRORDIALOG",
+      "sha256": "44bb145d8ee1d9fb949fd9c9c3431d3aedcc9918e1ac1a8ffa52ff5deeb2ee85",
+      "bytes": 604,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 536,
+      "name": "TFILECONFIRMSAVEDIALOG",
+      "sha256": "8281f77cc473f985e9f93a7c4dc81d530f0fb464aee571a739875b537fb01437",
+      "bytes": 704,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 537,
+      "name": "TFILEFINDFRAME",
+      "sha256": "e9819a90cb1c618525d8ebcf59be9f9cd7753ec27d0d2981c125f79558460e8a",
+      "bytes": 4866,
+      "parse_status": "complete",
+      "components": 50
+    },
+    {
+      "resource_index": 538,
+      "name": "TFILEFORMATCONVERSIONFRAME",
+      "sha256": "37f94891739bbca25cf03a3ba2a1dafb63284d51186209cc0604184d451422cc",
+      "bytes": 875,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 539,
+      "name": "TFILEFORMATFRAME",
+      "sha256": "058b651b6f802333a87279fff2340a95803bec8d8d8576257caa74b42ffb7c62",
+      "bytes": 59,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 540,
+      "name": "TFILEFORMATGENERALFRAME",
+      "sha256": "31c9d5415ec66de706c7132350d524e2c0d0d9866bc40c5c61da14acfeec443a",
+      "bytes": 469,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 541,
+      "name": "TFILEFORMATMANAGERDIALOG",
+      "sha256": "a6eac7f2ad309296bde610c1015b4279598925e461ce5bbe5f2f97bd57a0f586",
+      "bytes": 3556,
+      "parse_status": "complete",
+      "components": 28
+    },
+    {
+      "resource_index": 542,
+      "name": "TFILEFORMATSAVEASDIALOG",
+      "sha256": "57e05decc572c3c60a2b3a0a49957e648b41f18d1868a1875e440b36c4136bf7",
+      "bytes": 456,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 543,
+      "name": "TFILEREPORTDIALOG",
+      "sha256": "a77adeb216098141668a0811557e042a90a345fbef2c564e90621c0d81f1ec45",
+      "bytes": 71,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 544,
+      "name": "TFILESESSIONFORMATSFRAME",
+      "sha256": "f11e1b5bbb50fba9774867924bdec47fc6c50cd290280d92d211eb7fc28e11dc",
+      "bytes": 609,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 545,
+      "name": "TFILESESSIONSPECSFRAME",
+      "sha256": "1d11c918ef2f13c48277c2c1e19c696821faf04eaa6325510f2034488395fbdd",
+      "bytes": 2592,
+      "parse_status": "complete",
+      "components": 20
+    },
+    {
+      "resource_index": 546,
+      "name": "TFILEVIEWFRAME",
+      "sha256": "7d62e5793f3f437563cde76b4553607460434b1c43f2971f1522b591f2b1da40",
+      "bytes": 821,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 547,
+      "name": "TFORMATTEDSPECFRAME",
+      "sha256": "4c55a0cd414aa5c5617c640a3febf985736069514b342123941d8ea43068af4a",
+      "bytes": 314,
+      "parse_status": "complete",
+      "components": 4
+    },
+    {
+      "resource_index": 548,
+      "name": "THEXACTIONS",
+      "sha256": "cdb17afd233a04f1d6562b9329170c548c9ceea6601a2c47715f9862856c3c8d",
+      "bytes": 5202,
+      "parse_status": "complete",
+      "components": 27
+    },
+    {
+      "resource_index": 549,
+      "name": "THEXFINDFRAME",
+      "sha256": "203860d2c7c986d85c3d14ed4fbe2e0195ef8d0d4bf17107646729e589b66ba3",
+      "bytes": 2244,
+      "parse_status": "complete",
+      "components": 20
+    },
+    {
+      "resource_index": 550,
+      "name": "THEXGOTODIALOG",
+      "sha256": "4b92b631a03459df0b4e0529a41b597d6773eec45dd36cd4a52f08cd813e0273",
+      "bytes": 1023,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 551,
+      "name": "THEXLAYOUTDIALOG",
+      "sha256": "91d4c88fc3d75f95e4769c0388f9dd9918007f4ee675094840cf02ce0e161266",
+      "bytes": 1085,
+      "parse_status": "complete",
+      "components": 11
+    },
+    {
+      "resource_index": 552,
+      "name": "THEXREPORTDIALOG",
+      "sha256": "25a56191831d765534685f329ebf50a0a0060be2ab5d0b1c7def4a370f28f6a7",
+      "bytes": 422,
+      "parse_status": "complete",
+      "components": 8
+    },
+    {
+      "resource_index": 553,
+      "name": "THEXSESSIONFRAME",
+      "sha256": "d4bf9024fbf03d40f8553230f2bdfada52d3863919184edf366ab6be1adf4f09",
+      "bytes": 882,
+      "parse_status": "complete",
+      "components": 8
+    },
+    {
+      "resource_index": 554,
+      "name": "THEXVIEWFRAME",
+      "sha256": "c684959deaaf620cb343046a7766cd9b597cf338e0835ab582ea9f3b97529b6a",
+      "bytes": 2913,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 555,
+      "name": "THOMEACTIONS",
+      "sha256": "491ad9bc5a6fef9d940479ea6610b747c44721193b9d3d3da2df0a6a53fea995",
+      "bytes": 709,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 556,
+      "name": "THOMEVIEWFRAME",
+      "sha256": "9377ac2fa5082fcb3f78b6a2341c73936b7656deaf92405f9834afd029f7dace",
+      "bytes": 138577,
+      "parse_status": "complete",
+      "components": 89
+    },
+    {
+      "resource_index": 557,
+      "name": "TIMPORTDIALOG",
+      "sha256": "334500f5f2013b17cf5b1499b891da75b30b7bd52c5468628ebc0e0e01a6398a",
+      "bytes": 5299,
+      "parse_status": "complete",
+      "components": 38
+    },
+    {
+      "resource_index": 558,
+      "name": "TINFODIALOG",
+      "sha256": "0de9a3a3fa5237d138d314469e5b044badbd61a4ecbe76dac5ad79dffe39b788",
+      "bytes": 265,
+      "parse_status": "complete",
+      "components": 3
+    },
+    {
+      "resource_index": 559,
+      "name": "TJOBSCANCELDIALOG",
+      "sha256": "77d03dcdec2a48dd42fa469cc36626dbe4b5171031b2d148ee110e786747077b",
+      "bytes": 453,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 560,
+      "name": "TKEYUPGRADEDIALOG",
+      "sha256": "52abc450f73612390b9d6f81392929c45c14fb86701fb0aa9b1978dbe22982ff",
+      "bytes": 579,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 561,
+      "name": "TLOGFRAME",
+      "sha256": "eef4f33b2771e4c39a572761a18c60111d312722d638bb8966dd432265b2373d",
+      "bytes": 678,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 562,
+      "name": "TMADEXCEPT",
+      "sha256": "03787fefb0593bec4ea5649eb5b476f774a8359deb85ffe948c2e9f22882be39",
+      "bytes": 2995,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 563,
+      "name": "TMECONTACTFORM",
+      "sha256": "365b3868780806f6d6057f5f8616e1225fddff9fc7bd4f4c6d06bb64e209da22",
+      "bytes": 845,
+      "parse_status": "complete",
+      "components": 9
+    },
+    {
+      "resource_index": 564,
+      "name": "TMEDETAILSFORM",
+      "sha256": "692ee64fb163eea276dd0c0caf921858525dda11f3c1277366e0205c0420579a",
+      "bytes": 551,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 565,
+      "name": "TMESCRSHOTFORM",
+      "sha256": "a5c8e7a6f6f8174a5af2e0626a268db64945ca4bf13548456e870c8dce3e9a42",
+      "bytes": 674,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 566,
+      "name": "TMP3ACTIONS",
+      "sha256": "2e796202c0dfbfbe2bdc65afe3bad119649e5dde17bbf329ff2aa715d4b6f573",
+      "bytes": 1272,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 567,
+      "name": "TMP3REPORTDIALOG",
+      "sha256": "dd70505d5ee2cea868b4d8d91e1b35e211e06d5e8155a58cb77f106139d62cb2",
+      "bytes": 97,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 568,
+      "name": "TMP3VIEWFRAME",
+      "sha256": "a73606a88ba58c734e150b84c66358b063700b89af8c14f9332541b6b2369b3c",
+      "bytes": 2647,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 569,
+      "name": "TNAGDIALOG",
+      "sha256": "137b1f7623c7974e9e7fce620df0620a8e730ed7a1d8d17443c103fdb3e5bd9c",
+      "bytes": 1679,
+      "parse_status": "complete",
+      "components": 16
+    },
+    {
+      "resource_index": 570,
+      "name": "TOPBASEDIALOG",
+      "sha256": "b995e42c8b6a2ca8d186a9ec7e54d612555bd5ceb94856aa8a2769e3c583ff0a",
+      "bytes": 3124,
+      "parse_status": "complete",
+      "components": 34
+    },
+    {
+      "resource_index": 571,
+      "name": "TOPCOMPAREDIALOG",
+      "sha256": "769b7bd0b58f915cc1843d5fe9d5b62870a15beddfc78f09b28cd8a31dd196bc",
+      "bytes": 1106,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 572,
+      "name": "TOPCOMPARERESULTSDIALOG",
+      "sha256": "1ce337fccc3691cb5bbebacbe6f8c36f43de05ae9e89ab0f477e43033307f328",
+      "bytes": 610,
+      "parse_status": "complete",
+      "components": 3
+    },
+    {
+      "resource_index": 573,
+      "name": "TOPCONFIRMREPLACEFILEDIALOG",
+      "sha256": "41f193a8326dff33a725f93065ff21c79fb6e98fa24d148add61b8b8ec5a2776",
+      "bytes": 1068,
+      "parse_status": "complete",
+      "components": 17
+    },
+    {
+      "resource_index": 574,
+      "name": "TOPCOPYDIALOG",
+      "sha256": "f7f1f7e10e6cab1c9b19aa7cdc781bb35c97f888120f7ee12986fc03ef18cad6",
+      "bytes": 650,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 575,
+      "name": "TOPCOPYTODIALOG",
+      "sha256": "277c194a2af2c496c1e8aa3d2cea89cd05eddcfe0b58404d7ec8c83bb6b31c62",
+      "bytes": 1227,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 576,
+      "name": "TOPCOPYTOOUTPUTDIALOG",
+      "sha256": "ccce7c4a7584fe670b7545416a8c20b5175298b7e326647ba77591ad9a87ab29",
+      "bytes": 1982,
+      "parse_status": "complete",
+      "components": 34
+    },
+    {
+      "resource_index": 577,
+      "name": "TOPDELETEDIALOG",
+      "sha256": "9bef7d9e868e87e573b0aee85e02dd2191ef61686c150899ff2b292974d503e5",
+      "bytes": 809,
+      "parse_status": "complete",
+      "components": 12
+    },
+    {
+      "resource_index": 578,
+      "name": "TOPDOSATTRIBDIALOG",
+      "sha256": "8e4e19c07684ab4b2e9606fa476486c057683080c325aac611ab07efb7d95852",
+      "bytes": 852,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 579,
+      "name": "TOPENWITHITEMDIALOG",
+      "sha256": "a4f1ea5a4ca73814ecaa6cfa22e2bc33cf1f28ed5750a3b41bcf4ca057f0f395",
+      "bytes": 2230,
+      "parse_status": "complete",
+      "components": 20
+    },
+    {
+      "resource_index": 580,
+      "name": "TOPEXCLUDEDIALOG",
+      "sha256": "09728bd9f237b0d2eb69e2bb4cef0e24a7ab3949dafb90cccd30aaf648723a8b",
+      "bytes": 888,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 581,
+      "name": "TOPFILTEREDDIALOG",
+      "sha256": "9df6ceef645caf587f3e2ee44cb2762d0f79e46f1a5d3cbb061669ddbdc31cac",
+      "bytes": 1007,
+      "parse_status": "complete",
+      "components": 9
+    },
+    {
+      "resource_index": 582,
+      "name": "TOPMERGEDIALOG",
+      "sha256": "9fe3e914b5fa474a5a9558cc7f73fc7e740c8eb462352b72af0d62ea9ccbbcea",
+      "bytes": 1284,
+      "parse_status": "complete",
+      "components": 16
+    },
+    {
+      "resource_index": 583,
+      "name": "TOPMOVEBOTHDIALOG",
+      "sha256": "43894892807451010079e2c6e9186944a65bcfabae3d6d694b41aa900fab6597",
+      "bytes": 663,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 584,
+      "name": "TOPMOVEDIALOG",
+      "sha256": "c4d68f8ee82f968bdc61718f64b405d7e10e0611d2a12813f282a92fc28e44c6",
+      "bytes": 845,
+      "parse_status": "complete",
+      "components": 12
+    },
+    {
+      "resource_index": 585,
+      "name": "TOPMOVETODIALOG",
+      "sha256": "f91d31d0ad875395a8a2dcc80b84bf079376b3723b76e35848b0132223d3142a",
+      "bytes": 596,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 586,
+      "name": "TOPNEWFOLDERDIALOG",
+      "sha256": "d7d84e410b89e58f8c9cead05e12f504f64ff51e317f63001692ff9640d6362e",
+      "bytes": 622,
+      "parse_status": "complete",
+      "components": 8
+    },
+    {
+      "resource_index": 587,
+      "name": "TOPRENAMEDIALOG",
+      "sha256": "f8565db95dcf2e0c820e418d6ebe6cdcbadf6eb52c0a2778f66532cc93836a2e",
+      "bytes": 826,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 588,
+      "name": "TOPSYNCDIALOG",
+      "sha256": "16ec43b6474aad21b6983ca35e89bab20e443671af21ef9fbfffb312d5e0df63",
+      "bytes": 1402,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 589,
+      "name": "TOPTIONSFRAME",
+      "sha256": "f2a0b9e5863ed67d6316b1424862bfc8f3eb692d32d8b3b71dd4c7fce25f36a7",
+      "bytes": 76,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 590,
+      "name": "TOPTOUCHDIALOG",
+      "sha256": "7f03839d1598fe0843f06b3b399f9e8812b820cc4e4e32701a1dc94d101d0018",
+      "bytes": 1873,
+      "parse_status": "complete",
+      "components": 21
+    },
+    {
+      "resource_index": 591,
+      "name": "TOPUNIXATTRIBDIALOG",
+      "sha256": "fc2a7c34b44aed1889e5b55e2b9402e37a4708ab83f56775ada63304223d078a",
+      "bytes": 2210,
+      "parse_status": "complete",
+      "components": 23
+    },
+    {
+      "resource_index": 592,
+      "name": "TPIXACTIONS",
+      "sha256": "3bc1eda458bfa94f390354c219720f1e842895664520facfe6fbc1ba10935d42",
+      "bytes": 4993,
+      "parse_status": "complete",
+      "components": 21
+    },
+    {
+      "resource_index": 593,
+      "name": "TPIXFULLSCREENDIALOG",
+      "sha256": "9939d5d0dc54ee0a41f76fd4aee30d310eb2399121febbabc5f3eda3c7c8149a",
+      "bytes": 996,
+      "parse_status": "complete",
+      "components": 11
+    },
+    {
+      "resource_index": 594,
+      "name": "TPIXREPLACEMENTITEMDIALOG",
+      "sha256": "d7a233a3988cda05586def308ea934ffcfcf52f13d5a9223f5dcff0b2759e63d",
+      "bytes": 1099,
+      "parse_status": "complete",
+      "components": 12
+    },
+    {
+      "resource_index": 595,
+      "name": "TPIXREPORTDIALOG",
+      "sha256": "22aed6019982039f57149cae71cd22322e0f0d5bf6d7cb75485c184bb8fe90d0",
+      "bytes": 101,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 596,
+      "name": "TPIXSESSIONREPLACEMENTSFRAME",
+      "sha256": "bb09f66066e5df4247cf9d10dc070a8808659a14a5c8c9aecb2c62911b9cccf3",
+      "bytes": 1392,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 597,
+      "name": "TPIXVIEWFRAME",
+      "sha256": "3107aac9f29606cb935b975568a7c081397c8545f0a8b47d60d786acc7224260",
+      "bytes": 6672,
+      "parse_status": "complete",
+      "components": 48
+    },
+    {
+      "resource_index": 598,
+      "name": "TPROFILEBROWSEDIALOG",
+      "sha256": "44507cf008464f84f0ea875606e472f4984b124efabbd51cb6a99dc606e29e73",
+      "bytes": 4189,
+      "parse_status": "complete",
+      "components": 41
+    },
+    {
+      "resource_index": 599,
+      "name": "TPROFILEBROWSEREMOTEFRAME",
+      "sha256": "2ccb415c795665167dc2805bc6c21390e4602f79f05f9ff28e5e2261abc4cd95",
+      "bytes": 341,
+      "parse_status": "complete",
+      "components": 2
+    },
+    {
+      "resource_index": 600,
+      "name": "TPROFILEFILEOPENDIALOG",
+      "sha256": "d0d320454c4c24e3ce24b9195801c15e67a942ec897e4ce0e15d6cfb71753e4c",
+      "bytes": 2011,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 601,
+      "name": "TPROFILEFILESAVEDIALOG",
+      "sha256": "f56c2c3bf50e8dc2a093224f58ab98b42febbd2cde40532417e094ede65aa41e",
+      "bytes": 847,
+      "parse_status": "complete",
+      "components": 11
+    },
+    {
+      "resource_index": 602,
+      "name": "TPROFILEFRAME",
+      "sha256": "fa9783c8422c15a7e8b1f23e19f1d4b4f43457093e9d20050965e148e9c9a88f",
+      "bytes": 53,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 603,
+      "name": "TPROFILEMANAGERDIALOG",
+      "sha256": "801697a7859c793ee8ff921521fb623ee0e6f2724559a5ee00f497a47f765acf",
+      "bytes": 3053,
+      "parse_status": "complete",
+      "components": 26
+    },
+    {
+      "resource_index": 604,
+      "name": "TPROFILESAVEASDIALOG",
+      "sha256": "2bdee858da8291e2c8c29acbb3f099d90e83582f4b199c5ec59bd62285d55b42",
+      "bytes": 1510,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 605,
+      "name": "TPROGOPTIONSDIALOG",
+      "sha256": "72f0ddd61e831d8dd0b92ab2823a18bc34b493ab1430a9471254eb0e52bb413c",
+      "bytes": 38366,
+      "parse_status": "complete",
+      "components": 304
+    },
+    {
+      "resource_index": 606,
+      "name": "TQUICKCOMPAREDIALOG",
+      "sha256": "e323af05908a4b6deb10cc14b1f047d7c30aa084318d9f709ff1afcaeebc0ecc",
+      "bytes": 1257,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 607,
+      "name": "TREGACTIONS",
+      "sha256": "ed6c00642cd56c91c7dde16cf5a6ff17b8272715fdd6644739d79c5cfa862a45",
+      "bytes": 5983,
+      "parse_status": "complete",
+      "components": 32
+    },
+    {
+      "resource_index": 608,
+      "name": "TREGBROWSEDIALOG",
+      "sha256": "2fe82850cbbd7c6dc668e5e3b6901f54ef8b2d3c00360d0971ce087476b85a39",
+      "bytes": 1471,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 609,
+      "name": "TREGFINDFRAME",
+      "sha256": "90694b34b35ecacd2f7e9f5bbefced055b9d798c618d6387a4de568ec925530d",
+      "bytes": 582,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 610,
+      "name": "TREGISTERDIALOG",
+      "sha256": "3dbd3e57fb5ba8ba6aab33ddba1d4e2f5af3ddbfa0ab0bf8707e78461415530f",
+      "bytes": 639,
+      "parse_status": "complete",
+      "components": 8
+    },
+    {
+      "resource_index": 611,
+      "name": "TREGREPORTDIALOG",
+      "sha256": "6c702531e87d0325862a552ad5e9048d6b5979d50c4e6921ccca822ec5379fa4",
+      "bytes": 298,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 612,
+      "name": "TREGVALDIALOG",
+      "sha256": "12209b072723fa4bf4f663e3d4b5c721bbb6d3e8d770edca0b4245ebdd438ea8",
+      "bytes": 1803,
+      "parse_status": "complete",
+      "components": 22
+    },
+    {
+      "resource_index": 613,
+      "name": "TREGVIEWFRAME",
+      "sha256": "c72da369d7eed1b412191bf105c23214a93a315970ebc4d94b5ecacea9cdb159",
+      "bytes": 3219,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 614,
+      "name": "TREPORTDIALOG",
+      "sha256": "ebccebd08f459bffcea54a29fb624a9e36f9ff11002d091b126c9dae1b6ff1c6",
+      "bytes": 4917,
+      "parse_status": "complete",
+      "components": 49
+    },
+    {
+      "resource_index": 615,
+      "name": "TREPORTPREVIEWDIALOG",
+      "sha256": "94adfbbd75b84df21d987ef04318860c8adfc5d201e5caa4a1a343b0b3bd6073",
+      "bytes": 1138,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 616,
+      "name": "TREPORTSETUPDIALOG",
+      "sha256": "df34bed978f24bbce6968f4398730644e0e32a3145fdefd6b9f8843c4467367c",
+      "bytes": 2438,
+      "parse_status": "complete",
+      "components": 27
+    },
+    {
+      "resource_index": 617,
+      "name": "TSCCCHOOSEPROVIDERDIALOG",
+      "sha256": "f54bcc52efb28ef73b6305ba00dc21bdbfe2c2ff65486f406aeaedd234e1c28b",
+      "bytes": 475,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 618,
+      "name": "TSCCOPDIALOG",
+      "sha256": "83e5c3bc3f0741adb3bac80564d07141ee62c1f9bd8106592730717b93df6f4f",
+      "bytes": 719,
+      "parse_status": "complete",
+      "components": 8
+    },
+    {
+      "resource_index": 619,
+      "name": "TSESSIONACTIONS",
+      "sha256": "01ebe64db2b227f2329db61bfebea470c089d896544aed72b87bfc1f741fd2ab",
+      "bytes": 3986,
+      "parse_status": "complete",
+      "components": 19
+    },
+    {
+      "resource_index": 620,
+      "name": "TSESSIONFRAME",
+      "sha256": "e91e4942b85e959466bc851746f4380a699b731fd1290dbe8f9b8e534141ed6d",
+      "bytes": 53,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 621,
+      "name": "TSESSIONSAVEASDIALOG",
+      "sha256": "3c08f244d6eb764bb21b1ae62437e6e5f530f7d4aac8a513f13f09fe746231f9",
+      "bytes": 1686,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 622,
+      "name": "TSESSIONVIEWFRAME",
+      "sha256": "2d1dd77ffbb7fee71eb0a11e24c2c5ed3c2cc1066d1d380e374c458b7fda52aa",
+      "bytes": 96,
+      "parse_status": "complete",
+      "components": 2
+    },
+    {
+      "resource_index": 623,
+      "name": "TSNAPSHOTDIALOG",
+      "sha256": "7e1e15310cda20a701faa138659cba9b206fe21a3d661ee7acddf6a27add6f74",
+      "bytes": 1922,
+      "parse_status": "complete",
+      "components": 21
+    },
+    {
+      "resource_index": 624,
+      "name": "TSOURCECONTROLMANAGERDIALOG",
+      "sha256": "89533bec8e2191acc0a9f391df6a9c6dfe27373f54811b2ee07f575d411ab7ca",
+      "bytes": 1811,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 625,
+      "name": "TSUPPORTDIALOG",
+      "sha256": "86c0a9d3d0604ba463c6eade4fb35560225f5887a31c54ac422c6b944bb5949a",
+      "bytes": 1288,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 626,
+      "name": "TTABSCONFIRMCLOSEDIALOG",
+      "sha256": "b3b31887a7e8603451468ea931972cccb2d4ddfa15487406a098e961f92b2a2b",
+      "bytes": 771,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 627,
+      "name": "TTAGREPORTDIALOG",
+      "sha256": "29b2711038f7f46aba6434b01c36aab661c876c13457533fcaac9d4f7bc8a88a",
+      "bytes": 155,
+      "parse_status": "complete",
+      "components": 3
+    },
+    {
+      "resource_index": 628,
+      "name": "TTAGSESSIONFRAME",
+      "sha256": "652b860602d8185cb5da5a2c7ff29d7cc69603a48e707984656a6289eff6d7c9",
+      "bytes": 643,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 629,
+      "name": "TTEXTACTIONS",
+      "sha256": "bb0e0f00ea3f0175e4eee710551306128a68106cb09051d2550880a9fa397ba6",
+      "bytes": 29483,
+      "parse_status": "complete",
+      "components": 117
+    },
+    {
+      "resource_index": 630,
+      "name": "TTEXTFILESESSIONFORMATSFRAME",
+      "sha256": "20c89fdfec1ecac4eb95e2b36925c8236136a286dfb67eade232e6514dc62544",
+      "bytes": 1040,
+      "parse_status": "complete",
+      "components": 9
+    },
+    {
+      "resource_index": 631,
+      "name": "TTEXTFINDINFILESDIALOG",
+      "sha256": "7308ea11d533a8cdf97120ebee758b8b27109fed6288f05ae7e93916553ad057",
+      "bytes": 3182,
+      "parse_status": "complete",
+      "components": 33
+    },
+    {
+      "resource_index": 632,
+      "name": "TTEXTFORMATCONVERSIONFRAME",
+      "sha256": "b8000369f0f3f5e7d11de6be8031d3054a1d25a38881e6b6db4488eb589a1228",
+      "bytes": 1092,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 633,
+      "name": "TTEXTFORMATGRAMMARFRAME",
+      "sha256": "6250298e6218377bb245c208a89d92f96e09c1dd80d1407ec612930f6c6cccec",
+      "bytes": 2330,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 634,
+      "name": "TTEXTFORMATMISCFRAME",
+      "sha256": "9f184c4e5efaf9b3bfeaac46d08f64f4ef6939eb67755b951d9181ced5e9d604",
+      "bytes": 693,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 635,
+      "name": "TTEXTGOTODIALOG",
+      "sha256": "8629a8479ccb5d1a3891fb89f299fc82b087e87eb7651b42b10e5a234772ecb7",
+      "bytes": 925,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 636,
+      "name": "TTEXTGRAMMARITEMDIALOG",
+      "sha256": "bac490bcaf35de75756fcba18cf75cbd5376fd71681392f3c1de52838491db97",
+      "bytes": 7534,
+      "parse_status": "complete",
+      "components": 77
+    },
+    {
+      "resource_index": 637,
+      "name": "TTEXTINSIGITEMDIALOG",
+      "sha256": "1f15d8c5cf1f3cb0569b26dad1d38d9f5e92625e7479e51660a7ab507d59d765",
+      "bytes": 2453,
+      "parse_status": "complete",
+      "components": 28
+    },
+    {
+      "resource_index": 638,
+      "name": "TTEXTREPLACEMENTITEMDIALOG",
+      "sha256": "16d952dd666125e00e8ff336a1ab976880c266b1fd9d2a2007d2215ce896c201",
+      "bytes": 4259,
+      "parse_status": "complete",
+      "components": 47
+    },
+    {
+      "resource_index": 639,
+      "name": "TTEXTREPORTDIALOG",
+      "sha256": "d8e227ee4dfaee0264e8bb39cd42c6832683c1b71f37e61cbf93fe450d92d94d",
+      "bytes": 1247,
+      "parse_status": "complete",
+      "components": 16
+    },
+    {
+      "resource_index": 640,
+      "name": "TTEXTSESSIONALIGNMENTFRAME",
+      "sha256": "171c17420593fe1a7f93b07b829c3d3da74afb2983a0aefff20446a7de63d4d8",
+      "bytes": 1868,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 641,
+      "name": "TTEXTSESSIONIMPORTANCEFRAME",
+      "sha256": "6cae2195de83369f138b725b79f543c1f116fbc77b33ab87405074dbd1cd7836",
+      "bytes": 2053,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 642,
+      "name": "TTEXTSESSIONREPLACEMENTSFRAME",
+      "sha256": "f5a91ab7065d039bd9e18ed4e35d1462cd979e1a808850812cd195620faef391",
+      "bytes": 1395,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 643,
+      "name": "TTEXTVIEWFRAME",
+      "sha256": "aafcac9f333803a20746f976afcd8b3808c8cb963949f88c2047043de11cba74",
+      "bytes": 3180,
+      "parse_status": "complete",
+      "components": 26
+    },
+    {
+      "resource_index": 644,
+      "name": "TTEXTWEIGHTITEMDIALOG",
+      "sha256": "9aacd77bef273ba645d535c32a04d4195166ac0c1c155c0513497e277fec0719",
+      "bytes": 2688,
+      "parse_status": "complete",
+      "components": 30
+    },
+    {
+      "resource_index": 645,
+      "name": "TTIPDIALOG",
+      "sha256": "1f33ccff96782b17830f7e6d82a0500e10385a80242132c9e3cd17c12fcd023d",
+      "bytes": 1042,
+      "parse_status": "complete",
+      "components": 12
+    },
+    {
+      "resource_index": 646,
+      "name": "TTOTALCMDRPACKERDIALOG",
+      "sha256": "e7769384c4ddb95517aaa2682cbd416accce0d771ef4fbb97667d7587f6fc9b6",
+      "bytes": 1509,
+      "parse_status": "complete",
+      "components": 19
+    },
+    {
+      "resource_index": 647,
+      "name": "TVERACTIONS",
+      "sha256": "be893542ec319453f1ef905dc54fa704898fed3c04105c42bd50a3c4c92cb779",
+      "bytes": 865,
+      "parse_status": "complete",
+      "components": 5
+    },
+    {
+      "resource_index": 648,
+      "name": "TVERREPORTDIALOG",
+      "sha256": "00c3f5edb0e1605fe0975e106820afdc671d1ae59b48c1abad0f67051cda7043",
+      "bytes": 101,
+      "parse_status": "complete",
+      "components": 1
+    },
+    {
+      "resource_index": 649,
+      "name": "TVERVIEWFRAME",
+      "sha256": "1f2b8e652c7fc2817255143da7662edcf86d7a1a31e559ecfd72c9f490a8cf34",
+      "bytes": 2647,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 650,
+      "name": "TVFSAMAZONS3LOGINDIALOG",
+      "sha256": "4efff3ff28156030c04162625f452a89cf1fdef97e7c1362b0a60074754c11d8",
+      "bytes": 724,
+      "parse_status": "complete",
+      "components": 9
+    },
+    {
+      "resource_index": 651,
+      "name": "TVFSAMAZONS3PROFILEGENERALFRAME",
+      "sha256": "aa34a38046cb70266bc30e9d5ec2bb3f67d3d08ff753d67f1192691f2fdafa37",
+      "bytes": 2071,
+      "parse_status": "complete",
+      "components": 20
+    },
+    {
+      "resource_index": 652,
+      "name": "TVFSARCHIVEPASSWORDDIALOG",
+      "sha256": "cb20307d5b0acdc0b741f883bb412a30f32e7d2593618707fe8a68fdd241c7eb",
+      "bytes": 880,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 653,
+      "name": "TVFSDROPBOXAUTHCODEDIALOG",
+      "sha256": "12e7596f83b7e26c908a061aad59ea2d7542c4480f6d231327bdcd37acbe72e1",
+      "bytes": 503,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 654,
+      "name": "TVFSDROPBOXPROFILEGENERALFRAME",
+      "sha256": "99381e3b17065dc5a6ab6b0d7f524c1251e9b031d03402dca5f8c306dc922446",
+      "bytes": 631,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 655,
+      "name": "TVFSFTPLOGINDIALOG",
+      "sha256": "20f0536375f5a5a20e7778562a4bba974ce3f3f26675be05a179c6bd9bbbd4f4",
+      "bytes": 878,
+      "parse_status": "complete",
+      "components": 11
+    },
+    {
+      "resource_index": 656,
+      "name": "TVFSFTPPROFILECONNECTIONFRAME",
+      "sha256": "f34c4f9dd090b502354447155f16debc2a2efd79bd9b296c17c547147fb347d8",
+      "bytes": 2327,
+      "parse_status": "complete",
+      "components": 19
+    },
+    {
+      "resource_index": 657,
+      "name": "TVFSFTPPROFILEFRAME",
+      "sha256": "b2f19dbef6d92ea4f10e0f9044df31479d6b745bf37cac2a8c16554265c175d0",
+      "bytes": 162,
+      "parse_status": "complete",
+      "components": 2
+    },
+    {
+      "resource_index": 658,
+      "name": "TVFSFTPPROFILEGLOBALFRAME",
+      "sha256": "d805fa1e95330e5f8b2a88d4591879813865ebf4c9a56075fb778f5ffc36a533",
+      "bytes": 1945,
+      "parse_status": "complete",
+      "components": 18
+    },
+    {
+      "resource_index": 659,
+      "name": "TVFSFTPPROFILELISTINGFRAME",
+      "sha256": "92dda156b6972caf1e92d79ac1b973a52c6173847fb82526d31a66893df8d7c7",
+      "bytes": 1774,
+      "parse_status": "complete",
+      "components": 16
+    },
+    {
+      "resource_index": 660,
+      "name": "TVFSFTPPROFILELOGINFRAME",
+      "sha256": "90beecb0afee69d2d45aaca8f31fb1b06de105bd90d9e683576977ec765d529e",
+      "bytes": 2839,
+      "parse_status": "complete",
+      "components": 30
+    },
+    {
+      "resource_index": 661,
+      "name": "TVFSFTPPROFILEPROXYFRAME",
+      "sha256": "48941b63221a991343616cbb4a012f519d1bf17c1f14af76ad44b812f90d4f24",
+      "bytes": 1228,
+      "parse_status": "complete",
+      "components": 12
+    },
+    {
+      "resource_index": 662,
+      "name": "TVFSFTPPROFILESERVERFRAME",
+      "sha256": "013c6d4b17110e62359b3cd3f7c30d2267f6ef23b9a7521b8f6620312ae65af8",
+      "bytes": 910,
+      "parse_status": "complete",
+      "components": 8
+    },
+    {
+      "resource_index": 663,
+      "name": "TVFSFTPPROFILETRANSFERFRAME",
+      "sha256": "1262d4f8741d6e3a4ef81ce702e11b0bcd5d8c91debce6d030d14b40a5335f70",
+      "bytes": 1596,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 664,
+      "name": "TVFSGENERATESSHKEYSDIALOG",
+      "sha256": "3bdd97130f41d803ecf7f1fbf81ab07ac7ed1ab8307f95e3876efb40e5320bcd",
+      "bytes": 1931,
+      "parse_status": "complete",
+      "components": 19
+    },
+    {
+      "resource_index": 665,
+      "name": "TVFSGENERATESSLCERTDIALOG",
+      "sha256": "4fa402e69c1bea3e93363c618585f109da124d62a37d19b03b59d06e91e5db23",
+      "bytes": 2433,
+      "parse_status": "complete",
+      "components": 24
+    },
+    {
+      "resource_index": 666,
+      "name": "TVFSHTTPLOGINDIALOG",
+      "sha256": "375d23091bc0962df7b872e90237b7ff934297fe62e0d56a9bec539d7653a0ca",
+      "bytes": 767,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 667,
+      "name": "TVFSONEDRIVEPROFILEGENERALFRAME",
+      "sha256": "d71e6fe97bb4111fb34fb24da879610d8174beb7b6571d54ee880254ea7da2d2",
+      "bytes": 634,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 668,
+      "name": "TVFSSFTPKEYBOARDAUTHDIALOG",
+      "sha256": "5aef3a55f099f0762b81375413a0aec6cd39507043643a3ec3fe6018ae423210",
+      "bytes": 249,
+      "parse_status": "complete",
+      "components": 4
+    },
+    {
+      "resource_index": 669,
+      "name": "TVFSSFTPPASSPHRASEDIALOG",
+      "sha256": "277daf9d3ed5d686732b0e2ea2add3fc581961b635a7ddeebceaf9b909460c7d",
+      "bytes": 841,
+      "parse_status": "complete",
+      "components": 10
+    },
+    {
+      "resource_index": 670,
+      "name": "TVFSSFTPVALIDATECHANGEDKEYDIALOG",
+      "sha256": "e4d6032d51998879a7c5844d1f5cfe3227df103d0682352da870748e04f238fc",
+      "bytes": 841,
+      "parse_status": "complete",
+      "components": 11
+    },
+    {
+      "resource_index": 671,
+      "name": "TVFSSFTPVALIDATEKEYDIALOG",
+      "sha256": "f3a602d9146d4fe3a85c999c46e8e35cc108ab8e0171a9a12ec014aa910e7600",
+      "bytes": 921,
+      "parse_status": "complete",
+      "components": 12
+    },
+    {
+      "resource_index": 672,
+      "name": "TVFSSVNLOGINDIALOG",
+      "sha256": "fc3cd5553413ac563e3e8d1cf7dd2307a4d3dde5eefd38b9e4b7d58cb28aff88",
+      "bytes": 854,
+      "parse_status": "complete",
+      "components": 11
+    },
+    {
+      "resource_index": 673,
+      "name": "TVFSSVNPROFILEGENERALFRAME",
+      "sha256": "59c4a8291110077e584feb9bbf95e4dd608d86be816b5ab1b8d9b3126c5d7378",
+      "bytes": 1205,
+      "parse_status": "complete",
+      "components": 14
+    },
+    {
+      "resource_index": 674,
+      "name": "TVFSVALIDATESSLCERTDIALOG",
+      "sha256": "90c9c39b6100bad187e0cf3f62f4b9d2ba517595d47d8776034d03a6c29eb4bb",
+      "bytes": 9051,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 675,
+      "name": "TVFSVIEWSSLCERTDIALOG",
+      "sha256": "6cb2e508405f540d4fda15a409a80f3ef669a3efb3a097482eab6314c03a1087",
+      "bytes": 3199,
+      "parse_status": "complete",
+      "components": 46
+    },
+    {
+      "resource_index": 676,
+      "name": "TVFSWEBDAVPROFILEGENERALFRAME",
+      "sha256": "cd2442d5b4457fc1c5ddfd115c327619e74eb8bbf81b2b546dc5f8001737a030",
+      "bytes": 1458,
+      "parse_status": "complete",
+      "components": 13
+    },
+    {
+      "resource_index": 677,
+      "name": "TVIEWFORM",
+      "sha256": "4bc0e15602b4ea8eca9ba2d2015861720afdbf3647c2967c9911b9f827315087",
+      "bytes": 665,
+      "parse_status": "complete",
+      "components": 3
+    },
+    {
+      "resource_index": 678,
+      "name": "TVIEWFRAME",
+      "sha256": "fd37aaee3def50358f15d3e0cf321b2513bde274639453a65e0cc9d488d5bc6d",
+      "bytes": 537,
+      "parse_status": "complete",
+      "components": 6
+    },
+    {
+      "resource_index": 679,
+      "name": "TWEBBROWSERFRAME",
+      "sha256": "329ccf91d69c874b47a5b4961ed88ffdfbdd833f8842782ace3e3d351e40e545",
+      "bytes": 820,
+      "parse_status": "complete",
+      "components": 7
+    },
+    {
+      "resource_index": 680,
+      "name": "TWINDOWSCONFIRMCLOSEDIALOG",
+      "sha256": "21c21f230d59e409cdc05213ac5d430c9944b2b7b4267937e16ebdb28249da26",
+      "bytes": 549,
+      "parse_status": "complete",
+      "components": 8
+    },
+    {
+      "resource_index": 681,
+      "name": "TWORKSPACEMANAGERDIALOG",
+      "sha256": "45e3d78e4b803971375340125eceb89cfb61c19291419515e4d5c5dede9ebdaa",
+      "bytes": 1682,
+      "parse_status": "complete",
+      "components": 15
+    },
+    {
+      "resource_index": 682,
+      "name": "TWORKSPACESAVEASDIALOG",
+      "sha256": "eac69aba0ada695763d20bc89116f8bf9489ed7a077642dd16d1a44328c05018",
+      "bytes": 558,
+      "parse_status": "complete",
+      "components": 6
+    }
+  ],
+  "explicit_disabled_menu_items": [
+    {
+      "caption": "Mesclar Arquivos",
+      "file": "src/ui/session_menu.rs",
+      "line": 90
+    },
+    {
+      "caption": "Bloqueado",
+      "file": "src/ui/text_compare.rs",
+      "line": 1526
+    }
+  ],
+  "counts": {
+    "outside_windows": 14,
+    "unverified": 349,
+    "module_absent": 92,
+    "source_candidate_unverified": 46
+  },
+  "source_hashes": {
+    "src/binary_diff.rs": "9caee2c41e4ae8ff4657049b62fc339597b4e01b474ba90524624429f271ca8f",
+    "src/document.rs": "bf8a64ec2f40f570f86409e5dc2609aadbf59ac9e4a0fe74cfccc0f4b2881508",
+    "src/file_ops.rs": "bfbd8715956cd41ec64a3554f55609c4edbb563d927d97392da7eeb182a960f0",
+    "src/history.rs": "4921d13d9929f18da4d02554fd2cc54f2c8bf865694e672341ef211abc31d210",
+    "src/i18n.rs": "651f382388e74d8c04ff0dcc98a4d763d7d254eec5ba995608d6e6e439a4895c",
+    "src/main.rs": "fc9076ac16f37b6a918384994930751478f9506a15d2ab5ec8d0497af8149ee5",
+    "src/report.rs": "698ffac97389f7672b1950b37e2200837ee43855af5a131940f87dceb9da4b04",
+    "src/search.rs": "6d7c0ddb8b8a713414718542df138418d32760075bcf0e8f9f6934a7005c5396",
+    "src/workspace.rs": "10e7a3011c9d0ea6cf16cdbd888e991edf4cf9eabe00d520bfbc30ac58d3d427",
+    "src/diff/inline.rs": "5bf160b3404a46cce6cb822ee5a207513fa7b11a1e880c7959157fe863bcc173",
+    "src/diff/line_pairing.rs": "ff5514312022019fd8ad02b1e214bdbe091201e4d5e710443b6e4233526f2e82",
+    "src/diff/mod.rs": "8b43188da3952e8f154a48d93b17931e43e2f0073ae235998a8c723f8372bdae",
+    "src/diff/reference_myers.rs": "428b189a99308f0c6760c69bd222fb392441f14ce822b4ccbdb2d7334024c57c",
+    "src/ui/aligned_editor.rs": "7a142dcb320251e39b840868885353656e73214d887ad06f4d05928c7b5d8d7d",
+    "src/ui/chrome.rs": "b8d164827fb2ad8b73d20c351eb6072a31a3dba2f82948c91ffd496d37163d33",
+    "src/ui/dialogs.rs": "cc8eb7ce9c511de03d08520b70ce3d0a3a6ecf0e0099df514165f30ec9cc5629",
+    "src/ui/folder_compare.rs": "9d030b5508701b22587b899cf514b7fe5f5770d748ecc428f7b2de1951e4a097",
+    "src/ui/hex_compare.rs": "a767bf0efce1c8c8505253c09b501626dd0b7fc8a61ff7bbdae10bf7f0d70385",
+    "src/ui/history_combo.rs": "0ff23f54d2d38fa4b331acc253cd93c0e00d63409357ee167abb2a54a70d26df",
+    "src/ui/home.rs": "ca23483fede73e67774c181a9fb06213d9a8d7d5233b268df1bbaa63fde9a0f5",
+    "src/ui/icons.rs": "468c5e07af15ddb305963ed52d5e98dd27bdef3fc08dc83bd16cbb7e76935e60",
+    "src/ui/mod.rs": "ea48bb73ea34e7cc40f0558e8eb21b69d926bd66222d1c1471fef66e70efce36",
+    "src/ui/native_files.rs": "9b1f8e323c785c2f060f8a1866f0496256899284802ccf8555d37cf2d522ac2a",
+    "src/ui/native_prompt.rs": "aee6dea1e811e567af8b29e102b7459cbbb4107a5102c5ba16ca59027217e4ed",
+    "src/ui/session_menu.rs": "38d6281234d00ca154a4e07f63800f7c40f334a335d04cdcee55f4e602e2eef2",
+    "src/ui/session_picker.rs": "3735dd8006aba97d8a81becfe50de75da5b17f32bf63f9c632d6253099913221",
+    "src/ui/session_tabs.rs": "5e435f87aa40ad14e799408392d3497da41c1c15b7f5ef501eca3914954cedf0",
+    "src/ui/text_chrome.rs": "bb782c4b3dbc292ea4ca3408fa286fa561ed8baa81c9953dc6a2bc67d68faf93",
+    "src/ui/text_compare.rs": "dad1725f87af66aa02dcbc9b63cf8f186465ee8e1087647e9aaf72f7c6213498",
+    "src/ui/text_view.rs": "9f9e7cd54bf35874ba5bc4c0c26b9e3c5ba57bfbf028debcb4ee57b45fa9425b",
+    "src/ui/theme.rs": "8f7be58f2bd5d42b6b727adf2ee506bdeb249eebb17acbecb5411764850875bf",
+    "src/ui/toolbar.rs": "6cbcdc8cb82bd18b34bec8880e03170231461b9b6e9598e43a65464f8d9bdbe8"
+  }
+}

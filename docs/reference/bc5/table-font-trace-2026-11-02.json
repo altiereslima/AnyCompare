@@ -1,0 +1,178 @@
+{
+  "evidence_id": "ev_f72a07c21cfe2cce79e9aa4f0615262c2df71d15a175602cd5ccd57befbfd9c1",
+  "subject": null,
+  "provider": {
+    "id": "frida",
+    "name": "Frida",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.frida.instrumentation-observation",
+  "operation": "instrument_with_frida",
+  "parameters": {
+    "session_id": "3987b2e5-8739-4c35-b2be-21b70c8e74db",
+    "device_id": "local",
+    "mode": "spawn",
+    "program": "C:\\Projetos\\BC4\\anycompare\\.codex\\bc5-runtime-pt\\BC5AuditReference.exe",
+    "argv": [
+      "/solo",
+      "/readonly",
+      "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\tables\\left.csv",
+      "C:\\Projetos\\BC4\\anycompare\\tests\\fixtures\\tables\\right.csv"
+    ]
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "session_id": "3987b2e5-8739-4c35-b2be-21b70c8e74db",
+    "device_id": "local",
+    "state": "running",
+    "target": "C:\\Projetos\\BC4\\anycompare\\.codex\\bc5-runtime-pt\\BC5AuditReference.exe",
+    "pid": 23524,
+    "mode": "spawn",
+    "scripts": [
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "name": "rea-0bee2c78-16c6-4545-96d0-00fc0daad561"
+      }
+    ],
+    "messages": [
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "ready": true,
+          "scope": "GDI font creation and cell painting only"
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "created": "Segoe UI",
+          "height": -12,
+          "weight": 400,
+          "quality": 0
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "created": "Segoe UI",
+          "height": -12,
+          "weight": 700,
+          "quality": 0
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "created": "Segoe UI",
+          "height": -15,
+          "weight": 400,
+          "quality": 0
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "created": "Segoe UI",
+          "height": -12,
+          "weight": 400,
+          "quality": 5
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "created": "Consolas",
+          "height": -12,
+          "weight": 400,
+          "quality": 0
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "created": "Consolas",
+          "height": -13,
+          "weight": 400,
+          "quality": 0
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "created": "Terminal",
+          "height": -9,
+          "weight": 400,
+          "quality": 0
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "face": "Consolas",
+          "height": -13,
+          "weight": 400,
+          "quality": 0,
+          "sample": "ID"
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "face": "Consolas",
+          "height": -13,
+          "weight": 400,
+          "quality": 0,
+          "sample": "English"
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "face": "Consolas",
+          "height": -13,
+          "weight": 400,
+          "quality": 0,
+          "sample": "Português"
+        }
+      },
+      {
+        "script_id": "0bee2c78-16c6-4545-96d0-00fc0daad561",
+        "type": "send",
+        "payload": {
+          "face": "Consolas",
+          "height": -13,
+          "weight": 400,
+          "quality": 0,
+          "sample": "A"
+        }
+      }
+    ],
+    "messages_truncated": false,
+    "source_kind": "inline",
+    "source_path": null,
+    "source_sha256": "f73e8c47115f1b4ef9d1c59afd3f51064c2082d08d9faab4a191c9093aa8116a",
+    "cleanup_error": null
+  },
+  "confidence": "observed",
+  "authority": "external-service",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "The target operating system and architecture were not reported by this observation."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

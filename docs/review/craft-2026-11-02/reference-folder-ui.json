@@ -1,0 +1,154 @@
+{
+  "nodes": [
+    {
+      "class": "TNagDialog",
+      "depth": 0,
+      "frame": {
+        "h": 247,
+        "w": 494,
+        "x": 713,
+        "y": 392
+      },
+      "role": "Window",
+      "title": "Beyond Compare 30-day evaluation"
+    },
+    {
+      "class": "TUiButton",
+      "depth": 1,
+      "frame": {
+        "h": 27,
+        "w": 84,
+        "x": 1111,
+        "y": 600
+      },
+      "identifier": "133626",
+      "role": "Button",
+      "title": "Enter Key..."
+    },
+    {
+      "class": "TUiButton",
+      "depth": 1,
+      "frame": {
+        "h": 27,
+        "w": 84,
+        "x": 1019,
+        "y": 600
+      },
+      "identifier": "133550",
+      "role": "Button",
+      "title": "Buy Now"
+    },
+    {
+      "class": "TUiButton",
+      "depth": 1,
+      "frame": {
+        "h": 27,
+        "w": 84,
+        "x": 927,
+        "y": 600
+      },
+      "identifier": "133556",
+      "role": "Button",
+      "title": "More Info..."
+    },
+    {
+      "class": "TUiButton",
+      "depth": 1,
+      "frame": {
+        "h": 27,
+        "w": 84,
+        "x": 835,
+        "y": 600
+      },
+      "identifier": "264454",
+      "role": "Button",
+      "title": "Continue"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 1,
+      "frame": {
+        "h": 135,
+        "w": 461,
+        "x": 734,
+        "y": 436
+      },
+      "identifier": "198922",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 2,
+      "frame": {
+        "h": 39,
+        "w": 461,
+        "x": 734,
+        "y": 436
+      },
+      "identifier": "198954",
+      "role": "Pane"
+    },
+    {
+      "class": "TUiPanel",
+      "depth": 3,
+      "frame": {
+        "h": 39,
+        "w": 461,
+        "x": 734,
+        "y": 436
+      },
+      "identifier": "198882",
+      "role": "Pane"
+    },
+    {
+      "depth": 1,
+      "frame": {
+        "h": 23,
+        "w": 478,
+        "x": 721,
+        "y": 400
+      },
+      "identifier": "TitleBar",
+      "role": "TitleBar",
+      "title": "Beyond Compare 30-day evaluation"
+    },
+    {
+      "depth": 2,
+      "identifier": "SystemMenuBar",
+      "role": "MenuBar",
+      "title": "Barra de menus do sistema"
+    },
+    {
+      "depth": 3,
+      "identifier": "Item 1",
+      "role": "MenuItem",
+      "title": "Sistema"
+    },
+    {
+      "depth": 2,
+      "frame": {
+        "h": 25,
+        "w": 47,
+        "x": 1111,
+        "y": 393
+      },
+      "identifier": "Help",
+      "role": "Button",
+      "title": "Ajuda de contexto"
+    },
+    {
+      "depth": 2,
+      "frame": {
+        "h": 25,
+        "w": 47,
+        "x": 1158,
+        "y": 393
+      },
+      "identifier": "Close",
+      "role": "Button",
+      "title": "Fechar"
+    }
+  ],
+  "truncated": false,
+  "windows": 1
+}

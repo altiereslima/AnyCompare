@@ -42,6 +42,36 @@ $taskCases += @(
     @{ Name = 'folder-case'; Args = @('--folder', 'docs\reference\controlled-folder-replay-2026-10-30\case-parent\left', 'docs\reference\controlled-folder-replay-2026-10-30\case-parent\right'); Directory = $taskRoot },
     @{ Name = 'folder-matches'; Args = @('--folder', 'docs\reference\controlled-folder-replay-2026-10-30\case-parent\left', 'docs\reference\controlled-folder-replay-2026-10-30\case-parent\right', '--capture-menu', 'Barra: Iguais'); Directory = $taskRoot }
 )
+foreach ($taskExtension in @('csv', 'tsv', 'tab', 'ssv', 'psv', 'xlsx', 'ods')) {
+    $taskCases += @{ Name = "table-$taskExtension"; Args = @('--table', "tests\fixtures\tables\left.$taskExtension", "tests\fixtures\tables\right.$taskExtension"); Directory = $taskRoot }
+}
+foreach ($taskExtension in @('xls', 'xlsb')) {
+    $taskCases += @{ Name = "table-$taskExtension"; Args = @('--table', "tests\fixtures\tables\any_sheets.$taskExtension", "tests\fixtures\tables\any_sheets.$taskExtension"); Directory = $taskRoot }
+}
+$taskCases += @{ Name = 'table-auto'; Args = @('tests\fixtures\tables\left.csv', 'tests\fixtures\tables\right.xlsx'); Directory = $taskRoot }
+$taskCases += @{ Name = 'table-differences'; Args = @('--table', 'tests\fixtures\tables\left.csv', 'tests\fixtures\tables\right.csv', '--differences'); Directory = $taskRoot }
+$taskCases += @{ Name = 'table-search'; Args = @('--table', 'tests\fixtures\tables\left.csv', 'tests\fixtures\tables\right.csv', '--capture-find', 'Duplicate'); Directory = $taskRoot }
+$taskCases += @{ Name = 'table-drop'; Args = @('--capture-drop', 'tests\fixtures\tables\left.csv', 'tests\fixtures\tables\right.csv'); Directory = $taskRoot }
+foreach ($taskLanguage in @('pt-BR', 'en')) {
+    $taskCases += @{ Name = "table-menu-$taskLanguage"; Args = @('--table', 'tests\fixtures\tables\left.xlsx', 'tests\fixtures\tables\right.xlsx', '--language', $taskLanguage, '--capture-menu', 'Arquivo (F)'); Directory = $taskRoot }
+    $taskCases += @{ Name = "table-sessions-$taskLanguage"; Args = @('--table', 'tests\fixtures\tables\left.csv', 'tests\fixtures\tables\right.csv', '--language', $taskLanguage, '--capture-menu', 'Sessões'); Directory = $taskRoot }
+}
+$taskCases += @{ Name = 'version'; Args = @('--version', 'tests\fixtures\bc5\pe32.bin', 'tests\fixtures\bc5\pe32-changed.bin'); Directory = $taskRoot }
+$taskCases += @{ Name = 'version-64'; Args = @('--version', 'tests\fixtures\bc5\pe64.bin', 'tests\fixtures\bc5\pe64.bin'); Directory = $taskRoot }
+$taskCases += @{ Name = 'version-differences'; Args = @('--version', 'tests\fixtures\bc5\pe32.bin', 'tests\fixtures\bc5\pe32-changed.bin', '--differences'); Directory = $taskRoot }
+$taskCases += @{ Name = 'table-html'; Args = @('tests\fixtures\bc5\multi-left.html', 'tests\fixtures\bc5\multi-right.html'); Directory = $taskRoot }
+foreach ($taskLanguage in @('pt-BR', 'en')) {
+    foreach ($taskMenu in @('Sessão', 'Arquivo (F)', 'Sessões')) {
+        $taskCases += @{ Name = "version-$($taskMenu.Replace(' ', '-'))-$taskLanguage"; Args = @('--version', 'tests\fixtures\bc5\pe32.bin', 'tests\fixtures\bc5\pe32-changed.bin', '--language', $taskLanguage, '--capture-menu', $taskMenu); Directory = $taskRoot }
+    }
+}
+$taskCases += @{ Name = 'table-regional'; Args = @('--table', 'tests\fixtures\bc5\regional-left.csv', 'tests\fixtures\bc5\regional-right.csv'); Directory = $taskRoot }
+$taskCases += @{ Name = 'table-html-orphan'; Args = @('--table', 'tests\fixtures\bc5\multi-left.html', 'tests\fixtures\bc5\multi-right.html', '--capture-sheet', '2'); Directory = $taskRoot }
+$taskCases += @{ Name = 'table-excel-second-sheet'; Args = @('--table', 'tests\fixtures\tables\left.xlsx', 'tests\fixtures\tables\right.xlsx', '--capture-sheet', '1'); Directory = $taskRoot }
+$taskCases += @{ Name = 'table-excel-geometry'; Args = @('--table', 'tests\fixtures\tables\left.xlsx', 'tests\fixtures\tables\right.xlsx', '--size', '1443', '832'); Directory = $taskRoot }
+foreach ($taskLanguage in @('pt-BR', 'en')) {
+    $taskCases += @{ Name = "table-history-$taskLanguage"; Args = @('--table', 'tests\fixtures\tables\left.csv', 'tests\fixtures\tables\right.csv', '--language', $taskLanguage, '--capture-menu', 'Arquivo esquerdo'); Directory = $taskRoot }
+}
 $taskUserFiles = @('C:\Users\Altieres\Desktop\resumo.txt', 'C:\Users\Altieres\Desktop\resumo 1.txt')
 foreach ($taskLanguage in @('pt-BR', 'en')) {
     foreach ($taskView in @('text', 'folder', 'hex')) {
@@ -77,6 +107,19 @@ if (($taskUserFiles | Where-Object { Test-Path -LiteralPath $_ -PathType Leaf })
     }
 }
 $taskResults = @()
+$taskCases += @(
+    @{ Name = 'home-bc5-wide'; Args = @('--size','1919','1008','--language','pt-BR'); Directory = $taskRoot },
+    @{ Name = 'home-bc5-narrow'; Args = @('--size','700','900','--language','pt-BR'); Directory = $taskRoot },
+    @{ Name = 'table-cell-context-pt'; Args = @('--table','tests\fixtures\tables\left.csv','tests\fixtures\tables\right.csv','--capture-menu','Menu da célula','--language','pt-BR'); Directory = $taskRoot },
+    @{ Name = 'table-cell-context-en'; Args = @('--table','tests\fixtures\tables\left.csv','tests\fixtures\tables\right.csv','--capture-menu','Menu da célula','--language','en'); Directory = $taskRoot },
+    @{ Name = 'table-cell-edit-pt'; Args = @('--table','tests\fixtures\tables\left.csv','tests\fixtures\tables\right.csv','--capture-menu','Editar célula','--language','pt-BR'); Directory = $taskRoot },
+    @{ Name = 'table-cell-edit-en'; Args = @('--table','tests\fixtures\tables\left.csv','tests\fixtures\tables\right.csv','--capture-menu','Editar célula','--language','en'); Directory = $taskRoot },
+    @{ Name = 'media-mp3'; Args = @('--media','vendor\bc5-prototypes\RUST_APP\crates\bc5-media\tests\fixtures\A.mp3','vendor\bc5-prototypes\RUST_APP\crates\bc5-media\tests\fixtures\B.mp3'); Directory = $taskRoot },
+    @{ Name = 'media-flac'; Args = @('--media','vendor\bc5-prototypes\RUST_APP\crates\bc5-media\tests\fixtures\A.flac','vendor\bc5-prototypes\RUST_APP\crates\bc5-media\tests\fixtures\B.flac'); Directory = $taskRoot },
+    @{ Name = 'media-m4a'; Args = @('--media','vendor\bc5-prototypes\RUST_APP\crates\bc5-media\tests\fixtures\A.m4a','vendor\bc5-prototypes\RUST_APP\crates\bc5-media\tests\fixtures\B.m4a','--language','en'); Directory = $taskRoot },
+    @{ Name = 'registry-reg'; Args = @('--registry','vendor\bc5-prototypes\TESTES_REGISTRY\02_diferencas_esquerda.reg','vendor\bc5-prototypes\TESTES_REGISTRY\02_diferencas_direita.reg'); Directory = $taskRoot },
+    @{ Name = 'registry-reg-en'; Args = @('--registry','vendor\bc5-prototypes\TESTES_REGISTRY\03_tipos_esquerda.reg','vendor\bc5-prototypes\TESTES_REGISTRY\03_tipos_direita.reg','--language','en'); Directory = $taskRoot }
+)
 foreach ($case in $taskCases) {
     $taskCapture = Join-Path $taskValidation "$($case.Name).png"
     $taskStdout = Join-Path $taskValidation "$($case.Name).out.log"

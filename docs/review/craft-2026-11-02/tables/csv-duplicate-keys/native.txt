@@ -1,0 +1,11 @@
+﻿Table Compare
+Produced: 02/11/2026 14:04:01
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\review\craft-2026-11-02\tables\csv-duplicate-keys\left.csv
+Right file: C:\Projetos\BC4\anycompare\docs\review\craft-2026-11-02\tables\csv-duplicate-keys\right.csv
+  1: id 2: text 3: value      1: id 2: text 3: value
+----------------------------------------------------
+2 a     first   1        <> 2 a     second  2
+3 a     second  2        <> 3 a     first   1
+----------------------------------------------------

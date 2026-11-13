@@ -5,9 +5,16 @@ mod diff;
 mod document;
 mod file_ops;
 mod history;
+mod html_tables;
 mod i18n;
+mod pe_version;
+mod property_sources;
 mod report;
+mod resources;
 mod search;
+mod table;
+mod table_columns;
+mod table_sheets;
 mod ui;
 mod workspace;
 
@@ -19,13 +26,20 @@ use ui::{
     hex_compare::HexCompareScreen,
     home::{HomeAction, HomeScreen},
     icons::IconManager,
+    table_compare::TableCompareScreen,
     text_compare::{TextCompareAction, TextCompareScreen},
+    text_edit::TextEditScreen,
+    version_compare::VersionCompareScreen,
 };
 
 enum Session {
     Text(Box<TextCompareScreen>),
     Folder(Box<FolderCompareScreen>),
     Hex(Box<HexCompareScreen>),
+    Table(Box<TableCompareScreen>),
+    Version(Box<VersionCompareScreen>),
+    Properties(Box<VersionCompareScreen>),
+    TextEdit(Box<TextEditScreen>),
 }
 
 impl Session {
@@ -36,6 +50,9 @@ impl Session {
                 Self::Text(s) => s.session_options(),
                 Self::Folder(s) => s.session_options(),
                 Self::Hex(s) => s.session_options(),
+                Self::Table(s) => s.session_options(),
+                Self::Version(s) | Self::Properties(s) => s.session_options(),
+                Self::TextEdit(s) => s.session_options(),
             },
         })
     }
@@ -43,6 +60,18 @@ impl Session {
         let files = &saved.files;
         let mut session = Self::new(files.kind);
         match &mut session {
+            Self::TextEdit(screen) => {
+                screen.load(&files.left)?;
+                screen.apply_session_options(&saved.options);
+            }
+            Self::Version(screen) | Self::Properties(screen) => {
+                screen.load_files(&files.left, &files.right)?;
+                screen.apply_session_options(&saved.options);
+            }
+            Self::Table(screen) => {
+                screen.apply_session_options(&saved.options);
+                screen.load_files(&files.left, &files.right)?;
+            }
             Self::Text(screen) => {
                 screen.left = document::Document::load(&files.left)?;
                 screen.right = document::Document::load(&files.right)?;
@@ -68,6 +97,8 @@ impl Session {
         match self {
             Self::Text(screen) => screen.confirm_saved(dialogs),
             Self::Hex(screen) => screen.confirm_saved(dialogs),
+            Self::Table(screen) => screen.confirm_saved(dialogs),
+            Self::TextEdit(screen) => screen.confirm_saved(dialogs),
             _ => true,
         }
     }
@@ -76,6 +107,12 @@ impl Session {
             SessionKind::Text => Self::Text(Box::new(TextCompareScreen::new())),
             SessionKind::Folder => Self::Folder(Box::new(FolderCompareScreen::new())),
             SessionKind::Hex => Self::Hex(Box::new(HexCompareScreen::new())),
+            SessionKind::Table => Self::Table(Box::new(TableCompareScreen::new())),
+            SessionKind::TextEdit => Self::TextEdit(Box::new(TextEditScreen::new())),
+            SessionKind::Version => Self::Version(Box::new(VersionCompareScreen::new())),
+            SessionKind::Registry | SessionKind::Media => {
+                Self::Properties(Box::new(VersionCompareScreen::for_kind(kind)))
+            }
         }
     }
 
@@ -83,12 +120,17 @@ impl Session {
         match self {
             Self::Text(s) => s.left.dirty() || s.right.dirty(),
             Self::Hex(s) => s.dirty(),
-            Self::Folder(_) => false,
+            Self::Table(s) => s.dirty(),
+            Self::TextEdit(s) => s.document.dirty(),
+            Self::Folder(_) | Self::Version(_) | Self::Properties(_) => false,
         }
     }
 
     fn is_empty(&self, kind: SessionKind) -> bool {
         match (self, kind) {
+            (Self::TextEdit(s), SessionKind::TextEdit) => {
+                !s.document.dirty() && s.document.path.is_none() && s.document.text.is_empty()
+            }
             (Self::Text(s), SessionKind::Text) => {
                 !self.dirty()
                     && s.left.path.is_none()
@@ -101,6 +143,13 @@ impl Session {
             (Self::Folder(s), SessionKind::Folder) => {
                 s.left_path.is_empty() && s.right_path.is_empty()
             }
+            (Self::Table(s), SessionKind::Table) => s.is_empty(),
+            (Self::Properties(s), kind) if s.kind() == kind => {
+                s.left_path.is_empty() && s.right_path.is_empty()
+            }
+            (Self::Version(s), SessionKind::Version) => {
+                s.left_path.is_empty() && s.right_path.is_empty()
+            }
             (Self::Hex(s), SessionKind::Hex) => s.left_path.is_empty() && s.right_path.is_empty(),
             _ => false,
         }
@@ -108,10 +157,24 @@ impl Session {
 
     fn record(&self) -> Option<RecentSession> {
         let (kind, left, right) = match self {
+            Self::TextEdit(s) => (
+                SessionKind::TextEdit,
+                s.document.path.clone()?,
+                s.document.path.clone()?,
+            ),
             Self::Text(s) => (
                 SessionKind::Text,
                 s.left.path.clone()?,
                 s.right.path.clone()?,
+            ),
+            Self::Version(s) | Self::Properties(s) => {
+                let (left, right) = s.record_paths()?;
+                (s.kind(), left, right)
+            }
+            Self::Table(s) if !s.left.path.is_empty() && !s.right.path.is_empty() => (
+                SessionKind::Table,
+                PathBuf::from(&s.left.path),
+                PathBuf::from(&s.right.path),
             ),
             Self::Folder(s) if !s.left_path.is_empty() && !s.right_path.is_empty() => (
                 SessionKind::Folder,
@@ -146,6 +209,14 @@ impl Session {
                 Self::Text(_) => crate::i18n::tr("Comparar Textos"),
                 Self::Folder(_) => crate::i18n::tr("Comparar Pastas"),
                 Self::Hex(_) => crate::i18n::tr("Comparar Hexadecimal"),
+                Self::Table(_) => crate::i18n::tr("Comparar Tabelas"),
+                Self::TextEdit(_) => crate::i18n::tr("Editor de Texto"),
+                Self::Version(_) => crate::i18n::tr("Comparar Versões"),
+                Self::Properties(s) => crate::i18n::tr(if s.kind() == SessionKind::Media {
+                    "Comparar Mídia"
+                } else {
+                    "Comparar Registro"
+                }),
             });
         if self.dirty() {
             format!("* {title}")
@@ -171,6 +242,7 @@ struct Startup {
     capture_drop: Vec<PathBuf>,
     capture_drop_separate: bool,
     capture_find: Option<String>,
+    capture_sheet: Option<usize>,
     home_select: Option<usize>,
 }
 
@@ -185,6 +257,11 @@ impl Startup {
                 Some("--text") => options.kind = Some(SessionKind::Text),
                 Some("--folder") => options.kind = Some(SessionKind::Folder),
                 Some("--hex") => options.kind = Some(SessionKind::Hex),
+                Some("--table") => options.kind = Some(SessionKind::Table),
+                Some("--version") => options.kind = Some(SessionKind::Version),
+                Some("--registry") => options.kind = Some(SessionKind::Registry),
+                Some("--media") => options.kind = Some(SessionKind::Media),
+                Some("--edit") => options.kind = Some(SessionKind::TextEdit),
                 Some("--read-only") => options.read_only = true,
                 Some("--differences") => options.differences = true,
                 Some("--capture-modified") => options.capture_modified = true,
@@ -213,6 +290,10 @@ impl Startup {
                 Some("--capture-find") => {
                     options.capture_find = args.next().map(|arg| arg.to_string_lossy().into_owned())
                 }
+                Some("--capture-sheet") => {
+                    options.capture_sheet =
+                        args.next().and_then(|s| s.to_string_lossy().parse().ok());
+                }
                 Some("--size") => {
                     if let (Some(width), Some(height)) = (args.next(), args.next()) {
                         if let (Ok(width), Ok(height)) = (
@@ -227,6 +308,9 @@ impl Startup {
                 }
                 _ => paths.push(PathBuf::from(arg)),
             }
+        }
+        if options.kind == Some(SessionKind::TextEdit) && paths.len() == 1 {
+            paths.push(paths[0].clone());
         }
         if paths.len() == 2 {
             options.pair = Some((paths.remove(0), paths.remove(0)));
@@ -287,13 +371,9 @@ impl AnyCompareApp {
             capture_drop_separate: startup.capture_drop_separate,
         };
         if let Some((left, right)) = startup.pair {
-            let kind = startup.kind.unwrap_or_else(|| {
-                if left.is_dir() && right.is_dir() {
-                    SessionKind::Folder
-                } else {
-                    SessionKind::Text
-                }
-            });
+            let kind = startup
+                .kind
+                .unwrap_or_else(|| SessionKind::for_paths(&left, &right));
             if startup.capture_tabs && app.capture.is_some() && kind != SessionKind::Folder {
                 if let (Some(left), Some(right)) = (left.parent(), right.parent()) {
                     app.open_pair(RecentSession::new(
@@ -309,6 +389,20 @@ impl AnyCompareApp {
         }
         if startup.read_only || startup.differences {
             if let Some(index) = app.active {
+                if let Session::TextEdit(screen) = &mut app.sessions[index] {
+                    screen.read_only = startup.read_only;
+                }
+                if let Session::Table(screen) = &mut app.sessions[index] {
+                    screen.read_only = startup.read_only;
+                    if startup.differences {
+                        screen.set_filter(table::Filter::Differences);
+                    }
+                }
+                if let Session::Version(screen) = &mut app.sessions[index] {
+                    if startup.differences {
+                        screen.set_filter(table::Filter::Differences);
+                    }
+                }
                 if let Session::Text(screen) = &mut app.sessions[index] {
                     if startup.read_only {
                         screen.set_editable(false);
@@ -320,11 +414,15 @@ impl AnyCompareApp {
             }
         }
         if app.capture.is_some() {
-            if let (Some(query), Some(Session::Text(screen))) = (
+            if let (Some(query), Some(session)) = (
                 startup.capture_find,
                 app.active.map(|index| &mut app.sessions[index]),
             ) {
-                screen.show_search(query);
+                match session {
+                    Session::Text(screen) => screen.show_search(query),
+                    Session::Table(screen) => screen.show_search(query),
+                    _ => {}
+                }
             }
         }
         // Only the renderer validation mode can prepare an unsaved buffer.
@@ -334,6 +432,16 @@ impl AnyCompareApp {
                 if let Some(section) = screen.diff_result.sections.first() {
                     screen.selected_line_idx = section.start;
                     screen.copy_difference(false);
+                }
+            }
+        }
+        if app.capture.is_some() {
+            if let (Some(index), Some(Session::Table(screen))) = (
+                startup.capture_sheet,
+                app.active.map(|i| &mut app.sessions[i]),
+            ) {
+                if let Err(error) = screen.capture_sheet(index) {
+                    screen.error = Some(error);
                 }
             }
         }
@@ -347,6 +455,7 @@ impl AnyCompareApp {
     }
 
     fn open_pair(&mut self, record: RecentSession) {
+        let record = record.resolve_legacy_format();
         if let Some(index) = self
             .sessions
             .iter()
@@ -361,6 +470,11 @@ impl AnyCompareApp {
             .position(|session| session.is_empty(record.kind));
         let mut session = Session::new(record.kind);
         match &mut session {
+            Session::TextEdit(screen) => {
+                if screen.load(&record.left).is_err() {
+                    return;
+                }
+            }
             Session::Text(screen) => {
                 screen.load_files(
                     &record.left.to_string_lossy(),
@@ -371,6 +485,16 @@ impl AnyCompareApp {
                     let mut hex = HexCompareScreen::new();
                     hex.load_files(&record.left, &record.right);
                     session = Session::Hex(Box::new(hex));
+                }
+            }
+            Session::Version(screen) | Session::Properties(screen) => {
+                if let Err(error) = screen.load_files(&record.left, &record.right) {
+                    screen.set_error(error);
+                }
+            }
+            Session::Table(screen) => {
+                if let Err(error) = screen.load_files(&record.left, &record.right) {
+                    screen.error = Some(error);
                 }
             }
             Session::Folder(screen) => screen.load_folders(&record.left, &record.right),
@@ -448,11 +572,53 @@ impl AnyCompareApp {
             dialogs.error("Compare duas pastas ou dois arquivos; não misture os dois tipos.");
         } else if let [left, right] = paths {
             self.open_pair(RecentSession::new(
-                SessionKind::Text,
+                SessionKind::for_paths(left, right),
                 left.clone(),
                 right.clone(),
             ));
         } else if let Some(path) = paths.first() {
+            let property_kind = SessionKind::for_paths(path, path);
+            if matches!(property_kind, SessionKind::Registry | SessionKind::Media) {
+                let active=self.active.filter(|&i|matches!(&self.sessions[i],Session::Properties(s) if s.kind()==property_kind));
+                if let Some(i) = active {
+                    self.active = Some(i);
+                } else {
+                    self.open_session(property_kind);
+                }
+                if let Some(Session::Properties(screen)) =
+                    self.active.map(|i| &mut self.sessions[i])
+                {
+                    let left = target_left.unwrap_or(screen.left_path.is_empty());
+                    screen.open_side(left, path, dialogs);
+                }
+                return;
+            }
+            if pe_version::supported(path) {
+                let active=self.active.filter(|&i|matches!(&self.sessions[i],Session::Version(s) if s.left_path.is_empty() || s.right_path.is_empty()));
+                if let Some(i) = active {
+                    self.active = Some(i);
+                } else {
+                    self.open_session(SessionKind::Version);
+                }
+                if let Some(Session::Version(screen)) = self.active.map(|i| &mut self.sessions[i]) {
+                    let left = target_left.unwrap_or(screen.left_path.is_empty());
+                    screen.open_side(left, path, dialogs);
+                }
+                return;
+            }
+            if table::supported(path) {
+                let active = self.active.filter(|&i| matches!(&self.sessions[i], Session::Table(s) if s.left.path.is_empty() || s.right.path.is_empty()));
+                if let Some(i) = active {
+                    self.active = Some(i);
+                } else {
+                    self.open_session(SessionKind::Table);
+                }
+                if let Some(Session::Table(screen)) = self.active.map(|i| &mut self.sessions[i]) {
+                    let side = target_left.unwrap_or(screen.left.path.is_empty());
+                    screen.open_side(side, path, dialogs);
+                }
+                return;
+            }
             self.open_session(SessionKind::Text);
             if let Some(Session::Text(screen)) = self.active.map(|index| &mut self.sessions[index])
             {
@@ -481,6 +647,19 @@ impl AnyCompareApp {
         use ui::session_menu::Request;
         let result = (|| -> Result<(), String> {
             match request {
+                Request::EditText(path) => {
+                    // Read before adding a tab so a failed decode cannot create
+                    // a misleading blank editor or route to Registry/Hex again.
+                    let _ = document::Document::load(&path)?;
+                    self.open_pair(RecentSession::new(
+                        SessionKind::TextEdit,
+                        path.clone(),
+                        path,
+                    ));
+                }
+                Request::SourceSaved(path) => {
+                    self.refresh_property_sources(&path, dialogs);
+                }
                 Request::New(kind) => self.open_session(kind),
                 Request::Recent(record) => self.open_pair(record),
                 Request::NewWindow => {
@@ -610,6 +789,17 @@ impl AnyCompareApp {
             .flat_map(|r| [r.left, r.right])
             .collect()
     }
+    fn refresh_property_sources(
+        &mut self,
+        path: &std::path::Path,
+        dialogs: &mut dyn ui::dialogs::DialogHost,
+    ) {
+        for session in &mut self.sessions {
+            if let Session::Version(screen) | Session::Properties(screen) = session {
+                screen.refresh_source(path, dialogs);
+            }
+        }
+    }
 }
 
 impl eframe::App for AnyCompareApp {
@@ -641,12 +831,17 @@ impl eframe::App for AnyCompareApp {
                 }));
         }
         // Controlled clicks target this application's menu only, in capture mode.
-        if self.capture.is_some() && [4, 5, 8, 9].contains(&self.capture_frames) {
-            let label = if self.capture_frames <= 5 {
-                &self.capture_menu
-            } else {
-                &self.capture_submenu
-            };
+        let cell_edit = self.capture_menu.as_deref() == Some("Editar célula");
+        if self.capture.is_some()
+            && ([4, 5, 8, 9].contains(&self.capture_frames)
+                || cell_edit && [6, 7].contains(&self.capture_frames))
+        {
+            let label =
+                if self.capture_frames <= 5 || cell_edit && [6, 7].contains(&self.capture_frames) {
+                    &self.capture_menu
+                } else {
+                    &self.capture_submenu
+                };
             if let Some(label) = label {
                 if let Some(rect) = ctx.data(|data| {
                     data.get_temp::<egui::Rect>(egui::Id::new("capture_menu_rect").with(label))
@@ -654,8 +849,14 @@ impl eframe::App for AnyCompareApp {
                     input.events.push(egui::Event::PointerMoved(rect.center()));
                     input.events.push(egui::Event::PointerButton {
                         pos: rect.center(),
-                        button: egui::PointerButton::Primary,
-                        pressed: self.capture_frames == 4 || self.capture_frames == 8,
+                        button: if label == "Menu da célula"
+                            || label.starts_with("Menu de propriedades")
+                        {
+                            egui::PointerButton::Secondary
+                        } else {
+                            egui::PointerButton::Primary
+                        },
+                        pressed: [4, 6, 8].contains(&self.capture_frames),
                         modifiers: Default::default(),
                     });
                 }
@@ -739,8 +940,18 @@ impl eframe::App for AnyCompareApp {
                     title: session.title(),
                     icon: match session {
                         Session::Text(_) => "imgTextCompareSession",
+                        Session::TextEdit(_) => "imgTextEditSession",
                         Session::Folder(_) => "imgDirCompareSession",
                         Session::Hex(_) => "imgHexCompareSession",
+                        Session::Table(_) => "imgTableCompareSession",
+                        Session::Version(_) => "imgVerCompareSession",
+                        Session::Properties(s) => {
+                            if s.kind() == SessionKind::Media {
+                                "imgMP3CompareSession"
+                            } else {
+                                "imgRegCompareSession"
+                            }
+                        }
                     },
                 })
                 .collect(),
@@ -754,6 +965,12 @@ impl eframe::App for AnyCompareApp {
             .show(ctx, |ui| {
                 if let Some(index) = self.active {
                     ui.push_id(index, |ui| match &mut self.sessions[index] {
+                        Session::TextEdit(screen) => {
+                            screen.set_recent_searches(&self.history.searches);
+                            if screen.ui(ctx, ui, &mut self.icons, &mut dialogs) {
+                                self.active = None;
+                            }
+                        }
                         Session::Text(screen) => {
                             screen.set_recent_history(&self.history);
                             if matches!(
@@ -770,6 +987,16 @@ impl eframe::App for AnyCompareApp {
                                     open_files = Some((left, right))
                                 }
                                 FolderAction::None => {}
+                            }
+                        }
+                        Session::Version(screen) | Session::Properties(screen) => {
+                            if screen.ui(ctx, ui, &mut self.icons, &mut dialogs) {
+                                self.active = None;
+                            }
+                        }
+                        Session::Table(screen) => {
+                            if screen.ui(ctx, ui, &mut self.icons, &mut dialogs) {
+                                self.active = None;
                             }
                         }
                         Session::Hex(screen) => {
@@ -796,6 +1023,11 @@ impl eframe::App for AnyCompareApp {
             HomeAction::OpenTextCompare => self.open_session(SessionKind::Text),
             HomeAction::OpenFolderCompare => self.open_session(SessionKind::Folder),
             HomeAction::OpenHexCompare => self.open_session(SessionKind::Hex),
+            HomeAction::OpenTableCompare => self.open_session(SessionKind::Table),
+            HomeAction::OpenVersionCompare => self.open_session(SessionKind::Version),
+            HomeAction::OpenRegistryCompare => self.open_session(SessionKind::Registry),
+            HomeAction::OpenMediaCompare => self.open_session(SessionKind::Media),
+            HomeAction::OpenTextEdit => self.open_session(SessionKind::TextEdit),
             HomeAction::OpenRecentSession(record) => self.open_pair(record),
             HomeAction::ForgetRecentSession(record) => {
                 // The "-" button of the sessions panel; never during a capture run.
@@ -809,18 +1041,24 @@ impl eframe::App for AnyCompareApp {
             HomeAction::None => {}
         }
         if let Some((left, right)) = open_files {
-            self.open_pair(RecentSession::new(SessionKind::Text, left, right));
+            self.open_pair(RecentSession::new(
+                SessionKind::for_paths(&left, &right),
+                left,
+                right,
+            ));
         }
         if let Some(request) = ui::session_menu::take(ctx) {
             self.session_request(request, &mut dialogs);
         }
         if self.capture.is_none() && self.history_valid {
             let mut history_changed = false;
-            if let Some(Session::Text(screen)) = self.active.map(|index| &mut self.sessions[index])
-            {
-                if let Some(query) = screen.take_recent_search() {
-                    history_changed |= self.history.remember_search(query);
-                }
+            let query = match self.active.map(|index| &mut self.sessions[index]) {
+                Some(Session::Text(screen)) => screen.take_recent_search(),
+                Some(Session::TextEdit(screen)) => screen.take_recent_search(),
+                _ => None,
+            };
+            if let Some(query) = query {
+                history_changed |= self.history.remember_search(query);
             }
             if let Some(record) = self.active.and_then(|i| self.sessions[i].record()) {
                 history_changed |= self.history.remember(record);
@@ -845,7 +1083,15 @@ impl eframe::App for AnyCompareApp {
             }
         } else if let Some(index) = self.pending_close.take() {
             if self.sessions[index].confirm_saved(&mut dialogs) {
+                let saved = if let Session::TextEdit(screen) = &mut self.sessions[index] {
+                    screen.take_saved_source()
+                } else {
+                    None
+                };
                 self.remove_session(index);
+                if let Some(path) = saved {
+                    self.refresh_property_sources(&path, &mut dialogs);
+                }
             }
         }
 
@@ -888,6 +1134,8 @@ impl eframe::App for AnyCompareApp {
             } else if self.capture_frames
                 >= if self.capture_submenu.is_some() {
                     12
+                } else if self.capture_menu.as_deref() == Some("Editar célula") {
+                    10
                 } else {
                     8
                 }
@@ -918,6 +1166,11 @@ impl eframe::App for AnyCompareApp {
 }
 
 fn main() -> eframe::Result<()> {
+    if std::env::args_os().any(|arg| arg == "--verify-resources") {
+        let report = format!("{}\n", resources::summary());
+        let _ = std::io::Write::write_all(&mut std::io::stdout(), report.as_bytes());
+        return Ok(());
+    }
     let startup = Startup::from_args();
     i18n::initialize(startup.language.as_deref());
     let mut viewport = egui::ViewportBuilder::default()
@@ -936,6 +1189,10 @@ fn main() -> eframe::Result<()> {
     }
     let native_options = eframe::NativeOptions {
         viewport,
+        // Present as soon as a frame is ready: the desktop compositor (DWM) already
+        // prevents tearing in a window, and waiting for vertical sync added up to a
+        // whole refresh interval to every scroll step and keystroke.
+        vsync: false,
         ..Default::default()
     };
     eframe::run_native(
@@ -948,6 +1205,43 @@ fn main() -> eframe::Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn registry_text_editor_is_a_single_file_tab_reuses_dirty_buffer_and_restores_workspace() {
+        let root =
+            PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("vendor/bc5-prototypes/TESTES_REGISTRY");
+        let a = root.join("02_diferencas_esquerda.reg");
+        let b = root.join("02_diferencas_direita.reg");
+        let mut app = drop_app();
+        app.open_pair(RecentSession::new(SessionKind::Registry, a.clone(), b));
+        let record = app.sessions[0].record();
+        let mut dialogs = ui::dialogs::TestDialogs::default();
+        app.session_request(ui::session_menu::Request::EditText(a.clone()), &mut dialogs);
+        assert_eq!(app.sessions.len(), 2);
+        assert_eq!(app.active, Some(1));
+        let Session::TextEdit(editor) = &mut app.sessions[1] else {
+            panic!("not the independent editor");
+        };
+        assert_eq!(editor.document.path.as_ref(), Some(&a));
+        assert!(!editor.document.dirty());
+        editor
+            .document
+            .text
+            .push_str("\n; preserve unsaved buffer\n");
+        app.session_request(ui::session_menu::Request::EditText(a.clone()), &mut dialogs);
+        assert_eq!(app.sessions.len(), 2);
+        assert!(app.sessions[1].dirty());
+        assert_eq!(app.sessions[0].record(), record);
+        let saved = app.sessions[1].saved().unwrap();
+        assert_eq!(saved.files.kind, SessionKind::TextEdit);
+        assert!(!saved.files.label().contains("<-->"));
+        assert!(matches!(
+            Session::from_saved(&saved).unwrap(),
+            Session::TextEdit(_)
+        ));
+        assert!(dialogs.opened.is_empty());
+        assert!(dialogs.errors.is_empty());
+    }
 
     #[test]
     fn identical_file_names_share_a_compact_tab_title() {
@@ -1000,6 +1294,78 @@ mod tests {
             capture_drop: Vec::new(),
             capture_drop_separate: false,
         }
+    }
+
+    #[test]
+    fn table_file_drops_select_the_table_module_and_keep_other_buffers() {
+        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/tables");
+        let mut app = drop_app();
+        let mut dialogs = ui::dialogs::TestDialogs::default();
+        app.open_session(SessionKind::Text);
+        if let Session::Text(screen) = &mut app.sessions[0] {
+            screen.left.text = "unsaved".into();
+        }
+        let pair = [root.join("left.csv"), root.join("right.xlsx")];
+        app.handle_dropped_paths(&pair, None, &mut dialogs);
+        assert!(matches!(app.sessions[1], Session::Table(_)));
+        assert_eq!(app.sessions[1].record().unwrap().kind, SessionKind::Table);
+        app.handle_dropped_paths(&pair, None, &mut dialogs);
+        assert_eq!(app.sessions.len(), 2);
+        app.open_session(SessionKind::Table);
+        app.handle_dropped_paths(&[root.join("left.ods")], Some(true), &mut dialogs);
+        app.handle_dropped_paths(&[root.join("right.ods")], Some(false), &mut dialogs);
+        assert_eq!(app.sessions.len(), 3);
+        assert!(app.sessions[2].record().is_some());
+        assert!(app.sessions[0].dirty());
+        assert!(dialogs.errors.is_empty());
+        // Explicit Text and Hex commands must retain the user's chosen module.
+        app.open_pair(RecentSession::new(
+            SessionKind::Text,
+            root.join("left.csv"),
+            root.join("right.csv"),
+        ));
+        assert!(matches!(
+            app.sessions[app.active.unwrap()],
+            Session::Text(_)
+        ));
+    }
+    #[test]
+    fn legacy_csv_history_opens_tables_without_replacing_a_dirty_text_tab() {
+        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/tables");
+        let record:RecentSession=serde_json::from_value(serde_json::json!({"kind":"Text","left":root.join("left.csv"),"right":root.join("right.csv"),"saved":10})).unwrap();
+        let mut app = drop_app();
+        app.open_session(SessionKind::Text);
+        if let Session::Text(screen) = &mut app.sessions[0] {
+            screen.left.text = "unsaved editor".into();
+        }
+        app.open_pair(record.clone());
+        assert!(matches!(app.sessions[1], Session::Table(_)));
+        assert!(app.sessions[0].dirty());
+        app.open_pair(record);
+        assert_eq!(app.sessions.len(), 2);
+        assert_eq!(app.active, Some(1));
+    }
+    #[test]
+    fn pe_files_open_in_versions_and_explicit_hex_stays_hex() {
+        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+        let out = root.join(".codex/version-routing-tests");
+        std::fs::create_dir_all(&out).unwrap();
+        let a = out.join("a.dll");
+        let b = out.join("b.exe");
+        std::fs::copy(root.join("tests/fixtures/bc5/pe32.bin"), &a).unwrap();
+        std::fs::copy(root.join("tests/fixtures/bc5/pe64.bin"), &b).unwrap();
+        assert_eq!(SessionKind::for_paths(&a, &b), SessionKind::Version);
+        let mut app = drop_app();
+        let mut dialogs = ui::dialogs::TestDialogs::default();
+        app.handle_dropped_paths(&[a.clone(), b.clone()], None, &mut dialogs);
+        assert!(matches!(app.sessions[0], Session::Version(_)));
+        app.open_pair(RecentSession::new(SessionKind::Hex, a.clone(), b));
+        assert!(matches!(app.sessions[app.active.unwrap()], Session::Hex(_)));
+        app.open_session(SessionKind::Version);
+        app.handle_dropped_paths(std::slice::from_ref(&a), Some(true), &mut dialogs);
+        app.handle_dropped_paths(std::slice::from_ref(&a), Some(false), &mut dialogs);
+        assert!(app.sessions[app.active.unwrap()].record().is_some());
+        assert!(dialogs.errors.is_empty());
     }
 
     fn assert_folder_result(

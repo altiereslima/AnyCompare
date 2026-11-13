@@ -14,3 +14,13 @@ __pycache__/
 !/docs/validation/0.1.17/
 /docs/validation/0.1.17/*.png
 /docs/validation/0.1.17/rea-*.json
+!/docs/validation/0.1.18/
+/docs/validation/0.1.18/*.png
+!/docs/validation/0.1.19/
+/docs/validation/0.1.19/*.png
+!/docs/validation/0.2.0/
+/docs/validation/0.2.0/*.png
+!/docs/validation/0.2.1/
+/docs/validation/0.2.1/*.png
+!/docs/validation/0.2.2/
+!/docs/validation/0.2.3/

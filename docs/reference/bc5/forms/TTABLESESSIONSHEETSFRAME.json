@@ -1,0 +1,93 @@
+{
+  "class": "TTableSessionSheetsFrame",
+  "name": "TableSessionSheetsFrame",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "SessionTableSheets",
+    "Caption": "Sheets"
+  },
+  "children": [
+    {
+      "class": "TUiComboBox",
+      "name": "KindEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Width": 121,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 0,
+        "OnChange": "KindEditChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiVirtualTableView",
+      "name": "Editor",
+      "props": {
+        "Left": 8,
+        "Top": 33,
+        "Width": 409,
+        "Height": 288,
+        "GutterImages": "BcImages.HeaderImages",
+        "TabOrder": 1,
+        "OnChanged": "EditorChanged",
+        "OnColDetectSize": "EditorColDetectSize",
+        "OnDrawCellPrep": "EditorDrawCellPrep",
+        "OnGetCellStr": "EditorGetCellStr",
+        "OnGetColName": "EditorGetColName",
+        "OnGetColWidth": "EditorGetColWidth",
+        "OnGetItemNum": "EditorGetItemNum",
+        "OnKeyDown": "EditorKeyDown",
+        "OnSetColWidth": "EditorSetColWidth"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBitBtn",
+      "name": "MoveUpBtn",
+      "props": {
+        "Left": 8,
+        "Top": 329,
+        "Width": 24,
+        "Hint": "Move Up",
+        "ImageIndex": "imgUp",
+        "Images": "BcImages.MainImages",
+        "TabOrder": 2,
+        "OnClick": "MoveUpClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBitBtn",
+      "name": "MoveDownBtn",
+      "props": {
+        "Left": 32,
+        "Top": 329,
+        "Width": 24,
+        "Hint": "Move Down",
+        "ImageIndex": "imgDown",
+        "Images": "BcImages.MainImages",
+        "TabOrder": 3,
+        "OnClick": "MoveDownClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiButton",
+      "name": "TidyBtn",
+      "props": {
+        "Left": 381,
+        "Top": 329,
+        "Width": 36,
+        "Caption": "&Tidy",
+        "TabOrder": 4,
+        "OnClick": "TidyClick",
+        "AutoSize": "asRight",
+        "AutoSizeMinWidth": 0
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

@@ -83,6 +83,8 @@ fn menu_icon(label: &str) -> Option<&'static str> {
         "Comparar Textos" => "imgHomeTextCompareSession",
         "Comparar Pastas" => "imgHomeDirCompareSession",
         "Comparar Hexadecimal" => "imgHomeHexCompareSession",
+        "Comparar Tabelas" => "imgTableCompareSession",
+        "Comparar Versões" => "imgVerCompareSession",
         "Opções" => "imgOptions",
         "Formato do arquivo" | "Formato do texto" => "imgTextFormatEdit",
         "Formatos de Arquivo" => "imgFileFormatManager",
@@ -92,8 +94,13 @@ fn menu_icon(label: &str) -> Option<&'static str> {
         "Informações da comparação" => "imgInfo",
         "Salvar Sessão" => "imgSessionSave",
         "Salvar Sessão Como" => "imgSessionSaveAs",
-        "Salvar arquivo" | "Salvar bytes" => "imgSave",
-        "Salvar arquivo como" | "Salvar bytes como" | "Salvar como" => "imgSaveAs",
+        "Salvar Arquivo" | "Salvar arquivo" | "Salvar bytes" => "imgSave",
+        "Salvar Arquivo Como" | "Salvar arquivo como" | "Salvar bytes como" | "Salvar como" => {
+            "imgSaveAs"
+        }
+        "Copiar para Direita" => "imgCopyRight",
+        "Copiar para Esquerda" => "imgCopyLeft",
+        "Abrir Arquivo" => "imgBrowse",
         "Salvar Instantâneo" => "imgSaveSnapshot",
         "Visualizar Correção" => "imgTextPatchSession",
         "Bloqueado" => "imgSessionLocked",
@@ -125,7 +132,8 @@ fn menu_icon(label: &str) -> Option<&'static str> {
         "Renomear" => "imgRename",
         "Nova pasta" => "imgNewFolder",
         "Parar" => "imgStopRed",
-        "Editar bytes" | "Editar Arquivo de Texto" => "imgFullEdit",
+        "Editor de Texto" => "imgTextEditSession",
+        "Editar bytes" | "Editar Arquivo de Texto" | "Editar Texto" => "imgFullEdit",
         "Mesclar Arquivos" => "imgTextMergeSession",
         _ => return None,
     })

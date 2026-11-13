@@ -1,0 +1,7 @@
+{
+  "class": "TEmptyView",
+  "name": "EmptyView",
+  "props": {},
+  "children": [],
+  "flags": 1
+}

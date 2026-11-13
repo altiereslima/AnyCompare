@@ -1,0 +1,105 @@
+{
+  "class": "TVfsDropboxProfileGeneralFrame",
+  "name": "VfsDropboxProfileGeneralFrame",
+  "props": {
+    "HelpKeyword": "ProfileDropbox"
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "DescriptionLbl",
+      "props": {
+        "Top": 146
+      },
+      "children": [],
+      "flags": 1
+    },
+    {
+      "class": "TUiLabel",
+      "name": "PathRootLbl",
+      "props": {
+        "Left": 8,
+        "Top": 100,
+        "Height": 13,
+        "Caption": "&Root folder:"
+      },
+      "children": [],
+      "flags": 2,
+      "child_position": 5
+    },
+    {
+      "class": "TImage",
+      "name": "ThrobberImage",
+      "props": {
+        "Left": 152,
+        "Top": 8,
+        "Width": 32,
+        "Height": 32,
+        "Picture.Data": {
+          "binary": {
+            "offset": 273,
+            "bytes": 596,
+            "sha256": "555a1bc9fd8ed6e549aa0749ba4a904fe90941cedda612b060a70fa3c3aa5bee"
+          }
+        },
+        "Visible": false
+      },
+      "children": [],
+      "flags": 2,
+      "child_position": 6
+    },
+    {
+      "class": "TPaintBox",
+      "name": "ThrobberBox",
+      "props": {
+        "Left": 231,
+        "Top": 8,
+        "Width": 16,
+        "Height": 16,
+        "OnPaint": "ThrobberBoxPaint"
+      },
+      "children": [],
+      "flags": 2,
+      "child_position": 7
+    },
+    {
+      "class": "TUiMemo",
+      "name": "DescriptionEdit",
+      "props": {
+        "Top": 163,
+        "Height": 138,
+        "TabOrder": 1
+      },
+      "children": [],
+      "flags": 1
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "PathRootEdit",
+      "props": {
+        "Left": 8,
+        "Top": 117,
+        "Width": 239,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "Color": "clBtnFace",
+        "Enabled": false,
+        "TabOrder": 0,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TTimer",
+      "name": "ThrobberTimer",
+      "props": {
+        "Enabled": false,
+        "OnTimer": "ThrobberTimerTimer",
+        "Left": 192,
+        "Top": 8
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

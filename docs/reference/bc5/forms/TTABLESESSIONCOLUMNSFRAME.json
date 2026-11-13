@@ -1,0 +1,163 @@
+{
+  "class": "TTableSessionColumnsFrame",
+  "name": "TableSessionColumnsFrame",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "SessionTableColumns",
+    "Caption": "Columns"
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "SheetLbl",
+      "props": {
+        "Left": 316,
+        "Top": 12,
+        "Height": 13,
+        "Caption": "S&heet:",
+        "FocusControl": "SheetEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "KindEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Width": 121,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 0,
+        "OnChange": "KindEditChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "SheetEdit",
+      "props": {
+        "Left": 352,
+        "Top": 8,
+        "Width": 65,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 1,
+        "OnChange": "SheetEditChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiVirtualTableView",
+      "name": "Editor",
+      "props": {
+        "Left": 8,
+        "Top": 33,
+        "Width": 409,
+        "Height": 288,
+        "AlphaItemNum": true,
+        "GutterImages": "BcImages.HeaderImages",
+        "PopupMenu": "Popup",
+        "TabOrder": 2,
+        "OnChanged": "EditorChanged",
+        "OnColDetectSize": "EditorColDetectSize",
+        "OnDblClick": "EditClick",
+        "OnDrawCellPrep": "EditorDrawCellPrep",
+        "OnGetCellStr": "EditorGetCellStr",
+        "OnGetColName": "EditorGetColName",
+        "OnGetColWidth": "EditorGetColWidth",
+        "OnGetGutterImageIndex": "EditorGetGutterImageIndex",
+        "OnGetItemNum": "EditorGetItemNum",
+        "OnKeyDown": "EditorKeyDown",
+        "OnSetColWidth": "EditorSetColWidth"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBitBtn",
+      "name": "EditBtn",
+      "props": {
+        "Left": 8,
+        "Top": 329,
+        "Width": 24,
+        "Hint": "Edit",
+        "ImageIndex": "imgListEdit",
+        "Images": "BcImages.MainImages",
+        "TabOrder": 3,
+        "OnClick": "EditClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBitBtn",
+      "name": "MoveUpBtn",
+      "props": {
+        "Left": 32,
+        "Top": 329,
+        "Width": 24,
+        "Hint": "Move Up",
+        "ImageIndex": "imgUp",
+        "Images": "BcImages.MainImages",
+        "TabOrder": 4,
+        "OnClick": "MoveUpClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBitBtn",
+      "name": "MoveDownBtn",
+      "props": {
+        "Left": 56,
+        "Top": 329,
+        "Width": 24,
+        "Hint": "Move Down",
+        "ImageIndex": "imgDown",
+        "Images": "BcImages.MainImages",
+        "TabOrder": 5,
+        "OnClick": "MoveDownClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiButton",
+      "name": "EditDefaultBtn",
+      "props": {
+        "Left": 296,
+        "Top": 329,
+        "Width": 84,
+        "Caption": "&Edit Default...",
+        "TabOrder": 6,
+        "OnClick": "EditDefaultClick",
+        "AutoSize": "asRight",
+        "AutoSizeMinWidth": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TUiButton",
+      "name": "TidyBtn",
+      "props": {
+        "Left": 381,
+        "Top": 329,
+        "Width": 36,
+        "Caption": "&Tidy",
+        "TabOrder": 7,
+        "OnClick": "TidyClick",
+        "AutoSize": "asRight",
+        "AutoSizeMinWidth": 0
+      },
+      "children": []
+    },
+    {
+      "class": "TUiPopupMenu",
+      "name": "Popup",
+      "props": {
+        "OnPopup": "ListClick",
+        "Left": 8,
+        "Top": 8
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

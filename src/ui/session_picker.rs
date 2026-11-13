@@ -14,6 +14,21 @@ fn history_id() -> Id {
 pub fn set_history(ctx: &Context, entries: &[RecentSession]) {
     ctx.data_mut(|data| data.insert_temp(history_id(), entries.to_vec()));
 }
+pub fn paths(ctx: &Context, kind: crate::history::SessionKind) -> Vec<String> {
+    let entries = ctx
+        .data(|d| d.get_temp::<Vec<RecentSession>>(history_id()))
+        .unwrap_or_default();
+    let mut paths = Vec::new();
+    for entry in entries.iter().filter(|e| e.kind == kind) {
+        for path in [&entry.left, &entry.right] {
+            let value = path.to_string_lossy().into_owned();
+            if !paths.contains(&value) {
+                paths.push(value);
+            }
+        }
+    }
+    paths
+}
 
 /// The tree owns keyboard input while open. Do not let an editor behind the
 /// popup receive typing, paste, deletion or editing shortcuts. Native typeahead
@@ -83,6 +98,13 @@ pub fn show(ui: &mut Ui, icons: &mut IconManager, anchor: &Response) {
         HomeAction::OpenTextCompare => Some(Request::New(crate::history::SessionKind::Text)),
         HomeAction::OpenFolderCompare => Some(Request::New(crate::history::SessionKind::Folder)),
         HomeAction::OpenHexCompare => Some(Request::New(crate::history::SessionKind::Hex)),
+        HomeAction::OpenTableCompare => Some(Request::New(crate::history::SessionKind::Table)),
+        HomeAction::OpenVersionCompare => Some(Request::New(crate::history::SessionKind::Version)),
+        HomeAction::OpenRegistryCompare => {
+            Some(Request::New(crate::history::SessionKind::Registry))
+        }
+        HomeAction::OpenMediaCompare => Some(Request::New(crate::history::SessionKind::Media)),
+        HomeAction::OpenTextEdit => Some(Request::New(crate::history::SessionKind::TextEdit)),
         HomeAction::OpenRecentSession(record) => Some(Request::Recent(record)),
         _ => None,
     };

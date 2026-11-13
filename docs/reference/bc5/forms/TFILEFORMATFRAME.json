@@ -1,0 +1,10 @@
+{
+  "class": "TFileFormatFrame",
+  "name": "FileFormatFrame",
+  "props": {
+    "Width": 273,
+    "Height": 321
+  },
+  "children": [],
+  "flags": 1
+}

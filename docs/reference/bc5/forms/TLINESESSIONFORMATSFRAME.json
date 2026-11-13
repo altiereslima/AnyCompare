@@ -1,0 +1,114 @@
+{
+  "class": "TLineSessionFormatsFrame",
+  "name": "LineSessionFormatsFrame",
+  "props": {
+    "HelpType": "htKeyword"
+  },
+  "children": [
+    {
+      "class": "TUiPanel",
+      "name": "CodePagePanel",
+      "props": {
+        "Left": 0,
+        "Top": 125,
+        "Width": 425,
+        "Height": 146,
+        "BevelOuter": "bvNone",
+        "TabOrder": 3
+      },
+      "children": [
+        {
+          "class": "TUiBevel",
+          "name": "CodePageBevel",
+          "props": {
+            "Left": 8,
+            "Top": 0,
+            "Width": 409,
+            "Height": 1,
+            "Shape": "bsTopLine"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiLabel",
+          "name": "LeftCodePageLbl",
+          "props": {
+            "Left": 8,
+            "Top": 8,
+            "Height": 13,
+            "Caption": "L&eft encoding override:",
+            "FocusControl": "LeftCodePageEdit"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiLabel",
+          "name": "RightCodePageLbl",
+          "props": {
+            "Left": 8,
+            "Top": 54,
+            "Height": 13,
+            "Caption": "Ri&ght encoding override:",
+            "FocusControl": "RightCodePageEdit"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiLabel",
+          "name": "CenterCodePageLbl",
+          "props": {
+            "Left": 8,
+            "Top": 100,
+            "Height": 13,
+            "Caption": "&Center encoding override:",
+            "FocusControl": "CenterCodePageEdit"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiCodePageEdit",
+          "name": "LeftCodePageEdit",
+          "props": {
+            "Left": 8,
+            "Top": 25,
+            "Width": 409,
+            "Height": 21,
+            "TabOrder": 0,
+            "OnChange": "SomethingChangedClick",
+            "UseNone": true
+          },
+          "children": []
+        },
+        {
+          "class": "TUiCodePageEdit",
+          "name": "RightCodePageEdit",
+          "props": {
+            "Left": 8,
+            "Top": 71,
+            "Width": 409,
+            "Height": 21,
+            "TabOrder": 1,
+            "OnChange": "SomethingChangedClick",
+            "UseNone": true
+          },
+          "children": []
+        },
+        {
+          "class": "TUiCodePageEdit",
+          "name": "CenterCodePageEdit",
+          "props": {
+            "Left": 8,
+            "Top": 117,
+            "Width": 409,
+            "Height": 21,
+            "TabOrder": 2,
+            "OnChange": "SomethingChangedClick",
+            "UseNone": true
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}

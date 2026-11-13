@@ -1,0 +1,189 @@
+{
+  "schema": "bc5-id3-boundaries-stage12-v1",
+  "stage": 12,
+  "source_audio": "RUST_APP/crates/bc5-media/tests/fixtures/A.mp3",
+  "source_audio_sha256": "c79081af451d0910d26fe915bc29b72c947f2635530a9d211fc3ca91fba1f25d",
+  "bc5_semantic_golden": false,
+  "cases": [
+    {
+      "id": "01_footer_valid",
+      "description": "ID3v2.4 footer válido",
+      "A": {
+        "name": "01_footer_valid_A.mp3",
+        "bytes": 2727,
+        "sha256": "cd6ad5dac3fd103a8bf20ce97f0dc2848aa9b645555349fa2636a218d0474297",
+        "first_audio_offset": 38,
+        "id3_prefix_len": 38
+      },
+      "B": {
+        "name": "01_footer_valid_B.mp3",
+        "bytes": 2727,
+        "sha256": "adddf33f37ee1edf83cc6d8a69f59f4e0a761662be1ff4f3bfd9f031b9f35f9b",
+        "first_audio_offset": 38,
+        "id3_prefix_len": 38
+      }
+    },
+    {
+      "id": "02_footer_missing",
+      "description": "footer declarado mas ausente",
+      "A": {
+        "name": "02_footer_missing_A.mp3",
+        "bytes": 2725,
+        "sha256": "7c3a5ef47fd68df831b09f498c2b41e8d3237aeb3215ec94bec636c4e9ce2d2b",
+        "first_audio_offset": 36,
+        "id3_prefix_len": 36
+      },
+      "B": {
+        "name": "02_footer_missing_B.mp3",
+        "bytes": 2715,
+        "sha256": "5e5fdf20e260decbbb397bf4e04d18d18e78e99cd0443c1095ba76b9d614cce0",
+        "first_audio_offset": 26,
+        "id3_prefix_len": 26
+      }
+    },
+    {
+      "id": "03_footer_signature",
+      "description": "assinatura footer inválida",
+      "A": {
+        "name": "03_footer_signature_A.mp3",
+        "bytes": 2725,
+        "sha256": "7c3a5ef47fd68df831b09f498c2b41e8d3237aeb3215ec94bec636c4e9ce2d2b",
+        "first_audio_offset": 36,
+        "id3_prefix_len": 36
+      },
+      "B": {
+        "name": "03_footer_signature_B.mp3",
+        "bytes": 2725,
+        "sha256": "e25c9a7416ceea770947dd6439d34ad86116e76367d256b4d44a47636eaae241",
+        "first_audio_offset": 36,
+        "id3_prefix_len": 36
+      }
+    },
+    {
+      "id": "04_two_tags",
+      "description": "duas tags consecutivas",
+      "A": {
+        "name": "04_two_tags_A.mp3",
+        "bytes": 2741,
+        "sha256": "b8b69d1e5274b3179f7eacb63581433dfcade3acf7ed70393da5b7f8f1f73f63",
+        "first_audio_offset": 52,
+        "id3_prefix_len": 52
+      },
+      "B": {
+        "name": "04_two_tags_B.mp3",
+        "bytes": 2741,
+        "sha256": "092453bfe55894a264c0129b91818e525aa0553e602a191b9f0eb509542c4344",
+        "first_audio_offset": 52,
+        "id3_prefix_len": 52
+      }
+    },
+    {
+      "id": "05_extended_v23",
+      "description": "extended header v2.3",
+      "A": {
+        "name": "05_extended_v23_A.mp3",
+        "bytes": 2721,
+        "sha256": "5f050ddeb64af5101fde25c99a9207990ca5239d719602eff757eb8850b29ff5",
+        "first_audio_offset": 32,
+        "id3_prefix_len": 32
+      },
+      "B": {
+        "name": "05_extended_v23_B.mp3",
+        "bytes": 2721,
+        "sha256": "c1043827bc69cb1be06b5614d28ecaad91238ca0e3ee30227a3b910f2fa0f00b",
+        "first_audio_offset": 32,
+        "id3_prefix_len": 32
+      }
+    },
+    {
+      "id": "06_extended_v24",
+      "description": "extended header v2.4",
+      "A": {
+        "name": "06_extended_v24_A.mp3",
+        "bytes": 2717,
+        "sha256": "d7f9bec67ae569cf3d901c37a4a0a46ee02260e5df191964a0fc26c9df9365da",
+        "first_audio_offset": 28,
+        "id3_prefix_len": 28
+      },
+      "B": {
+        "name": "06_extended_v24_B.mp3",
+        "bytes": 2717,
+        "sha256": "a513319f0f6d09051b080778f4fbea0b66e56649cb5d463d7bd9dbaacfbe55c2",
+        "first_audio_offset": 28,
+        "id3_prefix_len": 28
+      }
+    },
+    {
+      "id": "07_extended_too_short",
+      "description": "extended header v2.4 abaixo do mínimo",
+      "A": {
+        "name": "07_extended_too_short_A.mp3",
+        "bytes": 2715,
+        "sha256": "57b8e88f4ca510a641db154a9d9e6d67148335c20350f24328804cce8e963268",
+        "first_audio_offset": 26,
+        "id3_prefix_len": 26
+      },
+      "B": {
+        "name": "07_extended_too_short_B.mp3",
+        "bytes": 2715,
+        "sha256": "2bca867a665965a8b9f10546d80c68172fdea67cda17e85333a62cb117d3b0d3",
+        "first_audio_offset": 26,
+        "id3_prefix_len": 26
+      }
+    },
+    {
+      "id": "08_unsync_per_tag",
+      "description": "unsync diferente entre tags",
+      "A": {
+        "name": "08_unsync_per_tag_A.mp3",
+        "bytes": 2746,
+        "sha256": "2162fad87525441b08713f0a27de2b1e4e5e642271e1ecc3d6933afded0c5238",
+        "first_audio_offset": 57,
+        "id3_prefix_len": 57
+      },
+      "B": {
+        "name": "08_unsync_per_tag_B.mp3",
+        "bytes": 2747,
+        "sha256": "47e4f97014beb89a6faf67d970602ea0a3e22a7db5b832d5c80836860bbdea16",
+        "first_audio_offset": 58,
+        "id3_prefix_len": 58
+      }
+    },
+    {
+      "id": "09_footer_wrong_version",
+      "description": "versão footer diferente do header",
+      "A": {
+        "name": "09_footer_wrong_version_A.mp3",
+        "bytes": 2725,
+        "sha256": "7c3a5ef47fd68df831b09f498c2b41e8d3237aeb3215ec94bec636c4e9ce2d2b",
+        "first_audio_offset": 36,
+        "id3_prefix_len": 36
+      },
+      "B": {
+        "name": "09_footer_wrong_version_B.mp3",
+        "bytes": 2725,
+        "sha256": "1f61029481498d05d75d93d8959603f1ddc3efde28b9da07626889269f33d07d",
+        "first_audio_offset": 36,
+        "id3_prefix_len": 36
+      }
+    },
+    {
+      "id": "10_footer_wrong_size",
+      "description": "tamanho footer diferente do header",
+      "A": {
+        "name": "10_footer_wrong_size_A.mp3",
+        "bytes": 2725,
+        "sha256": "7c3a5ef47fd68df831b09f498c2b41e8d3237aeb3215ec94bec636c4e9ce2d2b",
+        "first_audio_offset": 36,
+        "id3_prefix_len": 36
+      },
+      "B": {
+        "name": "10_footer_wrong_size_B.mp3",
+        "bytes": 2725,
+        "sha256": "d6e93a4fd62cf1276b501f46becc56f1690047b449160aa0ee95b89b088e61b3",
+        "first_audio_offset": 36,
+        "id3_prefix_len": 36
+      }
+    }
+  ]
+}

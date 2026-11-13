@@ -1,0 +1,29 @@
+{
+  "class": "TTagReportDialog",
+  "name": "TagReportDialog",
+  "props": {
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiPanel",
+      "name": "OptionsPanel",
+      "props": {},
+      "children": [
+        {
+          "class": "TUiActivePanelView",
+          "name": "LayoutPanelView",
+          "props": {
+            "Height": 0,
+            "Align": "alNone"
+          },
+          "children": [],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    }
+  ],
+  "flags": 1
+}

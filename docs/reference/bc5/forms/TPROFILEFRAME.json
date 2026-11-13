@@ -1,0 +1,10 @@
+{
+  "class": "TProfileFrame",
+  "name": "ProfileFrame",
+  "props": {
+    "Width": 255,
+    "Height": 309
+  },
+  "children": [],
+  "flags": 1
+}

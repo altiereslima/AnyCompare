@@ -1,0 +1,28 @@
+{
+  "class": "TDirView",
+  "name": "DirView",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "ViewDir"
+  },
+  "children": [
+    {
+      "class": "TLogFrame",
+      "name": "LogFrame",
+      "props": {},
+      "children": [
+        {
+          "class": "TUiVirtualListBox",
+          "name": "ListBox",
+          "props": {
+            "PopupMenu": "LogPopup"
+          },
+          "children": [],
+          "flags": 1
+        }
+      ],
+      "flags": 1
+    }
+  ],
+  "flags": 1
+}

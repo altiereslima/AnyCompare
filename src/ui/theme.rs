@@ -14,6 +14,11 @@ pub fn apply(ctx: &egui::Context) {
         for (name, file, family) in [
             ("Windows UI", "segoeui.ttf", egui::FontFamily::Proportional),
             ("Windows Mono", "cour.ttf", egui::FontFamily::Monospace),
+            (
+                "Table Mono",
+                "consola.ttf",
+                egui::FontFamily::Name("Table Mono".into()),
+            ),
         ] {
             if let Ok(bytes) =
                 std::fs::read(std::path::Path::new(&windows).join("Fonts").join(file))
@@ -29,6 +34,26 @@ pub fn apply(ctx: &egui::Context) {
             }
         }
     }
+    if !fonts
+        .families
+        .contains_key(&egui::FontFamily::Name("Table Mono".into()))
+    {
+        let fallback = fonts.families[&egui::FontFamily::Monospace].clone();
+        fonts
+            .families
+            .insert(egui::FontFamily::Name("Table Mono".into()), fallback);
+    }
+    // Text Compare panes: Consolas through the same hinted GDI path as tables
+    // (the "Table Mono" face), then the monospace fallbacks for other scripts.
+    let mut text_mono = fonts.families[&egui::FontFamily::Name("Table Mono".into())].clone();
+    for name in fonts.families[&egui::FontFamily::Monospace].clone() {
+        if !text_mono.contains(&name) {
+            text_mono.push(name);
+        }
+    }
+    fonts
+        .families
+        .insert(egui::FontFamily::Name("Text Mono".into()), text_mono);
     ctx.set_fonts(fonts);
     ctx.all_styles_mut(|style| {
         style.animation_time = 0.0;

@@ -1,0 +1,125 @@
+{
+  "class": "TOpMergeDialog",
+  "name": "OpMergeDialog",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "OpMerge",
+    "BorderIcons": [
+      "biSystemMenu",
+      "biHelp"
+    ],
+    "Caption": "Merge",
+    "ClientHeight": 186,
+    "ClientWidth": 393,
+    "OnClose": "FormClose",
+    "OnCloseQuery": "FormCloseQuery",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiWindowShape",
+      "name": "WindowShape",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Images": "BcImages.ContentImages",
+        "ShowCenter": true
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "ActionDescLbl",
+      "props": {
+        "Left": 121,
+        "Top": 8,
+        "Height": 13,
+        "Caption": "Merge all selected changes to target folder"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "SummaryLbl",
+      "props": {
+        "Left": 121,
+        "Top": 29,
+        "Height": 13,
+        "Caption": "%"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "ForceEdit",
+      "props": {
+        "Left": 121,
+        "Top": 105,
+        "Height": 17,
+        "Caption": "&Force automatic merges for conflicts",
+        "TabOrder": 0,
+        "OnClick": "ForceClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBtnPanel",
+      "name": "BtnPanel",
+      "props": {
+        "Left": 0,
+        "Top": 122,
+        "Width": 393,
+        "Height": 64,
+        "TabOrder": 1
+      },
+      "children": [
+        {
+          "class": "TUiBevel",
+          "name": "DontShowAgainBevel",
+          "props": {
+            "Left": 0,
+            "Top": 39,
+            "Width": 393,
+            "Height": 2,
+            "Shape": "bsTopLine"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiOkBtn",
+          "name": "OkBtn",
+          "props": {
+            "Caption": "&Merge"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiCancelBtn",
+          "name": "CancelBtn",
+          "props": {},
+          "children": []
+        },
+        {
+          "class": "TUiHelpBtn",
+          "name": "HelpBtn",
+          "props": {},
+          "children": []
+        },
+        {
+          "class": "TUiCheckBox",
+          "name": "DontShowAgainEdit",
+          "props": {
+            "Left": 8,
+            "Top": 43,
+            "Height": 17,
+            "Caption": "&Don't show again",
+            "TabOrder": 3
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}

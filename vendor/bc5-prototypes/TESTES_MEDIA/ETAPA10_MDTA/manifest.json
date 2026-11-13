@@ -1,0 +1,94 @@
+{
+  "schema": "bc5-media-mdta-structural-v1",
+  "cases": [
+    {
+      "id": "mdta_01_identical",
+      "purpose": "MP4 keys/mdta structural observation (not BC5 parity)",
+      "A": {
+        "name": "mdta_01_identical_A.m4a",
+        "sha256": "555eeea6960533c4da5a1432eac11451afc52b0bdfd8ca74d0ff27ea8ac4b9aa",
+        "bytes": 1148,
+        "expected_tags": {
+          "com.example.title": "Árvore",
+          "com.example.genre": "Teste"
+        }
+      },
+      "B": {
+        "name": "mdta_01_identical_B.m4a",
+        "sha256": "555eeea6960533c4da5a1432eac11451afc52b0bdfd8ca74d0ff27ea8ac4b9aa",
+        "bytes": 1148,
+        "expected_tags": {
+          "com.example.title": "Árvore",
+          "com.example.genre": "Teste"
+        }
+      }
+    },
+    {
+      "id": "mdta_02_value",
+      "purpose": "MP4 keys/mdta structural observation (not BC5 parity)",
+      "A": {
+        "name": "mdta_02_value_A.m4a",
+        "sha256": "219f6ea26c9f7c4e73d30d051a1e97cab2a94e5282e1df14a5273da7ec8fad66",
+        "bytes": 1150,
+        "expected_tags": {
+          "com.example.title": "Título A",
+          "com.example.genre": "Teste"
+        }
+      },
+      "B": {
+        "name": "mdta_02_value_B.m4a",
+        "sha256": "7797e378d665eec5749c014a14b3805ccb29b525942ef1156e1758261e1c9a19",
+        "bytes": 1150,
+        "expected_tags": {
+          "com.example.title": "Título B",
+          "com.example.genre": "Teste"
+        }
+      }
+    },
+    {
+      "id": "mdta_03_missing_key",
+      "purpose": "MP4 keys/mdta structural observation (not BC5 parity)",
+      "A": {
+        "name": "mdta_03_missing_key_A.m4a",
+        "sha256": "2b9dfb5d7cf9917496ae4cb557e6e55d0e19a0bf8269315a59845e12fbca8c63",
+        "bytes": 1089,
+        "expected_tags": {
+          "com.example.title": "Um"
+        }
+      },
+      "B": {
+        "name": "mdta_03_missing_key_B.m4a",
+        "sha256": "aae3db773bb1c5f814add1935d25591ef506e0ec0822267be8c3af24640d77fa",
+        "bytes": 1143,
+        "expected_tags": {
+          "com.example.title": "Um",
+          "com.example.artist": "Dois"
+        }
+      }
+    },
+    {
+      "id": "mdta_04_order_unicode",
+      "purpose": "MP4 keys/mdta structural observation (not BC5 parity)",
+      "A": {
+        "name": "mdta_04_order_unicode_A.m4a",
+        "sha256": "f5a90e1a0d31c73e840c01f3d8c2f84f0cb864e07d45f95290298067816c1e82",
+        "bytes": 1151,
+        "expected_tags": {
+          "com.example.artist": "Coração",
+          "com.example.title": "Água"
+        }
+      },
+      "B": {
+        "name": "mdta_04_order_unicode_B.m4a",
+        "sha256": "6f895e31f1ae6b31c2fbc6bb3a535b6eeb6813fea9b7aca575a537e63c711653",
+        "bytes": 1151,
+        "expected_tags": {
+          "com.example.title": "Água",
+          "com.example.artist": "Coração"
+        }
+      }
+    }
+  ],
+  "reference": "ISO BMFF keys/ilst; decoded only for diagnostics",
+  "bc5_semantic_golden": false
+}

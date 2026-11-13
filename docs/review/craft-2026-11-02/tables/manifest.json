@@ -1,0 +1,211 @@
+{
+  "cases": [
+    {
+      "name": "csv-identical",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-identical\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-identical\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "cd0ef24d9d8a3cef1f8dd8ae76a0c248ecbd6f21902652e44d49fe2fd8872fa5",
+      "right_sha256": "cd0ef24d9d8a3cef1f8dd8ae76a0c248ecbd6f21902652e44d49fe2fd8872fa5"
+    },
+    {
+      "name": "csv-changed-cell",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-changed-cell\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-changed-cell\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "cd0ef24d9d8a3cef1f8dd8ae76a0c248ecbd6f21902652e44d49fe2fd8872fa5",
+      "right_sha256": "305241dd2d4f58e9ad48d7ab64f5d23d52abcd0b493e511ebf0b3737cfa962ec"
+    },
+    {
+      "name": "csv-reordered",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-reordered\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-reordered\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "cd0ef24d9d8a3cef1f8dd8ae76a0c248ecbd6f21902652e44d49fe2fd8872fa5",
+      "right_sha256": "0cecf29b3849cf0c536da2e3ee9f7f69b8c2d646e9c95052071e317714c5e20b"
+    },
+    {
+      "name": "csv-insert-delete",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-insert-delete\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-insert-delete\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "cd0ef24d9d8a3cef1f8dd8ae76a0c248ecbd6f21902652e44d49fe2fd8872fa5",
+      "right_sha256": "764609f1406b96f5b322be9faff47c6b2f5f678b704ee6265c8392471bbd5094"
+    },
+    {
+      "name": "csv-duplicate-keys",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-duplicate-keys\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-duplicate-keys\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "def66e4f7785b4b8ce8abab531dd50f4ed72d41c2258b8257eaa5f73ce6d23b3",
+      "right_sha256": "14a19ce5b012beaeccfaa141998dcbacd9440499dc9ebdbcf3a5cfcc2b430740"
+    },
+    {
+      "name": "csv-quoted-delimiter",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-quoted-delimiter\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-quoted-delimiter\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "65937c41782c68f54ac2ddbfe44c4915489c3d0b08d66853dd4a1a1cdc1d8736",
+      "right_sha256": "65937c41782c68f54ac2ddbfe44c4915489c3d0b08d66853dd4a1a1cdc1d8736"
+    },
+    {
+      "name": "csv-multiline",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-multiline\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-multiline\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "a9d83ef088bc1119919c4e13264d70c54db25ff42163c92cde5ac88762a4c000",
+      "right_sha256": "a9d83ef088bc1119919c4e13264d70c54db25ff42163c92cde5ac88762a4c000"
+    },
+    {
+      "name": "csv-empty-trailing",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-empty-trailing\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\csv-empty-trailing\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "0e60b0b617daee992a686f812c55c434b7b20a9c1a56abff8fa69497f6f150d7",
+      "right_sha256": "0e60b0b617daee992a686f812c55c434b7b20a9c1a56abff8fa69497f6f150d7"
+    },
+    {
+      "name": "semicolon",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\semicolon\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\semicolon\\right.csv",
+      "delimiter": ";",
+      "encoding": "utf-8-sig",
+      "left_rows": 2,
+      "right_rows": 2,
+      "left_sha256": "c0edc33e4cd466c2c4520f5f75cb9ea107cf615929faf996423edc21669ef322",
+      "right_sha256": "c0edc33e4cd466c2c4520f5f75cb9ea107cf615929faf996423edc21669ef322"
+    },
+    {
+      "name": "tsv",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\tsv\\left.tsv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\tsv\\right.tsv",
+      "delimiter": "\t",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "aac59f70f33010e28d604f918c50156924bc7ac95ca4911a70cfd4c90c280c0b",
+      "right_sha256": "aac59f70f33010e28d604f918c50156924bc7ac95ca4911a70cfd4c90c280c0b"
+    },
+    {
+      "name": "tsv-quoted-tab",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\tsv-quoted-tab\\left.tsv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\tsv-quoted-tab\\right.tsv",
+      "delimiter": "\t",
+      "encoding": "utf-8-sig",
+      "left_rows": 2,
+      "right_rows": 2,
+      "left_sha256": "e1dee955903767975fe919a5bcd3f16d72308c186f36d98f07542f2bcbe795e4",
+      "right_sha256": "e1dee955903767975fe919a5bcd3f16d72308c186f36d98f07542f2bcbe795e4"
+    },
+    {
+      "name": "utf8-no-bom",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\utf8-no-bom\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\utf8-no-bom\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "6c05eb7df6fd3d0f5bd1f9f70403f5f4c6f76ab54f06954872f195012d96cb4e",
+      "right_sha256": "6c05eb7df6fd3d0f5bd1f9f70403f5f4c6f76ab54f06954872f195012d96cb4e"
+    },
+    {
+      "name": "utf16-le",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\utf16-le\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\utf16-le\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-16",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "c398fce4de624e4ad349674974fd12f557fd29411c16b43f57b8e8d3bcadc003",
+      "right_sha256": "c398fce4de624e4ad349674974fd12f557fd29411c16b43f57b8e8d3bcadc003"
+    },
+    {
+      "name": "windows1252",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\windows1252\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\windows1252\\right.csv",
+      "delimiter": ",",
+      "encoding": "cp1252",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "bdbe9dccb3e31509baf65cbc43ae7b5ce4b3ed7973468cd1e24e442f4f81d04e",
+      "right_sha256": "bdbe9dccb3e31509baf65cbc43ae7b5ce4b3ed7973468cd1e24e442f4f81d04e"
+    },
+    {
+      "name": "lf",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\lf\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\lf\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "8a242c2c475f451e335b5ad5a53baeb81a1bc056f3e8595e018dea5ebfa4ed7d",
+      "right_sha256": "8a242c2c475f451e335b5ad5a53baeb81a1bc056f3e8595e018dea5ebfa4ed7d"
+    },
+    {
+      "name": "no-header",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\no-header\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\no-header\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 2,
+      "right_rows": 2,
+      "left_sha256": "ab47ae9959220ffe11d0896c0811c7846216afe16dc6a798eb7dab0470c9ad4b",
+      "right_sha256": "ab47ae9959220ffe11d0896c0811c7846216afe16dc6a798eb7dab0470c9ad4b"
+    },
+    {
+      "name": "unequal-widths",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\unequal-widths\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\unequal-widths\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "3e8ee1530e8236bb6f3e82f12b7f0b45c4dda133748a821073103030e0abaa69",
+      "right_sha256": "3e8ee1530e8236bb6f3e82f12b7f0b45c4dda133748a821073103030e0abaa69"
+    },
+    {
+      "name": "numeric-format",
+      "left": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\numeric-format\\left.csv",
+      "right": "C:\\Projetos\\BC4\\anycompare\\docs\\review\\craft-2026-11-02\\tables\\numeric-format\\right.csv",
+      "delimiter": ",",
+      "encoding": "utf-8-sig",
+      "left_rows": 3,
+      "right_rows": 3,
+      "left_sha256": "b2bdf9cbdb8f80d7297ca7a3626d992a4df8d660b31adbd126b779287920c533",
+      "right_sha256": "e51b6de3f9c61fdcbb68d6c364e3d122d8b771ee8b0702240ccc09c86079cd0d"
+    }
+  ],
+  "native_settings": "default Table Compare settings, delimiter detection is under test",
+  "oracle": "BC4 data-report",
+  "status": "18 BC4 reports captured; AnyCompare Table Compare not implemented; settings-specific semantic validation pending",
+  "limitations": [
+    "Default CSV settings do not correctly parse the semicolon sample. Add a native session with explicit delimiter.",
+    "A forced data-report is not evidence of automatic routing by extension.",
+    "Header detection and duplicate-key matching must be derived from each native result.",
+    "XLS, XLSX, ODS, fixed-width and converter-based formats remain untested."
+  ]
+}

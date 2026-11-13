@@ -1744,6 +1744,12 @@ impl Tessellator {
             return;
         }
 
+        // AnyCompare: a galley without meshes (the editor's document-sized cursor
+        // metrics) has nothing to draw; do not walk its tens of thousands of rows.
+        if galley.num_vertices == 0 && underline.is_empty() {
+            return;
+        }
+
         if *opacity_factor <= 0.0 {
             return;
         }

@@ -1,0 +1,156 @@
+{
+  "evidence_id": "ev_d0bf234cef113303a3fc7768ff7d6ff44b7e3a74238127202d11d2a52729671a",
+  "subject": {
+    "name": "vcruntime140.dll",
+    "digest": {
+      "sha256": "6823b98c3e922490a2f97f54862d32193900077e49f0360522b19e06e6da24b4"
+    },
+    "local_path": "C:\\Projetos\\Into the Breach\\Jogo\\vcruntime140.dll",
+    "format": "pe",
+    "architecture": "x86"
+  },
+  "provider": {
+    "id": "rea-pe-resources",
+    "name": "REA PE resource parser",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis",
+  "operation": "inspect_pe_resources",
+  "parameters": {
+    "path": "C:\\Projetos\\Into the Breach\\Jogo\\vcruntime140.dll",
+    "max_file_bytes": 67108864,
+    "max_entries": 16384
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "artifact": {
+      "path": "C:\\Projetos\\Into the Breach\\Jogo\\vcruntime140.dll",
+      "sha256": "6823b98c3e922490a2f97f54862d32193900077e49f0360522b19e06e6da24b4",
+      "bytes": 83784
+    },
+    "format": "pe32",
+    "machine": 332,
+    "directory": {
+      "rva": 77824,
+      "location": {
+        "offset": 62976,
+        "bytes": 1032
+      },
+      "data_directory_location": {
+        "offset": 384,
+        "bytes": 8
+      }
+    },
+    "directories": [
+      {
+        "location": {
+          "offset": 62976,
+          "bytes": 24
+        },
+        "characteristics": 0,
+        "timestamp": 0,
+        "major_version": 0,
+        "minor_version": 0,
+        "named_entries": 0,
+        "id_entries": 1
+      },
+      {
+        "location": {
+          "offset": 63000,
+          "bytes": 24
+        },
+        "characteristics": 0,
+        "timestamp": 0,
+        "major_version": 0,
+        "minor_version": 0,
+        "named_entries": 0,
+        "id_entries": 1
+      },
+      {
+        "location": {
+          "offset": 63024,
+          "bytes": 24
+        },
+        "characteristics": 0,
+        "timestamp": 0,
+        "major_version": 0,
+        "minor_version": 0,
+        "named_entries": 0,
+        "id_entries": 1
+      }
+    ],
+    "resources": [
+      {
+        "index": 0,
+        "type": {
+          "kind": "id",
+          "id": 16
+        },
+        "name": {
+          "kind": "id",
+          "id": 1
+        },
+        "language": {
+          "kind": "id",
+          "id": 1033
+        },
+        "entry_locations": [
+          {
+            "offset": 62992,
+            "bytes": 8
+          },
+          {
+            "offset": 63016,
+            "bytes": 8
+          },
+          {
+            "offset": 63040,
+            "bytes": 8
+          }
+        ],
+        "data_entry_location": {
+          "offset": 63048,
+          "bytes": 16
+        },
+        "code_page": 0,
+        "reserved": 0,
+        "payload": {
+          "rva": 77920,
+          "location": {
+            "offset": 63072,
+            "bytes": 932
+          },
+          "sha256": "d591c7455e6a1af2f42011f280c6405ef8c64c883759c9f31e8afacfd9fb3ec2"
+        }
+      }
+    ],
+    "icon_groups": [],
+    "coverage": {
+      "status": "complete",
+      "examined_entries": 3,
+      "resources": 1
+    },
+    "limitations": [
+      "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+      "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+      "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+    "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+    "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "C:\\Projetos\\Into the Breach\\Jogo\\vcruntime140.dll"
+    }
+  ],
+  "evidence_links": []
+}

@@ -1,0 +1,108 @@
+{
+  "class": "TReportPreviewDialog",
+  "name": "ReportPreviewDialog",
+  "props": {
+    "BorderIcons": [
+      "biSystemMenu",
+      "biMaximize"
+    ],
+    "BorderStyle": "bsSizeable",
+    "Caption": "Print Preview",
+    "ClientHeight": 409,
+    "ClientWidth": 465,
+    "Constraints.MinHeight": 98,
+    "Constraints.MinWidth": 185,
+    "OnCreate": "FormCreate",
+    "OnKeyDown": "FormKeyDown",
+    "OnResize": "FormResize",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiScrollBox",
+      "name": "ScrollBox",
+      "props": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 465,
+        "Height": 409,
+        "HorzScrollBar.Tracking": true,
+        "VertScrollBar.Tracking": true,
+        "Align": "alClient",
+        "Color": 15195073,
+        "ParentColor": false,
+        "TabOrder": 0,
+        "OnMouseMove": "PageMouseMove",
+        "OnMouseUp": "PageMouseUp",
+        "OnMouseWheel": "ScrollBoxMouseWheel"
+      },
+      "children": [
+        {
+          "class": "TShape",
+          "name": "RightShadowShape",
+          "props": {
+            "Left": 385,
+            "Top": 28,
+            "Width": 3,
+            "Height": 359,
+            "Brush.Color": "clGray",
+            "Pen.Color": "clGray"
+          },
+          "children": []
+        },
+        {
+          "class": "TShape",
+          "name": "BottomShadowShape",
+          "props": {
+            "Left": 84,
+            "Top": 384,
+            "Width": 301,
+            "Height": 3,
+            "Brush.Color": "clGray",
+            "Pen.Color": "clGray"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiPanel",
+          "name": "Panel",
+          "props": {
+            "Left": 80,
+            "Top": 24,
+            "Width": 305,
+            "Height": 361,
+            "BevelOuter": "bvNone",
+            "Color": "clWhite",
+            "FullRepaint": true,
+            "ParentBackground": false,
+            "TabOrder": 0,
+            "OnMouseDown": "PageMouseDown",
+            "OnMouseMove": "PageMouseMove",
+            "OnMouseUp": "PageMouseUp",
+            "OnPaint": "PanelPaint"
+          },
+          "children": [
+            {
+              "class": "TUiImage",
+              "name": "Image",
+              "props": {
+                "Left": 0,
+                "Top": 0,
+                "Width": 305,
+                "Height": 361,
+                "Stretch": true,
+                "OnMouseDown": "PageMouseDown",
+                "OnMouseMove": "PageMouseMove",
+                "OnMouseUp": "PageMouseUp"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}

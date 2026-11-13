@@ -29,8 +29,9 @@ pub struct InlineChunk {
 pub struct AlignedLine {
     pub left_line_no: Option<usize>,
     pub right_line_no: Option<usize>,
-    pub left_text: String,
-    pub right_text: String,
+    /// Shared: the incremental update clones the whole aligned list per edit.
+    pub left_text: std::sync::Arc<str>,
+    pub right_text: std::sync::Arc<str>,
     pub status: DiffStatus,
     pub left_inline: std::sync::Arc<[InlineChunk]>,
     pub right_inline: std::sync::Arc<[InlineChunk]>,
@@ -51,6 +52,67 @@ pub struct DiffResult {
     pub same_count: usize,
     pub left_orphan_count: usize,
     pub right_orphan_count: usize,
+}
+
+/// Number of logical lines as `str::lines` counts them.
+pub(crate) fn line_count(text: &str) -> usize {
+    count_newlines(text.as_bytes()) + usize::from(!text.is_empty() && !text.ends_with('\n'))
+}
+
+pub(crate) fn count_newlines(bytes: &[u8]) -> usize {
+    bytes.iter().filter(|&&b| b == b'\n').count()
+}
+
+/// Byte offset where logical line `n` (0-based) starts; the end for `n >= count`.
+pub(crate) fn line_start(text: &str, n: usize) -> usize {
+    if n == 0 {
+        return 0;
+    }
+    let bytes = text.as_bytes();
+    let mut seen = 0;
+    for (index, chunk) in bytes.chunks(4096).enumerate() {
+        let count = count_newlines(chunk);
+        if seen + count >= n {
+            for (offset, &byte) in chunk.iter().enumerate() {
+                if byte == b'\n' {
+                    seen += 1;
+                    if seen == n {
+                        return index * 4096 + offset + 1;
+                    }
+                }
+            }
+        }
+        seen += count;
+    }
+    bytes.len()
+}
+
+/// Length of the common prefix, compared a block at a time (memcmp).
+pub(crate) fn common_prefix(a: &[u8], b: &[u8]) -> usize {
+    const BLOCK: usize = 4096;
+    let limit = a.len().min(b.len());
+    let mut at = 0;
+    while at + BLOCK <= limit && a[at..at + BLOCK] == b[at..at + BLOCK] {
+        at += BLOCK;
+    }
+    while at < limit && a[at] == b[at] {
+        at += 1;
+    }
+    at
+}
+
+/// Length of the common suffix, at most `limit` bytes.
+pub(crate) fn common_suffix(a: &[u8], b: &[u8], limit: usize) -> usize {
+    const BLOCK: usize = 4096;
+    let (n, m) = (a.len(), b.len());
+    let mut at = 0;
+    while at + BLOCK <= limit && a[n - at - BLOCK..n - at] == b[m - at - BLOCK..m - at] {
+        at += BLOCK;
+    }
+    while at < limit && a[n - at - 1] == b[m - at - 1] {
+        at += 1;
+    }
+    at
 }
 
 pub struct DiffEngine;
@@ -103,11 +165,11 @@ impl DiffEngine {
             let (a, b) = if line.status == DiffStatus::Same {
                 (
                     vec![InlineChunk {
-                        text: line.left_text.clone(),
+                        text: line.left_text.to_string(),
                         kind: InlineChunkKind::Same,
                     }],
                     vec![InlineChunk {
-                        text: line.right_text.clone(),
+                        text: line.right_text.to_string(),
                         kind: InlineChunkKind::Same,
                     }],
                 )
@@ -141,13 +203,13 @@ impl DiffEngine {
             .lines
             .iter()
             .filter(|line| line.left_line_no.is_some())
-            .map(|line| line.left_text.as_str())
+            .map(|line| &*line.left_text)
             .collect();
         let old_right: Vec<_> = previous
             .lines
             .iter()
             .filter(|line| line.right_line_no.is_some())
-            .map(|line| line.right_text.as_str())
+            .map(|line| &*line.right_text)
             .collect();
         let changed = |old: &[&str], new: &[&str]| {
             let prefix = old.iter().zip(new).take_while(|(a, b)| a == b).count();
@@ -160,6 +222,94 @@ impl DiffEngine {
             (prefix != old.len() || prefix != new.len()).then_some(prefix..old.len() - suffix)
         };
         let changes = [changed(&old_left, &left), changed(&old_right, &right)];
+        Self::update_changes(
+            [left_text, right_text],
+            previous,
+            changes,
+            [old_left.len(), old_right.len()],
+            [left.len(), right.len()],
+        )
+    }
+
+    /// Same result as [`Self::update`] after an edit of one side whose previous
+    /// text is known (the editor's buffer before the keystroke): the changed lines
+    /// come from a byte comparison instead of rebuilding every line of both sides.
+    pub fn update_edit(
+        old_own: &str,
+        new_own: &str,
+        other: &str,
+        own_left: bool,
+        previous: &DiffResult,
+    ) -> DiffResult {
+        let (old, new) = (old_own.as_bytes(), new_own.as_bytes());
+        // Line totals come from the previous alignment (it describes old_own and
+        // other) plus the newlines added or removed: no pass over whole buffers.
+        let last_number = |left: bool| {
+            previous
+                .lines
+                .iter()
+                .rev()
+                .find_map(|line| {
+                    if left {
+                        line.left_line_no
+                    } else {
+                        line.right_line_no
+                    }
+                })
+                .unwrap_or(0)
+        };
+        let old_count = last_number(own_left);
+        let other_count = last_number(!own_left);
+        let mut new_count = old_count;
+        let change = (old != new).then(|| {
+            let prefix = common_prefix(old, new);
+            let suffix = common_suffix(old, new, old.len().min(new.len()) - prefix);
+            // Lines containing the first and last changed byte (conservative: a
+            // wider section is only recompared, never misaligned).
+            let first = count_newlines(&old[..prefix]);
+            let (old_end, new_end) = (old.len() - suffix, new.len() - suffix);
+            let mut last = first + count_newlines(&old[prefix..old_end]);
+            // A suffix that starts a line in both texts leaves that line unchanged.
+            let line_start_at = |text: &[u8], at: usize| at == 0 || text[at - 1] == b'\n';
+            if line_start_at(old, old_end) && line_start_at(new, new_end) && last > 0 {
+                last -= 1;
+            }
+            new_count = old_count + count_newlines(&new[prefix..new_end])
+                - count_newlines(&old[prefix..old_end]);
+            // `lines()` ignores a final newline: adding or removing the last line
+            // terminator changes the count only through a non-empty last line.
+            let ends = |text: &[u8]| text.last().is_some_and(|&b| b != b'\n');
+            new_count = new_count + usize::from(ends(new)) - usize::from(ends(old));
+            first.min(old_count)..(last + 1).max(first).min(old_count)
+        });
+        debug_assert_eq!(old_count, line_count(old_own));
+        debug_assert_eq!(new_count, line_count(new_own));
+        let (texts, changes, counts, new_counts) = if own_left {
+            (
+                [new_own, other],
+                [change, None],
+                [old_count, other_count],
+                [new_count, other_count],
+            )
+        } else {
+            (
+                [other, new_own],
+                [None, change],
+                [other_count, old_count],
+                [other_count, new_count],
+            )
+        };
+        Self::update_changes(texts, previous, changes, counts, new_counts)
+    }
+
+    fn update_changes(
+        texts: [&str; 2],
+        previous: &DiffResult,
+        changes: [Option<std::ops::Range<usize>>; 2],
+        old_counts: [usize; 2],
+        new_counts: [usize; 2],
+    ) -> DiffResult {
+        let [left_text, right_text] = texts;
         if changes.iter().all(Option::is_none) {
             return previous.clone();
         }
@@ -207,55 +357,46 @@ impl DiffEngine {
         if end - start > previous.lines.len().max(64) / 2 {
             return Self::compare(left_text, right_text);
         }
-        let prefix_left = previous.lines[..start]
-            .iter()
-            .filter(|line| line.left_line_no.is_some())
-            .count();
-        let prefix_right = previous.lines[..start]
-            .iter()
-            .filter(|line| line.right_line_no.is_some())
-            .count();
-        let suffix_left = previous.lines[end..]
-            .iter()
-            .filter(|line| line.left_line_no.is_some())
-            .count();
-        let suffix_right = previous.lines[end..]
-            .iter()
-            .filter(|line| line.right_line_no.is_some())
-            .count();
-        let region_left = left[prefix_left..left.len() - suffix_left].join("\n");
-        let region_right = right[prefix_right..right.len() - suffix_right].join("\n");
-        // Keep a trailing empty logical line in the bounded region when joining.
-        let preserve_empty = |mut text: String, lines: &[&str]| {
-            if lines.last() == Some(&"") {
-                text.push('\n');
-            }
-            text
+        let (mut prefix_left, mut prefix_right) = (0, 0);
+        for line in &previous.lines[..start] {
+            prefix_left += usize::from(line.left_line_no.is_some());
+            prefix_right += usize::from(line.right_line_no.is_some());
+        }
+        let (mut suffix_left, mut suffix_right) = (0, 0);
+        for line in &previous.lines[end..] {
+            suffix_left += usize::from(line.left_line_no.is_some());
+            suffix_right += usize::from(line.right_line_no.is_some());
+        }
+        // The section's lines, each with its terminator: `lines()` of this slice is
+        // exactly the joined lines (a trailing empty line keeps its newline).
+        let region = |text: &str, prefix: usize, count: usize, suffix: usize| {
+            let from = line_start(text, prefix);
+            let to = line_start(text, count - suffix);
+            text[from..to].to_owned()
         };
         let region = Self::compare(
-            &preserve_empty(region_left, &left[prefix_left..left.len() - suffix_left]),
-            &preserve_empty(
-                region_right,
-                &right[prefix_right..right.len() - suffix_right],
-            ),
+            &region(left_text, prefix_left, new_counts[0], suffix_left),
+            &region(right_text, prefix_right, new_counts[1], suffix_right),
         );
-        let mut lines = previous.lines[..start].to_vec();
-        for mut line in region.lines {
+        let left_shift = new_counts[0] as isize - old_counts[0] as isize;
+        let right_shift = new_counts[1] as isize - old_counts[1] as isize;
+        let mut lines = Vec::with_capacity(start + region.lines.len() + previous.lines.len() - end);
+        lines.extend_from_slice(&previous.lines[..start]);
+        lines.extend(region.lines.into_iter().map(|mut line| {
             line.left_line_no = line.left_line_no.map(|n| n + prefix_left);
             line.right_line_no = line.right_line_no.map(|n| n + prefix_right);
-            lines.push(line);
-        }
-        let left_shift = left.len() as isize - old_left.len() as isize;
-        let right_shift = right.len() as isize - old_right.len() as isize;
-        for mut line in previous.lines[end..].iter().cloned() {
+            line
+        }));
+        lines.extend(previous.lines[end..].iter().map(|line| {
+            let mut line = line.clone();
             line.left_line_no = line
                 .left_line_no
                 .map(|n| n.checked_add_signed(left_shift).unwrap());
             line.right_line_no = line
                 .right_line_no
                 .map(|n| n.checked_add_signed(right_shift).unwrap());
-            lines.push(line);
-        }
+            line
+        }));
         Self::summarize(lines)
     }
 
@@ -448,8 +589,8 @@ impl DiffEngine {
                         lines.push(AlignedLine {
                             left_line_no: Some(old_index + i + 1),
                             right_line_no: Some(new_index + i + 1),
-                            left_text: l_text.clone(),
-                            right_text: r_text.clone(),
+                            left_text: l_text.as_str().into(),
+                            right_text: r_text.as_str().into(),
                             status: DiffStatus::Same,
                             left_inline: vec![InlineChunk {
                                 text: l_text,
@@ -477,8 +618,8 @@ impl DiffEngine {
                         lines.push(AlignedLine {
                             left_line_no: Some(old_index + i + 1),
                             right_line_no: None,
-                            left_text: l_text.clone(),
-                            right_text: String::new(),
+                            left_text: l_text.as_str().into(),
+                            right_text: "".into(),
                             status: DiffStatus::LeftOrphan,
                             left_inline: vec![InlineChunk {
                                 text: l_text,
@@ -502,8 +643,8 @@ impl DiffEngine {
                         lines.push(AlignedLine {
                             left_line_no: None,
                             right_line_no: Some(new_index + i + 1),
-                            left_text: String::new(),
-                            right_text: r_text.clone(),
+                            left_text: "".into(),
+                            right_text: r_text.as_str().into(),
                             status: DiffStatus::RightOrphan,
                             left_inline: Vec::new().into(),
                             right_inline: vec![InlineChunk {
@@ -593,8 +734,8 @@ impl DiffEngine {
                         lines.push(AlignedLine {
                             left_line_no: l_num,
                             right_line_no: r_num,
-                            left_text: l_text,
-                            right_text: r_text,
+                            left_text: l_text.into(),
+                            right_text: r_text.into(),
                             status,
                             left_inline: left_inline.into(),
                             right_inline: right_inline.into(),
@@ -630,6 +771,64 @@ impl DiffEngine {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn edit_update_matches_line_update_for_every_kind_of_edit() {
+        let base: String = (0..400)
+            .map(|i| match i % 7 {
+                0 => "\n".to_string(),
+                1 => format!("EN=linha {i} ação\n"),
+                2 => format!("PT=linha {}\n", i / 3),
+                _ => format!("[ID {:04}]\n", i % 50),
+            })
+            .collect();
+        let other = base
+            .replace("PT=linha 1", "PT=uma linha")
+            .replace("[ID 0003]\n", "");
+        let previous = DiffEngine::compare(&base, &other);
+        let mut seed = 7u64;
+        let mut next = |n: usize| {
+            seed = seed
+                .wrapping_mul(6364136223846793005)
+                .wrapping_add(1442695040888963407);
+            (seed >> 33) as usize % n.max(1)
+        };
+        let inserts = ["x", "\n", "nova\n", "\n\n", "", "PT=linha 1\n", "ç"];
+        for _ in 0..300 {
+            let chars: Vec<(usize, char)> = base.char_indices().collect();
+            let at = next(chars.len() + 1);
+            let start = chars.get(at).map_or(base.len(), |c| c.0);
+            let remove = next(4);
+            let end = chars.get(at + remove).map_or(base.len(), |c| c.0);
+            let mut edited = base.clone();
+            edited.replace_range(start..end, inserts[next(inserts.len())]);
+            for own_left in [true, false] {
+                let expected = if own_left {
+                    DiffEngine::update(&edited, &other, &previous)
+                } else {
+                    DiffEngine::update(&other, &edited, &DiffEngine::compare(&other, &base))
+                };
+                let prior = if own_left {
+                    previous.clone()
+                } else {
+                    DiffEngine::compare(&other, &base)
+                };
+                let actual = DiffEngine::update_edit(&base, &edited, &other, own_left, &prior);
+                assert_eq!(actual, expected, "edit {start}..{end} left={own_left}");
+            }
+        }
+        for text in ["", "a", "a\n", "\n", "a\nb", "a\n\nb\n"] {
+            assert_eq!(line_count(text), text.lines().count(), "{text:?}");
+            for n in 0..=line_count(text) + 1 {
+                let lines: Vec<&str> = text.lines().collect();
+                let expected = lines[..n.min(lines.len())]
+                    .iter()
+                    .map(|l| l.len())
+                    .sum::<usize>();
+                assert!(line_start(text, n) >= expected);
+            }
+        }
+    }
 
     #[test]
     fn full_user_samples_match_original_report_colors() {
@@ -710,8 +909,8 @@ mod tests {
                 line.right_line_no,
                 row["right_line_no"].as_u64().map(|n| n as usize)
             );
-            assert_eq!(line.left_text, row["left"].as_str().unwrap());
-            assert_eq!(line.right_text, row["right"].as_str().unwrap());
+            assert_eq!(&*line.left_text, row["left"].as_str().unwrap());
+            assert_eq!(&*line.right_text, row["right"].as_str().unwrap());
             let status = match row["status"].as_str().unwrap() {
                 "same" => DiffStatus::Same,
                 "similar" => DiffStatus::Unimportant,
@@ -783,14 +982,14 @@ mod tests {
                     .iter()
                     .map(|c| c.text.as_str())
                     .collect::<String>(),
-                line.left_text
+                line.left_text.to_string()
             );
             assert_eq!(
                 line.right_inline
                     .iter()
                     .map(|c| c.text.as_str())
                     .collect::<String>(),
-                line.right_text
+                line.right_text.to_string()
             );
         }
         assert!(diff.lines[1]
@@ -813,7 +1012,7 @@ mod tests {
         );
         assert_eq!(ignored.lines[0].status, DiffStatus::Same);
         assert_eq!(ignored.lines[1].status, DiffStatus::Different);
-        assert_eq!(ignored.lines[0].left_text, "A Pedra do Sigilo");
+        assert_eq!(&*ignored.lines[0].left_text, "A Pedra do Sigilo");
         assert_eq!(diff.sections, vec![0..2]);
     }
 

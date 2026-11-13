@@ -1,0 +1,10 @@
+{
+  "class": "TSessionFrame",
+  "name": "SessionFrame",
+  "props": {
+    "Width": 425,
+    "Height": 360
+  },
+  "children": [],
+  "flags": 1
+}

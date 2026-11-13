@@ -1,0 +1,118 @@
+{
+  "class": "TMediaActions",
+  "name": "MediaActions",
+  "props": {},
+  "children": [
+    {
+      "class": "TUiActionList",
+      "name": "List",
+      "props": {},
+      "children": [
+        {
+          "class": "TUiAction",
+          "name": "Play2Action",
+          "props": {
+            "Category": "Session",
+            "Hint": "Play Both|Plays both audio tracks.",
+            "ImageIndex": "imgMediaPlay2",
+            "ShortCaption": "Play2"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiAction",
+          "name": "PlayAction",
+          "props": {
+            "Category": "File",
+            "Hint": "Play|Plays audio track.",
+            "ImageIndex": "imgMediaPlay"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiAction",
+          "name": "IsSigAction",
+          "props": {
+            "Category": "View",
+            "AutoCheck": true,
+            "Hint": "Item Is Important|Marks selected item as important or unimportant."
+          },
+          "children": []
+        },
+        {
+          "class": "TUiAction",
+          "name": "ShowDetailsAction",
+          "props": {
+            "Category": "View",
+            "AutoCheck": true,
+            "Caption": "Text &Details",
+            "Hint": "Text Details|Shows or hides text details panel.",
+            "ImageIndex": "imgShowTextDetails",
+            "ShortCaption": "Details",
+            "ToolbarAllowed": false
+          },
+          "children": []
+        }
+      ],
+      "flags": 1
+    },
+    {
+      "class": "TUiActionTree",
+      "name": "Tree",
+      "props": {
+        "Nodes": [
+          "Session: Menu",
+          [
+            "Info: MenuItem",
+            "Play2: MenuItem"
+          ],
+          "File: Menu",
+          [
+            "OpenClipboard: MenuItem",
+            "Play: MenuItem"
+          ],
+          "View: Menu",
+          [
+            "SameModIgnored: MenuItem",
+            "IsSig: SeparatorItem",
+            "IsSig: MenuItem",
+            "OverUnder: MenuItem",
+            "ShowDetails: MenuItem"
+          ],
+          "Main: Toolbar",
+          [
+            "MergeView: ToolButton",
+            "Play2: ToolButton",
+            "OverUnder: ToolButton",
+            "ShowDetails: ToolButton"
+          ],
+          "Edit: PopupMenu",
+          [
+            "Copy: MenuItem",
+            "N1: SeparatorItem",
+            "IsSig: MenuItem",
+            "N2: SeparatorItem",
+            "Open: MenuItem",
+            "OpenLocal: MenuItem",
+            "OpenProfile: MenuItem",
+            "Play: MenuItem",
+            "OpenWithList: SubmenuItem",
+            [
+              "AssocApp: MenuItem",
+              "RevealInFinder: MenuItem"
+            ],
+            "ExplorerList: SubmenuItem",
+            []
+          ],
+          "DetailsEdit: PopupMenu",
+          [
+            "Copy: MenuItem"
+          ]
+        ]
+      },
+      "children": [],
+      "flags": 1
+    }
+  ],
+  "flags": 1
+}

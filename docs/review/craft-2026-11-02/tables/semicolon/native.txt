@@ -1,0 +1,11 @@
+﻿Table Compare
+Produced: 02/11/2026 14:04:01
+
+Mode:  All
+Left file: C:\Projetos\BC4\anycompare\docs\review\craft-2026-11-02\tables\semicolon\left.csv
+Right file: C:\Projetos\BC4\anycompare\docs\review\craft-2026-11-02\tables\semicolon\right.csv
+  1:              2:                 1:              2:
+-------------------------------------------------------------------
+2 a;1             25;"olá;mundo" = 2 a;1             25;"olá;mundo"
+1 id;decimal;text                = 1 id;decimal;text
+-------------------------------------------------------------------

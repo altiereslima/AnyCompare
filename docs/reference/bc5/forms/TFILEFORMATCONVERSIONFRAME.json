@@ -1,0 +1,51 @@
+{
+  "class": "TFileFormatConversionFrame",
+  "name": "FileFormatConversionFrame",
+  "props": {
+    "HelpType": "htKeyword",
+    "Caption": "Conversion"
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "ConvertLoadAppLbl",
+      "props": {
+        "Left": 24,
+        "Top": 33,
+        "Height": 13,
+        "Caption": "&Loading:",
+        "FocusControl": "ConvertLoadAppEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiComboBox",
+      "name": "ConvertKindEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Width": 257,
+        "Height": 21,
+        "Style": "csDropDownList",
+        "TabOrder": 0,
+        "OnChange": "ConvertKindEditChange"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiSpecBar",
+      "name": "ConvertLoadAppEdit",
+      "props": {
+        "Left": 24,
+        "Top": 50,
+        "Width": 241,
+        "TabOrder": 1,
+        "OnBrowse": "ConvertAppEditBrowse",
+        "OnChange": "SomethingChangedClick",
+        "OnGetArgs": "ConvertAppEditGetArgs"
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

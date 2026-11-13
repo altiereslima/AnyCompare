@@ -1,0 +1,75 @@
+{
+  "class": "TTableColResizeDialog",
+  "name": "TableColResizeDialog",
+  "props": {
+    "Caption": "Resize Column",
+    "ClientHeight": 110,
+    "ClientWidth": 265,
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "WidthLbl",
+      "props": {
+        "Left": 8,
+        "Top": 33,
+        "Height": 13,
+        "Caption": "&Width in pixels:",
+        "FocusControl": "WidthEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "DetectEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "&Detect",
+        "TabOrder": 0,
+        "OnClick": "DetectClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiSpinEdit",
+      "name": "WidthEdit",
+      "props": {
+        "Left": 8,
+        "Top": 50,
+        "Width": 121,
+        "Height": 21,
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBtnPanel",
+      "name": "BtnPanel",
+      "props": {
+        "Left": 0,
+        "Top": 71,
+        "Width": 265,
+        "TabOrder": 2
+      },
+      "children": [
+        {
+          "class": "TUiOkBtn",
+          "name": "OkBtn",
+          "props": {},
+          "children": []
+        },
+        {
+          "class": "TUiCancelBtn",
+          "name": "CancelBtn",
+          "props": {},
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}

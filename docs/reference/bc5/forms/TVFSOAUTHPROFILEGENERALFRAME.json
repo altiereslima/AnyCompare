@@ -1,0 +1,85 @@
+{
+  "class": "TVfsOAuthProfileGeneralFrame",
+  "name": "VfsOAuthProfileGeneralFrame",
+  "props": {
+    "HelpType": "htKeyword",
+    "Caption": "General"
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "DisplayNameLbl",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 13,
+        "Caption": "Name:"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "DisplayNameEdit",
+      "props": {
+        "Left": 8,
+        "Top": 25,
+        "Width": 239,
+        "Height": 13,
+        "AutoSize": false,
+        "Caption": "%"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "EmailLbl",
+      "props": {
+        "Left": 8,
+        "Top": 54,
+        "Height": 13,
+        "Caption": "Email:"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "EmailEdit",
+      "props": {
+        "Left": 8,
+        "Top": 71,
+        "Width": 239,
+        "Height": 13,
+        "AutoSize": false,
+        "Caption": "%"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "DescriptionLbl",
+      "props": {
+        "Left": 8,
+        "Top": 100,
+        "Height": 13,
+        "Caption": "D&escription:",
+        "FocusControl": "DescriptionEdit"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiMemo",
+      "name": "DescriptionEdit",
+      "props": {
+        "Left": 8,
+        "Top": 117,
+        "Width": 239,
+        "Height": 184,
+        "ScrollBars": "ssVertical",
+        "TabOrder": 0,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    }
+  ],
+  "flags": 1
+}

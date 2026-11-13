@@ -317,7 +317,15 @@ pub fn show(
     state: &dyn Fn(&str) -> ToolState,
     combo: &mut dyn FnMut(&mut Ui, &ToolItem, Rect),
 ) -> Option<ToolEvent> {
-    super::chrome::toolbar_background(ui);
+    if ui.data(|d| {
+        d.get_temp::<bool>(Id::new("bc5_flat_toolbar"))
+            .unwrap_or(false)
+    }) {
+        ui.painter()
+            .rect_filled(ui.max_rect(), 0.0, Color32::from_gray(240));
+    } else {
+        super::chrome::toolbar_background(ui);
+    }
     let (margin_top, _, row_gap) = spacing(ui);
     let area = ui.max_rect();
     let area = Rect::from_min_max(

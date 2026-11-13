@@ -1,0 +1,346 @@
+{
+  "class": "TDirSessionComparisonFrame",
+  "name": "DirSessionComparisonFrame",
+  "props": {
+    "HelpType": "htKeyword",
+    "HelpKeyword": "SessionDirComparison",
+    "Caption": "Comparison"
+  },
+  "children": [
+    {
+      "class": "TUiLabel",
+      "name": "QuickLbl",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 13,
+        "Caption": "Quick tests:"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "TimestampToleranceLbl",
+      "props": {
+        "Left": 90,
+        "Top": 71,
+        "Height": 13,
+        "Caption": "second to&lerance",
+        "FocusControl": "TimestampToleranceEdit",
+        "Transparent": true
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "UseDOSAttrComparisonLbl",
+      "props": {
+        "Left": 264,
+        "Top": 25,
+        "Height": 13,
+        "Caption": "Compare file attributes:",
+        "Transparent": true
+      },
+      "children": []
+    },
+    {
+      "class": "TUiLabel",
+      "name": "UseUnixAttrComparisonLbl",
+      "props": {
+        "Left": 264,
+        "Top": 71,
+        "Height": 13,
+        "Caption": "Compare Unix metadata:",
+        "Transparent": true
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseSizeComparisonEdit",
+      "props": {
+        "Left": 8,
+        "Top": 25,
+        "Height": 17,
+        "Caption": "Compare file si&ze",
+        "TabOrder": 0,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseTimestampComparisonEdit",
+      "props": {
+        "Left": 8,
+        "Top": 46,
+        "Height": 17,
+        "Caption": "Compare &timestamps",
+        "TabOrder": 1,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiSpinEdit",
+      "name": "TimestampToleranceEdit",
+      "props": {
+        "Left": 24,
+        "Top": 67,
+        "Width": 61,
+        "Height": 21,
+        "Max": 32767,
+        "MaxLength": 5,
+        "TabOrder": 2,
+        "OnChange": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "IgnoreDSTEdit",
+      "props": {
+        "Left": 24,
+        "Top": 92,
+        "Height": 17,
+        "Caption": "%",
+        "TabOrder": 3,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "IgnoreTimeZoneEdit",
+      "props": {
+        "Left": 24,
+        "Top": 113,
+        "Height": 17,
+        "Caption": "Ignore tim&ezone differences",
+        "TabOrder": 4,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseCaseSensitiveComparisonEdit",
+      "props": {
+        "Left": 8,
+        "Top": 134,
+        "Height": 17,
+        "Caption": "Compare filename &case",
+        "TabOrder": 5,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "IgnoreFileExtsEdit",
+      "props": {
+        "Left": 8,
+        "Top": 155,
+        "Height": 17,
+        "Caption": "Align filenames with different e&xtensions",
+        "TabOrder": 6,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "NormalizedAlignmentEdit",
+      "props": {
+        "Left": 8,
+        "Top": 176,
+        "Height": 17,
+        "Caption": "Align filenames with different Unicode normalization &forms",
+        "TabOrder": 7,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckListComboBox",
+      "name": "DOSAttrsEdit",
+      "props": {
+        "Left": 264,
+        "Top": 42,
+        "Width": 145,
+        "Height": 21,
+        "TabOrder": 8,
+        "OnClickCheck": "DOSAttrsClickCheck"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UsePermissionsComparisonEdit",
+      "props": {
+        "Left": 264,
+        "Top": 88,
+        "Height": 17,
+        "Caption": "Compare permissions",
+        "TabOrder": 9,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseOwnerComparisonEdit",
+      "props": {
+        "Left": 264,
+        "Top": 109,
+        "Height": 17,
+        "Caption": "Compare owner",
+        "TabOrder": 10,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "UseGroupComparisonEdit",
+      "props": {
+        "Left": 264,
+        "Top": 130,
+        "Height": 17,
+        "Caption": "Compare group",
+        "TabOrder": 11,
+        "OnClick": "SomethingChangedClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiPanel",
+      "name": "FilePanel",
+      "props": {
+        "Left": 0,
+        "Top": 201,
+        "Width": 425,
+        "Height": 155,
+        "BevelOuter": "bvNone",
+        "TabOrder": 12
+      },
+      "children": [
+        {
+          "class": "TUiBevel",
+          "name": "FileBevel",
+          "props": {
+            "Left": 8,
+            "Top": 0,
+            "Width": 409,
+            "Height": 1,
+            "Shape": "bsTopLine"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiLabel",
+          "name": "FileLbl",
+          "props": {
+            "Left": 8,
+            "Top": 8,
+            "Height": 13,
+            "Caption": "Requires opening files:"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiCheckBox",
+          "name": "UseContentComparisonEdit",
+          "props": {
+            "Left": 8,
+            "Top": 25,
+            "Height": 17,
+            "Caption": "Compare co&ntents:",
+            "TabOrder": 0,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "CRC32Edit",
+          "props": {
+            "Left": 24,
+            "Top": 46,
+            "Height": 17,
+            "Caption": "C&RC comparison",
+            "TabOrder": 1,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "BinaryEdit",
+          "props": {
+            "Left": 24,
+            "Top": 67,
+            "Height": 17,
+            "Caption": "Binar&y comparison",
+            "TabOrder": 2,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiRadioButton",
+          "name": "RulesBasedEdit",
+          "props": {
+            "Left": 24,
+            "Top": 88,
+            "Height": 17,
+            "Caption": "R&ules-based comparison",
+            "TabOrder": 3,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiCheckBox",
+          "name": "ContentCompareSkipSameEdit",
+          "props": {
+            "Left": 24,
+            "Top": 109,
+            "Height": 17,
+            "Caption": "Ski&p if quick tests indicate files are the same",
+            "TabOrder": 4,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiCheckBox",
+          "name": "ContentCompareOverridesEdit",
+          "props": {
+            "Left": 8,
+            "Top": 130,
+            "Height": 17,
+            "Caption": "Override &quick test results",
+            "TabOrder": 5,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        },
+        {
+          "class": "TUiCheckBox",
+          "name": "UseVersionComparisonEdit",
+          "props": {
+            "Left": 264,
+            "Top": 25,
+            "Height": 17,
+            "Caption": "Compare &versions",
+            "TabOrder": 6,
+            "OnClick": "SomethingChangedClick"
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}

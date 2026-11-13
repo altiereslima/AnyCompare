@@ -7,6 +7,7 @@ use windows_sys::Win32::Graphics::Gdi::*;
 
 pub(super) struct NativeFont {
     height: i32,
+    face: &'static str,
     pub ascent: f32,
     pub row_height: f32,
 }
@@ -27,8 +28,8 @@ struct SelectedFont {
 }
 
 impl SelectedFont {
-    fn new(height: i32) -> Option<Self> {
-        let name: Vec<u16> = "Segoe UI\0".encode_utf16().collect();
+    fn new(height: i32, face: &str) -> Option<Self> {
+        let name: Vec<u16> = face.encode_utf16().chain(std::iter::once(0)).collect();
         // SAFETY: no borrowed pointers escape these synchronous GDI calls.
         // The owned DC/font are released below on every successful path.
         unsafe {
@@ -81,7 +82,7 @@ impl Drop for SelectedFont {
 
 impl NativeFont {
     pub fn new(name: &str, scale: f32) -> Option<Self> {
-        if name != "Windows UI"
+        if !matches!(name, "Windows UI" | "Table Mono")
             || std::env::var_os("ANYCOMPARE_FONT_RENDERER").as_deref()
                 == Some(std::ffi::OsStr::new("outline"))
         {
@@ -90,7 +91,8 @@ impl NativeFont {
         // UI FontId 12 maps to LOGFONT height -12, observed through WM_GETFONT
         // and GetObjectW on the original's active controls with REA.
         let height = scale.round().max(1.0) as i32;
-        let selected = SelectedFont::new(height)?;
+        let face = if name == "Table Mono" { "Consolas" } else { "Segoe UI" };
+        let selected = SelectedFont::new(height, face)?;
         // SAFETY: selected.dc remains valid and metrics is a writable structure.
         let metrics = unsafe {
             let mut metrics: TEXTMETRICW = std::mem::zeroed();
@@ -101,13 +103,14 @@ impl NativeFont {
         };
         Some(Self {
             height,
+            face,
             ascent: metrics.tmAscent as f32,
             row_height: (metrics.tmHeight + metrics.tmExternalLeading) as f32,
         })
     }
 
     pub fn raster(&self, glyph: u16) -> Option<Raster> {
-        let selected = SelectedFont::new(self.height)?;
+        let selected = SelectedFont::new(self.height, self.face)?;
         let zero = FIXED { fract: 0, value: 0 };
         let one = FIXED { fract: 0, value: 1 };
         let matrix = MAT2 {

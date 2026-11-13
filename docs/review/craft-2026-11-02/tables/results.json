@@ -1,0 +1,95 @@
+{
+  "exit_code": 0,
+  "results": [
+    {
+      "name": "csv-identical",
+      "report_created": true,
+      "bytes": 469
+    },
+    {
+      "name": "csv-changed-cell",
+      "report_created": true,
+      "bytes": 481
+    },
+    {
+      "name": "csv-reordered",
+      "report_created": true,
+      "bytes": 469
+    },
+    {
+      "name": "csv-insert-delete",
+      "report_created": true,
+      "bytes": 501
+    },
+    {
+      "name": "csv-duplicate-keys",
+      "report_created": true,
+      "bytes": 527
+    },
+    {
+      "name": "csv-quoted-delimiter",
+      "report_created": true,
+      "bytes": 459
+    },
+    {
+      "name": "csv-multiline",
+      "report_created": true,
+      "bytes": 477
+    },
+    {
+      "name": "csv-empty-trailing",
+      "report_created": true,
+      "bytes": 445
+    },
+    {
+      "name": "semicolon",
+      "report_created": true,
+      "bytes": 573
+    },
+    {
+      "name": "tsv",
+      "report_created": true,
+      "bytes": 449
+    },
+    {
+      "name": "tsv-quoted-tab",
+      "report_created": true,
+      "bytes": 400
+    },
+    {
+      "name": "utf8-no-bom",
+      "report_created": true,
+      "bytes": 465
+    },
+    {
+      "name": "utf16-le",
+      "report_created": true,
+      "bytes": 459
+    },
+    {
+      "name": "windows1252",
+      "report_created": true,
+      "bytes": 456
+    },
+    {
+      "name": "lf",
+      "report_created": true,
+      "bytes": 447
+    },
+    {
+      "name": "no-header",
+      "report_created": true,
+      "bytes": 406
+    },
+    {
+      "name": "unequal-widths",
+      "report_created": true,
+      "bytes": 452
+    },
+    {
+      "name": "numeric-format",
+      "report_created": true,
+      "bytes": 469
+    }
+  ]
+}

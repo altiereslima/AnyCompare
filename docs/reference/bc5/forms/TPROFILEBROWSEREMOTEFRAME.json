@@ -1,0 +1,32 @@
+{
+  "class": "TProfileBrowseRemoteFrame",
+  "name": "ProfileBrowseRemoteFrame",
+  "props": {
+    "Left": 0,
+    "Top": 0,
+    "Width": 424,
+    "Height": 511,
+    "TabOrder": 0
+  },
+  "children": [
+    {
+      "class": "TUiTreeView",
+      "name": "TreeView",
+      "props": {
+        "Left": 0,
+        "Top": 0,
+        "Width": 424,
+        "Height": 511,
+        "Align": "alClient",
+        "ReadOnly": true,
+        "TabOrder": 0,
+        "OnChange": "TreeViewChange",
+        "OnCollapsed": "TreeViewCollapsed",
+        "OnCollapsing": "TreeViewCollapsing",
+        "OnDeletion": "TreeViewDeletion",
+        "OnExpanding": "TreeViewExpanding"
+      },
+      "children": []
+    }
+  ]
+}

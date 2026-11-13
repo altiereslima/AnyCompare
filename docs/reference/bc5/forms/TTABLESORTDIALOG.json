@@ -1,0 +1,124 @@
+{
+  "class": "TTableSortDialog",
+  "name": "TableSortDialog",
+  "props": {
+    "Caption": "Sort",
+    "ClientHeight": 265,
+    "ClientWidth": 217,
+    "OnCreate": "FormCreate",
+    "OnDestroy": "FormDestroy",
+    "OnKeyDown": "FormKeyDown",
+    "OnShow": "FormShow",
+    "PixelsPerInch": 96,
+    "TextHeight": 13
+  },
+  "children": [
+    {
+      "class": "TUiBevel",
+      "name": "TopBevel",
+      "props": {
+        "Left": 8,
+        "Top": 32,
+        "Width": 201,
+        "Height": 1,
+        "Shape": "bsTopLine"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBevel",
+      "name": "BottomBevel",
+      "props": {
+        "Left": 8,
+        "Top": 196,
+        "Width": 201,
+        "Height": 1,
+        "Shape": "bsTopLine"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiCheckBox",
+      "name": "HasNamesEdit",
+      "props": {
+        "Left": 8,
+        "Top": 8,
+        "Height": 17,
+        "Caption": "Includes column names",
+        "TabOrder": 0,
+        "OnClick": "HasNamesClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiScrollBox",
+      "name": "ScrollBox",
+      "props": {
+        "Left": 0,
+        "Top": 33,
+        "Width": 217,
+        "Height": 162,
+        "VertScrollBar.Tracking": true,
+        "AutoScroll": false,
+        "BorderStyle": "bsNone",
+        "TabOrder": 1
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBitBtn",
+      "name": "NewBtn",
+      "props": {
+        "Left": 8,
+        "Top": 203,
+        "Width": 24,
+        "Hint": "New",
+        "ImageIndex": "imgListAdd",
+        "Images": "BcImages.MainImages",
+        "TabOrder": 2,
+        "OnClick": "NewClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBitBtn",
+      "name": "DeleteBtn",
+      "props": {
+        "Left": 32,
+        "Top": 203,
+        "Width": 24,
+        "Hint": "Delete",
+        "ImageIndex": "imgListDelete",
+        "Images": "BcImages.MainImages",
+        "TabOrder": 3,
+        "OnClick": "DeleteClick"
+      },
+      "children": []
+    },
+    {
+      "class": "TUiBtnPanel",
+      "name": "BtnPanel",
+      "props": {
+        "Left": 0,
+        "Top": 226,
+        "Width": 217,
+        "TabOrder": 4
+      },
+      "children": [
+        {
+          "class": "TUiOkBtn",
+          "name": "OkBtn",
+          "props": {},
+          "children": []
+        },
+        {
+          "class": "TUiCancelBtn",
+          "name": "CancelBtn",
+          "props": {},
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flags": 1
+}
