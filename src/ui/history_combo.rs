@@ -62,7 +62,10 @@ pub fn show_sized(
         }
     }
     let (rect, anchor) = ui.allocate_exact_size(vec2(size.x.max(45.0), size.y), Sense::hover());
-    ui.painter().rect_filled(rect, 0.0, Color32::WHITE);
+    // White inside the frame only: its rounded corners blend with the panel.
+    // The frame lies one pixel above and below the allocated row (original).
+    ui.painter()
+        .rect_filled(rect.shrink2(vec2(1.0, 0.0)), 0.0, Color32::WHITE);
     let mut edit_rect = rect.shrink2(vec2(2.0, 1.0));
     edit_rect.max.x -= 16.0;
     let response = {
@@ -151,18 +154,12 @@ pub fn show_sized(
         [center + vec2(0.0, 2.0), center + vec2(3.0, -1.0)],
         Stroke::new(1.0_f32, Color32::from_gray(70)),
     );
-    ui.painter().rect_stroke(
-        rect,
-        0.0,
-        Stroke::new(
-            1.0_f32,
-            if focused {
-                Color32::from_rgb(0, 120, 215)
-            } else {
-                Color32::from_gray(140)
-            },
-        ),
-    );
+    let border = if focused {
+        Color32::from_rgb(0, 120, 215)
+    } else {
+        Color32::from_gray(141)
+    };
+    edit_frame(ui.painter(), rect.expand2(vec2(0.0, 1.0)), border);
     ui.ctx()
         .data_mut(|data| data.insert_temp(Id::new("capture_menu_rect").with(hint), drop_rect));
     let popup_style = (ui.visuals().window_fill, ui.visuals().window_rounding);
@@ -234,6 +231,57 @@ pub fn show_sized(
         field_rect: rect,
         selected,
         submitted,
+    }
+}
+
+/// Edit frame as the original draws it (measured 13/11/2026 on the Text Compare
+/// path fields): one-pixel lines inside `rect` and corners rounded by one pixel,
+/// blended at 34% / 93% outside and 17.5% inside. Filled rectangles stay on the
+/// pixel grid; a centred 1 px stroke was half clipped and lost the left edge.
+pub fn edit_frame(painter: &egui::Painter, rect: Rect, border: Color32) {
+    let px = |x: f32, y: f32, alpha: f32| {
+        painter.rect_filled(
+            Rect::from_min_size(pos2(x, y), vec2(1.0, 1.0)),
+            0.0,
+            border.gamma_multiply(alpha),
+        );
+    };
+    let (l, t, r, b) = (
+        rect.left(),
+        rect.top(),
+        rect.right() - 1.0,
+        rect.bottom() - 1.0,
+    );
+    painter.rect_filled(
+        Rect::from_min_max(pos2(l + 2.0, t), pos2(r - 1.0, t + 1.0)),
+        0.0,
+        border,
+    );
+    painter.rect_filled(
+        Rect::from_min_max(pos2(l + 2.0, b), pos2(r - 1.0, b + 1.0)),
+        0.0,
+        border,
+    );
+    painter.rect_filled(
+        Rect::from_min_max(pos2(l, t + 2.0), pos2(l + 1.0, b - 1.0)),
+        0.0,
+        border,
+    );
+    painter.rect_filled(
+        Rect::from_min_max(pos2(r, t + 2.0), pos2(r + 1.0, b - 1.0)),
+        0.0,
+        border,
+    );
+    for (x, y, dx, dy) in [
+        (l, t, 1.0, 1.0),
+        (r, t, -1.0, 1.0),
+        (l, b, 1.0, -1.0),
+        (r, b, -1.0, -1.0),
+    ] {
+        px(x, y, 0.343);
+        px(x + dx, y, 0.93);
+        px(x, y + dy, 0.93);
+        px(x + dx, y + dy, 0.175);
     }
 }
 

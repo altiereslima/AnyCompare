@@ -23,6 +23,11 @@ static class Harness
     [DllImport("user32.dll")] static extern bool SetWindowPos(IntPtr h, IntPtr after, int x, int y, int w, int hgt, uint flags);
     [DllImport("user32.dll")] static extern IntPtr WindowFromPoint(POINT p);
     [DllImport("user32.dll")] static extern bool ShowWindow(IntPtr h, int cmd);
+    [DllImport("user32.dll")] static extern bool SetWindowPlacement(IntPtr h, ref WINDOWPLACEMENT wp);
+    [DllImport("user32.dll")] static extern int GetSystemMetrics(int index);
+    [DllImport("user32.dll")] static extern IntPtr ChildWindowFromPointEx(IntPtr parent, POINT p, uint flags);
+    [StructLayout(LayoutKind.Sequential)] struct WINDOWPLACEMENT {
+        public int length, flags, showCmd; public POINT min, max; public RECT normal; }
     [DllImport("user32.dll")] static extern IntPtr SendMessage(IntPtr h, uint msg, IntPtr w, IntPtr l);
     [DllImport("user32.dll")] static extern bool RedrawWindow(IntPtr h, IntPtr rc, IntPtr rgn, uint flags);
     [DllImport("user32.dll")] static extern bool PrintWindow(IntPtr h, IntPtr hdc, uint flags);
@@ -34,6 +39,10 @@ static class Harness
     const uint WM_MOUSEMOVE = 0x200, WM_LBUTTONDOWN = 0x201, WM_LBUTTONUP = 0x202,
         WM_MOUSEWHEEL = 0x20A, WM_CHAR = 0x102, WM_KEYDOWN = 0x100, WM_KEYUP = 0x101;
     const uint RDW_INVALIDATE = 1, RDW_UPDATENOW = 0x100, RDW_ALLCHILDREN = 0x80;
+    // PERF_INVALIDATE=1: invalidate before UPDATENOW. Apps that render a whole
+    // frame on request (winit/egui) otherwise paint later in their message loop,
+    // after the timed step; GDI apps invalidate what they changed themselves.
+    static uint Paint = RDW_UPDATENOW | RDW_ALLCHILDREN;
 
     static IntPtr MainWindow(int pid)
     {
@@ -51,6 +60,17 @@ static class Harness
     }
 
     static IntPtr Lp(int x, int y) { return (IntPtr)((y << 16) | (x & 0xffff)); }
+
+    static IntPtr ChildAt(IntPtr top, POINT screen)
+    {
+        IntPtr h = top;
+        while (true) {
+            var local = screen; ScreenToClient(h, ref local);
+            IntPtr child = ChildWindowFromPointEx(h, local, 1 /*SKIPINVISIBLE*/ | 4 /*SKIPTRANSPARENT*/);
+            if (child == IntPtr.Zero || child == h) return h;
+            h = child;
+        }
+    }
 
     static void WaitIdle(Process p, int quietMs)
     {
@@ -89,8 +109,12 @@ static class Harness
     static int Main(string[] args)
     {
         string prefix = args[0];
+        if (Environment.GetEnvironmentVariable("PERF_INVALIDATE") == "1") Paint |= RDW_INVALIDATE;
         var psi = new ProcessStartInfo(args[1], string.Join(" ", args.Skip(2).Select(a => "\"" + a + "\"")));
         psi.UseShellExecute = false;
+        // Start minimized and restore off-screen without activation: nothing shows
+        // up or takes focus on the user's desktop (PrintWindow still captures).
+        psi.WindowStyle = ProcessWindowStyle.Minimized;
         // Isolated profile folder: the measured app never touches the user's settings.
         var appdata = System.IO.Path.GetFullPath(prefix + "-appdata");
         System.IO.Directory.CreateDirectory(appdata);
@@ -104,14 +128,19 @@ static class Harness
         WaitIdle(p, 1500);
         double idleMs = clock.Elapsed.TotalMilliseconds - 1500;
         win = MainWindow(p.Id);
-        ShowWindow(win, 4 /*SW_SHOWNOACTIVATE: restore a minimized window*/);
-        SetWindowPos(win, IntPtr.Zero, 100, 60, 1600, 940, 0x0010 /*NOACTIVATE*/ | 0x0004 /*NOZORDER*/);
+        int left = GetSystemMetrics(76 /*SM_XVIRTUALSCREEN*/) - 1800;
+        var placement = new WINDOWPLACEMENT();
+        placement.length = Marshal.SizeOf(typeof(WINDOWPLACEMENT));
+        placement.showCmd = 4; // SW_SHOWNOACTIVATE
+        placement.normal = new RECT { L = left, T = 60, R = left + 1600, B = 1000 };
+        SetWindowPlacement(win, ref placement);
+        SetWindowPos(win, IntPtr.Zero, left, 60, 1600, 940, 0x0010 /*NOACTIVATE*/ | 0x0004 /*NOZORDER*/);
         WaitIdle(p, 800);
         Capture(win, prefix + "-open.png");
         RECT r; GetWindowRect(win, out r);
         // Left pane: 30% of the width, middle of the height.
         var pt = new POINT { X = r.L + (r.R - r.L) * 30 / 100, Y = r.T + (r.B - r.T) / 2 };
-        IntPtr target = WindowFromPoint(pt);
+        IntPtr target = ChildAt(win, pt);
         var cls = new StringBuilder(256); GetClassName(target, cls, 256);
         var client = pt; ScreenToClient(target, ref client);
         SendMessage(target, WM_MOUSEMOVE, IntPtr.Zero, Lp(client.X, client.Y));
@@ -121,20 +150,24 @@ static class Harness
             int delta = pass == 0 ? -120 : 120;
             for (int i = 0; i < 60; i++) {
                 var t = Stopwatch.StartNew();
+                // The real cursor is elsewhere: Windows reports a mouse leave after
+                // each synthetic move, and egui drops wheel input without a hover
+                // position. Re-send the position with every step (both apps).
+                SendMessage(target, WM_MOUSEMOVE, IntPtr.Zero, Lp(client.X, client.Y));
                 SendMessage(target, WM_MOUSEWHEEL, (IntPtr)(delta << 16), Lp(pt.X, pt.Y));
-                RedrawWindow(win, IntPtr.Zero, IntPtr.Zero, RDW_UPDATENOW | RDW_ALLCHILDREN);
+                RedrawWindow(win, IntPtr.Zero, IntPtr.Zero, Paint);
                 list.Add(t.Elapsed.TotalMilliseconds);
             }
-            if (pass == 0) Capture(win, prefix + "-scrolled.png");
+            if (pass == 0) { WaitIdle(p, 400); Capture(win, prefix + "-scrolled.png"); }
         }
         // Caret in the left pane, a few characters into the visible top line.
         var caret = new POINT { X = r.L + (r.R - r.L) * 12 / 100, Y = r.T + (r.B - r.T) * 30 / 100 };
-        IntPtr editor = WindowFromPoint(caret);
+        IntPtr editor = ChildAt(win, caret);
         var cc = caret; ScreenToClient(editor, ref cc);
         SendMessage(editor, WM_MOUSEMOVE, IntPtr.Zero, Lp(cc.X, cc.Y));
         SendMessage(editor, WM_LBUTTONDOWN, (IntPtr)1, Lp(cc.X, cc.Y));
         SendMessage(editor, WM_LBUTTONUP, IntPtr.Zero, Lp(cc.X, cc.Y));
-        RedrawWindow(win, IntPtr.Zero, IntPtr.Zero, RDW_UPDATENOW | RDW_ALLCHILDREN);
+        RedrawWindow(win, IntPtr.Zero, IntPtr.Zero, Paint);
         WaitIdle(p, 500);
         var typing = new List<double>();
         for (int i = 0; i < 20; i++) {
@@ -142,7 +175,7 @@ static class Harness
             SendMessage(editor, WM_KEYDOWN, (IntPtr)0x58, (IntPtr)0x002D0001);
             SendMessage(editor, WM_CHAR, (IntPtr)'x', (IntPtr)0x002D0001);
             SendMessage(editor, WM_KEYUP, (IntPtr)0x58, unchecked((IntPtr)(int)0xC02D0001));
-            RedrawWindow(win, IntPtr.Zero, IntPtr.Zero, RDW_UPDATENOW | RDW_ALLCHILDREN);
+            RedrawWindow(win, IntPtr.Zero, IntPtr.Zero, Paint);
             typing.Add(t.Elapsed.TotalMilliseconds);
         }
         var settle = Stopwatch.StartNew();

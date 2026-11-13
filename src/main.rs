@@ -336,6 +336,9 @@ struct AnyCompareApp {
     capture_submenu: Option<String>,
     capture_drop: Vec<PathBuf>,
     capture_drop_separate: bool,
+    /// Title last sent to the window. Every viewport command requests another
+    /// frame, so sending it unconditionally repainted the app forever.
+    window_title: String,
 }
 
 impl AnyCompareApp {
@@ -369,6 +372,7 @@ impl AnyCompareApp {
             capture_submenu: startup.capture_submenu,
             capture_drop: startup.capture_drop,
             capture_drop_separate: startup.capture_drop_separate,
+            window_title: String::new(),
         };
         if let Some((left, right)) = startup.pair {
             let kind = startup
@@ -864,6 +868,13 @@ impl eframe::App for AnyCompareApp {
         }
     }
     fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+        // The original scrolls its text panes by the Windows "lines per notch"
+        // setting (3 by default) of 16 px rows; egui's default is 40 px.
+        let line_scroll = match self.active.map(|index| &self.sessions[index]) {
+            Some(Session::Text(_)) => wheel_scroll_lines() as f32 * ui::aligned_editor::ROW_HEIGHT,
+            _ => 40.0,
+        };
+        ctx.options_mut(|options| options.line_scroll_speed = line_scroll);
         let mut dialogs = ui::dialogs::NativeDialogs::parented(frame);
         if ctx.input(|i| i.viewport().close_requested())
             && !self.allow_exit
@@ -921,9 +932,11 @@ impl eframe::App for AnyCompareApp {
             .active
             .map(|i| self.sessions[i].title())
             .unwrap_or_else(|| "Página Inicial".into());
-        ctx.send_viewport_cmd(egui::ViewportCommand::Title(format!(
-            "{title} - AnyCompare"
-        )));
+        let title = format!("{title} - AnyCompare");
+        if title != self.window_title {
+            ctx.send_viewport_cmd(egui::ViewportCommand::Title(title.clone()));
+            self.window_title = title;
+        }
         if let Some(index) = close {
             if self.sessions[index].dirty() {
                 self.pending_close = Some(index);
@@ -1165,6 +1178,31 @@ impl eframe::App for AnyCompareApp {
     }
 }
 
+/// Windows "lines to scroll per wheel notch" (SPI_GETWHEELSCROLLLINES), 3 when
+/// unavailable or set to page scrolling.
+fn wheel_scroll_lines() -> u32 {
+    #[cfg(windows)]
+    {
+        use windows_sys::Win32::UI::WindowsAndMessaging::{
+            SystemParametersInfoW, SPI_GETWHEELSCROLLLINES,
+        };
+        let mut lines: u32 = 3;
+        // SAFETY: SPI_GETWHEELSCROLLLINES writes one UINT into `lines`.
+        let ok = unsafe {
+            SystemParametersInfoW(
+                SPI_GETWHEELSCROLLLINES,
+                0,
+                (&mut lines as *mut u32).cast(),
+                0,
+            )
+        };
+        if ok != 0 && (1..=100).contains(&lines) {
+            return lines;
+        }
+    }
+    3
+}
+
 fn main() -> eframe::Result<()> {
     if std::env::args_os().any(|arg| arg == "--verify-resources") {
         let report = format!("{}\n", resources::summary());
@@ -1193,6 +1231,19 @@ fn main() -> eframe::Result<()> {
         // prevents tearing in a window, and waiting for vertical sync added up to a
         // whole refresh interval to every scroll step and keystroke.
         vsync: false,
+        // eframe dithers by default, scattering 239/240 pixels over flat colours;
+        // the original paints exact colours.
+        dithering: false,
+        // OpenGL measured faster than wgpu on this machine (13/11/2026: 12 vs 17 ms
+        // per wheel step). wgpu stays built in for other systems (DirectX 12 or
+        // Vulkan, Vulkan on Linux, Metal on macOS): ANYCOMPARE_RENDERER=wgpu.
+        renderer: if std::env::var_os("ANYCOMPARE_RENDERER").as_deref()
+            == Some(std::ffi::OsStr::new("wgpu"))
+        {
+            eframe::Renderer::Wgpu
+        } else {
+            eframe::Renderer::Glow
+        },
         ..Default::default()
     };
     eframe::run_native(
@@ -1293,6 +1344,7 @@ mod tests {
             capture_submenu: None,
             capture_drop: Vec::new(),
             capture_drop_separate: false,
+            window_title: String::new(),
         }
     }
 

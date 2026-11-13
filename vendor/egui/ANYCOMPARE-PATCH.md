@@ -22,3 +22,6 @@ linhas (medido com 57.108 linhas por lado em 13/11/2026).
   blocos de 4 KiB contando inícios de caractere.
 - `context.rs`: `Context::accesskit_enabled()`.
 - `lib.rs`: `#![allow(warnings)]` para avisos do rustc atual em código upstream.
+- `input_state/mod.rs`: notches da roda (linhas/páginas) rolam no mesmo quadro,
+  como os controles nativos do Windows e o original; o upstream distribuía o
+  movimento ao longo de ~0,1 s.

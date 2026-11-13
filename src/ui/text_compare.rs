@@ -116,7 +116,9 @@ pub struct TextCompareScreen {
     view_cache: Option<(ViewKey, std::sync::Arc<TextView>)>,
     /// Bumped whenever `view_cache` is rebuilt; identifies the editor geometry.
     view_generation: u64,
-    thumbnail_cache: Option<((u64, usize, u32), Vec<Color32>)>,
+    thumbnail_cache: Option<((u64, usize, u32), Vec<DiffStatus>)>,
+    /// Height of the editors' viewport in the last frame (overview marker).
+    viewport_height: f32,
     /// Buffers at the end of the last edited frame, the base of the next undo step.
     edit_base: Option<(String, String)>,
     previous_filter: FilterMode,
@@ -238,6 +240,7 @@ impl TextCompareScreen {
             view_cache: None,
             view_generation: 0,
             thumbnail_cache: None,
+            viewport_height: 0.0,
             edit_base: None,
             previous_filter: FilterMode::All,
             search: SearchState::default(),
@@ -2088,15 +2091,41 @@ impl TextCompareScreen {
             .show_inside(ui, |ui| self.window_status(ui, icons));
 
         self.search_panel(ctx, ui, icons);
+        // The original's overview column starts right under the toolbar, beside
+        // the path fields (measured 13/11/2026), so it is laid out before them.
+        if self.show_thumbnail {
+            SidePanel::left("text_thumbnail")
+                .exact_width(44.0)
+                .resizable(false)
+                .show_separator_line(false)
+                .frame(Frame::none().fill(BcTheme::WINDOW_BG))
+                .show_inside(ui, |ui| self.thumbnail(ui));
+        }
+        let paths_left = if self.show_thumbnail { -1.0 } else { 45.0 };
         TopBottomPanel::top("text_paths")
             .show_separator_line(false)
             .frame(Frame::none().inner_margin(Margin {
-                left: 45.0,
+                left: paths_left,
                 right: 2.0,
                 top: 2.0,
                 bottom: 3.0,
             }))
             .show_inside(ui, |ui| {
+                // White line right under the toolbar, across the window (original).
+                let inner = ui.max_rect();
+                let clip = ui.clip_rect();
+                ui.set_clip_rect(Rect::from_min_max(
+                    pos2(clip.left().min(inner.left()), clip.top()),
+                    clip.max,
+                ));
+                ui.painter().rect_filled(
+                    Rect::from_min_max(
+                        pos2(inner.left() - paths_left, inner.top() - 2.0),
+                        pos2(inner.right() + 2.0, inner.top() - 1.0),
+                    ),
+                    0.0,
+                    Color32::WHITE,
+                );
                 ui.columns(2, |columns| {
                     for (index, column) in columns.iter_mut().enumerate() {
                         let left = index == 0;
@@ -2252,14 +2281,6 @@ impl TextCompareScreen {
         if let Some((left, encoding)) = reopen {
             self.reopen_encoded(left, encoding, dialogs);
         }
-        if self.show_thumbnail {
-            SidePanel::left("text_thumbnail")
-                .exact_width(44.0)
-                .resizable(false)
-                .show_separator_line(false)
-                .frame(Frame::none().fill(BcTheme::WINDOW_BG))
-                .show_inside(ui, |ui| self.thumbnail(ui));
-        }
         if self.show_details {
             TopBottomPanel::bottom("text_details")
                 .exact_height(super::text_chrome::DETAILS_HEIGHT)
@@ -2387,7 +2408,12 @@ impl TextCompareScreen {
     }
 
     fn character_details(&mut self, ui: &mut Ui) {
-        let rect = ui.max_rect();
+        let mut rect = ui.max_rect();
+        if self.show_thumbnail {
+            rect.min.x -= 1.0;
+            let clip = ui.clip_rect();
+            ui.set_clip_rect(Rect::from_min_max(pos2(rect.left(), clip.top()), clip.max));
+        }
         ui.painter().rect_filled(rect, 0.0, Color32::from_gray(160));
         let Some(line) = self.diff_result.lines.get(self.selected_line_idx) else {
             return;
@@ -2403,9 +2429,16 @@ impl TextCompareScreen {
                 } else {
                     line.right_line_no
                 };
-                let eol = number
-                    .and_then(|n| document.text.split_inclusive('\n').nth(n - 1))
-                    .is_some_and(|s| s.ends_with('\n'));
+                // Every line but an unterminated last one ends with a newline
+                // (no scan from the start of the buffer on every frame).
+                let last = self.diff_result.lines.iter().rev().find_map(|line| {
+                    if side {
+                        line.left_line_no
+                    } else {
+                        line.right_line_no
+                    }
+                });
+                let eol = number.is_some_and(|n| Some(n) != last || document.text.ends_with('\n'));
                 ui.fonts(|fonts| fonts.layout_job(detail_job(&chunks, eol)))
             })
             .collect();
@@ -2475,14 +2508,36 @@ impl TextCompareScreen {
         }
     }
 
+    /// Overview column. Geometry measured on the original at 100% (13/11/2026,
+    /// fresh portable profile, 57,108-line pair), in points from the column's
+    /// top-left: a white line under the toolbar; a sunken frame (grey 160 top and
+    /// left at 9/10, white right and bottom); a 20 px colour strip at x 13..33
+    /// from y 11 to 11 px above the bottom; the visible-area marker outlined in
+    /// grey 128 from x 6 to 36, at least 3 px tall, inside which differences are
+    /// drawn brighter (255,65,65; equal lines 252 → 255); and a blue
+    /// (0,120,215) arrow at x 1..5 on the current line.
+    /// The frames right of the column (paths, panes, details) start one pixel
+    /// under its right edge, as in the original.
     fn thumbnail(&mut self, ui: &mut Ui) {
         let (rect, response) = ui.allocate_exact_size(ui.available_size(), Sense::click_and_drag());
+        let painter = ui.painter();
+        let at =
+            |x: f32, y: f32, w: f32, h: f32| Rect::from_min_size(rect.min + vec2(x, y), vec2(w, h));
+        let bottom = rect.height();
+        painter.rect_filled(at(0.0, 0.0, rect.width(), 1.0), 0.0, Color32::WHITE);
         let strip = Rect::from_min_max(
-            rect.min + vec2(8.0, 2.0),
-            pos2(rect.left() + 31.0, rect.bottom() - 2.0),
+            rect.min + vec2(13.0, 11.0),
+            pos2(rect.left() + 33.0, rect.bottom() - 10.0),
         );
+        let shadow = Color32::from_gray(160);
+        painter.rect_filled(at(9.0, 10.0, 24.0, 1.0), 0.0, shadow);
+        painter.rect_filled(at(9.0, 10.0, 1.0, bottom - 20.0), 0.0, shadow);
+        painter.rect_filled(at(33.0, 10.0, 1.0, bottom - 19.0), 0.0, Color32::WHITE);
+        painter.rect_filled(at(9.0, bottom - 10.0, 25.0, 1.0), 0.0, Color32::WHITE);
+        // Equal lines are grey 252, not white (lotr pair, 13/11/2026); like every
+        // status they turn brighter (white) inside the visible-area marker.
+        painter.rect_filled(strip, 0.0, Color32::from_gray(252));
         let count = self.diff_result.lines.len().max(1);
-        ui.painter().rect_filled(strip, 0.0, Color32::WHITE);
         // One color per physical pixel row, painted as a single mesh: a large file
         // has many lines per pixel, and one shape per line made every frame O(N).
         // When several lines share a pixel the most important status wins
@@ -2498,7 +2553,7 @@ impl TextCompareScreen {
                 DiffStatus::Different => 3,
             };
             let lines = &self.diff_result.lines;
-            let mut colors = Vec::with_capacity(pixels);
+            let mut statuses = Vec::with_capacity(pixels);
             for pixel in 0..pixels {
                 let (a, b) = (
                     pixel as f64 / pixels as f64 * count as f64,
@@ -2510,35 +2565,56 @@ impl TextCompareScreen {
                 } else {
                     a.floor() as usize..(b.ceil() as usize)
                 };
-                let status = lines
-                    .get(range.start.min(lines.len())..range.end.min(lines.len()))
-                    .unwrap_or_default()
-                    .iter()
-                    .map(|line| line.status)
-                    .max_by_key(|status| rank(*status))
-                    .unwrap_or(DiffStatus::Same);
-                colors.push(match status {
-                    DiffStatus::Same => Color32::WHITE,
-                    DiffStatus::Different => Color32::from_rgb(252, 100, 100),
-                    DiffStatus::Unimportant => Color32::from_rgb(120, 120, 255),
-                    _ => BcTheme::THUMBNAIL_ORPHAN,
-                });
+                statuses.push(
+                    lines
+                        .get(range.start.min(lines.len())..range.end.min(lines.len()))
+                        .unwrap_or_default()
+                        .iter()
+                        .map(|line| line.status)
+                        .max_by_key(|status| rank(*status))
+                        .unwrap_or(DiffStatus::Same),
+                );
             }
-            self.thumbnail_cache = Some((key, colors));
+            self.thumbnail_cache = Some((key, statuses));
         }
-        let colors = &self.thumbnail_cache.as_ref().unwrap().1;
+        // Visible area, as a fraction of the aligned view.
+        let (first, last) = match &self.view_cache {
+            Some((_, view)) if view.height > 0.0 => (
+                (self.scroll_offset_y / view.height).clamp(0.0, 1.0),
+                ((self.scroll_offset_y + self.viewport_height) / view.height).clamp(0.0, 1.0),
+            ),
+            _ => (0.0, 1.0),
+        };
+        let marker_top = (strip.top() - 1.0 + (first * strip.height()).floor()).round();
+        let marker_bottom = (strip.top() + (last * strip.height()).ceil())
+            .max(marker_top + 2.0)
+            .round();
+        let statuses = &self.thumbnail_cache.as_ref().unwrap().1;
+        let color = |status: DiffStatus, inside: bool| match status {
+            DiffStatus::Same if inside => Some(Color32::WHITE),
+            DiffStatus::Same => None,
+            DiffStatus::Different if inside => Some(Color32::from_rgb(255, 65, 65)),
+            DiffStatus::Different => Some(Color32::from_rgb(252, 100, 100)),
+            DiffStatus::Unimportant => Some(Color32::from_rgb(120, 120, 255)),
+            _ => Some(BcTheme::THUMBNAIL_ORPHAN),
+        };
         let mut mesh = egui::Mesh::default();
         let mut run = 0;
-        while run < colors.len() {
-            let color = colors[run];
+        while run < statuses.len() {
+            let y = strip.top() + run as f32 / ppp;
+            let inside = y > marker_top && y < marker_bottom;
+            let status = statuses[run];
             let mut end = run + 1;
-            while end < colors.len() && colors[end] == color {
+            while end < statuses.len() && statuses[end] == status && {
+                let y = strip.top() + end as f32 / ppp;
+                (y > marker_top && y < marker_bottom) == inside
+            } {
                 end += 1;
             }
-            if color != Color32::WHITE {
+            if let Some(color) = color(status, inside) {
                 mesh.add_colored_rect(
                     Rect::from_min_max(
-                        pos2(strip.left(), strip.top() + run as f32 / ppp),
+                        pos2(strip.left(), y),
                         pos2(strip.right(), strip.top() + end as f32 / ppp),
                     ),
                     color,
@@ -2546,7 +2622,36 @@ impl TextCompareScreen {
             }
             run = end;
         }
-        ui.painter().add(mesh);
+        painter.add(mesh);
+        let marker = Color32::from_gray(128);
+        let (left, right) = (rect.left() + 6.0, rect.left() + 37.0);
+        for y in [marker_top, marker_bottom] {
+            painter.rect_filled(
+                Rect::from_min_max(pos2(left, y), pos2(right, y + 1.0)),
+                0.0,
+                marker,
+            );
+        }
+        for x in [left, right - 1.0] {
+            painter.rect_filled(
+                Rect::from_min_max(pos2(x, marker_top), pos2(x + 1.0, marker_bottom + 1.0)),
+                0.0,
+                marker,
+            );
+        }
+        // Current line arrow: rows of 1, 2, 3, 4, 3, 2 and 1 px, the widest on the line.
+        let selected = self.selected_line_idx.min(count - 1) as f32 / count as f32;
+        let center = (strip.top() + (selected * strip.height()).floor()).round();
+        for (row, width) in [1.0, 2.0, 3.0, 4.0, 3.0, 2.0, 1.0].into_iter().enumerate() {
+            painter.rect_filled(
+                Rect::from_min_size(
+                    pos2(rect.left() + 1.0, center - 3.0 + row as f32),
+                    vec2(width, 1.0),
+                ),
+                0.0,
+                Color32::from_rgb(0, 120, 215),
+            );
+        }
         if response.clicked() || response.dragged() {
             if let Some(pos) = response.interact_pointer_pos() {
                 self.selected_line_idx = (((pos.y - strip.top()) / strip.height()).clamp(0.0, 1.0)
@@ -2771,6 +2876,7 @@ impl TextCompareScreen {
                         let pane_rect = Rect::from_min_size(pane_top, vec2(pane_width, height));
                         let editor_height =
                             (height - super::text_chrome::STATUS_HEIGHT - 1.0).max(1.0);
+                        self.viewport_height = editor_height;
                         let editor_width =
                             (pane_width - super::text_chrome::BAR_WIDTH - 2.0).max(1.0);
                         // Reserve the non-scrolling top/left border explicitly.

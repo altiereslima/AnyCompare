@@ -337,9 +337,11 @@ impl InputState {
                     // So we smooth it out over several frames for a nicer user experience when scrolling in egui.
                     // BUT: if the user is using a nice smooth mac trackpad, we don't add smoothing,
                     // because it adds latency.
+                    // AnyCompare: wheel notches (lines/pages) scroll at once, as native
+                    // Windows controls do; upstream spread them over ~0.1 s of frames.
                     let is_smooth = match unit {
                         MouseWheelUnit::Point => delta.length() < 8.0, // a bit arbitrary here
-                        MouseWheelUnit::Line | MouseWheelUnit::Page => false,
+                        MouseWheelUnit::Line | MouseWheelUnit::Page => true,
                     };
 
                     let is_zoom = modifiers.ctrl || modifiers.mac_cmd || modifiers.command;

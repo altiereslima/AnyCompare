@@ -1,5 +1,39 @@
 # Pausa 13/11/2026 — desempenho (abrir, rolar, editar) e fonte do editor
 
+## Atualização (mesma data, depois do commit 34feada) — NÃO commitada
+
+- **CPU com o app parado: ~100% de um núcleo → ~0.** Causa real (não era o driver
+  OpenGL): `main.rs` enviava `ViewportCommand::Title` em todo quadro, e cada comando
+  pede outro quadro. Agora só envia quando o título muda (`window_title`).
+- **Miniatura (barra vermelha) igual ao original**, medida nos pares grande e
+  `lotr - inglês.str` × `lotrBr.str`: coluna desde logo abaixo da barra de
+  ferramentas (criada antes dos caminhos), moldura afundada, faixa de 20 px, iguais
+  em cinza 252, marcador da área visível (cinza 128, mín. 3 px, cores mais vivas
+  dentro: 255,65,65 e 255), seta azul 7 linhas na linha atual. Captura aberta: 3 pixels
+  diferentes na coluna inteira (fora da barra). Marcador rolado conferido por cálculo
+  (180 de 14.610 linhas → y 116–121, igual ao original); a captura rolada do nosso
+  app não é possível com o medidor (ver abaixo).
+- Campos de caminho e painel de detalhes 1 px à esquerda (como os painéis); moldura do
+  campo de caminho desenhada por pixels (`history_combo::edit_frame`), cor 141, cantos
+  arredondados com 34/93/17,5% — antes a borda esquerda sumia.
+- Linha branca de 1 px logo abaixo da barra de ferramentas (Comparar Textos).
+- `dithering: false` (o eframe espalhava pixels 239 em fundos 240).
+- Roda do mouse: sem suavização (patch egui `input_state`) e passo = linhas do Windows
+  (SPI_GETWHEELSCROLLLINES, 3) × 16 px no comparador de texto, como o original.
+- Painel de detalhes não varre mais o texto inteiro a cada quadro (custava ms com a
+  linha selecionada no meio de arquivo grande). Digitação interna: 24 → 18,7 ms.
+- wgpu habilitado no build, mas **padrão voltou a OpenGL** (aqui: rolagem 12 ms glow ×
+  17 ms wgpu; o wgpu não reduziu CPU). `ANYCOMPARE_RENDERER=wgpu` liga o wgpu.
+- Medidor (`tools/perf_harness.cs`): abre minimizado e restaura **fora da tela** sem
+  ativar (pedido do usuário: não atrapalhar); `ChildWindowFromPointEx` em vez de
+  `WindowFromPoint`; `PERF_INVALIDATE=1` para apps egui (pintura síncrona);
+  reenvia a posição do mouse a cada passo. **Limitação**: com o cursor real fora da
+  janela, o Windows envia "mouse saiu" e o egui descarta a roda antes do quadro —
+  a rolagem do nosso app não pode ser medida assim (usar o benchmark interno).
+- Medidas (lotr): original rolar 2,7–3,6 ms / digitar 9,3 ms; nosso digitar 14–21 ms
+  (medidor externo); rolar 2,6–2,9 ms por quadro interno + GPU.
+- 186 testes passaram; Clippy limpo; fmt aplicado.
+
 Pausado a pedido do usuário no meio do trabalho. **Nada foi commitado** e **nada foi
 publicado em `dist`**. A fonte ainda está marcada 0.2.5. Leia tudo antes de continuar.
 

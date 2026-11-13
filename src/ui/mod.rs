@@ -1,4 +1,4 @@
-mod aligned_editor;
+pub(crate) mod aligned_editor;
 pub mod chrome;
 pub mod dialogs;
 pub mod folder_compare;
