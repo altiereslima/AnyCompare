@@ -4,16 +4,122 @@ use super::{icons::IconManager, theme::BcTheme};
 use crate::{diff::AlignMethod, i18n::tr, picture::CompareMode};
 use egui::*;
 
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum FolderScopeChoice {
+    ThisViewOnly,
+    ThisSession,
+    UpdateDefaults,
+}
+
+impl FolderScopeChoice {
+    pub const ALL: [Self; 3] = [Self::ThisViewOnly, Self::ThisSession, Self::UpdateDefaults];
+
+    pub fn label_key(self) -> &'static str {
+        match self {
+            Self::ThisViewOnly => "options.scope_this_view",
+            Self::ThisSession => "options.scope_this_session",
+            Self::UpdateDefaults => "options.scope_update_defaults",
+        }
+    }
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum FolderHandlingChoice {
+    ShowAll,
+    CompareStructure,
+    CompareFilesOnly,
+    Flatten,
+}
+
+impl FolderHandlingChoice {
+    pub const ALL: [Self; 4] = [
+        Self::ShowAll,
+        Self::CompareStructure,
+        Self::CompareFilesOnly,
+        Self::Flatten,
+    ];
+
+    pub fn label_key(self) -> &'static str {
+        match self {
+            Self::ShowAll => "toolbar.always_show_folders",
+            Self::CompareStructure => "toolbar.compare_files_and_folder_structure",
+            Self::CompareFilesOnly => "toolbar.only_compare_files",
+            Self::Flatten => "toolbar.ignore_folder_structure",
+        }
+    }
+}
+
 #[derive(Clone, Debug, PartialEq)]
 pub struct FolderRulesDraft {
+    // Specs
+    pub left_path: String,
+    pub right_path: String,
+    pub description: String,
+    // Comparison — Quick tests
+    pub compare_size: bool,
+    pub compare_timestamp: bool,
+    pub timestamp_tolerance_secs: u64,
+    pub ignore_dst: bool,
+    pub ignore_timezone: bool,
+    pub compare_filename_case: bool,
+    pub align_different_extensions: bool,
+    pub align_unicode_normalization: bool,
+    // Comparison — Attributes & Unix metadata
+    pub compare_attr_archive: bool,
+    pub compare_attr_system: bool,
+    pub compare_attr_hidden: bool,
+    pub compare_attr_readonly: bool,
+    pub compare_unix_permissions: bool,
+    pub compare_unix_owner: bool,
+    pub compare_unix_group: bool,
+    // Comparison — Requires opening files
     pub compare_content: bool,
     pub content_mode: super::folder_ops::ContentCompareMode,
-    pub tree: bool,
-    pub show_log: bool,
+    pub compare_versions: bool,
+    pub skip_if_quick_same: bool,
+    pub override_quick_results: bool,
+    // Handling
+    pub dir_handling: FolderHandlingChoice,
+    pub archives_as_folders: bool,
+    pub follow_symlinks: bool,
+    // Name Filters
     pub filter: String,
+    pub exclude_patterns: String,
     pub suppress_filters: bool,
+    // Other Filters
     pub only_diffs: bool,
     pub only_same: bool,
+    pub exclude_protected_os: bool,
+    pub min_size_kb: u64,
+    // Misc
+    pub show_log: bool,
+    pub show_folder_sizes: bool,
+    pub auto_expand_subfolders: bool,
+    // Footer scope
+    pub scope: FolderScopeChoice,
+}
+
+impl FolderRulesDraft {
+    pub fn attributes_summary(&self) -> String {
+        let mut s = String::new();
+        if self.compare_attr_archive {
+            s.push('A');
+        }
+        if self.compare_attr_system {
+            s.push('S');
+        }
+        if self.compare_attr_hidden {
+            s.push('H');
+        }
+        if self.compare_attr_readonly {
+            s.push('R');
+        }
+        if s.is_empty() {
+            "--------------".to_owned()
+        } else {
+            s
+        }
+    }
 }
 
 #[derive(Clone, Debug, PartialEq)]
@@ -65,7 +171,14 @@ impl SessionRules {
 
     fn tabs(&self) -> &'static [&'static str] {
         match self {
-            Self::Folder(_) => &["options.criteria", "common.filters", "options.display"],
+            Self::Folder(_) => &[
+                "options.specs",
+                "options.comparison",
+                "options.handling",
+                "options.name_filters_tab",
+                "options.other_filters_tab",
+                "options.misc_tab",
+            ],
             Self::Text(_) => &["options.importance", "options.alignment", "options.display"],
             Self::Picture(_) => &["options.comparison", "options.alignment_and_display"],
         }
@@ -110,8 +223,11 @@ impl SessionSettingsDialog {
     }
 
     pub fn open(&mut self, rules: SessionRules) {
+        self.active_tab = match &rules {
+            SessionRules::Folder(_) => 1, // Land on "Comparison" tab by default
+            _ => 0,
+        };
         self.draft = Some(rules);
-        self.active_tab = 0;
     }
 
     pub fn show(&mut self, ctx: &Context, icons: &mut IconManager) -> Option<SessionRules> {
@@ -131,8 +247,17 @@ impl SessionSettingsDialog {
                     .rect_filled(rect, 0.0, Color32::from_black_alpha(45));
             });
 
-        let win_w = (screen.width() - 48.0).clamp(460.0, 560.0);
-        let win_h = (screen.height() - 48.0).clamp(320.0, 410.0);
+        let is_folder = matches!(rules, SessionRules::Folder(_));
+        let win_w = if is_folder {
+            (screen.width() - 48.0).clamp(580.0, 640.0)
+        } else {
+            (screen.width() - 48.0).clamp(460.0, 560.0)
+        };
+        let win_h = if is_folder {
+            (screen.height() - 48.0).clamp(440.0, 476.0)
+        } else {
+            (screen.height() - 48.0).clamp(320.0, 410.0)
+        };
         let title = format!("{} - AnyCompare", tr(rules.title()));
         let icon_name = rules.icon();
         let tabs = rules.tabs();
@@ -181,6 +306,8 @@ impl SessionSettingsDialog {
                             for (i, &tab_label) in tabs.iter().enumerate() {
                                 let selected = self.active_tab == i;
                                 let label = tr(tab_label);
+                                let pad = if tabs.len() >= 5 { 14.0 } else { 22.0 };
+                                let min_w = if tabs.len() >= 5 { 54.0 } else { 76.0 };
                                 let w = (ui.fonts(|f| {
                                     f.layout_no_wrap(
                                         label.clone(),
@@ -189,8 +316,8 @@ impl SessionSettingsDialog {
                                     )
                                     .size()
                                     .x
-                                }) + 22.0)
-                                    .max(76.0);
+                                }) + pad)
+                                    .max(min_w);
                                 let (rect, resp) =
                                     ui.allocate_exact_size(vec2(w, 24.0), Sense::click());
                                 let fill = if selected {
@@ -243,51 +370,303 @@ impl SessionSettingsDialog {
                             .id_salt("session_rules_body")
                             .auto_shrink([false, false])
                             .show(ui, |ui| {
-                                ui.spacing_mut().item_spacing = vec2(6.0, 8.0);
+                                ui.spacing_mut().item_spacing = if is_folder {
+                                    vec2(6.0, 5.0)
+                                } else {
+                                    vec2(6.0, 8.0)
+                                };
                                 match rules {
                                     SessionRules::Folder(f) => match self.active_tab {
+                                        // 0: Specs (Especificações)
                                         0 => {
                                             ui.label(
-                                                RichText::new(tr("options.file_comparison_criteria"))
+                                                RichText::new(tr("options.left_base_folder"))
                                                     .strong(),
                                             );
-                                            ui.checkbox(
-                                                &mut f.compare_content,
-                                                tr("folder.compare_file_contents"),
+                                            ui.add(
+                                                TextEdit::singleline(&mut f.left_path)
+                                                    .desired_width(f32::INFINITY),
                                             );
+                                            ui.add_space(6.0);
+                                            ui.label(
+                                                RichText::new(tr("options.right_base_folder"))
+                                                    .strong(),
+                                            );
+                                            ui.add(
+                                                TextEdit::singleline(&mut f.right_path)
+                                                    .desired_width(f32::INFINITY),
+                                            );
+                                            ui.add_space(6.0);
+                                            ui.label(
+                                                RichText::new(tr("options.session_description"))
+                                                    .strong(),
+                                            );
+                                            ui.add(
+                                                TextEdit::multiline(&mut f.description)
+                                                    .desired_rows(4)
+                                                    .desired_width(f32::INFINITY),
+                                            );
+                                        }
+                                        // 1: Comparison (Comparação) — default tab
+                                        1 => {
+                                            let avail_w = ui.available_width();
+                                            let right_col_w = 200.0_f32.min(avail_w * 0.36);
+                                            let left_col_w = (avail_w - right_col_w - 14.0).max(260.0);
+                                            ui.horizontal_top(|ui| {
+                                                // Left column: Quick tests
+                                                ui.allocate_ui_with_layout(
+                                                    vec2(left_col_w, 0.0),
+                                                    Layout::top_down(Align::LEFT),
+                                                    |ui| {
+                                                        ui.spacing_mut().item_spacing.y = 4.0;
+                                                        ui.label(
+                                                            RichText::new(tr(
+                                                                "options.quick_tests",
+                                                            ))
+                                                            .strong(),
+                                                        );
+                                                        ui.checkbox(
+                                                            &mut f.compare_size,
+                                                            tr("options.compare_file_size"),
+                                                        );
+                                                        ui.checkbox(
+                                                            &mut f.compare_timestamp,
+                                                            tr("options.compare_timestamps"),
+                                                        );
+                                                        ui.add_enabled_ui(
+                                                            f.compare_timestamp,
+                                                            |ui| {
+                                                                ui.indent(
+                                                                    "folder_ts_indent",
+                                                                    |ui| {
+                                                                        ui.spacing_mut()
+                                                                            .item_spacing
+                                                                            .y = 4.0;
+                                                                        ui.horizontal(|ui| {
+                                                                            let mut secs = f
+                                                                                .timestamp_tolerance_secs
+                                                                                .min(86_400)
+                                                                                as u32;
+                                                                            if ui
+                                                                                .add(
+                                                                                    DragValue::new(
+                                                                                        &mut secs,
+                                                                                    )
+                                                                                    .range(
+                                                                                        0..=86_400,
+                                                                                    ),
+                                                                                )
+                                                                                .changed()
+                                                                            {
+                                                                                f.timestamp_tolerance_secs =
+                                                                                    secs as u64;
+                                                                            }
+                                                                            ui.label(tr(
+                                                                                "options.second_tolerance",
+                                                                            ));
+                                                                        });
+                                                                        ui.checkbox(
+                                                                            &mut f.ignore_dst,
+                                                                            tr("options.ignore_dst_diff"),
+                                                                        );
+                                                                        ui.checkbox(
+                                                                            &mut f.ignore_timezone,
+                                                                            tr("options.ignore_timezone_diff"),
+                                                                        );
+                                                                    },
+                                                                );
+                                                            },
+                                                        );
+                                                    },
+                                                );
+                                                ui.add_space(10.0);
+                                                // Right column: File attributes & Unix metadata
+                                                ui.allocate_ui_with_layout(
+                                                    vec2(right_col_w, 0.0),
+                                                    Layout::top_down(Align::LEFT),
+                                                    |ui| {
+                                                        ui.spacing_mut().item_spacing.y = 4.0;
+                                                        ui.label(tr(
+                                                            "options.compare_file_attributes",
+                                                        ));
+                                                        let summary = f.attributes_summary();
+                                                        ComboBox::from_id_salt("folder_attr_combo")
+                                                            .selected_text(summary)
+                                                            .width((right_col_w - 8.0).max(130.0))
+                                                            .show_ui(ui, |ui| {
+                                                                ui.checkbox(
+                                                                    &mut f.compare_attr_archive,
+                                                                    "Archive (A)",
+                                                                );
+                                                                ui.checkbox(
+                                                                    &mut f.compare_attr_system,
+                                                                    "System (S)",
+                                                                );
+                                                                ui.checkbox(
+                                                                    &mut f.compare_attr_hidden,
+                                                                    "Hidden (H)",
+                                                                );
+                                                                ui.checkbox(
+                                                                    &mut f.compare_attr_readonly,
+                                                                    "Read-only (R)",
+                                                                );
+                                                            });
+                                                        ui.add_space(6.0);
+                                                        ui.label(tr(
+                                                            "options.compare_unix_metadata",
+                                                        ));
+                                                        ui.checkbox(
+                                                            &mut f.compare_unix_permissions,
+                                                            tr("options.compare_permissions"),
+                                                        );
+                                                        ui.checkbox(
+                                                            &mut f.compare_unix_owner,
+                                                            tr("options.compare_owner"),
+                                                        );
+                                                        ui.checkbox(
+                                                            &mut f.compare_unix_group,
+                                                            tr("options.compare_group"),
+                                                        );
+                                                    },
+                                                );
+                                            });
+                                            // Filename alignment quick tests (full width, zero overlap)
+                                            ui.checkbox(
+                                                &mut f.compare_filename_case,
+                                                tr("options.compare_filename_case"),
+                                            );
+                                            ui.checkbox(
+                                                &mut f.align_different_extensions,
+                                                tr("options.align_different_extensions"),
+                                            );
+                                            ui.checkbox(
+                                                &mut f.align_unicode_normalization,
+                                                tr("options.align_unicode_normalization"),
+                                            );
+
+                                            ui.add_space(2.0);
+                                            ui.separator();
+                                            ui.add_space(2.0);
+
+                                            // Bottom section: Requires opening files
+                                            ui.label(
+                                                RichText::new(tr("options.requires_opening_files"))
+                                                    .strong(),
+                                            );
+                                            ui.horizontal(|ui| {
+                                                ui.allocate_ui_with_layout(
+                                                    vec2(left_col_w, 0.0),
+                                                    Layout::left_to_right(Align::Center),
+                                                    |ui| {
+                                                        ui.set_min_width(left_col_w);
+                                                        ui.checkbox(
+                                                            &mut f.compare_content,
+                                                            tr("options.compare_contents_colon"),
+                                                        );
+                                                    },
+                                                );
+                                                ui.add_space(10.0);
+                                                ui.checkbox(
+                                                    &mut f.compare_versions,
+                                                    tr("options.compare_versions"),
+                                                );
+                                            });
                                             ui.add_enabled_ui(f.compare_content, |ui| {
                                                 ui.indent("folder_content_mode_indent", |ui| {
-                                                    for mode in super::folder_ops::ContentCompareMode::ALL {
+                                                    ui.spacing_mut().item_spacing.y = 3.0;
+                                                    for mode in
+                                                        super::folder_ops::ContentCompareMode::ALL
+                                                    {
                                                         ui.radio_value(
                                                             &mut f.content_mode,
                                                             mode,
                                                             tr(mode.label_key()),
                                                         );
                                                     }
+                                                    ui.checkbox(
+                                                        &mut f.skip_if_quick_same,
+                                                        tr("options.skip_if_quick_same"),
+                                                    );
                                                 });
                                             });
-                                            ui.label(
-                                                RichText::new(tr(
-                                                    "options.file_size_and_timestamp_are_always_compared",
-                                                ))
-                                                .size(11.0)
-                                                .color(Color32::from_gray(100)),
+                                            ui.add_enabled_ui(
+                                                f.compare_content || f.compare_versions,
+                                                |ui| {
+                                                    ui.checkbox(
+                                                        &mut f.override_quick_results,
+                                                        tr("options.override_quick_results"),
+                                                    );
+                                                },
                                             );
                                         }
-                                        1 => {
-                                            ui.horizontal(|ui| {
-                                                ui.label(tr("options.name_filter"));
-                                                ui.add(
-                                                    TextEdit::singleline(&mut f.filter)
-                                                        .desired_width(240.0),
+                                        // 2: Handling (Tratamento)
+                                        2 => {
+                                            ui.label(
+                                                RichText::new(tr("options.folder_handling"))
+                                                    .strong(),
+                                            );
+                                            for choice in FolderHandlingChoice::ALL {
+                                                ui.radio_value(
+                                                    &mut f.dir_handling,
+                                                    choice,
+                                                    tr(choice.label_key()),
                                                 );
-                                            });
+                                            }
+                                            ui.separator();
+                                            ui.label(
+                                                RichText::new(tr("options.archive_handling"))
+                                                    .strong(),
+                                            );
+                                            ui.radio_value(
+                                                &mut f.archives_as_folders,
+                                                false,
+                                                tr("options.archives_as_files"),
+                                            );
+                                            ui.radio_value(
+                                                &mut f.archives_as_folders,
+                                                true,
+                                                tr("options.archives_as_folders_always"),
+                                            );
+                                            ui.separator();
+                                            ui.checkbox(
+                                                &mut f.follow_symlinks,
+                                                tr("options.follow_symlinks"),
+                                            );
+                                        }
+                                        // 3: Name Filters (Nomear Filtros)
+                                        3 => {
+                                            ui.label(
+                                                RichText::new(tr("options.include_files")).strong(),
+                                            );
+                                            ui.add(
+                                                TextEdit::singleline(&mut f.filter)
+                                                    .desired_width(f32::INFINITY),
+                                            );
+                                            ui.add_space(6.0);
+                                            ui.label(
+                                                RichText::new(tr("options.exclude_files")).strong(),
+                                            );
+                                            ui.add(
+                                                TextEdit::singleline(&mut f.exclude_patterns)
+                                                    .desired_width(f32::INFINITY),
+                                            );
+                                            ui.label(
+                                                RichText::new(tr("options.exclude_patterns_hint"))
+                                                    .size(11.0)
+                                                    .color(Color32::from_gray(100)),
+                                            );
+                                            ui.add_space(6.0);
                                             ui.checkbox(
                                                 &mut f.suppress_filters,
                                                 tr("options.temporarily_suppress_filters"),
                                             );
-                                            ui.separator();
-                                            ui.label(RichText::new(tr("options.display_filter")).strong());
+                                        }
+                                        // 4: Other Filters (Outros Filtros)
+                                        4 => {
+                                            ui.label(
+                                                RichText::new(tr("options.display_filter"))
+                                                    .strong(),
+                                            );
                                             let mut mode = if f.only_diffs {
                                                 1
                                             } else if f.only_same {
@@ -296,14 +675,44 @@ impl SessionSettingsDialog {
                                                 0
                                             };
                                             ui.radio_value(&mut mode, 0, tr("common.all"));
-                                            ui.radio_value(&mut mode, 1, tr("report.only_differences"));
+                                            ui.radio_value(
+                                                &mut mode,
+                                                1,
+                                                tr("report.only_differences"),
+                                            );
                                             ui.radio_value(&mut mode, 2, tr("common.same"));
                                             f.only_diffs = mode == 1;
                                             f.only_same = mode == 2;
+                                            ui.separator();
+                                            ui.checkbox(
+                                                &mut f.exclude_protected_os,
+                                                tr("options.exclude_protected_os"),
+                                            );
+                                            ui.horizontal(|ui| {
+                                                ui.label(tr("options.size_filter_min_kb"));
+                                                let mut kb = f.min_size_kb.min(10_000_000) as u32;
+                                                if ui
+                                                    .add(
+                                                        DragValue::new(&mut kb)
+                                                            .range(0..=10_000_000),
+                                                    )
+                                                    .changed()
+                                                {
+                                                    f.min_size_kb = kb as u64;
+                                                }
+                                            });
                                         }
+                                        // 5: Misc (Diversos)
                                         _ => {
-                                            ui.checkbox(&mut f.tree, tr("common.show_folder_structure"));
                                             ui.checkbox(&mut f.show_log, tr("common.show_log"));
+                                            ui.checkbox(
+                                                &mut f.show_folder_sizes,
+                                                tr("options.show_folder_sizes"),
+                                            );
+                                            ui.checkbox(
+                                                &mut f.auto_expand_subfolders,
+                                                tr("options.auto_expand_subfolders"),
+                                            );
                                         }
                                     },
                                     SessionRules::Text(t) => match self.active_tab {
@@ -465,34 +874,52 @@ impl SessionSettingsDialog {
                             });
                     });
 
-                // Footer buttons
+                // Footer buttons (with scope combo on the left for Folder Compare)
                 Frame::none()
                     .fill(BcTheme::WINDOW_BG)
                     .inner_margin(Margin::symmetric(12.0, 7.0))
                     .show(ui, |ui| {
                         ui.set_width(total.width() - 24.0);
-                        ui.with_layout(Layout::right_to_left(Align::Center), |ui| {
-                            ui.spacing_mut().item_spacing.x = 8.0;
-                            if ui
-                                .add(Button::new(tr("common.cancel")).min_size(vec2(82.0, 24.0)))
-                                .clicked()
-                            {
-                                cancelled = true;
+                        ui.horizontal(|ui| {
+                            if let SessionRules::Folder(f) = rules {
+                                ComboBox::from_id_salt("folder_rules_scope")
+                                    .selected_text(tr(f.scope.label_key()))
+                                    .width(230.0)
+                                    .show_ui(ui, |ui| {
+                                        for sc in FolderScopeChoice::ALL {
+                                            ui.selectable_value(
+                                                &mut f.scope,
+                                                sc,
+                                                tr(sc.label_key()),
+                                            );
+                                        }
+                                    });
                             }
-                            if ui
-                                .add(
-                                    Button::new(RichText::new(tr("common.ok")).strong())
-                                        .fill(Color32::from_rgb(225, 240, 255))
-                                        .stroke(Stroke::new(
-                                            1.0_f32,
-                                            Color32::from_rgb(0, 120, 212),
-                                        ))
-                                        .min_size(vec2(82.0, 24.0)),
-                                )
-                                .clicked()
-                            {
-                                accepted = true;
-                            }
+                            ui.with_layout(Layout::right_to_left(Align::Center), |ui| {
+                                ui.spacing_mut().item_spacing.x = 8.0;
+                                if ui
+                                    .add(
+                                        Button::new(tr("common.cancel")).min_size(vec2(82.0, 24.0)),
+                                    )
+                                    .clicked()
+                                {
+                                    cancelled = true;
+                                }
+                                if ui
+                                    .add(
+                                        Button::new(RichText::new(tr("common.ok")).strong())
+                                            .fill(Color32::from_rgb(225, 240, 255))
+                                            .stroke(Stroke::new(
+                                                1.0_f32,
+                                                Color32::from_rgb(0, 120, 212),
+                                            ))
+                                            .min_size(vec2(82.0, 24.0)),
+                                    )
+                                    .clicked()
+                                {
+                                    accepted = true;
+                                }
+                            });
                         });
                     });
             });
@@ -519,14 +946,43 @@ mod tests {
         let mut icons = IconManager::new();
         let samples = [
             SessionRules::Folder(FolderRulesDraft {
+                left_path: String::new(),
+                right_path: String::new(),
+                description: String::new(),
+                compare_size: true,
+                compare_timestamp: true,
+                timestamp_tolerance_secs: 2,
+                ignore_dst: false,
+                ignore_timezone: false,
+                compare_filename_case: false,
+                align_different_extensions: false,
+                align_unicode_normalization: true,
+                compare_attr_archive: false,
+                compare_attr_system: false,
+                compare_attr_hidden: false,
+                compare_attr_readonly: false,
+                compare_unix_permissions: false,
+                compare_unix_owner: false,
+                compare_unix_group: false,
                 compare_content: false,
                 content_mode: super::super::folder_ops::ContentCompareMode::Binary,
-                tree: true,
-                show_log: true,
+                compare_versions: false,
+                skip_if_quick_same: false,
+                override_quick_results: true,
+                dir_handling: FolderHandlingChoice::CompareStructure,
+                archives_as_folders: false,
+                follow_symlinks: false,
                 filter: "*.*".into(),
+                exclude_patterns: String::new(),
                 suppress_filters: false,
                 only_diffs: false,
                 only_same: false,
+                exclude_protected_os: false,
+                min_size_kb: 0,
+                show_log: true,
+                show_folder_sizes: true,
+                auto_expand_subfolders: false,
+                scope: FolderScopeChoice::ThisViewOnly,
             }),
             SessionRules::Text(TextRulesDraft {
                 ignore_case: false,

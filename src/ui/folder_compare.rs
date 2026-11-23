@@ -164,12 +164,17 @@ fn volume_label(bytes: u64) -> String {
             break;
         }
     }
-    let number = format!("{value:.1}");
-    let number = number.strip_suffix(".0").unwrap_or(&number);
+    let number = if matches!(suffix, "GB" | "TB") {
+        let s = format!("{value:.2}");
+        s.strip_suffix(".00").unwrap_or(&s).to_owned()
+    } else {
+        let s = format!("{value:.1}");
+        s.strip_suffix(".0").unwrap_or(&s).to_owned()
+    };
     let number = if crate::i18n::language().starts_with("pt") {
         number.replace('.', ",")
     } else {
-        number.to_owned()
+        number
     };
     format!("{number} {suffix}")
 }
@@ -512,6 +517,59 @@ enum ContextAction {
     ExplorerOpenFolder,
 }
 
+#[derive(Clone, Debug, PartialEq, Eq)]
+struct FolderCompareCriteria {
+    compare_size: bool,
+    compare_timestamp: bool,
+    timestamp_tolerance_secs: u64,
+    ignore_dst: bool,
+    ignore_timezone: bool,
+    compare_filename_case: bool,
+    align_different_extensions: bool,
+    align_unicode_normalization: bool,
+    compare_attr_archive: bool,
+    compare_attr_system: bool,
+    compare_attr_hidden: bool,
+    compare_attr_readonly: bool,
+    compare_unix_permissions: bool,
+    compare_unix_owner: bool,
+    compare_unix_group: bool,
+    compare_content: bool,
+    content_mode: ContentCompareMode,
+    compare_versions: bool,
+    skip_if_quick_same: bool,
+    override_quick_results: bool,
+    follow_symlinks: bool,
+}
+
+impl Default for FolderCompareCriteria {
+    fn default() -> Self {
+        Self {
+            compare_size: true,
+            compare_timestamp: true,
+            timestamp_tolerance_secs: 2,
+            ignore_dst: false,
+            ignore_timezone: false,
+            compare_filename_case: false,
+            align_different_extensions: false,
+            align_unicode_normalization: true,
+            compare_attr_archive: false,
+            compare_attr_system: false,
+            compare_attr_hidden: false,
+            compare_attr_readonly: false,
+            compare_unix_permissions: false,
+            compare_unix_owner: false,
+            compare_unix_group: false,
+            compare_content: true,
+            content_mode: ContentCompareMode::Binary,
+            compare_versions: false,
+            skip_if_quick_same: false,
+            override_quick_results: true,
+            follow_symlinks: false,
+        }
+    }
+}
+
 pub enum FolderAction {
     None,
     Home,
@@ -520,6 +578,7 @@ pub enum FolderAction {
 pub struct FolderCompareScreen {
     pub left_path: String,
     pub right_path: String,
+    description: String,
     entries: Vec<Entry>,
     errors: Vec<String>,
     filter: String,
@@ -528,6 +587,13 @@ pub struct FolderCompareScreen {
     ignore_minor: bool,
     compare_content: bool,
     content_mode: ContentCompareMode,
+    criteria: FolderCompareCriteria,
+    archives_as_folders: bool,
+    exclude_protected_os: bool,
+    min_size_kb: u64,
+    show_folder_sizes: bool,
+    auto_expand_subfolders: bool,
+    rules_scope: super::session_settings::FolderScopeChoice,
     show_compare_results: bool,
     dont_show_compare_dialog: bool,
     dont_show_copy_dialog: bool,
@@ -701,32 +767,120 @@ impl FolderCompareScreen {
         super::info_modals::open_info(ctx, crate::i18n::tr("folder.compare_info"), rows);
     }
 
+    fn current_criteria(&self) -> FolderCompareCriteria {
+        let mut c = self.criteria.clone();
+        c.compare_content = self.compare_content;
+        c.content_mode = self.content_mode;
+        c
+    }
+
     pub fn rules_draft(&self) -> super::session_settings::FolderRulesDraft {
+        use super::session_settings::FolderHandlingChoice;
+        let dir_handling = match self.dir_handling {
+            DirHandling::ShowAll => FolderHandlingChoice::ShowAll,
+            DirHandling::CompareStructure => FolderHandlingChoice::CompareStructure,
+            DirHandling::CompareFilesOnly => FolderHandlingChoice::CompareFilesOnly,
+            DirHandling::Flatten => FolderHandlingChoice::Flatten,
+        };
         super::session_settings::FolderRulesDraft {
+            left_path: self.left_path.clone(),
+            right_path: self.right_path.clone(),
+            description: self.description.clone(),
+            compare_size: self.criteria.compare_size,
+            compare_timestamp: self.criteria.compare_timestamp,
+            timestamp_tolerance_secs: self.criteria.timestamp_tolerance_secs,
+            ignore_dst: self.criteria.ignore_dst,
+            ignore_timezone: self.criteria.ignore_timezone,
+            compare_filename_case: self.criteria.compare_filename_case,
+            align_different_extensions: self.criteria.align_different_extensions,
+            align_unicode_normalization: self.criteria.align_unicode_normalization,
+            compare_attr_archive: self.criteria.compare_attr_archive,
+            compare_attr_system: self.criteria.compare_attr_system,
+            compare_attr_hidden: self.criteria.compare_attr_hidden,
+            compare_attr_readonly: self.criteria.compare_attr_readonly,
+            compare_unix_permissions: self.criteria.compare_unix_permissions,
+            compare_unix_owner: self.criteria.compare_unix_owner,
+            compare_unix_group: self.criteria.compare_unix_group,
             compare_content: self.compare_content,
             content_mode: self.content_mode,
-            tree: self.show_tree(),
-            show_log: self.show_log,
+            compare_versions: self.criteria.compare_versions,
+            skip_if_quick_same: self.criteria.skip_if_quick_same,
+            override_quick_results: self.criteria.override_quick_results,
+            dir_handling,
+            archives_as_folders: self.archives_as_folders,
+            follow_symlinks: self.criteria.follow_symlinks,
             filter: self.filter.clone(),
+            exclude_patterns: self.exclude_patterns.join("; "),
             suppress_filters: self.suppress_filters,
             only_diffs: self.display_filter == DisplayFilter::Diff,
             only_same: self.display_filter == DisplayFilter::Same,
+            exclude_protected_os: self.exclude_protected_os,
+            min_size_kb: self.min_size_kb,
+            show_log: self.show_log,
+            show_folder_sizes: self.show_folder_sizes,
+            auto_expand_subfolders: self.auto_expand_subfolders,
+            scope: self.rules_scope,
         }
     }
 
     pub fn apply_rules(&mut self, draft: super::session_settings::FolderRulesDraft) {
-        let content_changed =
-            self.compare_content != draft.compare_content || self.content_mode != draft.content_mode;
+        use super::session_settings::FolderHandlingChoice;
+        let prev_criteria = self.current_criteria();
+        let paths_changed =
+            self.left_path != draft.left_path || self.right_path != draft.right_path;
+        self.left_path = draft.left_path;
+        self.right_path = draft.right_path;
+        self.description = draft.description;
         self.compare_content = draft.compare_content;
         self.content_mode = draft.content_mode;
-        if draft.tree && self.dir_handling == DirHandling::Flatten {
-            self.dir_handling = DirHandling::CompareStructure;
-        } else if !draft.tree {
-            self.dir_handling = DirHandling::Flatten;
-        }
-        self.show_log = draft.show_log;
+        self.criteria = FolderCompareCriteria {
+            compare_size: draft.compare_size,
+            compare_timestamp: draft.compare_timestamp,
+            timestamp_tolerance_secs: draft.timestamp_tolerance_secs,
+            ignore_dst: draft.ignore_dst,
+            ignore_timezone: draft.ignore_timezone,
+            compare_filename_case: draft.compare_filename_case,
+            align_different_extensions: draft.align_different_extensions,
+            align_unicode_normalization: draft.align_unicode_normalization,
+            compare_attr_archive: draft.compare_attr_archive,
+            compare_attr_system: draft.compare_attr_system,
+            compare_attr_hidden: draft.compare_attr_hidden,
+            compare_attr_readonly: draft.compare_attr_readonly,
+            compare_unix_permissions: draft.compare_unix_permissions,
+            compare_unix_owner: draft.compare_unix_owner,
+            compare_unix_group: draft.compare_unix_group,
+            compare_content: draft.compare_content,
+            content_mode: draft.content_mode,
+            compare_versions: draft.compare_versions,
+            skip_if_quick_same: draft.skip_if_quick_same,
+            override_quick_results: draft.override_quick_results,
+            follow_symlinks: draft.follow_symlinks,
+        };
+        self.dir_handling = match draft.dir_handling {
+            FolderHandlingChoice::ShowAll => DirHandling::ShowAll,
+            FolderHandlingChoice::CompareStructure => DirHandling::CompareStructure,
+            FolderHandlingChoice::CompareFilesOnly => DirHandling::CompareFilesOnly,
+            FolderHandlingChoice::Flatten => DirHandling::Flatten,
+        };
+        self.archives_as_folders = draft.archives_as_folders;
         self.filter = draft.filter;
+        self.exclude_patterns = draft
+            .exclude_patterns
+            .split(';')
+            .map(str::trim)
+            .filter(|s| !s.is_empty())
+            .map(str::to_owned)
+            .collect();
         self.suppress_filters = draft.suppress_filters;
+        self.exclude_protected_os = draft.exclude_protected_os;
+        self.min_size_kb = draft.min_size_kb;
+        self.show_log = draft.show_log;
+        self.show_folder_sizes = draft.show_folder_sizes;
+        self.auto_expand_subfolders = draft.auto_expand_subfolders;
+        if self.auto_expand_subfolders {
+            self.collapsed.clear();
+        }
+        self.rules_scope = draft.scope;
         if draft.only_diffs {
             self.display_filter = DisplayFilter::Diff;
         } else if draft.only_same {
@@ -734,7 +888,8 @@ impl FolderCompareScreen {
         } else if matches!(self.display_filter, DisplayFilter::Diff | DisplayFilter::Same) {
             self.display_filter = DisplayFilter::All;
         }
-        if content_changed && !self.left_path.is_empty() && !self.right_path.is_empty() {
+        let needs_rescan = paths_changed || prev_criteria != self.current_criteria();
+        if needs_rescan && !self.left_path.is_empty() && !self.right_path.is_empty() {
             self.start_scan();
         }
     }
@@ -835,6 +990,7 @@ impl FolderCompareScreen {
         Self {
             left_path: String::new(),
             right_path: String::new(),
+            description: String::new(),
             entries: Vec::new(),
             errors: Vec::new(),
             filter: DEFAULT_FILTER.into(),
@@ -843,6 +999,13 @@ impl FolderCompareScreen {
             ignore_minor: false,
             compare_content: true,
             content_mode: ContentCompareMode::Binary,
+            criteria: FolderCompareCriteria::default(),
+            archives_as_folders: false,
+            exclude_protected_os: false,
+            min_size_kb: 0,
+            show_folder_sizes: false,
+            auto_expand_subfolders: false,
+            rules_scope: super::session_settings::FolderScopeChoice::ThisViewOnly,
             show_compare_results: true,
             dont_show_compare_dialog: false,
             dont_show_copy_dialog: false,
@@ -966,12 +1129,15 @@ impl FolderCompareScreen {
             }
         }
         if roots != self.tree_roots {
-            self.collapsed = scan
-                .entries
-                .iter()
-                .filter(|entry| is_dir(entry))
-                .map(|entry| path_key(&entry.relative))
-                .collect();
+            self.collapsed = if self.auto_expand_subfolders {
+                BTreeSet::new()
+            } else {
+                scan.entries
+                    .iter()
+                    .filter(|entry| is_dir(entry))
+                    .map(|entry| path_key(&entry.relative))
+                    .collect()
+            };
             if let Some(entry) = scan.entries.first() {
                 self.selected.insert(entry.id.clone());
                 self.anchor_selected = Some(entry.id.clone());
@@ -1026,24 +1192,49 @@ impl FolderCompareScreen {
         ));
         self.cancel = Arc::new(AtomicBool::new(false));
         let cancel = self.cancel.clone();
-        let content = self.compare_content;
-        let content_mode = self.content_mode;
+        let criteria = self.current_criteria();
         let (sender, receiver) = mpsc::channel();
         self.pending = Some(receiver);
         self.errors.clear();
         thread::spawn(move || {
-            let _ = sender.send(scan_folders_with_mode(
-                &left,
-                &right,
-                content,
-                content_mode,
-                &cancel,
-            ));
+            let _ = sender.send(scan_folders_with_criteria(&left, &right, &criteria, &cancel));
         });
     }
 
     fn is_excluded(&self, entry: &Entry) -> bool {
-        if self.suppress_filters || self.exclude_patterns.is_empty() {
+        if self.suppress_filters {
+            return false;
+        }
+        let name_norm = entry
+            .relative
+            .file_name()
+            .map(|n| n.to_string_lossy().to_lowercase())
+            .unwrap_or_default();
+        if self.exclude_protected_os
+            && matches!(
+                name_norm.as_str(),
+                "desktop.ini"
+                    | "thumbs.db"
+                    | ".ds_store"
+                    | "ntuser.dat"
+                    | "$recycle.bin"
+                    | "system volume information"
+            )
+        {
+            return true;
+        }
+        if self.min_size_kb > 0 && !is_dir(entry) {
+            let min_bytes = self.min_size_kb.saturating_mul(1024);
+            let max_side = entry
+                .left
+                .as_ref()
+                .map_or(0, EntryMeta::len)
+                .max(entry.right.as_ref().map_or(0, EntryMeta::len));
+            if max_side < min_bytes {
+                return true;
+            }
+        }
+        if self.exclude_patterns.is_empty() {
             return false;
         }
         let rel_norm = entry
@@ -1051,11 +1242,6 @@ impl FolderCompareScreen {
             .to_string_lossy()
             .replace('\\', "/")
             .to_lowercase();
-        let name_norm = entry
-            .relative
-            .file_name()
-            .map(|n| n.to_string_lossy().to_lowercase())
-            .unwrap_or_default();
         self.exclude_patterns.iter().any(|pat| {
             let pat_norm = pat.replace('\\', "/").to_lowercase();
             if pat_norm.contains('/') {
@@ -4371,19 +4557,45 @@ impl FolderCompareScreen {
                 let visible = self.visible_indices();
                 let rect = ui.max_rect();
                 for side in 0..2 {
-                    let files: Vec<_> = visible
-                        .iter()
-                        .filter_map(|&index| {
-                            let entry = &self.entries[index];
-                            let metadata = if side == 0 { &entry.left } else { &entry.right };
-                            metadata.as_ref().filter(|m| m.is_file())
-                        })
-                        .collect();
-                    let bytes: u64 = files.iter().map(|m| m.len()).sum();
-                    let text = crate::i18n::tr_fmt(
-                        "status.file_s",
-                        &[("", &files.len().to_string()), ("", &volume_label(bytes))],
-                    );
+                    let sel_files: Vec<_> = if self.selected.len() > 1 {
+                        self.entries
+                            .iter()
+                            .filter(|entry| self.selected.contains(&entry.id))
+                            .filter_map(|entry| {
+                                let metadata = if side == 0 { &entry.left } else { &entry.right };
+                                metadata.as_ref().filter(|m| m.is_file())
+                            })
+                            .collect()
+                    } else {
+                        Vec::new()
+                    };
+                    let text = if !sel_files.is_empty() {
+                        let bytes: u64 = sel_files.iter().map(|m| m.len()).sum();
+                        crate::i18n::tr_fmt(
+                            "status.files_selected",
+                            &[
+                                ("count", &grouped_size(sel_files.len() as u64)),
+                                ("size", &volume_label(bytes)),
+                            ],
+                        )
+                    } else {
+                        let files: Vec<_> = visible
+                            .iter()
+                            .filter_map(|&index| {
+                                let entry = &self.entries[index];
+                                let metadata = if side == 0 { &entry.left } else { &entry.right };
+                                metadata.as_ref().filter(|m| m.is_file())
+                            })
+                            .collect();
+                        let bytes: u64 = files.iter().map(|m| m.len()).sum();
+                        crate::i18n::tr_fmt(
+                            "status.file_s",
+                            &[
+                                ("", &grouped_size(files.len() as u64)),
+                                ("", &volume_label(bytes)),
+                            ],
+                        )
+                    };
                     let x = rect.left() + side as f32 * rect.width() / 2.0;
                     let end = x + rect.width() / 2.0;
                     let free_x = end - 180.0;
@@ -4900,7 +5112,7 @@ impl FolderCompareScreen {
                                     );
                                 let size_display = if metadata.is_file() {
                                     Some((metadata.len(), text_color))
-                                } else if metadata.is_dir() {
+                                } else if metadata.is_dir() && self.show_folder_sizes {
                                     Some((entry.dir_summary[side].bytes, Color32::GRAY))
                                 } else {
                                     None
@@ -5447,14 +5659,135 @@ fn scan_folders_with_mode(
     content_mode: ContentCompareMode,
     cancel: &AtomicBool,
 ) -> Scan {
+    let criteria = FolderCompareCriteria {
+        compare_content: content,
+        content_mode,
+        ..FolderCompareCriteria::default()
+    };
+    scan_folders_with_criteria(left, right, &criteria, cancel)
+}
+
+fn stem_key(path: &Path) -> Option<String> {
+    let stem = path.file_stem()?.to_string_lossy().to_lowercase();
+    let parent = path
+        .parent()
+        .map(path_key)
+        .unwrap_or_default();
+    if parent.is_empty() {
+        Some(stem)
+    } else {
+        Some(format!("{parent}/{stem}"))
+    }
+}
+
+fn evaluate_quick_tests(
+    relative: &Path,
+    right_relative: &Path,
+    l: &EntryMeta,
+    r: &EntryMeta,
+    criteria: &FolderCompareCriteria,
+) -> (Status, bool) {
+    let mut hard_diff = false;
+    let mut minor_diff = false;
+
+    if criteria.compare_size && l.len() != r.len() {
+        hard_diff = true;
+    }
+    if criteria.compare_timestamp {
+        let lt = l.modified().unwrap_or(SystemTime::UNIX_EPOCH);
+        let rt = r.modified().unwrap_or(SystemTime::UNIX_EPOCH);
+        if lt != rt {
+            let diff_secs = lt
+                .duration_since(rt)
+                .or_else(|_| rt.duration_since(lt))
+                .map_or(u64::MAX, |d| d.as_secs());
+            let tol = criteria.timestamp_tolerance_secs;
+            let dst_match = criteria.ignore_dst && diff_secs.abs_diff(3600) <= tol;
+            let tz_rem = diff_secs % 3600;
+            let tz_match = criteria.ignore_timezone
+                && diff_secs <= 86_400
+                && (tz_rem <= tol || 3600 - tz_rem <= tol);
+            if dst_match || tz_match {
+                // Treated as matching timestamp
+            } else if diff_secs <= tol {
+                minor_diff = true;
+            } else {
+                hard_diff = true;
+            }
+        }
+    }
+    if criteria.compare_filename_case && relative != right_relative {
+        hard_diff = true;
+    }
+    let mut attr_mask = 0u32;
+    if criteria.compare_attr_readonly {
+        attr_mask |= 0x01;
+    }
+    if criteria.compare_attr_hidden {
+        attr_mask |= 0x02;
+    }
+    if criteria.compare_attr_system {
+        attr_mask |= 0x04;
+    }
+    if criteria.compare_attr_archive {
+        attr_mask |= 0x20;
+    }
+    if attr_mask != 0 && (l.dos_attrs & attr_mask) != (r.dos_attrs & attr_mask) {
+        hard_diff = true;
+    }
+    if criteria.compare_unix_permissions && l.unix_mode != r.unix_mode {
+        hard_diff = true;
+    }
+    if criteria.compare_unix_owner && l.unix_uid != r.unix_uid {
+        hard_diff = true;
+    }
+    if criteria.compare_unix_group && l.unix_gid != r.unix_gid {
+        hard_diff = true;
+    }
+
+    if hard_diff {
+        (Status::Different, false)
+    } else if minor_diff {
+        (Status::Different, true)
+    } else {
+        (Status::Same, false)
+    }
+}
+
+fn pe_versions_match(left_full: &Path, right_full: &Path) -> Option<bool> {
+    if !crate::pe_version::supported(left_full)
+        || !crate::pe_version::supported(right_full)
+    {
+        return None;
+    }
+    let l_img = crate::pe_version::Image::load(left_full).ok()?;
+    let r_img = crate::pe_version::Image::load(right_full).ok()?;
+    fn nodes_equal(a: &[crate::pe_version::Node], b: &[crate::pe_version::Node]) -> bool {
+        if a.len() != b.len() {
+            return false;
+        }
+        a.iter()
+            .zip(b)
+            .all(|(x, y)| x.key == y.key && x.same(y) && nodes_equal(&x.children, &y.children))
+    }
+    Some(nodes_equal(&l_img.nodes, &r_img.nodes))
+}
+
+fn scan_folders_with_criteria(
+    left: &Path,
+    right: &Path,
+    criteria: &FolderCompareCriteria,
+    cancel: &AtomicBool,
+) -> Scan {
+    let follow = criteria.follow_symlinks;
     let ((left_entries, mut errors), (right_snapshot, right_errors)) = std::thread::scope(|scope| {
         let hr = scope.spawn(|| {
             let mut r_errs = Vec::new();
-            let snap = folder_source::scan_source(right, cancel, &mut r_errs);
+            let snap = folder_source::scan_source_with_options(right, follow, cancel, &mut r_errs);
             (snap, r_errs)
         });
         let mut l_errs = Vec::new();
-        let l_snap = folder_source::scan_source(left, cancel, &mut l_errs);
+        let l_snap = folder_source::scan_source_with_options(left, follow, cancel, &mut l_errs);
         ((l_snap, l_errs), hr.join().unwrap())
     });
     errors.extend(right_errors);
@@ -5472,7 +5805,7 @@ fn scan_folders_with_mode(
             errors.push("folder.comparison_canceled_partial_results".into());
             break;
         }
-        let right_entry = right_entries
+        let mut right_entry = right_entries
             .get_mut(&(path_key(&relative), l.is_dir()))
             .and_then(|candidates| {
                 if candidates.is_empty() {
@@ -5484,6 +5817,25 @@ fn scan_folders_with_mode(
                     .unwrap_or(0);
                 Some(candidates.remove(index))
             });
+        if right_entry.is_none() && criteria.align_different_extensions && l.is_file() {
+            if let Some(target_stem) = stem_key(&relative) {
+                let matching_key = right_entries
+                    .iter()
+                    .find(|((_, is_dir_flag), cands)| {
+                        !*is_dir_flag
+                            && !cands.is_empty()
+                            && stem_key(&cands[0].0).as_deref() == Some(target_stem.as_str())
+                    })
+                    .map(|(k, _)| k.clone());
+                if let Some(k) = matching_key {
+                    if let Some(cands) = right_entries.get_mut(&k) {
+                        if !cands.is_empty() {
+                            right_entry = Some(cands.remove(0));
+                        }
+                    }
+                }
+            }
+        }
         let right_relative = right_entry
             .as_ref()
             .map(|(path, _)| path.clone())
@@ -5497,28 +5849,35 @@ fn scan_folders_with_mode(
             None => Status::LeftOnly,
             Some(r) if l.is_dir() && r.is_dir() => Status::Same,
             Some(r) if l.is_file() && r.is_file() => {
-                if content {
-                    content_compared = true;
-                    content_indices.push(entries.len());
-                    Status::Same
-                } else if l.len() != r.len() {
-                    Status::Different
-                } else {
-                    let lt = l.modified().unwrap_or(SystemTime::UNIX_EPOCH);
-                    let rt = r.modified().unwrap_or(SystemTime::UNIX_EPOCH);
-                    if lt == rt {
-                        Status::Same
-                    } else {
-                        let diff_secs = lt
-                            .duration_since(rt)
-                            .or_else(|_| rt.duration_since(lt))
-                            .map_or(u64::MAX, |d| d.as_secs());
-                        if diff_secs <= 2 || diff_secs == 3600 {
-                            is_minor = true;
+                let (quick_status, quick_minor) =
+                    evaluate_quick_tests(&relative, &right_relative, &l, r, criteria);
+                is_minor = quick_minor;
+                let mut st = quick_status;
+                if criteria.compare_versions && left.is_dir() && right.is_dir() {
+                    if let Some(same_ver) =
+                        pe_versions_match(&left.join(&relative), &right.join(&right_relative))
+                    {
+                        if same_ver {
+                            if criteria.override_quick_results {
+                                st = Status::Same;
+                                is_minor = false;
+                            }
+                        } else {
+                            st = Status::Different;
+                            is_minor = false;
                         }
-                        Status::Different
                     }
                 }
+                if criteria.compare_content {
+                    let skip = criteria.skip_if_quick_same
+                        && quick_status == Status::Same
+                        && !quick_minor;
+                    if !skip {
+                        content_compared = true;
+                        content_indices.push(entries.len());
+                    }
+                }
+                st
             }
             Some(_) => Status::Different,
         };
@@ -5541,7 +5900,7 @@ fn scan_folders_with_mode(
             dir_summary: [DirSideSummary::default(); 2],
         });
     }
-    if content && !content_indices.is_empty() && !cancel.load(Ordering::Relaxed) {
+    if criteria.compare_content && !content_indices.is_empty() && !cancel.load(Ordering::Relaxed) {
         let total = content_indices.len();
         let workers = std::thread::available_parallelism()
             .map(|p| p.get())
@@ -5554,6 +5913,7 @@ fn scan_folders_with_mode(
         let entries_ref = &entries;
         let idx_ref = &content_indices;
         let verdicts_ref = &verdicts;
+        let content_mode = criteria.content_mode;
         std::thread::scope(|scope| {
             for _ in 0..workers {
                 scope.spawn(|| loop {
@@ -5595,11 +5955,16 @@ fn scan_folders_with_mode(
                     } => {
                         e.left_crc32 = left_crc.or(e.left_crc32);
                         e.right_crc32 = right_crc.or(e.right_crc32);
-                        e.status = Status::Same;
+                        if criteria.override_quick_results {
+                            e.status = Status::Same;
+                            e.is_minor = false;
+                        }
                     }
                     FileContentVerdict::Minor { .. } => {
-                        e.is_minor = true;
-                        e.status = Status::Different;
+                        if criteria.override_quick_results || e.status == Status::Same {
+                            e.is_minor = true;
+                            e.status = Status::Different;
+                        }
                     }
                     FileContentVerdict::Different {
                         left_crc,
@@ -5609,6 +5974,7 @@ fn scan_folders_with_mode(
                         e.left_crc32 = left_crc.or(e.left_crc32);
                         e.right_crc32 = right_crc.or(e.right_crc32);
                         e.status = Status::Different;
+                        e.is_minor = false;
                     }
                     FileContentVerdict::Error(err) => {
                         let message = format!("{}: {err}", e.relative.display());
@@ -6288,6 +6654,91 @@ mod tests {
         screen.set_selected_as_base_folders();
         screen.comparison_results();
         assert!(screen.entries.iter().any(|e| e.relative == Path::new("a.bin")));
+
+        let _ = fs::remove_dir_all(&root);
+    }
+
+    #[test]
+    fn folder_compare_criteria_dst_timezone_size_and_content_overrides_work() {
+        use std::time::Duration;
+        let root = std::env::temp_dir().join(format!(
+            "anycompare_criteria_test_{}",
+            std::process::id()
+        ));
+        let _ = fs::remove_dir_all(&root);
+        let left = root.join("left");
+        let right = root.join("right");
+        fs::create_dir_all(&left).unwrap();
+        fs::create_dir_all(&right).unwrap();
+
+        let t0 = SystemTime::UNIX_EPOCH + Duration::from_secs(1_700_000_000);
+        let t_dst = t0 + Duration::from_secs(3600);
+        let t_tz = t0 + Duration::from_secs(3 * 3600);
+        let write_ts = |p: PathBuf, data: &[u8], ts: SystemTime| {
+            fs::write(&p, data).unwrap();
+            let f = fs::File::options().write(true).open(&p).unwrap();
+            let _ = f.set_modified(ts);
+        };
+
+        write_ts(left.join("dst.txt"), b"same", t0);
+        write_ts(right.join("dst.txt"), b"same", t_dst);
+        write_ts(left.join("tz.txt"), b"same", t0);
+        write_ts(right.join("tz.txt"), b"same", t_tz);
+        write_ts(left.join("size.txt"), b"short", t0);
+        write_ts(right.join("size.txt"), b"much-longer", t0);
+        write_ts(left.join("ext.txt"), b"hello", t0);
+        write_ts(right.join("ext.md"), b"hello", t0);
+
+        let cancel = AtomicBool::new(false);
+        let base = FolderCompareCriteria {
+            compare_content: false,
+            ..FolderCompareCriteria::default()
+        };
+
+        // Default quick tests: dst, tz, size all differ; ext.txt is LeftOnly
+        let s0 = scan_folders_with_criteria(&left, &right, &base, &cancel);
+        let st = |scan: &Scan, name: &str| {
+            scan.entries
+                .iter()
+                .find(|e| e.relative == Path::new(name))
+                .map(|e| e.status)
+        };
+        assert_eq!(st(&s0, "dst.txt"), Some(Status::Different));
+        assert_eq!(st(&s0, "tz.txt"), Some(Status::Different));
+        assert_eq!(st(&s0, "size.txt"), Some(Status::Different));
+        assert_eq!(st(&s0, "ext.txt"), Some(Status::LeftOnly));
+
+        // Enable ignore_dst + ignore_timezone + align_different_extensions + compare_size=false
+        let c1 = FolderCompareCriteria {
+            compare_size: false,
+            ignore_dst: true,
+            ignore_timezone: true,
+            align_different_extensions: true,
+            ..base.clone()
+        };
+        let s1 = scan_folders_with_criteria(&left, &right, &c1, &cancel);
+        assert_eq!(st(&s1, "dst.txt"), Some(Status::Same));
+        assert_eq!(st(&s1, "tz.txt"), Some(Status::Same));
+        assert_eq!(st(&s1, "size.txt"), Some(Status::Same));
+        assert_eq!(st(&s1, "ext.txt"), Some(Status::Same));
+
+        // Content compare with override_quick_results = false preserves timestamp diff
+        let c2 = FolderCompareCriteria {
+            compare_content: true,
+            override_quick_results: false,
+            ..base.clone()
+        };
+        let s2 = scan_folders_with_criteria(&left, &right, &c2, &cancel);
+        assert_eq!(st(&s2, "dst.txt"), Some(Status::Different));
+
+        // Content compare with override_quick_results = true overrides timestamp diff to Same
+        let c3 = FolderCompareCriteria {
+            compare_content: true,
+            override_quick_results: true,
+            ..base
+        };
+        let s3 = scan_folders_with_criteria(&left, &right, &c3, &cancel);
+        assert_eq!(st(&s3, "dst.txt"), Some(Status::Same));
 
         let _ = fs::remove_dir_all(&root);
     }

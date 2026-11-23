@@ -28,30 +28,54 @@ use std::os::windows::process::CommandExt;
 #[cfg(windows)]
 const CREATE_NO_WINDOW: u32 = 0x0800_0000;
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Default)]
 pub struct EntryMeta {
     pub is_dir: bool,
     pub size: u64,
     pub modified: Option<SystemTime>,
     pub crc32: Option<u32>,
+    /// Windows DOS attribute bits (`FILE_ATTRIBUTE_*`: R=0x1, H=0x2, S=0x4, A=0x20).
+    pub dos_attrs: u32,
+    /// POSIX mode bits (`st_mode & 0o7777`).
+    pub unix_mode: Option<u32>,
+    pub unix_uid: Option<u32>,
+    pub unix_gid: Option<u32>,
 }
 
 impl EntryMeta {
     pub fn from_fs(meta: &fs::Metadata) -> Self {
+        #[cfg(windows)]
+        let dos_attrs = {
+            use std::os::windows::fs::MetadataExt;
+            meta.file_attributes()
+        };
+        #[cfg(not(windows))]
+        let dos_attrs = if meta.permissions().readonly() { 0x1 } else { 0 };
+
+        #[cfg(unix)]
+        let (unix_mode, unix_uid, unix_gid) = {
+            use std::os::unix::fs::MetadataExt;
+            (Some(meta.mode() & 0o7777), Some(meta.uid()), Some(meta.gid()))
+        };
+        #[cfg(not(unix))]
+        let (unix_mode, unix_uid, unix_gid) = (None, None, None);
+
         Self {
             is_dir: meta.is_dir(),
             size: if meta.is_dir() { 0 } else { meta.len() },
             modified: meta.modified().ok(),
             crc32: None,
+            dos_attrs,
+            unix_mode,
+            unix_uid,
+            unix_gid,
         }
     }
 
     pub fn dir() -> Self {
         Self {
             is_dir: true,
-            size: 0,
-            modified: None,
-            crc32: None,
+            ..Self::default()
         }
     }
 
@@ -187,8 +211,17 @@ pub fn scan_source(
     cancel: &AtomicBool,
     errors: &mut Vec<String>,
 ) -> BTreeMap<PathBuf, EntryMeta> {
+    scan_source_with_options(root, false, cancel, errors)
+}
+
+pub fn scan_source_with_options(
+    root: &Path,
+    follow_symlinks: bool,
+    cancel: &AtomicBool,
+    errors: &mut Vec<String>,
+) -> BTreeMap<PathBuf, EntryMeta> {
     match source_kind(root) {
-        Some(SourceKind::Directory) => scan_directory(root, cancel, errors),
+        Some(SourceKind::Directory) => scan_directory(root, follow_symlinks, cancel, errors),
         Some(SourceKind::Zip) => scan_zip(root, cancel, errors),
         Some(SourceKind::Tar) => scan_tar(root, false, cancel, errors),
         Some(SourceKind::TarGz) => scan_tar(root, true, cancel, errors),
@@ -206,11 +239,12 @@ pub fn scan_source(
 
 fn scan_directory(
     root: &Path,
+    follow_symlinks: bool,
     cancel: &AtomicBool,
     errors: &mut Vec<String>,
 ) -> BTreeMap<PathBuf, EntryMeta> {
     let mut entries = BTreeMap::new();
-    for result in WalkDir::new(root).follow_links(false).min_depth(1) {
+    for result in WalkDir::new(root).follow_links(follow_symlinks).min_depth(1) {
         if cancel.load(Ordering::Relaxed) {
             break;
         }
@@ -276,6 +310,7 @@ fn scan_zip(
             size: if is_dir { 0 } else { entry.size() },
             modified,
             crc32: if is_dir { None } else { Some(entry.crc32()) },
+            ..EntryMeta::default()
         };
         entries.insert(rel, meta);
     }
@@ -457,6 +492,7 @@ fn parse_tar_stream(
                     size: if is_dir { 0 } else { size },
                     modified,
                     crc32,
+                    ..EntryMeta::default()
                 },
             );
         }
@@ -601,6 +637,7 @@ fn parse_bsdtar_verbose_line(line: &str) -> Option<(PathBuf, EntryMeta)> {
             size: if is_dir { 0 } else { size },
             modified: None,
             crc32: None,
+            ..EntryMeta::default()
         },
     ))
 }
@@ -728,6 +765,7 @@ fn scan_snapshot(root: &Path, errors: &mut Vec<String>) -> BTreeMap<PathBuf, Ent
                         .modified_unix
                         .map(|s| UNIX_EPOCH + Duration::from_secs(s)),
                     crc32: item.crc32,
+                    ..EntryMeta::default()
                 },
             );
         }

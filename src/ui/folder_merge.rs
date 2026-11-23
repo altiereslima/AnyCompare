@@ -195,12 +195,14 @@ impl FolderMergeScreen {
                         size: lm.size,
                         modified: None,
                         crc32: None,
+                        ..EntryMeta::default()
                     };
                     let r_meta = EntryMeta {
                         is_dir: false,
                         size: rm.size,
                         modified: None,
                         crc32: None,
+                        ..EntryMeta::default()
                     };
                     match folder_ops::compare_file_pair(
                         &left_root,

@@ -255,10 +255,128 @@ fn paint_arrow(painter: &Painter, left: f32, top: f32) {
     }
 }
 
+fn paint_filter_icon(painter: &Painter, rect: Rect, name: &str, enabled: bool) -> bool {
+    #[derive(Clone, Copy)]
+    enum Block {
+        Red,
+        Gray,
+        Black,
+        Purple,
+    }
+    let rows: &[(Option<Block>, Option<Block>)] = match name {
+        "FavNoOrphan" => &[
+            (Some(Block::Red), Some(Block::Gray)),
+            (Some(Block::Gray), Some(Block::Red)),
+            (Some(Block::Black), Some(Block::Black)),
+        ],
+        "FavDiffNoOrphan" => &[
+            (Some(Block::Red), Some(Block::Gray)),
+            (Some(Block::Gray), Some(Block::Red)),
+        ],
+        "FavOrphan" => &[
+            (None, Some(Block::Purple)),
+            (Some(Block::Purple), None),
+            (None, Some(Block::Purple)),
+        ],
+        "FavLeftNewer" => &[
+            (Some(Block::Red), Some(Block::Gray)),
+            (Some(Block::Red), Some(Block::Gray)),
+            (Some(Block::Red), Some(Block::Gray)),
+        ],
+        "FavRightNewer" => &[
+            (Some(Block::Gray), Some(Block::Red)),
+            (Some(Block::Gray), Some(Block::Red)),
+            (Some(Block::Gray), Some(Block::Red)),
+        ],
+        "FavLeftNewerOrphan" => &[
+            (Some(Block::Red), Some(Block::Gray)),
+            (Some(Block::Purple), None),
+            (Some(Block::Purple), None),
+        ],
+        "FavRightNewerOrphan" => &[
+            (Some(Block::Gray), Some(Block::Red)),
+            (None, Some(Block::Purple)),
+            (None, Some(Block::Purple)),
+        ],
+        "FavLeftOrphan" => &[
+            (Some(Block::Purple), None),
+            (Some(Block::Purple), None),
+            (Some(Block::Purple), None),
+        ],
+        "FavRightOrphan" => &[
+            (None, Some(Block::Purple)),
+            (None, Some(Block::Purple)),
+            (None, Some(Block::Purple)),
+        ],
+        _ => return false,
+    };
+
+    let colors = |b: Block| -> (Color32, Color32) {
+        if !enabled {
+            return (Color32::from_gray(195), Color32::from_gray(155));
+        }
+        match b {
+            Block::Red => (Color32::from_rgb(228, 42, 42), Color32::from_rgb(162, 18, 18)),
+            Block::Gray => (
+                Color32::from_rgb(172, 172, 172),
+                Color32::from_rgb(112, 112, 112),
+            ),
+            Block::Black => (
+                Color32::from_rgb(80, 80, 80),
+                Color32::from_rgb(35, 35, 35),
+            ),
+            Block::Purple => (
+                Color32::from_rgb(154, 42, 238),
+                Color32::from_rgb(102, 14, 176),
+            ),
+        }
+    };
+
+    let origin = painter.round_pos_to_pixels(rect.min);
+    let block_w = 5.0;
+    let block_h = 3.0;
+    let row_step = 5.0;
+    let total_h = (rows.len() as f32) * block_h + (rows.len().saturating_sub(1) as f32) * 2.0;
+    let start_y = origin.y + ((16.0 - total_h) / 2.0).floor();
+    let left_x = origin.x + 2.0;
+    let right_x = origin.x + 9.0;
+
+    let draw_block = |x: f32, y: f32, b: Block| {
+        let (fill, border) = colors(b);
+        let r = Rect::from_min_size(pos2(x, y), vec2(block_w, block_h));
+        painter.rect_filled(r, 0.0, border);
+        painter.rect_filled(r.shrink(0.5), 0.0, fill);
+    };
+
+    for (idx, &(left, right)) in rows.iter().enumerate() {
+        let y = start_y + (idx as f32) * row_step;
+        if let Some(b) = left {
+            draw_block(left_x, y, b);
+        }
+        if let Some(b) = right {
+            draw_block(right_x, y, b);
+        }
+    }
+    if name == "FavOrphan" {
+        let dash_color = if enabled {
+            Color32::from_gray(75)
+        } else {
+            Color32::from_gray(160)
+        };
+        painter.rect_filled(
+            Rect::from_min_size(pos2(origin.x + 7.0, origin.y + 7.0), vec2(2.0, 2.0)),
+            0.0,
+            dash_color,
+        );
+    }
+    true
+}
+
 fn paint_face(
     ui: &Ui,
     icons: &mut IconManager,
     rect: Rect,
+    name: &str,
     image: &str,
     caption: &str,
     state: ToolState,
@@ -266,20 +384,22 @@ fn paint_face(
     let painter = ui.painter();
     // A checked button draws its icon 1 px right and down and its caption 1 px down.
     let pressed = if state.checked { 1.0 } else { 0.0 };
+    let icon_rect = painter.round_rect_to_pixels(Rect::from_min_size(
+        pos2(
+            rect.left() + ((rect.width() - 16.0) / 2.0).floor() + pressed,
+            rect.top() + 3.0 + pressed,
+        ),
+        vec2(16.0, 16.0),
+    ));
     if let Some(texture) = icons.get_icon_with_state(ui.ctx(), image, state.enabled) {
-        let icon = painter.round_rect_to_pixels(Rect::from_min_size(
-            pos2(
-                rect.left() + ((rect.width() - 16.0) / 2.0).floor() + pressed,
-                rect.top() + 3.0 + pressed,
-            ),
-            vec2(16.0, 16.0),
-        ));
         painter.image(
             texture.id(),
-            icon,
+            icon_rect,
             Rect::from_min_max(Pos2::ZERO, pos2(1.0, 1.0)),
             Color32::WHITE,
         );
+    } else {
+        paint_filter_icon(painter, icon_rect, name, state.enabled);
     }
     let caption = crate::i18n::tr(caption);
     let galley = ui.fonts(|fonts| {
@@ -430,7 +550,7 @@ pub fn show(
                     (ToolKind::Side, true, false) => "imgCopyLeft",
                     _ => item.image,
                 };
-                paint_face(ui, icons, rect, image, item.short, st);
+                paint_face(ui, icons, rect, item.name, image, item.short, st);
                 let response = response.on_hover_text(crate::i18n::tr(item.hint));
                 if st.enabled && response.clicked() {
                     event = Some(ToolEvent::Click(item.name));
@@ -498,7 +618,7 @@ pub fn show(
                     hot,
                     (checked || hot).then_some(face_rect.right() - 1.0),
                 );
-                paint_face(ui, icons, face_rect, face.image, face.short, st);
+                paint_face(ui, icons, face_rect, face.name, face.image, face.short, st);
                 paint_arrow(
                     ui.painter(),
                     arrow_rect.left()
@@ -530,32 +650,133 @@ pub fn show(
                     }
                 }
                 if item.kind == ToolKind::Group {
-                    let picked = popup::popup_below_widget(
-                        ui,
-                        popup,
-                        &face_response.union(arrow_response),
-                        PopupCloseBehavior::CloseOnClick,
-                        |ui| {
-                            ui.set_min_width(180.0);
-                            let mut picked = None;
-                            for child in item.children {
-                                let child_state = state(child.name);
-                                let texture = icons
-                                    .get_icon_with_state(ui.ctx(), child.image, child_state.enabled)
-                                    .unwrap_or_else(|| icons.menu_gutter(ui.ctx()));
-                                let text = RichText::new(crate::i18n::tr(child.caption));
-                                let button =
-                                    Button::image_and_text((texture.id(), vec2(16.0, 16.0)), text)
-                                        .selected(child_state.checked);
-                                if ui.add_enabled(child_state.enabled, button).clicked() {
-                                    picked = Some(child.name);
-                                }
-                            }
-                            picked
-                        },
-                    );
-                    if let Some(Some(name)) = picked {
-                        event = Some(ToolEvent::Click(name));
+                    let anchor = face_response.clone().union(arrow_response.clone());
+                    if ui.memory(|m| m.is_popup_open(popup)) {
+                        let captions: Vec<String> = item
+                            .children
+                            .iter()
+                            .map(|c| crate::i18n::tr(c.caption))
+                            .collect();
+                        let max_text_w = captions
+                            .iter()
+                            .map(|c| advance(ui, c))
+                            .fold(0.0_f32, f32::max);
+                        let menu_w = (max_text_w + 42.0).max(176.0).ceil();
+                        let row_h = 22.0;
+                        let area_resp = Area::new(popup)
+                            .order(Order::Foreground)
+                            .fixed_pos(pos2(anchor.rect.left(), anchor.rect.bottom() + 1.0))
+                            .constrain(true)
+                            .show(ui.ctx(), |ui| {
+                                Frame::none()
+                                    .fill(Color32::from_gray(242))
+                                    .stroke(Stroke::new(1.0_f32, Color32::from_gray(180)))
+                                    .shadow(Shadow {
+                                        offset: vec2(2.0, 2.0),
+                                        blur: 4.0,
+                                        spread: 0.0,
+                                        color: Color32::from_black_alpha(38),
+                                    })
+                                    .inner_margin(Margin::same(2.0))
+                                    .show(ui, |ui| {
+                                        ui.set_width(menu_w);
+                                        ui.spacing_mut().item_spacing = vec2(0.0, 0.0);
+                                        let mut picked = None;
+                                        for (child, label) in
+                                            item.children.iter().zip(captions.iter())
+                                        {
+                                            let child_state = state(child.name);
+                                            let (row_rect, resp) = ui.allocate_exact_size(
+                                                vec2(menu_w, row_h),
+                                                if child_state.enabled {
+                                                    Sense::click()
+                                                } else {
+                                                    Sense::hover()
+                                                },
+                                            );
+                                            let hot = child_state.enabled && resp.hovered();
+                                            let painter = ui.painter();
+                                            if hot {
+                                                painter.rect_filled(row_rect, 0.0, CHECKED_FILL);
+                                                painter.rect_stroke(
+                                                    row_rect.shrink(0.5),
+                                                    0.0,
+                                                    Stroke::new(1.0_f32, CHECKED_BORDER),
+                                                );
+                                            }
+                                            let icon_rect = painter.round_rect_to_pixels(
+                                                Rect::from_min_size(
+                                                    pos2(
+                                                        row_rect.left() + 4.0,
+                                                        row_rect.center().y - 8.0,
+                                                    ),
+                                                    vec2(16.0, 16.0),
+                                                ),
+                                            );
+                                            if child_state.checked {
+                                                let badge = icon_rect.expand(1.5);
+                                                painter.rect_filled(badge, 1.0, CHECKED_FILL);
+                                                painter.rect_stroke(
+                                                    badge,
+                                                    1.0,
+                                                    Stroke::new(1.0_f32, CHECKED_BORDER),
+                                                );
+                                            }
+                                            if let Some(tex) = icons.get_icon_with_state(
+                                                ui.ctx(),
+                                                child.image,
+                                                child_state.enabled,
+                                            ) {
+                                                painter.image(
+                                                    tex.id(),
+                                                    icon_rect,
+                                                    Rect::from_min_max(Pos2::ZERO, pos2(1.0, 1.0)),
+                                                    Color32::WHITE,
+                                                );
+                                            } else {
+                                                paint_filter_icon(
+                                                    painter,
+                                                    icon_rect,
+                                                    child.name,
+                                                    child_state.enabled,
+                                                );
+                                            }
+                                            let text_color = if child_state.enabled {
+                                                Color32::BLACK
+                                            } else {
+                                                DISABLED_TEXT
+                                            };
+                                            painter.text(
+                                                pos2(row_rect.left() + 28.0, row_rect.center().y),
+                                                Align2::LEFT_CENTER,
+                                                label,
+                                                font(),
+                                                text_color,
+                                            );
+                                            ui.ctx().data_mut(|data| {
+                                                data.insert_temp(
+                                                    Id::new("capture_menu_rect").with(label),
+                                                    row_rect,
+                                                );
+                                            });
+                                            if child_state.enabled && resp.clicked() {
+                                                picked = Some(child.name);
+                                            }
+                                        }
+                                        picked
+                                    })
+                                    .inner
+                            });
+                        let esc = ui.input(|i| i.key_pressed(Key::Escape));
+                        let clicked_elsewhere = area_resp.response.clicked_elsewhere()
+                            && !arrow_response.clicked()
+                            && !face_response.clicked();
+                        if let Some(name) = area_resp.inner {
+                            event = Some(ToolEvent::Click(name));
+                            ui.memory_mut(|m| m.close_popup());
+                        } else if esc || clicked_elsewhere {
+                            ui.memory_mut(|m| m.close_popup());
+                        }
                     }
                 }
             }
