@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\AnyCompare-Test]
+@="Padrão A"
+"Ativo"=dword:00000001
+"SomenteEsquerda"="A"
+
+[HKEY_CURRENT_USER\Software\AnyCompare-Test\Opcoes]
+"Tema"="Claro"

@@ -1,0 +1,12 @@
+/target
+/.codex/
+/dist/
+/installer/staging/
+/installer/certs/
+__pycache__/
+*.pyc
+*.log
+*.exe
+*.dll
+*.msix
+*.pfx

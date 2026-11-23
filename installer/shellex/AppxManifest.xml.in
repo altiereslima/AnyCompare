@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"
+    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+    xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
+    xmlns:desktop5="http://schemas.microsoft.com/appx/manifest/desktop/windows10/5"
+    xmlns:desktop6="http://schemas.microsoft.com/appx/manifest/desktop/windows10/6"
+    xmlns:desktop10="http://schemas.microsoft.com/appx/manifest/desktop/windows10/10"
+    xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"
+    IgnorableNamespaces="desktop10">
+    <Identity
+        Name="AnyCompare.ShellExt"
+        ProcessorArchitecture="x64"
+        Publisher="CN=AnyCompare"
+        Version="__APPX_VERSION__" />
+    <Properties>
+        <DisplayName>AnyCompare Shell Extension</DisplayName>
+        <Logo>Assets\Logo_150x150.png</Logo>
+        <PublisherDisplayName>AnyCompare</PublisherDisplayName>
+        <desktop6:RegistryWriteVirtualization>disabled</desktop6:RegistryWriteVirtualization>
+    </Properties>
+    <Resources>
+        <Resource Language="pt-br" />
+        <Resource Language="en-us" />
+    </Resources>
+    <Dependencies>
+        <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19000.0" MaxVersionTested="10.0.26100.0" />
+    </Dependencies>
+    <Capabilities>
+        <rescap:Capability Name="runFullTrust" />
+        <rescap:Capability Name="unvirtualizedResources" />
+    </Capabilities>
+    <Applications>
+        <Application
+            Id="AnyCompare.ShellExt"
+            uap10:TrustLevel="mediumIL"
+            uap10:RuntimeBehavior="win32App">
+            <uap:VisualElements
+                AppListEntry="none"
+                DisplayName="AnyCompare Shell Extension"
+                Description="Integração do AnyCompare com o menu de contexto do Windows 11 Explorer."
+                BackgroundColor="transparent"
+                Square150x150Logo="Assets\Logo_150x150.png"
+                Square44x44Logo="Assets\Logo_44x44.png" />
+            <Extensions>
+                <com:Extension Category="windows.comServer">
+                    <com:ComServer>
+                        <com:SurrogateServer DisplayName="AnyCompare Shell Extension">
+                            <com:Class
+                                Id="A4E8C7D1-93B2-4F5A-8E11-5B9C3D7A2F01"
+                                Path="AnyCompareShellEx64.dll"
+                                ThreadingModel="STA" />
+                        </com:SurrogateServer>
+                    </com:ComServer>
+                </com:Extension>
+                <desktop4:Extension Category="windows.fileExplorerContextMenus">
+                    <desktop4:FileExplorerContextMenus>
+                        <desktop5:ItemType Type="*">
+                            <desktop5:Verb Id="AnyCompare" Clsid="A4E8C7D1-93B2-4F5A-8E11-5B9C3D7A2F01" />
+                        </desktop5:ItemType>
+                        <desktop5:ItemType Type="Directory">
+                            <desktop5:Verb Id="AnyCompare" Clsid="A4E8C7D1-93B2-4F5A-8E11-5B9C3D7A2F01" />
+                        </desktop5:ItemType>
+                        <desktop5:ItemType Type="Directory\Background">
+                            <desktop5:Verb Id="AnyCompare" Clsid="A4E8C7D1-93B2-4F5A-8E11-5B9C3D7A2F01" />
+                        </desktop5:ItemType>
+                        <desktop10:ItemType Type="Drive">
+                            <desktop10:Verb Id="AnyCompare" Clsid="A4E8C7D1-93B2-4F5A-8E11-5B9C3D7A2F01" />
+                        </desktop10:ItemType>
+                    </desktop4:FileExplorerContextMenus>
+                </desktop4:Extension>
+            </Extensions>
+        </Application>
+    </Applications>
+</Package>

@@ -1,0 +1,12 @@
+[package]
+name = "anycompare-registry"
+version = "0.1.0"
+edition = "2021"
+description = "Windows Registry .reg parser and typed diff engine in pure Rust"
+license = "MIT"
+
+[lib]
+name = "anycompare_registry"
+path = "src/lib.rs"
+
+[dependencies]

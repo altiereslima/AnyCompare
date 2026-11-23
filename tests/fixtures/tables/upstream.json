@@ -1,0 +1,29 @@
+{
+  "commit": "5e06a8b1ed72bbf08b7a10e8c28f72668c51adf7",
+  "fixtures": [
+    {
+      "file": "any_sheets.xls",
+      "url": "https://raw.githubusercontent.com/tafia/calamine/5e06a8b1ed72bbf08b7a10e8c28f72668c51adf7/tests/any_sheets.xls",
+      "sha256": "efb61c9a60b826b18b251cd74bb80819fcf8eb566e74ef6130709dcd2f7e0590",
+      "bytes": 38400
+    },
+    {
+      "file": "any_sheets.xlsb",
+      "url": "https://raw.githubusercontent.com/tafia/calamine/5e06a8b1ed72bbf08b7a10e8c28f72668c51adf7/tests/any_sheets.xlsb",
+      "sha256": "ad645571475f1e30875610fc51ad7726d8b7af296850135bc593e15ead0e28c6",
+      "bytes": 14837
+    },
+    {
+      "file": "any_sheets.xlsx",
+      "url": "https://raw.githubusercontent.com/tafia/calamine/5e06a8b1ed72bbf08b7a10e8c28f72668c51adf7/tests/any_sheets.xlsx",
+      "sha256": "fba48e0141f847d80738a4417f0a336cba92e4ac692d8dd7516eac41e32c9e4f",
+      "bytes": 14804
+    },
+    {
+      "file": "any_sheets.ods",
+      "url": "https://raw.githubusercontent.com/tafia/calamine/5e06a8b1ed72bbf08b7a10e8c28f72668c51adf7/tests/any_sheets.ods",
+      "sha256": "1aef869b5e34ad735010ca37a27fcf081824fd45d2af351542a74d03e3fed01d",
+      "bytes": 5813
+    }
+  ]
+}

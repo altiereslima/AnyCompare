@@ -1,0 +1,6 @@
+﻿ID;English;Português;Amount
+b;"A ""quoted"", value";"ação; coração";1.00
+a;"First line
+second line";olá	mundo;2
+a;Duplicate key;chave repetida;3
+only-left;Only here;órfão;

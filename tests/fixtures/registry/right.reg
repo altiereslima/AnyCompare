@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\AnyCompare-Test]
+@="Padrão B"
+"Ativo"=dword:00000000
+"SomenteDireita"="B"
+
+[HKEY_CURRENT_USER\Software\AnyCompare-Test\Opcoes]
+"Tema"="Escuro"

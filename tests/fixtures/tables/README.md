@@ -1,0 +1,1 @@
+Workbook fixtures from tafia/calamine, MIT licensed; exact source URLs and SHA-256 values are in upstream.json. The workbooks are read only by tests. Delimited fixtures are generated locally by tools/create_table_fixtures.py.
