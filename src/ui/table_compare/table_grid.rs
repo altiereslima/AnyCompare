@@ -316,26 +316,42 @@ impl TableCompareScreen {
                         PopupCloseBehavior::CloseOnClickOutside,
                         |ui| {
                             ui.set_min_width(240.0);
-                            if ui.button(tr("file.open_on_file_system")).clicked() {
+                            ui.spacing_mut().item_spacing.y = 0.0;
+                            if super::super::chrome::menu_item(
+                                ui,
+                                icons,
+                                "file.open_on_file_system",
+                                true,
+                            )
+                            .clicked()
+                            {
                                 self.pick_file(left, dialogs);
-                                ui.close_menu();
+                                ui.memory_mut(|m| m.close_popup());
                             }
-                            if ui.button(tr("file.open_using_profile")).clicked() {
+                            if super::super::chrome::menu_item(
+                                ui,
+                                icons,
+                                "file.open_using_profile",
+                                true,
+                            )
+                            .clicked()
+                            {
                                 self.pick_file(left, dialogs);
-                                ui.close_menu();
+                                ui.memory_mut(|m| m.close_popup());
                             }
                             let path = PathBuf::from(&self.side(left).path);
-                            if ui
-                                .add_enabled(
-                                    path.exists(),
-                                    Button::new(tr("table.show_in_explorer")),
-                                )
-                                .clicked()
+                            if super::super::chrome::menu_item(
+                                ui,
+                                icons,
+                                "table.show_in_explorer",
+                                path.exists(),
+                            )
+                            .clicked()
                             {
                                 if let Err(e) = crate::ui::native_files::open(&path, true) {
                                     dialogs.error(&e);
                                 }
-                                ui.close_menu();
+                                ui.memory_mut(|m| m.close_popup());
                             }
                             ui.add_enabled_ui(path.exists(), |ui| {
                                 super::super::chrome::submenu_item(
@@ -879,6 +895,8 @@ impl TableCompareScreen {
                         });
                     }
                     action.context_menu(|ui| {
+                        ui.set_min_width(210.0);
+                        ui.spacing_mut().item_spacing.y = 0.0;
                         for (label, action) in [
                             ("table.sort_view", HeaderAction::Sort(column)),
                             ("table.toggle_key_column", HeaderAction::Key(column)),
@@ -888,7 +906,7 @@ impl TableCompareScreen {
                             ),
                             ("table.configure_column_ellipsis", HeaderAction::Configure(column)),
                         ] {
-                            if ui.button(tr(label)).clicked() {
+                            if super::super::chrome::menu_item(ui, icons, label, true).clicked() {
                                 ui.ctx()
                                     .data_mut(|d| d.insert_temp(header_action_id(), action));
                                 ui.close_menu();

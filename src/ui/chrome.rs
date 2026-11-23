@@ -182,13 +182,25 @@ fn menu_item_styled(
             ui.add(button)
         })
         .inner;
+    let filter_icon_name = match key {
+        "toolbar.show_no_orphans" => Some("FavNoOrphan"),
+        "toolbar.show_differences_but_no_orphans" => Some("FavDiffNoOrphan"),
+        "toolbar.show_orphans" => Some("FavOrphan"),
+        "toolbar.show_left_newer" => Some("FavLeftNewer"),
+        "toolbar.show_right_newer" => Some("FavRightNewer"),
+        "toolbar.show_left_newer_and_left_orphans" => Some("FavLeftNewerOrphan"),
+        "toolbar.show_right_newer_and_right_orphans" => Some("FavRightNewerOrphan"),
+        "toolbar.show_left_orphans" => Some("FavLeftOrphan"),
+        "toolbar.show_right_orphans" => Some("FavRightOrphan"),
+        _ => None,
+    };
     let active = matches!(toggle, MenuToggle::Check(true) | MenuToggle::Radio(true));
+    let pad_x = ui.spacing().button_padding.x;
+    let icon_rect = Rect::from_min_size(
+        pos2(response.rect.left() + pad_x, response.rect.center().y - 8.0),
+        vec2(16.0, 16.0),
+    );
     if active {
-        let pad_x = ui.spacing().button_padding.x;
-        let icon_rect = Rect::from_min_size(
-            pos2(response.rect.left() + pad_x, response.rect.center().y - 8.0),
-            vec2(16.0, 16.0),
-        );
         let frame_rect = icon_rect.expand(1.5);
         let painter = ui.painter();
         painter.rect_filled(frame_rect, 1.0, Color32::from_rgb(204, 232, 255));
@@ -204,6 +216,8 @@ fn menu_item_styled(
                 Rect::from_min_max(Pos2::ZERO, pos2(1.0, 1.0)),
                 Color32::WHITE,
             );
+        } else if let Some(filter_name) = filter_icon_name {
+            super::toolbar::paint_filter_icon(painter, icon_rect, filter_name, enabled);
         } else {
             let c = icon_rect.center();
             let fg = if enabled {
@@ -223,6 +237,8 @@ fn menu_item_styled(
                 _ => {}
             }
         }
+    } else if let Some(filter_name) = filter_icon_name {
+        super::toolbar::paint_filter_icon(ui.painter(), icon_rect, filter_name, enabled);
     }
     ui.ctx().data_mut(|data| {
         data.insert_temp(Id::new("capture_menu_rect").with(key), response.rect);

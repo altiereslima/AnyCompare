@@ -4135,11 +4135,19 @@ impl FolderCompareScreen {
                             ("common.all", DisplayFilter::All),
                             ("common.differences", DisplayFilter::Diff),
                             ("common.same", DisplayFilter::Same),
-                            ("toolbar.show_orphans", DisplayFilter::Orphan),
                             ("toolbar.show_no_orphans", DisplayFilter::NoOrphan),
                             ("toolbar.show_differences_but_no_orphans", DisplayFilter::DiffNoOrphan),
+                            ("toolbar.show_orphans", DisplayFilter::Orphan),
                             ("toolbar.show_left_newer", DisplayFilter::LeftNewer),
                             ("toolbar.show_right_newer", DisplayFilter::RightNewer),
+                            (
+                                "toolbar.show_left_newer_and_left_orphans",
+                                DisplayFilter::LeftNewerOrphan,
+                            ),
+                            (
+                                "toolbar.show_right_newer_and_right_orphans",
+                                DisplayFilter::RightNewerOrphan,
+                            ),
                             ("toolbar.show_left_orphans", DisplayFilter::LeftOrphan),
                             ("toolbar.show_right_orphans", DisplayFilter::RightOrphan),
                         ] {

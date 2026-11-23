@@ -271,6 +271,7 @@ pub fn navigation(
 ) -> Option<i8> {
     pixel(ui, rect, BcTheme::WINDOW_BG);
     let mut chosen = None;
+    let salt = rect.left().round() as i32;
     for (i, (name, hint, value)) in [
         ("imgNavPrev", "text.prev_section", -1),
         ("imgNavPick", "text.choose_navigation_mode", 0),
@@ -283,7 +284,7 @@ pub fn navigation(
             rect.min + vec2(0.0, 18.0 * i as f32),
             vec2(rect.width(), 18.0),
         );
-        let response = ui.interact(hit, ui.id().with(("nav", i)), Sense::click());
+        let response = ui.interact(hit, ui.id().with(("nav", salt, i)), Sense::click());
         if response.hovered() {
             pixel(ui, hit.shrink(1.0), Color32::from_rgb(229, 243, 255));
         }
@@ -297,7 +298,7 @@ pub fn navigation(
                 Color32::WHITE,
             );
         }
-        let popup = ui.id().with("nav_picker");
+        let popup = ui.id().with(("nav_picker", salt));
         if response
             .clone()
             .on_hover_text(crate::i18n::tr(hint))
@@ -309,34 +310,91 @@ pub fn navigation(
                 chosen = Some(value);
             }
         }
-        if value == 0 {
-            popup::popup_below_widget(
-                ui,
-                popup,
-                &response,
-                PopupCloseBehavior::CloseOnClickOutside,
-                |ui| {
-                    for (label, kind) in [
-                        ("text.browse_by_difference", Some(NavigationMode::Differences)),
-                        (
-                            "text.browse_by_difference_section",
-                            Some(NavigationMode::Sections),
-                        ),
-                        ("text.browse_by_replacement", None),
-                        ("text.browse_by_edit", None),
-                        ("text.browse_by_find", Some(NavigationMode::Find)),
-                    ] {
-                        let response = ui.add_enabled(
-                            kind.is_some(),
-                            Button::new(crate::i18n::tr(label)).selected(kind == Some(*mode)),
-                        );
-                        if response.clicked() {
-                            *mode = kind.unwrap();
-                            ui.memory_mut(|m| m.close_popup());
-                        }
-                    }
-                },
-            );
+        if value == 0 && ui.memory(|m| m.is_popup_open(popup)) {
+            let items = [
+                ("text.browse_by_difference", Some(NavigationMode::Differences)),
+                ("text.browse_by_difference_section", Some(NavigationMode::Sections)),
+                ("text.browse_by_replacement", None),
+                ("text.browse_by_edit", None),
+                ("text.browse_by_find", Some(NavigationMode::Find)),
+            ];
+            let labels: Vec<String> = items.iter().map(|(l, _)| crate::i18n::tr(l)).collect();
+            let max_w = labels
+                .iter()
+                .map(|l| {
+                    ui.fonts(|f| {
+                        f.layout_no_wrap(l.clone(), FontId::proportional(12.0), Color32::BLACK)
+                            .size()
+                            .x
+                    })
+                })
+                .fold(0.0_f32, f32::max);
+            let menu_w = (max_w + 38.0).max(170.0).ceil();
+            let area_resp = Area::new(popup)
+                .order(Order::Foreground)
+                .fixed_pos(pos2(
+                    (hit.right() - menu_w).max(4.0),
+                    (hit.bottom() + 2.0).min(ui.ctx().screen_rect().bottom() - 120.0),
+                ))
+                .constrain(true)
+                .show(ui.ctx(), |ui| {
+                    Frame::none()
+                        .fill(Color32::from_gray(242))
+                        .stroke(Stroke::new(1.0_f32, Color32::from_gray(180)))
+                        .inner_margin(Margin::same(2.0))
+                        .show(ui, |ui| {
+                            ui.set_width(menu_w);
+                            ui.spacing_mut().item_spacing = vec2(0.0, 0.0);
+                            let mut picked = None;
+                            for ((_, kind), label) in items.iter().zip(labels.iter()) {
+                                let enabled = kind.is_some();
+                                let selected = *kind == Some(*mode);
+                                let (row_rect, resp) = ui.allocate_exact_size(
+                                    vec2(menu_w, 22.0),
+                                    if enabled { Sense::click() } else { Sense::hover() },
+                                );
+                                let painter = ui.painter();
+                                if enabled && resp.hovered() {
+                                    painter.rect_filled(
+                                        row_rect,
+                                        0.0,
+                                        Color32::from_rgb(204, 232, 255),
+                                    );
+                                }
+                                if selected {
+                                    painter.circle_filled(
+                                        pos2(row_rect.left() + 12.0, row_rect.center().y),
+                                        2.8,
+                                        Color32::from_gray(25),
+                                    );
+                                }
+                                painter.text(
+                                    pos2(row_rect.left() + 24.0, row_rect.center().y),
+                                    Align2::LEFT_CENTER,
+                                    label,
+                                    FontId::proportional(12.0),
+                                    if enabled {
+                                        Color32::BLACK
+                                    } else {
+                                        Color32::from_gray(155)
+                                    },
+                                );
+                                if enabled && resp.clicked() {
+                                    picked = *kind;
+                                }
+                            }
+                            picked
+                        })
+                        .inner
+                });
+            let esc = ui.input(|i| i.key_pressed(Key::Escape));
+            let clicked_outside = area_resp.response.clicked_elsewhere() && !response.clicked();
+            if let Some(m) = area_resp.inner {
+                *mode = m;
+                ui.memory_mut(|mem| mem.close_popup());
+            } else if esc || clicked_outside {
+                ui.memory_mut(|mem| mem.close_popup());
+            }
         }
     }
     chosen

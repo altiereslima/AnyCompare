@@ -255,7 +255,7 @@ fn paint_arrow(painter: &Painter, left: f32, top: f32) {
     }
 }
 
-fn paint_filter_icon(painter: &Painter, rect: Rect, name: &str, enabled: bool) -> bool {
+pub(crate) fn paint_filter_icon(painter: &Painter, rect: Rect, name: &str, enabled: bool) -> bool {
     #[derive(Clone, Copy)]
     enum Block {
         Red,
